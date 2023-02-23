@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public interface IViewOperater
 {
@@ -14,6 +16,8 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     private IViewOperater m_currentView;
     private Stack<IViewOperater> m_viewStack;
     private Transform m_rootCanvas;
+
+    public Text m_keydownDebug;
 
     public IViewOperater GetCurrentView() 
     {
@@ -33,7 +37,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Start()
     {
         m_viewStack = new Stack<IViewOperater>();
-        m_rootCanvas = GameObject.FindGameObjectWithTag("Canvas").transform;
+        m_rootCanvas = GameObject.FindGameObjectWithTag("Modal").transform;
         var rootView = new HomeView(m_rootCanvas);
         Push(rootView);
     }
@@ -41,6 +45,19 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Update()
     {
         m_currentView.Update();
+        OutputKeyDebugMsg();
+    }
+
+    void OutputKeyDebugMsg() {
+        if (Input.anyKeyDown) {
+            foreach (KeyCode CurretkeyCode in Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKeyDown(CurretkeyCode))
+				{
+					m_keydownDebug.text = $"[{CurretkeyCode.ToString()}] pressed!";
+				}
+			}
+        }
     }
 
     public void Push(IViewOperater view)
