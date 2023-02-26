@@ -19,6 +19,9 @@ public class HomeView : IViewOperater
     {
         var obj = Resources.Load<GameObject>(m_prefabPath);
         m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
+        var position = m_viewGameObject.transform.localPosition;
+        position.z = 0;
+        m_viewGameObject.transform.localPosition = position;
 
         m_startButton = m_viewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
         m_startButton.onClick.AddListener(OnClickStartButton);
