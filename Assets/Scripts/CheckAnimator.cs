@@ -5,18 +5,16 @@ using System.Threading.Tasks;
 
 public class CheckAnimator : MonoBehaviour
 {
-    const float __default_speed__ = 6000;
-    public TMPro.TextMeshProUGUI m_Text_0;
-    public TMPro.TextMeshProUGUI m_Text_1;
-    public TMPro.TextMeshProUGUI m_Text_2;
-    bool m_isAnimate = false;
-    int m_cellHeight = 600;
+    const float __default_speed__ = 5;
+    const int __cell_height__ = 600;
+    public TMPro.TextMeshProUGUI[] m_Texts;
     public float m_speed = __default_speed__;
-    public float m_easeSpeed = 1000;
+    bool m_isAnimate = false;
+    bool m_isEaseToStop;
     private bool m_waitingBingo;
-    private float m_delayInterval = 0;
-    bool m_easeMode = false;
     GameDataHandler m_gameData;
+    float[] m_progress = new[] {0f, 1f, 2f, 3f};
+    Vector3[] m_animPositions = new[] {Vector3.up*__cell_height__*2, Vector3.up*__cell_height__, Vector3.zero, Vector3.down*__cell_height__};
     void Start()
     {
         
@@ -24,85 +22,62 @@ public class CheckAnimator : MonoBehaviour
 
     void Update()
     {
-        if (m_isAnimate)
+        if (!m_isAnimate)
         {
-            var position = m_Text_0.gameObject.transform.localPosition;
-            position.y -= m_speed * Time.deltaTime;
-            if (position.y <= -m_cellHeight) {
-                position.y = m_cellHeight*2;
-                m_Text_0.text = m_gameData.GetUncheckedNumber().ToString();
-            }
-            m_Text_0.gameObject.transform.localPosition = position;
-
-            position = m_Text_1.gameObject.transform.localPosition;
-            position.y -= m_speed * Time.deltaTime;
-            if (position.y <= -m_cellHeight) {
-                position.y = m_cellHeight*2;
-                m_Text_1.text = m_gameData.GetUncheckedNumber().ToString();
-            }
-            m_Text_1.gameObject.transform.localPosition = position;
-
-            position = m_Text_2.gameObject.transform.localPosition;
-            position.y -= m_speed * Time.deltaTime;
-            if (position.y <= -m_cellHeight) {
-                position.y = m_cellHeight*2;
-                m_Text_2.text = m_gameData.GetUncheckedNumber().ToString();
-            }
-            m_Text_2.gameObject.transform.localPosition = position;
+            return;
         }
 
-        if (m_easeMode) {
-            var transforms = new List<Transform> {m_Text_0.gameObject.transform, 
-                                m_Text_1.gameObject.transform, 
-                                m_Text_2.gameObject.transform};
-            foreach (var t in transforms)
-            {
-                var position = t.localPosition;
-                var tempY = position.y;
-                position.y -= m_easeSpeed * Time.deltaTime;
-                if (tempY >= 0 && position.y <= 0) {
-                    position.y = 0;
-                    var numChecked = t.GetComponent<TMPro.TextMeshProUGUI>().text;
-                    m_gameData.SetCellChecked(int.Parse(numChecked) - 1);
-                    
-                    m_delayInterval += Time.deltaTime;
-                    if (m_delayInterval > 2) {
-                        m_easeMode = false;
-                        m_waitingBingo = false;
-                        m_delayInterval = 0;
-                    }
-                }
-                if (tempY >= m_cellHeight &&  position.y <= m_cellHeight) {
-                    position.y = m_cellHeight;
-                }
-                if (tempY >= -m_cellHeight && position.y <= -m_cellHeight) {
-                    position.y = -m_cellHeight;
-                }
-                t.localPosition = position;
+        float t = Time.deltaTime * m_speed;
+        for (int i = 0; i < m_Texts.Length; i++)
+        {
+            m_progress[i] += t;
+            m_Texts[i].gameObject.transform.localPosition = MoveNextPosition(i);
+        }
+
+    }
+
+    Vector3 MoveNextPosition(int i) {
+        int index = Mathf.FloorToInt(m_progress[i]);
+        if (index > m_animPositions.Length - 2) {
+            m_progress[i] -= index;
+            index = 0;
+            if (i == 2 && m_isEaseToStop) {
+                m_isAnimate = false;
+                StartCoroutine(WaitToTriggerNextRound());
+                m_gameData.SetCellChecked(int.Parse(m_Texts[1].text)-1);
             }
+            m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
+            return m_animPositions[index];
+        }else {
+            return Vector3.Lerp(m_animPositions[index], m_animPositions[index + 1], m_progress[i]-index);
         }
     }
 
-    IEnumerator<WaitForSeconds> EaseToEndCheck() {
+    IEnumerator<WaitForSeconds> EaseAnimSpeed() {
         m_waitingBingo = true;
         m_speed = m_speed * 0.8f;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         m_speed = m_speed * 0.6f;
         yield return new WaitForSeconds(2f);
         m_speed = m_speed * 0.5f;
-        yield return new WaitForSeconds(4f);
-        m_isAnimate = false;
-        m_easeMode = true;
+        yield return new WaitForSeconds(2f);
+        m_isEaseToStop = true;
+    }
+
+    IEnumerator<WaitForSeconds> WaitToTriggerNextRound() {
+        yield return new WaitForSeconds(1);
+        m_waitingBingo = false;
     }
 
     public void Animate(GameDataHandler gameData) {
         m_gameData = gameData;
         if (!m_waitingBingo) {
             if (m_isAnimate) {
-                StartCoroutine(EaseToEndCheck());
+                StartCoroutine(EaseAnimSpeed());
             } else {
                 m_speed = __default_speed__;
                 m_isAnimate = true;
+                m_isEaseToStop = false;
             }
         }
     }

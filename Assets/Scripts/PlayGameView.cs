@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 public class PlayGameView : IViewOperater
 {
-    public static string __IS_REOPEN__ = "__IS_REOPEN__";
+    public static string __REOPEN_DATA__ = "__REOPEN_GAME_DATA__";
     string m_prefabPath = "GamePanel";
     GameObject m_viewGameObject;
     Button m_stopButton;
@@ -37,14 +37,20 @@ public class PlayGameView : IViewOperater
         m_doTweenAnimator = m_viewGameObject.transform.Find("PlayPanel/Game/Mask").GetComponent<CheckAnimator>();
 
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
-
-        m_gameData = new GameDataHandler(75);
     }
 
 
     public void Show() {
         m_viewGameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(m_stopButton.gameObject);
+
+        var gameDataStr = PreferencesStorage.ReadString(__REOPEN_DATA__, null);
+        if (gameDataStr != null && gameDataStr.Length > 0) {
+            m_gameData = JsonSerializablity.Deserialize<GameDataHandler>(gameDataStr);
+        }else {
+            m_gameData = new GameDataHandler(75);
+        }
+
 
         if (m_numberCells == null) {
             m_numberCells = new List<Transform>();
@@ -119,12 +125,13 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnClickExitButton() {
-        PreferencesStorage.SaveBoolean(__IS_REOPEN__, false);
+        PreferencesStorage.SaveString(__REOPEN_DATA__, null);
         Hide();
     }
 
     public void OnClickStopButton() {
-        PreferencesStorage.SaveBoolean(__IS_REOPEN__, true);
+        var gameData = JsonSerializablity.Serialize(m_gameData);
+        PreferencesStorage.SaveString(__REOPEN_DATA__, gameData);
         Hide();
     }
 }

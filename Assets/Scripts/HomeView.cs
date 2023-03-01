@@ -30,11 +30,12 @@ public class HomeView : IViewOperater
         m_settingsButton = m_viewGameObject.transform.Find("SettingsButton").GetComponent<Button>();
         m_settingsButton.onClick.AddListener(OnClickSettingsButton);
 
-        var isReopen = PreferencesStorage.ReadBoolean(PlayGameView.__IS_REOPEN__, false);
+        var isReopen = PreferencesStorage.ReadBoolean(PlayGameView.__REOPEN_DATA__, false);
         m_reopenButton.gameObject.SetActive(isReopen);
     }
 
     void OnClickStartButton() {
+        PreferencesStorage.SaveString(PlayGameView.__REOPEN_DATA__, null);
         ShowPlayGameView();
     }
 
@@ -51,6 +52,8 @@ public class HomeView : IViewOperater
             OnGamePlayViewHide();
         else if (ViewManager.Instance.GetLastPopedView() == m_settingsView) 
             OnSettingsViewHide();
+        else
+            OnGamePlayViewHide();
     }
 
     public void Hide() {
@@ -69,8 +72,8 @@ public class HomeView : IViewOperater
     }
 
     void OnGamePlayViewHide() {
-        var isReopen = PreferencesStorage.ReadBoolean(PlayGameView.__IS_REOPEN__, false);
-        if (isReopen) {
+        var saveData = PreferencesStorage.ReadString(PlayGameView.__REOPEN_DATA__, null);
+        if (saveData != null && saveData.Length > 0) {
             m_reopenButton.gameObject.SetActive(true);
             EventSystem.current.SetSelectedGameObject(m_reopenButton.gameObject);
         }else {

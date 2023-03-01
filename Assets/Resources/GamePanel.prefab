@@ -255,10 +255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de128bd693167d488287d4ab53b2486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Text_0: {fileID: 4593075697173379676}
-  m_Text_1: {fileID: 4191373884829349958}
-  m_Text_2: {fileID: 2727608782309169811}
-  m_speed: 5000
+  m_Texts:
+  - {fileID: 4593075697173379676}
+  - {fileID: 4191373884829349958}
+  - {fileID: 2727608782309169811}
+  m_speed: 5
 --- !u!1 &2182771898841278557
 GameObject:
   m_ObjectHideFlags: 0
