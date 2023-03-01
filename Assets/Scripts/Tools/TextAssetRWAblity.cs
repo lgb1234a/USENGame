@@ -21,8 +21,8 @@ public class TextAssetRWAblity {
 #if UNITY_EDITOR
         UnityEngine.Object textObj = AssetDatabase.LoadMainAssetAtPath(path);
 #else
-        var filePath = PathUtility.GetResourcesRelativePath(path);
-        UnityEngine.Object textObj = Resources.Load(filePath);
+        // var filePath = PathUtility.GetResourcesRelativePath(path);
+        UnityEngine.Object textObj = Resources.Load(path);
 #endif
         
         TextAsset textAsset = TextAsset.Instantiate<TextAsset>(textObj as TextAsset);

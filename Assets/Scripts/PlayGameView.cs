@@ -17,7 +17,7 @@ public class PlayGameView : IViewOperater
     CheckAnimator m_doTweenAnimator;
 
     Transform m_numberCellTemplate;
-    Transform[] m_numberCells;
+    List<Transform> m_numberCells;
     public GameDataHandler m_gameData;
 
     public PlayGameView() {
@@ -47,10 +47,11 @@ public class PlayGameView : IViewOperater
         EventSystem.current.SetSelectedGameObject(m_stopButton.gameObject);
 
         if (m_numberCells == null) {
-            m_numberCells = GenerateNumberCells() as Transform[];
+            m_numberCells = new List<Transform>();
             int i = 0;
             foreach (var cell in GenerateNumberCells())
             {
+                m_numberCells.Add(cell);
                 cell.Find("CheckBg").gameObject.SetActive(m_gameData.IsCellChecked(i));
                 i++;
             }
@@ -82,6 +83,15 @@ public class PlayGameView : IViewOperater
     }
 
     public void Update() {
+
+        if (m_numberCells != null) {
+            for (int i = 0; i < m_numberCells.Count; i++)
+            {
+                var cell = m_numberCells[i];
+                cell.Find("CheckBg").gameObject.SetActive(m_gameData.IsCellChecked(i));
+            }
+        }
+
         if (Input.GetButtonDown("Cancel")) {
             m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
         }

@@ -33,17 +33,11 @@ public class GameDataHandler
         }
     }
 
-    private int GetUncheckedNumber() {
+    public int GetUncheckedNumber() {
         var num = UnityEngine.Random.Range(1, m_cellCount);
         if (m_checkedNumbers.Contains(num)) {
             return GetUncheckedNumber();
         }
         return num;
-    }
-
-    public IEnumerable<int> GetRandomCellNumber() {
-        for (int i = 0; i < 3; i++) {
-            yield return GetUncheckedNumber();
-        }
     }
 }
