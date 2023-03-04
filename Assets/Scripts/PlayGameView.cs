@@ -103,6 +103,9 @@ public class PlayGameView : IViewOperater
         }
 
         // blue KEYCODE_PROG_BLUE  scanCode = 401
+        /*
+        KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_PROG_BLUE, scanCode=401, metaState=0, flags=0x8, repeatCount=0, eventTime=2162779, downTime=2162779, deviceId=3, source=0x301 }
+        */
         if (Input.anyKeyDown) {
             foreach (KeyCode curretkeyCode in Enum.GetValues(typeof(KeyCode)))
 			{
@@ -112,7 +115,8 @@ public class PlayGameView : IViewOperater
 				}
 			}
         }
-        if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Submit")) {
+        
+        if (Input.GetButtonDown("Horizontal")) {
             m_doTweenAnimator.Animate(m_gameData);
         }
 
