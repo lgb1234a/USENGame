@@ -64,6 +64,10 @@ public class HomeView : IViewOperater
     
     }
 
+    public void OnAndroidKeyDown(string keyName) {
+        
+    }
+
     void ShowPlayGameView() {
         if (m_playGameView == null) {
             m_playGameView = new PlayGameView();

@@ -8,6 +8,7 @@ public interface IViewOperater
     void Show();
     void Hide();
     void Update();
+    void OnAndroidKeyDown(string keyName);
 }
 
 public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
@@ -92,5 +93,10 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         if (m_currentView != null) {
             m_currentView.Show();
         }
+    }
+
+    public void OnAndroidKeyDown(string keyName) {
+        Debug.Log($"Call from android key:{keyName}");
+        m_currentView.OnAndroidKeyDown(keyName);
     }
 }

@@ -102,30 +102,18 @@ public class PlayGameView : IViewOperater
             m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
         }
 
-        // blue KEYCODE_PROG_BLUE  scanCode = 401
-        /*
-        KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_PROG_BLUE, scanCode=401, metaState=0, flags=0x8, repeatCount=0, eventTime=2162779, downTime=2162779, deviceId=3, source=0x301 }
-        */
-        if (Input.anyKeyDown) {
-            foreach (KeyCode curretkeyCode in Enum.GetValues(typeof(KeyCode)))
-			{
-				if (Input.GetKeyDown(curretkeyCode))
-				{
-					// Event.current.
-				}
-			}
-        }
-        
-        if (Input.GetButtonDown("Horizontal")) {
-            m_doTweenAnimator.Animate(m_gameData);
-        }
-
         // green bingo anim  KEYCODE_PROG_GREEN  399
 
 
         // red  398
 
         // yellow 400
+    }
+
+    public void OnAndroidKeyDown(string keyName) {
+        if (keyName == "blue") {
+            m_doTweenAnimator.Animate(m_gameData);
+        }
     }
 
     public void OnClickExitButton() {

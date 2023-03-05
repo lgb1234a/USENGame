@@ -34,6 +34,10 @@ public class SettingsView : IViewOperater
         
     }
 
+    public void OnAndroidKeyDown(string keyName) {
+        
+    }
+
     public void OnClickBackHomeButton() {
         Hide();
     }
