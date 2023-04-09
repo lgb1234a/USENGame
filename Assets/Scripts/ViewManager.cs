@@ -19,7 +19,6 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     private Transform m_rootCanvas;
 
     public Text m_keydownDebug;
-    int j = 0;
 
     public IViewOperater GetCurrentView() 
     {
@@ -48,35 +47,6 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Update()
     {
         m_currentView.Update();
-        OutputKeyDebugMsg();
-    }
-
-    void OutputKeyDebugMsg() {
-        for (int i = 0; i < 1000; i++)
-        {
-            try
-            {
-                if (Input.GetKeyDown((KeyCode)i))
-                {
-                    j++;
-                    m_keydownDebug.text = j +" with: "+ i.ToString();
-                    Debug.Log("Working");
-                    break;
-                }
-            }
-            catch
-            {
-            }
-        }
-        // if (Input.anyKeyDown) {
-        //     foreach (KeyCode CurretkeyCode in Enum.GetValues(typeof(KeyCode)))
-		// 	{
-		// 		if (Input.GetKeyDown(CurretkeyCode))
-		// 		{
-		// 			m_keydownDebug.text = $"[{CurretkeyCode.ToString()}] pressed!";
-		// 		}
-		// 	}
-        // }
     }
 
     public void Push(IViewOperater view)

@@ -14,12 +14,16 @@ public class PlayGameView : IViewOperater
     Button m_stopButton;
     Button m_exitButton;
     Transform m_pausePanel;
-    CheckAnimator m_doTweenAnimator;
+    Transform m_numberPanel;
+    CheckAnimator m_checkAnimator;
 
     Transform m_numberCellTemplate;
     List<Transform> m_numberCells;
     public GameDataHandler m_gameData;
 
+    bool m_playRotationAnim = false;
+
+    Button m_rotateTestButton;
     public PlayGameView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
         m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
@@ -34,9 +38,13 @@ public class PlayGameView : IViewOperater
         m_exitButton.onClick.AddListener(OnClickExitButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
-        m_doTweenAnimator = m_viewGameObject.transform.Find("PlayPanel/Game/Mask").GetComponent<CheckAnimator>();
+        m_checkAnimator = m_viewGameObject.transform.Find("PlayPanel/Game/Mask").GetComponent<CheckAnimator>();
 
+        m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel");
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
+
+        m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/Game/RotateButton").GetComponent<Button>();
+        m_rotateTestButton.onClick.AddListener(OnClickRotateButton);
     }
 
 
@@ -103,7 +111,15 @@ public class PlayGameView : IViewOperater
         }
 
         // green bingo anim  KEYCODE_PROG_GREEN  399
-
+        if (m_playRotationAnim) {
+            m_numberPanel.localRotation = Quaternion.Lerp(m_numberPanel.localRotation, Quaternion.identity, 0.02f);
+            m_checkAnimator.gameObject.transform.localScale = Vector3.Lerp(m_checkAnimator.gameObject.transform.localScale, new Vector3(0.8f, 0.8f, 1f), 0.02f);
+            if (m_numberPanel.localRotation == Quaternion.identity) {
+                m_playRotationAnim = false;
+                // play winner spine effect
+                
+            }
+        }
 
         // red  398
 
@@ -112,7 +128,11 @@ public class PlayGameView : IViewOperater
 
     public void OnAndroidKeyDown(string keyName) {
         if (keyName == "blue") {
-            m_doTweenAnimator.Animate(m_gameData);
+            m_checkAnimator.Animate(m_gameData);
+        } else if (keyName == "green") {
+            m_playRotationAnim = true;
+        } else if (keyName == "red") {
+        } else if (keyName == "yellow") {
         }
     }
 
@@ -125,5 +145,9 @@ public class PlayGameView : IViewOperater
         var gameData = JsonSerializablity.Serialize(m_gameData);
         PreferencesStorage.SaveString(__REOPEN_DATA__, gameData);
         Hide();
+    }
+
+    void OnClickRotateButton() {
+        m_playRotationAnim = true;
     }
 }
