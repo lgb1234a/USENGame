@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class PlayGameView : IViewOperater
 {
@@ -14,8 +15,9 @@ public class PlayGameView : IViewOperater
     Button m_stopButton;
     Button m_exitButton;
     Transform m_pausePanel;
-    Transform m_numberPanel;
+    RectTransform m_numberPanel;
     CheckAnimator m_checkAnimator;
+    CanvasGroup m_maskCanvasGroup;
 
     Transform m_numberCellTemplate;
     List<Transform> m_numberCells;
@@ -24,6 +26,8 @@ public class PlayGameView : IViewOperater
     bool m_playRotationAnim = false;
 
     Button m_rotateTestButton;
+
+    Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
         m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
@@ -38,9 +42,11 @@ public class PlayGameView : IViewOperater
         m_exitButton.onClick.AddListener(OnClickExitButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
-        m_checkAnimator = m_viewGameObject.transform.Find("PlayPanel/Game/Mask").GetComponent<CheckAnimator>();
+        var maskTransform = m_viewGameObject.transform.Find("PlayPanel/Game/Mask");
+        m_checkAnimator = maskTransform.GetComponent<CheckAnimator>();
+        m_maskCanvasGroup = maskTransform.GetComponent<CanvasGroup>();
 
-        m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel");
+        m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
 
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/Game/RotateButton").GetComponent<Button>();
@@ -112,13 +118,8 @@ public class PlayGameView : IViewOperater
 
         // green bingo anim  KEYCODE_PROG_GREEN  399
         if (m_playRotationAnim) {
-            m_numberPanel.localRotation = Quaternion.Lerp(m_numberPanel.localRotation, Quaternion.identity, 0.02f);
-            m_checkAnimator.gameObject.transform.localScale = Vector3.Lerp(m_checkAnimator.gameObject.transform.localScale, new Vector3(0.8f, 0.8f, 1f), 0.02f);
-            if (m_numberPanel.localRotation == Quaternion.identity) {
-                m_playRotationAnim = false;
-                // play winner spine effect
-                
-            }
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f));
+            m_playRotationAnim = false;
         }
 
         // red  398
@@ -130,9 +131,9 @@ public class PlayGameView : IViewOperater
         if (keyName == "blue") {
             m_checkAnimator.Animate(m_gameData);
         } else if (keyName == "green") {
-            m_playRotationAnim = true;
         } else if (keyName == "red") {
         } else if (keyName == "yellow") {
+            m_playRotationAnim = true;
         }
     }
 

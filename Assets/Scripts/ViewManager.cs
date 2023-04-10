@@ -51,6 +51,13 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 
     public void Push(IViewOperater view)
     {
+        if (m_viewStack.Count > 0)
+        {
+            var lastView = m_viewStack.Peek();
+            if (lastView != null)
+                lastView.Hide();
+        }
+
         m_viewStack.Push(view);
         m_currentView = view;
         m_currentView.Show();

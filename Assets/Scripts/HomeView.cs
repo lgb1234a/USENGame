@@ -48,6 +48,7 @@ public class HomeView : IViewOperater
     }
 
     public void Show() {
+        m_viewGameObject.SetActive(true);
         if (ViewManager.Instance.GetLastPopedView() == m_playGameView) 
             OnGamePlayViewHide();
         else if (ViewManager.Instance.GetLastPopedView() == m_settingsView) 
@@ -57,7 +58,7 @@ public class HomeView : IViewOperater
     }
 
     public void Hide() {
-
+        m_viewGameObject.SetActive(false);
     }
 
     public void Update() {

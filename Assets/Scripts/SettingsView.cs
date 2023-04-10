@@ -6,7 +6,6 @@ public class SettingsView : IViewOperater
 {
     string m_prefabPath = "SettingsPanel";
     GameObject m_viewGameObject;
-    Button m_backHomeButton;
 
     public SettingsView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -14,15 +13,11 @@ public class SettingsView : IViewOperater
         var position = m_viewGameObject.transform.localPosition;
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
-        
-        m_backHomeButton = m_viewGameObject.transform.Find("PlayPanel/BackHomeButton").GetComponent<Button>();
-        m_backHomeButton.onClick.AddListener(OnClickBackHomeButton);
     }
 
 
     public void Show() {
         m_viewGameObject.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(m_backHomeButton.gameObject);
     }
 
     public void Hide() {
@@ -31,7 +26,9 @@ public class SettingsView : IViewOperater
     }
 
     public void Update() {
-        
+        if (Input.GetButtonDown("Cancel")) {
+            Hide();
+        }
     }
 
     public void OnAndroidKeyDown(string keyName) {
