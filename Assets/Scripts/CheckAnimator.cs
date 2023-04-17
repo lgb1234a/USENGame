@@ -81,4 +81,10 @@ public class CheckAnimator : MonoBehaviour
             }
         }
     }
+
+    public void ResetCheckTexts() {
+        foreach (var t in m_Texts) {
+            t.text = "0";
+        }
+    }
 }

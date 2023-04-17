@@ -26,6 +26,7 @@ public class PlayGameView : IViewOperater
     bool m_playRotationAnim = false;
 
     Button m_rotateTestButton;
+    Button m_playbackButton;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -51,6 +52,8 @@ public class PlayGameView : IViewOperater
 
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/Game/RotateButton").GetComponent<Button>();
         m_rotateTestButton.onClick.AddListener(OnClickRotateButton);
+        m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
+        m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
     }
 
 
@@ -62,6 +65,7 @@ public class PlayGameView : IViewOperater
         if (gameDataStr != null && gameDataStr.Length > 0) {
             m_gameData = JsonSerializablity.Deserialize<GameDataHandler>(gameDataStr);
         }else {
+            m_checkAnimator.ResetCheckTexts();
             m_gameData = new GameDataHandler(75);
         }
 
@@ -116,15 +120,18 @@ public class PlayGameView : IViewOperater
             m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
         }
 
-        // green bingo anim  KEYCODE_PROG_GREEN  399
         if (m_playRotationAnim) {
             m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f));
             m_playRotationAnim = false;
         }
 
+        // green bingo anim  KEYCODE_PROG_GREEN  399
         // red  398
-
         // yellow 400
+        // blue
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            m_checkAnimator.Animate(m_gameData);
+        }
     }
 
     public void OnAndroidKeyDown(string keyName) {
@@ -150,5 +157,12 @@ public class PlayGameView : IViewOperater
 
     void OnClickRotateButton() {
         m_playRotationAnim = true;
+        m_playbackButton.gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
+    }
+
+    void OnClickPlayBackButton() {
+        m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f));
+        m_playbackButton.gameObject.SetActive(false);
     }
 }
