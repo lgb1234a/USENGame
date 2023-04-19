@@ -8,6 +8,8 @@ public class SettingsView : IViewOperater
     GameObject m_viewGameObject;
     Slider m_BGMSlider;
     Text m_BGMVolumeText;
+    Slider m_maxCellSettingSlider;
+    Text m_maxCellSettingText;
 
     public SettingsView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -16,15 +18,22 @@ public class SettingsView : IViewOperater
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
 
+        m_maxCellSettingSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/Slider").GetComponent<Slider>();
+        m_maxCellSettingText = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Text>();
+        m_maxCellSettingSlider.onValueChanged.AddListener(OnMaxCellSettingSliderValueChanged);
+        m_maxCellSettingSlider.value = AppConfig.Instance.MaxCellCount;
+
         m_BGMSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
-        m_BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChanged);
         m_BGMVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
-        EventSystem.current.SetSelectedGameObject(m_BGMSlider.gameObject);
+        m_BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChanged);
+        m_BGMSlider.value = AppConfig.Instance.BGMVolume;
+        EventSystem.current.SetSelectedGameObject(m_maxCellSettingSlider.gameObject);
     }
 
 
     public void Show() {
         m_viewGameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(m_maxCellSettingSlider.gameObject);
     }
 
     public void Hide() {
@@ -48,5 +57,11 @@ public class SettingsView : IViewOperater
 
     public void OnBGMSliderValueChanged(float value) {
         m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString();
+        AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
+    }
+
+    public void OnMaxCellSettingSliderValueChanged(float value) {
+        m_maxCellSettingText.text = Mathf.FloorToInt(value).ToString();
+        AppConfig.Instance.MaxCellCount = Mathf.FloorToInt(value);
     }
 }

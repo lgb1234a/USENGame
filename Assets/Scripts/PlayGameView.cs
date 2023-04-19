@@ -9,7 +9,6 @@ using DG.Tweening;
 
 public class PlayGameView : IViewOperater
 {
-    public static string __REOPEN_DATA__ = "__REOPEN_GAME_DATA__";
     string m_prefabPath = "GamePanel";
     GameObject m_viewGameObject;
     Button m_stopButton;
@@ -28,6 +27,7 @@ public class PlayGameView : IViewOperater
 
     Button m_rotateTestButton;
     Button m_playbackButton;
+    CanvasGroup m_playbackCanvasGroup;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -54,6 +54,7 @@ public class PlayGameView : IViewOperater
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/Game/RotateButton").GetComponent<Button>();
         m_rotateTestButton.onClick.AddListener(OnClickRotateButton);
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
+        m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
     }
 
@@ -62,12 +63,25 @@ public class PlayGameView : IViewOperater
         m_viewGameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(m_stopButton.gameObject);
 
-        var gameDataStr = PreferencesStorage.ReadString(__REOPEN_DATA__, null);
-        if (gameDataStr != null && gameDataStr.Length > 0) {
-            m_gameData = JsonSerializablity.Deserialize<GameDataHandler>(gameDataStr);
+        if (AppConfig.Instance.GameData != null) {
+            m_gameData = AppConfig.Instance.GameData;
+            if (m_gameData.m_cellCount != AppConfig.Instance.MaxCellCount) {
+                m_checkAnimator.ResetCheckTexts();
+                m_gameData = new GameDataHandler(AppConfig.Instance.MaxCellCount);
+                AppConfig.Instance.GameData = m_gameData;
+
+                if (m_numberCells != null) {
+                    foreach (var cell in m_numberCells)
+                    {
+                        UnityEngine.Object.Destroy(cell.gameObject);
+                    }
+                    m_numberCells = null;
+                }
+            }
         }else {
             m_checkAnimator.ResetCheckTexts();
-            m_gameData = new GameDataHandler(75);
+            m_gameData = new GameDataHandler(AppConfig.Instance.MaxCellCount);
+            AppConfig.Instance.GameData = m_gameData;
         }
 
 
@@ -122,15 +136,13 @@ public class PlayGameView : IViewOperater
         }
 
         if (m_playRotationAnim) {
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f));
-            m_playbackButton.gameObject.SetActive(true);
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f)).Join(m_playbackCanvasGroup.DOFade(1, 1f));
             m_playRotationAnim = false;
             EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
         }
 
         if (m_playRotationAnimBack) {
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f));
-            m_playbackButton.gameObject.SetActive(false);
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f));
             m_playRotationAnimBack = false;
         }
 
@@ -158,13 +170,12 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnClickExitButton() {
-        PreferencesStorage.SaveString(__REOPEN_DATA__, null);
+        PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         Hide();
     }
 
     public void OnClickStopButton() {
-        var gameData = JsonSerializablity.Serialize(m_gameData);
-        PreferencesStorage.SaveString(__REOPEN_DATA__, gameData);
+        AppConfig.Instance.GameData = m_gameData;
         Hide();
     }
 
@@ -175,10 +186,9 @@ public class PlayGameView : IViewOperater
 
     void OnClickPlayBackButton() {
         // reset
-        PreferencesStorage.SaveString(__REOPEN_DATA__, null);
+        AppConfig.Instance.GameData = null;
         Show();
 
-        m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f));
-        m_playbackButton.gameObject.SetActive(false);
+        m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f));
     }
 }
