@@ -10,10 +10,13 @@ public class HomeView : IViewOperater
     private Button m_startButton;
     private Button m_reopenButton;
     private Button m_settingsButton;
+    private Button m_aboutButton;
 
     PlayGameView m_playGameView;
     SettingsView m_settingsView;
+    AboutView m_aboutView;
     GameObject m_viewGameObject;
+    
     // Start is called before the first frame update
     public HomeView(Transform parent)
     {
@@ -29,6 +32,8 @@ public class HomeView : IViewOperater
         m_reopenButton.onClick.AddListener(OnClickReopenButton);
         m_settingsButton = m_viewGameObject.transform.Find("SettingsButton").GetComponent<Button>();
         m_settingsButton.onClick.AddListener(OnClickSettingsButton);
+        m_aboutButton = m_viewGameObject.transform.Find("AboutButton").GetComponent<Button>();
+        m_aboutButton.onClick.AddListener(OnClickAboutButton);
 
         var isReopen = PreferencesStorage.ReadBoolean(AppConfig.__REOPEN_DATA__, false);
         m_reopenButton.gameObject.SetActive(isReopen);
@@ -45,6 +50,13 @@ public class HomeView : IViewOperater
 
     void OnClickSettingsButton() {
         ShowSettingsView();
+    }
+
+    void OnClickAboutButton() {
+        if (m_aboutView == null) {
+            m_aboutView = new AboutView();
+        }
+        ViewManager.Instance.Push(m_aboutView);
     }
 
     public void Show() {

@@ -58,6 +58,7 @@ public class SettingsView : IViewOperater
     public void OnBGMSliderValueChanged(float value) {
         m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString();
         AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
+        AudioManager.Instance.SetBgmVolume(value / 10f + 0.5f);
     }
 
     public void OnMaxCellSettingSliderValueChanged(float value) {

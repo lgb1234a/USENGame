@@ -43,12 +43,14 @@
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Scripts\AboutView.cs" />
      <Compile Include="Assets\Scripts\CheckAnimator.cs" />
      <Compile Include="Assets\Scripts\GameDataHandler.cs" />
      <Compile Include="Assets\Scripts\HomeView.cs" />
      <Compile Include="Assets\Scripts\PlayGameView.cs" />
      <Compile Include="Assets\Scripts\SettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\AppConfig.cs" />
+     <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
      <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
      <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
