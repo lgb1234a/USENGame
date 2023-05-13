@@ -44,9 +44,9 @@ public class PlayGameView : IViewOperater
         m_exitButton.onClick.AddListener(OnClickExitButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
-        var maskTransform = m_viewGameObject.transform.Find("PlayPanel/Game/Mask");
-        m_checkAnimator = maskTransform.GetComponent<CheckAnimator>();
-        m_maskCanvasGroup = maskTransform.GetComponent<CanvasGroup>();
+        var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
+        m_checkAnimator = awardPanelTransform.GetComponent<CheckAnimator>();
+        m_maskCanvasGroup = awardPanelTransform.GetComponent<CanvasGroup>();
 
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
