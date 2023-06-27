@@ -8,7 +8,7 @@ public class SettingsView : IViewOperater
     GameObject m_viewGameObject;
     Slider m_BGMSlider;
     Text m_BGMVolumeText;
-    Slider m_maxCellSettingSlider;
+    Button m_maxCellSettingButton;
     Text m_maxCellSettingText;
 
     public SettingsView() {
@@ -18,22 +18,20 @@ public class SettingsView : IViewOperater
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
 
-        m_maxCellSettingSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/Slider").GetComponent<Slider>();
+        m_maxCellSettingButton = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Button>();
         m_maxCellSettingText = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Text>();
-        m_maxCellSettingSlider.onValueChanged.AddListener(OnMaxCellSettingSliderValueChanged);
-        m_maxCellSettingSlider.value = AppConfig.Instance.MaxCellCount;
 
         m_BGMSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
         m_BGMVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
         m_BGMSlider.onValueChanged.AddListener(OnBGMSliderValueChanged);
         m_BGMSlider.value = AppConfig.Instance.BGMVolume;
-        EventSystem.current.SetSelectedGameObject(m_maxCellSettingSlider.gameObject);
+        EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
     }
 
 
     public void Show() {
         m_viewGameObject.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(m_maxCellSettingSlider.gameObject);
+        EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
     }
 
     public void Hide() {

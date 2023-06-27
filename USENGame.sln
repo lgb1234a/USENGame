@@ -5,9 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{b81f0b3c-81b2-1286-52d3-f10031525fb0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{e396c8fc-922d-bc72-23b8-678b445668ec}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.UI", "UnityEditor.UI.csproj", "{c8ad1e09-1680-2def-6187-dd28cf28a4fc}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{e396c8fc-922d-bc72-23b8-678b445668ec}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{928e30d3-0374-9447-3a2d-e7a691823ec6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +20,12 @@ Global
 		{0d37a7fc-986c-fc5d-2da2-4de44e2bb23a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b81f0b3c-81b2-1286-52d3-f10031525fb0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b81f0b3c-81b2-1286-52d3-f10031525fb0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{c8ad1e09-1680-2def-6187-dd28cf28a4fc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{c8ad1e09-1680-2def-6187-dd28cf28a4fc}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e396c8fc-922d-bc72-23b8-678b445668ec}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e396c8fc-922d-bc72-23b8-678b445668ec}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c8ad1e09-1680-2def-6187-dd28cf28a4fc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c8ad1e09-1680-2def-6187-dd28cf28a4fc}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928e30d3-0374-9447-3a2d-e7a691823ec6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928e30d3-0374-9447-3a2d-e7a691823ec6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
