@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: award_nums
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 9fb914f910374af45974868ffb0a42b9, type: 3}
+    - {fileID: 2800000, guid: 6f13e475f8b549644b283efb58d1a021, type: 3}
+    - {fileID: 2800000, guid: f4bb033e5b4ed2f4bb04fb18b17c4eeb, type: 3}
+    - {fileID: 2800000, guid: 1e80378262159744f8c50a4f5b4df816, type: 3}
+    - {fileID: 2800000, guid: 4dee59473293a8a4e9f672b945696d5c, type: 3}
+    - {fileID: 2800000, guid: 744ade3d9a5a9f34cb5be37c65a952a5, type: 3}
+    - {fileID: 2800000, guid: 2066490e11346a74aa7c277574746dc4, type: 3}
+    - {fileID: 2800000, guid: 361ad7c3f682f8149bbc19a9b45a1c5a, type: 3}
+    - {fileID: 2800000, guid: f996fee083c56cd4395e946a07a9eebd, type: 3}
+    - {fileID: 2800000, guid: 6a83b1b3df9658d4da8296ae2dadcd92, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f996fee083c56cd4395e946a07a9eebd, type: 3}
+  - {fileID: 21300000, guid: 1e80378262159744f8c50a4f5b4df816, type: 3}
+  - {fileID: 21300000, guid: 6a83b1b3df9658d4da8296ae2dadcd92, type: 3}
+  - {fileID: 21300000, guid: 361ad7c3f682f8149bbc19a9b45a1c5a, type: 3}
+  - {fileID: 21300000, guid: 6f13e475f8b549644b283efb58d1a021, type: 3}
+  - {fileID: 21300000, guid: 4dee59473293a8a4e9f672b945696d5c, type: 3}
+  - {fileID: 21300000, guid: 9fb914f910374af45974868ffb0a42b9, type: 3}
+  - {fileID: 21300000, guid: 744ade3d9a5a9f34cb5be37c65a952a5, type: 3}
+  - {fileID: 21300000, guid: 2066490e11346a74aa7c277574746dc4, type: 3}
+  - {fileID: 21300000, guid: f4bb033e5b4ed2f4bb04fb18b17c4eeb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Atari_No8
+  - Atari_No3
+  - Atari_No9
+  - Atari_No7
+  - Atari_No1
+  - Atari_No4
+  - Atari_No0
+  - Atari_No5
+  - Atari_No6
+  - Atari_No2
+  m_RenderDataMap: {}
+  m_Tag: award_nums
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

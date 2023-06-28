@@ -58,12 +58,13 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
                 lastView.Hide();
         }
 
-        m_viewStack.Push(view);
+        if (!m_viewStack.Contains(view))
+            m_viewStack.Push(view);
         m_currentView = view;
         m_currentView.Show();
     }
 
-    public void Pop()
+    public void Hided(IViewOperater view) 
     {
         m_lastPopedView = m_viewStack.Pop();
         m_currentView = m_viewStack.Peek();
@@ -73,7 +74,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     }
 
     public void OnAndroidKeyDown(string keyName) {
-        Debug.Log($"Call from android key:{keyName}");
+        // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
     }
 }

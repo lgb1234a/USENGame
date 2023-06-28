@@ -13,6 +13,7 @@ public class PlayGameView : IViewOperater
     GameObject m_viewGameObject;
     Button m_stopButton;
     Button m_exitButton;
+    Button m_backGameButton;
     Transform m_pausePanel;
     RectTransform m_numberPanel;
     CheckAnimator m_checkAnimator;
@@ -42,6 +43,9 @@ public class PlayGameView : IViewOperater
 
         m_exitButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton").GetComponent<Button>();
         m_exitButton.onClick.AddListener(OnClickExitButton);
+
+        m_backGameButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton").GetComponent<Button>();
+        m_backGameButton.onClick.AddListener(OnClickBackGameButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
         var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
@@ -100,7 +104,6 @@ public class PlayGameView : IViewOperater
     public void Hide() {
         m_viewGameObject.SetActive(false);
         m_pausePanel.gameObject.SetActive(false);
-        ViewManager.Instance.Pop();
     }
 
     IEnumerable<Transform> GenerateNumberCells() {
@@ -112,7 +115,7 @@ public class PlayGameView : IViewOperater
                 Quaternion.identity,
                 m_numberCellTemplate.parent);
             cell.gameObject.SetActive(true);
-            cell.transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>().text = $"{i+1}";
+            cell.transform.Find("Text").GetComponent<Text>().text = $"{i+1}";
             var position = cell.transform.localPosition;
             position.z = 0;
             cell.transform.localPosition = position;
@@ -172,16 +175,22 @@ public class PlayGameView : IViewOperater
     public void OnClickExitButton() {
         PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         Hide();
+        ViewManager.Instance.Hided(this);
     }
 
     public void OnClickStopButton() {
         AppConfig.Instance.GameData = m_gameData;
         Hide();
+        ViewManager.Instance.Hided(this);
+    }
+
+    public void OnClickBackGameButton() {
+        m_pausePanel.gameObject.SetActive(false);
     }
 
     void OnClickRotateButton() {
         m_playRotationAnim = true;
-        // EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
+        EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
     }
 
     void OnClickPlayBackButton() {

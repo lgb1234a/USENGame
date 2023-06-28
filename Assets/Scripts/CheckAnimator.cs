@@ -7,7 +7,7 @@ public class CheckAnimator : MonoBehaviour
 {
     const float __default_speed__ = 5;
     const int __cell_height__ = 500;
-    public TMPro.TextMeshProUGUI[] m_Texts;
+    public AwardNumObj[] m_Texts;
     public float m_speed = __default_speed__;
     bool m_isAnimate = false;
     bool m_isEaseToStop;
@@ -31,7 +31,7 @@ public class CheckAnimator : MonoBehaviour
         for (int i = 0; i < m_Texts.Length; i++)
         {
             m_progress[i] += t;
-            Debug.Log(MoveNextPosition(i));
+            // Debug.Log(MoveNextPosition(i));
             m_Texts[i].gameObject.transform.localPosition = MoveNextPosition(i);
         }
 

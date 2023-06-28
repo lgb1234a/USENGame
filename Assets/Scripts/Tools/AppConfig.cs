@@ -55,6 +55,22 @@ public class AppConfig
         }
     }
 
+    private int _effectVolume = -100;
+    public int EffectVolume {
+        set
+        {
+            _effectVolume = value;
+            PreferencesStorage.SaveInt("__BGM_VOLUME__", value);
+        }
+        get
+        {
+            if (_effectVolume == -100) {
+                _effectVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 5);
+            }
+            return _effectVolume;
+        }
+    }
+
     private GameDataHandler _gameData;
 
     public GameDataHandler GameData {

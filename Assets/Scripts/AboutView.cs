@@ -22,12 +22,12 @@ public class AboutView : IViewOperater
 
     public void Hide() {
         m_viewGameObject.SetActive(false);
-        ViewManager.Instance.Pop();
     }
 
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
             Hide();
+            ViewManager.Instance.Hided(this);
         }
     }
 
@@ -37,5 +37,6 @@ public class AboutView : IViewOperater
 
     public void OnClickBackHomeButton() {
         Hide();
+        ViewManager.Instance.Hided(this);
     }
 }
