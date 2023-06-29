@@ -54,6 +54,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b1523d77a5ca0e148afff6685282eec4, type: 3}
   - {fileID: 21300000, guid: ea8879a758248204c9a4c00bea32afcf, type: 3}
   - {fileID: 21300000, guid: b42b66b7718336e46b1778c3bea47e4d, type: 3}
+  - {fileID: 21300000, guid: 9aca7ca810ad3da4b934cfc6da29e945, type: 3}
   - {fileID: 21300000, guid: c04f933957d460647adce4c25f482a74, type: 3}
   - {fileID: 21300000, guid: 3eb80059aadd6ba40b27100493ae4751, type: 3}
   - {fileID: 21300000, guid: a41e33597a7e70941aed9ef50e2180f8, type: 3}
@@ -86,6 +87,7 @@ SpriteAtlas:
   - volume_bar_1
   - bt_normal
   - tab_right_normal
+  - square_yellow
   - bt2_normal
   - textbox_active
   - bt1_normal

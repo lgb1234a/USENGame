@@ -88,4 +88,8 @@ public class CheckAnimator : MonoBehaviour
             t.text = "0";
         }
     }
+
+    public bool isAnimteFinished() {
+        return m_isEaseToStop;
+    }
 }

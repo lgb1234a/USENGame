@@ -27,6 +27,8 @@ public class PlayGameView : IViewOperater
     bool m_playRotationAnimBack = false;
 
     Button m_rotateTestButton;
+    Button m_playButton;
+    Text m_playButtonText;
     Button m_playbackButton;
     CanvasGroup m_playbackCanvasGroup;
 
@@ -55,8 +57,13 @@ public class PlayGameView : IViewOperater
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
 
-        m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/Game/RotateButton").GetComponent<Button>();
+        m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
         m_rotateTestButton.onClick.AddListener(OnClickRotateButton);
+
+        m_playButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
+        m_playButton.onClick.AddListener(OnClickPlayButton);
+        m_playButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2/Text").GetComponent<Text>();
+
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
@@ -135,7 +142,8 @@ public class PlayGameView : IViewOperater
         }
 
         if (Input.GetButtonDown("Cancel")) {
-            m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
+            // m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
+            OnClickStopButton();
         }
 
         if (m_playRotationAnim) {
@@ -156,13 +164,15 @@ public class PlayGameView : IViewOperater
         if (Input.GetKeyDown(KeyCode.Return)) {
             m_checkAnimator.Animate(m_gameData);
         }
+
+        UpdatePlayButtonText();
     }
 
     public void OnAndroidKeyDown(string keyName) {
         if (m_pausePanel.gameObject.activeSelf) return;
         
         if (keyName == "blue") {
-            m_checkAnimator.Animate(m_gameData);
+            OnClickPlayButton();
         } else if (keyName == "green") {
         } else if (keyName == "red") {
         } else if (keyName == "yellow") {
@@ -172,6 +182,16 @@ public class PlayGameView : IViewOperater
                 m_playRotationAnim = true;
             }
         }
+    }
+
+    public void OnClickPlayButton() {
+        m_checkAnimator.Animate(m_gameData);
+        m_playButtonText.text = "ストップ";
+    }
+
+    public void UpdatePlayButtonText() {
+        if (m_checkAnimator.isAnimteFinished() && m_playButtonText.text != "シャッフル")
+            m_playButtonText.text = "シャッフル";
     }
 
     public void OnClickExitButton() {
