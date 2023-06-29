@@ -127,6 +127,7 @@
      <Compile Include="Assets\Spine\spine-unity\Modules\Timeline\PlayableHandle Component\SkeletonAnimationPlayableHandle.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\Timeline\PlayableHandle Component\SpinePlayableHandleBase.cs" />
      <Compile Include="Assets\Spine\spine-csharp\Skin.cs" />
+     <Compile Include="Assets\Scripts\AwardNumObj.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\SkeletonUtilityBone.cs" />
@@ -150,6 +151,7 @@
      <Compile Include="Assets\Spine\SpineUIEffect.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\Ragdoll\SkeletonRagdoll2D.cs" />
      <Compile Include="Assets\Spine\spine-unity\Asset Types\EventDataReferenceAsset.cs" />
+     <Compile Include="Assets\Scripts\Tools\NumberTextureTool.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\YieldInstructions\WaitForSpineAnimationComplete.cs" />
      <Compile Include="Assets\Scripts\SettingsView.cs" />
      <Compile Include="Assets\Spine\spine-csharp\SkeletonClipping.cs" />
@@ -187,8 +189,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\HomeView.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\AttachmentTools\AttachmentTools.cs" />
-     <Compile Include="Assets\Scripts\Tools\NumberTextureTool.cs" />
-     <Compile Include="Assets\Scripts\AwardNumObj.cs" />
+     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Spine\spine-unity\version.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
