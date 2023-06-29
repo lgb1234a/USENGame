@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.usen.UnityGame"
+    package="com.usen.ubingo"
     xmlns:tools="http://schemas.android.com/tools">
     <application>
         <activity android:name="com.usen.myunitylib.MainActivity"
