@@ -47,6 +47,19 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Update()
     {
         m_currentView.Update();
+        OutputKeyDebugMsg();
+    }
+
+    void OutputKeyDebugMsg() {
+        if (Input.anyKeyDown) {
+            foreach (KeyCode CurretkeyCode in Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKeyDown(CurretkeyCode))
+				{
+					m_keydownDebug.text = $"[{CurretkeyCode.ToString()}] pressed!";
+				}
+			}
+        }
     }
 
     public void Push(IViewOperater view)
@@ -76,5 +89,15 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public void OnAndroidKeyDown(string keyName) {
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
+    }
+
+    void OnApplicationQuit()
+    {
+        Application.wantsToQuit += ApplicationWillQuit;
+    }
+
+    bool ApplicationWillQuit() {
+        // var isQuit = EditorUtility.DisplayDialog("温馨提示", "您确定要退出游戏吗？", "确定", "不了");
+        return true;
     }
 }
