@@ -115,7 +115,7 @@ public class PlayGameView : IViewOperater
                 Quaternion.identity,
                 m_numberCellTemplate.parent);
             cell.gameObject.SetActive(true);
-            cell.transform.Find("Text").GetComponent<Text>().text = $"{i+1}";
+            cell.transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>().text = $"{i+1}";
             var position = cell.transform.localPosition;
             position.z = 0;
             cell.transform.localPosition = position;
