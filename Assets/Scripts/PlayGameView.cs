@@ -159,6 +159,8 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnAndroidKeyDown(string keyName) {
+        if (m_pausePanel.gameObject.activeSelf) return;
+        
         if (keyName == "blue") {
             m_checkAnimator.Animate(m_gameData);
         } else if (keyName == "green") {
