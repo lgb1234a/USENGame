@@ -44,6 +44,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: acb7f5c1e4d121948bcd4f148a3260ef, type: 3}
   - {fileID: 21300000, guid: 65135dd19f14b3c45802ed1116c4e97a, type: 3}
   - {fileID: 21300000, guid: 58f164029ac77b648845dc7717648488, type: 3}
+  - {fileID: 21300000, guid: 7f70362262719814082180c1cec10383, type: 3}
   - {fileID: 21300000, guid: a5e855f28845df24c90b4b4213414d87, type: 3}
   - {fileID: 21300000, guid: ef308e63283185340900fc45bb28ef85, type: 3}
   - {fileID: 21300000, guid: 2f3ae11408c143b4692a3c1a25b2d954, type: 3}
@@ -77,6 +78,7 @@ SpriteAtlas:
   - volume_setting_active
   - bingo_award_number_bg2
   - setting_move_up_down
+  - toast_bg
   - bingo_award_number_bg3
   - tab_center_normal
   - square_red

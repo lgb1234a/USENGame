@@ -17,6 +17,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     private IViewOperater m_currentView;
     private Stack<IViewOperater> m_viewStack;
     private Transform m_rootCanvas;
+    private Transform m_popupCanvas;
 
     public Text m_keydownDebug;
 
@@ -35,11 +36,17 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         return m_rootCanvas;
     }
 
+    public Transform GetPopupTransform()
+    {
+        return m_popupCanvas;
+    }
+
     void Start()
     {
         Application.targetFrameRate = 30;
         m_viewStack = new Stack<IViewOperater>();
         m_rootCanvas = GameObject.FindGameObjectWithTag("Modal").transform;
+        m_popupCanvas = GameObject.FindGameObjectWithTag("Popup").transform;
         var rootView = new HomeView(m_rootCanvas);
         Push(rootView);
     }
@@ -97,7 +104,8 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     }
 
     bool ApplicationWillQuit() {
-        // var isQuit = EditorUtility.DisplayDialog("温馨提示", "您确定要退出游戏吗？", "确定", "不了");
-        return true;
+        if (ToastView.Instance.IsToasting()) return true;
+        ToastView.Instance.Show();
+        return false;
     }
 }
