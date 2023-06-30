@@ -1,0 +1,403 @@
+
+00_BINGO.png
+size: 2038,1955
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A
+  rotate: false
+  xy: 2, 189
+  size: 348, 339
+  orig: 348, 339
+  offset: 0, 0
+  index: -1
+B
+  rotate: false
+  xy: 352, 128
+  size: 355, 343
+  orig: 355, 343
+  offset: 0, 0
+  index: -1
+BINGO_gamen
+  rotate: false
+  xy: 609, 1032
+  size: 835, 229
+  orig: 835, 229
+  offset: 0, 0
+  index: -1
+C
+  rotate: false
+  xy: 709, 108
+  size: 352, 352
+  orig: 352, 352
+  offset: 0, 0
+  index: -1
+E
+  rotate: true
+  xy: 499, 473
+  size: 309, 335
+  orig: 309, 335
+  offset: 0, 0
+  index: -1
+G
+  rotate: false
+  xy: 1063, 3
+  size: 381, 376
+  orig: 381, 376
+  offset: 0, 0
+  index: -1
+H
+  rotate: false
+  xy: 1531, 380
+  size: 355, 335
+  orig: 355, 335
+  offset: 0, 0
+  index: -1
+I
+  rotate: true
+  xy: 668, 1736
+  size: 164, 345
+  orig: 164, 345
+  offset: 0, 0
+  index: -1
+N
+  rotate: true
+  xy: 836, 462
+  size: 320, 343
+  orig: 320, 343
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 1446, 2
+  size: 408, 376
+  orig: 408, 376
+  offset: 0, 0
+  index: -1
+R
+  rotate: false
+  xy: 1181, 381
+  size: 348, 334
+  orig: 348, 334
+  offset: 0, 0
+  index: -1
+REACH_gamen
+  rotate: false
+  xy: 1187, 1263
+  size: 849, 217
+  orig: 849, 217
+  offset: 0, 0
+  index: -1
+bg2
+  rotate: false
+  xy: 1263, 717
+  size: 495, 279
+  orig: 495, 279
+  offset: 0, 0
+  index: -1
+bingo_base
+  rotate: true
+  xy: 2, 1902
+  size: 51, 557
+  orig: 51, 557
+  offset: 0, 0
+  index: -1
+bingo_goko
+  rotate: true
+  xy: 2, 1576
+  size: 158, 679
+  orig: 158, 679
+  offset: 0, 0
+  index: -1
+black
+  rotate: false
+  xy: 2, 530
+  size: 495, 279
+  orig: 495, 279
+  offset: 0, 0
+  index: -1
+fusen1
+  rotate: true
+  xy: 466, 1353
+  size: 221, 213
+  orig: 221, 213
+  offset: 0, 0
+  index: -1
+fusen10
+  rotate: true
+  xy: 2, 1382
+  size: 192, 229
+  orig: 192, 229
+  offset: 0, 0
+  index: -1
+fusen10_add
+  rotate: true
+  xy: 1776, 1817
+  size: 136, 153
+  orig: 136, 153
+  offset: 0, 0
+  index: -1
+fusen11
+  rotate: true
+  xy: 1070, 1495
+  size: 190, 237
+  orig: 190, 237
+  offset: 0, 0
+  index: -1
+fusen11_add
+  rotate: true
+  xy: 1462, 1819
+  size: 134, 157
+  orig: 134, 157
+  offset: 0, 0
+  index: -1
+fusen1_add
+  rotate: false
+  xy: 2, 1754
+  size: 149, 146
+  orig: 149, 146
+  offset: 0, 0
+  index: -1
+fusen2
+  rotate: true
+  xy: 273, 811
+  size: 282, 305
+  orig: 282, 305
+  offset: 0, 0
+  index: -1
+fusen2_add
+  rotate: true
+  xy: 683, 1554
+  size: 180, 192
+  orig: 180, 192
+  offset: 0, 0
+  index: -1
+fusen3
+  rotate: true
+  xy: 2, 884
+  size: 266, 269
+  orig: 266, 269
+  offset: 0, 0
+  index: -1
+fusen3_add
+  rotate: true
+  xy: 1789, 1642
+  size: 173, 175
+  orig: 173, 175
+  offset: 0, 0
+  index: -1
+fusen4
+  rotate: true
+  xy: 2, 1152
+  size: 227, 286
+  orig: 227, 286
+  offset: 0, 0
+  index: -1
+fusen4_add
+  rotate: true
+  xy: 484, 1747
+  size: 153, 182
+  orig: 153, 182
+  offset: 0, 0
+  index: -1
+fusen5
+  rotate: true
+  xy: 1446, 1002
+  size: 259, 304
+  orig: 259, 304
+  offset: 0, 0
+  index: -1
+fusen5_add
+  rotate: true
+  xy: 1214, 1687
+  size: 169, 190
+  orig: 169, 190
+  offset: 0, 0
+  index: -1
+fusen6
+  rotate: true
+  xy: 681, 1283
+  size: 217, 240
+  orig: 217, 240
+  offset: 0, 0
+  index: -1
+fusen6_add
+  rotate: true
+  xy: 153, 1752
+  size: 148, 158
+  orig: 148, 158
+  offset: 0, 0
+  index: -1
+fusen7
+  rotate: true
+  xy: 923, 1268
+  size: 225, 262
+  orig: 225, 262
+  offset: 0, 0
+  index: -1
+fusen7_add
+  rotate: true
+  xy: 313, 1748
+  size: 152, 169
+  orig: 152, 169
+  offset: 0, 0
+  index: -1
+fusen8
+  rotate: true
+  xy: 290, 1095
+  size: 256, 317
+  orig: 256, 317
+  offset: 0, 0
+  index: -1
+fusen8_add
+  rotate: true
+  xy: 1015, 1691
+  size: 168, 197
+  orig: 168, 197
+  offset: 0, 0
+  index: -1
+fusen9
+  rotate: true
+  xy: 233, 1381
+  size: 193, 231
+  orig: 193, 231
+  offset: 0, 0
+  index: -1
+fusen9_add
+  rotate: true
+  xy: 1621, 1817
+  size: 136, 153
+  orig: 136, 153
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 1364, 1858
+  size: 96, 95
+  orig: 96, 95
+  offset: 0, 0
+  index: -1
+mat
+  rotate: false
+  xy: 580, 784
+  size: 681, 246
+  orig: 681, 246
+  offset: 0, 0
+  index: -1
+mat_kage
+  rotate: false
+  xy: 1406, 1649
+  size: 381, 166
+  orig: 381, 166
+  offset: 0, 0
+  index: -1
+reach_base
+  rotate: true
+  xy: 561, 1902
+  size: 51, 557
+  orig: 51, 557
+  offset: 0, 0
+  index: -1
+reach_goko
+  rotate: true
+  xy: 1309, 1482
+  size: 158, 679
+  orig: 158, 679
+  offset: 0, 0
+  index: -1
+star
+  rotate: false
+  xy: 877, 1502
+  size: 191, 187
+  orig: 191, 187
+  offset: 0, 0
+  index: -1
+star_eff
+  rotate: false
+  xy: 1752, 998
+  size: 265, 263
+  orig: 265, 263
+  offset: 0, 0
+  index: -1
+star_line
+  rotate: true
+  xy: 1120, 1861
+  size: 92, 242
+  orig: 92, 242
+  offset: 0, 0
+  index: -1
+
+00_BINGO2.png
+size: 1861,1941
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BINGO_kanban
+  rotate: false
+  xy: 594, 704
+  size: 1265, 662
+  orig: 1265, 662
+  offset: 0, 0
+  index: -1
+blue
+  rotate: false
+  xy: 2, 2
+  size: 700, 700
+  orig: 700, 700
+  offset: 0, 0
+  index: -1
+puple
+  rotate: false
+  xy: 704, 2
+  size: 700, 700
+  orig: 700, 700
+  offset: 0, 0
+  index: -1
+ring1
+  rotate: false
+  xy: 2, 811
+  size: 590, 590
+  orig: 590, 590
+  offset: 0, 0
+  index: -1
+ring2
+  rotate: false
+  xy: 1111, 1368
+  size: 571, 571
+  orig: 571, 571
+  offset: 0, 0
+  index: -1
+ring3
+  rotate: false
+  xy: 2, 1459
+  size: 480, 480
+  orig: 480, 480
+  offset: 0, 0
+  index: -1
+spot
+  rotate: true
+  xy: 484, 1403
+  size: 536, 625
+  orig: 536, 625
+  offset: 0, 0
+  index: -1
+
+00_BINGO3.png
+size: 1555,853
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+panel_base
+  rotate: false
+  xy: 2, 2
+  size: 849, 849
+  orig: 849, 849
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 853, 151
+  size: 700, 700
+  orig: 700, 700
+  offset: 0, 0
+  index: -1

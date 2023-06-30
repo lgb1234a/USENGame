@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: 00_BINGO_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 32a429216bf3eed478a4dd2449c8c501, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 4a098edc26b3179488371a3628362224, type: 2}
+  - {fileID: 2100000, guid: 24630388da6e85b4b82a8ce2295e0f75, type: 2}
+  - {fileID: 2100000, guid: 09d481920ee004c4e9d7647328513a3a, type: 2}

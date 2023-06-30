@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: BINGO_base_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: 1c5bc3b1b67537b42b756e1740236eeb, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: bb9e25e2b7ea12546b631cd8d78422bd, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: 00_BINGO2.png
+      material: {fileID: 2100000, guid: ddfe12b6c2a964a47aee2bbd8049a0f1, type: 2}
+    multiplyMaterials:
+    - pageName: 00_BINGO.png
+      material: {fileID: 2100000, guid: 56812c1f0f22aa6449a60ff3902cd384, type: 2}
+    screenMaterials:
+    - pageName: 00_BINGO.png
+      material: {fileID: 2100000, guid: de37db084541b4e47b6adddd2e4a2842, type: 2}
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}
