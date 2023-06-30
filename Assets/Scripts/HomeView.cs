@@ -63,17 +63,14 @@ public class HomeView : IViewOperater
     }
 
     public void Update() {
-        if (Input.GetButtonDown("Cancel")) {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (ToastView.Instance.IsToasting()) {
+                Debug.Log("Quit app");
+                Application.Quit();
+                return;
+            }
             ToastView.Instance.Show();
         }
-
-        // if (Input.GetKeyDown(KeyCode.Escape)) {
-        //     if (ToastView.Instance.IsToasting()) {
-        //         Debug.Log("Quit app");
-        //         Application.Quit();
-        //     }
-        //     ToastView.Instance.Show();
-        // }
     }
 
     public void OnAndroidKeyDown(string keyName) {

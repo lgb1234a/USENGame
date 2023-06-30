@@ -97,15 +97,4 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
     }
-
-    void OnApplicationQuit()
-    {
-        Application.wantsToQuit += ApplicationWillQuit;
-    }
-
-    bool ApplicationWillQuit() {
-        if (ToastView.Instance.IsToasting()) return true;
-        ToastView.Instance.Show();
-        return false;
-    }
 }
