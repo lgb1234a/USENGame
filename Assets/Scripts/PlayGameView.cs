@@ -142,8 +142,11 @@ public class PlayGameView : IViewOperater
         }
 
         if (Input.GetButtonDown("Cancel")) {
-            // m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
             OnClickStopButton();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Menu)) {
+            m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
         }
 
         if (m_playRotationAnim) {
@@ -161,9 +164,9 @@ public class PlayGameView : IViewOperater
         // red  398
         // yellow 400
         // blue
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            m_checkAnimator.Animate(m_gameData);
-        }
+        // if (Input.GetKeyDown(KeyCode.Return)) {
+        //     m_checkAnimator.Animate(m_gameData);
+        // }
 
         UpdatePlayButtonText();
     }
