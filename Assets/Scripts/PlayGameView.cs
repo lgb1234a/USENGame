@@ -16,6 +16,7 @@ public class PlayGameView : IViewOperater
     Button m_backGameButton;
     Transform m_pausePanel;
     RectTransform m_numberPanel;
+    GameObject m_numberPanelTitle;
     CheckAnimator m_checkAnimator;
     CanvasGroup m_maskCanvasGroup;
 
@@ -30,6 +31,8 @@ public class PlayGameView : IViewOperater
     Button m_playButton;
     Text m_playButtonText;
     Button m_playbackButton;
+    Button m_redButton;
+    Button m_greenButton;
     CanvasGroup m_playbackCanvasGroup;
 
     Sequence m_transformSequence = DOTween.Sequence();
@@ -55,6 +58,7 @@ public class PlayGameView : IViewOperater
         m_maskCanvasGroup = awardPanelTransform.GetComponent<CanvasGroup>();
 
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
+        m_numberPanelTitle = m_numberPanel.Find("Title").gameObject;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
 
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
@@ -63,6 +67,9 @@ public class PlayGameView : IViewOperater
         m_playButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
         m_playButton.onClick.AddListener(OnClickPlayButton);
         m_playButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2/Text").GetComponent<Text>();
+
+        m_redButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button3").GetComponent<Button>();
+        m_greenButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button4").GetComponent<Button>();
 
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
@@ -175,14 +182,21 @@ public class PlayGameView : IViewOperater
         if (m_pausePanel.gameObject.activeSelf) return;
         
         if (keyName == "blue") {
+            if (!m_playButton.gameObject.activeSelf) return;
             OnClickPlayButton();
         } else if (keyName == "green") {
         } else if (keyName == "red") {
         } else if (keyName == "yellow") {
+            if (!m_rotateTestButton.gameObject.activeSelf) return;
             if (m_numberPanel.localRotation == Quaternion.identity)
+            {
+                // back but not reset
                 m_playRotationAnimBack = true;
-            else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0)) {
-                m_playRotationAnim = true;
+                HideNumberPanelTitle();
+            }
+            else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
+            {
+                OnClickRotateButton();
             }
         }
     }
@@ -216,13 +230,32 @@ public class PlayGameView : IViewOperater
     void OnClickRotateButton() {
         m_playRotationAnim = true;
         EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
+        ShowNumberPanelTitle();
     }
 
     void OnClickPlayBackButton() {
+        m_playRotationAnimBack = true;
+        HideNumberPanelTitle();
         // reset
         AppConfig.Instance.GameData = null;
         Show();
+    }
 
-        m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f));
+    void ShowNumberPanelTitle() {
+        m_numberPanelTitle.SetActive(true);
+
+        m_redButton.gameObject.SetActive(false);
+        m_greenButton.gameObject.SetActive(false);
+        m_playButton.gameObject.SetActive(false);
+        m_rotateTestButton.gameObject.SetActive(false);
+    }
+
+    void HideNumberPanelTitle() {
+        m_numberPanelTitle.SetActive(false);
+
+        m_redButton.gameObject.SetActive(true);
+        m_greenButton.gameObject.SetActive(true);
+        m_playButton.gameObject.SetActive(true);
+        m_rotateTestButton.gameObject.SetActive(true);
     }
 }
