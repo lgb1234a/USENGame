@@ -74,6 +74,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\SkeletonUtility Modules\SkeletonUtilityKinematicShadow.cs" />
+     <Compile Include="Assets\Scripts\ToastView.cs" />
      <Compile Include="Assets\Spine\spine-csharp\IkConstraint.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\SkeletonGraphic\SkeletonGraphic.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets\Spine\spine-csharp\IUpdatable.cs" />
      <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
      <Compile Include="Assets\Spine\spine-csharp\Json.cs" />
+     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
      <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
      <Compile Include="Assets\Spine\spine-csharp\Attachments\PathAttachment.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\SkeletonGraphic\SkeletonGraphicMirror.cs" />
@@ -189,8 +191,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\HomeView.cs" />
      <Compile Include="Assets\Spine\spine-unity\Modules\AttachmentTools\AttachmentTools.cs" />
-     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Scripts\ToastView.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Spine\spine-unity\version.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

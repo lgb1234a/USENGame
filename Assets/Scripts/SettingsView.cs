@@ -14,6 +14,9 @@ public class SettingsView : IViewOperater
     Text m_EffectVolumeText;
     Button m_maxCellSettingButton;
     Text m_maxCellSettingText;
+    ToggleGroup m_backgroundToggleGroup;
+    GameObject m_backgroundSettingSelectedBg;
+    Toggle[] m_toggles = new Toggle[4];
     bool m_isSelectedCellCountButton;
     Button m_resetSettingsButton;
     GameObject m_resetSettingsSelectedBg;
@@ -32,6 +35,24 @@ public class SettingsView : IViewOperater
 
         m_maxCellSettingButton = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Button>();
         m_maxCellSettingText = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Count").GetComponent<Text>();
+
+        m_backgroundToggleGroup = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
+        m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
+        for (int i = 1; i <= 4; i++) {
+            var toggle = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
+            m_toggles[i - 1] = toggle;
+
+            var eventTrigger = toggle.gameObject.GetComponent<EventTrigger>();
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.Select;
+            entry.callback.AddListener(OnTabSelected);
+            eventTrigger.triggers.Add(entry);
+
+            EventTrigger.Entry entry_1 = new EventTrigger.Entry();
+            entry_1.eventID = EventTriggerType.Deselect;
+            entry_1.callback.AddListener(OnTabUnSelected);
+            eventTrigger.triggers.Add(entry_1);
+        }
 
         m_BGMSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
         m_BGMVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
@@ -160,6 +181,16 @@ public class SettingsView : IViewOperater
     public void OnClickBackHomeButton() {
         Hide();
         ViewManager.Instance.Hided(this);
+    }
+
+    private void OnTabSelected(BaseEventData data) {
+        var toggle = data.selectedObject.GetComponent<Toggle>();
+        toggle.isOn = true;
+        m_backgroundSettingSelectedBg.SetActive(true);
+    }
+
+    private void OnTabUnSelected(BaseEventData data) {
+        m_backgroundSettingSelectedBg.SetActive(false);
     }
 
     public void OnBgmSliderValueChanged(float value) {
