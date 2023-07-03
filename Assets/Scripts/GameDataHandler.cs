@@ -21,6 +21,12 @@ public class GameDataHandler
     public void SetCellChecked(int index) {
         m_cellCheckedList[index] = true;
         m_checkedNumbers.Add(index);
+
+        if (m_checkedNumbers.Count == 6)
+            AudioManager.Instance.PlayWillReachBgm();
+        
+        if (m_checkedNumbers.Count == 7)
+            AudioManager.Instance.PlayDefaultBgm();
     }
 
     public bool IsCellChecked(int index) {

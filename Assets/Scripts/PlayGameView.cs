@@ -215,6 +215,7 @@ public class PlayGameView : IViewOperater
         PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         Hide();
         ViewManager.Instance.Hided(this);
+        AudioManager.Instance.PlayDefaultBgm();
     }
 
     public void OnClickStopButton() {
@@ -239,6 +240,7 @@ public class PlayGameView : IViewOperater
         // reset
         AppConfig.Instance.GameData = null;
         Show();
+        AudioManager.Instance.PlayDefaultBgm();
     }
 
     void ShowNumberPanelTitle() {

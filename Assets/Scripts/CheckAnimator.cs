@@ -76,7 +76,7 @@ public class CheckAnimator : MonoBehaviour
         if (!m_waitingBingo) {
             if (m_isAnimate) {
                 StartCoroutine(EaseAnimSpeed());
-                AudioManager.Instance.StopRotateEffect();
+                AudioManager.Instance.StopNumberRotateEffect();
             } else {
                 m_speed = __default_speed__;
                 m_isAnimate = true;

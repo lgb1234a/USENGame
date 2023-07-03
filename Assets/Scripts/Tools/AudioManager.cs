@@ -5,17 +5,30 @@ using UnityEngine;
 public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 {
     public AudioSource audioSource;
+    public AudioClip bgm;
+    public AudioClip willReachBgm;
+
+
     public AudioSource effectAudioSource;
 
     public AudioClip bingoEffect;
     public AudioClip numberCheckEffect;
     public AudioClip numberRotateEffect;
-    public AudioClip reachClickDownEffect;
     public AudioClip reachClickEffect;
 
     public void SetBgmVolume(float volume)
     {
         audioSource.volume = volume;
+    }
+
+    public void PlayWillReachBgm() {
+        audioSource.clip = willReachBgm;
+        PlayBgm();
+    }
+
+    public void PlayDefaultBgm() {
+        audioSource.clip = bgm;
+        PlayBgm();
     }
 
     public void StopBgm() {
@@ -51,17 +64,12 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         effectAudioSource.Play();
     }
 
-    public void StopRotateEffect() {
+    public void StopNumberRotateEffect() {
         effectAudioSource.Stop();
     }
 
     public void PlayReachClickEffect() {
         effectAudioSource.clip = reachClickEffect;
-        effectAudioSource.Play();
-    }
-
-    public void PlayReachClickDownEffect() {
-        effectAudioSource.clip = reachClickDownEffect;
         effectAudioSource.Play();
     }
 }

@@ -522,12 +522,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 519420033}
+  bgm: {fileID: 8300000, guid: e6ea512d1f05d1c40aedc30e2fe1911a, type: 3}
+  willReachBgm: {fileID: 8300000, guid: ef09911f31966e94ea2e79dba7471311, type: 3}
   effectAudioSource: {fileID: 1602132217}
   bingoEffect: {fileID: 8300000, guid: 036e3a3ade5d09b478525cd9e423797e, type: 3}
   numberCheckEffect: {fileID: 8300000, guid: 3b49a3d79b5ca3140b0ddd91a7aa3bb9, type: 3}
   numberRotateEffect: {fileID: 8300000, guid: 48540d9786ab6d24797cff636942d275, type: 3}
-  reachClickDownEffect: {fileID: 8300000, guid: ef09911f31966e94ea2e79dba7471311,
-    type: 3}
   reachClickEffect: {fileID: 8300000, guid: ceb3438bd987f114a8c574d0db370fee, type: 3}
 --- !u!1 &932992212
 GameObject:
