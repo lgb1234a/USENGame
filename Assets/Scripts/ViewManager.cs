@@ -54,7 +54,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Update()
     {
         m_currentView.Update();
-        OutputKeyDebugMsg();
+        // OutputKeyDebugMsg();
     }
 
     void OutputKeyDebugMsg() {
@@ -67,6 +67,10 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 				}
 			}
         }
+    }
+
+    public void ShowDebugInfo(string text) {
+        m_keydownDebug.text = text;
     }
 
     public void Push(IViewOperater view)

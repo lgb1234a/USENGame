@@ -185,6 +185,7 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnAndroidKeyDown(string keyName) {
+        ViewManager.Instance.ShowDebugInfo($"android {keyName} pressed!");
         if (m_pausePanel.gameObject.activeSelf) return;
         
         if (keyName == "blue") {
