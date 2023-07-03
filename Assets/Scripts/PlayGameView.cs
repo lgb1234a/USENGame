@@ -81,7 +81,6 @@ public class PlayGameView : IViewOperater
 
     public void Show() {
         m_viewGameObject.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(m_stopButton.gameObject);
 
         if (AppConfig.Instance.GameData != null) {
             m_gameData = AppConfig.Instance.GameData;
@@ -159,7 +158,7 @@ public class PlayGameView : IViewOperater
         }
 
         if (Input.GetKeyDown(KeyCode.Menu)) {
-            m_pausePanel.gameObject.SetActive(!m_pausePanel.gameObject.activeSelf);
+            m_pausePanel.gameObject.SetActive(!IsShowPausePanel());
         }
 
         if (m_playRotationAnim) {
@@ -185,9 +184,9 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnAndroidKeyDown(string keyName) {
-        ViewManager.Instance.ShowDebugInfo($"android {keyName} pressed!");
-        if (m_pausePanel.gameObject.activeSelf) return;
-        
+        if (IsShowPausePanel()) return;
+        if (IsShowHistory()) return;
+
         if (keyName == "blue") {
             if (!m_playButton.gameObject.activeSelf) return;
             OnClickPlayButton();
@@ -278,6 +277,10 @@ public class PlayGameView : IViewOperater
     }
 
     bool IsShowHistory() {
-        return m_numberPanel.localRotation == Quaternion.identity;
+        return m_numberPanel.localRotation != Quaternion.Euler(0, 30, 0);
+    }
+
+    bool IsShowPausePanel() {
+        return m_pausePanel.gameObject.activeSelf;
     }
 }

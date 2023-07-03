@@ -54,7 +54,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Update()
     {
         m_currentView.Update();
-        // OutputKeyDebugMsg();
+        OutputKeyDebugMsg();
     }
 
     void OutputKeyDebugMsg() {
