@@ -69,7 +69,9 @@ public class PlayGameView : IViewOperater
         m_playButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2/Text").GetComponent<Text>();
 
         m_redButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button3").GetComponent<Button>();
+        m_redButton.onClick.AddListener(OnClickRedButton);
         m_greenButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button4").GetComponent<Button>();
+        m_greenButton.onClick.AddListener(OnClickGreenButton);
 
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
@@ -185,7 +187,9 @@ public class PlayGameView : IViewOperater
             if (!m_playButton.gameObject.activeSelf) return;
             OnClickPlayButton();
         } else if (keyName == "green") {
+            OnClickGreenButton();
         } else if (keyName == "red") {
+            OnClickRedButton();
         } else if (keyName == "yellow") {
             if (!m_rotateTestButton.gameObject.activeSelf) return;
             if (m_numberPanel.localRotation == Quaternion.identity)
@@ -240,6 +244,13 @@ public class PlayGameView : IViewOperater
         // reset
         AppConfig.Instance.GameData = null;
         Show();
+    }
+
+    void OnClickRedButton() {
+        AudioManager.Instance.PlayWillReachBgm();
+    }
+
+    void OnClickGreenButton() {
         AudioManager.Instance.PlayDefaultBgm();
     }
 
