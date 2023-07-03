@@ -151,7 +151,11 @@ public class PlayGameView : IViewOperater
         }
 
         if (Input.GetButtonDown("Cancel")) {
-            OnClickStopButton();
+            if (IsShowHistory()) {
+                OnClickPlayBackButton();
+            }else {
+                OnClickStopButton();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Menu)) {
@@ -270,5 +274,9 @@ public class PlayGameView : IViewOperater
         m_greenButton.gameObject.SetActive(true);
         m_playButton.gameObject.SetActive(true);
         m_rotateTestButton.gameObject.SetActive(true);
+    }
+
+    bool IsShowHistory() {
+        return m_numberPanel.localRotation == Quaternion.identity;
     }
 }
