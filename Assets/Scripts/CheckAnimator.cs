@@ -46,6 +46,7 @@ public class CheckAnimator : MonoBehaviour
                 m_isAnimate = false;
                 StartCoroutine(WaitToTriggerNextRound());
                 m_gameData.SetCellChecked(int.Parse(m_Texts[1].text)-1);
+                AudioManager.Instance.PlayNumberCheckEffect();
             }
             m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
             return m_animPositions[index];
@@ -75,10 +76,12 @@ public class CheckAnimator : MonoBehaviour
         if (!m_waitingBingo) {
             if (m_isAnimate) {
                 StartCoroutine(EaseAnimSpeed());
+                AudioManager.Instance.StopRotateEffect();
             } else {
                 m_speed = __default_speed__;
                 m_isAnimate = true;
                 m_isEaseToStop = false;
+                AudioManager.Instance.PlayNumberRotateEffect();
             }
         }
     }
