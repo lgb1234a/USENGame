@@ -15,10 +15,8 @@ public class CheckAnimator : MonoBehaviour
     GameDataHandler m_gameData;
     float[] m_progress = new[] {0f, 1f, 2f, 3f};
     Vector3[] m_animPositions = new[] {Vector3.up*__cell_height__*2, Vector3.up*__cell_height__, Vector3.zero, Vector3.down*__cell_height__};
-    void Start()
-    {
-        
-    }
+
+    Coroutine m_easeCoroutine;
 
     void Update()
     {
@@ -75,7 +73,7 @@ public class CheckAnimator : MonoBehaviour
         m_gameData = gameData;
         if (!m_waitingBingo) {
             if (m_isAnimate) {
-                StartCoroutine(EaseAnimSpeed());
+                m_easeCoroutine = StartCoroutine(EaseAnimSpeed());
                 AudioManager.Instance.StopNumberRotateEffect();
             } else {
                 m_speed = __default_speed__;
@@ -94,5 +92,24 @@ public class CheckAnimator : MonoBehaviour
 
     public bool isAnimteFinished() {
         return m_isEaseToStop;
+    }
+
+    public void ForceStop() {
+        StopRotateAnimate();
+        if (m_easeCoroutine != null)
+            StopCoroutine(m_easeCoroutine);
+    }
+
+    public void StopRotateAnimate() {
+        m_waitingBingo = false;
+        m_isEaseToStop = false;
+        if (m_isAnimate) {
+            m_isAnimate = false;
+            m_progress = new[] {0f, 1f, 2f, 3f};
+            for (int i = 0; i < m_Texts.Length; i++)
+            {
+                m_Texts[i].gameObject.transform.localPosition = m_animPositions[i];
+            }
+        }
     }
 }

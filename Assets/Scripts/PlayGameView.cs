@@ -151,8 +151,11 @@ public class PlayGameView : IViewOperater
 
         if (Input.GetButtonDown("Cancel")) {
             if (IsShowHistory()) {
-                OnClickPlayBackButton();
+                m_playRotationAnimBack = true;
+                HideNumberPanelTitle();
+                Show();
             }else {
+                m_checkAnimator.ForceStop();
                 OnClickStopButton();
             }
         }
