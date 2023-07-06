@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using Spine.Unity;
 
 public class PlayGameView : IViewOperater
 {
@@ -34,6 +35,7 @@ public class PlayGameView : IViewOperater
     Button m_redButton;
     Button m_greenButton;
     CanvasGroup m_playbackCanvasGroup;
+    SkeletonGraphic m_sg;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -76,6 +78,9 @@ public class PlayGameView : IViewOperater
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
+
+        m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel").GetComponent<SkeletonGraphic>();
+        m_sg.AnimationState.Complete += OnPlayComplete;
     }
 
 
@@ -255,10 +260,21 @@ public class PlayGameView : IViewOperater
 
     void OnClickRedButton() {
         AudioManager.Instance.PlayWillReachBgm();
+        m_sg.gameObject.SetActive(true);
+        m_sg.AnimationState.SetAnimation(0, "reach", false);
     }
 
     void OnClickGreenButton() {
         AudioManager.Instance.PlayDefaultBgm();
+        m_sg.gameObject.SetActive(true);
+        m_sg.AnimationState.SetAnimation(0, "bingo", false);
+    }
+
+    private void OnPlayComplete(Spine.TrackEntry entry)
+    {
+        Debug.Log("animation complete");
+        m_sg.AnimationState.ClearTracks();
+        // m_sg.gameObject.SetActive(false);
     }
 
     void ShowNumberPanelTitle() {
