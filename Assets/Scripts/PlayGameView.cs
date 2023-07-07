@@ -262,19 +262,20 @@ public class PlayGameView : IViewOperater
         AudioManager.Instance.PlayWillReachBgm();
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "reach", false);
+        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
     }
 
     void OnClickGreenButton() {
         AudioManager.Instance.PlayDefaultBgm();
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
+        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
     }
 
     private void OnPlayComplete(Spine.TrackEntry entry)
     {
         Debug.Log("animation complete");
         m_sg.AnimationState.ClearTracks();
-        // m_sg.gameObject.SetActive(false);
     }
 
     void ShowNumberPanelTitle() {
