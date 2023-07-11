@@ -105,6 +105,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Resources\Effects\Reach\00_BINGO.atlas.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -765,17 +766,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{928e30d3-0374-9447-3a2d-e7a691823ec6}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{c8ad1e09-1680-2def-6187-dd28cf28a4fc}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{0d37a7fc-986c-fc5d-2da2-4de44e2bb23a}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{dc719b37-3053-326b-ea7f-dfb35557ee22}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
       <Project>{6c6af580-f9ab-1952-f22b-e6a1cb3009ac}</Project>
@@ -785,13 +778,21 @@
       <Project>{b90dbe17-8293-5278-fc25-dd0c72c9a84c}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{dc719b37-3053-326b-ea7f-dfb35557ee22}</Project>
-      <Name>spine-unity-examples-editor</Name>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{928e30d3-0374-9447-3a2d-e7a691823ec6}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{a7ba3dff-f7b6-8576-f89a-002f3b824808}</Project>
       <Name>spine-unity-editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{c8ad1e09-1680-2def-6187-dd28cf28a4fc}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{0d37a7fc-986c-fc5d-2da2-4de44e2bb23a}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

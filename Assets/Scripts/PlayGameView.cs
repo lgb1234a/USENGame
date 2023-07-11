@@ -274,7 +274,6 @@ public class PlayGameView : IViewOperater
 
     private void OnPlayComplete(Spine.TrackEntry entry)
     {
-        Debug.Log("animation complete");
         m_sg.AnimationState.ClearTracks();
     }
 
