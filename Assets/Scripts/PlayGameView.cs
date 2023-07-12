@@ -36,6 +36,7 @@ public class PlayGameView : IViewOperater
     Button m_greenButton;
     CanvasGroup m_playbackCanvasGroup;
     SkeletonGraphic m_sg;
+    SkeletonGraphic m_bgEffect;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -81,6 +82,7 @@ public class PlayGameView : IViewOperater
 
         m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel").GetComponent<SkeletonGraphic>();
         m_sg.AnimationState.Complete += OnPlayComplete;
+        m_bgEffect = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect").GetComponent<SkeletonGraphic>();
     }
 
 
@@ -263,6 +265,7 @@ public class PlayGameView : IViewOperater
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "reach", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
+        m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
     }
 
     void OnClickGreenButton() {
@@ -270,6 +273,7 @@ public class PlayGameView : IViewOperater
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
+        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
     }
 
     private void OnPlayComplete(Spine.TrackEntry entry)

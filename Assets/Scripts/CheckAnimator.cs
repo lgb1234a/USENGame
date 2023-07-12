@@ -67,6 +67,7 @@ public class CheckAnimator : MonoBehaviour
     IEnumerator<WaitForSeconds> WaitToTriggerNextRound() {
         yield return new WaitForSeconds(1);
         m_waitingBingo = false;
+        AudioManager.Instance.StopNumberRotateEffect();
     }
 
     public void Animate(GameDataHandler gameData) {
@@ -74,7 +75,6 @@ public class CheckAnimator : MonoBehaviour
         if (!m_waitingBingo) {
             if (m_isAnimate) {
                 m_easeCoroutine = StartCoroutine(EaseAnimSpeed());
-                AudioManager.Instance.StopNumberRotateEffect();
             } else {
                 m_speed = __default_speed__;
                 m_isAnimate = true;
