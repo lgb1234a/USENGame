@@ -173,13 +173,17 @@ public class PlayGameView : IViewOperater
         }
 
         if (m_playRotationAnim) {
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f)).Join(m_playbackCanvasGroup.DOFade(1, 1f));
+            var color = m_bgEffect.color;
+            color.a = 0;
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f)).Join(m_playbackCanvasGroup.DOFade(1, 1f)).Join(m_bgEffect.DOColor(color, 1f));
             m_playRotationAnim = false;
             EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
         }
 
         if (m_playRotationAnimBack) {
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f));
+            var color = m_bgEffect.color;
+            color.a = 1;
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f)).Join(m_bgEffect.DOColor(color, 1f));
             m_playRotationAnimBack = false;
         }
 
