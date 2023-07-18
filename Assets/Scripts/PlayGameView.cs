@@ -13,8 +13,11 @@ public class PlayGameView : IViewOperater
     string m_prefabPath = "GamePanel";
     GameObject m_viewGameObject;
     Button m_stopButton;
+    Text m_stopButtonText;
     Button m_exitButton;
+    Text m_exitButtonText;
     Button m_backGameButton;
+    Text m_backGameButtonText;
     Transform m_pausePanel;
     RectTransform m_numberPanel;
     GameObject m_numberPanelTitle;
@@ -47,12 +50,15 @@ public class PlayGameView : IViewOperater
         m_viewGameObject.transform.localPosition = position;
 
         m_stopButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton").GetComponent<Button>();
+        m_stopButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton/Text").GetComponent<Text>();
         m_stopButton.onClick.AddListener(OnClickStopButton);
 
         m_exitButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton").GetComponent<Button>();
+        m_exitButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton/Text").GetComponent<Text>();
         m_exitButton.onClick.AddListener(OnClickExitButton);
 
         m_backGameButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton").GetComponent<Button>();
+        m_backGameButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton/Text").GetComponent<Text>();
         m_backGameButton.onClick.AddListener(OnClickBackGameButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
@@ -83,8 +89,43 @@ public class PlayGameView : IViewOperater
         m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel").GetComponent<SkeletonGraphic>();
         m_sg.AnimationState.Complete += OnPlayComplete;
         m_bgEffect = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect").GetComponent<SkeletonGraphic>();
+        HandleSelectedEventTriggers();
     }
 
+    void HandleSelectedEventTriggers() {
+        var eventTrigger = m_stopButton.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.Select;
+        entry.callback.AddListener(OnStopButtonSelected);
+        eventTrigger.triggers.Add(entry);
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.Deselect;
+        entry1.callback.AddListener(OnStopButtonDeselected);
+        eventTrigger.triggers.Add(entry1);
+
+        var eventTrigger1 = m_exitButton.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Select;
+        entry2.callback.AddListener(OnExitButtonSelected);
+        eventTrigger1.triggers.Add(entry2);
+
+        EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        entry3.eventID = EventTriggerType.Deselect;
+        entry3.callback.AddListener(OnExitButtonDeselected);
+        eventTrigger1.triggers.Add(entry3);
+
+        var eventTrigger2 = m_backGameButton.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry4 = new EventTrigger.Entry();
+        entry4.eventID = EventTriggerType.Select;
+        entry4.callback.AddListener(OnBackGameButtonSelected);
+        eventTrigger2.triggers.Add(entry4);
+
+        EventTrigger.Entry entry5 = new EventTrigger.Entry();
+        entry5.eventID = EventTriggerType.Deselect;
+        entry5.callback.AddListener(OnBackGameButtonDeselected);
+        eventTrigger2.triggers.Add(entry5);
+    }
 
     public void Show() {
         m_viewGameObject.SetActive(true);
@@ -167,7 +208,7 @@ public class PlayGameView : IViewOperater
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Menu)) {
+        if (Input.GetKeyDown(KeyCode.Menu) || Input.GetButtonDown("Submit")) {
             m_pausePanel.gameObject.SetActive(!IsShowPausePanel());
             EventSystem.current.SetSelectedGameObject(m_backGameButton.gameObject);
         }
@@ -310,5 +351,29 @@ public class PlayGameView : IViewOperater
 
     bool IsShowPausePanel() {
         return m_pausePanel.gameObject.activeSelf;
+    }
+
+    void OnStopButtonSelected(BaseEventData data) {
+        m_stopButtonText.color = Color.white;
+    }
+
+    void OnStopButtonDeselected(BaseEventData data) {
+        m_stopButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnExitButtonSelected(BaseEventData data) {
+        m_exitButtonText.color = Color.white;
+    }
+
+    void OnExitButtonDeselected(BaseEventData data) {
+        m_exitButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnBackGameButtonSelected(BaseEventData data) {
+        m_backGameButtonText.color = Color.white;
+    }
+
+    void OnBackGameButtonDeselected(BaseEventData data) {
+        m_backGameButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
     }
 }
