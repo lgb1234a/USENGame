@@ -36,9 +36,9 @@ public class HomeView : IViewOperater
     }
 
     void OnClickStartButton() {
-        PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
+        // PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         AppConfig.Instance.GameData = null;
-        ShowPlayGameView();
+        ShowPlayGameView(reset: true);
     }
 
     void OnClickReopenButton() {
@@ -78,10 +78,12 @@ public class HomeView : IViewOperater
         
     }
 
-    void ShowPlayGameView() {
+    void ShowPlayGameView(bool reset = false) {
         if (m_playGameView == null) {
             m_playGameView = new PlayGameView();
         }
+        if (reset)
+            m_playGameView.ResetData();
         ViewManager.Instance.Push(m_playGameView);
     }
 

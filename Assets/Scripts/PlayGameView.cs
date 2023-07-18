@@ -276,9 +276,14 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnClickExitButton() {
-        PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
+        ResetData();
         Hide();
         ViewManager.Instance.Hided(this);
+    }
+
+    public void ResetData() {
+        PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
+        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         AudioManager.Instance.PlayDefaultBgm();
     }
 
