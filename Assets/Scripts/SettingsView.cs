@@ -24,7 +24,7 @@ public class SettingsView : IViewOperater
     GameObject m_aboutButtonSelectedBg;
     float m_deltaTime = 0;
     AboutView m_aboutView;
-
+    GameObject m_maxCellSettingArrows;
 
     public SettingsView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -35,6 +35,7 @@ public class SettingsView : IViewOperater
 
         m_maxCellSettingButton = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Button>();
         m_maxCellSettingText = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Count").GetComponent<Text>();
+        m_maxCellSettingArrows = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Arrows").gameObject;
 
         m_backgroundToggleGroup = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
         m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
@@ -263,10 +264,12 @@ public class SettingsView : IViewOperater
 
     void OnCellCountButtonSelected(BaseEventData data) {
         m_isSelectedCellCountButton = true;
+        m_maxCellSettingArrows.SetActive(true);
     }
 
     void OnCellCountButtonUnSelected(BaseEventData data) {
         m_isSelectedCellCountButton = false;
+        m_maxCellSettingArrows.SetActive(false);
     }
 
     void OnResetSettingsButtonClicked() {

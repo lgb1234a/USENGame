@@ -15,6 +15,15 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public AudioClip numberCheckEffect;
     public AudioClip numberRotateEffect;
     public AudioClip reachClickEffect;
+    public AudioClip keyDownEffect;
+
+    public static void InitVolume() 
+    {
+        var bgmVolume = AppConfig.Instance.BGMVolume;
+        AudioManager.Instance.SetBgmVolume(bgmVolume);
+        var effectVolume = AppConfig.Instance.EffectVolume;
+        AudioManager.Instance.SetEffectVolume(effectVolume);
+    }
 
     public void SetBgmVolume(float volume)
     {
@@ -70,6 +79,11 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void PlayReachClickEffect() {
         effectAudioSource.clip = reachClickEffect;
+        effectAudioSource.Play();
+    }
+
+    public void PlayKeyDownEffect() {
+        effectAudioSource.clip = keyDownEffect;
         effectAudioSource.Play();
     }
 }

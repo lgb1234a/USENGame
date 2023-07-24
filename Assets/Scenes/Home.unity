@@ -530,6 +530,7 @@ MonoBehaviour:
   numberCheckEffect: {fileID: 8300000, guid: 3b49a3d79b5ca3140b0ddd91a7aa3bb9, type: 3}
   numberRotateEffect: {fileID: 8300000, guid: 48540d9786ab6d24797cff636942d275, type: 3}
   reachClickEffect: {fileID: 8300000, guid: ceb3438bd987f114a8c574d0db370fee, type: 3}
+  keyDownEffect: {fileID: 8300000, guid: 7dcdfd5048c5dea449597262a9eeae23, type: 3}
 --- !u!1 &932992212
 GameObject:
   m_ObjectHideFlags: 0

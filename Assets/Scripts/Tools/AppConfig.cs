@@ -38,7 +38,7 @@ public class AppConfig
         }
     }
 
-    private int _bgmVolume = -100;
+    private int _bgmVolume = 0;
 
     public int BGMVolume {
         set
@@ -48,25 +48,21 @@ public class AppConfig
         }
         get
         {
-            if (_bgmVolume == -100) {
-                _bgmVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 5);
-            }
+            _bgmVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 0);
             return _bgmVolume;
         }
     }
 
-    private int _effectVolume = -100;
+    private int _effectVolume = 0;
     public int EffectVolume {
         set
         {
             _effectVolume = value;
-            PreferencesStorage.SaveInt("__BGM_VOLUME__", value);
+            PreferencesStorage.SaveInt("__EFFECT_VOLUME__", value);
         }
         get
         {
-            if (_effectVolume == -100) {
-                _effectVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 5);
-            }
+            _effectVolume = PreferencesStorage.ReadInt("__EFFECT_VOLUME__", 0);
             return _effectVolume;
         }
     }

@@ -53,6 +53,9 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 
     void Update()
     {
+        if (Input.anyKeyDown) {
+            AudioManager.Instance.PlayKeyDownEffect();
+        }
         m_currentView.Update();
         OutputKeyDebugMsg();
     }

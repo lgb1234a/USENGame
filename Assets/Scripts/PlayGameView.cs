@@ -71,7 +71,7 @@ public class PlayGameView : IViewOperater
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
 
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
-        m_rotateTestButton.onClick.AddListener(OnClickRotateButton);
+        m_rotateTestButton.onClick.AddListener(OnClickYellowButton);
 
         m_playButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
         m_playButton.onClick.AddListener(OnClickPlayButton);
@@ -251,17 +251,7 @@ public class PlayGameView : IViewOperater
         } else if (keyName == "red") {
             OnClickRedButton();
         } else if (keyName == "yellow") {
-            if (!m_rotateTestButton.gameObject.activeSelf) return;
-            if (m_numberPanel.localRotation == Quaternion.identity)
-            {
-                // back but not reset
-                m_playRotationAnimBack = true;
-                HideNumberPanelTitle();
-            }
-            else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
-            {
-                OnClickRotateButton();
-            }
+            OnClickYellowButton();
         }
     }
 
@@ -312,6 +302,7 @@ public class PlayGameView : IViewOperater
     }
 
     void OnClickRedButton() {
+        AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "reach", false);
@@ -320,11 +311,27 @@ public class PlayGameView : IViewOperater
     }
 
     void OnClickGreenButton() {
+        AudioManager.Instance.PlayBingoEffect();
         AudioManager.Instance.PlayDefaultBgm();
         m_sg.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+    }
+
+    void OnClickYellowButton() 
+    {
+        if (m_numberPanel.localRotation == Quaternion.identity)
+        {
+            // back but not reset
+            m_playRotationAnimBack = true;
+            HideNumberPanelTitle();
+            OnClickPlayBackButton();
+        }
+        else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
+        {
+            OnClickRotateButton();
+        }
     }
 
     private void OnPlayComplete(Spine.TrackEntry entry)
@@ -338,7 +345,7 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(false);
         m_greenButton.gameObject.SetActive(false);
         m_playButton.gameObject.SetActive(false);
-        m_rotateTestButton.gameObject.SetActive(false);
+        // m_rotateTestButton.gameObject.SetActive(false);
     }
 
     void HideNumberPanelTitle() {
@@ -347,7 +354,7 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(true);
         m_greenButton.gameObject.SetActive(true);
         m_playButton.gameObject.SetActive(true);
-        m_rotateTestButton.gameObject.SetActive(true);
+        // m_rotateTestButton.gameObject.SetActive(true);
     }
 
     bool IsShowHistory() {

@@ -18,6 +18,7 @@ public class HomeView : IViewOperater
     // Start is called before the first frame update
     public HomeView(Transform parent)
     {
+        AudioManager.InitVolume();
         var obj = Resources.Load<GameObject>(m_prefabPath);
         m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
         var position = m_viewGameObject.transform.localPosition;
