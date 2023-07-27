@@ -197,13 +197,13 @@ public class SettingsView : IViewOperater
     public void OnBgmSliderValueChanged(float value) {
         m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
         AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
-        AudioManager.Instance.SetBgmVolume(value / 10f + 0.5f);
+        AudioManager.Instance.SetBgmVolume((int)value);
     }
 
     public void OnVolumeEffectValueChanged(float value) {
         m_EffectVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
         AppConfig.Instance.EffectVolume = Mathf.FloorToInt(value);
-        AudioManager.Instance.SetEffectVolume(value / 10f + 0.5f);
+        AudioManager.Instance.SetEffectVolume((int)value);
     }
 
     void OnBgmSliderSelected(BaseEventData data) {

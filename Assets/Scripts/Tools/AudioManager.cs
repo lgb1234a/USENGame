@@ -25,9 +25,9 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         AudioManager.Instance.SetEffectVolume(effectVolume);
     }
 
-    public void SetBgmVolume(float volume)
+    public void SetBgmVolume(int volume)
     {
-        audioSource.volume = volume;
+        audioSource.volume = volume / 10f + 0.5f;
     }
 
     public void PlayWillReachBgm() {
@@ -51,9 +51,9 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
 
-    public void SetEffectVolume(float volume)
+    public void SetEffectVolume(int volume)
     {
-        effectAudioSource.volume = volume;
+        effectAudioSource.volume = volume / 10f + 0.5f;
     }
 
     public void PlayBingoEffect() {

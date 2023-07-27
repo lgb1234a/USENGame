@@ -208,7 +208,7 @@ public class PlayGameView : IViewOperater
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Menu)) {
+        if (Input.GetKeyDown(KeyCode.Menu) || Input.GetKeyDown(KeyCode.A)) {
             m_pausePanel.gameObject.SetActive(!IsShowPausePanel());
             EventSystem.current.SetSelectedGameObject(m_backGameButton.gameObject);
         }
@@ -383,6 +383,8 @@ public class PlayGameView : IViewOperater
 
     void OnBackGameButtonSelected(BaseEventData data) {
         m_backGameButtonText.color = Color.white;
+        m_exitButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+        m_stopButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
     }
 
     void OnBackGameButtonDeselected(BaseEventData data) {
