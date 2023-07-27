@@ -208,7 +208,7 @@ public class PlayGameView : IViewOperater
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Menu) || Input.GetButtonDown("Submit")) {
+        if (Input.GetKeyDown(KeyCode.Menu)) {
             m_pausePanel.gameObject.SetActive(!IsShowPausePanel());
             EventSystem.current.SetSelectedGameObject(m_backGameButton.gameObject);
         }
