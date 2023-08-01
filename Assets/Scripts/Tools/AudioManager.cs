@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetBgmVolume(int volume)
     {
-        audioSource.volume = volume / 10f + 0.5f;
+        audioSource.volume = volume * 0.04f + 0.8f;
     }
 
     public void PlayWillReachBgm() {
@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetEffectVolume(int volume)
     {
-        effectAudioSource.volume = volume / 10f + 0.5f;
+        effectAudioSource.volume = volume * 0.04f + 0.8f;
     }
 
     public void PlayBingoEffect() {
