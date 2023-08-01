@@ -241,14 +241,16 @@ public class PlayGameView : IViewOperater
 
     public void OnAndroidKeyDown(string keyName) {
         if (IsShowPausePanel()) return;
-        if (IsShowHistory()) return;
 
         if (keyName == "blue") {
+            if (IsShowHistory()) return;
             if (!m_playButton.gameObject.activeSelf) return;
             OnClickPlayButton();
         } else if (keyName == "green") {
+            if (IsShowHistory()) return;
             OnClickGreenButton();
         } else if (keyName == "red") {
+            if (IsShowHistory()) return;
             OnClickRedButton();
         } else if (keyName == "yellow") {
             OnClickYellowButton();
