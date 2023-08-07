@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class SettingsView : IViewOperater
 {
@@ -16,7 +17,7 @@ public class SettingsView : IViewOperater
     Text m_maxCellSettingText;
     ToggleGroup m_backgroundToggleGroup;
     GameObject m_backgroundSettingSelectedBg;
-    Toggle[] m_toggles = new Toggle[4];
+    List<Toggle> m_toggles = new List<Toggle>();
     bool m_isSelectedCellCountButton;
     Button m_resetSettingsButton;
     GameObject m_resetSettingsSelectedBg;
@@ -39,9 +40,13 @@ public class SettingsView : IViewOperater
 
         m_backgroundToggleGroup = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
         m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
+        m_toggles.Clear();
         for (int i = 1; i <= 4; i++) {
             var toggle = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
-            m_toggles[i - 1] = toggle;
+            m_toggles.Add(toggle);
+            if (i-1 == AppConfig.Instance.ThemeSelectedIdx) {
+                toggle.isOn = true;
+            }
 
             var eventTrigger = toggle.gameObject.GetComponent<EventTrigger>();
             EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -188,6 +193,8 @@ public class SettingsView : IViewOperater
         var toggle = data.selectedObject.GetComponent<Toggle>();
         toggle.isOn = true;
         m_backgroundSettingSelectedBg.SetActive(true);
+        var index = m_toggles.IndexOf(toggle);
+        AppConfig.Instance.ThemeSelectedIdx = index;
     }
 
     private void OnTabUnSelected(BaseEventData data) {
@@ -275,7 +282,8 @@ public class SettingsView : IViewOperater
     void OnResetSettingsButtonClicked() {
         AppConfig.Instance.MaxCellCount = 75;
         m_maxCellSettingText.text = "75";
-
+        m_toggles[0].isOn = true;
+        AppConfig.Instance.ThemeSelectedIdx = 0;
         AppConfig.Instance.BGMVolume = 0;
         m_BGMSlider.value = 0;
 

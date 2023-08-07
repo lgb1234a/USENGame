@@ -58,9 +58,9 @@ public class CheckAnimator : MonoBehaviour
         m_speed = m_speed * 0.8f;
         yield return new WaitForSeconds(1f);
         m_speed = m_speed * 0.6f;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         m_speed = m_speed * 0.5f;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         m_isEaseToStop = true;
     }
 

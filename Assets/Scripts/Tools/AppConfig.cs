@@ -67,6 +67,20 @@ public class AppConfig
         }
     }
 
+    private int _themeSelectedIdx = 0;
+    public int ThemeSelectedIdx {
+        set
+        {
+            _themeSelectedIdx = value;
+            PreferencesStorage.SaveInt("__THEME_SELECTED__", value);
+        }
+        get
+        {
+            _themeSelectedIdx = PreferencesStorage.ReadInt("__THEME_SELECTED__", 0);
+            return _themeSelectedIdx;
+        }
+    }
+
     private GameDataHandler _gameData;
 
     public GameDataHandler GameData {
