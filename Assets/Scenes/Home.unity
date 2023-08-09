@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -531,6 +532,18 @@ MonoBehaviour:
   numberRotateEffect: {fileID: 8300000, guid: 48540d9786ab6d24797cff636942d275, type: 3}
   reachClickEffect: {fileID: 8300000, guid: ceb3438bd987f114a8c574d0db370fee, type: 3}
   keyDownEffect: {fileID: 8300000, guid: 7dcdfd5048c5dea449597262a9eeae23, type: 3}
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d125725868f48304088d36620573aa6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &932992212
 GameObject:
   m_ObjectHideFlags: 0
