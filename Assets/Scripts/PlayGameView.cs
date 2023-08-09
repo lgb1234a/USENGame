@@ -323,6 +323,8 @@ public class PlayGameView : IViewOperater
 
     void OnClickYellowButton() 
     {
+        if (m_checkAnimator.isAnimating()) return;
+        
         if (m_numberPanel.localRotation == Quaternion.identity)
         {
             // back but not reset

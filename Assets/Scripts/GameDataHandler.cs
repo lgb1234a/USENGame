@@ -19,6 +19,7 @@ public class GameDataHandler
     }
 
     public void SetCellChecked(int index) {
+        if (index < 0) return;
         m_cellCheckedList[index] = true;
         m_checkedNumbers.Add(index);
     }
@@ -39,7 +40,7 @@ public class GameDataHandler
             if (!m_checkedNumbers.Contains(i))
                 validNumbers.Add(i+1);
                 
-        var index = UnityEngine.Random.Range(0, validNumbers.Count);
+        var index = UnityEngine.Random.Range(0, validNumbers.Count-1);
         if (index >= validNumbers.Count)
             return 0;
         return validNumbers[index];
