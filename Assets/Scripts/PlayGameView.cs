@@ -149,6 +149,14 @@ public class PlayGameView : IViewOperater
             m_checkAnimator.ResetCheckTexts();
             m_gameData = new GameDataHandler(AppConfig.Instance.MaxCellCount);
             AppConfig.Instance.GameData = m_gameData;
+
+            if (m_numberCells != null) {
+                foreach (var cell in m_numberCells)
+                {
+                    UnityEngine.Object.Destroy(cell.gameObject);
+                }
+                m_numberCells = null;
+            }
         }
 
 
@@ -324,13 +332,12 @@ public class PlayGameView : IViewOperater
     void OnClickYellowButton() 
     {
         if (m_checkAnimator.isAnimating()) return;
-        
+
         if (m_numberPanel.localRotation == Quaternion.identity)
         {
             // back but not reset
             m_playRotationAnimBack = true;
             HideNumberPanelTitle();
-            OnClickPlayBackButton();
         }
         else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
         {
