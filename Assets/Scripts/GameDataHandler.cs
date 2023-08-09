@@ -34,10 +34,14 @@ public class GameDataHandler
     }
 
     public int GetUncheckedNumber() {
-        var num = UnityEngine.Random.Range(1, m_cellCount);
-        if (m_checkedNumbers.Contains(num)) {
-            return GetUncheckedNumber();
-        }
-        return num;
+        var validNumbers = new List<int>();
+        for (int i = 0; i < m_cellCount; i++)
+            if (!m_checkedNumbers.Contains(i))
+                validNumbers.Add(i+1);
+                
+        var index = UnityEngine.Random.Range(0, validNumbers.Count);
+        if (index >= validNumbers.Count)
+            return 0;
+        return validNumbers[index];
     }
 }

@@ -38,7 +38,7 @@ public class HomeView : IViewOperater
 
     void OnClickStartButton() {
         // PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
-        AppConfig.Instance.GameData = null;
+        AppConfig.Instance.ClearGameData();
         ShowPlayGameView(reset: true);
     }
 

@@ -299,7 +299,7 @@ public class PlayGameView : IViewOperater
         m_playRotationAnimBack = true;
         HideNumberPanelTitle();
         // reset
-        AppConfig.Instance.GameData = null;
+        AppConfig.Instance.ClearGameData();
         Show();
     }
 

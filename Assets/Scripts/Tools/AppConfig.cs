@@ -99,4 +99,8 @@ public class AppConfig
             return _gameData;
         }
     }
+
+    public void ClearGameData() {
+        AppConfig.Instance.GameData = null;
+    }
 }
