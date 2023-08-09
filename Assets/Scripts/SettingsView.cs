@@ -16,6 +16,7 @@ public class SettingsView : IViewOperater
     Button m_maxCellSettingButton;
     Text m_maxCellSettingText;
     ToggleGroup m_backgroundToggleGroup;
+    Slider m_backgroundToggleSlider;
     GameObject m_backgroundSettingSelectedBg;
     List<Toggle> m_toggles = new List<Toggle>();
     bool m_isSelectedCellCountButton;
@@ -39,26 +40,15 @@ public class SettingsView : IViewOperater
         m_maxCellSettingArrows = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Arrows").gameObject;
 
         m_backgroundToggleGroup = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
+        m_backgroundToggleSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<Slider>();
+        m_backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
         m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
         m_toggles.Clear();
         for (int i = 1; i <= 4; i++) {
             var toggle = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
             m_toggles.Add(toggle);
-            if (i-1 == AppConfig.Instance.ThemeSelectedIdx) {
-                toggle.isOn = true;
-            }
-
-            var eventTrigger = toggle.gameObject.GetComponent<EventTrigger>();
-            EventTrigger.Entry entry = new EventTrigger.Entry();
-            entry.eventID = EventTriggerType.Select;
-            entry.callback.AddListener(OnTabSelected);
-            eventTrigger.triggers.Add(entry);
-
-            EventTrigger.Entry entry_1 = new EventTrigger.Entry();
-            entry_1.eventID = EventTriggerType.Deselect;
-            entry_1.callback.AddListener(OnTabUnSelected);
-            eventTrigger.triggers.Add(entry_1);
         }
+        m_backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
 
         m_BGMSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
         m_BGMVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
@@ -73,7 +63,7 @@ public class SettingsView : IViewOperater
         m_resetSettingsButton = m_viewGameObject.transform.Find("Panel/CenterPanel/ResetSettings").GetComponent<Button>();
         m_resetSettingsButton.onClick.AddListener(OnResetSettingsButtonClicked);
         m_aboutButton = m_viewGameObject.transform.Find("Panel/CenterPanel/About").GetComponent<Button>();
-        m_aboutButton.onClick.AddListener(onAboutButtonClicked);
+        m_aboutButton.onClick.AddListener(OnAboutButtonClicked);
 
         HandleSelectedEventTriggers();
         EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
@@ -81,59 +71,70 @@ public class SettingsView : IViewOperater
 
     void HandleSelectedEventTriggers() {
         var eventTrigger = m_BGMSlider.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
+        EventTrigger.Entry entry = new ();
         entry.eventID = EventTriggerType.Select;
         entry.callback.AddListener(OnBgmSliderSelected);
         eventTrigger.triggers.Add(entry);
 
-        EventTrigger.Entry entry_1 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_1 = new ();
         entry_1.eventID = EventTriggerType.Deselect;
         entry_1.callback.AddListener(OnBgmSliderUnSelected);
         eventTrigger.triggers.Add(entry_1);
 
         var eventTrigger_1 = m_EffectVolumeSlider.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_2 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_2 = new ();
         entry_2.eventID = EventTriggerType.Select;
         entry_2.callback.AddListener(OnEffectVolumeSliderSelected);
         eventTrigger_1.triggers.Add(entry_2);
 
-        EventTrigger.Entry entry_3 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_3 = new ();
         entry_3.eventID = EventTriggerType.Deselect;
         entry_3.callback.AddListener(OnEffectVolumeSliderUnSelected);
         eventTrigger_1.triggers.Add(entry_3);
 
         var eventTrigger_2 = m_resetSettingsButton.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_4 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_4 = new ();
         entry_4.eventID = EventTriggerType.Select;
         entry_4.callback.AddListener(OnResetSettingsButtonSelected);
         eventTrigger_2.triggers.Add(entry_4);
 
-        EventTrigger.Entry entry_5 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_5 = new ();
         entry_5.eventID = EventTriggerType.Deselect;
         entry_5.callback.AddListener(OnResetSettingsButtonUnSelected);
         eventTrigger_2.triggers.Add(entry_5);
 
         var eventTrigger_3 = m_aboutButton.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_6 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_6 = new ();
         entry_6.eventID = EventTriggerType.Select;
         entry_6.callback.AddListener(OnAboutButtonSelected);
         eventTrigger_3.triggers.Add(entry_6);
 
-        EventTrigger.Entry entry_7 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_7 = new ();
         entry_7.eventID = EventTriggerType.Deselect;
         entry_7.callback.AddListener(OnAboutButtonUnSelected);
         eventTrigger_3.triggers.Add(entry_7);
 
         var eventTrigger_4 = m_maxCellSettingButton.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_8 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_8 = new ();
         entry_8.eventID = EventTriggerType.Select;
         entry_8.callback.AddListener(OnCellCountButtonSelected);
         eventTrigger_4.triggers.Add(entry_8);
 
-        EventTrigger.Entry entry_9 = new EventTrigger.Entry();
+        EventTrigger.Entry entry_9 = new ();
         entry_9.eventID = EventTriggerType.Deselect;
         entry_9.callback.AddListener(OnCellCountButtonUnSelected);
         eventTrigger_4.triggers.Add(entry_9);
+
+        var eventTrigger_5 = m_backgroundToggleGroup.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry_10 = new();
+        entry_10.eventID = EventTriggerType.Select;
+        entry_10.callback.AddListener(OnTabSelected);
+        eventTrigger_5.triggers.Add(entry_10);
+
+        EventTrigger.Entry entry_11 = new();
+        entry_11.eventID = EventTriggerType.Deselect;
+        entry_11.callback.AddListener(OnTabUnSelected);
+        eventTrigger_5.triggers.Add(entry_11);
     }
 
 
@@ -190,15 +191,17 @@ public class SettingsView : IViewOperater
     }
 
     private void OnTabSelected(BaseEventData data) {
-        var toggle = data.selectedObject.GetComponent<Toggle>();
-        toggle.isOn = true;
         m_backgroundSettingSelectedBg.SetActive(true);
-        var index = m_toggles.IndexOf(toggle);
-        AppConfig.Instance.ThemeSelectedIdx = index;
     }
 
     private void OnTabUnSelected(BaseEventData data) {
         m_backgroundSettingSelectedBg.SetActive(false);
+    }
+
+    private void OnBackgroundSliderChanged(float value) {
+        var intValue = Mathf.FloorToInt(value);
+        AppConfig.Instance.ThemeSelectedIdx = intValue;
+        m_toggles[AppConfig.Instance.ThemeSelectedIdx].isOn = true;
     }
 
     public void OnBgmSliderValueChanged(float value) {
@@ -291,7 +294,7 @@ public class SettingsView : IViewOperater
         m_EffectVolumeSlider.value = 0;
     }
 
-    void onAboutButtonClicked() {
+    void OnAboutButtonClicked() {
         if (m_aboutView == null) {
             m_aboutView = new AboutView();
         }
