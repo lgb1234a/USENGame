@@ -57,8 +57,10 @@ public class CheckAnimator : MonoBehaviour
         m_waitingBingo = true;
         m_speed = m_speed * 0.8f;
         yield return new WaitForSeconds(1f);
+        m_speed = m_speed * 0.6f;
+        yield return new WaitForSeconds(2f);
         m_speed = m_speed * 0.5f;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         m_isEaseToStop = true;
     }
 
