@@ -19,13 +19,9 @@ MonoBehaviour:
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 1
-    applyAdditiveMaterial: 1
-    additiveMaterials:
-    - pageName: 00_BINGO.png
-      material: {fileID: 2100000, guid: 81bf268631265144bb73e877ba287b91, type: 2}
-    multiplyMaterials:
-    - pageName: 00_BINGO.png
-      material: {fileID: 2100000, guid: 46d84797848cd8842a6c94c7cc4fd20a, type: 2}
+    applyAdditiveMaterial: 0
+    additiveMaterials: []
+    multiplyMaterials: []
     screenMaterials:
     - pageName: 00_BINGO.png
       material: {fileID: 2100000, guid: 6a56c309e5840f74d869acd051a7771c, type: 2}

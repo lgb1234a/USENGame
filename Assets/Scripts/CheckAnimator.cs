@@ -17,6 +17,7 @@ public class CheckAnimator : MonoBehaviour
     Vector3[] m_animPositions = new[] {Vector3.up*__cell_height__*2, Vector3.up*__cell_height__, Vector3.zero, Vector3.down*__cell_height__};
 
     Coroutine m_easeCoroutine;
+    bool m_isNeedResetTextsPos;
 
     void Update()
     {
@@ -33,6 +34,10 @@ public class CheckAnimator : MonoBehaviour
             m_Texts[i].gameObject.transform.localPosition = MoveNextPosition(i);
         }
 
+        if (m_isNeedResetTextsPos) {
+            m_isNeedResetTextsPos = false;
+            ResetRotateTextsPos();
+        }
     }
 
     Vector3 MoveNextPosition(int i) {
@@ -45,6 +50,7 @@ public class CheckAnimator : MonoBehaviour
                 StartCoroutine(WaitToTriggerNextRound());
                 m_gameData.SetCellChecked(int.Parse(m_Texts[1].text)-1);
                 AudioManager.Instance.PlayNumberCheckEffect();
+                m_isNeedResetTextsPos = true;
             }
             m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
             return m_animPositions[index];
@@ -53,14 +59,17 @@ public class CheckAnimator : MonoBehaviour
         }
     }
 
+    void ResetRotateTextsPos() {
+        for (int i = 0; i < m_Texts.Length; i++)
+        {
+            m_Texts[i].gameObject.transform.localPosition = m_animPositions[i+1];
+        }
+    }
+
     IEnumerator<WaitForSeconds> EaseAnimSpeed() {
         m_waitingBingo = true;
-        m_speed = m_speed * 0.8f;
+        m_speed = m_speed * 0.3f;
         yield return new WaitForSeconds(1f);
-        m_speed = m_speed * 0.6f;
-        yield return new WaitForSeconds(2f);
-        m_speed = m_speed * 0.5f;
-        yield return new WaitForSeconds(2f);
         m_isEaseToStop = true;
     }
 

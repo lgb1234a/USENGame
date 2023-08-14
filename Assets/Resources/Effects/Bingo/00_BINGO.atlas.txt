@@ -1,403 +1,375 @@
 
 00_BINGO.png
-size: 2038,1955
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 A
   rotate: false
-  xy: 2, 189
-  size: 348, 339
+  xy: 1688, 483
+  size: 346, 337
   orig: 348, 339
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 B
   rotate: false
-  xy: 352, 128
-  size: 355, 343
+  xy: 2, 282
+  size: 353, 341
   orig: 355, 343
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 BINGO_gamen
   rotate: false
-  xy: 609, 1032
-  size: 835, 229
+  xy: 1138, 1088
+  size: 834, 228
   orig: 835, 229
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 C
   rotate: false
-  xy: 709, 108
-  size: 352, 352
+  xy: 357, 160
+  size: 350, 350
   orig: 352, 352
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 E
   rotate: true
-  xy: 499, 473
-  size: 309, 335
+  xy: 307, 625
+  size: 307, 333
   orig: 309, 335
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 G
   rotate: false
-  xy: 1063, 3
-  size: 381, 376
+  xy: 709, 119
+  size: 379, 374
   orig: 381, 376
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 H
   rotate: false
-  xy: 1531, 380
-  size: 355, 335
+  xy: 1333, 487
+  size: 353, 333
   orig: 355, 335
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 I
   rotate: true
-  xy: 668, 1736
-  size: 164, 345
+  xy: 1470, 1740
+  size: 162, 343
   orig: 164, 345
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 N
   rotate: true
-  xy: 836, 462
-  size: 320, 343
+  xy: 642, 512
+  size: 318, 341
   orig: 320, 343
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 O
   rotate: false
-  xy: 1446, 2
-  size: 408, 376
+  xy: 1090, 111
+  size: 406, 374
   orig: 408, 376
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 R
   rotate: false
-  xy: 1181, 381
-  size: 348, 334
+  xy: 985, 495
+  size: 346, 332
   orig: 348, 334
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 REACH_gamen
   rotate: false
-  xy: 1187, 1263
-  size: 849, 217
+  xy: 288, 1180
+  size: 848, 216
   orig: 849, 217
-  offset: 0, 0
-  index: -1
-bg2
-  rotate: false
-  xy: 1263, 717
-  size: 495, 279
-  orig: 495, 279
-  offset: 0, 0
-  index: -1
-bingo_base
-  rotate: true
-  xy: 2, 1902
-  size: 51, 557
-  orig: 51, 557
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 bingo_goko
   rotate: true
-  xy: 2, 1576
-  size: 158, 679
+  xy: 751, 1591
+  size: 157, 678
   orig: 158, 679
-  offset: 0, 0
-  index: -1
-black
-  rotate: false
-  xy: 2, 530
-  size: 495, 279
-  orig: 495, 279
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen1
-  rotate: true
-  xy: 466, 1353
-  size: 221, 213
+  rotate: false
+  xy: 1151, 1378
+  size: 219, 211
   orig: 221, 213
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen10
   rotate: true
-  xy: 2, 1382
-  size: 192, 229
+  xy: 1815, 1543
+  size: 190, 227
   orig: 192, 229
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen10_add
   rotate: true
-  xy: 1776, 1817
-  size: 136, 153
+  xy: 654, 1767
+  size: 135, 152
   orig: 136, 153
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen11
   rotate: true
-  xy: 1070, 1495
-  size: 190, 237
+  xy: 683, 1401
+  size: 188, 235
   orig: 190, 237
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen11_add
   rotate: true
-  xy: 1462, 1819
-  size: 134, 157
+  xy: 342, 1769
+  size: 133, 156
   orig: 134, 157
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen1_add
   rotate: false
-  xy: 2, 1754
-  size: 149, 146
+  xy: 808, 1757
+  size: 148, 145
   orig: 149, 146
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen2
   rotate: true
-  xy: 273, 811
-  size: 282, 305
+  xy: 2, 652
+  size: 280, 303
   orig: 282, 305
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen2_add
   rotate: true
-  xy: 683, 1554
-  size: 180, 192
+  xy: 1431, 1559
+  size: 179, 191
   orig: 180, 192
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen3
   rotate: true
-  xy: 2, 884
-  size: 266, 269
+  xy: 1569, 822
+  size: 264, 267
   orig: 266, 269
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen3_add
   rotate: true
-  xy: 1789, 1642
-  size: 173, 175
+  xy: 575, 1593
+  size: 172, 174
   orig: 173, 175
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen4
   rotate: true
-  xy: 2, 1152
-  size: 227, 286
+  xy: 2, 1207
+  size: 225, 284
   orig: 227, 286
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen4_add
   rotate: true
-  xy: 484, 1747
-  size: 153, 182
+  xy: 1287, 1750
+  size: 152, 181
   orig: 153, 182
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen5
   rotate: true
-  xy: 1446, 1002
-  size: 259, 304
+  xy: 1265, 829
+  size: 257, 302
   orig: 259, 304
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen5_add
   rotate: true
-  xy: 1214, 1687
-  size: 169, 190
+  xy: 2, 1640
+  size: 168, 189
   orig: 169, 190
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen6
   rotate: true
-  xy: 681, 1283
-  size: 217, 240
+  xy: 1372, 1342
+  size: 215, 238
   orig: 217, 240
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen6_add
   rotate: true
-  xy: 153, 1752
-  size: 148, 158
+  xy: 958, 1755
+  size: 147, 157
   orig: 148, 158
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen7
   rotate: true
-  xy: 923, 1268
-  size: 225, 262
+  xy: 1612, 1318
+  size: 223, 260
   orig: 225, 262
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen7_add
   rotate: true
-  xy: 313, 1748
-  size: 152, 169
+  xy: 1117, 1751
+  size: 151, 168
   orig: 152, 169
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen8
   rotate: true
-  xy: 290, 1095
-  size: 256, 317
+  xy: 948, 832
+  size: 254, 315
   orig: 256, 317
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen8_add
   rotate: true
-  xy: 1015, 1691
-  size: 168, 197
+  xy: 1815, 1735
+  size: 167, 196
   orig: 168, 197
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 fusen9
   rotate: true
-  xy: 233, 1381
-  size: 193, 231
+  xy: 920, 1398
+  size: 191, 229
   orig: 193, 231
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 fusen9_add
   rotate: true
-  xy: 1621, 1817
-  size: 136, 153
+  xy: 500, 1767
+  size: 135, 152
   orig: 136, 153
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 light
   rotate: false
-  xy: 1364, 1858
-  size: 96, 95
+  xy: 246, 1809
+  size: 94, 93
   orig: 96, 95
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 mat
   rotate: false
-  xy: 580, 784
-  size: 681, 246
+  xy: 267, 934
+  size: 679, 244
   orig: 681, 246
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 mat_kage
   rotate: false
-  xy: 1406, 1649
-  size: 381, 166
+  xy: 193, 1600
+  size: 380, 165
   orig: 381, 166
-  offset: 0, 0
-  index: -1
-reach_base
-  rotate: true
-  xy: 561, 1902
-  size: 51, 557
-  orig: 51, 557
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 reach_goko
   rotate: true
-  xy: 1309, 1482
-  size: 158, 679
+  xy: 2, 1434
+  size: 157, 679
   orig: 158, 679
   offset: 0, 0
   index: -1
+ring3
+  rotate: false
+  xy: 1498, 2
+  size: 479, 479
+  orig: 480, 480
+  offset: 1, 0
+  index: -1
 star
   rotate: false
-  xy: 877, 1502
-  size: 191, 187
+  xy: 1624, 1553
+  size: 189, 185
   orig: 191, 187
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 star_eff
   rotate: false
-  xy: 1752, 998
-  size: 265, 263
+  xy: 2, 944
+  size: 263, 261
   orig: 265, 263
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 star_line
   rotate: true
-  xy: 1120, 1861
+  xy: 2, 1810
   size: 92, 242
   orig: 92, 242
   offset: 0, 0
   index: -1
 
 00_BINGO2.png
-size: 1861,1941
+size: 2048,2048
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BINGO_kanban
   rotate: false
-  xy: 594, 704
-  size: 1265, 662
+  xy: 2, 1277
+  size: 1263, 660
   orig: 1265, 662
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 blue
   rotate: false
-  xy: 2, 2
-  size: 700, 700
+  xy: 1267, 1239
+  size: 698, 698
   orig: 700, 700
-  offset: 0, 0
+  offset: 1, 1
+  index: -1
+panel_base
+  rotate: false
+  xy: 2, 428
+  size: 847, 847
+  orig: 849, 849
+  offset: 1, 1
   index: -1
 puple
   rotate: false
-  xy: 704, 2
-  size: 700, 700
+  xy: 851, 539
+  size: 698, 698
   orig: 700, 700
-  offset: 0, 0
-  index: -1
-ring1
-  rotate: false
-  xy: 2, 811
-  size: 590, 590
-  orig: 590, 590
-  offset: 0, 0
-  index: -1
-ring2
-  rotate: false
-  xy: 1111, 1368
-  size: 571, 571
-  orig: 571, 571
-  offset: 0, 0
-  index: -1
-ring3
-  rotate: false
-  xy: 2, 1459
-  size: 480, 480
-  orig: 480, 480
-  offset: 0, 0
+  offset: 1, 1
   index: -1
 spot
   rotate: true
-  xy: 484, 1403
-  size: 536, 625
+  xy: 851, 2
+  size: 535, 624
   orig: 536, 625
-  offset: 0, 0
+  offset: 0, 1
   index: -1
 
 00_BINGO3.png
-size: 1555,853
+size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-panel_base
-  rotate: false
-  xy: 2, 2
-  size: 849, 849
-  orig: 849, 849
-  offset: 0, 0
-  index: -1
 red
   rotate: false
-  xy: 853, 151
-  size: 700, 700
+  xy: 2, 2
+  size: 698, 698
   orig: 700, 700
-  offset: 0, 0
+  offset: 1, 1
+  index: -1
+ring1
+  rotate: false
+  xy: 702, 111
+  size: 589, 589
+  orig: 590, 590
+  offset: 1, 0
+  index: -1
+ring2
+  rotate: false
+  xy: 1293, 130
+  size: 570, 570
+  orig: 571, 571
+  offset: 1, 0
   index: -1

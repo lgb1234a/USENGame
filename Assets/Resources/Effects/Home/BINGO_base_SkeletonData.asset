@@ -24,9 +24,7 @@ MonoBehaviour:
     multiplyMaterials:
     - pageName: 00_BINGO.png
       material: {fileID: 2100000, guid: 56812c1f0f22aa6449a60ff3902cd384, type: 2}
-    screenMaterials:
-    - pageName: 00_BINGO.png
-      material: {fileID: 2100000, guid: de37db084541b4e47b6adddd2e4a2842, type: 2}
+    screenMaterials: []
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []
