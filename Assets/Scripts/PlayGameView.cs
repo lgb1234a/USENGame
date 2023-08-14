@@ -86,7 +86,7 @@ public class PlayGameView : IViewOperater
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
 
-        m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel").GetComponent<SkeletonGraphic>();
+        m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel/Effect").GetComponent<SkeletonGraphic>();
         m_sg.AnimationState.Complete += OnPlayComplete;
         m_bgEffect = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect").GetComponent<SkeletonGraphic>();
         HandleSelectedEventTriggers();
@@ -314,7 +314,7 @@ public class PlayGameView : IViewOperater
     void OnClickRedButton() {
         AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
-        m_sg.gameObject.SetActive(true);
+        m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "reach", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
@@ -323,7 +323,7 @@ public class PlayGameView : IViewOperater
     void OnClickGreenButton() {
         AudioManager.Instance.PlayBingoEffect();
         AudioManager.Instance.PlayDefaultBgm();
-        m_sg.gameObject.SetActive(true);
+        m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
@@ -348,6 +348,7 @@ public class PlayGameView : IViewOperater
     private void OnPlayComplete(Spine.TrackEntry entry)
     {
         m_sg.AnimationState.ClearTracks();
+        m_sg.transform.parent.gameObject.SetActive(false);
     }
 
     void ShowNumberPanelTitle() {
