@@ -5,302 +5,302 @@ format: RGBA8888
 filter: Linear,Linear
 repeat: none
 A
-  rotate: false
-  xy: 1688, 483
+  rotate: true
+  xy: 1374, 378
   size: 346, 337
   orig: 348, 339
   offset: 1, 1
   index: -1
 B
   rotate: false
-  xy: 2, 282
+  xy: 357, 173
   size: 353, 341
   orig: 355, 343
   offset: 1, 1
   index: -1
 BINGO_gamen
   rotate: false
-  xy: 1138, 1088
+  xy: 2, 912
   size: 834, 228
   orig: 835, 229
   offset: 0, 1
   index: -1
 C
   rotate: false
-  xy: 357, 160
+  xy: 712, 92
   size: 350, 350
   orig: 352, 352
   offset: 1, 1
   index: -1
 E
-  rotate: true
-  xy: 307, 625
+  rotate: false
+  xy: 1716, 673
   size: 307, 333
   orig: 309, 335
   offset: 1, 1
   index: -1
 G
   rotate: false
-  xy: 709, 119
+  xy: 1064, 2
   size: 379, 374
   orig: 381, 376
   offset: 1, 1
   index: -1
 H
   rotate: false
-  xy: 1333, 487
+  xy: 2, 331
   size: 353, 333
   orig: 355, 335
   offset: 1, 1
   index: -1
 I
   rotate: true
-  xy: 1470, 1740
+  xy: 1564, 1668
   size: 162, 343
   orig: 164, 345
   offset: 1, 1
   index: -1
 N
   rotate: true
-  xy: 642, 512
+  xy: 683, 516
   size: 318, 341
   orig: 320, 343
   offset: 1, 1
   index: -1
 O
   rotate: false
-  xy: 1090, 111
+  xy: 1445, 2
   size: 406, 374
   orig: 408, 376
   offset: 1, 1
   index: -1
 R
   rotate: false
-  xy: 985, 495
+  xy: 1026, 444
   size: 346, 332
   orig: 348, 334
   offset: 1, 1
   index: -1
 REACH_gamen
   rotate: false
-  xy: 288, 1180
+  xy: 2, 1142
   size: 848, 216
   orig: 849, 217
   offset: 0, 1
   index: -1
 bingo_goko
   rotate: true
-  xy: 751, 1591
+  xy: 773, 1519
   size: 157, 678
   orig: 158, 679
   offset: 0, 1
   index: -1
 fusen1
   rotate: false
-  xy: 1151, 1378
+  xy: 1380, 1281
   size: 219, 211
   orig: 221, 213
   offset: 1, 1
   index: -1
 fusen10
   rotate: true
-  xy: 1815, 1543
+  xy: 920, 1327
   size: 190, 227
   orig: 192, 229
   offset: 1, 1
   index: -1
 fusen10_add
   rotate: true
-  xy: 654, 1767
+  xy: 748, 1695
   size: 135, 152
   orig: 136, 153
   offset: 0, 1
   index: -1
 fusen11
   rotate: true
-  xy: 683, 1401
+  xy: 2, 1381
   size: 188, 235
   orig: 190, 237
   offset: 1, 1
   index: -1
 fusen11_add
   rotate: true
-  xy: 342, 1769
+  xy: 436, 1697
   size: 133, 156
   orig: 134, 157
   offset: 0, 1
   index: -1
 fusen1_add
   rotate: false
-  xy: 808, 1757
+  xy: 902, 1685
   size: 148, 145
   orig: 149, 146
   offset: 0, 1
   index: -1
 fusen2
   rotate: true
-  xy: 2, 652
+  xy: 1411, 726
   size: 280, 303
   orig: 282, 305
   offset: 1, 1
   index: -1
 fusen2_add
   rotate: true
-  xy: 1431, 1559
+  xy: 1629, 1487
   size: 179, 191
   orig: 180, 192
   offset: 0, 1
   index: -1
 fusen3
   rotate: true
-  xy: 1569, 822
+  xy: 838, 836
   size: 264, 267
   orig: 266, 269
   offset: 1, 1
   index: -1
 fusen3_add
   rotate: true
-  xy: 575, 1593
+  xy: 1453, 1494
   size: 172, 174
   orig: 173, 175
   offset: 0, 1
   index: -1
 fusen4
   rotate: true
-  xy: 2, 1207
+  xy: 1379, 1037
   size: 225, 284
   orig: 227, 286
   offset: 1, 1
   index: -1
 fusen4_add
   rotate: true
-  xy: 1287, 1750
+  xy: 1381, 1678
   size: 152, 181
   orig: 153, 182
   offset: 0, 1
   index: -1
 fusen5
   rotate: true
-  xy: 1265, 829
+  xy: 1107, 778
   size: 257, 302
   orig: 259, 304
   offset: 1, 1
   index: -1
 fusen5_add
   rotate: true
-  xy: 2, 1640
+  xy: 582, 1525
   size: 168, 189
   orig: 169, 190
   offset: 0, 1
   index: -1
 fusen6
   rotate: true
-  xy: 1372, 1342
+  xy: 1601, 1264
   size: 215, 238
   orig: 217, 240
   offset: 1, 1
   index: -1
 fusen6_add
   rotate: true
-  xy: 958, 1755
+  xy: 1052, 1683
   size: 147, 157
   orig: 148, 158
   offset: 0, 1
   index: -1
 fusen7
   rotate: true
-  xy: 1612, 1318
+  xy: 852, 1102
   size: 223, 260
   orig: 225, 262
   offset: 1, 1
   index: -1
 fusen7_add
   rotate: true
-  xy: 1117, 1751
+  xy: 1211, 1679
   size: 151, 168
   orig: 152, 169
   offset: 0, 1
   index: -1
 fusen8
   rotate: true
-  xy: 948, 832
+  xy: 1665, 1008
   size: 254, 315
   orig: 256, 317
   offset: 1, 1
   index: -1
 fusen8_add
   rotate: true
-  xy: 1815, 1735
+  xy: 384, 1528
   size: 167, 196
   orig: 168, 197
   offset: 0, 1
   index: -1
 fusen9
   rotate: true
-  xy: 920, 1398
+  xy: 1149, 1326
   size: 191, 229
   orig: 193, 231
   offset: 1, 1
   index: -1
 fusen9_add
   rotate: true
-  xy: 500, 1767
+  xy: 594, 1695
   size: 135, 152
   orig: 136, 153
   offset: 0, 1
   index: -1
 light
   rotate: false
-  xy: 246, 1809
-  size: 94, 93
-  orig: 96, 95
-  offset: 1, 1
+  xy: 341, 1738
+  size: 93, 92
+  orig: 93, 92
+  offset: 0, 0
+  index: -1
+light1
+  rotate: false
+  xy: 2, 1738
+  size: 93, 92
+  orig: 93, 92
+  offset: 0, 0
   index: -1
 mat
   rotate: false
-  xy: 267, 934
+  xy: 2, 666
   size: 679, 244
   orig: 681, 246
   offset: 1, 1
   index: -1
 mat_kage
   rotate: false
-  xy: 193, 1600
+  xy: 2, 1571
   size: 380, 165
   orig: 381, 166
   offset: 0, 1
   index: -1
 reach_goko
   rotate: true
-  xy: 2, 1434
+  xy: 239, 1360
   size: 157, 679
   orig: 158, 679
   offset: 0, 0
   index: -1
-ring3
-  rotate: false
-  xy: 1498, 2
-  size: 479, 479
-  orig: 480, 480
-  offset: 1, 0
-  index: -1
 star
   rotate: false
-  xy: 1624, 1553
+  xy: 1822, 1481
   size: 189, 185
   orig: 191, 187
   offset: 1, 1
   index: -1
 star_eff
   rotate: false
-  xy: 2, 944
+  xy: 1114, 1063
   size: 263, 261
   orig: 265, 263
   offset: 1, 1
   index: -1
 star_line
   rotate: true
-  xy: 2, 1810
+  xy: 97, 1738
   size: 92, 242
   orig: 92, 242
   offset: 0, 0
@@ -313,35 +313,49 @@ filter: Linear,Linear
 repeat: none
 BINGO_kanban
   rotate: false
-  xy: 2, 1277
+  xy: 593, 702
   size: 1263, 660
   orig: 1265, 662
   offset: 1, 1
   index: -1
 blue
   rotate: false
-  xy: 1267, 1239
+  xy: 2, 2
   size: 698, 698
   orig: 700, 700
-  offset: 1, 1
-  index: -1
-panel_base
-  rotate: false
-  xy: 2, 428
-  size: 847, 847
-  orig: 849, 849
   offset: 1, 1
   index: -1
 puple
   rotate: false
-  xy: 851, 539
+  xy: 702, 2
   size: 698, 698
   orig: 700, 700
   offset: 1, 1
   index: -1
+ring1
+  rotate: false
+  xy: 2, 808
+  size: 589, 589
+  orig: 590, 590
+  offset: 1, 0
+  index: -1
+ring2
+  rotate: false
+  xy: 1109, 1364
+  size: 570, 570
+  orig: 571, 571
+  offset: 1, 0
+  index: -1
+ring3
+  rotate: false
+  xy: 2, 1455
+  size: 479, 479
+  orig: 480, 480
+  offset: 1, 0
+  index: -1
 spot
   rotate: true
-  xy: 851, 2
+  xy: 483, 1399
   size: 535, 624
   orig: 536, 625
   offset: 0, 1
@@ -352,24 +366,17 @@ size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-red
+panel_base
   rotate: false
   xy: 2, 2
+  size: 847, 847
+  orig: 849, 849
+  offset: 1, 1
+  index: -1
+red
+  rotate: false
+  xy: 851, 151
   size: 698, 698
   orig: 700, 700
   offset: 1, 1
-  index: -1
-ring1
-  rotate: false
-  xy: 702, 111
-  size: 589, 589
-  orig: 590, 590
-  offset: 1, 0
-  index: -1
-ring2
-  rotate: false
-  xy: 1293, 130
-  size: 570, 570
-  orig: 571, 571
-  offset: 1, 0
   index: -1
