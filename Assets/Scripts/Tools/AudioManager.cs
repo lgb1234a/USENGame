@@ -15,7 +15,8 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public AudioClip numberCheckEffect;
     public AudioClip numberRotateEffect;
     public AudioClip reachClickEffect;
-    public AudioClip keyDownEffect;
+
+    public AudioSource keydownAudioSource;
 
     public static void InitVolume() 
     {
@@ -27,7 +28,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetBgmVolume(int volume)
     {
-        audioSource.volume = volume * 0.04f + 0.8f;
+        audioSource.volume = volume * 0.1f + 0.5f;
     }
 
     public void PlayWillReachBgm() {
@@ -53,7 +54,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetEffectVolume(int volume)
     {
-        effectAudioSource.volume = volume * 0.04f + 0.8f;
+        effectAudioSource.volume = volume * 0.1f + 0.5f;
     }
 
     public void PlayBingoEffect() {
@@ -73,6 +74,12 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         effectAudioSource.Play();
     }
 
+    public void PlayNumberRotateEffectWithoutLoop() {
+        effectAudioSource.clip = numberRotateEffect;
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
     public void StopNumberRotateEffect() {
         effectAudioSource.Stop();
     }
@@ -83,7 +90,6 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayKeyDownEffect() {
-        effectAudioSource.clip = keyDownEffect;
-        effectAudioSource.Play();
+        keydownAudioSource.Play();
     }
 }

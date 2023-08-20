@@ -27,6 +27,7 @@ public class SettingsView : IViewOperater
     float m_deltaTime = 0;
     AboutView m_aboutView;
     GameObject m_maxCellSettingArrows;
+    bool m_isPresettingEffectVolume;
 
     public SettingsView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -58,7 +59,9 @@ public class SettingsView : IViewOperater
         m_EffectVolumeSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/Slider").GetComponent<Slider>();
         m_EffectVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/VolumeText").GetComponent<Text>();
         m_EffectVolumeSlider.onValueChanged.AddListener(OnVolumeEffectValueChanged);
+        m_isPresettingEffectVolume = true;
         m_EffectVolumeSlider.value = AppConfig.Instance.EffectVolume;
+        m_isPresettingEffectVolume = false;
 
         m_resetSettingsButton = m_viewGameObject.transform.Find("Panel/CenterPanel/ResetSettings").GetComponent<Button>();
         m_resetSettingsButton.onClick.AddListener(OnResetSettingsButtonClicked);
@@ -151,6 +154,7 @@ public class SettingsView : IViewOperater
     public void Hide() {
         EventSystem.current.SetSelectedGameObject(null);
         m_viewGameObject.SetActive(false);
+        AudioManager.Instance.StopNumberRotateEffect();
     }
 
     public void Update() {
@@ -214,6 +218,8 @@ public class SettingsView : IViewOperater
         m_EffectVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
         AppConfig.Instance.EffectVolume = Mathf.FloorToInt(value);
         AudioManager.Instance.SetEffectVolume((int)value);
+        if (m_isPresettingEffectVolume) return;
+        AudioManager.Instance.PlayNumberRotateEffectWithoutLoop();
     }
 
     void OnBgmSliderSelected(BaseEventData data) {

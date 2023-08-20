@@ -104,4 +104,10 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
     }
+
+
+    public void OnAudioFocusChanged(string eventType) {
+        Debug.LogWarning(eventType);
+        ShowDebugInfo(eventType);
+    }
 }
