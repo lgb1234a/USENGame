@@ -3458,7 +3458,7 @@ MonoBehaviour:
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: bingo
+  startingAnimation: 
   startingLoop: 0
   timeScale: 1
   freeze: 0
@@ -6007,12 +6007,12 @@ PrefabInstance:
     - target: {fileID: 1272963507878580989, guid: f0399a0193c1d844cb82c83c797abc88,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1272963507878580989, guid: f0399a0193c1d844cb82c83c797abc88,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1272963507878580989, guid: f0399a0193c1d844cb82c83c797abc88,
         type: 3}
