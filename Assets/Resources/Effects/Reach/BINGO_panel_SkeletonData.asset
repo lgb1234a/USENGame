@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BINGO_panel_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: bd7cbed5d34b40d49ba867393b3813be, type: 2}
+  - {fileID: 11400000, guid: d530a4d6e9afd2842ab14bd411d2cf4b, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: 6be30ef5e842fa141926800fa95c83e0, type: 3}
   isUpgradingBlendModeMaterials: 0
@@ -23,8 +23,8 @@ MonoBehaviour:
     additiveMaterials: []
     multiplyMaterials: []
     screenMaterials:
-    - pageName: 00_BINGO.png
-      material: {fileID: 2100000, guid: b2dafc87ad5c7b04891e7be63632eb04, type: 2}
+    - pageName: 00_BINGO1.png
+      material: {fileID: 2100000, guid: 678ce2791643acd428d9782dc4f74281, type: 2}
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []

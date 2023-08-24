@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: 00_BINGO_Atlas
+  m_Name: 00_BINGO1_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 956e68f0fe3c942449b1375f75851921, type: 3}
+  atlasFile: {fileID: 4900000, guid: 847c6a2f19c665e4696e786282260a3f, type: 3}
   materials:
-  - {fileID: 2100000, guid: 294940717fee274459c81b49b46d0a3e, type: 2}
-  - {fileID: 2100000, guid: 06e8e840e5b452047997d29aa4c2cd2f, type: 2}
-  - {fileID: 2100000, guid: ccafc4a612652d74b931795c6eba8708, type: 2}
+  - {fileID: 2100000, guid: 623e0ce6de1d8a04ab83fde8e402bce0, type: 2}
