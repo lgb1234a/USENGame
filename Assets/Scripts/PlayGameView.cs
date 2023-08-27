@@ -32,6 +32,7 @@ public class PlayGameView : IViewOperater
     bool m_playRotationAnimBack = false;
 
     Button m_rotateTestButton;
+    GameObject m_rotateBackGO;
     Button m_playButton;
     Text m_playButtonText;
     Button m_playbackButton;
@@ -40,6 +41,9 @@ public class PlayGameView : IViewOperater
     CanvasGroup m_playbackCanvasGroup;
     SkeletonGraphic m_sg;
     SkeletonGraphic m_bgEffect;
+
+    int m_reachCount = 0;
+    int m_bingoCount = 0;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -72,6 +76,7 @@ public class PlayGameView : IViewOperater
 
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
         m_rotateTestButton.onClick.AddListener(OnClickYellowButton);
+        m_rotateBackGO = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/BackImg").gameObject;
 
         m_playButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
         m_playButton.onClick.AddListener(OnClickPlayButton);
@@ -318,11 +323,15 @@ public class PlayGameView : IViewOperater
         m_sg.AnimationState.SetAnimation(0, "reach", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
+        m_reachCount++;
     }
 
     void OnClickGreenButton() {
         AudioManager.Instance.PlayBingoEffect();
-        AudioManager.Instance.PlayDefaultBgm();
+        m_bingoCount++;
+        if (m_bingoCount == m_reachCount) {
+            AudioManager.Instance.PlayDefaultBgm();
+        }
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
@@ -338,10 +347,12 @@ public class PlayGameView : IViewOperater
             // back but not reset
             m_playRotationAnimBack = true;
             HideNumberPanelTitle();
+            m_rotateBackGO.SetActive(false);
         }
         else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
         {
             OnClickRotateButton();
+            m_rotateBackGO.SetActive(true);
         }
     }
 

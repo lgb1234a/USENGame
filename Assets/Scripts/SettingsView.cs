@@ -220,6 +220,7 @@ public class SettingsView : IViewOperater
         AudioManager.Instance.SetEffectVolume((int)value);
         if (m_isPresettingEffectVolume) return;
         AudioManager.Instance.PlayNumberRotateEffectWithoutLoop();
+        AudioManager.Instance.PlayNumberCheckEffect();
     }
 
     void OnBgmSliderSelected(BaseEventData data) {
