@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using Spine.Unity;
+using UnityEditor;
 
 public class PlayGameView : IViewOperater
 {
@@ -19,6 +20,9 @@ public class PlayGameView : IViewOperater
     Button m_backGameButton;
     Text m_backGameButtonText;
     Transform m_pausePanel;
+    Transform m_resetPanel;
+    Button m_resetBtn;
+    Button m_resetCancelBtn;
     RectTransform m_numberPanel;
     GameObject m_numberPanelTitle;
     CheckAnimator m_checkAnimator;
@@ -66,6 +70,14 @@ public class PlayGameView : IViewOperater
         m_backGameButton.onClick.AddListener(OnClickBackGameButton);
 
         m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
+
+
+        m_resetPanel = m_viewGameObject.transform.Find("PlayPanel/ResetPanel");
+        m_resetBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn").GetComponent<Button>();
+        m_resetBtn.onClick.AddListener(OnClickedResetBtn);
+        m_resetCancelBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn").GetComponent<Button>();
+        m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
+
         var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
         m_checkAnimator = awardPanelTransform.GetComponent<CheckAnimator>();
         m_maskCanvasGroup = awardPanelTransform.GetComponent<CanvasGroup>();
@@ -271,8 +283,13 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnClickPlayButton() {
-        m_checkAnimator.Animate(m_gameData);
-        m_playButtonText.text = "ストップ";
+        if (m_gameData.IsAllChecked()) {
+            // 显示弹窗
+            ShowResetPanel();
+        }else {
+            m_checkAnimator.Animate(m_gameData);
+            m_playButtonText.text = "ストップ";
+        }
     }
 
     public void UpdatePlayButtonText() {
@@ -300,6 +317,27 @@ public class PlayGameView : IViewOperater
 
     public void OnClickBackGameButton() {
         m_pausePanel.gameObject.SetActive(false);
+    }
+
+    public void ShowResetPanel() {
+        m_resetPanel.gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(m_resetBtn.gameObject);
+    }
+
+    public void HideResetPanel() {
+        m_resetPanel.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(m_playButton.gameObject);
+    }
+
+    public void OnClickedResetBtn() {
+        ResetData();
+        AppConfig.Instance.ClearGameData();
+        Show();
+        HideResetPanel();
+    }
+
+    public void OnClickedResetCancelBtn() {
+        HideResetPanel();
     }
 
     void OnClickRotateButton() {

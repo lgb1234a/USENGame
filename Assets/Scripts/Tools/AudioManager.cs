@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public AudioClip reachClickEffect;
 
     public AudioSource keydownAudioSource;
+    public AudioSource numberRotateAudioSource;
 
     public static void InitVolume() 
     {
@@ -69,23 +70,24 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayNumberRotateEffect() {
-        effectAudioSource.clip = numberRotateEffect;
-        effectAudioSource.loop = true;
-        effectAudioSource.Play();
+        numberRotateAudioSource.clip = numberRotateEffect;
+        numberRotateAudioSource.loop = true;
+        numberRotateAudioSource.Play();
     }
 
     public void PlayNumberRotateEffectWithoutLoop() {
-        effectAudioSource.clip = numberRotateEffect;
-        effectAudioSource.loop = false;
-        effectAudioSource.Play();
+        numberRotateAudioSource.clip = numberRotateEffect;
+        numberRotateAudioSource.loop = false;
+        numberRotateAudioSource.Play();
     }
 
     public void StopNumberRotateEffect() {
-        effectAudioSource.Stop();
+        numberRotateAudioSource.Stop();
     }
 
     public void PlayReachClickEffect() {
         effectAudioSource.clip = reachClickEffect;
+        effectAudioSource.loop = false;
         effectAudioSource.Play();
     }
 

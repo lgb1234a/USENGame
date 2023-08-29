@@ -45,4 +45,11 @@ public class GameDataHandler
             return 0;
         return validNumbers[index];
     }
+
+    public bool IsAllChecked() {
+        foreach(var v in m_cellCheckedList) {
+            if (v == false) return false;
+        }
+        return true;
+    }
 }
