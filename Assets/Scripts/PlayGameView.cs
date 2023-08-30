@@ -22,7 +22,9 @@ public class PlayGameView : IViewOperater
     Transform m_pausePanel;
     Transform m_resetPanel;
     Button m_resetBtn;
+    Text m_resetBtnText;
     Button m_resetCancelBtn;
+    Text m_resetCancelBtnText;
     RectTransform m_numberPanel;
     GameObject m_numberPanelTitle;
     CheckAnimator m_checkAnimator;
@@ -74,8 +76,10 @@ public class PlayGameView : IViewOperater
 
         m_resetPanel = m_viewGameObject.transform.Find("PlayPanel/ResetPanel");
         m_resetBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn").GetComponent<Button>();
+        m_resetBtnText = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn/Text").GetComponent<Text>();
         m_resetBtn.onClick.AddListener(OnClickedResetBtn);
         m_resetCancelBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn").GetComponent<Button>();
+        m_resetCancelBtnText = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
 
         var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
@@ -142,6 +146,28 @@ public class PlayGameView : IViewOperater
         entry5.eventID = EventTriggerType.Deselect;
         entry5.callback.AddListener(OnBackGameButtonDeselected);
         eventTrigger2.triggers.Add(entry5);
+
+        var eventTrigger3 = m_resetBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry6 = new EventTrigger.Entry();
+        entry6.eventID = EventTriggerType.Select;
+        entry6.callback.AddListener(OnResetGameButtonSelected);
+        eventTrigger3.triggers.Add(entry6);
+
+        EventTrigger.Entry entry7 = new EventTrigger.Entry();
+        entry7.eventID = EventTriggerType.Deselect;
+        entry7.callback.AddListener(OnResetGameButtonDeselected);
+        eventTrigger3.triggers.Add(entry7);
+
+        var eventTrigger4 = m_resetCancelBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry8 = new EventTrigger.Entry();
+        entry8.eventID = EventTriggerType.Select;
+        entry8.callback.AddListener(OnCancelResetGameButtonSelected);
+        eventTrigger4.triggers.Add(entry8);
+
+        EventTrigger.Entry entry9 = new EventTrigger.Entry();
+        entry9.eventID = EventTriggerType.Deselect;
+        entry9.callback.AddListener(OnCancelResetGameButtonDeselected);
+        eventTrigger4.triggers.Add(entry9);
     }
 
     public void Show() {
@@ -446,6 +472,28 @@ public class PlayGameView : IViewOperater
         m_backGameButtonText.color = Color.white;
         m_exitButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
         m_stopButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnResetGameButtonSelected(BaseEventData data)
+    {
+        m_resetBtnText.color = Color.white;
+        m_resetCancelBtnText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnResetGameButtonDeselected(BaseEventData data)
+    {
+        m_resetBtnText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnCancelResetGameButtonSelected(BaseEventData data)
+    {
+        m_resetCancelBtnText.color = Color.white;
+        m_resetBtnText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    void OnCancelResetGameButtonDeselected(BaseEventData data)
+    {
+        m_resetCancelBtnText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
     }
 
     void OnBackGameButtonDeselected(BaseEventData data) {
