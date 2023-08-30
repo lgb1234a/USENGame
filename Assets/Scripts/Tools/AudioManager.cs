@@ -64,9 +64,9 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayNumberCheckEffect() {
-        effectAudioSource.clip = numberCheckEffect;
-        effectAudioSource.loop = false;
-        effectAudioSource.Play();
+        numberRotateAudioSource.clip = numberCheckEffect;
+        numberRotateAudioSource.loop = false;
+        numberRotateAudioSource.Play();
     }
 
     public void PlayNumberRotateEffect() {
