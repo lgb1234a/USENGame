@@ -1,0 +1,300 @@
+
+BINGO_eff.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+A
+  rotate: true
+  xy: 1241, 86
+  size: 277, 270
+  orig: 278, 271
+  offset: 0, 0
+  index: -1
+B
+  rotate: true
+  xy: 967, 65
+  size: 284, 273
+  orig: 284, 274
+  offset: 0, 0
+  index: -1
+BINGO_gamen
+  rotate: false
+  xy: 1, 63
+  size: 665, 180
+  orig: 668, 183
+  offset: 1, 2
+  index: -1
+C
+  rotate: false
+  xy: 862, 350
+  size: 281, 282
+  orig: 282, 282
+  offset: 1, 0
+  index: -1
+E
+  rotate: false
+  xy: 937, 1498
+  size: 247, 268
+  orig: 247, 268
+  offset: 0, 0
+  index: -1
+G
+  rotate: true
+  xy: 667, 1
+  size: 305, 299
+  orig: 305, 301
+  offset: 0, 1
+  index: -1
+H
+  rotate: false
+  xy: 1144, 364
+  size: 284, 268
+  orig: 284, 268
+  offset: 0, 0
+  index: -1
+I
+  rotate: true
+  xy: 949, 1800
+  size: 130, 276
+  orig: 131, 276
+  offset: 0, 0
+  index: -1
+N
+  rotate: false
+  xy: 681, 1493
+  size: 255, 273
+  orig: 256, 274
+  offset: 1, 0
+  index: -1
+O
+  rotate: true
+  xy: 562, 307
+  size: 325, 299
+  orig: 326, 301
+  offset: 1, 1
+  index: -1
+R
+  rotate: true
+  xy: 681, 1767
+  size: 278, 267
+  orig: 278, 267
+  offset: 0, 0
+  index: -1
+REACH_gamen
+  rotate: false
+  xy: 562, 633
+  size: 676, 171
+  orig: 679, 174
+  offset: 1, 2
+  index: -1
+bingo_goko
+  rotate: true
+  xy: 681, 1377
+  size: 115, 528
+  orig: 126, 543
+  offset: 5, 7
+  index: -1
+blue
+  rotate: false
+  xy: 1, 805
+  size: 560, 560
+  orig: 560, 560
+  offset: 0, 0
+  index: -1
+fusen1
+  rotate: false
+  xy: 1239, 634
+  size: 175, 170
+  orig: 177, 170
+  offset: 1, 0
+  index: -1
+fusen10
+  rotate: true
+  xy: 1612, 1405
+  size: 153, 182
+  orig: 154, 183
+  offset: 0, 0
+  index: -1
+fusen10_add
+  rotate: true
+  xy: 1712, 1941
+  size: 104, 115
+  orig: 109, 122
+  offset: 2, 5
+  index: -1
+fusen11
+  rotate: true
+  xy: 1415, 660
+  size: 150, 189
+  orig: 152, 190
+  offset: 1, 0
+  index: -1
+fusen11_add
+  rotate: true
+  xy: 1123, 805
+  size: 102, 118
+  orig: 107, 126
+  offset: 2, 5
+  index: -1
+fusen1_add
+  rotate: false
+  xy: 1597, 1933
+  size: 114, 112
+  orig: 119, 117
+  offset: 2, 3
+  index: -1
+fusen2
+  rotate: false
+  xy: 1185, 1557
+  size: 224, 242
+  orig: 226, 244
+  offset: 1, 1
+  index: -1
+fusen2_add
+  rotate: true
+  xy: 1336, 811
+  size: 139, 149
+  orig: 144, 154
+  offset: 2, 3
+  index: -1
+fusen3
+  rotate: false
+  xy: 1123, 908
+  size: 212, 215
+  orig: 213, 215
+  offset: 1, 0
+  index: -1
+fusen3_add
+  rotate: false
+  xy: 1486, 815
+  size: 133, 135
+  orig: 138, 140
+  offset: 2, 3
+  index: -1
+fusen4
+  rotate: false
+  xy: 1329, 1150
+  size: 180, 227
+  orig: 182, 229
+  offset: 1, 1
+  index: -1
+fusen4_add
+  rotate: true
+  xy: 1525, 1814
+  size: 117, 140
+  orig: 122, 146
+  offset: 2, 4
+  index: -1
+fusen5
+  rotate: false
+  xy: 1410, 1559
+  size: 206, 241
+  orig: 207, 243
+  offset: 0, 1
+  index: -1
+fusen5_add
+  rotate: true
+  xy: 1378, 1801
+  size: 129, 146
+  orig: 135, 152
+  offset: 3, 4
+  index: -1
+fusen6
+  rotate: true
+  xy: 1420, 1385
+  size: 173, 191
+  orig: 174, 192
+  offset: 0, 1
+  index: -1
+fusen6_add
+  rotate: true
+  xy: 1475, 1932
+  size: 113, 121
+  orig: 118, 126
+  offset: 2, 3
+  index: -1
+fusen7
+  rotate: true
+  xy: 1210, 1378
+  size: 178, 209
+  orig: 180, 210
+  offset: 1, 0
+  index: -1
+fusen7_add
+  rotate: true
+  xy: 1666, 1816
+  size: 116, 129
+  orig: 122, 135
+  offset: 3, 4
+  index: -1
+fusen8
+  rotate: false
+  xy: 1123, 1124
+  size: 205, 252
+  orig: 205, 254
+  offset: 0, 1
+  index: -1
+fusen8_add
+  rotate: true
+  xy: 1226, 1801
+  size: 129, 151
+  orig: 134, 158
+  offset: 2, 4
+  index: -1
+fusen9
+  rotate: false
+  xy: 1510, 1201
+  size: 153, 183
+  orig: 154, 185
+  offset: 0, 1
+  index: -1
+fusen9_add
+  rotate: false
+  xy: 1767, 1700
+  size: 103, 115
+  orig: 109, 122
+  offset: 2, 4
+  index: -1
+panel_base
+  rotate: false
+  xy: 1, 1366
+  size: 679, 679
+  orig: 679, 679
+  offset: 0, 0
+  index: -1
+puple
+  rotate: false
+  xy: 1, 244
+  size: 560, 560
+  orig: 560, 560
+  offset: 0, 0
+  index: -1
+reach_goko
+  rotate: true
+  xy: 949, 1931
+  size: 114, 525
+  orig: 126, 543
+  offset: 6, 6
+  index: -1
+red
+  rotate: false
+  xy: 562, 805
+  size: 560, 560
+  orig: 560, 560
+  offset: 0, 0
+  index: -1
+star
+  rotate: true
+  xy: 1617, 1662
+  size: 151, 149
+  orig: 153, 150
+  offset: 1, 1
+  index: -1
+star_eff
+  rotate: false
+  xy: 1336, 951
+  size: 197, 198
+  orig: 212, 210
+  offset: 7, 6
+  index: -1
