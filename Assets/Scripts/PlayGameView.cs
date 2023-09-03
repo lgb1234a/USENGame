@@ -381,6 +381,7 @@ public class PlayGameView : IViewOperater
     }
 
     void OnClickRedButton() {
+        if (m_checkAnimator.isAnimating()) return;
         AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
         m_sg.transform.parent.gameObject.SetActive(true);
@@ -391,6 +392,7 @@ public class PlayGameView : IViewOperater
     }
 
     void OnClickGreenButton() {
+        if (m_checkAnimator.isAnimating()) return;
         AudioManager.Instance.PlayBingoEffect();
         m_bingoCount++;
         if (m_bingoCount == m_reachCount) {
