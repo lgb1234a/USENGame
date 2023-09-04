@@ -7,7 +7,6 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using Spine.Unity;
-using UnityEditor;
 
 public class PlayGameView : IViewOperater
 {
@@ -26,6 +25,7 @@ public class PlayGameView : IViewOperater
     Button m_resetCancelBtn;
     Text m_resetCancelBtnText;
     RectTransform m_numberPanel;
+    GameObject m_bottomBackButton;
     GameObject m_numberPanelTitle;
     CheckAnimator m_checkAnimator;
     CanvasGroup m_maskCanvasGroup;
@@ -38,6 +38,7 @@ public class PlayGameView : IViewOperater
     bool m_playRotationAnimBack = false;
 
     Button m_rotateTestButton;
+    Text m_rotateTestButtonText;
     GameObject m_rotateBackGO;
     Button m_playButton;
     Text m_playButtonText;
@@ -50,6 +51,8 @@ public class PlayGameView : IViewOperater
 
     int m_reachCount = 0;
     int m_bingoCount = 0;
+    bool m_canPlayBingoAnim = true;
+    double m_playBingoInterval = 0;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -90,7 +93,10 @@ public class PlayGameView : IViewOperater
         m_numberPanelTitle = m_numberPanel.Find("Title").gameObject;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
 
+        m_bottomBackButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
+
         m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
+        m_rotateTestButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/Text").GetComponent<Text>();
         m_rotateTestButton.onClick.AddListener(OnClickYellowButton);
         m_rotateBackGO = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/BackImg").gameObject;
 
@@ -240,6 +246,14 @@ public class PlayGameView : IViewOperater
 
     public void Update() {
 
+        if (!m_canPlayBingoAnim) {
+            m_playBingoInterval += Time.deltaTime;
+            if (m_playBingoInterval > 3.3) {
+                m_canPlayBingoAnim = true;
+                m_playBingoInterval = 0;
+            }
+        }
+
         if (m_numberCells != null) {
             for (int i = 0; i < m_numberCells.Count; i++)
             {
@@ -309,6 +323,7 @@ public class PlayGameView : IViewOperater
     }
 
     public void OnClickPlayButton() {
+        if (!m_canPlayBingoAnim) return;
         if (m_gameData.IsAllChecked()) {
             // 显示弹窗
             ShowResetPanel();
@@ -382,6 +397,7 @@ public class PlayGameView : IViewOperater
 
     void OnClickRedButton() {
         if (m_checkAnimator.isAnimating()) return;
+        if (!m_canPlayBingoAnim) return;
         AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
         m_sg.transform.parent.gameObject.SetActive(true);
@@ -389,10 +405,13 @@ public class PlayGameView : IViewOperater
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
         m_reachCount++;
+
+        m_canPlayBingoAnim = false;
     }
 
     void OnClickGreenButton() {
         if (m_checkAnimator.isAnimating()) return;
+        if (!m_canPlayBingoAnim) return;
         AudioManager.Instance.PlayBingoEffect();
         m_bingoCount++;
         if (m_bingoCount == m_reachCount) {
@@ -402,6 +421,8 @@ public class PlayGameView : IViewOperater
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
         m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+
+        m_canPlayBingoAnim = false;
     }
 
     void OnClickYellowButton() 
@@ -414,11 +435,15 @@ public class PlayGameView : IViewOperater
             m_playRotationAnimBack = true;
             HideNumberPanelTitle();
             m_rotateBackGO.SetActive(false);
+            m_rotateTestButtonText.text = "履歴";
+            m_bottomBackButton.SetActive(true);
         }
         else if (m_numberPanel.localRotation == Quaternion.Euler(0, 30, 0))
         {
             OnClickRotateButton();
             m_rotateBackGO.SetActive(true);
+            m_rotateTestButtonText.text = "戻る";
+            m_bottomBackButton.SetActive(false);
         }
     }
 
