@@ -393,6 +393,9 @@ public class PlayGameView : IViewOperater
         // reset
         AppConfig.Instance.ClearGameData();
         Show();
+
+        m_rotateTestButtonText.text = "履歴";
+        m_rotateBackGO.SetActive(false);
     }
 
     void OnClickRedButton() {
@@ -402,7 +405,6 @@ public class PlayGameView : IViewOperater
         AudioManager.Instance.PlayWillReachBgm();
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "reach", false);
-        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
         m_reachCount++;
 
@@ -419,7 +421,6 @@ public class PlayGameView : IViewOperater
         }
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
-        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
         m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
 
         m_canPlayBingoAnim = false;
@@ -449,8 +450,7 @@ public class PlayGameView : IViewOperater
 
     private void OnPlayComplete(Spine.TrackEntry entry)
     {
-        m_sg.AnimationState.ClearTracks();
-        m_sg.transform.parent.gameObject.SetActive(false);
+        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
     }
 
     void ShowNumberPanelTitle() {

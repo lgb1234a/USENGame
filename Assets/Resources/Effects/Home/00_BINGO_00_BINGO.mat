@@ -22,13 +22,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 907482e3f8e839e48b8cd3eed7ac6bec, type: 3}
+        m_Texture: {fileID: 2800000, guid: c74bea4a77a7bca4883c09012f73ad6a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _Cutoff: 0.1
     - _OutlineMipLevel: 0
+    - _OutlineOpaqueAlpha: 1
     - _OutlineReferenceTexWidth: 1024
     - _OutlineSmoothness: 1
     - _OutlineWidth: 3
