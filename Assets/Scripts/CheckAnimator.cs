@@ -69,7 +69,7 @@ public class CheckAnimator : MonoBehaviour
     IEnumerator<WaitForSeconds> EaseAnimSpeed() {
         m_waitingBingo = true;
         m_speed = m_speed * 0.3f;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(AppConfig.Instance.rotateEaseExtraTime + 1f);
         m_isEaseToStop = true;
     }
 

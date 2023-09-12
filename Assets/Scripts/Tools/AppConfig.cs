@@ -103,4 +103,6 @@ public class AppConfig
     public void ClearGameData() {
         AppConfig.Instance.GameData = null;
     }
+
+    public float rotateEaseExtraTime = 0.0f;
 }

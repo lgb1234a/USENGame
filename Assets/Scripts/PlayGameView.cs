@@ -409,6 +409,7 @@ public class PlayGameView : IViewOperater
         m_reachCount++;
 
         m_canPlayBingoAnim = false;
+        AppConfig.Instance.rotateEaseExtraTime = 3.0f;
     }
 
     void OnClickGreenButton() {
@@ -424,6 +425,7 @@ public class PlayGameView : IViewOperater
         m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
 
         m_canPlayBingoAnim = false;
+        AppConfig.Instance.rotateEaseExtraTime = 0.0f;
     }
 
     void OnClickYellowButton() 
