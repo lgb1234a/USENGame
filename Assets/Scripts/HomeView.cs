@@ -11,6 +11,12 @@ public class HomeView : IViewOperater
     private Button m_reopenButton;
     private Button m_settingsButton;
 
+    Transform m_resetPanel;
+    Button m_resetBtn;
+    Text m_resetBtnText;
+    Button m_resetCancelBtn;
+    Text m_resetCancelBtnText;
+
     PlayGameView m_playGameView;
     SettingsView m_settingsView;
     GameObject m_viewGameObject;
@@ -33,11 +39,45 @@ public class HomeView : IViewOperater
         m_settingsButton = m_viewGameObject.transform.Find("SettingsButton").GetComponent<Button>();
         m_settingsButton.onClick.AddListener(OnClickSettingsButton);
 
-        var isReopen = PreferencesStorage.ReadBoolean(AppConfig.__REOPEN_DATA__, false);
+        m_resetPanel = m_viewGameObject.transform.Find("ResetPanel");
+        m_resetBtn = m_viewGameObject.transform.Find("ResetPanel/ResetBtn").GetComponent<Button>();
+        m_resetBtnText = m_viewGameObject.transform.Find("ResetPanel/ResetBtn/Text").GetComponent<Text>();
+        m_resetBtn.onClick.AddListener(OnClickedResetBtn);
+        m_resetCancelBtn = m_viewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
+        m_resetCancelBtnText = m_viewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
+        m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
+
+        var eventTrigger = m_resetCancelBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.Select;
+        entry.callback.AddListener(OnCancelResetGameButtonSelected);
+        eventTrigger.triggers.Add(entry);
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.Deselect;
+        entry1.callback.AddListener(OnCancelResetGameButtonDeselected);
+        eventTrigger.triggers.Add(entry1);
+
+        var isReopen = AppConfig.Instance.HasHistoryGameData();
         m_reopenButton.gameObject.SetActive(isReopen);
     }
 
-    void OnClickStartButton() {
+    void OnClickStartButton() 
+    {
+        var isReopen = AppConfig.Instance.HasHistoryGameData();
+        Debug.Log(isReopen);
+        if (isReopen)
+        {
+            ShowResetToastPanel();
+        }else
+        {
+            ResetToStartGame();
+        }
+        
+    }
+
+    void ResetToStartGame()
+    {
         // PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         AppConfig.Instance.ClearGameData();
         ShowPlayGameView(reset: true);
@@ -45,6 +85,52 @@ public class HomeView : IViewOperater
 
     void OnClickReopenButton() {
         ShowPlayGameView();
+    }
+
+    void ShowResetToastPanel()
+    {
+        m_resetPanel.gameObject.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(m_resetBtn.gameObject);
+    }
+
+    void HideResetToastPanel()
+    {
+        m_resetPanel.gameObject.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(m_reopenButton.gameObject);
+    }
+
+    public void OnClickedResetBtn()
+    {
+        ResetToStartGame();
+
+        HideResetToastPanel();
+    }
+
+    public void OnClickedResetCancelBtn()
+    {
+        HideResetToastPanel();
+    }
+
+    void OnResetGameButtonSelected(BaseEventData data)
+    {
+        m_resetBtnText.color = Color.white;
+        m_resetCancelBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+    }
+
+    void OnResetGameButtonDeselected(BaseEventData data)
+    {
+        m_resetBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+    }
+
+    void OnCancelResetGameButtonSelected(BaseEventData data)
+    {
+        m_resetCancelBtnText.color = Color.white;
+        m_resetBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+    }
+
+    void OnCancelResetGameButtonDeselected(BaseEventData data)
+    {
+        m_resetCancelBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
     }
 
     void OnClickSettingsButton() {
@@ -90,8 +176,8 @@ public class HomeView : IViewOperater
     }
 
     void OnGamePlayViewHide() {
-        var saveData = PreferencesStorage.ReadString(AppConfig.__REOPEN_DATA__, null);
-        if (saveData != null && saveData.Length > 0) {
+        var isReopen = AppConfig.Instance.HasHistoryGameData();
+        if (isReopen) {
             m_reopenButton.gameObject.SetActive(true);
             EventSystem.current.SetSelectedGameObject(m_reopenButton.gameObject);
         }else {

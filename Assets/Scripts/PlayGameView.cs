@@ -178,6 +178,7 @@ public class PlayGameView : IViewOperater
 
     public void Show() {
         m_viewGameObject.SetActive(true);
+        AppConfig.Instance.rotateEaseExtraTime = 0.0f;
 
         if (AppConfig.Instance.GameData != null) {
             m_gameData = AppConfig.Instance.GameData;
@@ -331,11 +332,18 @@ public class PlayGameView : IViewOperater
             m_checkAnimator.Animate(m_gameData);
             m_playButtonText.text = "ストップ";
         }
+
+        if (m_playButtonText.text == "ストップ") {
+            m_playButton.transform.GetComponent<CanvasGroup>().alpha = 0.5f;
+        }
     }
 
     public void UpdatePlayButtonText() {
         if (m_checkAnimator.isAnimteFinished() && m_playButtonText.text != "シャッフル")
+        {
             m_playButtonText.text = "シャッフル";
+            m_playButton.transform.GetComponent<CanvasGroup>().alpha = 1.0f;
+        }
     }
 
     public void OnClickExitButton() {

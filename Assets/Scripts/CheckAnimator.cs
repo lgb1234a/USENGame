@@ -11,6 +11,7 @@ public class CheckAnimator : MonoBehaviour
     public float m_speed = __default_speed__;
     bool m_isAnimate = false;
     bool m_isEaseToStop;
+    bool m_rotateStopped = true;
     private bool m_waitingBingo;
     GameDataHandler m_gameData;
     float[] m_progress = new[] {0f, 1f, 2f, 3f};
@@ -51,6 +52,7 @@ public class CheckAnimator : MonoBehaviour
                 m_gameData.SetCellChecked(int.Parse(m_Texts[1].text)-1);
                 AudioManager.Instance.PlayNumberCheckEffect();
                 m_isNeedResetTextsPos = true;
+                m_rotateStopped = true;
             }
             m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
             return m_animPositions[index];
@@ -86,6 +88,7 @@ public class CheckAnimator : MonoBehaviour
                 m_easeCoroutine = StartCoroutine(EaseAnimSpeed());
             } else {
                 m_speed = __default_speed__;
+                m_rotateStopped = false;
                 m_isAnimate = true;
                 m_isEaseToStop = false;
                 AudioManager.Instance.PlayNumberRotateEffect();
@@ -100,7 +103,7 @@ public class CheckAnimator : MonoBehaviour
     }
 
     public bool isAnimteFinished() {
-        return m_isEaseToStop;
+        return m_rotateStopped;
     }
 
     public bool isAnimating() {
@@ -116,6 +119,7 @@ public class CheckAnimator : MonoBehaviour
     public void StopRotateAnimate() {
         m_waitingBingo = false;
         m_isEaseToStop = false;
+        m_rotateStopped = true;
         if (m_isAnimate) {
             m_isAnimate = false;
             m_progress = new[] {0f, 1f, 2f, 3f};

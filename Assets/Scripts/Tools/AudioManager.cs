@@ -19,12 +19,50 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public AudioSource keydownAudioSource;
     public AudioSource numberRotateAudioSource;
 
+    private bool fadeIn = false;
+    private bool fadeOut = false;
+    private bool isFaded = false;
+    private float fadeCostTime = 0f;
+    private float fadeInterval = 0f;
+    private float currentVolume = 0f;
+
     public static void InitVolume() 
     {
         var bgmVolume = AppConfig.Instance.BGMVolume;
         AudioManager.Instance.SetBgmVolume(bgmVolume);
         var effectVolume = AppConfig.Instance.EffectVolume;
         AudioManager.Instance.SetEffectVolume(effectVolume);
+    }
+
+    void Update()
+    {
+        if (fadeIn)
+        {
+            fadeInterval += Time.deltaTime;
+            if (fadeInterval >= fadeCostTime)
+            {
+                fadeInterval = 0;
+                audioSource.volume = 1;
+                fadeIn = false;
+            }else
+            {
+                audioSource.volume = fadeInterval / fadeCostTime;
+            }
+        }
+        else if (fadeOut)
+        {
+            fadeInterval += Time.deltaTime;
+            if (fadeInterval >= fadeCostTime)
+            {
+                fadeInterval = 0;
+                audioSource.volume = 0;
+                fadeOut = false;
+                PauseBgm();
+            }else
+            {
+                audioSource.volume =  1 - fadeInterval / fadeCostTime;
+            }
+        }
     }
 
     public void SetBgmVolume(int volume)
@@ -47,9 +85,21 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
             audioSource.Stop();
     }
 
-    public void PlayBgm() {
+    public void PauseBgm()
+    {
+        if (audioSource.isPlaying)
+            audioSource.Pause();
+    }
+
+    public void UnPauseBgm()
+    {
         if (!audioSource.isPlaying)
-            audioSource.Play();
+            audioSource.UnPause();
+    }
+
+    public void PlayBgm(float delay = 0f) {
+        if (!audioSource.isPlaying)
+            audioSource.PlayDelayed(delay);
     }
 
 
@@ -59,8 +109,25 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayBingoEffect() {
+        fadeCostTime = 1.0f;
+        fadeOut = true;
+
+        StartCoroutine(DelayPlayBingoEffect());
+    }
+
+    IEnumerator DelayPlayBingoEffect()
+    {
+        yield return new WaitForSeconds(fadeCostTime);
         effectAudioSource.clip = bingoEffect;
         effectAudioSource.Play();
+        StartCoroutine(ResumePlayBgm());
+    }
+
+    IEnumerator ResumePlayBgm()
+    {
+        yield return new WaitForSeconds(3.0f);
+        UnPauseBgm();
+        fadeIn = true;
     }
 
     public void PlayNumberCheckEffect() {

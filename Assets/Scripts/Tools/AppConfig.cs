@@ -104,5 +104,11 @@ public class AppConfig
         AppConfig.Instance.GameData = null;
     }
 
+    public bool HasHistoryGameData()
+    {
+        var saveData = PreferencesStorage.ReadString(AppConfig.__REOPEN_DATA__, null);
+        return saveData != null && saveData.Length > 0;
+    }
+
     public float rotateEaseExtraTime = 0.0f;
 }
