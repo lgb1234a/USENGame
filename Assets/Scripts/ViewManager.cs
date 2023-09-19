@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public interface IViewOperater
 {
@@ -20,6 +21,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     private Transform m_popupCanvas;
 
     public Text m_keydownDebug;
+    GameObject m_currentEventGO;
 
     public IViewOperater GetCurrentView() 
     {
@@ -55,6 +57,10 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     {
         if (Input.anyKeyDown) {
             AudioManager.Instance.PlayKeyDownEffect();
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                OnAndroidKeyDown("terminal");
+            }
         }
         m_currentView.Update();
         OutputKeyDebugMsg();
@@ -97,12 +103,22 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         m_currentView = m_viewStack.Peek();
         if (m_currentView != null) {
             m_currentView.Show();
+            if (m_currentEventGO != null)
+            {
+                EventSystem.current.SetSelectedGameObject(m_currentEventGO);
+            }
         }
     }
 
     public void OnAndroidKeyDown(string keyName) {
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
+
+        if (keyName == "terminal")
+        {
+            m_currentEventGO = EventSystem.current.currentSelectedGameObject;
+            Push(TerminalView.Instance);
+        }
     }
 
 

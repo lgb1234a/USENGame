@@ -325,16 +325,17 @@ public class PlayGameView : IViewOperater
 
     public void OnClickPlayButton() {
         if (!m_canPlayBingoAnim) return;
+        if (m_playButtonText.text == "ストップ")
+        {
+            m_playButton.transform.GetComponent<CanvasGroup>().alpha = 0.5f;
+        }
+
         if (m_gameData.IsAllChecked()) {
             // 显示弹窗
             ShowResetPanel();
         }else {
             m_checkAnimator.Animate(m_gameData);
             m_playButtonText.text = "ストップ";
-        }
-
-        if (m_playButtonText.text == "ストップ") {
-            m_playButton.transform.GetComponent<CanvasGroup>().alpha = 0.5f;
         }
     }
 

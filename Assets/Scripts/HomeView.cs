@@ -58,6 +58,17 @@ public class HomeView : IViewOperater
         entry1.callback.AddListener(OnCancelResetGameButtonDeselected);
         eventTrigger.triggers.Add(entry1);
 
+        var eventTrigger2 = m_resetBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Select;
+        entry2.callback.AddListener(OnResetGameButtonSelected);
+        eventTrigger2.triggers.Add(entry2);
+
+        EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        entry3.eventID = EventTriggerType.Deselect;
+        entry3.callback.AddListener(OnResetGameButtonDeselected);
+        eventTrigger2.triggers.Add(entry3);
+
         var isReopen = AppConfig.Instance.HasHistoryGameData();
         m_reopenButton.gameObject.SetActive(isReopen);
     }
@@ -65,7 +76,6 @@ public class HomeView : IViewOperater
     void OnClickStartButton() 
     {
         var isReopen = AppConfig.Instance.HasHistoryGameData();
-        Debug.Log(isReopen);
         if (isReopen)
         {
             ShowResetToastPanel();
@@ -154,7 +164,6 @@ public class HomeView : IViewOperater
     public void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (ToastView.Instance.IsToasting()) {
-                Debug.Log("Quit app");
                 Application.Quit();
                 return;
             }
