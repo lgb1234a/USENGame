@@ -268,7 +268,12 @@ public class PlayGameView : IViewOperater
                 m_playRotationAnimBack = true;
                 HideNumberPanelTitle();
                 Show();
-            }else {
+                EventSystem.current.SetSelectedGameObject(null);
+
+                m_rotateBackGO.SetActive(false);
+                m_rotateTestButtonText.text = "履歴";
+            }
+            else {
                 m_checkAnimator.ForceStop();
                 OnClickStopButton();
             }
