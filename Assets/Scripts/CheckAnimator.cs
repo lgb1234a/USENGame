@@ -68,10 +68,25 @@ public class CheckAnimator : MonoBehaviour
         }
     }
 
-    IEnumerator<WaitForSeconds> EaseAnimSpeed() {
+    IEnumerator<WaitForEndOfFrame> EaseAnimSpeed() {
         m_waitingBingo = true;
-        m_speed = m_speed * 0.3f;
-        yield return new WaitForSeconds(AppConfig.Instance.rotateEaseExtraTime + 1f);
+        int i = 1;
+        while(true)
+        {
+            if (AppConfig.Instance.rotateEaseExtraTime > 0)
+            {
+                m_speed = __default_speed__ - i * Time.deltaTime;
+            }else
+            {
+                m_speed = __default_speed__ - i * Time.deltaTime * 5;
+            }
+            
+            yield return new WaitForEndOfFrame();
+            if (m_speed <= 1.5)
+                break;
+            i++;
+        }
+        
         m_isEaseToStop = true;
     }
 
