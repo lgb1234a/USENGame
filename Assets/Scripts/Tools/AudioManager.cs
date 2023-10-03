@@ -70,14 +70,14 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         audioSource.volume = volume * 0.1f + 0.5f;
     }
 
-    public void PlayWillReachBgm() {
+    public void PlayWillReachBgm(float delay = 0f) {
         audioSource.clip = willReachBgm;
-        PlayBgm();
+        PlayBgm(delay);
     }
 
-    public void PlayDefaultBgm() {
+    public void PlayDefaultBgm(float delay = 0f) {
         audioSource.clip = bgm;
-        PlayBgm();
+        PlayBgm(delay);
     }
 
     public void StopBgm() {
@@ -111,6 +111,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public void PlayBingoEffect() {
         fadeCostTime = 1.0f;
         fadeOut = true;
+        effectAudioSource.clip = bingoEffect;
 
         StartCoroutine(DelayPlayBingoEffect());
     }
@@ -118,7 +119,6 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     IEnumerator DelayPlayBingoEffect()
     {
         yield return new WaitForSeconds(fadeCostTime);
-        effectAudioSource.clip = bingoEffect;
         effectAudioSource.Play();
         StartCoroutine(ResumePlayBgm());
     }

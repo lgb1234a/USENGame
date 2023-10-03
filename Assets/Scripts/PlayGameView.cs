@@ -268,7 +268,6 @@ public class PlayGameView : IViewOperater
                 m_playRotationAnimBack = true;
                 HideNumberPanelTitle();
                 Show();
-                EventSystem.current.SetSelectedGameObject(null);
 
                 m_rotateBackGO.SetActive(false);
                 m_rotateTestButtonText.text = "履歴";
@@ -297,6 +296,7 @@ public class PlayGameView : IViewOperater
             color.a = 1;
             m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f)).Join(m_bgEffect.DOColor(color, 1f));
             m_playRotationAnimBack = false;
+            EventSystem.current.SetSelectedGameObject(null);
         }
 
         // green bingo anim  KEYCODE_PROG_GREEN  399
@@ -397,7 +397,6 @@ public class PlayGameView : IViewOperater
 
     void OnClickRotateButton() {
         m_playRotationAnim = true;
-        EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
         ShowNumberPanelTitle();
     }
 
@@ -410,6 +409,9 @@ public class PlayGameView : IViewOperater
 
         m_rotateTestButtonText.text = "履歴";
         m_rotateBackGO.SetActive(false);
+        // reset music & effect
+        AudioManager.Instance.PlayDefaultBgm();
+        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
     }
 
     void OnClickRedButton() {
@@ -432,7 +434,7 @@ public class PlayGameView : IViewOperater
         AudioManager.Instance.PlayBingoEffect();
         m_bingoCount++;
         if (m_bingoCount == m_reachCount) {
-            AudioManager.Instance.PlayDefaultBgm();
+            AudioManager.Instance.PlayDefaultBgm(1f);
         }
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
