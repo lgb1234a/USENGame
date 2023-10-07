@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 public class CheckAnimator : MonoBehaviour
 {
-    const float __default_speed__ = 5;
+    const float __default_speed__ = 10;
     const int __cell_height__ = 500;
     public AwardNumObj[] m_Texts;
     public float m_speed = __default_speed__;
@@ -37,8 +37,28 @@ public class CheckAnimator : MonoBehaviour
 
         if (m_isNeedResetTextsPos) {
             m_isNeedResetTextsPos = false;
+            m_rotateStopped = true;
+            // 哪个最接近0的位置，就取它的文本
+            m_Texts[1].text = GetPositionZeroTextContent();
             ResetRotateTextsPos();
+            m_gameData.SetCellChecked(int.Parse(m_Texts[1].text) - 1);
+            AudioManager.Instance.PlayNumberCheckEffect();
         }
+    }
+
+    string GetPositionZeroTextContent()
+    {
+        var minY = 1000f;
+        AwardNumObj minYText = m_Texts[0];
+        foreach(var text in m_Texts)
+        {
+            if (Mathf.Abs(text.gameObject.transform.localPosition.y) < minY)
+            {
+                minY = Mathf.Abs(text.gameObject.transform.localPosition.y);
+                minYText = text;
+            }
+        }
+        return minYText.text;
     }
 
     Vector3 MoveNextPosition(int i) {
@@ -46,13 +66,10 @@ public class CheckAnimator : MonoBehaviour
         if (index > m_animPositions.Length - 2) {
             m_progress[i] -= index;
             index = 0;
-            if (i == 2 && m_isEaseToStop) {
+            if (m_isEaseToStop) {
                 m_isAnimate = false;
                 StartCoroutine(WaitToTriggerNextRound());
-                m_gameData.SetCellChecked(int.Parse(m_Texts[1].text)-1);
-                AudioManager.Instance.PlayNumberCheckEffect();
                 m_isNeedResetTextsPos = true;
-                m_rotateStopped = true;
             }
             m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
             return m_animPositions[index];
@@ -70,21 +87,18 @@ public class CheckAnimator : MonoBehaviour
 
     IEnumerator<WaitForEndOfFrame> EaseAnimSpeed() {
         m_waitingBingo = true;
-        int i = 1;
+        float timeInterval = 0f;
+        float duration = 2f + AppConfig.Instance.rotateEaseExtraTime;
         while(true)
         {
-            if (AppConfig.Instance.rotateEaseExtraTime > 0)
-            {
-                m_speed = __default_speed__ - i * Time.deltaTime;
-            }else
-            {
-                m_speed = __default_speed__ - i * Time.deltaTime * 5;
-            }
-            
+            var x = timeInterval / duration;
+            var y = -x * x + 2 * x;
+            m_speed = __default_speed__ * (1-y);
+
             yield return new WaitForEndOfFrame();
-            if (m_speed <= 1.5)
+            if (m_speed < 0.5f)
                 break;
-            i++;
+            timeInterval += Time.deltaTime;
         }
         
         m_isEaseToStop = true;
@@ -113,7 +127,7 @@ public class CheckAnimator : MonoBehaviour
 
     public void ResetCheckTexts() {
         foreach (var t in m_Texts) {
-            t.text = "0";
+            t.text = UnityEngine.Random.Range(0, AppConfig.Instance.MaxCellCount - 1).ToString();
         }
     }
 
