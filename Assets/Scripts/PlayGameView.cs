@@ -435,10 +435,10 @@ public class PlayGameView : IViewOperater
         m_bingoCount++;
         if (m_bingoCount == m_reachCount) {
             AudioManager.Instance.PlayDefaultBgm(1f);
+            m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         }
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
-        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
 
         m_canPlayBingoAnim = false;
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
