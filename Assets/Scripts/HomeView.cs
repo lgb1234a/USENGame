@@ -205,4 +205,8 @@ public class HomeView : IViewOperater
     void OnSettingsViewHide() {
         EventSystem.current.SetSelectedGameObject(m_settingsButton.gameObject);
     }
+
+    public void OnThemeTypeChanged() {
+        
+    }
 }

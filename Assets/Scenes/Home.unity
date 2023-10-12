@@ -356,6 +356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_keydownDebug: {fileID: 1972158537}
+  m_bg: {fileID: 1941219387}
+  m_bgDecorate: {fileID: 1675030323}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1105,7 +1107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc77ae2b5443f2f469a9bbe7fd4751aa, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1181,7 +1183,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcb8b8b663f6bb949992344c8f0fa594, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

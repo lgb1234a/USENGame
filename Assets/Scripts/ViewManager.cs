@@ -9,6 +9,7 @@ public interface IViewOperater
     void Show();
     void Hide();
     void Update();
+    void OnThemeTypeChanged();
     void OnAndroidKeyDown(string keyName);
 }
 
@@ -19,9 +20,12 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     private Stack<IViewOperater> m_viewStack;
     private Transform m_rootCanvas;
     private Transform m_popupCanvas;
+    private List<IViewOperater> m_allViewInstances = new();
 
     public Text m_keydownDebug;
     GameObject m_currentEventGO;
+    public Image m_bg;
+    public Image m_bgDecorate;
 
     public IViewOperater GetCurrentView() 
     {
@@ -51,6 +55,9 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         m_popupCanvas = GameObject.FindGameObjectWithTag("Popup").transform;
         var rootView = new HomeView(m_rootCanvas);
         Push(rootView);
+
+        m_bg.sprite = ThemeResManager.Instance.GetThemeBgTexture();
+        m_bgDecorate.sprite = ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
     }
 
     void Update()
@@ -84,6 +91,9 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 
     public void Push(IViewOperater view)
     {
+        if (!m_allViewInstances.Contains(view)) {
+            m_allViewInstances.Add(view);
+        }
         if (m_viewStack.Count > 0)
         {
             var lastView = m_viewStack.Peek();
@@ -125,5 +135,14 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public void OnAudioFocusChanged(string eventType) {
         Debug.LogWarning(eventType);
         ShowDebugInfo(eventType);
+    }
+
+    public void SendChangeThemeTypeEvent() {
+        m_bg.sprite = ThemeResManager.Instance.GetThemeBgTexture();
+        m_bgDecorate.sprite = ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
+        foreach (var view in m_allViewInstances)
+        {
+            view.OnThemeTypeChanged();
+        }
     }
 }

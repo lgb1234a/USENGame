@@ -72,6 +72,7 @@ public class AppConfig
         set
         {
             _themeSelectedIdx = value;
+            ThemeResManager.Instance.SetThemeType((EThemeTypes)value);
             PreferencesStorage.SaveInt("__THEME_SELECTED__", value);
         }
         get

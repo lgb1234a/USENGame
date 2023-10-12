@@ -316,4 +316,8 @@ public class SettingsView : IViewOperater
         m_maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
         AppConfig.Instance.ClearGameData();
     }
+
+    public void OnThemeTypeChanged() {
+
+    }
 }

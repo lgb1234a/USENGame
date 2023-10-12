@@ -37,4 +37,8 @@ public class AboutView : IViewOperater
         Hide();
         ViewManager.Instance.Hided(this);
     }
+
+    public void OnThemeTypeChanged() {
+
+    }
 }

@@ -117,4 +117,8 @@ public class TerminalView : IViewOperater
     {
         m_cancelBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
     }
+
+    public void OnThemeTypeChanged() {
+
+    }
 }

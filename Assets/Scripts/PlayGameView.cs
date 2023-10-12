@@ -48,6 +48,7 @@ public class PlayGameView : IViewOperater
     CanvasGroup m_playbackCanvasGroup;
     SkeletonGraphic m_sg;
     SkeletonGraphic m_bgEffect;
+    Image m_topDecorate;
 
     int m_reachCount = 0;
     int m_bingoCount = 0;
@@ -61,6 +62,9 @@ public class PlayGameView : IViewOperater
         var position = m_viewGameObject.transform.localPosition;
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
+
+        m_topDecorate = m_viewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
+        m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
 
         m_stopButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton").GetComponent<Button>();
         m_stopButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton/Text").GetComponent<Text>();
@@ -549,5 +553,9 @@ public class PlayGameView : IViewOperater
 
     void OnBackGameButtonDeselected(BaseEventData data) {
         m_backGameButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    public void OnThemeTypeChanged() {
+        m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
     }
 }
