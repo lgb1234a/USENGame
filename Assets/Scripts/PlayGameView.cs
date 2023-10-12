@@ -225,6 +225,7 @@ public class PlayGameView : IViewOperater
     public void Hide() {
         m_viewGameObject.SetActive(false);
         m_pausePanel.gameObject.SetActive(false);
+        AudioManager.Instance.StopNumberRotateEffect();
     }
 
     IEnumerable<Transform> GenerateNumberCells() {
@@ -432,14 +433,16 @@ public class PlayGameView : IViewOperater
         if (m_checkAnimator.isAnimating()) return;
         if (!m_canPlayBingoAnim) return;
         AudioManager.Instance.PlayBingoEffect();
+
+        if (m_reachCount != 0) {
+            m_bingoCount++;
+        }
         
         if (m_bingoCount == m_reachCount) {
             AudioManager.Instance.PlayDefaultBgm(1f);
             m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
-        }else
-        {
-            m_bingoCount++;
         }
+        
         m_sg.transform.parent.gameObject.SetActive(true);
         m_sg.AnimationState.SetAnimation(0, "bingo", false);
 
