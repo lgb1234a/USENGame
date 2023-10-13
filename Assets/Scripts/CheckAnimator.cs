@@ -159,4 +159,11 @@ public class CheckAnimator : MonoBehaviour
             }
         }
     }
+
+    public void OnThemeTypeChanged() {
+        for (int i = 0; i < m_Texts.Length; i++)
+        {
+            m_Texts[i].text = m_Texts[i].text;
+        }
+    }
 }

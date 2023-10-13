@@ -13,17 +13,17 @@ public class ChristmasThemeResConfig : IThemeRes
 
     public string GetNumberCellBgDefaultTexturePath()
     {
-        throw new System.NotImplementedException();
+        return "Textures/DefaultTheme/CellBg/Panel_Black";
     }
 
     public string GetNumberCellBgHighlightTexturePath()
     {
-        throw new System.NotImplementedException();
+        return "Textures/DefaultTheme/CellBg/Panel_Yellow";
     }
 
     public string GetNumberTexturePath()
     {
-        throw new System.NotImplementedException();
+        return "Textures/DefaultTheme/Numbers/Atari_No{0}";
     }
 
     public string GetRotateBgSpinePath()
@@ -33,7 +33,7 @@ public class ChristmasThemeResConfig : IThemeRes
 
     public string GetThemeBgTexturePath()
     {
-        return "Textures/Christmas/bg";
+        return "Textures/ChristmasThemes/bg";
     }
 
     public string GetThemeBgDecorateTexturePath()

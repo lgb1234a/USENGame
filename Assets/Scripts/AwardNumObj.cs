@@ -14,14 +14,20 @@ public class AwardNumObj : MonoBehaviour
         {
             m_text = value;
             lastNumImage.gameObject.SetActive(value.Length == 2);
-            if (first != NumberTextureTool.Instance.GetAwardNumSprite(int.Parse(m_text.Substring(0, 1)))) {
-                first = NumberTextureTool.Instance.GetAwardNumSprite(int.Parse(m_text.Substring(0, 1)));
+            var firstNumberValue = int.Parse(m_text.Substring(0, 1));
+            var firstSprite = ThemeResManager.Instance.GetRotateNumberTexture(firstNumberValue);
+            if (!first || first.name != firstSprite.name) {
+                first = firstSprite;
+                firstNumImage.sprite = first;
             }
-            firstNumImage.overrideSprite = first;
+            
+
             if (value.Length == 2) {
-                if (last != NumberTextureTool.Instance.GetAwardNumSprite(int.Parse(m_text.Substring(1, 1)))) {
-                    last = NumberTextureTool.Instance.GetAwardNumSprite(int.Parse(m_text.Substring(1, 1)));
-                    lastNumImage.overrideSprite = last;
+                var lastNumberValue = int.Parse(m_text.Substring(1, 1));
+                var lastSprite = ThemeResManager.Instance.GetRotateNumberTexture(lastNumberValue);
+                if (!last || last.name != lastSprite.name) {
+                    last = lastSprite;
+                    lastNumImage.sprite = last;
                 }
             }
         }

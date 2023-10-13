@@ -65,4 +65,22 @@ public class ThemeResManager
         var sprite = Resources.Load<Sprite>(GetCurrentResConfig().GetThemeGameViewTopDecorateTexturePaht());
         return sprite;
     }
+
+    public Sprite GetCellNumberBgTexture() {
+        var sprite = Resources.Load<Sprite>(GetCurrentResConfig().GetNumberCellBgDefaultTexturePath());
+        return sprite;
+    }
+
+    public Sprite GetCellNumberCheckBgTexture() {
+        var sprite = Resources.Load<Sprite>(GetCurrentResConfig().GetNumberCellBgHighlightTexturePath());
+        return sprite;
+    }
+
+    public Sprite GetRotateNumberTexture(int index) {
+        var spritePath = String.Format(GetCurrentResConfig().GetNumberTexturePath(), index);
+        Debug.LogWarning("------------ " + spritePath);
+        var sprite = Resources.Load<Sprite>(spritePath);
+        Debug.LogWarning(sprite);
+        return sprite;
+    }
 }

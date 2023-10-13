@@ -49,6 +49,8 @@ public class PlayGameView : IViewOperater
     SkeletonGraphic m_sg;
     SkeletonGraphic m_bgEffect;
     Image m_topDecorate;
+    Image m_numberCellBg;
+    Image m_numberCellCheckBg;
 
     int m_reachCount = 0;
     int m_bingoCount = 0;
@@ -96,6 +98,8 @@ public class PlayGameView : IViewOperater
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberPanelTitle = m_numberPanel.Find("Title").gameObject;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
+        m_numberCellBg = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell").GetComponent<Image>();
+        m_numberCellCheckBg = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell/CheckBg").GetComponent<Image>();
 
         m_bottomBackButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
 
@@ -120,6 +124,7 @@ public class PlayGameView : IViewOperater
         m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel/Effect").GetComponent<SkeletonGraphic>();
         m_sg.AnimationState.Complete += OnPlayComplete;
         m_bgEffect = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect").GetComponent<SkeletonGraphic>();
+
         HandleSelectedEventTriggers();
     }
 
@@ -183,11 +188,13 @@ public class PlayGameView : IViewOperater
     public void Show() {
         m_viewGameObject.SetActive(true);
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
+        m_numberCellBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
+        m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        m_checkAnimator.ResetCheckTexts();
 
         if (AppConfig.Instance.GameData != null) {
             m_gameData = AppConfig.Instance.GameData;
             if (m_gameData.m_cellCount != AppConfig.Instance.MaxCellCount) {
-                m_checkAnimator.ResetCheckTexts();
                 m_gameData = new GameDataHandler(AppConfig.Instance.MaxCellCount);
                 AppConfig.Instance.GameData = m_gameData;
 
@@ -200,7 +207,6 @@ public class PlayGameView : IViewOperater
                 }
             }
         }else {
-            m_checkAnimator.ResetCheckTexts();
             m_gameData = new GameDataHandler(AppConfig.Instance.MaxCellCount);
             AppConfig.Instance.GameData = m_gameData;
 
@@ -557,5 +563,14 @@ public class PlayGameView : IViewOperater
 
     public void OnThemeTypeChanged() {
         m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
+        m_numberCellBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
+        m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        for(int i = 0; i < m_numberCells.Count; i++) {
+            var cell = m_numberCells[i];
+            var numberImage = cell.GetComponent<Image>();
+            var numberCheckImage = cell.Find("CheckBg").GetComponent<Image>();
+            numberImage.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
+            numberCheckImage.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        }
     }
 }
