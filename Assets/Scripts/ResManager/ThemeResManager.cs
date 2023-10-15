@@ -2,6 +2,8 @@
 
 using System;
 using UnityEngine;
+using Spine.Unity;
+using UnityEditor;
 
 public class ThemeResManager
 {
@@ -42,6 +44,7 @@ public class ThemeResManager
             SetResConfig(new ChristmasThemeResConfig());
         }
         ViewManager.Instance.SendChangeThemeTypeEvent();
+        AudioManager.Instance.SendChangeThemeTypeEvent();
     }
 
     private IThemeRes GetCurrentResConfig() {
@@ -78,9 +81,61 @@ public class ThemeResManager
 
     public Sprite GetRotateNumberTexture(int index) {
         var spritePath = String.Format(GetCurrentResConfig().GetNumberTexturePath(), index);
-        Debug.LogWarning("------------ " + spritePath);
         var sprite = Resources.Load<Sprite>(spritePath);
-        Debug.LogWarning(sprite);
         return sprite;
+    }
+
+    public GameObject InstantiateHomeSpineGameObject(Transform parent) {
+        var prefabPath = GetCurrentResConfig().GetHomeSpinePrefabPath();
+        var gameObject = Resources.Load<GameObject>(prefabPath);
+        return GameObject.Instantiate(gameObject, parent, false);
+    }
+
+    public GameObject InstantiateBingoSpineGameObject(Transform parent) {
+        var prefabPath = GetCurrentResConfig().GetBingoSpinePrefabPath();
+        var gameObject = Resources.Load<GameObject>(prefabPath);
+        return GameObject.Instantiate(gameObject, parent, false);
+    }
+
+    public GameObject InstantiateRotateBgSpineGameObject(Transform parent) {
+        var prefabPath = GetCurrentResConfig().GetRotateBgSpinePrefabPath();
+        var gameObject = Resources.Load<GameObject>(prefabPath);
+        return GameObject.Instantiate(gameObject, parent, false);
+    }
+
+    public AudioClip GetBgmAudioClip() {
+        var audioPath = GetCurrentResConfig().GetNormalBgmPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public AudioClip GetWillReachBgmAudioClip() {
+        var audioPath = GetCurrentResConfig().GetWillReachBgmPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public AudioClip GetNumberCheckDownAudioClip() {
+        var audioPath = GetCurrentResConfig().GetNumberCheckDownAudioPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public AudioClip GetNumberRotateAudioClip() {
+        var audioPath = GetCurrentResConfig().GetNumberRotateAudioPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public AudioClip GetBingoAudioClip() {
+        var audioPath = GetCurrentResConfig().GetBingoAudioPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+     public AudioClip GetReachAudioClip() {
+        var audioPath = GetCurrentResConfig().GetReachAudioPath();
+        var audioClip = Resources.Load<AudioClip>(audioPath);
+        return audioClip;
     }
 }

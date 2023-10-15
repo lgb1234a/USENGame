@@ -50,6 +50,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     void Start()
     {
         Application.targetFrameRate = 30;
+        AppConfig.Instance.ThemeSelectedIdx = AppConfig.Instance.ThemeSelectedIdx;
         m_viewStack = new Stack<IViewOperater>();
         m_rootCanvas = GameObject.FindGameObjectWithTag("Modal").transform;
         m_popupCanvas = GameObject.FindGameObjectWithTag("Popup").transform;

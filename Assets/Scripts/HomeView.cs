@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Spine.Unity;
 
 public class HomeView : IViewOperater
 {
@@ -20,6 +21,8 @@ public class HomeView : IViewOperater
     PlayGameView m_playGameView;
     SettingsView m_settingsView;
     GameObject m_viewGameObject;
+    Transform m_effectParentPanel;
+    SkeletonGraphic m_homeSpineSkeletonGraphic;
     
     // Start is called before the first frame update
     public HomeView(Transform parent)
@@ -31,6 +34,10 @@ public class HomeView : IViewOperater
         var position = m_viewGameObject.transform.localPosition;
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
+
+        m_effectParentPanel = m_viewGameObject.transform.Find("EffectPanel");
+        m_homeSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_effectParentPanel).GetComponent<SkeletonGraphic>();
+        // m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
 
         m_startButton = m_viewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
         m_startButton.onClick.AddListener(OnClickStartButton);
@@ -88,7 +95,6 @@ public class HomeView : IViewOperater
 
     void ResetToStartGame()
     {
-        // PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
         AppConfig.Instance.ClearGameData();
         ShowPlayGameView(reset: true);
     }
@@ -207,6 +213,12 @@ public class HomeView : IViewOperater
     }
 
     public void OnThemeTypeChanged() {
-        
+        // var childCount = m_effectParentPanel.childCount;
+        // for (int i = 0; i < childCount; i++) {
+        //     var go = m_effectParentPanel.GetChild(i);
+        //     GameObject.Destroy(go);
+        // }
+        // m_homeSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_effectParentPanel).GetComponent<SkeletonGraphic>();
+        // m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
     }
 }

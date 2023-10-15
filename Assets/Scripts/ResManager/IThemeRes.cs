@@ -2,6 +2,7 @@
 
 public interface IThemeRes
 {
+    //******************** 贴图 ***********************//
     // 游戏的主题背景
     public string GetThemeBgTexturePath();
 
@@ -20,12 +21,35 @@ public interface IThemeRes
     // 数字选中效果背景贴图
     public string GetNumberCellBgHighlightTexturePath();
 
+
+    //******************** spine ***********************//
+
     // 首页的spine动画
-    public string GetHomeSpinePath();
+    public string GetHomeSpinePrefabPath();
 
     // bingo和reach的spine动画
-    public string GetBingoSpinePath();
+    public string GetBingoSpinePrefabPath();
 
     // 转盘的背景spine动画
-    public string GetRotateBgSpinePath();
+    public string GetRotateBgSpinePrefabPath();
+
+
+
+
+
+
+
+    //******************** 音频 ***********************//
+
+    public string GetNormalBgmPath();
+
+    public string GetWillReachBgmPath();
+
+    public string GetBingoAudioPath();
+
+    public string GetReachAudioPath();
+
+    public string GetNumberCheckDownAudioPath();
+
+    public string GetNumberRotateAudioPath();
 }

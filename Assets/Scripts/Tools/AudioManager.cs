@@ -5,26 +5,17 @@ using UnityEngine;
 public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 {
     public AudioSource audioSource;
-    public AudioClip bgm;
-    public AudioClip willReachBgm;
-
 
     public AudioSource effectAudioSource;
-
-    public AudioClip bingoEffect;
-    public AudioClip numberCheckEffect;
-    public AudioClip numberRotateEffect;
-    public AudioClip reachClickEffect;
 
     public AudioSource keydownAudioSource;
     public AudioSource numberRotateAudioSource;
 
     private bool fadeIn = false;
     private bool fadeOut = false;
-    private bool isFaded = false;
     private float fadeCostTime = 0f;
     private float fadeInterval = 0f;
-    private float currentVolume = 0f;
+    private bool m_isWillReach = false;
 
     public static void InitVolume() 
     {
@@ -71,12 +62,14 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayWillReachBgm(float delay = 0f) {
-        audioSource.clip = willReachBgm;
+        m_isWillReach = true;
+        audioSource.clip = ThemeResManager.Instance.GetWillReachBgmAudioClip();
         PlayBgm(delay);
     }
 
     public void PlayDefaultBgm(float delay = 0f) {
-        audioSource.clip = bgm;
+        m_isWillReach = false;
+        audioSource.clip = ThemeResManager.Instance.GetBgmAudioClip();
         PlayBgm(delay);
     }
 
@@ -111,7 +104,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public void PlayBingoEffect() {
         fadeCostTime = 1.0f;
         fadeOut = true;
-        effectAudioSource.clip = bingoEffect;
+        effectAudioSource.clip = ThemeResManager.Instance.GetBingoAudioClip();
 
         StartCoroutine(DelayPlayBingoEffect());
     }
@@ -131,19 +124,19 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayNumberCheckEffect() {
-        numberRotateAudioSource.clip = numberCheckEffect;
+        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberCheckDownAudioClip();
         numberRotateAudioSource.loop = false;
         numberRotateAudioSource.Play();
     }
 
     public void PlayNumberRotateEffect() {
-        numberRotateAudioSource.clip = numberRotateEffect;
+        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberRotateAudioClip();
         numberRotateAudioSource.loop = true;
         numberRotateAudioSource.Play();
     }
 
     public void PlayNumberRotateEffectWithoutLoop() {
-        numberRotateAudioSource.clip = numberRotateEffect;
+        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberRotateAudioClip();
         numberRotateAudioSource.loop = false;
         numberRotateAudioSource.Play();
     }
@@ -153,12 +146,20 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public void PlayReachClickEffect() {
-        effectAudioSource.clip = reachClickEffect;
+        effectAudioSource.clip = ThemeResManager.Instance.GetReachAudioClip();
         effectAudioSource.loop = false;
         effectAudioSource.Play();
     }
 
     public void PlayKeyDownEffect() {
         keydownAudioSource.Play();
+    }
+
+    public void SendChangeThemeTypeEvent() {
+        if (m_isWillReach) {
+            PlayWillReachBgm();
+        }else {
+            PlayDefaultBgm();
+        }
     }
 }

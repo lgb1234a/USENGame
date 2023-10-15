@@ -1,48 +1,81 @@
 
+using UnityEngine;
+
 public class ChristmasThemeResConfig : IThemeRes
 {
-    public string GetBingoSpinePath()
+    public string GetBingoSpinePrefabPath()
     {
-        throw new System.NotImplementedException();
+        return "ChristmasThemes/Effects/Bingo/EffectPanel";
     }
 
-    public string GetHomeSpinePath()
+    public string GetHomeSpinePrefabPath()
     {
-        throw new System.NotImplementedException();
+        return "ChristmasThemes/Effects/Home/EffectPanel";
+    }
+
+    public string GetRotateBgSpinePrefabPath()
+    {
+        return "ChristmasThemes/Effects/Rotate/EffectPanel";
     }
 
     public string GetNumberCellBgDefaultTexturePath()
     {
-        return "Textures/DefaultTheme/CellBg/Panel_Black";
+        return "DefaultTheme/CellBg/Panel_Black";
     }
 
     public string GetNumberCellBgHighlightTexturePath()
     {
-        return "Textures/DefaultTheme/CellBg/Panel_Yellow";
+        return "DefaultTheme/CellBg/Panel_Yellow";
     }
 
     public string GetNumberTexturePath()
     {
-        return "Textures/DefaultTheme/Numbers/Atari_No{0}";
-    }
-
-    public string GetRotateBgSpinePath()
-    {
-        throw new System.NotImplementedException();
+        return "DefaultTheme/Numbers/Atari_No{0}";
     }
 
     public string GetThemeBgTexturePath()
     {
-        return "Textures/ChristmasThemes/bg";
+        return "ChristmasThemes/bg";
     }
 
     public string GetThemeBgDecorateTexturePath()
     {
-        return "Textures/DefaultTheme/none";
+        return "DefaultTheme/none";
     }
 
     public string GetThemeGameViewTopDecorateTexturePaht()
     {
-        return "Textures/DefaultTheme/none";
+        return "DefaultTheme/none";
+    }
+
+
+    public string GetNormalBgmPath()
+    {
+        return "ChristmasThemes/Audio/bgm";
+    }
+
+    public string GetWillReachBgmPath()
+    {
+        return "ChristmasThemes/Audio/will_reach_sample";
+    }
+
+    public string GetBingoAudioPath()
+    {
+        return "ChristmasThemes/Audio/bingo_sample";
+    }
+
+    public string GetReachAudioPath()
+    {
+        return "ChristmasThemes/Audio/Reach_click_sample";
+    }
+
+    public string GetNumberCheckDownAudioPath()
+    {
+        return "ChristmasThemes/Audio/Number_check_sample";
+    }
+
+    public string GetNumberRotateAudioPath()
+    {
+        return "ChristmasThemes/Audio/Number_rotate_sample";
     }
 }

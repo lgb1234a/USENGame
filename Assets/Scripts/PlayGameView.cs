@@ -46,11 +46,15 @@ public class PlayGameView : IViewOperater
     Button m_redButton;
     Button m_greenButton;
     CanvasGroup m_playbackCanvasGroup;
-    SkeletonGraphic m_sg;
-    SkeletonGraphic m_bgEffect;
     Image m_topDecorate;
     Image m_numberCellBg;
     Image m_numberCellCheckBg;
+    Transform m_qiqiuEffectPanel;
+    SkeletonGraphic m_qiqiuSpineSkeletonGraphic;
+    Transform m_bingoEffectPanel;
+    SkeletonGraphic m_bingoSpineSkeletonGraphic;
+    Transform m_rotateBgEffectPanel;
+    SkeletonGraphic m_rotateBgEffect;
 
     int m_reachCount = 0;
     int m_bingoCount = 0;
@@ -64,6 +68,18 @@ public class PlayGameView : IViewOperater
         var position = m_viewGameObject.transform.localPosition;
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
+
+        m_qiqiuEffectPanel = m_viewGameObject.transform.Find("QiqiuEffect");
+        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
+        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bg", true);
+
+        m_bingoEffectPanel = m_viewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
+        m_bingoSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel).GetComponent<SkeletonGraphic>();
+        m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
+
+        m_rotateBgEffectPanel = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
+        m_rotateBgEffect = ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel).GetComponent<SkeletonGraphic>();
+        m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
 
         m_topDecorate = m_viewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
         m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
@@ -120,10 +136,6 @@ public class PlayGameView : IViewOperater
         m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
-
-        m_sg = m_viewGameObject.transform.Find("PlayPanel/EffectPanel/Effect").GetComponent<SkeletonGraphic>();
-        m_sg.AnimationState.Complete += OnPlayComplete;
-        m_bgEffect = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect").GetComponent<SkeletonGraphic>();
 
         HandleSelectedEventTriggers();
     }
@@ -295,17 +307,17 @@ public class PlayGameView : IViewOperater
         }
 
         if (m_playRotationAnim) {
-            var color = m_bgEffect.color;
+            var color = m_rotateBgEffect.color;
             color.a = 0;
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f)).Join(m_playbackCanvasGroup.DOFade(1, 1f)).Join(m_bgEffect.DOColor(color, 1f));
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(-410, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.identity, 1f)).Join(m_maskCanvasGroup.DOFade(0, 1f)).Join(m_playbackCanvasGroup.DOFade(1, 1f)).Join(m_rotateBgEffect.DOColor(color, 1f));
             m_playRotationAnim = false;
             EventSystem.current.SetSelectedGameObject(m_playbackButton.gameObject);
         }
 
         if (m_playRotationAnimBack) {
-            var color = m_bgEffect.color;
+            var color = m_rotateBgEffect.color;
             color.a = 1;
-            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f)).Join(m_bgEffect.DOColor(color, 1f));
+            m_transformSequence.Join(m_numberPanel.DOAnchorPosX(0, 1f)).Join(m_numberPanel.DOLocalRotateQuaternion(Quaternion.Euler(0, 30, 0), 1f)).Join(m_maskCanvasGroup.DOFade(1, 1f)).Join(m_playbackCanvasGroup.DOFade(0, 1f)).Join(m_rotateBgEffect.DOColor(color, 1f));
             m_playRotationAnimBack = false;
             EventSystem.current.SetSelectedGameObject(null);
         }
@@ -371,7 +383,7 @@ public class PlayGameView : IViewOperater
 
     public void ResetData() {
         PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
-        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+        m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         AudioManager.Instance.PlayDefaultBgm();
     }
 
@@ -422,7 +434,7 @@ public class PlayGameView : IViewOperater
         m_rotateBackGO.SetActive(false);
         // reset music & effect
         AudioManager.Instance.PlayDefaultBgm();
-        m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+        m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
     }
 
     void OnClickRedButton() {
@@ -430,9 +442,9 @@ public class PlayGameView : IViewOperater
         if (!m_canPlayBingoAnim) return;
         AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
-        m_sg.transform.parent.gameObject.SetActive(true);
-        m_sg.AnimationState.SetAnimation(0, "reach", false);
-        m_bgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
+        // m_bingoSpineSkeletonGraphic.transform.parent.gameObject.SetActive(true);
+        m_bingoSpineSkeletonGraphic.AnimationState.SetAnimation(0, "reach", false);
+        m_rotateBgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
         m_reachCount++;
 
         m_canPlayBingoAnim = false;
@@ -450,11 +462,11 @@ public class PlayGameView : IViewOperater
         
         if (m_bingoCount == m_reachCount) {
             AudioManager.Instance.PlayDefaultBgm(1f);
-            m_bgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+            m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         }
         
-        m_sg.transform.parent.gameObject.SetActive(true);
-        m_sg.AnimationState.SetAnimation(0, "bingo", false);
+        // m_bingoSpineSkeletonGraphic.transform.parent.gameObject.SetActive(true);
+        m_bingoSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bingo", false);
 
         m_canPlayBingoAnim = false;
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
@@ -484,7 +496,7 @@ public class PlayGameView : IViewOperater
 
     private void OnPlayComplete(Spine.TrackEntry entry)
     {
-        m_sg.AnimationState.AddEmptyAnimation(0, 0, 0);
+        m_bingoSpineSkeletonGraphic.AnimationState.AddEmptyAnimation(0, 0, 0);
     }
 
     void ShowNumberPanelTitle() {
@@ -493,7 +505,6 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(false);
         m_greenButton.gameObject.SetActive(false);
         m_playButton.gameObject.SetActive(false);
-        // m_rotateTestButton.gameObject.SetActive(false);
     }
 
     void HideNumberPanelTitle() {
@@ -502,7 +513,6 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(true);
         m_greenButton.gameObject.SetActive(true);
         m_playButton.gameObject.SetActive(true);
-        // m_rotateTestButton.gameObject.SetActive(true);
     }
 
     bool IsShowHistory() {
