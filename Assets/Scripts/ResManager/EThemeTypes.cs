@@ -3,5 +3,5 @@
 public enum EThemeTypes
 {
     Default = 0,
-    Christmas = 1
+    Christmas = 2
 }
