@@ -20,17 +20,17 @@ public class ChristmasThemeResConfig : IThemeRes
 
     public string GetNumberCellBgDefaultTexturePath()
     {
-        return "DefaultTheme/CellBg/Panel_Black";
+        return "ChristmasThemes/CellBg/Panel_Blue";
     }
 
     public string GetNumberCellBgHighlightTexturePath()
     {
-        return "DefaultTheme/CellBg/Panel_Yellow";
+        return "ChristmasThemes/CellBg/Panel_Green";
     }
 
     public string GetNumberTexturePath()
     {
-        return "DefaultTheme/Numbers/Atari_No{0}";
+        return "ChristmasThemes/Numbers/Atari_No{0}";
     }
 
     public string GetThemeBgTexturePath()
