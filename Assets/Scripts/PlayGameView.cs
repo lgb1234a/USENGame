@@ -582,5 +582,13 @@ public class PlayGameView : IViewOperater
             numberImage.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
             numberCheckImage.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
         }
+
+        m_rotateBgEffectPanel.DetachChildren();
+        m_rotateBgEffect = ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel).GetComponent<SkeletonGraphic>();
+        if (AudioManager.Instance.m_isWillReach) {
+            m_rotateBgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
+        }else {
+            m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+        }
     }
 }

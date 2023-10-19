@@ -5,17 +5,17 @@ public class ChristmasThemeResConfig : IThemeRes
 {
     public string GetBingoSpinePrefabPath()
     {
-        return "ChristmasThemes/Effects/Bingo/EffectPanel";
+        return "ChristmasThemes/Effects/Bingo/EffectPanel_1";
     }
 
     public string GetHomeSpinePrefabPath()
     {
-        return "ChristmasThemes/Effects/Home/EffectPanel";
+        return "ChristmasThemes/Effects/Home/EffectPanel_1";
     }
 
     public string GetRotateBgSpinePrefabPath()
     {
-        return "ChristmasThemes/Effects/Rotate/EffectPanel";
+        return "ChristmasThemes/Effects/Rotate/EffectPanel_1";
     }
 
     public string GetNumberCellBgDefaultTexturePath()

@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     private bool fadeOut = false;
     private float fadeCostTime = 0f;
     private float fadeInterval = 0f;
-    private bool m_isWillReach = false;
+    public bool m_isWillReach = false;
 
     public static void InitVolume() 
     {

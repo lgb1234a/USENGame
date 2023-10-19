@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 2018830069173159128}
   - component: {fileID: 2764291363441530016}
   m_Layer: 5
-  m_Name: EffectPanel
+  m_Name: EffectPanel_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
