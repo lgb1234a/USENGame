@@ -15,6 +15,12 @@ public interface IThemeRes
     // 数字贴图
     public string GetNumberTexturePath();
 
+    // Bingo数字未选中时的贴图
+    public string GetBingoDefaultNumberTexturePath();
+
+    // Bingo数字选中时的贴图
+    public string GetBingoSelectedNumberTexturePath();
+
     // 数字默认背景贴图
     public string GetNumberCellBgDefaultTexturePath();
 

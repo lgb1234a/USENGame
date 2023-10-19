@@ -33,6 +33,16 @@ public class ChristmasThemeResConfig : IThemeRes
         return "ChristmasThemes/Numbers/Atari_No{0}";
     }
 
+    public string GetBingoDefaultNumberTexturePath()
+    {
+        return "ChristmasThemes/Numbers/Bingo_default_No{0}";
+    }
+
+    public string GetBingoSelectedNumberTexturePath()
+    {
+        return "ChristmasThemes/Numbers/Bingo_selected_No{0}";
+    }
+
     public string GetThemeBgTexturePath()
     {
         return "ChristmasThemes/bg";

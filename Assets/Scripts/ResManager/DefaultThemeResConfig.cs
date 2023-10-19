@@ -31,6 +31,15 @@ public class DefaultThemeResConfig : IThemeRes
     {
         return "DefaultTheme/Numbers/Atari_No{0}";
     }
+        public string GetBingoDefaultNumberTexturePath()
+    {
+        return "DefaultTheme/Numbers/Bingo_default_No{0}";
+    }
+
+    public string GetBingoSelectedNumberTexturePath()
+    {
+        return "DefaultTheme/Numbers/Bingo_selected_No{0}";
+    }
 
     public string GetThemeBgTexturePath()
     {

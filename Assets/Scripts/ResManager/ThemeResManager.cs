@@ -85,6 +85,18 @@ public class ThemeResManager
         return sprite;
     }
 
+    public Sprite GetBingoDefaultNumberTexture(int index) {
+        var spritePath = String.Format(GetCurrentResConfig().GetBingoDefaultNumberTexturePath(), index);
+        var sprite = Resources.Load<Sprite>(spritePath);
+        return sprite;
+    }
+
+    public Sprite GetBingoSelectedNumberTexture(int index) {
+        var spritePath = String.Format(GetCurrentResConfig().GetBingoSelectedNumberTexturePath(), index);
+        var sprite = Resources.Load<Sprite>(spritePath);
+        return sprite;
+    }
+
     public GameObject InstantiateHomeSpineGameObject(Transform parent) {
         var prefabPath = GetCurrentResConfig().GetHomeSpinePrefabPath();
         var gameObject = Resources.Load<GameObject>(prefabPath);
