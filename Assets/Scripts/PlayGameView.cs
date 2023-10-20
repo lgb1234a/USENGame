@@ -61,6 +61,9 @@ public class PlayGameView : IViewOperater
     bool m_canPlayBingoAnim = true;
     double m_playBingoInterval = 0;
 
+    private string bgSkeletonName = "bg";
+    private string bgRirekiSkeletonName = "bg_rireki";
+
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -70,8 +73,7 @@ public class PlayGameView : IViewOperater
         m_viewGameObject.transform.localPosition = position;
 
         m_qiqiuEffectPanel = m_viewGameObject.transform.Find("QiqiuEffect");
-        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
-        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bg", true);
+        InitMqiqiuSpineSkeletonGraphic();
 
         m_bingoEffectPanel = m_viewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
         m_bingoSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel).GetComponent<SkeletonGraphic>();
@@ -138,6 +140,11 @@ public class PlayGameView : IViewOperater
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
 
         HandleSelectedEventTriggers();
+    }
+
+    private void InitMqiqiuSpineSkeletonGraphic() {
+        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
+        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
     }
 
     void HandleSelectedEventTriggers() {
@@ -505,6 +512,8 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(false);
         m_greenButton.gameObject.SetActive(false);
         m_playButton.gameObject.SetActive(false);
+
+        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgRirekiSkeletonName, true);
     }
 
     void HideNumberPanelTitle() {
@@ -513,6 +522,8 @@ public class PlayGameView : IViewOperater
         m_redButton.gameObject.SetActive(true);
         m_greenButton.gameObject.SetActive(true);
         m_playButton.gameObject.SetActive(true);
+
+        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
     }
 
     bool IsShowHistory() {
@@ -577,10 +588,9 @@ public class PlayGameView : IViewOperater
         m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
         // 左边转转转数字更新
         m_checkAnimator.UpdateAwardNumTheme();
-        // 转转转下面的地盘更新
+        // 转转转下面的底盘更新
         GameObject.Destroy(m_qiqiuSpineSkeletonGraphic);
-        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
-        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bg", true);
+        InitMqiqiuSpineSkeletonGraphic();
         for(int i = 0; i < m_numberCells.Count; i++) {
             var cell = m_numberCells[i];
             var numberImage = cell.GetComponent<Image>();
