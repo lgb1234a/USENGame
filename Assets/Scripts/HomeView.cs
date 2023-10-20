@@ -37,7 +37,7 @@ public class HomeView : IViewOperater
 
         m_effectParentPanel = m_viewGameObject.transform.Find("EffectPanel");
         m_homeSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_effectParentPanel).GetComponent<SkeletonGraphic>();
-        // m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
+        m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
 
         m_startButton = m_viewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
         m_startButton.onClick.AddListener(OnClickStartButton);

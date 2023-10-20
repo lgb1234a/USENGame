@@ -259,69 +259,69 @@ public class PlayGameView : IViewOperater
                 Quaternion.identity,
                 m_numberCellTemplate.parent);
             cell.gameObject.SetActive(true);
-            cell.transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>().text = "";
+            cell.transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>().text = $"{i+1}";
 
-            int number = i + 1;
-            int leftNumber = number / 10;
-            if (leftNumber == 0) {
-                Sprite sprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(number);
-                var cellTransform = cell.transform;
+            // int number = i + 1;
+            // int leftNumber = number / 10;
+            // if (leftNumber == 0) {
+            //     Sprite sprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(number);
+            //     var cellTransform = cell.transform;
 
-                // 创建新的子GameObject
-                var spriteObject = new GameObject("FirstSpriteObject");
-                spriteObject.transform.SetParent(cellTransform);
+            //     // 创建新的子GameObject
+            //     var spriteObject = new GameObject("FirstSpriteObject");
+            //     spriteObject.transform.SetParent(cellTransform);
 
-                // 设置其位置和旋转为默认值
-                spriteObject.transform.localPosition = Vector3.zero;
-                spriteObject.transform.localRotation = Quaternion.identity;
-                spriteObject.transform.localScale = Vector3.one;
+            //     // 设置其位置和旋转为默认值
+            //     spriteObject.transform.localPosition = Vector3.zero;
+            //     spriteObject.transform.localRotation = Quaternion.identity;
+            //     spriteObject.transform.localScale = Vector3.one;
 
-                // 添加Image组件并设置Sprite
-                var spriteImage = spriteObject.AddComponent<UnityEngine.UI.Image>();
-                spriteImage.sprite = sprite;
+            //     // 添加Image组件并设置Sprite
+            //     var spriteImage = spriteObject.AddComponent<UnityEngine.UI.Image>();
+            //     spriteImage.sprite = sprite;
 
-                // 根据需要调整RectTransform的大小或其他属性
-                var rectTransform = spriteObject.GetComponent<RectTransform>();
-                float size = 50;
-                rectTransform.sizeDelta = new Vector2(size, size); 
-            }
-            else
-            {
-                int rightNumber = number % 10;
-                Sprite leftSprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(leftNumber);
-                Sprite rightSprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(rightNumber);
+            //     // 根据需要调整RectTransform的大小或其他属性
+            //     var rectTransform = spriteObject.GetComponent<RectTransform>();
+            //     float size = 50;
+            //     rectTransform.sizeDelta = new Vector2(size, size); 
+            // }
+            // else
+            // {
+            //     int rightNumber = number % 10;
+            //     Sprite leftSprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(leftNumber);
+            //     Sprite rightSprite = ThemeResManager.Instance.GetBingoDefaultNumberTexture(rightNumber);
 
-                // 获取cell的RectTransform，用于后续计算位置
-                var cellRectTransform = cell.GetComponent<RectTransform>();
-                float padding = 20; // 设置一个间距
+            //     // 获取cell的RectTransform，用于后续计算位置
+            //     var cellRectTransform = cell.GetComponent<RectTransform>();
+            //     float padding = 20; // 设置一个间距
 
-                // 创建左侧的GameObject
-                var leftSpriteObject = new GameObject("LeftSpriteObject");
-                leftSpriteObject.transform.SetParent(cell.transform);
-                var leftRectTransform = leftSpriteObject.AddComponent<RectTransform>();
-                leftRectTransform.anchoredPosition = new Vector2(-padding, 0); // 放在左边
-                leftRectTransform.pivot = new Vector2(0.5f, 0.5f); 
-                var leftImage = leftSpriteObject.AddComponent<UnityEngine.UI.Image>();
-                leftImage.sprite = leftSprite;
+            //     // 创建左侧的GameObject
+            //     var leftSpriteObject = new GameObject("LeftSpriteObject");
+            //     leftSpriteObject.transform.SetParent(cell.transform);
+            //     var leftRectTransform = leftSpriteObject.AddComponent<RectTransform>();
+            //     leftRectTransform.anchoredPosition = new Vector2(-padding, 0); // 放在左边
+            //     leftRectTransform.pivot = new Vector2(0.5f, 0.5f); 
+            //     var leftImage = leftSpriteObject.AddComponent<UnityEngine.UI.Image>();
+            //     leftImage.sprite = leftSprite;
 
-                // 创建右侧的GameObject
-                var rightSpriteObject = new GameObject("RightSpriteObject");
-                rightSpriteObject.transform.SetParent(cell.transform);
-                var rightRectTransform = rightSpriteObject.AddComponent<RectTransform>();
-                rightRectTransform.anchoredPosition = new Vector2(padding, 0); // 放在右边
-                rightRectTransform.pivot = new Vector2(0.5f, 0.5f); 
-                var rightImage = rightSpriteObject.AddComponent<UnityEngine.UI.Image>();
-                rightImage.sprite = rightSprite;
+            //     // 创建右侧的GameObject
+            //     var rightSpriteObject = new GameObject("RightSpriteObject");
+            //     rightSpriteObject.transform.SetParent(cell.transform);
+            //     var rightRectTransform = rightSpriteObject.AddComponent<RectTransform>();
+            //     rightRectTransform.anchoredPosition = new Vector2(padding, 0); // 放在右边
+            //     rightRectTransform.pivot = new Vector2(0.5f, 0.5f); 
+            //     var rightImage = rightSpriteObject.AddComponent<UnityEngine.UI.Image>();
+            //     rightImage.sprite = rightSprite;
 
-                // 设置RectTransform大小
-                float spriteSize = 5; // 
-                var leftRectTransform2 = leftSpriteObject.GetComponent<RectTransform>();
-                var rightRectTransform2 = rightSpriteObject.GetComponent<RectTransform>();
+            //     // 设置RectTransform大小
+            //     float spriteSize = 5; // 
+            //     var leftRectTransform2 = leftSpriteObject.GetComponent<RectTransform>();
+            //     var rightRectTransform2 = rightSpriteObject.GetComponent<RectTransform>();
 
-                leftRectTransform2.sizeDelta = new Vector2(spriteSize, spriteSize);
-                rightRectTransform2.sizeDelta = new Vector2(spriteSize, spriteSize);
+            //     leftRectTransform2.sizeDelta = new Vector2(spriteSize, spriteSize);
+            //     rightRectTransform2.sizeDelta = new Vector2(spriteSize, spriteSize);
 
-            }
+            // }
 
             var position = cell.transform.localPosition;
             position.z = 0;
