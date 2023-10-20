@@ -575,6 +575,12 @@ public class PlayGameView : IViewOperater
         m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
         m_numberCellBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
         m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        // 左边转转转数字更新
+        m_checkAnimator.UpdateAwardNumTheme();
+        // 转转转下面的地盘更新
+        GameObject.Destroy(m_qiqiuSpineSkeletonGraphic);
+        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
+        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bg", true);
         for(int i = 0; i < m_numberCells.Count; i++) {
             var cell = m_numberCells[i];
             var numberImage = cell.GetComponent<Image>();

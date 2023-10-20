@@ -166,4 +166,12 @@ public class CheckAnimator : MonoBehaviour
             m_Texts[i].text = m_Texts[i].text;
         }
     }
+
+    public void UpdateAwardNumTheme() {
+        for (int i = 0; i < m_Texts.Length; i++)
+        {
+            m_Texts[i].UpdateTextTheme();
+        }
+    }
+
 }
