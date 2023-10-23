@@ -1,4 +1,4 @@
-
+using UnityEngine;
 
 public interface IThemeRes
 {
@@ -52,4 +52,7 @@ public interface IThemeRes
     public string GetNumberCheckDownAudioPath();
 
     public string GetNumberRotateAudioPath();
+
+    //******************** 颜色 ***********************//
+    public Color GetNumberCheckedTextColor();
 }

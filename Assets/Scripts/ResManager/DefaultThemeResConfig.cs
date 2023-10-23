@@ -1,5 +1,7 @@
 
 
+using UnityEngine;
+
 public class DefaultThemeResConfig : IThemeRes
 {
     public string GetBingoSpinePrefabPath()
@@ -76,5 +78,10 @@ public class DefaultThemeResConfig : IThemeRes
     public string GetNumberRotateAudioPath()
     {
         return "DefaultTheme/Audio/Number_rotate_sample";
+    }
+
+    public Color GetNumberCheckedTextColor()
+    {
+        return Color.white;
     }
 }

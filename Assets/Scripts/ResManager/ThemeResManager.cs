@@ -47,6 +47,10 @@ public class ThemeResManager
         AudioManager.Instance.SendChangeThemeTypeEvent();
     }
 
+    public EThemeTypes GetCurrentThemeType() {
+        return m_currentType;
+    }
+
     private IThemeRes GetCurrentResConfig() {
         if (m_currentResConfig == null) {
             SetResConfig(new DefaultThemeResConfig());
@@ -137,5 +141,10 @@ public class ThemeResManager
         var audioPath = GetCurrentResConfig().GetReachAudioPath();
         var audioClip = Resources.Load<AudioClip>(audioPath);
         return audioClip;
+    }
+
+    public Color GetNumberCheckedTextColor() {
+        var color = GetCurrentResConfig().GetNumberCheckedTextColor();
+        return color;
     }
 }

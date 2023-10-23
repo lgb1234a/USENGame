@@ -31,7 +31,7 @@ public class PlayGameView : IViewOperater
     CanvasGroup m_maskCanvasGroup;
 
     Transform m_numberCellTemplate;
-    List<Transform> m_numberCells;
+    List<CellHandler> m_numberCells;
     public GameDataHandler m_gameData;
 
     bool m_playRotationAnim = false;
@@ -47,8 +47,7 @@ public class PlayGameView : IViewOperater
     Button m_greenButton;
     CanvasGroup m_playbackCanvasGroup;
     Image m_topDecorate;
-    Image m_numberCellBg;
-    Image m_numberCellCheckBg;
+    CellHandler m_numberCellHandler;
     Transform m_qiqiuEffectPanel;
     SkeletonGraphic m_qiqiuSpineSkeletonGraphic;
     Transform m_bingoEffectPanel;
@@ -116,8 +115,8 @@ public class PlayGameView : IViewOperater
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberPanelTitle = m_numberPanel.Find("Title").gameObject;
         m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
-        m_numberCellBg = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell").GetComponent<Image>();
-        m_numberCellCheckBg = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell/CheckBg").GetComponent<Image>();
+        m_numberCellHandler = m_numberCellTemplate.GetComponent<CellHandler>();
+        m_numberCellHandler.UpdateTheme();
 
         m_bottomBackButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
 
@@ -207,8 +206,7 @@ public class PlayGameView : IViewOperater
     public void Show() {
         m_viewGameObject.SetActive(true);
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
-        m_numberCellBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
-        m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        m_numberCellHandler.UpdateTheme();
         m_checkAnimator.ResetCheckTexts();
 
         if (AppConfig.Instance.GameData != null) {
@@ -240,12 +238,17 @@ public class PlayGameView : IViewOperater
 
 
         if (m_numberCells == null) {
-            m_numberCells = new List<Transform>();
+            m_numberCells = new List<CellHandler>();
             int i = 0;
             foreach (var cell in GenerateNumberCells())
             {
                 m_numberCells.Add(cell);
-                cell.Find("CheckBg").gameObject.SetActive(m_gameData.IsCellChecked(i));
+                if (m_gameData.IsCellChecked(i)) {
+                    cell.Checked();
+                }else
+                {
+                    cell.Uncheck();
+                }
                 i++;
             }
         }
@@ -257,21 +260,15 @@ public class PlayGameView : IViewOperater
         AudioManager.Instance.StopNumberRotateEffect();
     }
 
-    IEnumerable<Transform> GenerateNumberCells() {
-        var cells = new List<Transform>(m_gameData.m_cellCount);
+    IEnumerable<CellHandler> GenerateNumberCells() {
         for(int i = 0; i < m_gameData.m_cellCount; i++) {
-            var cell = GameObject.Instantiate<GameObject>(
+            var cellHandler = GameObject.Instantiate<GameObject>(
                 m_numberCellTemplate.gameObject, 
                 Vector3.zero,
                 Quaternion.identity,
-                m_numberCellTemplate.parent);
-            cell.gameObject.SetActive(true);
-            cell.transform.Find("Text").GetComponent<TMPro.TextMeshProUGUI>().text = $"{i+1}";
-            var position = cell.transform.localPosition;
-            position.z = 0;
-            cell.transform.localPosition = position;
-            cell.transform.localRotation = Quaternion.identity;
-            yield return cell.transform;
+                m_numberCellTemplate.parent).GetComponent<CellHandler>();
+            cellHandler.Init(i);
+            yield return cellHandler;
         }
     }
 
@@ -289,7 +286,12 @@ public class PlayGameView : IViewOperater
             for (int i = 0; i < m_numberCells.Count; i++)
             {
                 var cell = m_numberCells[i];
-                cell.Find("CheckBg").gameObject.SetActive(m_gameData.IsCellChecked(i));
+                if (m_gameData.IsCellChecked(i)) {
+                    cell.Checked();
+                }else
+                {
+                    cell.Uncheck();
+                }
             }
         }
 
@@ -584,8 +586,7 @@ public class PlayGameView : IViewOperater
 
     public void OnThemeTypeChanged() {
         m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
-        m_numberCellBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
-        m_numberCellCheckBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+        m_numberCellHandler.UpdateTheme();
         // 左边转转转数字更新
         m_checkAnimator.UpdateAwardNumTheme();
         // 转转转下面的底盘更新
@@ -593,10 +594,8 @@ public class PlayGameView : IViewOperater
         InitMqiqiuSpineSkeletonGraphic();
         for(int i = 0; i < m_numberCells.Count; i++) {
             var cell = m_numberCells[i];
-            var numberImage = cell.GetComponent<Image>();
-            var numberCheckImage = cell.Find("CheckBg").GetComponent<Image>();
-            numberImage.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
-            numberCheckImage.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+            var numberImage = cell.GetComponent<CellHandler>();
+            numberImage.UpdateTheme();
         }
 
         m_rotateBgEffectPanel.DetachChildren();

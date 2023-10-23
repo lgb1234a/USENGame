@@ -78,4 +78,9 @@ public class ChristmasThemeResConfig : IThemeRes
     {
         return "ChristmasThemes/Audio/Number_rotate_sample";
     }
+
+    public Color GetNumberCheckedTextColor()
+    {
+        return Color.red;
+    }
 }
