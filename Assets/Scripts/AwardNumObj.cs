@@ -16,6 +16,7 @@ public class AwardNumObj : MonoBehaviour
             lastNumImage.gameObject.SetActive(value.Length == 2);
             var firstNumberValue = int.Parse(m_text.Substring(0, 1));
             var firstSprite = ThemeResManager.Instance.GetRotateNumberTexture(firstNumberValue);
+            // 切换主题时需要重设，因此注释掉
             // if (!first || first.name != firstSprite.name) {
                 first = firstSprite;
                 firstNumImage.sprite = first;
