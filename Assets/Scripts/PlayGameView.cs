@@ -592,12 +592,14 @@ public class PlayGameView : IViewOperater
         // 转转转下面的底盘更新
         GameObject.Destroy(m_qiqiuSpineSkeletonGraphic);
         InitMqiqiuSpineSkeletonGraphic();
+
         for(int i = 0; i < m_numberCells.Count; i++) {
             var cell = m_numberCells[i];
             var numberImage = cell.GetComponent<CellHandler>();
             numberImage.UpdateTheme();
         }
 
+        GameObject.Destroy(m_rotateBgEffect.gameObject);
         m_rotateBgEffectPanel.DetachChildren();
         m_rotateBgEffect = ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel).GetComponent<SkeletonGraphic>();
         if (AudioManager.Instance.m_isWillReach) {
