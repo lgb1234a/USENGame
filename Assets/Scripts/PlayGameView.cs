@@ -205,6 +205,7 @@ public class PlayGameView : IViewOperater
 
     public void Show() {
         m_viewGameObject.SetActive(true);
+        ViewManager.Instance.HideLoading();
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
         m_numberCellHandler.UpdateTheme();
         m_checkAnimator.ResetCheckTexts();

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {}
+    "d:\\UnityProjects\\USENGame\\spine-csharp.csproj": {}
   },
   "projects": {
-    "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {
+    "d:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
-        "projectName": "Unity.2D.Sprite.Editor",
-        "projectPath": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
+        "projectUniqueName": "d:\\UnityProjects\\USENGame\\spine-csharp.csproj",
+        "projectName": "spine-csharp",
+        "projectPath": "d:\\UnityProjects\\USENGame\\spine-csharp.csproj",
         "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
         "outputPath": "d:\\UnityProjects\\USENGame\\obj\\",
         "projectStyle": "PackageReference",

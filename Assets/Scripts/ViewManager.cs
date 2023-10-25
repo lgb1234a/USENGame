@@ -26,6 +26,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     GameObject m_currentEventGO;
     public Image m_bg;
     public Image m_bgDecorate;
+    public Loading m_Loading;
 
     public IViewOperater GetCurrentView() 
     {
@@ -145,5 +146,13 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         {
             view.OnThemeTypeChanged();
         }
+    }
+
+    public void ShowLoading() {
+        m_Loading.ShowLoading();
+    }
+
+    public void HideLoading() {
+        m_Loading.HideLoading();
     }
 }

@@ -2,20 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "spine-csharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-csharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-csharp.dll": {}
-        }
-      },
       "UnityEditor.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -42,11 +28,6 @@
     }
   },
   "libraries": {
-    "spine-csharp/1.0.0": {
-      "type": "project",
-      "path": "spine-csharp.csproj",
-      "msbuildProject": "spine-csharp.csproj"
-    },
     "UnityEditor.UI/1.0.0": {
       "type": "project",
       "path": "UnityEditor.UI.csproj",
@@ -61,8 +42,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "UnityEditor.UI >= 1.0.0",
-      "UnityEngine.UI >= 1.0.0",
-      "spine-csharp >= 1.0.0"
+      "UnityEngine.UI >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -71,28 +51,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\UnityProjects\\USENGame\\spine-unity.csproj",
-      "projectName": "spine-unity",
-      "projectPath": "d:\\UnityProjects\\USENGame\\spine-unity.csproj",
+      "projectUniqueName": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
+      "projectName": "Unity.2D.Sprite.Editor",
+      "projectPath": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
       "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
       "outputPath": "d:\\UnityProjects\\USENGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "d:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-csharp.csproj"
-            },
             "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
               "projectPath": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
             },

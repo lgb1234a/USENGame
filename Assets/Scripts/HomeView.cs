@@ -182,6 +182,7 @@ public class HomeView : IViewOperater
     }
 
     void ShowPlayGameView(bool reset = false) {
+        ViewManager.Instance.ShowLoading();
         if (m_playGameView == null) {
             m_playGameView = new PlayGameView();
         }
