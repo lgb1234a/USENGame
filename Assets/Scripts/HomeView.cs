@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
+using System.Threading;
 
 public class HomeView : IViewOperater
 {
@@ -35,9 +36,11 @@ public class HomeView : IViewOperater
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
 
+        // 改成固定动画，不随主题变动而更新
         m_effectParentPanel = m_viewGameObject.transform.Find("EffectPanel");
-        m_homeSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_effectParentPanel).GetComponent<SkeletonGraphic>();
-        // m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
+        var gameObject = Resources.Load<GameObject>("DefaultTheme/Effects/Home/EffectPanel");
+        m_homeSpineSkeletonGraphic = GameObject.Instantiate(gameObject, m_effectParentPanel, false).GetComponent<SkeletonGraphic>();
+        m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
 
         m_startButton = m_viewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
         m_startButton.onClick.AddListener(OnClickStartButton);

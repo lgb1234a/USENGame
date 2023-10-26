@@ -45,7 +45,7 @@ public class SettingsView : IViewOperater
         m_backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
         m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
         m_toggles.Clear();
-        for (int i = 1; i <= 4; i++) {
+        for (int i = 1; i <= 2; i++) {
             var toggle = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
             m_toggles.Add(toggle);
         }
