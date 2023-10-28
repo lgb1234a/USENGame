@@ -155,4 +155,8 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public void HideLoading() {
         m_Loading.HideLoading();
     }
+
+    public bool IsLoadingShow() {
+        return m_Loading.gameObject.activeSelf;
+    }
 }

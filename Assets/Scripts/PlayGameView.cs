@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using Spine.Unity;
@@ -62,6 +60,7 @@ public class PlayGameView : IViewOperater
 
     private string bgSkeletonName = "bg";
     private string bgRirekiSkeletonName = "bg_rireki";
+    private double m_LoadingInterval = 0;
 
     Sequence m_transformSequence = DOTween.Sequence();
     public PlayGameView() {
@@ -204,8 +203,9 @@ public class PlayGameView : IViewOperater
     }
 
     public void Show() {
-        m_viewGameObject.SetActive(true);
-        ViewManager.Instance.HideLoading();
+        if (!ViewManager.Instance.IsLoadingShow()) {
+            m_viewGameObject.SetActive(true);
+        }
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
         m_numberCellHandler.UpdateTheme();
         m_checkAnimator.ResetCheckTexts();
@@ -274,7 +274,14 @@ public class PlayGameView : IViewOperater
     }
 
     public void Update() {
-
+        if (ViewManager.Instance.IsLoadingShow()) {
+            m_LoadingInterval += Time.deltaTime;
+        }
+        if (m_LoadingInterval > 1) {
+            m_viewGameObject.SetActive(true);
+            ViewManager.Instance.HideLoading();
+            m_LoadingInterval = 0;
+        }
         if (!m_canPlayBingoAnim) {
             m_playBingoInterval += Time.deltaTime;
             if (m_playBingoInterval > 3.3) {

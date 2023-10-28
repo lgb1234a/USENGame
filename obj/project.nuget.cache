@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSq7EZsuHpFFOcD6oEt/DvZvEI51PAvssYrIcIqcK5Ah1GNux7i+XQhUpmz8USo/+LGGbRVTxHU3dSvItjSw4g==",
+  "dgSpecHash": "gIEJVrK2f/szpNV15fRFee5ouBKZAO9DA4rUOqAVM2fmR9RwbTEY3eAAo4bZca2N/JfaQXmpdvcMrUZy1uszRg==",
   "success": true,
-  "projectFilePath": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
+  "projectFilePath": "d:\\UnityProjects\\USENGame\\spine-unity-examples.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
