@@ -277,7 +277,7 @@ public class PlayGameView : IViewOperater
         if (ViewManager.Instance.IsLoadingShow()) {
             m_LoadingInterval += Time.deltaTime;
         }
-        if (m_LoadingInterval > 1) {
+        if (m_LoadingInterval > 2) {
             m_viewGameObject.SetActive(true);
             ViewManager.Instance.HideLoading();
             m_LoadingInterval = 0;
@@ -459,7 +459,6 @@ public class PlayGameView : IViewOperater
         if (!m_canPlayBingoAnim) return;
         AudioManager.Instance.PlayReachClickEffect();
         AudioManager.Instance.PlayWillReachBgm();
-        // m_bingoSpineSkeletonGraphic.transform.parent.gameObject.SetActive(true);
         m_bingoSpineSkeletonGraphic.AnimationState.SetAnimation(0, "reach", false);
         m_rotateBgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
         m_reachCount++;
@@ -482,7 +481,6 @@ public class PlayGameView : IViewOperater
             m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         }
         
-        // m_bingoSpineSkeletonGraphic.transform.parent.gameObject.SetActive(true);
         m_bingoSpineSkeletonGraphic.AnimationState.SetAnimation(0, "bingo", false);
 
         m_canPlayBingoAnim = false;
@@ -615,5 +613,10 @@ public class PlayGameView : IViewOperater
         }else {
             m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         }
+
+        GameObject.Destroy(m_bingoSpineSkeletonGraphic.gameObject);
+        m_bingoEffectPanel.DetachChildren();
+        m_bingoSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel).GetComponent<SkeletonGraphic>();
+        m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
     }
 }

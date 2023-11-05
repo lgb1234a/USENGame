@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gIEJVrK2f/szpNV15fRFee5ouBKZAO9DA4rUOqAVM2fmR9RwbTEY3eAAo4bZca2N/JfaQXmpdvcMrUZy1uszRg==",
+  "dgSpecHash": "F9LqOK5GIU+YHz14TydQ0xs8WZExhm8KJUdfszAUzoMSFXtKeVJySb69z8gWdIlfYLIq6l1IqOSWk+Y2XXuKQw==",
   "success": true,
-  "projectFilePath": "d:\\UnityProjects\\USENGame\\spine-unity-examples.csproj",
+  "projectFilePath": "d:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
