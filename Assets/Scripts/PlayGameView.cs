@@ -277,7 +277,7 @@ public class PlayGameView : IViewOperater
         if (ViewManager.Instance.IsLoadingShow()) {
             m_LoadingInterval += Time.deltaTime;
         }
-        if (m_LoadingInterval > 2) {
+        if (m_LoadingInterval > 1) {
             m_viewGameObject.SetActive(true);
             ViewManager.Instance.HideLoading();
             m_LoadingInterval = 0;
