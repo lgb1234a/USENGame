@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEditor.UI;
 
 public class SettingsView : IViewOperater
 {
@@ -28,6 +29,13 @@ public class SettingsView : IViewOperater
     AboutView m_aboutView;
     GameObject m_maxCellSettingArrows;
     bool m_isPresettingEffectVolume;
+
+    GameObject m_confirmPanel;
+    Button m_confirmSettingCellCountBtn;
+    Text m_confirmSettingCellCountText;
+    Button m_cancelSettingCellCountBtn;
+    Text m_cancelSettingCellCountText;
+    int m_nextCellCountChange;
 
     public SettingsView() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -67,6 +75,15 @@ public class SettingsView : IViewOperater
         m_resetSettingsButton.onClick.AddListener(OnResetSettingsButtonClicked);
         m_aboutButton = m_viewGameObject.transform.Find("Panel/CenterPanel/About").GetComponent<Button>();
         m_aboutButton.onClick.AddListener(OnAboutButtonClicked);
+
+        m_confirmPanel = m_viewGameObject.transform.Find("ConfirmPanel").gameObject;
+        m_confirmSettingCellCountBtn = m_confirmPanel.transform.Find("ConfirmBtn").GetComponent<Button>();
+        m_confirmSettingCellCountText = m_confirmPanel.transform.Find("ConfirmBtn/Text").GetComponent<Text>();
+        m_confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
+
+        m_cancelSettingCellCountBtn = m_confirmPanel.transform.Find("CancelBtn").GetComponent<Button>();
+        m_cancelSettingCellCountText = m_confirmPanel.transform.Find("CancelBtn/Text").GetComponent<Text>();
+        m_cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
 
         HandleSelectedEventTriggers();
         EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
@@ -138,6 +155,29 @@ public class SettingsView : IViewOperater
         entry_11.eventID = EventTriggerType.Deselect;
         entry_11.callback.AddListener(OnTabUnSelected);
         eventTrigger_5.triggers.Add(entry_11);
+
+        var eventTrigger_6 = m_confirmSettingCellCountBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry_12 = new();
+        entry_12.eventID = EventTriggerType.Select;
+        entry_12.callback.AddListener(OnConfirmSettingCellCountBtnSelected);
+        eventTrigger_6.triggers.Add(entry_12);
+
+        EventTrigger.Entry entry_13 = new();
+        entry_13.eventID = EventTriggerType.Deselect;
+        entry_13.callback.AddListener(OnConfirmSettingCellCountBtnUnSelected);
+        eventTrigger_6.triggers.Add(entry_13);
+
+
+        var eventTrigger_7 = m_cancelSettingCellCountBtn.gameObject.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry_14 = new();
+        entry_14.eventID = EventTriggerType.Select;
+        entry_14.callback.AddListener(OnCancelSettingCellCountBtnSelected);
+        eventTrigger_7.triggers.Add(entry_14);
+
+        EventTrigger.Entry entry_15 = new();
+        entry_15.eventID = EventTriggerType.Deselect;
+        entry_15.callback.AddListener(OnCancelSettingCellCountBtnUnSelected);
+        eventTrigger_7.triggers.Add(entry_15);
     }
 
 
@@ -168,10 +208,24 @@ public class SettingsView : IViewOperater
         }
 
         if (Input.GetButtonDown("Horizontal") && m_isSelectedCellCountButton) {
-            if (Input.GetKey(KeyCode.LeftArrow))
-                OnMaxCellSettingSliderValueChanged(-1);
-            if (Input.GetKey(KeyCode.RightArrow)) 
-                OnMaxCellSettingSliderValueChanged(+1);
+            if (Input.GetKey(KeyCode.LeftArrow)) {
+                if (AppConfig.Instance.HasHistoryGameData()) {
+                    m_confirmPanel.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(m_confirmSettingCellCountBtn.gameObject);
+                    m_nextCellCountChange = -1;
+                } else{
+                    OnMaxCellSettingSliderValueChanged(-1);
+                }
+            }
+            if (Input.GetKey(KeyCode.RightArrow)) {
+                if (AppConfig.Instance.HasHistoryGameData()) {
+                    m_confirmPanel.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(m_confirmSettingCellCountBtn.gameObject);
+                    m_nextCellCountChange = +1;
+                }else{
+                    OnMaxCellSettingSliderValueChanged(+1);
+                }
+            }
         }
 
         if (Input.GetButton("Horizontal") && m_isSelectedCellCountButton) {
@@ -221,6 +275,38 @@ public class SettingsView : IViewOperater
         if (m_isPresettingEffectVolume) return;
         AudioManager.Instance.PlayNumberRotateEffectWithoutLoop();
         AudioManager.Instance.PlayNumberCheckEffect();
+    }
+
+    // 确认修改最大cell数
+    void OnClickConfirmSettingCellCountBtn() {
+        m_confirmPanel.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
+        OnMaxCellSettingSliderValueChanged(m_nextCellCountChange);
+    }
+
+    void OnConfirmSettingCellCountBtnSelected(BaseEventData data) {
+        m_confirmSettingCellCountText.color = Color.white;
+        m_cancelSettingCellCountText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+    }
+
+    void OnConfirmSettingCellCountBtnUnSelected(BaseEventData data) {
+        m_confirmSettingCellCountText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+        m_cancelSettingCellCountText.color = Color.white;
+    }
+
+    void OnClickCancelSettingCellCountBtn() {
+        m_confirmPanel.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(m_backgroundToggleSlider.gameObject);
+    }
+
+    void OnCancelSettingCellCountBtnSelected(BaseEventData data) {
+        m_cancelSettingCellCountText.color = Color.white;
+        m_confirmSettingCellCountText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+    }
+
+    void OnCancelSettingCellCountBtnUnSelected(BaseEventData data) {
+        m_cancelSettingCellCountText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
+        m_confirmSettingCellCountText.color = Color.white;
     }
 
     void OnBgmSliderSelected(BaseEventData data) {
