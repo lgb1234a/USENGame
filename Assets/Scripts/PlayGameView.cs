@@ -280,7 +280,7 @@ public class PlayGameView : IViewOperater
         if (m_LoadingInterval > 1) {
             m_viewGameObject.SetActive(true);
         }
-        if (m_LoadingInterval > 2) {
+        if (m_LoadingInterval > 3) {
             ViewManager.Instance.HideLoading();
             m_LoadingInterval = 0;
         }

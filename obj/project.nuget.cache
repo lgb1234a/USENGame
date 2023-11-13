@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c85zOaXvARaRWhf1V6xBy22AY5fpMMa/gresnb7IdtYfFCqPNTl1Ywxs5pxhe5V2iyb+XehA8e/GgBAbq/MNgA==",
+  "dgSpecHash": "UsnE5JyosUxS/sOpzVQfqioczstuOKrF8qs81D4e2gAA+wZvByg7RvvNbFxB1y66BlI8GFBLckPaAeAftG3PiA==",
   "success": true,
-  "projectFilePath": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
+  "projectFilePath": "d:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
