@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F9LqOK5GIU+YHz14TydQ0xs8WZExhm8KJUdfszAUzoMSFXtKeVJySb69z8gWdIlfYLIq6l1IqOSWk+Y2XXuKQw==",
+  "dgSpecHash": "c85zOaXvARaRWhf1V6xBy22AY5fpMMa/gresnb7IdtYfFCqPNTl1Ywxs5pxhe5V2iyb+XehA8e/GgBAbq/MNgA==",
   "success": true,
-  "projectFilePath": "d:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
+  "projectFilePath": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

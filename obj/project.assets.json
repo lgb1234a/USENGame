@@ -2,110 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "spine-csharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-csharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-csharp.dll": {}
-        }
-      },
-      "spine-unity/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0",
-          "spine-csharp": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-unity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-unity.dll": {}
-        }
-      },
-      "spine-unity-editor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0",
-          "spine-csharp": "1.0.0",
-          "spine-unity": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-unity-editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-unity-editor.dll": {}
-        }
-      },
-      "spine-unity-examples/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0",
-          "spine-csharp": "1.0.0",
-          "spine-unity": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-unity-examples.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-unity-examples.dll": {}
-        }
-      },
-      "spine-unity-examples-editor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0",
-          "spine-unity": "1.0.0",
-          "spine-unity-examples": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/spine-unity-examples-editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/spine-unity-examples-editor.dll": {}
-        }
-      },
-      "Unity.2D.Sprite.Editor/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEditor.UI": "1.0.0",
-          "UnityEngine.UI": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
-        }
-      },
-      "UnityEditor.UI/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "UnityEngine.UI": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/UnityEditor.UI.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UnityEditor.UI.dll": {}
-        }
-      },
       "UnityEngine.UI/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -119,41 +15,6 @@
     }
   },
   "libraries": {
-    "spine-csharp/1.0.0": {
-      "type": "project",
-      "path": "spine-csharp.csproj",
-      "msbuildProject": "spine-csharp.csproj"
-    },
-    "spine-unity/1.0.0": {
-      "type": "project",
-      "path": "spine-unity.csproj",
-      "msbuildProject": "spine-unity.csproj"
-    },
-    "spine-unity-editor/1.0.0": {
-      "type": "project",
-      "path": "spine-unity-editor.csproj",
-      "msbuildProject": "spine-unity-editor.csproj"
-    },
-    "spine-unity-examples/1.0.0": {
-      "type": "project",
-      "path": "spine-unity-examples.csproj",
-      "msbuildProject": "spine-unity-examples.csproj"
-    },
-    "spine-unity-examples-editor/1.0.0": {
-      "type": "project",
-      "path": "spine-unity-examples-editor.csproj",
-      "msbuildProject": "spine-unity-examples-editor.csproj"
-    },
-    "Unity.2D.Sprite.Editor/1.0.0": {
-      "type": "project",
-      "path": "Unity.2D.Sprite.Editor.csproj",
-      "msbuildProject": "Unity.2D.Sprite.Editor.csproj"
-    },
-    "UnityEditor.UI/1.0.0": {
-      "type": "project",
-      "path": "UnityEditor.UI.csproj",
-      "msbuildProject": "UnityEditor.UI.csproj"
-    },
     "UnityEngine.UI/1.0.0": {
       "type": "project",
       "path": "UnityEngine.UI.csproj",
@@ -162,14 +23,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Unity.2D.Sprite.Editor >= 1.0.0",
-      "UnityEditor.UI >= 1.0.0",
-      "UnityEngine.UI >= 1.0.0",
-      "spine-csharp >= 1.0.0",
-      "spine-unity >= 1.0.0",
-      "spine-unity-editor >= 1.0.0",
-      "spine-unity-examples >= 1.0.0",
-      "spine-unity-examples-editor >= 1.0.0"
+      "UnityEngine.UI >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -178,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
-      "projectName": "Assembly-CSharp",
-      "projectPath": "d:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
+      "projectUniqueName": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
+      "projectName": "UnityEditor.UI",
+      "projectPath": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
       "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
       "outputPath": "d:\\UnityProjects\\USENGame\\obj\\",
       "projectStyle": "PackageReference",
@@ -199,27 +53,6 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "d:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-csharp.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\spine-unity-editor.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-unity-editor.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\spine-unity-examples.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-unity-examples.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\spine-unity.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\spine-unity.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj"
-            },
-            "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
-              "projectPath": "d:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
-            },
             "d:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
               "projectPath": "d:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
             }
