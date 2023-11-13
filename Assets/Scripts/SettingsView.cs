@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
-using UnityEditor.UI;
 
 public class SettingsView : IViewOperater
 {
