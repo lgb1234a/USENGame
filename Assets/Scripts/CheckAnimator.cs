@@ -113,7 +113,7 @@ public class CheckAnimator : MonoBehaviour
                 m_rotateStopped = false;
                 m_isAnimate = true;
                 m_isEaseToStop = false;
-                AudioManager.Instance.PlayNumberRotateEffect();
+                // AudioManager.Instance.PlayNumberRotateEffect();
             }
         }
     }
