@@ -278,12 +278,11 @@ public class PlayGameView : IViewOperater
             m_LoadingInterval += Time.deltaTime;
         }
         if (m_LoadingInterval > 1) {
-            m_viewGameObject.SetActive(true);
-        }
-        if (m_LoadingInterval > 2) {
             ViewManager.Instance.HideLoading();
+            m_viewGameObject.SetActive(true);
             m_LoadingInterval = 0;
         }
+        
         if (!m_canPlayBingoAnim) {
             m_playBingoInterval += Time.deltaTime;
             if (m_playBingoInterval > 3.3) {
