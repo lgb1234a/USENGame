@@ -123,6 +123,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     }
 
     public void OnAndroidKeyDown(string keyName) {
+        ShowDebugInfo($"Android key:{keyName}");
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
 
