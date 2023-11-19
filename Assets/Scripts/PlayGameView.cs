@@ -70,20 +70,6 @@ public class PlayGameView : IViewOperater
         position.z = 0;
         m_viewGameObject.transform.localPosition = position;
 
-        m_qiqiuEffectPanel = m_viewGameObject.transform.Find("QiqiuEffect");
-        InitMqiqiuSpineSkeletonGraphic();
-
-        m_bingoEffectPanel = m_viewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
-        m_bingoSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel).GetComponent<SkeletonGraphic>();
-        m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
-
-        m_rotateBgEffectPanel = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
-        m_rotateBgEffect = ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel).GetComponent<SkeletonGraphic>();
-        m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
-
-        m_topDecorate = m_viewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
-        m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
-
         m_stopButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton").GetComponent<Button>();
         m_stopButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton/Text").GetComponent<Text>();
         m_stopButton.onClick.AddListener(OnClickStopButton);
@@ -137,12 +123,9 @@ public class PlayGameView : IViewOperater
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
 
-        HandleSelectedEventTriggers();
-    }
+        OnThemeTypeChanged();
 
-    private void InitMqiqiuSpineSkeletonGraphic() {
-        m_qiqiuSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel).GetComponent<SkeletonGraphic>();
-        m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
+        HandleSelectedEventTriggers();
     }
 
     void HandleSelectedEventTriggers() {
@@ -591,33 +574,62 @@ public class PlayGameView : IViewOperater
         m_backGameButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
     }
 
-    public void OnThemeTypeChanged() {
-        m_topDecorate.sprite = ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
+    public async void OnThemeTypeChanged() {
+        if (!m_topDecorate)
+            m_topDecorate = m_viewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
+        m_topDecorate.sprite = await ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
+
         m_numberCellHandler.UpdateTheme();
         // 左边转转转数字更新
         m_checkAnimator.UpdateAwardNumTheme();
-        // 转转转下面的底盘更新
-        GameObject.Destroy(m_qiqiuSpineSkeletonGraphic);
-        InitMqiqiuSpineSkeletonGraphic();
 
         for(int i = 0; i < m_numberCells.Count; i++) {
             var cell = m_numberCells[i];
             var numberImage = cell.GetComponent<CellHandler>();
             numberImage.UpdateTheme();
         }
+        
+        if (m_qiqiuSpineSkeletonGraphic) 
+            // 转转转下面的底盘更新
+            GameObject.Destroy(m_qiqiuSpineSkeletonGraphic.gameObject);
 
-        GameObject.Destroy(m_rotateBgEffect.gameObject);
-        m_rotateBgEffectPanel.DetachChildren();
-        m_rotateBgEffect = ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel).GetComponent<SkeletonGraphic>();
-        if (AudioManager.Instance.m_isWillReach) {
-            m_rotateBgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
-        }else {
-            m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+        {
+            if (!m_qiqiuEffectPanel)
+                m_qiqiuEffectPanel = m_viewGameObject.transform.Find("QiqiuEffect");
+            var effectGO = await ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel);
+            m_qiqiuSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();
+            m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
         }
+        
 
-        GameObject.Destroy(m_bingoSpineSkeletonGraphic.gameObject);
-        m_bingoEffectPanel.DetachChildren();
-        m_bingoSpineSkeletonGraphic = ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel).GetComponent<SkeletonGraphic>();
-        m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
+        if (m_rotateBgEffect)
+            GameObject.Destroy(m_rotateBgEffect.gameObject);
+
+        {
+            if (!m_rotateBgEffectPanel)
+                m_rotateBgEffectPanel = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
+            m_rotateBgEffectPanel.DetachChildren();
+            var effectGO = await ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel);
+            m_rotateBgEffect = effectGO.GetComponent<SkeletonGraphic>();
+
+            if (AudioManager.Instance.m_isWillReach) {
+                m_rotateBgEffect.AnimationState.SetAnimation(0, "carcle_puple", true);
+            }else {
+                m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+            }
+        }
+        
+
+        if (m_bingoSpineSkeletonGraphic) 
+            GameObject.Destroy(m_bingoSpineSkeletonGraphic.gameObject);
+
+        {
+            if (!m_bingoEffectPanel)
+                m_bingoEffectPanel = m_viewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
+            m_bingoEffectPanel.DetachChildren();
+            var effectGO = await ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel);
+            m_bingoSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();
+            m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
+        }
     }
 }

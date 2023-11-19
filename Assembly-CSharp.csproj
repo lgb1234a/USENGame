@@ -50,7 +50,7 @@
     <UnityVersion>2021.3.20f1c1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\cheny\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\cheny\.vscode\extensions\visualstudiotoolsforunity.vstuc-0.9.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
@@ -79,12 +79,14 @@
     <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
     <Compile Include="Assets\Scripts\Tools\FPS.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\ResManager\ResourceLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\CheckAnimator.cs" />
     <Compile Include="Assets\Scripts\GameDataHandler.cs" />
+    <Compile Include="Assets\Scripts\Tools\Loading.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
@@ -119,7 +121,7 @@
     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\HomeView.cs" />
-    <Compile Include="Assets\Scripts\Tools\Loading.cs" />
+    <Compile Include="Assets\Scripts\Tools\BmFontGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
