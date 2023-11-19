@@ -1,0 +1,624 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\UnityProjects\\USENGame\\Assembly-CSharp-Editor.csproj": {}
+  },
+  "projects": {
+    "D:\\UnityProjects\\USENGame\\Assembly-CSharp-Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\Assembly-CSharp-Editor.csproj",
+        "projectName": "Assembly-CSharp-Editor",
+        "projectPath": "D:\\UnityProjects\\USENGame\\Assembly-CSharp-Editor.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "D:\\UnityProjects\\USENGame\\Assembly-CSharp.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj",
+        "projectName": "spine-csharp",
+        "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj",
+        "projectName": "spine-unity-editor",
+        "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-editor.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj",
+        "projectName": "spine-unity-examples-editor",
+        "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples-editor.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj",
+        "projectName": "spine-unity-examples",
+        "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity-examples.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\spine-unity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\spine-unity.csproj",
+        "projectName": "spine-unity",
+        "projectPath": "D:\\UnityProjects\\USENGame\\spine-unity.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\spine-csharp.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\spine-csharp.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
+        "projectName": "Unity.2D.Sprite.Editor",
+        "projectPath": "D:\\UnityProjects\\USENGame\\Unity.2D.Sprite.Editor.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj"
+              },
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "D:\\UnityProjects\\USENGame\\UnityEditor.UI.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+                "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "D:\\UnityProjects\\USENGame\\UnityEngine.UI.csproj",
+        "packagesPath": "C:\\Users\\cheny\\.nuget\\packages\\",
+        "outputPath": "D:\\UnityProjects\\USENGame\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cheny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

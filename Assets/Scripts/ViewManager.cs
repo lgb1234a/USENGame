@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Resources;
 
 public interface IViewOperater
 {
@@ -48,7 +49,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         return m_popupCanvas;
     }
 
-    void Start()
+    async void Start()
     {
         Application.targetFrameRate = 30;
         AppConfig.Instance.ThemeSelectedIdx = AppConfig.Instance.ThemeSelectedIdx;
@@ -58,12 +59,13 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         var rootView = new HomeView(m_rootCanvas);
         Push(rootView);
 
-        m_bg.sprite = ThemeResManager.Instance.GetThemeBgTexture();
-        m_bgDecorate.sprite = ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
+        m_bg.sprite = await ThemeResManager.Instance.GetThemeBgTexture();
+        m_bgDecorate.sprite = await ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
     }
 
     void Update()
     {
+        // ThemeResManager.Instance.CheckAssetsLoaded();
         if (Input.anyKeyDown) {
             AudioManager.Instance.PlayKeyDownEffect();
             if (Input.GetKeyDown(KeyCode.T))
@@ -140,9 +142,9 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         ShowDebugInfo(eventType);
     }
 
-    public void SendChangeThemeTypeEvent() {
-        m_bg.sprite = ThemeResManager.Instance.GetThemeBgTexture();
-        m_bgDecorate.sprite = ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
+    public async void SendChangeThemeTypeEvent() {
+        m_bg.sprite = await ThemeResManager.Instance.GetThemeBgTexture();
+        m_bgDecorate.sprite = await ThemeResManager.Instance.GetThemeHomeBgDecorateTexture();
         foreach (var view in m_allViewInstances)
         {
             view.OnThemeTypeChanged();

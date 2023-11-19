@@ -32,9 +32,9 @@ public class CellHandler : MonoBehaviour
         m_NumberLabel.color = Color.white;
     }
 
-    public void UpdateTheme() {
-        m_UncheckedBg.sprite = ThemeResManager.Instance.GetCellNumberBgTexture();
-        m_CheckedBg.sprite = ThemeResManager.Instance.GetCellNumberCheckBgTexture();
+    public async void UpdateTheme() {
+        m_UncheckedBg.sprite = await ThemeResManager.Instance.GetCellNumberBgTexture();
+        m_CheckedBg.sprite = await ThemeResManager.Instance.GetCellNumberCheckBgTexture();
         if (m_IsChecked) {
             m_NumberLabel.color = ThemeResManager.Instance.GetNumberCheckedTextColor();
         }else {

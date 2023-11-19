@@ -61,15 +61,15 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         audioSource.volume = volume * 0.1f + 0.5f;
     }
 
-    public void PlayWillReachBgm(float delay = 0f) {
+    public async void PlayWillReachBgm(float delay = 0f) {
         m_isWillReach = true;
-        audioSource.clip = ThemeResManager.Instance.GetWillReachBgmAudioClip();
+        audioSource.clip = await ThemeResManager.Instance.GetWillReachBgmAudioClip();
         PlayBgm(delay);
     }
 
-    public void PlayDefaultBgm(float delay = 0f) {
+    public async void PlayDefaultBgm(float delay = 0f) {
         m_isWillReach = false;
-        audioSource.clip = ThemeResManager.Instance.GetBgmAudioClip();
+        audioSource.clip = await ThemeResManager.Instance.GetBgmAudioClip();
         PlayBgm(delay);
     }
 
@@ -101,10 +101,10 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         effectAudioSource.volume = volume * 0.1f + 0.5f;
     }
 
-    public void PlayBingoEffect() {
+    public async void PlayBingoEffect() {
         fadeCostTime = 1.0f;
         fadeOut = true;
-        effectAudioSource.clip = ThemeResManager.Instance.GetBingoAudioClip();
+        effectAudioSource.clip = await ThemeResManager.Instance.GetBingoAudioClip();
 
         StartCoroutine(DelayPlayBingoEffect());
     }
@@ -123,20 +123,20 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         fadeIn = true;
     }
 
-    public void PlayNumberCheckEffect() {
-        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberCheckDownAudioClip();
+    public async void PlayNumberCheckEffect() {
+        numberRotateAudioSource.clip = await ThemeResManager.Instance.GetNumberCheckDownAudioClip();
         numberRotateAudioSource.loop = false;
         numberRotateAudioSource.Play();
     }
 
-    public void PlayNumberRotateEffect() {
-        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberRotateAudioClip();
+    public async void PlayNumberRotateEffect() {
+        numberRotateAudioSource.clip = await ThemeResManager.Instance.GetNumberRotateAudioClip();
         numberRotateAudioSource.loop = true;
         numberRotateAudioSource.Play();
     }
 
-    public void PlayNumberRotateEffectWithoutLoop() {
-        numberRotateAudioSource.clip = ThemeResManager.Instance.GetNumberRotateAudioClip();
+    public async void PlayNumberRotateEffectWithoutLoop() {
+        numberRotateAudioSource.clip = await ThemeResManager.Instance.GetNumberRotateAudioClip();
         numberRotateAudioSource.loop = false;
         numberRotateAudioSource.Play();
     }
@@ -145,8 +145,8 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         numberRotateAudioSource.Stop();
     }
 
-    public void PlayReachClickEffect() {
-        effectAudioSource.clip = ThemeResManager.Instance.GetReachAudioClip();
+    public async void PlayReachClickEffect() {
+        effectAudioSource.clip = await ThemeResManager.Instance.GetReachAudioClip();
         effectAudioSource.loop = false;
         effectAudioSource.Play();
     }
