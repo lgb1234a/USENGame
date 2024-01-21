@@ -99,6 +99,8 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public void SetEffectVolume(int volume)
     {
         effectAudioSource.volume = volume * 0.1f + 0.5f;
+        numberRotateAudioSource.volume = volume * 0.1f + 0.5f;
+        keydownAudioSource.volume = volume * 0.1f + 0.5f;
     }
 
     public async void PlayBingoEffect() {

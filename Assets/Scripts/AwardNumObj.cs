@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class AwardNumObj : MonoBehaviour
 {
-    private string m_text;
+    private string m_text = "0";
     public string text
     {
         get

@@ -384,7 +384,8 @@ public class PlayGameView : IViewOperater
 
     public void ResetData() {
         PreferencesStorage.SaveString(AppConfig.__REOPEN_DATA__, null);
-        m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
+        if (m_rotateBgEffect)
+            m_rotateBgEffect.AnimationState.SetAnimation(0, "panel_blue", true);
         AudioManager.Instance.PlayDefaultBgm();
     }
 
