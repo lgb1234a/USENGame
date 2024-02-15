@@ -5,3 +5,5 @@ Logs
 Temp
 obj/Debug
 Packages/packages-lock.json
+UserSettings
+obj/
