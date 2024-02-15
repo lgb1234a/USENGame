@@ -95,6 +95,7 @@ public class PlayGameView : IViewOperater
 
         var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
         m_checkAnimator = awardPanelTransform.GetComponent<CheckAnimator>();
+        m_checkAnimator.AnimateFinishedCallback = CheckAnimateFinished;
         m_maskCanvasGroup = awardPanelTransform.GetComponent<CanvasGroup>();
 
         m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
@@ -573,6 +574,11 @@ public class PlayGameView : IViewOperater
 
     void OnBackGameButtonDeselected(BaseEventData data) {
         m_backGameButtonText.color = new Color(0f, 147/255f, 1.0f, 1.0f);
+    }
+
+    //动画每次转动完毕缓存一次数据
+    public void CheckAnimateFinished() {
+        AppConfig.Instance.GameData = m_gameData;
     }
 
     public async void OnThemeTypeChanged() {

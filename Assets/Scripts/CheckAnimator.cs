@@ -2,6 +2,7 @@
 using UnityEngine.Assertions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System;
 
 public class CheckAnimator : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class CheckAnimator : MonoBehaviour
 
     Coroutine m_easeCoroutine;
     bool m_isNeedResetTextsPos;
+    public Action AnimateFinishedCallback;
 
     void Update()
     {
@@ -53,6 +55,7 @@ public class CheckAnimator : MonoBehaviour
                 AudioManager.Instance.PlayNumberCheckEffect();
                 m_isNeedResetTextsPos = true;
                 m_rotateStopped = true;
+                AnimateFinishedCallback();
             }
             m_Texts[i].text = m_gameData.GetUncheckedNumber().ToString();
             return m_animPositions[index];
@@ -158,6 +161,7 @@ public class CheckAnimator : MonoBehaviour
                 m_Texts[i].gameObject.transform.localPosition = m_animPositions[i];
             }
         }
+        AnimateFinishedCallback();
     }
 
     public void OnThemeTypeChanged() {
