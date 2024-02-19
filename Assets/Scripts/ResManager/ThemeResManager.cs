@@ -31,6 +31,21 @@ public class ThemeResManager
         m_currentResConfig = config;
     }
 
+    private IThemeRes m_defaultThemeResConfig;
+    private IThemeRes GetDefaultThemeResConfig() {
+        if (m_defaultThemeResConfig == null) {
+            m_defaultThemeResConfig = new DefaultThemeResConfig();
+        }
+        return m_defaultThemeResConfig;
+    }
+    private IThemeRes m_christmasThemeResConfig;
+    private IThemeRes GetChristmasThemeResConfig() {
+        if (m_christmasThemeResConfig == null) {
+            m_christmasThemeResConfig = new ChristmasThemeResConfig();
+        }
+        return m_christmasThemeResConfig;
+    }
+
     private EThemeTypes m_currentType = EThemeTypes.Default;
     public void SetThemeType(EThemeTypes type) {
         if (m_currentType == type) {
@@ -39,11 +54,11 @@ public class ThemeResManager
 
         m_currentType = type;
         if (type == EThemeTypes.Default) {
-            SetResConfig(new DefaultThemeResConfig());
+            SetResConfig(GetDefaultThemeResConfig());
         }
 
         if (type == EThemeTypes.Christmas) {
-            SetResConfig(new ChristmasThemeResConfig());
+            SetResConfig(GetChristmasThemeResConfig());
         }
         ViewManager.Instance.SendChangeThemeTypeEvent();
         AudioManager.Instance.SendChangeThemeTypeEvent();
@@ -55,7 +70,7 @@ public class ThemeResManager
 
     public IThemeRes GetCurrentResConfig() {
         if (m_currentResConfig == null) {
-            SetResConfig(new DefaultThemeResConfig());
+            SetResConfig(GetDefaultThemeResConfig());
         }
         return m_currentResConfig;
     }
@@ -70,9 +85,8 @@ public class ThemeResManager
         return sprite;
     }
 
-    public Task<Sprite> GetThemePlayViewDecorateTexture() {
-        var sprite = ResourceLoader.LoadResourcesAsync<Sprite>(GetCurrentResConfig().GetThemeGameViewTopDecorateTexturePaht());
-        return sprite;
+    public string GetThemePlayViewDecorateTexturePath() {
+        return GetCurrentResConfig().GetThemeGameViewTopDecorateTexturePaht();
     }
 
     public Task<Sprite> GetCellNumberBgTexture() {
@@ -91,22 +105,17 @@ public class ThemeResManager
         return sprite;
     }
 
-    public async Task<GameObject> InstantiateHomeSpineGameObject(Transform parent) {
-        var prefabPath = GetCurrentResConfig().GetHomeSpinePrefabPath();
-        var gameObject = await ResourceLoader.LoadResourcesAsync<GameObject>(prefabPath);
-        return GameObject.Instantiate(gameObject, parent, false);
+    public string GetHomeSpinePrefabPath() {
+        return GetCurrentResConfig().GetHomeSpinePrefabPath();
     }
 
-    public async Task<GameObject> InstantiateBingoSpineGameObject(Transform parent) {
-        var prefabPath = GetCurrentResConfig().GetBingoSpinePrefabPath();
-        var gameObject = await ResourceLoader.LoadResourcesAsync<GameObject>(prefabPath);
-        return GameObject.Instantiate(gameObject, parent, false);
+    public string GetBingoSpinePrefabPath() {
+        return GetCurrentResConfig().GetBingoSpinePrefabPath();
     }
 
-    public async Task<GameObject> InstantiateRotateBgSpineGameObject(Transform parent) {
-        var prefabPath = GetCurrentResConfig().GetRotateBgSpinePrefabPath();
-        var gameObject = await ResourceLoader.LoadResourcesAsync<GameObject>(prefabPath);
-        return GameObject.Instantiate(gameObject, parent, false);
+    public string GetRotateBgSpinePrefabPath()
+    {
+        return GetCurrentResConfig().GetRotateBgSpinePrefabPath();
     }
 
     public async Task<AudioClip> GetBgmAudioClip() {

@@ -3,10 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-public class SettingsView : IViewOperater
+public class SettingsView : AbstractView, IViewOperater
 {
     string m_prefabPath = "SettingsPanel";
-    GameObject m_viewGameObject;
     Slider m_BGMSlider;
     GameObject m_BGMSliderSelectedBg;
     Slider m_EffectVolumeSlider;
@@ -36,46 +35,47 @@ public class SettingsView : IViewOperater
     Text m_cancelSettingCellCountText;
     int m_nextCellCountChange;
 
-    public SettingsView() {
-        var obj = Resources.Load<GameObject>(m_prefabPath);
-        m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
-        var position = m_viewGameObject.transform.localPosition;
+    public void Build() {
+        // var obj = Resources.Load<GameObject>(m_prefabPath);
+        m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
+        // m_mainViewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
+        var position = m_mainViewGameObject.transform.localPosition;
         position.z = 0;
-        m_viewGameObject.transform.localPosition = position;
+        m_mainViewGameObject.transform.localPosition = position;
 
-        m_maxCellSettingButton = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Button>();
-        m_maxCellSettingText = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Count").GetComponent<Text>();
-        m_maxCellSettingArrows = m_viewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Arrows").gameObject;
+        m_maxCellSettingButton = m_mainViewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount").GetComponent<Button>();
+        m_maxCellSettingText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Count").GetComponent<Text>();
+        m_maxCellSettingArrows = m_mainViewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Arrows").gameObject;
 
-        m_backgroundToggleGroup = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
-        m_backgroundToggleSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<Slider>();
+        m_backgroundToggleGroup = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
+        m_backgroundToggleSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<Slider>();
         m_backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
-        m_backgroundSettingSelectedBg = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
+        m_backgroundSettingSelectedBg = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
         m_toggles.Clear();
         for (int i = 1; i <= 2; i++) {
-            var toggle = m_viewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
+            var toggle = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
             m_toggles.Add(toggle);
         }
         m_backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
 
-        m_BGMSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
-        m_BGMVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
+        m_BGMSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
+        m_BGMVolumeText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
         m_BGMSlider.onValueChanged.AddListener(OnBgmSliderValueChanged);
         m_BGMSlider.value = AppConfig.Instance.BGMVolume;
 
-        m_EffectVolumeSlider = m_viewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/Slider").GetComponent<Slider>();
-        m_EffectVolumeText = m_viewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/VolumeText").GetComponent<Text>();
+        m_EffectVolumeSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/Slider").GetComponent<Slider>();
+        m_EffectVolumeText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/VolumeText").GetComponent<Text>();
         m_EffectVolumeSlider.onValueChanged.AddListener(OnVolumeEffectValueChanged);
         m_isPresettingEffectVolume = true;
         m_EffectVolumeSlider.value = AppConfig.Instance.EffectVolume;
         m_isPresettingEffectVolume = false;
 
-        m_resetSettingsButton = m_viewGameObject.transform.Find("Panel/CenterPanel/ResetSettings").GetComponent<Button>();
+        m_resetSettingsButton = m_mainViewGameObject.transform.Find("Panel/CenterPanel/ResetSettings").GetComponent<Button>();
         m_resetSettingsButton.onClick.AddListener(OnResetSettingsButtonClicked);
-        m_aboutButton = m_viewGameObject.transform.Find("Panel/CenterPanel/About").GetComponent<Button>();
+        m_aboutButton = m_mainViewGameObject.transform.Find("Panel/CenterPanel/About").GetComponent<Button>();
         m_aboutButton.onClick.AddListener(OnAboutButtonClicked);
 
-        m_confirmPanel = m_viewGameObject.transform.Find("ConfirmPanel").gameObject;
+        m_confirmPanel = m_mainViewGameObject.transform.Find("ConfirmPanel").gameObject;
         m_confirmSettingCellCountBtn = m_confirmPanel.transform.Find("ConfirmBtn").GetComponent<Button>();
         m_confirmSettingCellCountText = m_confirmPanel.transform.Find("ConfirmBtn/Text").GetComponent<Text>();
         m_confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
@@ -181,7 +181,7 @@ public class SettingsView : IViewOperater
 
 
     public void Show() {
-        m_viewGameObject.SetActive(true);
+        m_mainViewGameObject.SetActive(true);
         m_maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
         var lastView = ViewManager.Instance.GetLastPopedView();
         if (lastView != null && lastView == m_aboutView)
@@ -192,8 +192,10 @@ public class SettingsView : IViewOperater
 
     public void Hide() {
         EventSystem.current.SetSelectedGameObject(null);
-        m_viewGameObject.SetActive(false);
+        m_mainViewGameObject.SetActive(false);
         AudioManager.Instance.StopNumberRotateEffect();
+
+        Destroy();
     }
 
     public void Update() {
