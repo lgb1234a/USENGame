@@ -25,7 +25,7 @@ public class TerminalView : IViewOperater
         }
     }
 
-    public TerminalView()
+    public void Build()
     {
         var obj = Resources.Load<GameObject>(m_prefabPath);
         m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());

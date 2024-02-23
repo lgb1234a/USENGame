@@ -8,6 +8,7 @@ using System.Resources;
 public interface IViewOperater
 {
     void Show();
+    void Build();
     void Hide();
     void Update();
     void OnThemeTypeChanged();
@@ -56,7 +57,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         m_viewStack = new Stack<IViewOperater>();
         m_rootCanvas = GameObject.FindGameObjectWithTag("Modal").transform;
         m_popupCanvas = GameObject.FindGameObjectWithTag("Popup").transform;
-        var rootView = new HomeView(m_rootCanvas);
+        var rootView = new BingoHomeView();
         Push(rootView);
 
         m_bg.sprite = await ThemeResManager.Instance.GetThemeBgTexture();
@@ -95,6 +96,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 
     public void Push(IViewOperater view)
     {
+        view.Build();
         if (!m_allViewInstances.Contains(view)) {
             m_allViewInstances.Add(view);
         }
@@ -116,6 +118,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         m_lastPopedView = m_viewStack.Pop();
         m_currentView = m_viewStack.Peek();
         if (m_currentView != null) {
+            m_currentView.Build();
             m_currentView.Show();
             if (m_currentEventGO != null)
             {

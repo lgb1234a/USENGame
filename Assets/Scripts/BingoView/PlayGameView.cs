@@ -6,10 +6,9 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using Spine.Unity;
 
-public class PlayGameView : IViewOperater
+public class PlayGameView : AbstractView, IViewOperater
 {
     string m_prefabPath = "GamePanel";
-    GameObject m_viewGameObject;
     Button m_stopButton;
     Text m_stopButtonText;
     Button m_exitButton;
@@ -63,64 +62,66 @@ public class PlayGameView : IViewOperater
     private double m_LoadingInterval = 0;
 
     Sequence m_transformSequence = DOTween.Sequence();
-    public PlayGameView() {
-        var obj = Resources.Load<GameObject>(m_prefabPath);
-        m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
-        var position = m_viewGameObject.transform.localPosition;
-        position.z = 0;
-        m_viewGameObject.transform.localPosition = position;
 
-        m_stopButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton").GetComponent<Button>();
-        m_stopButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/StopButton/Text").GetComponent<Text>();
+    public void Build() {
+        // var obj = Resources.Load<GameObject>(m_prefabPath);
+        m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
+        // m_mainViewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
+        var position = m_mainViewGameObject.transform.localPosition;
+        position.z = 0;
+        m_mainViewGameObject.transform.localPosition = position;
+
+        m_stopButton = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/StopButton").GetComponent<Button>();
+        m_stopButtonText = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/StopButton/Text").GetComponent<Text>();
         m_stopButton.onClick.AddListener(OnClickStopButton);
 
-        m_exitButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton").GetComponent<Button>();
-        m_exitButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton/Text").GetComponent<Text>();
+        m_exitButton = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton").GetComponent<Button>();
+        m_exitButtonText = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/ExitButton/Text").GetComponent<Text>();
         m_exitButton.onClick.AddListener(OnClickExitButton);
 
-        m_backGameButton = m_viewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton").GetComponent<Button>();
-        m_backGameButtonText = m_viewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton/Text").GetComponent<Text>();
+        m_backGameButton = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton").GetComponent<Button>();
+        m_backGameButtonText = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel/BackGameButton/Text").GetComponent<Text>();
         m_backGameButton.onClick.AddListener(OnClickBackGameButton);
 
-        m_pausePanel = m_viewGameObject.transform.Find("PlayPanel/PausePanel");
+        m_pausePanel = m_mainViewGameObject.transform.Find("PlayPanel/PausePanel");
 
 
-        m_resetPanel = m_viewGameObject.transform.Find("PlayPanel/ResetPanel");
-        m_resetBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn").GetComponent<Button>();
-        m_resetBtnText = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn/Text").GetComponent<Text>();
+        m_resetPanel = m_mainViewGameObject.transform.Find("PlayPanel/ResetPanel");
+        m_resetBtn = m_mainViewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn").GetComponent<Button>();
+        m_resetBtnText = m_mainViewGameObject.transform.Find("PlayPanel/ResetPanel/ResetBtn/Text").GetComponent<Text>();
         m_resetBtn.onClick.AddListener(OnClickedResetBtn);
-        m_resetCancelBtn = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn").GetComponent<Button>();
-        m_resetCancelBtnText = m_viewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn/Text").GetComponent<Text>();
+        m_resetCancelBtn = m_mainViewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn").GetComponent<Button>();
+        m_resetCancelBtnText = m_mainViewGameObject.transform.Find("PlayPanel/ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
 
-        var awardPanelTransform = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
+        var awardPanelTransform = m_mainViewGameObject.transform.Find("PlayPanel/Game/AwardPanel");
         m_checkAnimator = awardPanelTransform.GetComponent<CheckAnimator>();
         m_checkAnimator.AnimateFinishedCallback = CheckAnimateFinished;
         m_maskCanvasGroup = awardPanelTransform.GetComponent<CanvasGroup>();
 
-        m_numberPanel = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
+        m_numberPanel = m_mainViewGameObject.transform.Find("PlayPanel/Game/NumberPanel") as RectTransform;
         m_numberPanelTitle = m_numberPanel.Find("Title").gameObject;
-        m_numberCellTemplate = m_viewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
+        m_numberCellTemplate = m_mainViewGameObject.transform.Find("PlayPanel/Game/NumberPanel/NumberCell");
         m_numberCellHandler = m_numberCellTemplate.GetComponent<CellHandler>();
         m_numberCellHandler.UpdateTheme();
 
-        m_bottomBackButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
+        m_bottomBackButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
 
-        m_rotateTestButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
-        m_rotateTestButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/Text").GetComponent<Text>();
+        m_rotateTestButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
+        m_rotateTestButtonText = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/Text").GetComponent<Text>();
         m_rotateTestButton.onClick.AddListener(OnClickYellowButton);
-        m_rotateBackGO = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/BackImg").gameObject;
+        m_rotateBackGO = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/BackImg").gameObject;
 
-        m_playButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
+        m_playButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button2").GetComponent<Button>();
         m_playButton.onClick.AddListener(OnClickPlayButton);
-        m_playButtonText = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button2/Text").GetComponent<Text>();
+        m_playButtonText = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button2/Text").GetComponent<Text>();
 
-        m_redButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button3").GetComponent<Button>();
+        m_redButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button3").GetComponent<Button>();
         m_redButton.onClick.AddListener(OnClickRedButton);
-        m_greenButton = m_viewGameObject.transform.Find("PlayPanel/BottomPanel/Button4").GetComponent<Button>();
+        m_greenButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button4").GetComponent<Button>();
         m_greenButton.onClick.AddListener(OnClickGreenButton);
 
-        m_playbackButton = m_viewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
+        m_playbackButton = m_mainViewGameObject.transform.Find("PlayPanel/Game/PlayBackButton").GetComponent<Button>();
         m_playbackCanvasGroup = m_playbackButton.GetComponent<CanvasGroup>();
         m_playbackButton.onClick.AddListener(OnClickPlayBackButton);
 
@@ -188,7 +189,7 @@ public class PlayGameView : IViewOperater
 
     public void Show() {
         if (!ViewManager.Instance.IsLoadingShow()) {
-            m_viewGameObject.SetActive(true);
+            m_mainViewGameObject.SetActive(true);
         }
         AppConfig.Instance.rotateEaseExtraTime = 0.0f;
         m_numberCellHandler.UpdateTheme();
@@ -240,9 +241,12 @@ public class PlayGameView : IViewOperater
     }
 
     public void Hide() {
-        m_viewGameObject.SetActive(false);
+        m_mainViewGameObject.SetActive(false);
         m_pausePanel.gameObject.SetActive(false);
         AudioManager.Instance.StopNumberRotateEffect();
+
+        m_numberCells = null;
+        Destroy();
     }
 
     IEnumerable<CellHandler> GenerateNumberCells() {
@@ -263,7 +267,7 @@ public class PlayGameView : IViewOperater
         }
         if (m_LoadingInterval > 1) {
             ViewManager.Instance.HideLoading();
-            m_viewGameObject.SetActive(true);
+            m_mainViewGameObject.SetActive(true);
             m_LoadingInterval = 0;
         }
         
@@ -583,8 +587,8 @@ public class PlayGameView : IViewOperater
 
     public async void OnThemeTypeChanged() {
         if (!m_topDecorate)
-            m_topDecorate = m_viewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
-        m_topDecorate.sprite = await ThemeResManager.Instance.GetThemePlayViewDecorateTexture();
+            m_topDecorate = m_mainViewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
+        m_topDecorate.sprite = await LoadAsync<Sprite>(ThemeResManager.Instance.GetThemePlayViewDecorateTexturePath());
 
         m_numberCellHandler.UpdateTheme();
         // 左边转转转数字更新
@@ -602,8 +606,8 @@ public class PlayGameView : IViewOperater
 
         {
             if (!m_qiqiuEffectPanel)
-                m_qiqiuEffectPanel = m_viewGameObject.transform.Find("QiqiuEffect");
-            var effectGO = await ThemeResManager.Instance.InstantiateHomeSpineGameObject(m_qiqiuEffectPanel);
+                m_qiqiuEffectPanel = m_mainViewGameObject.transform.Find("QiqiuEffect");
+            var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetHomeSpinePrefabPath(), m_qiqiuEffectPanel);
             m_qiqiuSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();
             m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
         }
@@ -614,9 +618,9 @@ public class PlayGameView : IViewOperater
 
         {
             if (!m_rotateBgEffectPanel)
-                m_rotateBgEffectPanel = m_viewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
+                m_rotateBgEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
             m_rotateBgEffectPanel.DetachChildren();
-            var effectGO = await ThemeResManager.Instance.InstantiateRotateBgSpineGameObject(m_rotateBgEffectPanel);
+            var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetRotateBgSpinePrefabPath(), m_rotateBgEffectPanel);
             m_rotateBgEffect = effectGO.GetComponent<SkeletonGraphic>();
 
             if (AudioManager.Instance.m_isWillReach) {
@@ -632,9 +636,9 @@ public class PlayGameView : IViewOperater
 
         {
             if (!m_bingoEffectPanel)
-                m_bingoEffectPanel = m_viewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
+                m_bingoEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
             m_bingoEffectPanel.DetachChildren();
-            var effectGO = await ThemeResManager.Instance.InstantiateBingoSpineGameObject(m_bingoEffectPanel);
+            var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetBingoSpinePrefabPath(), m_bingoEffectPanel);
             m_bingoSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();
             m_bingoSpineSkeletonGraphic.AnimationState.Complete += OnPlayComplete;
         }

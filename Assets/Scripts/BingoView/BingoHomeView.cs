@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
 
-public class HomeView : IViewOperater
+public class BingoHomeView : AbstractView, IViewOperater
 {
     string m_prefabPath = "HomePanel";
     private Button m_startButton;
@@ -18,40 +18,38 @@ public class HomeView : IViewOperater
 
     PlayGameView m_playGameView;
     SettingsView m_settingsView;
-    GameObject m_viewGameObject;
     Transform m_effectParentPanel;
     SkeletonGraphic m_homeSpineSkeletonGraphic;
-    
-    // Start is called before the first frame update
-    public HomeView(Transform parent)
-    {
+
+    public void Build() {
         Application.targetFrameRate = 30;
         AudioManager.InitVolume();
-        var obj = Resources.Load<GameObject>(m_prefabPath);
-        m_viewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
-        var position = m_viewGameObject.transform.localPosition;
+        // var obj = Resources.Load<GameObject>(m_prefabPath);
+        m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
+        // m_mainViewGameObject = GameObject.Instantiate<GameObject>(obj, Vector3.zero, Quaternion.identity, ViewManager.Instance.GetRootTransform());
+        var position = m_mainViewGameObject.transform.localPosition;
         position.z = 0;
-        m_viewGameObject.transform.localPosition = position;
+        m_mainViewGameObject.transform.localPosition = position;
 
         // 改成固定动画，不随主题变动而更新
-        m_effectParentPanel = m_viewGameObject.transform.Find("EffectPanel");
-        var gameObject = Resources.Load<GameObject>("DefaultTheme/Effects/Home/EffectPanel");
-        m_homeSpineSkeletonGraphic = GameObject.Instantiate(gameObject, m_effectParentPanel, false).GetComponent<SkeletonGraphic>();
+        m_effectParentPanel = m_mainViewGameObject.transform.Find("EffectPanel");
+        // var gameObject = Resources.Load<GameObject>("DefaultTheme/Effects/Home/EffectPanel");
+        m_homeSpineSkeletonGraphic = LoadViewGameObject("DefaultTheme/Effects/Home/EffectPanel", m_effectParentPanel).GetComponent<SkeletonGraphic>();
         m_homeSpineSkeletonGraphic.AnimationState.SetAnimation(0, "titlle", true);
 
-        m_startButton = m_viewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
+        m_startButton = m_mainViewGameObject.transform.Find("StartPanel/StartButton").GetComponent<Button>();
         m_startButton.onClick.AddListener(OnClickStartButton);
-        m_reopenButton = m_viewGameObject.transform.Find("StartPanel/ReopenButton").GetComponent<Button>();
+        m_reopenButton = m_mainViewGameObject.transform.Find("StartPanel/ReopenButton").GetComponent<Button>();
         m_reopenButton.onClick.AddListener(OnClickReopenButton);
-        m_settingsButton = m_viewGameObject.transform.Find("SettingsButton").GetComponent<Button>();
+        m_settingsButton = m_mainViewGameObject.transform.Find("SettingsButton").GetComponent<Button>();
         m_settingsButton.onClick.AddListener(OnClickSettingsButton);
 
-        m_resetPanel = m_viewGameObject.transform.Find("ResetPanel");
-        m_resetBtn = m_viewGameObject.transform.Find("ResetPanel/ResetBtn").GetComponent<Button>();
-        m_resetBtnText = m_viewGameObject.transform.Find("ResetPanel/ResetBtn/Text").GetComponent<Text>();
+        m_resetPanel = m_mainViewGameObject.transform.Find("ResetPanel");
+        m_resetBtn = m_mainViewGameObject.transform.Find("ResetPanel/ResetBtn").GetComponent<Button>();
+        m_resetBtnText = m_mainViewGameObject.transform.Find("ResetPanel/ResetBtn/Text").GetComponent<Text>();
         m_resetBtn.onClick.AddListener(OnClickedResetBtn);
-        m_resetCancelBtn = m_viewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
-        m_resetCancelBtnText = m_viewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
+        m_resetCancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
+        m_resetCancelBtnText = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
 
         var eventTrigger = m_resetCancelBtn.gameObject.GetComponent<EventTrigger>();
@@ -90,7 +88,6 @@ public class HomeView : IViewOperater
         {
             ResetToStartGame();
         }
-        
     }
 
     void ResetToStartGame()
@@ -117,9 +114,8 @@ public class HomeView : IViewOperater
 
     public void OnClickedResetBtn()
     {
-        ResetToStartGame();
-
         HideResetToastPanel();
+        ResetToStartGame();
     }
 
     public void OnClickedResetCancelBtn()
@@ -154,7 +150,7 @@ public class HomeView : IViewOperater
     }
 
     public void Show() {
-        m_viewGameObject.SetActive(true);
+        m_mainViewGameObject.SetActive(true);
         if (ViewManager.Instance.GetLastPopedView() == m_playGameView) 
             OnGamePlayViewHide();
         else if (ViewManager.Instance.GetLastPopedView() == m_settingsView) 
@@ -164,7 +160,9 @@ public class HomeView : IViewOperater
     }
 
     public void Hide() {
-        m_viewGameObject.SetActive(false);
+        m_mainViewGameObject.SetActive(false);
+
+        Destroy();
     }
 
     public void Update() {
