@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
+using UnityEngine.SceneManagement;
 
 public class BingoHomeView : AbstractView, IViewOperater
 {
@@ -166,12 +167,9 @@ public class BingoHomeView : AbstractView, IViewOperater
     }
 
     public void Update() {
+
         if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (ToastView.Instance.IsToasting()) {
-                Application.Quit();
-                return;
-            }
-            ToastView.Instance.Show();
+            USENSceneManager.Instance.LoadScene("GameEntries");
         }
     }
 

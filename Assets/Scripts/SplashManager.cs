@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SplashManager : MonoBehaviour
 {
@@ -12,6 +13,6 @@ public class SplashManager : MonoBehaviour
 
     IEnumerator LoadNextScene() {
         yield return new WaitForSecondsRealtime(3.0f);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Home");
+        USENSceneManager.Instance.LoadScene("GameEntries");
     }
 }
