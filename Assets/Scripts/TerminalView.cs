@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TerminalView : IViewOperater
+public class TerminalView : AbstractView, IViewOperater
 {
     string m_prefabPath = "TerminalPanel";
     GameObject m_viewGameObject;

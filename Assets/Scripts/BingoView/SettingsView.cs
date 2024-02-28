@@ -194,8 +194,6 @@ public class SettingsView : AbstractView, IViewOperater
         EventSystem.current.SetSelectedGameObject(null);
         m_mainViewGameObject.SetActive(false);
         AudioManager.Instance.StopNumberRotateEffect();
-
-        Destroy();
     }
 
     public void Update() {

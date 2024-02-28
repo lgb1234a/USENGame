@@ -18,8 +18,6 @@ public class AboutView : AbstractView, IViewOperater
 
     public void Hide() {
         m_mainViewGameObject.SetActive(false);
-
-        Destroy();
     }
 
     public void Update() {

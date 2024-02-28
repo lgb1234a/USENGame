@@ -112,4 +112,19 @@ public class AppConfig
     }
 
     public float rotateEaseExtraTime = 0.0f;
+
+    private int _selectedGameIndex = 2;
+
+    public int SelectedGameIndex {
+        set
+        {
+            _selectedGameIndex = value;
+            PreferencesStorage.SaveInt("__SELECT_GAME_INDEX__", value);
+        }
+        get
+        {
+            _selectedGameIndex = PreferencesStorage.ReadInt("__SELECT_GAME_INDEX__", 2);
+            return _selectedGameIndex;
+        }
+    }
 }

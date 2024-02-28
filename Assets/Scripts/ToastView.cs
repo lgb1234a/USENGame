@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-class ToastView : MonoBehaviourSingletonTemplate<ToastView>
+class ToastView : AbstractView, IViewOperater
 {
     string m_prefabPath = "Toast";
     GameObject m_viewGameObject;
+
+    float m_timeInterval = 0;
 
     void InstantiateGameObject() {
         var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -21,16 +23,41 @@ class ToastView : MonoBehaviourSingletonTemplate<ToastView>
 
         if (m_viewGameObject.activeSelf) return;
         m_viewGameObject.SetActive(true);
-        StartCoroutine(Hide());
     }
 
-    IEnumerator Hide() {
-        yield return new WaitForSeconds(2.0f);
+    public void Hide() {
         m_viewGameObject.SetActive(false);
     }
 
     public bool IsToasting() {
         if (m_viewGameObject == null) return false;
         return m_viewGameObject.activeSelf;
+    }
+
+    public void Build()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void Update()
+    {
+        if (m_viewGameObject.activeSelf) {
+            m_timeInterval += Time.deltaTime;
+            if (m_timeInterval > 2f) {
+                Hide();
+            }
+        }else {
+            m_timeInterval = 0;
+        }
+    }
+
+    public void OnThemeTypeChanged()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnAndroidKeyDown(string keyName)
+    {
+        throw new System.NotImplementedException();
     }
 }

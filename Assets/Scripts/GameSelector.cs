@@ -7,46 +7,46 @@ public class GameSelector : MonoBehaviour
 {
     public GameEntry[] m_gameEntries;
     public int m_selectIndex = 2;
-    int[] m_selectedPositionX = { -600, -200, 0, 200, 600 };
-    int m_betweenSelectedSpace = 700;
+    int m_betweenSelectedSpace = 600;
     int m_otherSpace = 200;
+    float m_keyDownTimeInterval = 0.5f;
+    float m_timeInterval = 0;
 
     void Start()
     {
-        foreach (var entry in m_gameEntries)
-        {
-            entry.AddSelectListener(OnGameEntrySelected);
-        }
+        for (int i = 0; i < m_gameEntries.Length; i++)
+            m_gameEntries[i].m_index = i;
+        m_selectIndex = AppConfig.Instance.SelectedGameIndex;
         m_gameEntries[m_selectIndex].SetEventSystemSelected();
         UpdateSelectedIndex(m_selectIndex);
+        m_gameEntries[m_selectIndex].m_selectedBg.alpha = 1;
     }
 
     void Update()
     {
-        
-    }
-
-    void OnGameEntrySelected(GameEntry selectedEntry) 
-    {
-        var selectedIndex = m_selectIndex;
-        for (int i = 0; i < m_gameEntries.Length; i++)
-        {
-            var entry = m_gameEntries[i];
-            if (entry == selectedEntry)
-                selectedIndex = i;
+        m_timeInterval += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && m_timeInterval > m_keyDownTimeInterval) {
+            m_timeInterval = 0;
+            if (m_selectIndex > 0) 
+                UpdateSelectedIndex(--m_selectIndex);
         }
-        if (selectedIndex != m_selectIndex)
-            UpdateSelectedIndex(selectedIndex);
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && m_timeInterval > m_keyDownTimeInterval) {
+            m_timeInterval = 0;
+            if (m_selectIndex < 4)
+                UpdateSelectedIndex(++m_selectIndex);
+        }
     }
 
     void UpdateSelectedIndex(int index) {
         m_selectIndex = index;
-        var selectedPositionX = m_selectedPositionX[m_selectIndex];
+        var selectedPositionX = 0;
         for (int i = 0; i < m_gameEntries.Length; i++) {
             m_gameEntries[i].SetPositionX((i-2)*300);
             if (i == m_selectIndex) {
                 m_gameEntries[i].ResetRotate();
                 m_gameEntries[i].SetPositionX(selectedPositionX);
+                m_gameEntries[i].SetEventSystemSelected();
             }else
             {
                 if (i-m_selectIndex < 0) {

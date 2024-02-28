@@ -16,7 +16,8 @@ public class MonoBehaviourSingletonTemplate<T> : MonoBehaviour where T : MonoBeh
         if (instance == null)
         {
             instance = (T) this;
-            GameObject.DontDestroyOnLoad(this);
+            // Debug.LogWarning(gameObject.name);
+            // GameObject.DontDestroyOnLoad(this);
         }
     }
 

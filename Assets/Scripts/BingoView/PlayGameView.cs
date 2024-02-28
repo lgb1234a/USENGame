@@ -246,7 +246,6 @@ public class PlayGameView : AbstractView, IViewOperater
         AudioManager.Instance.StopNumberRotateEffect();
 
         m_numberCells = null;
-        Destroy();
     }
 
     IEnumerable<CellHandler> GenerateNumberCells() {
@@ -586,8 +585,7 @@ public class PlayGameView : AbstractView, IViewOperater
     }
 
     public async void OnThemeTypeChanged() {
-        if (!m_topDecorate)
-            m_topDecorate = m_mainViewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
+        m_topDecorate = m_mainViewGameObject.transform.Find("TopDecorate").GetComponent<Image>();
         m_topDecorate.sprite = await LoadAsync<Sprite>(ThemeResManager.Instance.GetThemePlayViewDecorateTexturePath());
 
         m_numberCellHandler.UpdateTheme();
@@ -605,8 +603,7 @@ public class PlayGameView : AbstractView, IViewOperater
             GameObject.Destroy(m_qiqiuSpineSkeletonGraphic.gameObject);
 
         {
-            if (!m_qiqiuEffectPanel)
-                m_qiqiuEffectPanel = m_mainViewGameObject.transform.Find("QiqiuEffect");
+            m_qiqiuEffectPanel = m_mainViewGameObject.transform.Find("QiqiuEffect");
             var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetHomeSpinePrefabPath(), m_qiqiuEffectPanel);
             m_qiqiuSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();
             m_qiqiuSpineSkeletonGraphic.AnimationState.SetAnimation(0, bgSkeletonName, true);
@@ -617,8 +614,7 @@ public class PlayGameView : AbstractView, IViewOperater
             GameObject.Destroy(m_rotateBgEffect.gameObject);
 
         {
-            if (!m_rotateBgEffectPanel)
-                m_rotateBgEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
+            m_rotateBgEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/Game/AwardPanel/BgEffect");
             m_rotateBgEffectPanel.DetachChildren();
             var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetRotateBgSpinePrefabPath(), m_rotateBgEffectPanel);
             m_rotateBgEffect = effectGO.GetComponent<SkeletonGraphic>();
@@ -635,8 +631,7 @@ public class PlayGameView : AbstractView, IViewOperater
             GameObject.Destroy(m_bingoSpineSkeletonGraphic.gameObject);
 
         {
-            if (!m_bingoEffectPanel)
-                m_bingoEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
+            m_bingoEffectPanel = m_mainViewGameObject.transform.Find("PlayPanel/BingoEffectPanel");
             m_bingoEffectPanel.DetachChildren();
             var effectGO = await LoadViewGameObjectAsync(ThemeResManager.Instance.GetBingoSpinePrefabPath(), m_bingoEffectPanel);
             m_bingoSpineSkeletonGraphic = effectGO.GetComponent<SkeletonGraphic>();

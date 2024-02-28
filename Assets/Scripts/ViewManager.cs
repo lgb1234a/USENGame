@@ -11,6 +11,7 @@ public interface IViewOperater
     void Build();
     void Hide();
     void Update();
+    void Destroy();
     void OnThemeTypeChanged();
     void OnAndroidKeyDown(string keyName);
 }
@@ -29,6 +30,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public Image m_bg;
     public Image m_bgDecorate;
     public Loading m_Loading;
+    private IViewOperater m_lastView;
 
     public IViewOperater GetCurrentView() 
     {
@@ -102,15 +104,23 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         }
         if (m_viewStack.Count > 0)
         {
-            var lastView = m_viewStack.Peek();
-            if (lastView != null)
-                lastView.Hide();
+            m_lastView = m_viewStack.Peek();
+            if (m_lastView != null) {
+                m_lastView.Hide();
+                StartCoroutine(DestroyLastPopView());
+            }
         }
 
         if (!m_viewStack.Contains(view))
             m_viewStack.Push(view);
         m_currentView = view;
         m_currentView.Show();
+    }
+
+    IEnumerator<WaitForEndOfFrame> DestroyLastPopView()
+    {
+        yield return new WaitForEndOfFrame();
+        m_lastView.Destroy();
     }
 
     public void Hided(IViewOperater view) 

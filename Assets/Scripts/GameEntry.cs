@@ -13,7 +13,9 @@ public class GameEntry : MonoBehaviour
     [SerializeField]
     private Button m_entryButton;
     private Action<GameEntry> m_gameEntryDelegate;
+    public CanvasGroup m_selectedBg;
     bool m_isWillQuitApplication;
+    public int m_index;
     void Start()
     {
         var eventTrigger = m_entryButton.gameObject.GetComponent<EventTrigger>();
@@ -42,17 +44,19 @@ public class GameEntry : MonoBehaviour
 
     void OnGameEntrySelected(BaseEventData data)
     {
-        m_gameEntryDelegate(this);
+        // m_gameEntryDelegate(this);
+        m_selectedBg.DOFade(1f, 0.2f).SetEase(Ease.InOutSine).SetLink(m_selectedBg.gameObject);
     }
 
     void OnGameEntryDeselected(BaseEventData data)
     {
-
+        m_selectedBg.DOFade(0f, 0.2f).SetEase(Ease.InOutSine).SetLink(m_selectedBg.gameObject);
     }
 
     void OnGameEntryClicked()
     {
         USENSceneManager.Instance.LoadScene("Home");
+        AppConfig.Instance.SelectedGameIndex = m_index;
     }
 
     public void AddSelectListener(Action<GameEntry> d) 
@@ -79,7 +83,7 @@ public class GameEntry : MonoBehaviour
     }
 
     public void SetRotate(float rotateY) {
-        (transform as RectTransform).DOLocalRotate(new Vector3(0, rotateY, 0), 0.5f);
+        (transform as RectTransform).DOLocalRotate(new Vector3(0, rotateY, 0), 0.5f).SetLink(gameObject);
     }
 
     public void SetSiblingIndex(int index) {

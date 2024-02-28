@@ -85,7 +85,7 @@ public class AbstractView
         return res.GetAsset();
     }
 
-    protected void Destroy()
+    public void Destroy()
     {
         foreach (var res in m_resources) {
             res.Unload();
