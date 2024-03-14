@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
-using UnityEngine.SceneManagement;
 
 public class BingoHomeView : AbstractView, IViewOperater
 {

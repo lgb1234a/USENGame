@@ -593,6 +593,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
+      propertyPath: m_index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 935371028}
@@ -724,8 +729,28 @@ PrefabInstance:
     - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Text
-      value: 2
+      value: High&Low
       objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
     - target: {fileID: 8387234635275257724, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -855,6 +880,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 390737485}
     m_Modifications:
+    - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_index
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_entryButton
@@ -990,6 +1020,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
     - target: {fileID: 8387234635275257724, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -1044,6 +1079,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 390737485}
     m_Modifications:
+    - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_index
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_entryButton
@@ -1179,6 +1219,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
     - target: {fileID: 8387234635275257724, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -1462,6 +1507,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
     - target: {fileID: 8387234635275257724, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -1511,6 +1561,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 390737485}
     m_Modifications:
+    - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_entryButton
@@ -1644,8 +1699,28 @@ PrefabInstance:
     - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Text
-      value: 3
+      value: Bingo
       objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.16901031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.16901031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.16981131
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
     - target: {fileID: 8387234635275257724, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Navigation.m_Mode

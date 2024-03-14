@@ -59,7 +59,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         m_viewStack = new Stack<IViewOperater>();
         m_rootCanvas = GameObject.FindGameObjectWithTag("Modal").transform;
         m_popupCanvas = GameObject.FindGameObjectWithTag("Popup").transform;
-        var rootView = new BingoHomeView();
+        var rootView = AppConfig.Instance.GetSceneRootViewType();
         Push(rootView);
 
         m_bg.sprite = await ThemeResManager.Instance.GetThemeBgTexture();

@@ -127,4 +127,13 @@ public class AppConfig
             return _selectedGameIndex;
         }
     }
+
+    public IViewOperater GetSceneRootViewType() {
+        if (_selectedGameIndex == 1) {
+            return new HighAndLowHomeView();
+        }else if (_selectedGameIndex == 2) {
+            return new BingoHomeView();
+        }
+        return null;
+    }
 }
