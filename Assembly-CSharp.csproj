@@ -50,9 +50,6 @@
     <UnityVersion>2021.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/chenyn/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.0/Analyzers/Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets/DOTween/Modules/DOTweenModulePhysics.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/USENSceneManager.cs" />
@@ -77,6 +74,7 @@
     <Compile Include="Assets/Scripts/ViewManager.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleUI.cs" />
     <Compile Include="Assets/Scripts/Tools/PreferencesStorage.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/HightAndLowGameView.cs" />
     <Compile Include="Assets/Scripts/Tools/TextAssetRWAblity.cs" />
     <Compile Include="Assets/Scripts/Tools/FPS.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
@@ -117,19 +115,19 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexColorCycler.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowFAQView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowHistoryView.cs" />
     <Compile Include="Assets/Scripts/Tools/AppConfig.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
-    <Compile Include="Assets/Scripts/BingoView/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowHistoryView.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
-    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowFAQView.cs" />
-    <Compile Include="Assets/Scripts/HighAndLow/HightAndLowGameView.cs" />
+    <Compile Include="Assets/Scripts/BingoView/BingoHomeView.cs" />
+    <Compile Include="Assets/Scripts/Tools/KeyBoardSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

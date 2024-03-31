@@ -592,11 +592,12 @@ public class PlayGameView : AbstractView, IViewOperater
         // 左边转转转数字更新
         m_checkAnimator.UpdateAwardNumTheme();
 
-        for(int i = 0; i < m_numberCells.Count; i++) {
-            var cell = m_numberCells[i];
-            var numberImage = cell.GetComponent<CellHandler>();
-            numberImage.UpdateTheme();
-        }
+        if (m_numberCells != null)
+            for(int i = 0; i < m_numberCells.Count; i++) {
+                var cell = m_numberCells[i];
+                var numberImage = cell.GetComponent<CellHandler>();
+                numberImage.UpdateTheme();
+            }
         
         if (m_qiqiuSpineSkeletonGraphic) 
             // 转转转下面的底盘更新

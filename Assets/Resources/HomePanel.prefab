@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
   m_Color: {r: 0, g: 0.5764706, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 3724916337291259514}
   - component: {fileID: 6110137078482042811}
   - component: {fileID: 4459242459022689428}
+  - component: {fileID: 430372940428506442}
   m_Layer: 5
   m_Name: ResetBtn
   m_TagString: Untagged
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -216,6 +217,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &430372940428506442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696029727519129885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f236fec674b4a6d88f85cade4c3027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_selectedImage: {fileID: 0}
+  m_text: {fileID: 7775207823737650835}
+  m_selectedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &4979550350696609713
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 331b8294fcb2c204bb502c59698c9a0e, type: 2}
   m_Color: {r: 0, g: 0.5764706, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -388,6 +404,7 @@ GameObject:
   - component: {fileID: 6041671080863305609}
   - component: {fileID: 674162775997268052}
   - component: {fileID: 5224258591036776019}
+  - component: {fileID: 3166255513364997764}
   m_Layer: 5
   m_Name: CancelBtn
   m_TagString: Untagged
@@ -511,6 +528,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates: []
+--- !u!114 &3166255513364997764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498174203335001459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22f236fec674b4a6d88f85cade4c3027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_selectedImage: {fileID: 0}
+  m_text: {fileID: 7238839269255574741}
+  m_selectedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8724713845114054686
 GameObject:
   m_ObjectHideFlags: 0

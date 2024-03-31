@@ -51,31 +51,6 @@ public class BingoHomeView : AbstractView, IViewOperater
         m_resetCancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
         m_resetCancelBtnText = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
-
-        var eventTrigger = m_resetCancelBtn.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.Select;
-        entry.callback.AddListener(OnCancelResetGameButtonSelected);
-        eventTrigger.triggers.Add(entry);
-
-        EventTrigger.Entry entry1 = new EventTrigger.Entry();
-        entry1.eventID = EventTriggerType.Deselect;
-        entry1.callback.AddListener(OnCancelResetGameButtonDeselected);
-        eventTrigger.triggers.Add(entry1);
-
-        var eventTrigger2 = m_resetBtn.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry2 = new EventTrigger.Entry();
-        entry2.eventID = EventTriggerType.Select;
-        entry2.callback.AddListener(OnResetGameButtonSelected);
-        eventTrigger2.triggers.Add(entry2);
-
-        EventTrigger.Entry entry3 = new EventTrigger.Entry();
-        entry3.eventID = EventTriggerType.Deselect;
-        entry3.callback.AddListener(OnResetGameButtonDeselected);
-        eventTrigger2.triggers.Add(entry3);
-
-        var isReopen = AppConfig.Instance.HasHistoryGameData();
-        m_reopenButton.gameObject.SetActive(isReopen);
     }
 
     void OnClickStartButton() 
@@ -104,6 +79,7 @@ public class BingoHomeView : AbstractView, IViewOperater
     {
         m_resetPanel.gameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(m_resetBtn.gameObject);
+        m_resetBtn.gameObject.GetComponent<KeyBoardSelector>()?.SetSelected();
     }
 
     void HideResetToastPanel()
@@ -121,28 +97,6 @@ public class BingoHomeView : AbstractView, IViewOperater
     public void OnClickedResetCancelBtn()
     {
         HideResetToastPanel();
-    }
-
-    void OnResetGameButtonSelected(BaseEventData data)
-    {
-        m_resetBtnText.color = Color.white;
-        m_resetCancelBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
-    }
-
-    void OnResetGameButtonDeselected(BaseEventData data)
-    {
-        m_resetBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
-    }
-
-    void OnCancelResetGameButtonSelected(BaseEventData data)
-    {
-        m_resetCancelBtnText.color = Color.white;
-        m_resetBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
-    }
-
-    void OnCancelResetGameButtonDeselected(BaseEventData data)
-    {
-        m_resetCancelBtnText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
     }
 
     void OnClickSettingsButton() {

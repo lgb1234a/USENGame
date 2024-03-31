@@ -50,9 +50,6 @@
     <UnityVersion>2021.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/chenyn/.vscode/extensions/visualstudiotoolsforunity.vstuc-0.9.4/Analyzers/Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteNameFileIdPair.cs" />
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/Interface/IEvent.cs" />
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteFrameModule/SpritePolygonModeModuleView.cs" />
