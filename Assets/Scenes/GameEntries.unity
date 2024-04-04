@@ -1018,7 +1018,22 @@ PrefabInstance:
     - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Text
-      value: 4
+      value: Roulette
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.16862746
       objectReference: {fileID: 0}
     - target: {fileID: 5862899221834947384, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}

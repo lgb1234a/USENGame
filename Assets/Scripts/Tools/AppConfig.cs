@@ -133,6 +133,8 @@ public class AppConfig
             return new HighAndLowHomeView();
         }else if (_selectedGameIndex == 2) {
             return new BingoHomeView();
+        }else if (_selectedGameIndex == 3) {
+            return new RouletteHomeView();
         }
         return null;
     }

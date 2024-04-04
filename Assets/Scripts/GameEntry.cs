@@ -55,7 +55,7 @@ public class GameEntry : MonoBehaviour
 
     void OnGameEntryClicked()
     {
-        if (m_index == 2 || m_index == 1) 
+        if (m_index == 2 || m_index == 1 || m_index == 3) 
         {
             USENSceneManager.Instance.LoadScene("Home");
             AppConfig.Instance.SelectedGameIndex = m_index;

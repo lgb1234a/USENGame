@@ -95,6 +95,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Scripts/GameEntry.cs" />
+    <Compile Include="Assets/Scripts/Tools/KeyBoardSelector.cs" />
     <Compile Include="Assets/Scripts/BingoView/CellHandler.cs" />
     <Compile Include="Assets/Scripts/BingoView/AwardNumObj.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
@@ -127,14 +128,13 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
     <Compile Include="Assets/Scripts/BingoView/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/Tools/KeyBoardSelector.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanHomeView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanChooseView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanOriginView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanEditView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanGameView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanQuitView.cs" />
-    <Compile Include="Assets/Scripts/Zhuanpan/ZhuanpanContentEditView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteContentEditView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteHomeView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteEditView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteOriginView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteChooseView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteQuitView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -429,6 +429,12 @@
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.24f1/2021.3.20f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>/Applications/Unity/Hub/Editor/2020.3.24f1/2021.3.20f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>/Applications/Unity/Hub/Editor/2020.3.24f1/2021.3.20f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.24f1/2021.3.20f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>

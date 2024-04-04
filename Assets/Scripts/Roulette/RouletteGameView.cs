@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ZhuanpanGameView : AbstractView, IViewOperater
+public class RouletteGameView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "ZhuanpanGamePanel";
+    string m_prefabPath = "RouletteGamePanel";
     HighAndLowFAQView m_faqView;
     HighAndLowSettingsView m_settingsView;
     public void Build()

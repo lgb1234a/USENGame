@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
 
-public class ZhuanpanOriginView : AbstractView, IViewOperater
+public class RouletteEditView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "ZhuanpanOriginPanel";
+    string m_prefabPath = "RouletteEditPanel";
     Button Btn1;
     Button Btn2;
     Button Btn3;

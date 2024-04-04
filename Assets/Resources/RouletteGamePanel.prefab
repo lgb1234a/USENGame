@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3124948727607416447}
   - component: {fileID: 3708170216668447813}
   m_Layer: 0
-  m_Name: ZhuanpanGamePanel
+  m_Name: RouletteGamePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
