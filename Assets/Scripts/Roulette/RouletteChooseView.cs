@@ -139,7 +139,7 @@ public class RouletteChooseView : AbstractView, IViewOperater
 
     void ShowGameView() {
         if (m_gameView == null) {
-            m_gameView = new RouletteGameView();
+            m_gameView = new RouletteGameView(m_title);
         }
         ViewManager.Instance.Push(m_gameView);
     }

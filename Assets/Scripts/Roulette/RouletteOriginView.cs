@@ -6,6 +6,7 @@ using Spine.Unity;
 public class RouletteOriginView : AbstractView, IViewOperater
 {
     string m_prefabPath = "RouletteOriginPanel";
+    string m_title;
     Button Btn1;
     Button Btn2;
     Button Btn3;
@@ -14,6 +15,11 @@ public class RouletteOriginView : AbstractView, IViewOperater
     Button Btn6;
     RouletteEditView m_editView;
     RouletteGameView m_gameView;
+
+    public RouletteOriginView(string title) {
+        m_title = title;
+    }
+
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -127,7 +133,7 @@ public class RouletteOriginView : AbstractView, IViewOperater
 
     void ShowGameView() {
         if (m_gameView == null) {
-            m_gameView = new RouletteGameView();
+            m_gameView = new RouletteGameView(m_title);
         }
         ViewManager.Instance.Push(m_gameView);
     }

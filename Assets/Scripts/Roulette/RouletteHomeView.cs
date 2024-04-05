@@ -93,7 +93,7 @@ public class RouletteHomeView : AbstractView, IViewOperater
     public void OnClickedBtn5()
     {
         if (m_originView == null) {
-            m_originView = new RouletteOriginView();
+            m_originView = new RouletteOriginView("オリジナル");
         }
         ViewManager.Instance.Push(m_originView);
     }

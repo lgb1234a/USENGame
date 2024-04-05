@@ -135,6 +135,7 @@
     <Compile Include="Assets/Scripts/Roulette/RouletteChooseView.cs" />
     <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
     <Compile Include="Assets/Scripts/Roulette/RouletteQuitView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteGameQuitView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
