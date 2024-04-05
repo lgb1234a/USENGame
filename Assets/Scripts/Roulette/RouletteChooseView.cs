@@ -19,9 +19,8 @@ public class RouletteChooseView : AbstractView, IViewOperater
     Text BtnLabel5;
     Button Btn6;
     Text BtnLabel6;
-    HighAndLowFAQView m_faqView;
-    HightAndLowGameView m_gameView;
-    HighAndLowSettingsView m_settingsView;
+    RouletteGameView m_gameView;
+    RouletteQuitView m_quitView;
 
     string m_title;
     public RouletteChooseView(string title) {
@@ -75,18 +74,10 @@ public class RouletteChooseView : AbstractView, IViewOperater
     {
         if (keyName == "blue")
         {
-            if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+            if (m_quitView == null) {
+                m_quitView = new RouletteQuitView();
             }
-            ViewManager.Instance.Push(m_faqView);
-        }
-
-        if (keyName == "yellow")
-        {
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
+            ViewManager.Instance.Push(m_quitView);
         }
     }
 
@@ -107,67 +98,48 @@ public class RouletteChooseView : AbstractView, IViewOperater
             USENSceneManager.Instance.LoadScene("GameEntries");
         }
 
-        if (Input.GetKeyDown(KeyCode.A)) {
-            //测试
-            if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
-            }
-            ViewManager.Instance.Push(m_faqView);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B)) {
-            //测试
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
-        }
+        // if (Input.GetKeyDown(KeyCode.A)) {
+        //     //测试
+        //     if (m_faqView == null) {
+        //         m_faqView = new HighAndLowFAQView();
+        //     }
+        //     ViewManager.Instance.Push(m_faqView);
+        // }
     }
 
     public void OnClickedBtn1()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn2()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn3()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn4()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn5()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn6()
     {
+        ShowGameView();
+    }
+
+    void ShowGameView() {
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new RouletteGameView();
         }
         ViewManager.Instance.Push(m_gameView);
     }

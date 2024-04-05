@@ -6,36 +6,40 @@ using Spine.Unity;
 public class RouletteEditView : AbstractView, IViewOperater
 {
     string m_prefabPath = "RouletteEditPanel";
-    Button Btn1;
-    Button Btn2;
-    Button Btn3;
-    Button Btn4;
-    Button Btn5;
-    Button Btn6;
+
+    InputField m_titleInputField;
+    InputField m_itemInputField1;
+    InputField m_itemInputField2;
+    InputField m_itemInputField3;
+    InputField m_itemInputField4;
+    Button m_startAndSaveBtn;
+    Button m_saveAndQuitBtn;
+    Button m_deleteBtn;
     HighAndLowFAQView m_faqView;
     HightAndLowGameView m_gameView;
     HighAndLowSettingsView m_settingsView;
+    bool m_canDelete;
+
+    public RouletteEditView(bool canDelete = false) {
+        m_canDelete = canDelete;
+    }
+
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
 
-        Btn1 = m_mainViewGameObject.transform.Find("Btn1").GetComponent<Button>();
-        Btn1.onClick.AddListener(OnClickedBtn1);
+        m_titleInputField = m_mainViewGameObject.transform.Find("TitleInputField").GetComponent<InputField>();
+        m_itemInputField1 = m_mainViewGameObject.transform.Find("Item1/ItemContentInput").GetComponent<InputField>();
+        m_itemInputField2 = m_mainViewGameObject.transform.Find("Item2/ItemContentInput").GetComponent<InputField>();
+        m_itemInputField3 = m_mainViewGameObject.transform.Find("Item3/ItemContentInput").GetComponent<InputField>();
+        m_itemInputField4 = m_mainViewGameObject.transform.Find("Item4/ItemContentInput").GetComponent<InputField>();
 
-        Btn2 = m_mainViewGameObject.transform.Find("Btn2").GetComponent<Button>();
-        Btn2.onClick.AddListener(OnClickedBtn2);
-
-        Btn3 = m_mainViewGameObject.transform.Find("Btn3").GetComponent<Button>();
-        Btn3.onClick.AddListener(OnClickedBtn3);
-
-        Btn4 = m_mainViewGameObject.transform.Find("Btn4").GetComponent<Button>();
-        Btn4.onClick.AddListener(OnClickedBtn4);
-
-        Btn5 = m_mainViewGameObject.transform.Find("Btn5").GetComponent<Button>();
-        Btn5.onClick.AddListener(OnClickedBtn5);
-
-        Btn6 = m_mainViewGameObject.transform.Find("Btn6").GetComponent<Button>();
-        Btn6.onClick.AddListener(OnClickedBtn6);
+        m_startAndSaveBtn = m_mainViewGameObject.transform.Find("BottomPanel/SaveAndStartBtn").GetComponent<Button>();
+        m_startAndSaveBtn.onClick.AddListener(OnClickedStartAndSaveBtn);
+        m_saveAndQuitBtn = m_mainViewGameObject.transform.Find("BottomPanel/SaveAndQuitBtn").GetComponent<Button>();
+        m_saveAndQuitBtn.onClick.AddListener(OnClickedSaveAndQuitBtn);
+        m_deleteBtn = m_mainViewGameObject.transform.Find("BottomPanel/DeleteBtn").GetComponent<Button>();
+        m_deleteBtn.onClick.AddListener(OnClickedDeleteBtn);
     }
 
     public void Hide()
@@ -70,7 +74,7 @@ public class RouletteEditView : AbstractView, IViewOperater
     public void Show()
     {
         m_mainViewGameObject.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(Btn1.gameObject);
+        // EventSystem.current.SetSelectedGameObject(m_btn1.gameObject);
     }
 
     public void Update()
@@ -96,51 +100,17 @@ public class RouletteEditView : AbstractView, IViewOperater
         }
     }
 
-    public void OnClickedBtn1()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+
+
+    public void OnClickedStartAndSaveBtn() {
+
     }
 
-    public void OnClickedBtn2()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+    public void OnClickedSaveAndQuitBtn() {
+
     }
 
-    public void OnClickedBtn3()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
-    }
+    public void OnClickedDeleteBtn() {
 
-    public void OnClickedBtn4()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
-    }
-
-    public void OnClickedBtn5()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
-    }
-
-    public void OnClickedBtn6()
-    {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
     }
 }

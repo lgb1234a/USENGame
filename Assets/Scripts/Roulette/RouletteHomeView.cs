@@ -13,6 +13,7 @@ public class RouletteHomeView : AbstractView, IViewOperater
     Button Btn5;
     RouletteChooseView m_chooseView;
     RouletteOriginView m_originView;
+    RouletteQuitView m_quitView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());

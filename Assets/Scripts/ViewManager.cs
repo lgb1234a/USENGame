@@ -86,7 +86,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 			{
 				if (Input.GetKeyDown(CurretkeyCode))
 				{
-					m_keydownDebug.text = $"[{CurretkeyCode.ToString()}] pressed!";
+                    ShowDebugInfo($"[{CurretkeyCode.ToString()}] pressed!");
 				}
 			}
         }
@@ -138,7 +138,7 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     }
 
     public void OnAndroidKeyDown(string keyName) {
-        // ShowDebugInfo($"Android key:{keyName}");
+        ShowDebugInfo($"Android key:{keyName}");
         // Debug.Log($"Call from android key:{keyName}");
         m_currentView.OnAndroidKeyDown(keyName);
 
@@ -151,8 +151,8 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
 
 
     public void OnAudioFocusChanged(string eventType) {
-        Debug.LogWarning(eventType);
-        ShowDebugInfo(eventType);
+        // Debug.LogWarning(eventType);
+        // ShowDebugInfo(eventType);
     }
 
     public async void SendChangeThemeTypeEvent() {

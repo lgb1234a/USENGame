@@ -12,9 +12,8 @@ public class RouletteOriginView : AbstractView, IViewOperater
     Button Btn4;
     Button Btn5;
     Button Btn6;
-    HighAndLowFAQView m_faqView;
-    HightAndLowGameView m_gameView;
-    HighAndLowSettingsView m_settingsView;
+    RouletteEditView m_editView;
+    RouletteGameView m_gameView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -45,20 +44,20 @@ public class RouletteOriginView : AbstractView, IViewOperater
 
     public void OnAndroidKeyDown(string keyName)
     {
-        if (keyName == "blue")
+        if (keyName == "red")
         {
-            if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+            if (m_editView == null) {
+                m_editView = new RouletteEditView();
             }
-            ViewManager.Instance.Push(m_faqView);
+            ViewManager.Instance.Push(m_editView);
         }
 
-        if (keyName == "yellow")
+        if (keyName == "blue")
         {
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
+            if (m_editView == null) {
+                m_editView = new RouletteEditView(true);
             }
-            ViewManager.Instance.Push(m_settingsView);
+            ViewManager.Instance.Push(m_editView);
         }
     }
 
@@ -81,65 +80,54 @@ public class RouletteOriginView : AbstractView, IViewOperater
 
         if (Input.GetKeyDown(KeyCode.A)) {
             //测试
-            if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+            if (m_editView == null) {
+                m_editView = new RouletteEditView();
             }
-            ViewManager.Instance.Push(m_faqView);
+            ViewManager.Instance.Push(m_editView);
         }
 
         if (Input.GetKeyDown(KeyCode.B)) {
             //测试
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
+            if (m_editView == null) {
+                m_editView = new RouletteEditView(true);
             }
-            ViewManager.Instance.Push(m_settingsView);
+            ViewManager.Instance.Push(m_editView);
         }
     }
 
     public void OnClickedBtn1()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn2()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn3()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn4()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn5()
     {
-        if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
-        }
-        ViewManager.Instance.Push(m_gameView);
+        ShowGameView();
     }
 
     public void OnClickedBtn6()
     {
+        ShowGameView();
+    }
+
+    void ShowGameView() {
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new RouletteGameView();
         }
         ViewManager.Instance.Push(m_gameView);
     }
