@@ -57,8 +57,9 @@ public class GameEntry : MonoBehaviour
     {
         if (m_index == 2 || m_index == 1 || m_index == 3) 
         {
-            USENSceneManager.Instance.LoadScene("Home");
             AppConfig.Instance.SelectedGameIndex = m_index;
+            AppConfig.Instance.HomeSceneRootViewType = (RootViewType)m_index;
+            USENSceneManager.Instance.LoadScene("Home");
         } 
     }
 

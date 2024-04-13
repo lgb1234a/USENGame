@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,12 +11,13 @@ public class KeyBoardSelector : MonoBehaviour
     public Color m_selectedTextColor;
     Color m_textDefaultColor;
     EventTrigger m_eventTrigger;
+    Action<BaseEventData> m_selectedCallback;
+    Action<BaseEventData> m_deselectedCallback;
     void Awake() {
-        m_textDefaultColor = m_text.color;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        if (m_text != null) {
+            m_textDefaultColor = m_text.color;
+        }
+
         m_eventTrigger = GetComponent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = EventTriggerType.Select;
@@ -26,6 +28,14 @@ public class KeyBoardSelector : MonoBehaviour
         entry1.eventID = EventTriggerType.Deselect;
         entry1.callback.AddListener(OnDeselected);
         m_eventTrigger.triggers.Add(entry1);
+    }
+
+    public void AddSelectedListener(Action<BaseEventData> callback) {
+        m_selectedCallback = callback;
+    }
+
+    public void AddDeselectedListenr(Action<BaseEventData> callback) {
+        m_deselectedCallback = callback;
     }
 
     public void SetSelected() {

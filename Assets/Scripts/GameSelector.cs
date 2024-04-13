@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameSelector : MonoBehaviour
 {
     public GameEntry[] m_gameEntries;
+    public Button GameSettingsBtn;
     public int m_selectIndex = 2;
+    public GameObject m_gameSettingsGO;
     int m_betweenSelectedSpace = 600;
     int m_otherSpace = 200;
     float m_keyDownTimeInterval = 0.5f;
     float m_timeInterval = 0;
+    GameSettingsView gameSettingsView;
 
     void Start()
     {
@@ -20,6 +24,8 @@ public class GameSelector : MonoBehaviour
         m_gameEntries[m_selectIndex].SetEventSystemSelected();
         UpdateSelectedIndex(m_selectIndex);
         m_gameEntries[m_selectIndex].m_selectedBg.alpha = 1;
+
+        GameSettingsBtn.onClick.AddListener(ShowGameSettingsView);
     }
 
     void Update()
@@ -35,6 +41,15 @@ public class GameSelector : MonoBehaviour
             m_timeInterval = 0;
             if (m_selectIndex < 4)
                 UpdateSelectedIndex(++m_selectIndex);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            // selected game settings btn
+            EventSystem.current.SetSelectedGameObject(GameSettingsBtn.gameObject);
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) 
+        && EventSystem.current.currentSelectedGameObject == GameSettingsBtn.gameObject) {
+            UpdateSelectedIndex(m_selectIndex);
         }
     }
 
@@ -70,5 +85,22 @@ public class GameSelector : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Show() {
+        gameObject.SetActive(true);
+    }
+
+    void Hide() {
+        gameObject.SetActive(false);
+    }
+
+    void ShowGameSettingsView() {
+        if (gameSettingsView == null) {
+            gameSettingsView = new GameSettingsView(this);
+            gameSettingsView.Build(m_gameSettingsGO);
+        }
+        Hide();
+        gameSettingsView.Show();
     }
 }

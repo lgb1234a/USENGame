@@ -280,6 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_entryButton: {fileID: 8387234635275257724}
   m_selectedBg: {fileID: 2651367515819281796}
+  m_index: 0
 --- !u!114 &6579802028626316317
 MonoBehaviour:
   m_ObjectHideFlags: 0

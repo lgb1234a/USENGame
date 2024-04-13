@@ -82,6 +82,34 @@ public class AppConfig
         }
     }
 
+    private int _bgmSelectedIdx = 0;
+    public int BgmSelectedIdx {
+        set
+        {
+            _bgmSelectedIdx = value;
+            PreferencesStorage.SaveInt("__BGM_SELECTED__", value);
+        }
+        get
+        {
+            _bgmSelectedIdx = PreferencesStorage.ReadInt("__BGM_SELECTED__", 0);
+            return _bgmSelectedIdx;
+        }
+    }
+
+    private int _winnerSelectedIdx = 0;
+    public int WinnerSelectedIdx {
+        set
+        {
+            _winnerSelectedIdx = value;
+            PreferencesStorage.SaveInt("__WINNER_SELECTED__", value);
+        }
+        get
+        {
+            _winnerSelectedIdx = PreferencesStorage.ReadInt("__WINNER_SELECTED__", 0);
+            return _winnerSelectedIdx;
+        }
+    }
+
     private GameDataHandler _gameData;
 
     public GameDataHandler GameData {
@@ -128,13 +156,21 @@ public class AppConfig
         }
     }
 
+    public RootViewType HomeSceneRootViewType;
+
     public IViewOperater GetSceneRootViewType() {
-        if (_selectedGameIndex == 1) {
-            return new HighAndLowHomeView();
-        }else if (_selectedGameIndex == 2) {
-            return new BingoHomeView();
-        }else if (_selectedGameIndex == 3) {
-            return new RouletteHomeView();
+        switch (HomeSceneRootViewType)
+        {
+            case RootViewType.HighAndLow:
+                return new HighAndLowHomeView();
+            case RootViewType.Bingo:
+                return new BingoHomeView();
+            case RootViewType.Roulette:
+                return new RouletteHomeView();
+            case RootViewType.BingoSettings:
+                return new BingoSettingsView();
+            case RootViewType.HighAndLowSettings:
+                return new HighAndLowSettingsView();
         }
         return null;
     }
