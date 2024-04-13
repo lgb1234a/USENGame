@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class HighAndLowSettingsView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "HighAndLowSettingsPanel";
+    string m_prefabPath = "HighAndLow/HighAndLowSettingsPanel";
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RouletteContentEditView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteContentEditPanel";
+    string m_prefabPath = "Roulette/RouletteContentEditPanel";
     HighAndLowFAQView m_faqView;
     HighAndLowSettingsView m_settingsView;
     public void Build()

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class AboutView : AbstractView, IViewOperater
+public class BingoAboutView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "AboutPanel";
+    string m_prefabPath = "Bingo/BingoAboutPanel";
 
     public void Build() {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());

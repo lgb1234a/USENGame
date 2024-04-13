@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class HighAndLowHistoryView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "HighAndLowHistoryPanel";
+    string m_prefabPath = "HighAndLow/HighAndLowHistoryPanel";
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());

@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-public class SettingsView : AbstractView, IViewOperater
+public class BingoSettingsView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "SettingsPanel";
+    string m_prefabPath = "Bingo/BingoSettingsPanel";
     Slider m_BGMSlider;
     GameObject m_BGMSliderSelectedBg;
     Slider m_EffectVolumeSlider;
@@ -24,7 +24,7 @@ public class SettingsView : AbstractView, IViewOperater
     Button m_aboutButton;
     GameObject m_aboutButtonSelectedBg;
     float m_deltaTime = 0;
-    AboutView m_aboutView;
+    BingoAboutView m_aboutView;
     GameObject m_maxCellSettingArrows;
     bool m_isPresettingEffectVolume;
 
@@ -388,7 +388,7 @@ public class SettingsView : AbstractView, IViewOperater
 
     void OnAboutButtonClicked() {
         if (m_aboutView == null) {
-            m_aboutView = new AboutView();
+            m_aboutView = new BingoAboutView();
         }
         ViewManager.Instance.Push(m_aboutView);
     }

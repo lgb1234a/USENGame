@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 using Spine.Unity;
 
-public class PlayGameView : AbstractView, IViewOperater
+public class BingoGameView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "GamePanel";
+    string m_prefabPath = "Bingo/BingoGamePanel";
     Button m_stopButton;
     Text m_stopButtonText;
     Button m_exitButton;

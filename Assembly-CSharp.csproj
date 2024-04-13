@@ -51,22 +51,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets/DOTween/Modules/DOTweenModulePhysics.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteQuitView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/USENSceneManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
-    <Compile Include="Assets/Scripts/BingoView/PlayGameView.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleSprite.cs" />
     <Compile Include="Assets/Scripts/Tools/JsonSerializablity.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/Scripts/ResManager/IThemeRes.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
-    <Compile Include="Assets/Scripts/BingoView/AboutView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/Tools/MonoBehaviourSingletonTemplate.cs" />
     <Compile Include="Assets/Scripts/ResManager/ChristmasThemeResConfig.cs" />
     <Compile Include="Assets/Scripts/ToastView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteGameQuitView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Scripts/ResManager/EThemeTypes.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets/Scripts/ViewManager.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleUI.cs" />
     <Compile Include="Assets/Scripts/Tools/PreferencesStorage.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteContentEditView.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteOriginView.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HightAndLowGameView.cs" />
     <Compile Include="Assets/Scripts/Tools/TextAssetRWAblity.cs" />
     <Compile Include="Assets/Scripts/Tools/FPS.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Assets/DOTween/Modules/DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets/Scripts/Tools/AudioManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteHomeView.cs" />
     <Compile Include="Assets/Scripts/BingoView/CheckAnimator.cs" />
     <Compile Include="Assets/Scripts/BingoView/GameDataHandler.cs" />
     <Compile Include="Assets/Scripts/Tools/Loading.cs" />
@@ -91,8 +95,10 @@
     <Compile Include="Assets/Scripts/ResManager/ThemeResManager.cs" />
     <Compile Include="Assets/Scripts/ResManager/DefaultThemeResConfig.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteChooseView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+    <Compile Include="Assets/Scripts/Roulette/RouletteEditView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Scripts/GameEntry.cs" />
     <Compile Include="Assets/Scripts/Tools/KeyBoardSelector.cs" />
@@ -109,7 +115,6 @@
     <Compile Include="Assets/Scripts/AbstractView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/GameSelector.cs" />
-    <Compile Include="Assets/Scripts/BingoView/SettingsView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/DropdownSample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
@@ -128,14 +133,9 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
     <Compile Include="Assets/Scripts/BingoView/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteContentEditView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteHomeView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteEditView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteOriginView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteChooseView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteQuitView.cs" />
-    <Compile Include="Assets/Scripts/Roulette/RouletteGameQuitView.cs" />
+    <Compile Include="Assets/Scripts/BingoView/BingoGameView.cs" />
+    <Compile Include="Assets/Scripts/BingoView/BingoSettingsView.cs" />
+    <Compile Include="Assets/Scripts/BingoView/BingoAboutView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

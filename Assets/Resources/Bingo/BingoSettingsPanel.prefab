@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 8953900516535339838}
   - component: {fileID: 8361144848840944189}
   m_Layer: 5
-  m_Name: SettingsPanel
+  m_Name: BingoSettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

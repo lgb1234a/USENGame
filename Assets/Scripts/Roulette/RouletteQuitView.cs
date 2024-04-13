@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class RouletteQuitView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteQuitPanel";
+    string m_prefabPath = "Roulette/RouletteQuitPanel";
     Button Btn1;
     Button Btn2;
     HighAndLowFAQView m_faqView;

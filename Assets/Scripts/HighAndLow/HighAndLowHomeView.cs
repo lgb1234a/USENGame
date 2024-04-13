@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class HighAndLowHomeView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "HighAndLowHomePanel";
+    string m_prefabPath = "HighAndLow/HighAndLowHomePanel";
     Button m_startBtn;
     HighAndLowFAQView m_faqView;
     HightAndLowGameView m_gameView;

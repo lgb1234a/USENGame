@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class BingoHomeView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "HomePanel";
+    string m_prefabPath = "Bingo/BingoHomePanel";
     private Button m_startButton;
     private Button m_reopenButton;
     private Button m_settingsButton;
@@ -16,8 +16,8 @@ public class BingoHomeView : AbstractView, IViewOperater
     Button m_resetCancelBtn;
     Text m_resetCancelBtnText;
 
-    PlayGameView m_playGameView;
-    SettingsView m_settingsView;
+    BingoGameView m_playGameView;
+    BingoSettingsView m_settingsView;
     Transform m_effectParentPanel;
     SkeletonGraphic m_homeSpineSkeletonGraphic;
 
@@ -131,7 +131,7 @@ public class BingoHomeView : AbstractView, IViewOperater
     void ShowPlayGameView(bool reset = false) {
         if (m_playGameView == null) {
             ViewManager.Instance.ShowLoading();
-            m_playGameView = new PlayGameView();
+            m_playGameView = new BingoGameView();
         }
         if (reset)
             m_playGameView.ResetData();
@@ -151,7 +151,7 @@ public class BingoHomeView : AbstractView, IViewOperater
 
     void ShowSettingsView() {
         if (m_settingsView == null) {
-            m_settingsView = new SettingsView();
+            m_settingsView = new BingoSettingsView();
         }
         ViewManager.Instance.Push(m_settingsView);
     }

@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class RouletteHomeView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteHomePanel";
+    string m_prefabPath = "Roulette/RouletteHomePanel";
     Button Btn1;
     Button Btn2;
     Button Btn3;

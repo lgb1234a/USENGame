@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class RouletteEditView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteEditPanel";
+    string m_prefabPath = "Roulette/RouletteEditPanel";
 
     InputField m_titleInputField;
     InputField m_itemInputField1;

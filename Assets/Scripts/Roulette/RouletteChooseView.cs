@@ -5,7 +5,7 @@ using Spine.Unity;
 
 public class RouletteChooseView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteChoosePanel";
+    string m_prefabPath = "Roulette/RouletteChoosePanel";
     Text m_titleLabel;
     Button Btn1;
     Text BtnLabel1;

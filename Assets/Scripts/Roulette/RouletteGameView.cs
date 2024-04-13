@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class RouletteGameView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteGamePanel";
+    string m_prefabPath = "Roulette/RouletteGamePanel";
     string m_title;
     Button m_contentEditBtn;
     Button m_changeRouletteBtn;

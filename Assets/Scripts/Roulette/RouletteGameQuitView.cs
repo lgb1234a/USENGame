@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class RouletteGameQuitView : AbstractView, IViewOperater
 {
-    string m_prefabPath = "RouletteGameQuitPanel";
+    string m_prefabPath = "Roulette/RouletteGameQuitPanel";
     Button m_btn1;
     Button m_btn2;
     RouletteHomeView m_homeView;
