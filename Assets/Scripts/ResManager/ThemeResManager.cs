@@ -60,8 +60,8 @@ public class ThemeResManager
         if (type == EThemeTypes.Christmas) {
             SetResConfig(GetChristmasThemeResConfig());
         }
-        ViewManager.Instance.SendChangeThemeTypeEvent();
-        AudioManager.Instance.SendChangeThemeTypeEvent();
+        // ViewManager.Instance.SendChangeThemeTypeEvent();
+        // AudioManager.Instance.SendChangeThemeTypeEvent();
     }
 
     public EThemeTypes GetCurrentThemeType() {

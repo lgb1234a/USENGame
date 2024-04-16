@@ -14,7 +14,7 @@ public class GameSelector : MonoBehaviour
     int m_otherSpace = 200;
     float m_keyDownTimeInterval = 0.5f;
     float m_timeInterval = 0;
-    GameSettingsView gameSettingsView;
+    GameObject gameSettingsViewGO;
 
     void Start()
     {
@@ -89,6 +89,7 @@ public class GameSelector : MonoBehaviour
 
     public void Show() {
         gameObject.SetActive(true);
+        UpdateSelectedIndex(m_selectIndex);
     }
 
     void Hide() {
@@ -96,11 +97,11 @@ public class GameSelector : MonoBehaviour
     }
 
     void ShowGameSettingsView() {
-        if (gameSettingsView == null) {
-            gameSettingsView = new GameSettingsView(this);
-            gameSettingsView.Build(m_gameSettingsGO);
-        }
         Hide();
-        gameSettingsView.Show();
+        if (gameSettingsViewGO == null) {
+            gameSettingsViewGO = Instantiate(m_gameSettingsGO);
+            gameSettingsViewGO.transform.SetParent(transform.parent, false);
+        }
+        gameSettingsViewGO.SetActive(true);
     }
 }

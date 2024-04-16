@@ -90,8 +90,8 @@
     <Compile Include="Assets/Scripts/Tools/AudioManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
     <Compile Include="Assets/Scripts/Roulette/RouletteHomeView.cs" />
-    <Compile Include="Assets/Scripts/BingoView/CheckAnimator.cs" />
-    <Compile Include="Assets/Scripts/BingoView/GameDataHandler.cs" />
+    <Compile Include="Assets/Scripts/Bingo/CheckAnimator.cs" />
+    <Compile Include="Assets/Scripts/Bingo/GameDataHandler.cs" />
     <Compile Include="Assets/Scripts/Tools/Loading.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleAudio.cs" />
@@ -105,8 +105,8 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Scripts/GameEntry.cs" />
     <Compile Include="Assets/Scripts/Tools/KeyBoardSelector.cs" />
-    <Compile Include="Assets/Scripts/BingoView/CellHandler.cs" />
-    <Compile Include="Assets/Scripts/BingoView/AwardNumObj.cs" />
+    <Compile Include="Assets/Scripts/Bingo/CellHandler.cs" />
+    <Compile Include="Assets/Scripts/Bingo/AwardNumObj.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
@@ -135,10 +135,10 @@
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
-    <Compile Include="Assets/Scripts/BingoView/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/BingoView/BingoGameView.cs" />
-    <Compile Include="Assets/Scripts/BingoView/BingoSettingsView.cs" />
-    <Compile Include="Assets/Scripts/BingoView/BingoAboutView.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoGameView.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoSettingsView.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoAboutView.cs" />
     <Compile Include="Assets/Scripts/GameSettingsView.cs" />
     <Compile Include="Assets/Scripts/Tools/RootViewType.cs" />
     <Compile Include="Assets/Scripts/Tools/ScrollContentTacker.cs" />
