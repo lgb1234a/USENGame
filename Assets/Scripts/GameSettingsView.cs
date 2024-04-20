@@ -51,7 +51,7 @@ public class GameSettingsView : MonoBehaviour
             var toggle = transform.Find("Panel/ViewPort/CenterPanel/BgmSettings/Settings/BGM"+i).GetComponent<Toggle>();
             m_bgmToggles.Add(toggle);
         }
-        m_backgroundToggleSlider.value = AppConfig.Instance.BgmSelectedIdx;
+        m_bgmSlider.value = AppConfig.Instance.BgmSelectedIdx;
 
 
         m_BGMVolumeSlider = transform.Find("Panel/ViewPort/CenterPanel/BGMVolumeSettings/Slider").GetComponent<Slider>();
@@ -116,8 +116,8 @@ public class GameSettingsView : MonoBehaviour
 
     private void OnBgmSliderChanged(float value) {
         var intValue = Mathf.FloorToInt(value);
-        AppConfig.Instance.ThemeSelectedIdx = intValue;
-        m_backgroundToggles[AppConfig.Instance.ThemeSelectedIdx].isOn = true;
+        AppConfig.Instance.BgmSelectedIdx = intValue;
+        m_bgmToggles[AppConfig.Instance.BgmSelectedIdx].isOn = true;
     }
 
     public void OnBgmVolumeSliderValueChanged(float value) {
@@ -127,9 +127,9 @@ public class GameSettingsView : MonoBehaviour
     }
 
     public void OnWinnerSliderValueChanged(float value) {
-        m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
-        AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
-        AudioManager.Instance.SetBgmVolume((int)value);
+        var intValue = Mathf.FloorToInt(value);
+        AppConfig.Instance.WinnerSelectedIdx = intValue;
+        m_winnerToggles[AppConfig.Instance.WinnerSelectedIdx].isOn = true;
     }
 
     public void OnVolumeEffectValueChanged(float value) {

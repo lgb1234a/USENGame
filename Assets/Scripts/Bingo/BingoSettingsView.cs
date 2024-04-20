@@ -6,27 +6,14 @@ using System.Collections.Generic;
 public class BingoSettingsView : AbstractView, IViewOperater
 {
     string m_prefabPath = "Bingo/BingoSettingsPanel";
-    Slider m_BGMSlider;
-    GameObject m_BGMSliderSelectedBg;
-    Slider m_EffectVolumeSlider;
-    GameObject m_EffectVolumeSliderSelectedBg;
-    Text m_BGMVolumeText;
-    Text m_EffectVolumeText;
     Button m_maxCellSettingButton;
     Text m_maxCellSettingText;
-    ToggleGroup m_backgroundToggleGroup;
-    Slider m_backgroundToggleSlider;
-    GameObject m_backgroundSettingSelectedBg;
-    List<Toggle> m_toggles = new List<Toggle>();
     bool m_isSelectedCellCountButton;
-    Button m_resetSettingsButton;
-    GameObject m_resetSettingsSelectedBg;
     Button m_aboutButton;
     GameObject m_aboutButtonSelectedBg;
     float m_deltaTime = 0;
     BingoAboutView m_aboutView;
     GameObject m_maxCellSettingArrows;
-    bool m_isPresettingEffectVolume;
 
     GameObject m_confirmPanel;
     Button m_confirmSettingCellCountBtn;
@@ -47,31 +34,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
         m_maxCellSettingText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Count").GetComponent<Text>();
         m_maxCellSettingArrows = m_mainViewGameObject.transform.Find("Panel/CenterPanel/MaxCellSetting/MaxCellCount/Arrows").gameObject;
 
-        m_backgroundToggleGroup = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<ToggleGroup>();
-        m_backgroundToggleSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings").GetComponent<Slider>();
-        m_backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
-        m_backgroundSettingSelectedBg = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/SelectedBg").gameObject;
-        m_toggles.Clear();
-        for (int i = 1; i <= 2; i++) {
-            var toggle = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BackgroundSettings/Settings/Backgound"+i).GetComponent<Toggle>();
-            m_toggles.Add(toggle);
-        }
-        m_backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
-
-        m_BGMSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/Slider").GetComponent<Slider>();
-        m_BGMVolumeText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/BGMSettings/VolumeText").GetComponent<Text>();
-        m_BGMSlider.onValueChanged.AddListener(OnBgmSliderValueChanged);
-        m_BGMSlider.value = AppConfig.Instance.BGMVolume;
-
-        m_EffectVolumeSlider = m_mainViewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/Slider").GetComponent<Slider>();
-        m_EffectVolumeText = m_mainViewGameObject.transform.Find("Panel/CenterPanel/VolumeEffectSettings/VolumeText").GetComponent<Text>();
-        m_EffectVolumeSlider.onValueChanged.AddListener(OnVolumeEffectValueChanged);
-        m_isPresettingEffectVolume = true;
-        m_EffectVolumeSlider.value = AppConfig.Instance.EffectVolume;
-        m_isPresettingEffectVolume = false;
-
-        m_resetSettingsButton = m_mainViewGameObject.transform.Find("Panel/CenterPanel/ResetSettings").GetComponent<Button>();
-        m_resetSettingsButton.onClick.AddListener(OnResetSettingsButtonClicked);
         m_aboutButton = m_mainViewGameObject.transform.Find("Panel/CenterPanel/About").GetComponent<Button>();
         m_aboutButton.onClick.AddListener(OnAboutButtonClicked);
 
@@ -89,38 +51,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
     }
 
     void HandleSelectedEventTriggers() {
-        var eventTrigger = m_BGMSlider.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new ();
-        entry.eventID = EventTriggerType.Select;
-        entry.callback.AddListener(OnBgmSliderSelected);
-        eventTrigger.triggers.Add(entry);
-
-        EventTrigger.Entry entry_1 = new ();
-        entry_1.eventID = EventTriggerType.Deselect;
-        entry_1.callback.AddListener(OnBgmSliderUnSelected);
-        eventTrigger.triggers.Add(entry_1);
-
-        var eventTrigger_1 = m_EffectVolumeSlider.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_2 = new ();
-        entry_2.eventID = EventTriggerType.Select;
-        entry_2.callback.AddListener(OnEffectVolumeSliderSelected);
-        eventTrigger_1.triggers.Add(entry_2);
-
-        EventTrigger.Entry entry_3 = new ();
-        entry_3.eventID = EventTriggerType.Deselect;
-        entry_3.callback.AddListener(OnEffectVolumeSliderUnSelected);
-        eventTrigger_1.triggers.Add(entry_3);
-
-        var eventTrigger_2 = m_resetSettingsButton.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_4 = new ();
-        entry_4.eventID = EventTriggerType.Select;
-        entry_4.callback.AddListener(OnResetSettingsButtonSelected);
-        eventTrigger_2.triggers.Add(entry_4);
-
-        EventTrigger.Entry entry_5 = new ();
-        entry_5.eventID = EventTriggerType.Deselect;
-        entry_5.callback.AddListener(OnResetSettingsButtonUnSelected);
-        eventTrigger_2.triggers.Add(entry_5);
 
         var eventTrigger_3 = m_aboutButton.gameObject.GetComponent<EventTrigger>();
         EventTrigger.Entry entry_6 = new ();
@@ -143,17 +73,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
         entry_9.eventID = EventTriggerType.Deselect;
         entry_9.callback.AddListener(OnCellCountButtonUnSelected);
         eventTrigger_4.triggers.Add(entry_9);
-
-        var eventTrigger_5 = m_backgroundToggleGroup.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry_10 = new();
-        entry_10.eventID = EventTriggerType.Select;
-        entry_10.callback.AddListener(OnTabSelected);
-        eventTrigger_5.triggers.Add(entry_10);
-
-        EventTrigger.Entry entry_11 = new();
-        entry_11.eventID = EventTriggerType.Deselect;
-        entry_11.callback.AddListener(OnTabUnSelected);
-        eventTrigger_5.triggers.Add(entry_11);
 
         var eventTrigger_6 = m_confirmSettingCellCountBtn.gameObject.GetComponent<EventTrigger>();
         EventTrigger.Entry entry_12 = new();
@@ -247,35 +166,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
         ViewManager.Instance.Hided(this);
     }
 
-    private void OnTabSelected(BaseEventData data) {
-        m_backgroundSettingSelectedBg.SetActive(true);
-    }
-
-    private void OnTabUnSelected(BaseEventData data) {
-        m_backgroundSettingSelectedBg.SetActive(false);
-    }
-
-    private void OnBackgroundSliderChanged(float value) {
-        var intValue = Mathf.FloorToInt(value);
-        AppConfig.Instance.ThemeSelectedIdx = intValue;
-        m_toggles[AppConfig.Instance.ThemeSelectedIdx].isOn = true;
-    }
-
-    public void OnBgmSliderValueChanged(float value) {
-        m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
-        AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
-        AudioManager.Instance.SetBgmVolume((int)value);
-    }
-
-    public void OnVolumeEffectValueChanged(float value) {
-        m_EffectVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
-        AppConfig.Instance.EffectVolume = Mathf.FloorToInt(value);
-        AudioManager.Instance.SetEffectVolume((int)value);
-        if (m_isPresettingEffectVolume) return;
-        AudioManager.Instance.PlayNumberRotateEffectWithoutLoop();
-        AudioManager.Instance.PlayNumberCheckEffect();
-    }
-
     // 确认修改最大cell数
     void OnClickConfirmSettingCellCountBtn() {
         m_confirmPanel.SetActive(false);
@@ -295,7 +185,7 @@ public class BingoSettingsView : AbstractView, IViewOperater
 
     void OnClickCancelSettingCellCountBtn() {
         m_confirmPanel.SetActive(false);
-        EventSystem.current.SetSelectedGameObject(m_backgroundToggleSlider.gameObject);
+        EventSystem.current.SetSelectedGameObject(m_aboutButton.gameObject);
     }
 
     void OnCancelSettingCellCountBtnSelected(BaseEventData data) {
@@ -306,48 +196,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
     void OnCancelSettingCellCountBtnUnSelected(BaseEventData data) {
         m_cancelSettingCellCountText.color = new Color(0f, 147 / 255f, 1.0f, 1.0f);
         m_confirmSettingCellCountText.color = Color.white;
-    }
-
-    void OnBgmSliderSelected(BaseEventData data) {
-        if (!m_BGMSliderSelectedBg) {
-            m_BGMSliderSelectedBg = m_BGMSlider.transform.parent.Find("SelectedBg").gameObject;
-        }
-        m_BGMSliderSelectedBg.SetActive(true);
-    }
-
-    void OnBgmSliderUnSelected(BaseEventData data) {
-        if (!m_BGMSliderSelectedBg) {
-            m_BGMSliderSelectedBg = m_BGMSlider.transform.parent.Find("SelectedBg").gameObject;
-        }
-        m_BGMSliderSelectedBg.SetActive(false);
-    }
-
-    void OnEffectVolumeSliderSelected(BaseEventData data) {
-        if (!m_EffectVolumeSliderSelectedBg) {
-            m_EffectVolumeSliderSelectedBg = m_EffectVolumeSlider.transform.parent.Find("SelectedBg").gameObject;
-        }
-        m_EffectVolumeSliderSelectedBg.SetActive(true);
-    }
-
-    void OnEffectVolumeSliderUnSelected(BaseEventData data) {
-        if (!m_EffectVolumeSliderSelectedBg) {
-            m_EffectVolumeSliderSelectedBg = m_EffectVolumeSlider.transform.parent.Find("SelectedBg").gameObject;
-        }
-        m_EffectVolumeSliderSelectedBg.SetActive(false);
-    }
-
-    void OnResetSettingsButtonSelected(BaseEventData data) {
-        if (!m_resetSettingsSelectedBg) {
-            m_resetSettingsSelectedBg = m_resetSettingsButton.transform.Find("SelectedBg").gameObject;
-        }
-        m_resetSettingsSelectedBg.SetActive(true);
-    }
-
-    void OnResetSettingsButtonUnSelected(BaseEventData data) {
-        if (!m_resetSettingsSelectedBg) {
-            m_resetSettingsSelectedBg = m_resetSettingsButton.transform.Find("SelectedBg").gameObject;
-        }
-        m_resetSettingsSelectedBg.SetActive(false);
     }
 
     void OnAboutButtonSelected(BaseEventData data) {
@@ -372,18 +220,6 @@ public class BingoSettingsView : AbstractView, IViewOperater
     void OnCellCountButtonUnSelected(BaseEventData data) {
         m_isSelectedCellCountButton = false;
         m_maxCellSettingArrows.SetActive(false);
-    }
-
-    void OnResetSettingsButtonClicked() {
-        AppConfig.Instance.MaxCellCount = 75;
-        m_maxCellSettingText.text = "75";
-        m_toggles[0].isOn = true;
-        AppConfig.Instance.ThemeSelectedIdx = 0;
-        AppConfig.Instance.BGMVolume = 0;
-        m_BGMSlider.value = 0;
-
-        AppConfig.Instance.EffectVolume = 0;
-        m_EffectVolumeSlider.value = 0;
     }
 
     void OnAboutButtonClicked() {

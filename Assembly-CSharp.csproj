@@ -65,7 +65,9 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/Scripts/ResManager/IThemeRes.cs" />
     <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoSettingsView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
+    <Compile Include="Assets/Scripts/GameSettingsView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/Tools/MonoBehaviourSingletonTemplate.cs" />
     <Compile Include="Assets/Scripts/ResManager/ChristmasThemeResConfig.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Assets/Scripts/Tools/TextAssetRWAblity.cs" />
     <Compile Include="Assets/Scripts/Tools/FPS.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoGameView.cs" />
     <Compile Include="Assets/Scripts/ResManager/ResourceLoader.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModulePhysics2D.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets/Scripts/Bingo/GameDataHandler.cs" />
     <Compile Include="Assets/Scripts/Tools/Loading.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets/Scripts/Bingo/BingoAboutView.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleAudio.cs" />
     <Compile Include="Assets/Scripts/ResManager/ThemeResManager.cs" />
     <Compile Include="Assets/Scripts/ResManager/DefaultThemeResConfig.cs" />
@@ -115,6 +119,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" />
     <Compile Include="Assets/Scripts/SplashManager.cs" />
+    <Compile Include="Assets/Scripts/Tools/RootViewType.cs" />
     <Compile Include="Assets/Scripts/AbstractView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/GameSelector.cs" />
@@ -131,17 +136,12 @@
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowHistoryView.cs" />
     <Compile Include="Assets/Scripts/Tools/AppConfig.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets/Scripts/Tools/ScrollContentTacker.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/Bingo/BingoGameView.cs" />
-    <Compile Include="Assets/Scripts/Bingo/BingoSettingsView.cs" />
-    <Compile Include="Assets/Scripts/Bingo/BingoAboutView.cs" />
-    <Compile Include="Assets/Scripts/GameSettingsView.cs" />
-    <Compile Include="Assets/Scripts/Tools/RootViewType.cs" />
-    <Compile Include="Assets/Scripts/Tools/ScrollContentTacker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

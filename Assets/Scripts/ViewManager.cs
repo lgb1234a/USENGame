@@ -126,6 +126,10 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public void Hided(IViewOperater view) 
     {
         m_lastPopedView = m_viewStack.Pop();
+        if (m_viewStack.Count == 0) {
+            USENSceneManager.Instance.LoadScene("GameEntries");
+            return;
+        }
         m_currentView = m_viewStack.Peek();
         if (m_currentView != null) {
             m_currentView.Build();
