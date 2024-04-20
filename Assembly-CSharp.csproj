@@ -142,6 +142,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/EPokers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

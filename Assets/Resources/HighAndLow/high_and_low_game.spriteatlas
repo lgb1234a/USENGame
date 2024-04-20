@@ -27,17 +27,34 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
-      enableTightPacking: 1
+      enableTightPacking: 0
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables: []
+    packables:
+    - {fileID: 102900000, guid: 1d8139d2e19ff4cb99d99db82e445328, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 7faefcc14e3d84018a5b37511c06f3e1, type: 3}
+  - {fileID: 21300000, guid: c937af63060984ea5bad11248bea18a7, type: 3}
+  - {fileID: 21300000, guid: 20b88a243d8e647189d28ceb86e03307, type: 3}
+  - {fileID: 21300000, guid: cc75ff865d8cf4109a6e3ab1096c99b6, type: 3}
+  - {fileID: 21300000, guid: 08fa79f6a91fa436f9dcf2074b494408, type: 3}
+  - {fileID: 21300000, guid: 22c6c719992e848bab0745a726fee3bc, type: 3}
+  - {fileID: 21300000, guid: e94caa1e39d7a4d568b1696131ca5430, type: 3}
+  - {fileID: 21300000, guid: e4d56c8ed44fe4661a1a0639939dd8f1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - poker_tile
+  - checked_bg
+  - result_low
+  - check_list_bg
+  - high
+  - low
+  - circle2
+  - circle1
   m_RenderDataMap: {}
   m_Tag: high_and_low_game
   m_IsVariant: 0

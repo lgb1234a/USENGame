@@ -87,6 +87,7 @@ public class AbstractView
 
     public void Destroy()
     {
+        OnDestroy();
         foreach (var res in m_resources) {
             res.Unload();
         }
@@ -101,4 +102,6 @@ public class AbstractView
         Resources.UnloadUnusedAssets();
         GC.Collect();
     }
+
+    public virtual void OnDestroy() {}
 }
