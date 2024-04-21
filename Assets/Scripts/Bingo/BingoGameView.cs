@@ -62,6 +62,7 @@ public class BingoGameView : AbstractView, IViewOperater
     private double m_LoadingInterval = 0;
 
     Sequence m_transformSequence = DOTween.Sequence();
+    BingoHomeView m_homeView;
 
     public void Build() {
         // var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -382,8 +383,7 @@ public class BingoGameView : AbstractView, IViewOperater
 
     public void OnClickExitButton() {
         ResetData();
-        Hide();
-        ViewManager.Instance.Hided(this);
+        Back();
     }
 
     public void ResetData() {
@@ -395,8 +395,14 @@ public class BingoGameView : AbstractView, IViewOperater
 
     public void OnClickStopButton() {
         AppConfig.Instance.GameData = m_gameData;
+        Back();
+    }
+
+    void Back() {
         Hide();
-        ViewManager.Instance.Hided(this);
+        if (m_homeView == null)
+            m_homeView = new BingoHomeView();
+        ViewManager.Instance.Push(m_homeView);
     }
 
     public void OnClickBackGameButton() {

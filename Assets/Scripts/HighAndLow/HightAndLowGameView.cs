@@ -34,6 +34,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Coroutine m_updateTimeCoroutine;
 
     HighAndLowRouletteView m_rouletteView;
+    HighAndLowHomeView m_homeView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -75,6 +76,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_timeLabel = null;
         m_mainViewGameObject = null;
         m_checkedItemList.Clear();
+        m_pokerPool.Clear();
+        m_checkedPokers.Clear();
     }
 
     public void Hide()
@@ -86,10 +89,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     {
         if (keyName == "blue")
         {
-            if (m_historyView == null) {
-                m_historyView = new HighAndLowHistoryView(m_checkedPokers);
-            }
-            ViewManager.Instance.Push(m_historyView);
+            OnClickedHistoryButton();
         }
     }
 
@@ -106,8 +106,9 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     public void Update()
     {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
-            ViewManager.Instance.Hided(this);
+            if (m_homeView == null)
+                m_homeView = new HighAndLowHomeView();
+            ViewManager.Instance.Push(m_homeView);
         }
 
         if (m_waitTrigger) {

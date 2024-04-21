@@ -10,8 +10,8 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
     string m_prefabPath = "HighAndLow/HighAndLowHistoryPanel";
     Text m_restCountLabel;
     Button m_backButton;
-    List<GameObject> m_itemList = new();
     List<EPokers> m_checkedPokers;
+    HightAndLowGameView m_gameView;
 
     public HighAndLowHistoryView(List<EPokers> checkedPokers) {
         m_checkedPokers = checkedPokers;
@@ -21,17 +21,10 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 13; j++) {
-                var itemPath = string.Format("CheckList/{0}_{1}", i, j);
-                m_itemList.Add(m_mainViewGameObject.transform.Find(itemPath).gameObject);
-            }
-        }
-
         foreach (var poker in m_checkedPokers)
         {
-            var index = EPokersHelper.GetIndexOfPoker(poker);
-            m_itemList.ElementAt(index).GetComponent<Image>().color = Color.white;
+            var itemPath = string.Format("CheckList/{0}", EPokersHelper.GetTextureNameFromPoker(poker));
+            m_mainViewGameObject.transform.Find(itemPath).gameObject.GetComponent<Image>().color = Color.white;
         }
 
         m_restCountLabel = m_mainViewGameObject.transform.Find("RestCountLabel").GetComponent<Text>();
@@ -63,13 +56,13 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
     public void Update()
     {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
-            ViewManager.Instance.Hided(this);
+            OnClickedBackButton();
         }
     }
 
     void OnClickedBackButton() {
-        Hide();
-        ViewManager.Instance.Hided(this);
+        if (m_gameView == null)
+            m_gameView = new HightAndLowGameView();
+        ViewManager.Instance.Push(m_gameView);
     }
 }

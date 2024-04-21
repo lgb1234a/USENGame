@@ -63,8 +63,7 @@ public class HighAndLowRouletteView : AbstractView, IViewOperater
     public void Update()
     {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
-            ViewManager.Instance.Hided(this);
+            OnClickedBackButton();
         }
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Submit")) {
@@ -89,8 +88,9 @@ public class HighAndLowRouletteView : AbstractView, IViewOperater
 
     void OnClickedBackButton()
     {
-        Hide();
-        ViewManager.Instance.Hided(this);
+        if (m_gameView == null)
+            m_gameView = new HightAndLowGameView();
+        ViewManager.Instance.Push(m_gameView);
     }
 
     void OnClickedEditButton() 

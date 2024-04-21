@@ -3,6 +3,7 @@ using UnityEngine;
 public class BingoAboutView : AbstractView, IViewOperater
 {
     string m_prefabPath = "Bingo/BingoAboutPanel";
+    BingoSettingsView m_settingsView;
 
     public void Build() {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -22,8 +23,7 @@ public class BingoAboutView : AbstractView, IViewOperater
 
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
-            ViewManager.Instance.Hided(this);
+            OnClickBackHomeButton();
         }
     }
 
@@ -32,8 +32,9 @@ public class BingoAboutView : AbstractView, IViewOperater
     }
 
     public void OnClickBackHomeButton() {
-        Hide();
-        ViewManager.Instance.Hided(this);
+        if (m_settingsView == null) 
+            m_settingsView = new BingoSettingsView();
+        ViewManager.Instance.Push(m_settingsView);
     }
 
     public void OnThemeTypeChanged() {

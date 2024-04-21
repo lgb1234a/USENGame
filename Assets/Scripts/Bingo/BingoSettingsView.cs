@@ -21,6 +21,7 @@ public class BingoSettingsView : AbstractView, IViewOperater
     Button m_cancelSettingCellCountBtn;
     Text m_cancelSettingCellCountText;
     int m_nextCellCountChange;
+    BingoHomeView m_homeView;
 
     public void Build() {
         // var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -117,8 +118,7 @@ public class BingoSettingsView : AbstractView, IViewOperater
 
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
-            ViewManager.Instance.Hided(this);
+            OnClickBackHomeButton();
         }
 
         if (Input.GetButtonUp("Horizontal")) {
@@ -163,7 +163,9 @@ public class BingoSettingsView : AbstractView, IViewOperater
 
     public void OnClickBackHomeButton() {
         Hide();
-        ViewManager.Instance.Hided(this);
+        if (m_homeView == null)
+            m_homeView = new BingoHomeView();
+        ViewManager.Instance.Push(m_homeView);
     }
 
     // 确认修改最大cell数

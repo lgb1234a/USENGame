@@ -89,7 +89,7 @@ public class AbstractView
     {
         OnDestroy();
         foreach (var res in m_resources) {
-            res.Unload();
+            res.Release();
         }
         m_resources.Clear();
 
@@ -99,7 +99,7 @@ public class AbstractView
         }
         m_gameObjects.Clear();
 
-        Resources.UnloadUnusedAssets();
+        // Resources.UnloadUnusedAssets();
         GC.Collect();
     }
 

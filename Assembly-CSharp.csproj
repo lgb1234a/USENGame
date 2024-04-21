@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scripts/Tools/JsonSerializablity.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/Scripts/ResManager/IThemeRes.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/EPokers.cs" />
     <Compile Include="Assets/Scripts/Roulette/RouletteGameView.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoSettingsView.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
@@ -142,7 +143,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/HighAndLow/EPokers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
