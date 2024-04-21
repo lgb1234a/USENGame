@@ -8,7 +8,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
     string m_prefabPath = "Roulette/RouletteQuitPanel";
     Button Btn1;
     Button Btn2;
-    HighAndLowFAQView m_faqView;
+    HighAndLowRouletteView m_faqView;
     HightAndLowGameView m_gameView;
     HighAndLowSettingsView m_settingsView;
     public void Build()
@@ -32,7 +32,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
         if (keyName == "blue")
         {
             if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+                m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
         }
@@ -66,7 +66,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
         if (Input.GetKeyDown(KeyCode.A)) {
             //测试
             if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+                m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
         }

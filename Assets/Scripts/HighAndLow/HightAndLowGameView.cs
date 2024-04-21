@@ -32,6 +32,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     bool m_isGameFinished;
     GameObject m_pokersTile;
     Coroutine m_updateTimeCoroutine;
+
+    HighAndLowRouletteView m_rouletteView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -125,6 +127,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
                 }else if (m_resultIsShowing){
                     // 将牌丢弃
                     PlayLoop();
+                    HideResultButtons();
                     m_resultIsShowing = false;
                 }
             }
@@ -148,11 +151,24 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     }
 
     void OnClickedRouletteBtn() {
-
+        if (m_rouletteView == null) {
+            m_rouletteView = new HighAndLowRouletteView();
+        }
+        ViewManager.Instance.Push(m_rouletteView);
     }
 
     void OnClickedWinnerBtn() {
 
+    }
+
+    void ShowResultButtons() {
+        m_rouletteBtn.gameObject.SetActive(true);
+        m_winnerBtn.gameObject.SetActive(true);
+    }
+
+    void HideResultButtons() {
+        m_rouletteBtn.gameObject.SetActive(false);
+        m_winnerBtn.gameObject.SetActive(false);
     }
 
     void PlayFirst() {
@@ -213,6 +229,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     void ShowResult() {
         HideTimer();
         m_resultIsShowing = true;
+        ShowResultButtons();
 
         var poker = GetRandomPokerFromPool();
         var pokerSprite = GetSpriteWithPoker(poker);

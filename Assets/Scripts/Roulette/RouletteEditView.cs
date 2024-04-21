@@ -15,7 +15,7 @@ public class RouletteEditView : AbstractView, IViewOperater
     Button m_startAndSaveBtn;
     Button m_saveAndQuitBtn;
     Button m_deleteBtn;
-    HighAndLowFAQView m_faqView;
+    HighAndLowRouletteView m_faqView;
     HightAndLowGameView m_gameView;
     HighAndLowSettingsView m_settingsView;
     bool m_canDelete;
@@ -52,7 +52,7 @@ public class RouletteEditView : AbstractView, IViewOperater
         if (keyName == "blue")
         {
             if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+                m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
         }
@@ -86,7 +86,7 @@ public class RouletteEditView : AbstractView, IViewOperater
         if (Input.GetKeyDown(KeyCode.A)) {
             //测试
             if (m_faqView == null) {
-                m_faqView = new HighAndLowFAQView();
+                m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
         }
