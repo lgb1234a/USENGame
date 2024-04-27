@@ -23,7 +23,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     bool m_waitTrigger;
     Text m_timeLabel;
     Button m_historyBtn;
-    Button m_stopBtn;
+    Button m_terminalBtn;
     Button m_rouletteBtn;
     Button m_winnerBtn;
     GameObject m_pokerTemplate;
@@ -35,6 +35,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
     HighAndLowRouletteView m_rouletteView;
     HighAndLowHomeView m_homeView;
+    HighAndLowTerminalView m_terminalView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -58,8 +59,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
         m_historyBtn = m_mainViewGameObject.transform.Find("BottomPanel/HistoryBtn").GetComponent<Button>();
         m_historyBtn.onClick.AddListener(OnClickedHistoryButton);
-        m_stopBtn = m_mainViewGameObject.transform.Find("BottomPanel/StopBtn").GetComponent<Button>();
-        m_stopBtn.onClick.AddListener(OnClickedStopBtn);
+        m_terminalBtn = m_mainViewGameObject.transform.Find("BottomPanel/StopBtn").GetComponent<Button>();
+        m_terminalBtn.onClick.AddListener(OnClickedTerminalBtn);
         m_rouletteBtn = m_mainViewGameObject.transform.Find("BottomPanel/RouletteBtn").GetComponent<Button>();
         m_rouletteBtn.onClick.AddListener(OnClickedRouletteBtn);
         m_winnerBtn = m_mainViewGameObject.transform.Find("BottomPanel/WinnerBtn").GetComponent<Button>();
@@ -147,8 +148,13 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         ViewManager.Instance.Push(m_historyView);
     }
 
-    void OnClickedStopBtn() {
-
+    void OnClickedTerminalBtn() {
+        if (m_terminalView == null) {
+            m_terminalView = new HighAndLowTerminalView();
+            m_terminalView.Build(m_mainViewGameObject.transform);
+        }
+        // ViewManager.Instance.Push(m_terminalView);
+        m_terminalView.Show();
     }
 
     void OnClickedRouletteBtn() {
