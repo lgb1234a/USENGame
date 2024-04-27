@@ -36,6 +36,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     HighAndLowRouletteView m_rouletteView;
     HighAndLowHomeView m_homeView;
     HighAndLowTerminalView m_terminalView;
+    bool m_isWaitContinue;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -69,6 +70,29 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_pokerTemplate = m_mainViewGameObject.transform.Find("PokerTemplate").gameObject;
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
+
+        var cachedPokers = AppConfig.Instance.CheckedPokers;
+        if (cachedPokers.Count() > 0) {
+            for (int i = 0; i < cachedPokers.Count(); i++)
+            {
+                var value = cachedPokers[i];
+                CheckedPoker((EPokers)value, false);
+                //创建缓存的牌
+                var pokerGo = CreatePoker((EPokers)value);
+                if (i == cachedPokers.Count() - 1) {
+                    //最后一张
+                    pokerGo.transform.SetParent(m_pokerShowTransform1);
+                    (pokerGo.transform as RectTransform).anchoredPosition = Vector2.zero;
+                }else {
+                    pokerGo.transform.SetParent(m_pokerTrashTransform);
+                    (pokerGo.transform as RectTransform).anchoredPosition = Vector2.zero;
+                    var angle = Random.Range(20, 70);
+                    (pokerGo.transform as RectTransform).localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+                }
+            }
+
+            m_isWaitContinue = true;
+        }
     }
 
     public override void OnDestroy() {
@@ -126,7 +150,17 @@ public class HightAndLowGameView : AbstractView, IViewOperater
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Submit")) {
                 if (m_pokerShowTransform1.childCount == 0) {
                     PlayFirst();
-                }else if (m_resultIsShowing){
+                }
+                else if (m_isWaitContinue) {
+                    // 重连继续上一局
+                    var backFaceGO = CreatePoker(EPokers.BackFace);
+                    (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
+                    backFaceGO.transform.SetParent(m_pokerShowTransform2);
+                    (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
+                    var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
+                    tween.onComplete += ShowTimer;
+                }
+                else if (m_resultIsShowing){
                     // 将牌丢弃
                     PlayLoop();
                     HideResultButtons();
@@ -282,7 +316,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         return pokerGO;
     }
 
-    void CheckedPoker(EPokers poker) {
+    void CheckedPoker(EPokers poker, bool isNeedCache = true) {
         m_checkedPokers.Add(poker);
         var index = EPokersHelper.GetIndexOfPoker(poker);
         m_checkedItemList.ElementAt(index).SetActive(true);
@@ -290,6 +324,11 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_checkRestCountLabel.text = m_pokerPool.Count.ToString();
         m_isGameFinished = m_pokerPool.Count == 0;
         m_pokersTile.SetActive(m_pokerPool.Count > 0);
+        // save
+        if (isNeedCache) {
+            var checkedPokerValues = m_checkedPokers.ConvertAll<int>((v)=>(int)v);
+            AppConfig.Instance.CheckedPokers = checkedPokerValues;
+        }
     }
 
     

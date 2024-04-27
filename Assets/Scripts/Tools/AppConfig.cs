@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AppConfig
@@ -186,6 +187,25 @@ public class AppConfig
         {
             _currentHighAndLowTimer = PreferencesStorage.ReadInt("__CURRENT_HIGHANDLOW_TIMER__", 10);
             return _currentHighAndLowTimer;
+        }
+    }
+
+    private List<int> _checkedPokers = new List<int>();
+    public List<int> CheckedPokers {
+        set
+        {
+            _checkedPokers = value;
+            var jsonStr = string.Join(",", value.ToArray());
+            Debug.Log(jsonStr);
+            PreferencesStorage.SaveString("__CHECKED_POKERS__", jsonStr);
+        }
+        get {
+            var jsonStr = PreferencesStorage.ReadString("__CHECKED_POKERS__", "");
+            if (jsonStr.Length > 0) {
+                string[] strArray = jsonStr.Split(",");
+                _checkedPokers = strArray.ToList<string>().ConvertAll<int>((v)=>int.Parse(v));
+            }
+            return _checkedPokers;
         }
     }
 }
