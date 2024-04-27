@@ -169,9 +169,23 @@ public class AppConfig
                 return new RouletteHomeView();
             case RootViewType.BingoSettings:
                 return new BingoSettingsView();
-            case RootViewType.HighAndLowSettings:
-                return new HighAndLowSettingsView();
         }
         return null;
+    }
+
+
+    private int _currentHighAndLowTimer = 10;
+
+    public int CurrentHighAndLowTimer {
+        set
+        {
+            _currentHighAndLowTimer = value;
+            PreferencesStorage.SaveInt("__CURRENT_HIGHANDLOW_TIMER__", value);
+        }
+        get
+        {
+            _currentHighAndLowTimer = PreferencesStorage.ReadInt("__CURRENT_HIGHANDLOW_TIMER__", 10);
+            return _currentHighAndLowTimer;
+        }
     }
 }

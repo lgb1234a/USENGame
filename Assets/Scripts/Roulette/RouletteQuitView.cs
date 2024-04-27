@@ -10,7 +10,6 @@ public class RouletteQuitView : AbstractView, IViewOperater
     Button Btn2;
     HighAndLowRouletteView m_faqView;
     HightAndLowGameView m_gameView;
-    HighAndLowSettingsView m_settingsView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -39,10 +38,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
 
         if (keyName == "yellow")
         {
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
+            
         }
     }
 
@@ -69,14 +65,6 @@ public class RouletteQuitView : AbstractView, IViewOperater
                 m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B)) {
-            //测试
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
         }
     }
 

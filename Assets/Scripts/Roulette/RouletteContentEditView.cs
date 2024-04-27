@@ -4,7 +4,6 @@ public class RouletteContentEditView : AbstractView, IViewOperater
 {
     string m_prefabPath = "Roulette/RouletteContentEditPanel";
     HighAndLowRouletteView m_faqView;
-    HighAndLowSettingsView m_settingsView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -24,14 +23,6 @@ public class RouletteContentEditView : AbstractView, IViewOperater
                 m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
-        }
-
-        if (keyName == "red")
-        {
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
         }
     }
 
@@ -58,14 +49,6 @@ public class RouletteContentEditView : AbstractView, IViewOperater
                 m_faqView = new HighAndLowRouletteView();
             }
             ViewManager.Instance.Push(m_faqView);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B)) {
-            //测试
-            if (m_settingsView == null) {
-                m_settingsView = new HighAndLowSettingsView();
-            }
-            ViewManager.Instance.Push(m_settingsView);
         }
     }
 }
