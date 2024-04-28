@@ -17,8 +17,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Transform m_pokerTrashTransform;
     Text m_checkRestCountLabel;
     List<GameObject> m_checkedItemList = new();
-    List<EPokers> m_pokerPool = new();
-    List<EPokers> m_checkedPokers = new();
+    List<int> m_pokerPool = new();
+    List<int> m_checkedPokers = new();
     GameObject m_timer;
     bool m_waitTrigger;
     Text m_timeLabel;
@@ -37,6 +37,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     HighAndLowHomeView m_homeView;
     HighAndLowTerminalView m_terminalView;
     bool m_isWaitContinue;
+    int m_lastPoker = -1;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -47,9 +48,11 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_pokerTrashTransform = m_mainViewGameObject.transform.Find("PokerShowTrash");
 
         m_checkRestCountLabel = m_mainViewGameObject.transform.Find("PokerCheckList/RestCountLabel").GetComponent<Text>();
+        var cachedPokerValues = AppConfig.Instance.CheckedPokers;
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 13; j++) {
-                m_pokerPool.Add((EPokers)(i*16+j));
+                if (!cachedPokerValues.Contains(i*16+j))
+                    m_pokerPool.Add(i*16+j);
                 var itemPath = string.Format("PokerCheckList/CheckedList/{0}_{1}", i, j);
                 m_checkedItemList.Add(m_mainViewGameObject.transform.Find(itemPath).gameObject);
             }
@@ -71,18 +74,18 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
 
-        var cachedPokers = AppConfig.Instance.CheckedPokers;
-        if (cachedPokers.Count() > 0) {
-            for (int i = 0; i < cachedPokers.Count(); i++)
+        if (cachedPokerValues.Count() > 0) {
+            for (int i = 0; i < cachedPokerValues.Count(); i++)
             {
-                var value = cachedPokers[i];
-                CheckedPoker((EPokers)value, false);
+                var value = cachedPokerValues[i];
+                CheckedPoker(value, false);
                 //创建缓存的牌
                 var pokerGo = CreatePoker((EPokers)value);
-                if (i == cachedPokers.Count() - 1) {
+                if (i == cachedPokerValues.Count() - 1) {
                     //最后一张
                     pokerGo.transform.SetParent(m_pokerShowTransform1);
                     (pokerGo.transform as RectTransform).anchoredPosition = Vector2.zero;
+                    m_lastPoker = value;
                 }else {
                     pokerGo.transform.SetParent(m_pokerTrashTransform);
                     (pokerGo.transform as RectTransform).anchoredPosition = Vector2.zero;
@@ -159,6 +162,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
                     (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
                     var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
                     tween.onComplete += ShowTimer;
+                    m_isWaitContinue = false;
                 }
                 else if (m_resultIsShowing){
                     // 将牌丢弃
@@ -256,7 +260,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     }
 
     IEnumerator<WaitForSeconds> UpdateTimeLabel() {
-        var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
+        // var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
+        var timer = 1;
         while (timer-- > 0) 
         {
             if (m_timeLabel != null)
@@ -288,10 +293,36 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     }
 
     EPokers GetRandomPokerFromPool() {
+        var temp = new List<int>();
+        if (m_lastPoker != -1) {
+            var pokerValue = m_lastPoker;
+            bool shoted = m_pokerPool.Remove(pokerValue%16);
+            if (shoted) {
+                temp.Add(pokerValue%16);
+            }
+            shoted = m_pokerPool.Remove(pokerValue%16 + 16);
+            if (shoted) {
+                temp.Add(pokerValue%16 + 16);
+            }
+            shoted = m_pokerPool.Remove(pokerValue%16 + 32);
+            if (shoted) {
+                temp.Add(pokerValue%16 + 32);
+            }
+            shoted = m_pokerPool.Remove(pokerValue%16 + 48);
+            if (shoted) {
+                temp.Add(pokerValue%16 + 48);
+            }
+        }
         var pokerIndex = Random.Range(0, m_pokerPool.Count - 1);
+
         var poker = m_pokerPool.ElementAt(pokerIndex);
+        foreach (var item in temp)
+        {
+            m_pokerPool.Add(item);
+        }
         CheckedPoker(poker);
-        return poker;
+        m_lastPoker = poker;
+        return (EPokers)poker;
     }
 
     GameObject CreateRandomPokerFromPool() {
@@ -316,11 +347,11 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         return pokerGO;
     }
 
-    void CheckedPoker(EPokers poker, bool isNeedCache = true) {
+    void CheckedPoker(int poker, bool isNeedCache = true) {
         m_checkedPokers.Add(poker);
-        var index = EPokersHelper.GetIndexOfPoker(poker);
+        var index = EPokersHelper.GetIndexOfPoker((EPokers)poker);
         m_checkedItemList.ElementAt(index).SetActive(true);
-        m_pokerPool.Remove(poker);
+        m_pokerPool.Remove((int)poker);
         m_checkRestCountLabel.text = m_pokerPool.Count.ToString();
         m_isGameFinished = m_pokerPool.Count == 0;
         m_pokersTile.SetActive(m_pokerPool.Count > 0);
@@ -338,7 +369,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 13; j++) {
                 m_checkedItemList.ElementAt(i*13 + j).SetActive(false);
-                m_pokerPool.Add((EPokers)(i*16+j));
+                m_pokerPool.Add(i*16+j);
             }
         }
     }

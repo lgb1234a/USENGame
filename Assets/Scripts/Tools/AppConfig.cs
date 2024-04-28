@@ -196,7 +196,6 @@ public class AppConfig
         {
             _checkedPokers = value;
             var jsonStr = string.Join(",", value.ToArray());
-            Debug.Log(jsonStr);
             PreferencesStorage.SaveString("__CHECKED_POKERS__", jsonStr);
         }
         get {

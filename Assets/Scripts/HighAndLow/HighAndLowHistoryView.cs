@@ -10,10 +10,10 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
     string m_prefabPath = "HighAndLow/HighAndLowHistoryPanel";
     Text m_restCountLabel;
     Button m_backButton;
-    List<EPokers> m_checkedPokers;
+    List<int> m_checkedPokers;
     HightAndLowGameView m_gameView;
 
-    public HighAndLowHistoryView(List<EPokers> checkedPokers) {
+    public HighAndLowHistoryView(List<int> checkedPokers) {
         m_checkedPokers = checkedPokers;
     }
 
@@ -23,7 +23,7 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
 
         foreach (var poker in m_checkedPokers)
         {
-            var itemPath = string.Format("CheckList/{0}", EPokersHelper.GetTextureNameFromPoker(poker));
+            var itemPath = string.Format("CheckList/{0}", EPokersHelper.GetTextureNameFromPoker((EPokers)poker));
             m_mainViewGameObject.transform.Find(itemPath).gameObject.GetComponent<Image>().color = Color.white;
         }
 

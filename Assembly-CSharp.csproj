@@ -137,12 +137,12 @@
     <Compile Include="Assets/Scripts/HighAndLow/HighAndLowHistoryView.cs" />
     <Compile Include="Assets/Scripts/Tools/AppConfig.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowTerminalView.cs" />
     <Compile Include="Assets/Scripts/Tools/ScrollContentTacker.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowTerminalView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
