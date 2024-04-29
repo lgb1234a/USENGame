@@ -260,8 +260,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     }
 
     IEnumerator<WaitForSeconds> UpdateTimeLabel() {
-        // var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
-        var timer = 1;
+        var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
         while (timer-- > 0) 
         {
             if (m_timeLabel != null)
