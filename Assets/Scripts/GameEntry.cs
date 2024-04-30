@@ -57,10 +57,16 @@ public class GameEntry : MonoBehaviour
     {
         if (m_index == 2 || m_index == 1 || m_index == 3) 
         {
-            AppConfig.Instance.SelectedGameIndex = m_index;
-            AppConfig.Instance.HomeSceneRootViewType = (RootViewType)m_index;
-            USENSceneManager.Instance.LoadScene("Home");
+            AudioManager.Instance.PlayEntrySelectedEffect();
+            StartCoroutine(WaitLoadScene());
         } 
+    }
+
+    IEnumerator<WaitForSeconds> WaitLoadScene() {
+        yield return new WaitForSeconds(0.5f);
+        AppConfig.Instance.SelectedGameIndex = m_index;
+        AppConfig.Instance.HomeSceneRootViewType = (RootViewType)m_index;
+        USENSceneManager.Instance.LoadScene("Home");
     }
 
     public void AddSelectListener(Action<GameEntry> d) 

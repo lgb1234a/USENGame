@@ -153,6 +153,60 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         effectAudioSource.Play();
     }
 
+
+    public async void PlayEntrySelectedEffect() {
+        keydownAudioSource.clip = await AudioResManager.Instance.GetKeySelectedAudioPath();
+        keydownAudioSource.loop = false;
+        keydownAudioSource.Play();
+    }
+
+    public async void PlayLowAndHighBGM() {
+        audioSource.clip = await AudioResManager.Instance.GetHighAndLowBGMAudioPath();
+        PlayBgm();
+    }
+
+    public async void PlayKeyBackEffect() {
+        keydownAudioSource.clip = await AudioResManager.Instance.GetKeyBackAudioPath();
+        keydownAudioSource.loop = false;
+        keydownAudioSource.Play();
+    }
+
+    public async void PlayKeyStartEffect() {
+        keydownAudioSource.clip = await AudioResManager.Instance.GetKeyStartAudioPath();
+        keydownAudioSource.loop = false;
+        keydownAudioSource.Play();
+    }
+
+    public async void PlayHighEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.GetHighAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void PlayLowEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.GetLowAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void PlayHighAndLowTimerEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.GetTimerAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void PlaySendPokerEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.GetSendPokerAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void PlayTimerStartEffect() {
+        keydownAudioSource.clip = await AudioResManager.Instance.GetTimerStartAudioPath();
+        keydownAudioSource.loop = false;
+        keydownAudioSource.Play();
+    }
+
     public void PlayKeyDownEffect() {
         keydownAudioSource.Play();
     }

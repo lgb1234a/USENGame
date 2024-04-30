@@ -77,6 +77,7 @@ public class HighAndLowRouletteView : AbstractView, IViewOperater
 
     public void OnClickedStartButton()
     {
+        AudioManager.Instance.PlayKeyStartEffect();
         foreach (var go in m_rouletteGOs)
         {
             go.SetActive(false);

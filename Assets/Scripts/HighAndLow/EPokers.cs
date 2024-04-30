@@ -73,4 +73,8 @@ public class EPokersHelper
         var j = (int)poker % 16;
         return i * 13 + j;
     }
+
+    public static int GetPokerValue(EPokers poker) {
+        return (int)poker % 16;
+    }
 }

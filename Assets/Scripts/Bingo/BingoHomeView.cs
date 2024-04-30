@@ -51,6 +51,8 @@ public class BingoHomeView : AbstractView, IViewOperater
         m_resetCancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
         m_resetCancelBtnText = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
+
+        AudioManager.Instance.PlayDefaultBgm();
     }
 
     void OnClickStartButton() 

@@ -34,6 +34,8 @@ public class GameSettingsView : MonoBehaviour
     Button m_highAndLowTimerBtn;
     Text m_highAndLowTimerText;
 
+    Button m_backButton;
+
 
     public void Start() {
         m_gameSelector = transform.parent.Find("Home").GetComponent<GameSelector>();
@@ -86,6 +88,9 @@ public class GameSettingsView : MonoBehaviour
         m_highAndLowTimerText = transform.Find("Panel/ViewPort/CenterPanel/Timer/TimerSettings/Count").GetComponent<Text>();
         m_highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
 
+        m_backButton = transform.Find("Panel/BottomPanel/BackButton").GetComponent<Button>();
+        m_backButton.onClick.AddListener(OnClickBackButton);
+
         EventSystem.current.SetSelectedGameObject(m_bgmSlider.gameObject);
         m_isInited = true;
     }
@@ -103,7 +108,7 @@ public class GameSettingsView : MonoBehaviour
 
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
-            Hide();
+            OnClickBackButton();
         }
 
         if (Input.GetButtonUp("Horizontal")) {
@@ -206,5 +211,10 @@ public class GameSettingsView : MonoBehaviour
 
         AppConfig.Instance.CurrentHighAndLowTimer += value;
         m_highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
+    }
+
+    void OnClickBackButton() {
+        AudioManager.Instance.PlayKeyBackEffect();
+        Hide();
     }
 }

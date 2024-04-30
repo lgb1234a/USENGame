@@ -14,6 +14,7 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
 
         m_startBtn = m_mainViewGameObject.transform.Find("StartBtn").GetComponent<Button>();
         m_startBtn.onClick.AddListener(OnClickStartButton);
+        AudioManager.Instance.PlayLowAndHighBGM();
     }
 
     public void Hide()
@@ -47,6 +48,7 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
 
     public void OnClickStartButton()
     {
+        AudioManager.Instance.PlayKeyStartEffect();
         if (m_gameView == null) {
             m_gameView = new HightAndLowGameView();
         }
