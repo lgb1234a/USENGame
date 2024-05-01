@@ -51,6 +51,14 @@ public class GameSelector : MonoBehaviour
         && EventSystem.current.currentSelectedGameObject == GameSettingsBtn.gameObject) {
             UpdateSelectedIndex(m_selectIndex);
         }
+
+        if (Input.GetButtonDown("Cancel")) {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
     }
 
     void UpdateSelectedIndex(int index) {

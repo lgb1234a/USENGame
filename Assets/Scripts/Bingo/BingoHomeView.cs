@@ -121,7 +121,7 @@ public class BingoHomeView : AbstractView, IViewOperater
 
     public void Update() {
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetButtonDown("Cancel")) {
             USENSceneManager.Instance.LoadScene("GameEntries");
         }
     }

@@ -88,6 +88,7 @@
     <Compile Include="Assets/Scripts/Tools/FPS.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoGameView.cs" />
+    <Compile Include="Assets/Scripts/Tools/AudioResManager.cs" />
     <Compile Include="Assets/Scripts/ResManager/ResourceLoader.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModulePhysics2D.cs" />
@@ -143,7 +144,6 @@
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/Tools/AudioResManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

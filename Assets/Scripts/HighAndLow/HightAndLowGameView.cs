@@ -38,6 +38,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     HighAndLowTerminalView m_terminalView;
     bool m_isWaitContinue;
     bool m_isWaitTimer;
+    bool m_isShowTimer;
     int m_lastPoker = -1;
     public void Build()
     {
@@ -170,6 +171,9 @@ public class HightAndLowGameView : AbstractView, IViewOperater
                     ShowTimer();
                     m_isWaitTimer = false;
                 }
+                else if (m_isShowTimer) {
+                    m_isShowTimer = false;
+                }
                 else if (m_resultIsShowing){
                     // 将牌丢弃
                     PlayLoop();
@@ -277,8 +281,14 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
     IEnumerator<WaitForSeconds> UpdateTimeLabel() {
         var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
+        m_isShowTimer = true;
         while (timer-- > 0) 
         {
+            if (!m_isShowTimer) {
+                // 提前结束
+                timer = 0;
+                break;
+            }
             AudioManager.Instance.PlayHighAndLowTimerEffect();
             if (m_timeLabel != null)
                 m_timeLabel.text = timer.ToString();
