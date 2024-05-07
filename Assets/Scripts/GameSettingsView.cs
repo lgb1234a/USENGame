@@ -214,6 +214,7 @@ public class GameSettingsView : MonoBehaviour
     }
 
     void OnClickBackButton() {
+        EventSystem.current.SetSelectedGameObject(null);
         AudioManager.Instance.PlayKeyBackEffect();
         Hide();
     }

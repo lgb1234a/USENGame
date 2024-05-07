@@ -88,10 +88,10 @@ public class AbstractView
     public void Destroy()
     {
         OnDestroy();
-        foreach (var res in m_resources) {
-            res.Release();
-        }
-        m_resources.Clear();
+        // foreach (var res in m_resources) {
+        //     res.Release();
+        // }
+        // m_resources.Clear();
 
         foreach (var go in m_gameObjects)
         {
@@ -100,7 +100,7 @@ public class AbstractView
         m_gameObjects.Clear();
 
         // Resources.UnloadUnusedAssets();
-        GC.Collect();
+        // GC.Collect();
     }
 
     public virtual void OnDestroy() {}

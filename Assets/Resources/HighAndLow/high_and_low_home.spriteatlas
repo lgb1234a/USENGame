@@ -38,19 +38,23 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: af3e8610bac6744f588b0dfa3470e3f3, type: 3}
   - {fileID: 21300000, guid: fbcb715358d53461c8f533d1c128bcd7, type: 3}
+  - {fileID: 21300000, guid: 2bdedd46b8ad742ceb2ac4ea4daab32e, type: 3}
+  - {fileID: 21300000, guid: 13cca7c6239014d9f8c62fc2a7f9240f, type: 3}
   - {fileID: 21300000, guid: ed52e918c86094051b95a70cd042e78d, type: 3}
-  - {fileID: 21300000, guid: 1e223de82666845609f988b5de550c4c, type: 3}
   - {fileID: 21300000, guid: 28c58b99e4afc410eab5ed406a6c4d7d, type: 3}
+  - {fileID: 21300000, guid: 825097fb8d78842bfa26a7edfaff3281, type: 3}
+  - {fileID: 21300000, guid: 925e82ceae11144b0a83a0942a51b2ec, type: 3}
   - {fileID: 21300000, guid: aef7924fe1e5e4372a26be7905a3fd55, type: 3}
   - {fileID: 21300000, guid: 8d400b8f1577d407dafca062d93fe895, type: 3}
   m_PackedSpriteNamesToIndex:
-  - settings_normal
   - bg
+  - start_selected_bg
+  - setting_normal_bg
   - mask
-  - start_normal
   - selected_bg
+  - setting_selected_bg
+  - start_normal_bg
   - pokers
   - title
   m_RenderDataMap: {}

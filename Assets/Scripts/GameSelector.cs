@@ -10,7 +10,7 @@ public class GameSelector : MonoBehaviour
     public Button GameSettingsBtn;
     public int m_selectIndex = 2;
     public GameObject m_gameSettingsGO;
-    int m_betweenSelectedSpace = 600;
+    int m_betweenSelectedSpace = 700;
     int m_otherSpace = 200;
     float m_keyDownTimeInterval = 0.5f;
     float m_timeInterval = 0;
