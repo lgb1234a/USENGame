@@ -67,6 +67,24 @@ public class AudioResManager
         return audioClip;
     }
 
+    public async Task<AudioClip> Get10SecondsAudioPath() {
+        var audioPath = "Audio/10sec";
+        var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public async Task<AudioClip> Get20SecondsAudioPath() {
+        var audioPath = "Audio/20sec";
+        var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);
+        return audioClip;
+    }
+
+    public async Task<AudioClip> Get30SecondsAudioPath() {
+        var audioPath = "Audio/30sec";
+        var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);
+        return audioClip;
+    }
+
     public async Task<AudioClip> GetSendPokerAudioPath() {
         var audioPath = "Audio/send_poker";
         var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);

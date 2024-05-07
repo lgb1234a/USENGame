@@ -28,6 +28,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Button m_winnerBtn;
     GameObject m_pokerTemplate;
     GameObject m_resultLow;
+    GameObject m_resultHigh;
     bool m_resultIsShowing;
     bool m_isGameFinished;
     GameObject m_pokersTile;
@@ -74,6 +75,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
         m_pokerTemplate = m_mainViewGameObject.transform.Find("PokerTemplate").gameObject;
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
+        m_resultHigh = m_mainViewGameObject.transform.Find("ResultHigh").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
 
         if (cachedPokerValues.Count() > 0) {
@@ -248,6 +250,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     void PlayLoop() {
         AudioManager.Instance.PlaySendPokerEffect();
         m_resultLow.SetActive(false);
+        m_resultHigh.SetActive(false);
         var leftPokerGO = m_pokerShowTransform1.GetChild(0).gameObject;
         leftPokerGO.transform.SetParent(m_pokerTrashTransform);
         var angle = Random.Range(20, 70);
@@ -282,14 +285,22 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     IEnumerator<WaitForSeconds> UpdateTimeLabel() {
         var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
         m_isShowTimer = true;
+        
+        if (AppConfig.Instance.CurrentHighAndLowTimer == 10) {
+            AudioManager.Instance.Play10SecondTimerEffect();
+        }else if (AppConfig.Instance.CurrentHighAndLowTimer == 20) {
+            AudioManager.Instance.Play20SecondTimerEffect();
+        }else if (AppConfig.Instance.CurrentHighAndLowTimer == 30) {
+            AudioManager.Instance.Play30SecondTimerEffect();
+        }
         while (timer-- > 0) 
         {
             if (!m_isShowTimer) {
                 // 提前结束
                 timer = 0;
+                AudioManager.Instance.StopEffectAudio();
                 break;
             }
-            AudioManager.Instance.PlayHighAndLowTimerEffect();
             if (m_timeLabel != null)
                 m_timeLabel.text = timer.ToString();
             yield return new WaitForSeconds(1);
@@ -310,13 +321,14 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         backFaceGO.GetComponent<Image>().overrideSprite = pokerSprite;
         backFaceGO.GetComponent<Image>().SetNativeSize();
         // 判断输赢
-        m_resultLow.SetActive(true);
         if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker)) {
             AudioManager.Instance.PlayHighEffect();
+            m_resultHigh.SetActive(true);
         }
 
         if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker)) {
             AudioManager.Instance.PlayLowEffect();
+            m_resultLow.SetActive(true);
         }
     }
 

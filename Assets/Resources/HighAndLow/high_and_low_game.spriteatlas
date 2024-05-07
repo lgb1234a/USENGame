@@ -44,6 +44,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cc75ff865d8cf4109a6e3ab1096c99b6, type: 3}
   - {fileID: 21300000, guid: 08fa79f6a91fa436f9dcf2074b494408, type: 3}
   - {fileID: 21300000, guid: 22c6c719992e848bab0745a726fee3bc, type: 3}
+  - {fileID: 21300000, guid: cff5c35ba40ba4d74ad0b42dcffd6ecd, type: 3}
   - {fileID: 21300000, guid: e94caa1e39d7a4d568b1696131ca5430, type: 3}
   - {fileID: 21300000, guid: e4d56c8ed44fe4661a1a0639939dd8f1, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -53,6 +54,7 @@ SpriteAtlas:
   - check_list_bg
   - high
   - low
+  - result_high
   - circle2
   - circle1
   m_RenderDataMap: {}

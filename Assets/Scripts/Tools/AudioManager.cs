@@ -195,6 +195,28 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
         effectAudioSource.Play();
     }
 
+    public async void Play10SecondTimerEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.Get10SecondsAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void Play20SecondTimerEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.Get20SecondsAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public async void Play30SecondTimerEffect() {
+        effectAudioSource.clip = await AudioResManager.Instance.Get30SecondsAudioPath();
+        effectAudioSource.loop = false;
+        effectAudioSource.Play();
+    }
+
+    public void StopEffectAudio() {
+        effectAudioSource.Stop();
+    }
+
     public async void PlaySendPokerEffect() {
         effectAudioSource.clip = await AudioResManager.Instance.GetSendPokerAudioPath();
         effectAudioSource.loop = false;
