@@ -311,11 +311,11 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         backFaceGO.GetComponent<Image>().SetNativeSize();
         // 判断输赢
         m_resultLow.SetActive(true);
-        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker)) {
+        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker)) {
             AudioManager.Instance.PlayHighEffect();
         }
 
-        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker)) {
+        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker)) {
             AudioManager.Instance.PlayLowEffect();
         }
     }
