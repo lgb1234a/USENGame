@@ -96,4 +96,10 @@ public class AudioResManager
         var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);
         return audioClip;
     }
+
+    public async Task<AudioClip> GetFinishAudioPath() {
+        var audioPath = "Audio/finish";
+        var audioClip = await ResourceLoader.LoadResourcesAsync<AudioClip>(audioPath);
+        return audioClip;
+    }
 }

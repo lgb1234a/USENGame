@@ -242,4 +242,10 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
             PlayDefaultBgm();
         }
     }
+
+    public async void PlayFinishEffect() {
+        numberRotateAudioSource.clip = await AudioResManager.Instance.GetFinishAudioPath();
+        numberRotateAudioSource.loop = false;
+        numberRotateAudioSource.Play();
+    }
 }

@@ -45,6 +45,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     int m_lastPoker = -1;
     public void Build()
     {
+        m_isGameFinished = false;
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
 
         m_pokerStartTransform = m_mainViewGameObject.transform.Find("PokerStart");
@@ -210,6 +211,9 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     }
 
     void OnClickedConfirmBtn() {
+        if (m_isGameFinished) {
+            return;
+        }
         if (m_pokerShowTransform1.childCount == 0) {
             PlayFirst();
         }
@@ -421,6 +425,10 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_checkRestCountLabel.text = m_pokerPool.Count.ToString();
         m_isGameFinished = m_pokerPool.Count == 0;
         m_pokersTile.SetActive(m_pokerPool.Count > 0);
+        if (m_isGameFinished)
+        {
+            AudioManager.Instance.PlayFinishEffect();
+        }
         // save
         if (isNeedCache) {
             var checkedPokerValues = m_checkedPokers.ConvertAll<int>((v)=>(int)v);
