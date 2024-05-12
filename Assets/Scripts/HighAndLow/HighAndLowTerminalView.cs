@@ -9,6 +9,7 @@ public class HighAndLowTerminalView : AbstractView
     Button m_pauseButton;
     Button m_terminalButton;
     HightAndLowGameView m_gameView;
+    HighAndLowHomeView m_homeView;
     public void Build(Transform parent)
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, parent);
@@ -46,7 +47,7 @@ public class HighAndLowTerminalView : AbstractView
     public void Update()
     {
         if (Input.GetButtonDown("Cancel")) {
-            
+            OnBackGameButtonClicked();
         }
     }
 
@@ -55,10 +56,15 @@ public class HighAndLowTerminalView : AbstractView
     }
 
     void OnPauseButtonClicked() {
-
+        Hide();
+        if (m_homeView == null) {
+            m_homeView = new HighAndLowHomeView();
+        }
+        ViewManager.Instance.Push(m_homeView);
     }
 
     void OnTerminalButtonClicked() {
-
+        Hide();
+        USENSceneManager.Instance.LoadScene("GameEntries");
     }
 }

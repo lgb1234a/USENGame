@@ -26,6 +26,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Button m_terminalBtn;
     Button m_rouletteBtn;
     Button m_winnerBtn;
+    Button m_confirmBtn;
+    Button m_startTimerBtn;
     GameObject m_pokerTemplate;
     GameObject m_resultLow;
     GameObject m_resultHigh;
@@ -72,6 +74,10 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_rouletteBtn.onClick.AddListener(OnClickedRouletteBtn);
         m_winnerBtn = m_mainViewGameObject.transform.Find("BottomPanel/WinnerBtn").GetComponent<Button>();
         m_winnerBtn.onClick.AddListener(OnClickedWinnerBtn);
+        m_confirmBtn = m_mainViewGameObject.transform.Find("BottomPanel/ConfirmBtn").GetComponent<Button>();
+        m_confirmBtn.onClick.AddListener(OnClickedConfirmBtn);
+        m_startTimerBtn = m_mainViewGameObject.transform.Find("BottomPanel/StartTimerBtn").GetComponent<Button>();
+        m_startTimerBtn.onClick.AddListener(OnClickedStartTimerBtn);
 
         m_pokerTemplate = m_mainViewGameObject.transform.Find("PokerTemplate").gameObject;
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
@@ -123,6 +129,21 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         {
             OnClickedHistoryButton();
         }
+
+        if (keyName == "red")
+        {
+            OnClickedStartTimerBtn();
+        }
+
+        if (keyName == "yellow")
+        {
+            OnClickedWinnerBtn();
+        }
+
+        if (keyName == "green")
+        {
+            OnClickedRouletteBtn();
+        }
     }
 
     public void OnThemeTypeChanged()
@@ -138,9 +159,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     public void Update()
     {
         if (Input.GetButtonDown("Cancel")) {
-            if (m_homeView == null)
-                m_homeView = new HighAndLowHomeView();
-            ViewManager.Instance.Push(m_homeView);
+            OnClickedTerminalBtn();
         }
 
         if (m_waitTrigger) {
@@ -155,40 +174,9 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
         if (!m_isGameFinished) {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Submit")) {
-                if (m_pokerShowTransform1.childCount == 0) {
-                    PlayFirst();
-                }
-                else if (m_isWaitContinue) {
-                    // 重连继续上一局
-                    AudioManager.Instance.PlaySendPokerEffect();
-                    var backFaceGO = CreatePoker(EPokers.BackFace);
-                    (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
-                    backFaceGO.transform.SetParent(m_pokerShowTransform2);
-                    (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
-                    var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
-                    tween.onComplete += WaitTimer;
-                    m_isWaitContinue = false;
-                }
-                else if (m_isWaitTimer) {
-                    ShowTimer();
-                    m_isWaitTimer = false;
-                }
-                else if (m_isShowTimer) {
-                    m_isShowTimer = false;
-                }
-                else if (m_resultIsShowing){
-                    // 将牌丢弃
-                    PlayLoop();
-                    HideResultButtons();
-                    m_resultIsShowing = false;
-                }
+                OnClickedConfirmBtn();
             }
         }
-    }
-
-    public void OnClickStartButton()
-    {
-
     }
 
     void OnClickedHistoryButton() {
@@ -219,7 +207,39 @@ public class HightAndLowGameView : AbstractView, IViewOperater
 
     void OnClickedWinnerBtn() {
         AudioManager.Instance.PlayKeyStartEffect();
+    }
 
+    void OnClickedConfirmBtn() {
+        if (m_pokerShowTransform1.childCount == 0) {
+            PlayFirst();
+        }
+        else if (m_isWaitContinue) {
+            // 重连继续上一局
+            AudioManager.Instance.PlaySendPokerEffect();
+            var backFaceGO = CreatePoker(EPokers.BackFace);
+            (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
+            backFaceGO.transform.SetParent(m_pokerShowTransform2);
+            (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
+            var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
+            tween.onComplete += WaitTimer;
+            m_isWaitContinue = false;
+        }
+        else if (m_resultIsShowing){
+            // 将牌丢弃
+            PlayLoop();
+            HideResultButtons();
+            m_resultIsShowing = false;
+        }
+    }
+
+    void OnClickedStartTimerBtn() {
+        if (m_isWaitTimer) {
+            ShowTimer();
+            m_isWaitTimer = false;
+        }
+        else if (m_isShowTimer) {
+            m_isShowTimer = false;
+        }
     }
 
     void ShowResultButtons() {

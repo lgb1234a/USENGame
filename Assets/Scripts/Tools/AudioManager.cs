@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 {
     public AudioSource audioSource;
 
+    public AudioSource bingoEffectAudioSource;
     public AudioSource effectAudioSource;
 
     public AudioSource keydownAudioSource;
@@ -98,6 +99,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetEffectVolume(int volume)
     {
+        bingoEffectAudioSource.volume = volume * 0.1f + 0.5f;
         effectAudioSource.volume = volume * 0.1f + 0.5f;
         numberRotateAudioSource.volume = volume * 0.1f + 0.5f;
         keydownAudioSource.volume = volume * 0.1f + 0.5f;
@@ -106,7 +108,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     public async void PlayBingoEffect() {
         fadeCostTime = 1.0f;
         fadeOut = true;
-        effectAudioSource.clip = await ThemeResManager.Instance.GetBingoAudioClip();
+        bingoEffectAudioSource.clip = await ThemeResManager.Instance.GetBingoAudioClip();
 
         StartCoroutine(DelayPlayBingoEffect());
     }
@@ -114,7 +116,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     IEnumerator DelayPlayBingoEffect()
     {
         yield return new WaitForSeconds(fadeCostTime);
-        effectAudioSource.Play();
+        bingoEffectAudioSource.Play();
         StartCoroutine(ResumePlayBgm());
     }
 
@@ -148,9 +150,9 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
     }
 
     public async void PlayReachClickEffect() {
-        effectAudioSource.clip = await ThemeResManager.Instance.GetReachAudioClip();
-        effectAudioSource.loop = false;
-        effectAudioSource.Play();
+        bingoEffectAudioSource.clip = await ThemeResManager.Instance.GetReachAudioClip();
+        bingoEffectAudioSource.loop = false;
+        bingoEffectAudioSource.Play();
     }
 
 

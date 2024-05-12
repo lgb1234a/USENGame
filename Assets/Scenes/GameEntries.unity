@@ -372,7 +372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1478983332}
-  effectAudioSource: {fileID: 2049409159662950911}
+  bingoEffectAudioSource: {fileID: 2049409159662950911}
+  effectAudioSource: {fileID: 0}
   keydownAudioSource: {fileID: 7547651630565141140}
   numberRotateAudioSource: {fileID: 7229244846987170557}
   m_isWillReach: 0
@@ -877,6 +878,11 @@ PrefabInstance:
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 935371028}
+    - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u30C8\u30E9\u30F3\u30D7\u306E\u6570\u5B57\u3092\u4E88\u60F3\u3059\u308B\u982D\u8133\u30B2\u30FC\u30E0\uFF01\u3042\u306A\u305F\u306E\u8A18\u61B6\u529B\u304C\u547D\u904B\u3092\u5206\u3051\u308B\u2026\uFF01\uFF1F"
+      objectReference: {fileID: 0}
     - target: {fileID: 5862899220204269304, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Name
@@ -1197,6 +1203,7 @@ Transform:
   - {fileID: 2049409159662950908}
   - {fileID: 7547651630565141139}
   - {fileID: 7229244846987170556}
+  - {fileID: 1816932793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1327,6 +1334,11 @@ PrefabInstance:
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 1599613014}
+    - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u738B\u69D8\u3092\u306F\u3058\u3081\u591A\u69D8\u306A\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3068\u3058\u3083\u3093\u3051\u3093\u3067\u6226\u304A\u3046\uFF01\u679C\u305F\u3057\u3066\u3042\u306A\u305F\u306F\u52DD\u3064\u3053\u3068\u304C\u3067\u304D\u308B\u306E\u304B\u2026\uFF01\uFF1F"
+      objectReference: {fileID: 0}
     - target: {fileID: 5862899220204269304, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Name
@@ -1568,6 +1580,11 @@ PrefabInstance:
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 1686641323}
+    - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u56F0\u3063\u305F\u6642\u306B\u306F\u30EB\u30FC\u30EC\u30C3\u30C8\uFF01\u30C8\u30FC\u30AF\u30C6\u30FC\u30DE\u3084\u7F70\u30B2\u30FC\u30E0\u306B\u52A0\u3048\u3001\u30AA\u30EA\u30B8\u30CA\u30EB\u30EB\u30FC\u30EC\u30C3\u30C8\u3082\u4F5C\u6210\u3067\u304D\u308B\u306E\u3067\u904A\u3073\u65B9\u81EA\u7531\u81EA\u5728\uFF01"
+      objectReference: {fileID: 0}
     - target: {fileID: 5862899220204269304, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Name
@@ -1859,27 +1876,10 @@ PrefabInstance:
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 1763721258}
-    - target: {fileID: 5862899220014402152, guid: b61d6fdda49a145caa47a386ff40a154,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862899220014402152, guid: b61d6fdda49a145caa47a386ff40a154,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 224.2841
-      objectReference: {fileID: 0}
-    - target: {fileID: 5862899220014402152, guid: b61d6fdda49a145caa47a386ff40a154,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Text
-      value: text text text text text text text text text text text text text text
-        text text text text text text text text text text text text text text text
-        text text text
+      value: "\u591A\u69D8\u306A\u304A\u984C\u3067\u697D\u3057\u3081\u308B\uFF01\u30AA\u30EA\u30B8\u30CA\u30EB\u306E\u304A\u984C\u3082\u4F5C\u6210\u3067\u304D\u308B\u306E\u3067\u76DB\u308A\u4E0A\u304C\u308B\u3053\u3068\u9593\u9055\u3044\u306A\u3057\uFF01\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
@@ -2124,6 +2124,134 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1816932792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816932793}
+  - component: {fileID: 1816932794}
+  m_Layer: 0
+  m_Name: EffectAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1816932793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816932792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1478983330}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1816932794
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816932792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &2049409159662950908
 Transform:
   m_ObjectHideFlags: 0
@@ -2150,7 +2278,7 @@ GameObject:
   - component: {fileID: 2049409159662950908}
   - component: {fileID: 2049409159662950911}
   m_Layer: 0
-  m_Name: EffectAudioSource
+  m_Name: BingoEffectAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2276,6 +2404,11 @@ PrefabInstance:
       propertyPath: m_entryButton
       value: 
       objectReference: {fileID: 1756878950}
+    - target: {fileID: 5862899220014402155, guid: b61d6fdda49a145caa47a386ff40a154,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u30D1\u30FC\u30C6\u30A3\u30FC\u30B2\u30FC\u30E0\u306E\u5B9A\u756A\u30D3\u30F3\u30B4\uFF01TV\u3092\u4F7F\u3063\u3066\u3088\u308A\u83EF\u3084\u304B\u306A\u6F14\u51FA\u3067\u697D\u3057\u3082\u3046\uFF01"
+      objectReference: {fileID: 0}
     - target: {fileID: 5862899220204269304, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
       propertyPath: m_Name
