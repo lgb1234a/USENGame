@@ -18,6 +18,7 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Text m_checkRestCountLabel;
     List<GameObject> m_checkedItemList = new();
     List<int> m_pokerPool = new();
+    Dictionary<int, int> m_pokerRestCount = new();
     List<int> m_checkedPokers = new();
     GameObject m_timer;
     bool m_waitTrigger;
@@ -57,8 +58,15 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         var cachedPokerValues = AppConfig.Instance.CheckedPokers;
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 13; j++) {
-                if (!cachedPokerValues.Contains(i*16+j))
+                if (!cachedPokerValues.Contains(i*16+j)) {
                     m_pokerPool.Add(i*16+j);
+                    if (m_pokerRestCount.ContainsKey(j)) {
+                        m_pokerRestCount[j]++;
+                    }else
+                    {
+                        m_pokerRestCount.Add(j, 1);
+                    }
+                }
                 var itemPath = string.Format("PokerCheckList/CheckedList/{0}_{1}", i, j);
                 m_checkedItemList.Add(m_mainViewGameObject.transform.Find(itemPath).gameObject);
             }
@@ -382,16 +390,40 @@ public class HightAndLowGameView : AbstractView, IViewOperater
             if (shoted) {
                 temp.Add(pokerValue%16 + 48);
             }
+            m_pokerRestCount[m_lastPoker % 16] = 0;
         }
         var pokerIndex = Random.Range(0, m_pokerPool.Count - 1);
 
         var poker = m_pokerPool.ElementAt(pokerIndex);
+        if (m_pokerPool.Count < 5) {
+            var maxRestCount = 0;
+            int maxRestCountPoker = -1;
+            foreach (var item in m_pokerRestCount)
+            {
+                if (item.Value > maxRestCount) {
+                    maxRestCountPoker = item.Key;
+                    maxRestCount = item.Value;
+                }
+            }
+            
+            if (maxRestCount > 1)
+                if (m_pokerPool.Contains(maxRestCountPoker)) 
+                    poker = maxRestCountPoker;
+                else if (m_pokerPool.Contains(maxRestCountPoker + 16))
+                    poker = maxRestCountPoker + 16;
+                else if (m_pokerPool.Contains(maxRestCountPoker + 32))
+                    poker = maxRestCountPoker + 32;
+                else if (m_pokerPool.Contains(maxRestCountPoker + 48))
+                    poker = maxRestCountPoker + 48;
+        }
         foreach (var item in temp)
         {
             m_pokerPool.Add(item);
         }
+        m_pokerRestCount[m_lastPoker % 16] = temp.Count();
         CheckedPoker(poker);
         m_lastPoker = poker;
+        m_pokerRestCount[poker % 16]--;
         return (EPokers)poker;
     }
 
