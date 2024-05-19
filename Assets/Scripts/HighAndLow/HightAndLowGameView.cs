@@ -14,6 +14,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
     Transform m_pokerStartTransform;
     Transform m_pokerShowTransform1;
     Transform m_pokerShowTransform2;
+    GameObject m_pokerShowParticleEffect;
+    GameObject m_pokerShowSmokeEffect;
     Transform m_pokerTrashTransform;
     Text m_checkRestCountLabel;
     List<GameObject> m_checkedItemList = new();
@@ -52,6 +54,8 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         m_pokerStartTransform = m_mainViewGameObject.transform.Find("PokerStart");
         m_pokerShowTransform1 = m_mainViewGameObject.transform.Find("PokerShow1");
         m_pokerShowTransform2 = m_mainViewGameObject.transform.Find("PokerShow2");
+        m_pokerShowParticleEffect = m_mainViewGameObject.transform.Find("PokerShow2/ParticleEffect").gameObject;
+        m_pokerShowSmokeEffect = m_mainViewGameObject.transform.Find("PokerShow2/SmokeEffect").gameObject;
         m_pokerTrashTransform = m_mainViewGameObject.transform.Find("PokerShowTrash");
 
         m_checkRestCountLabel = m_mainViewGameObject.transform.Find("PokerCheckList/RestCountLabel").GetComponent<Text>();
@@ -349,19 +353,39 @@ public class HightAndLowGameView : AbstractView, IViewOperater
         var leftPoker = m_lastPoker;
         var poker = GetRandomPokerFromPool();
         var pokerSprite = GetSpriteWithPoker(poker);
-        var backFaceGO = m_pokerShowTransform2.GetChild(0).gameObject;
-        backFaceGO.GetComponent<Image>().overrideSprite = pokerSprite;
-        backFaceGO.GetComponent<Image>().SetNativeSize();
-        // 判断输赢
-        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker)) {
-            AudioManager.Instance.PlayHighEffect();
-            m_resultHigh.SetActive(true);
-        }
+        var backFaceGO = m_pokerShowTransform2.GetChild(2).gameObject;
 
-        if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker)) {
-            AudioManager.Instance.PlayLowEffect();
-            m_resultLow.SetActive(true);
-        }
+        backFaceGO.transform.DOScale(1.4f, 2).SetLink(backFaceGO).OnComplete(()=> {
+        });
+
+        backFaceGO.transform.DORotate(new Vector3(0, 109.7f, 0), 1).SetDelay(2).SetLink(backFaceGO).OnComplete(()=> {
+            backFaceGO.GetComponent<Image>().overrideSprite = pokerSprite;
+            backFaceGO.GetComponent<Image>().SetNativeSize();
+            backFaceGO.transform.DORotate(new Vector3(0, 0, 0), 1).SetLink(backFaceGO).OnComplete(()=> {
+                m_pokerShowParticleEffect.SetActive(true);
+            });
+        });
+
+        backFaceGO.transform.DOScale(1, 2).SetDelay(4).SetLink(backFaceGO).OnComplete(()=> {
+            m_pokerShowParticleEffect.SetActive(false);
+            m_pokerShowSmokeEffect.SetActive(true);
+        });
+
+        backFaceGO.transform.DOScale(1, 0).SetDelay(6.5f).SetLink(backFaceGO).OnComplete(()=> {
+            m_pokerShowSmokeEffect.SetActive(false);
+            // 判断输赢
+            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker))
+            {
+                AudioManager.Instance.PlayHighEffect();
+                m_resultHigh.SetActive(true);
+            }
+
+            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker))
+            {
+                AudioManager.Instance.PlayLowEffect();
+                m_resultLow.SetActive(true);
+            }
+        });
     }
 
     void HideTimer() {
