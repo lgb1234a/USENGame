@@ -102,7 +102,7 @@
     <Compile Include="Assets/Spine/Editor/spine-unity/Editor/Components/BoundingBoxFollowerGraphicInspector.cs" />
     <Compile Include="Assets/Spine/Editor/spine-unity/Editor/Components/PointFollowerInspector.cs" />
     <Compile Include="Assets/Spine/Editor/spine-unity/Editor/Shaders/SpineSpriteShaderGUI.cs" />
-    <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
+    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Spine/Editor/spine-unity-editor.asmdef" />

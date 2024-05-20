@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetBgmVolume(int volume)
     {
-        audioSource.volume = volume * 0.1f + 0.5f;
+        audioSource.volume = volume * 0.1f;
     }
 
     public async void PlayWillReachBgm(float delay = 0f) {
@@ -99,10 +99,10 @@ public class AudioManager : MonoBehaviourSingletonTemplate<AudioManager>
 
     public void SetEffectVolume(int volume)
     {
-        bingoEffectAudioSource.volume = volume * 0.1f + 0.5f;
-        effectAudioSource.volume = volume * 0.1f + 0.5f;
-        numberRotateAudioSource.volume = volume * 0.1f + 0.5f;
-        keydownAudioSource.volume = volume * 0.1f + 0.5f;
+        bingoEffectAudioSource.volume = volume * 0.1f;
+        effectAudioSource.volume = volume * 0.1f;
+        numberRotateAudioSource.volume = volume * 0.1f;
+        keydownAudioSource.volume = volume * 0.1f;
     }
 
     public async void PlayBingoEffect() {

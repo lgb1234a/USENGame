@@ -9,7 +9,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
     Button Btn1;
     Button Btn2;
     HighAndLowRouletteView m_faqView;
-    HightAndLowGameView m_gameView;
+    HighAndLowGameView m_gameView;
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
@@ -71,7 +71,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
     public void OnClickedBtn1()
     {
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         }
         ViewManager.Instance.Push(m_gameView);
     }
@@ -79,7 +79,7 @@ public class RouletteQuitView : AbstractView, IViewOperater
     public void OnClickedBtn2()
     {
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         }
         ViewManager.Instance.Push(m_gameView);
     }

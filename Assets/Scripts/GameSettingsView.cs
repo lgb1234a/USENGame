@@ -169,13 +169,13 @@ public class GameSettingsView : MonoBehaviour
     }
 
     public void OnBgmVolumeSliderValueChanged(float value) {
-        m_BGMVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
+        m_BGMVolumeText.text = string.Format("{0}%", value * 10);
         AppConfig.Instance.BGMVolume = Mathf.FloorToInt(value);
         AudioManager.Instance.SetBgmVolume((int)value);
     }
 
     public void OnVolumeEffectValueChanged(float value) {
-        m_EffectVolumeText.text = Mathf.FloorToInt(value).ToString("+#;-#;0");
+        m_EffectVolumeText.text = string.Format("{0}%", value * 10);
         AppConfig.Instance.EffectVolume = Mathf.FloorToInt(value);
         AudioManager.Instance.SetEffectVolume((int)value);
         if (m_isPresettingEffectVolume) return;

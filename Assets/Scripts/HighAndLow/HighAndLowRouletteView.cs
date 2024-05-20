@@ -10,7 +10,7 @@ public class HighAndLowRouletteView : AbstractView, IViewOperater
 {
     string m_prefabPath = "HighAndLow/HighAndLowRoulettePanel";
     Button m_startBtn;
-    HightAndLowGameView m_gameView;
+    HighAndLowGameView m_gameView;
     List<GameObject> m_rouletteGOs = new List<GameObject>();
     GameObject m_rouletteRotateGO;
     List<GameObject> m_behaviourOptions = new List<GameObject>();
@@ -106,7 +106,7 @@ public class HighAndLowRouletteView : AbstractView, IViewOperater
     void OnClickedBackButton()
     {
         if (m_gameView == null)
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         ViewManager.Instance.Push(m_gameView);
     }
 

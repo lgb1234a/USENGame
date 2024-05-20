@@ -16,7 +16,7 @@ public class RouletteEditView : AbstractView, IViewOperater
     Button m_saveAndQuitBtn;
     Button m_deleteBtn;
     HighAndLowRouletteView m_faqView;
-    HightAndLowGameView m_gameView;
+    HighAndLowGameView m_gameView;
     bool m_canDelete;
 
     public RouletteEditView(bool canDelete = false) {

@@ -62,6 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ef308e63283185340900fc45bb28ef85, type: 3}
   - {fileID: 21300000, guid: c46612b3bf09e2b49902c055c0ac934e, type: 3}
   - {fileID: 21300000, guid: 2f3ae11408c143b4692a3c1a25b2d954, type: 3}
+  - {fileID: 21300000, guid: caef90d47e6db4197973a822d670fdb6, type: 3}
   - {fileID: 21300000, guid: 64de59e51debb4e4ba9c14aa35256300, type: 3}
   - {fileID: 21300000, guid: 197a8146508f51d498e36ea4d3288525, type: 3}
   - {fileID: 21300000, guid: ccbadea6402841d41aa3eee99bf2b98c, type: 3}
@@ -83,6 +84,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: ed64c2dc69e06cb459efc128f06f8138, type: 3}
   - {fileID: 21300000, guid: d4af542dab5f86a43bd5c22b36945b90, type: 3}
   - {fileID: 21300000, guid: 794a7c4d571d33e499b2ca89eec16815, type: 3}
+  - {fileID: 21300000, guid: 0779259db5e074455a2df33c5598257e, type: 3}
   - {fileID: 21300000, guid: 7eaa1b2e95d7e9f4780b5efc16ecc69b, type: 3}
   - {fileID: 21300000, guid: b5b58d8e544a99b4e95e46a20f198bb4, type: 3}
   - {fileID: 21300000, guid: 004cea0f9a50ca1418bf3a28fbec586c, type: 3}
@@ -102,6 +104,7 @@ SpriteAtlas:
   - tab_center_normal
   - bt_reload_active
   - square_red
+  - volume_slider_bg
   - bingo_award_number_bg1
   - settings_right
   - setting_move_left_right
@@ -123,6 +126,7 @@ SpriteAtlas:
   - setting_audition
   - bt_start_active
   - focus
+  - volume_slider_fill
   - bt_reload_normal
   - square_blue
   - square_green

@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1478983332}
   bingoEffectAudioSource: {fileID: 2049409159662950911}
-  effectAudioSource: {fileID: 0}
+  effectAudioSource: {fileID: 1816932794}
   keydownAudioSource: {fileID: 7547651630565141140}
   numberRotateAudioSource: {fileID: 7229244846987170557}
   m_isWillReach: 0

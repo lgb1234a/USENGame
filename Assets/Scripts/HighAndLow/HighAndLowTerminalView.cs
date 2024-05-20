@@ -8,7 +8,7 @@ public class HighAndLowTerminalView : AbstractView
     Button m_backGameButton;
     Button m_pauseButton;
     Button m_terminalButton;
-    HightAndLowGameView m_gameView;
+    HighAndLowGameView m_gameView;
     HighAndLowHomeView m_homeView;
     public void Build(Transform parent)
     {

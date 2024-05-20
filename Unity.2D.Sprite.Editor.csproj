@@ -94,7 +94,7 @@
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/TextureImporterDataProvider.cs" />
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteRect.cs" />
     <Compile Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/Interface/IGL.cs" />
-    <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
+    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/UI/SpriteEditor/SpriteFrameModuleInspector.uxml" />

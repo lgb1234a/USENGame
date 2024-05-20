@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms;
 using System.Linq;
 using DG.Tweening;
 
-public class HightAndLowGameView : AbstractView, IViewOperater
+public class HighAndLowGameView : AbstractView, IViewOperater
 {
     string m_prefabPath = "HighAndLow/HighAndLowGamePanel";
     HighAndLowHistoryView m_historyView;

@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{3C0B1FB8-B281-8612-52D3-F10031525FB0}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HighAndLow/HighAndLowHomeView.cs">
     <Files>
-      <File FileName="Assets/Scripts/Tools/NewClass.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/HighAndLow/HightAndLowGameView.cs" Line="358" Column="77" />
+      <File FileName="Assets/Scripts/HighAndLow/HightAndLowGameView.cs" Line="210" Column="31" />
+      <File FileName="Assets/Scripts/GameSettingsView.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/HighAndLow/NewClass.cs" Line="159" Column="32" />
+      <File FileName="Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,9 +13,8 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="HighAndLow" expanded="True">
-                  <Node name="HightAndLowGameView.cs" selected="True" />
+                  <Node name="HighAndLowHomeView.cs" selected="True" />
                 </Node>
-                <Node name="Tools" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="af5324cb-1973-41ef-9b02-761b2cbdd155" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1110bbd7-906e-4fc9-beff-9c945d97aaa5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

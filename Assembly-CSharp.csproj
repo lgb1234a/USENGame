@@ -120,6 +120,7 @@
     <Compile Include="Assets/Scripts/Bingo/AwardNumObj.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
+    <Compile Include="Assets/Scripts/Tools/SequenceSprite.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Scripts/TerminalView.cs" />
@@ -149,7 +150,7 @@
     <Compile Include="Assets/Scripts/Tools/SkipSplash.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/Scripts/Bingo/BingoHomeView.cs" />
-    <Compile Include="Assets/Scripts/Tools/SequenceSprite.cs" />
+    <Compile Include="Assets/Scripts/HighAndLow/HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

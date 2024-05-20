@@ -11,7 +11,7 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
     Text m_restCountLabel;
     Button m_backButton;
     List<int> m_checkedPokers;
-    HightAndLowGameView m_gameView;
+    HighAndLowGameView m_gameView;
 
     public HighAndLowHistoryView(List<int> checkedPokers) {
         m_checkedPokers = checkedPokers;
@@ -62,7 +62,7 @@ public class HighAndLowHistoryView : AbstractView, IViewOperater
 
     void OnClickedBackButton() {
         if (m_gameView == null)
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         ViewManager.Instance.Push(m_gameView);
     }
 }

@@ -8,7 +8,9 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
 {
     string m_prefabPath = "HighAndLow/HighAndLowHomePanel";
     Button m_startBtn;
-    HightAndLowGameView m_gameView;
+    Button m_settingsBtn;
+    HighAndLowGameView m_gameView;
+    HighAndLowSettingsView m_settingsView;
 
     GameObject m_resetPanel;
     Button m_resetBtn;
@@ -20,6 +22,9 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
         m_startBtn = m_mainViewGameObject.transform.Find("StartBtn").GetComponent<Button>();
         m_startBtn.onClick.AddListener(OnClickStartButton);
         AudioManager.Instance.PlayLowAndHighBGM();
+
+        m_settingsBtn = m_mainViewGameObject.transform.Find("SettingsBtn").GetComponent<Button>();
+        m_settingsBtn.onClick.AddListener(OnClickSettingsButton);
 
         m_resetPanel = m_mainViewGameObject.transform.Find("ResetPanel").gameObject;
         m_resetBtn = m_mainViewGameObject.transform.Find("ResetPanel/ResetBtn").GetComponent<Button>();
@@ -65,9 +70,18 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
 
         AudioManager.Instance.PlayKeyStartEffect();
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         }
         ViewManager.Instance.Push(m_gameView);
+    }
+
+    public void OnClickSettingsButton()
+    {
+        if (m_settingsView == null)
+        {
+            m_settingsView = new HighAndLowSettingsView();
+        }
+        ViewManager.Instance.Push(m_settingsView);
     }
 
     void ShowResetAlertView() {
@@ -91,7 +105,7 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
         
         AudioManager.Instance.PlayKeyStartEffect();
         if (m_gameView == null) {
-            m_gameView = new HightAndLowGameView();
+            m_gameView = new HighAndLowGameView();
         }
         ViewManager.Instance.Push(m_gameView);
     }
