@@ -143,7 +143,6 @@
     <Compile Include="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/PointerInputModule.cs" />
     <Compile Include="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/TouchInputModule.cs" />
     <Compile Include="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/RaycasterManager.cs" />
-    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UnityEngine.UI.asmdef" />

@@ -116,7 +116,6 @@
     <Compile Include="Assets/Spine/Runtime/spine-unity/Components/RootMotion/SkeletonRootMotionBase.cs" />
     <Compile Include="Assets/Spine/Runtime/spine-unity/Components/Following/BoundingBoxFollower.cs" />
     <Compile Include="Assets/Spine/Runtime/spine-unity/ISkeletonAnimation.cs" />
-    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Spine/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Lit-Outline.shader" />

@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/Editor/EditorTool.cs" />
-    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/DOTween/Editor/DOTweenEditor.XML" />

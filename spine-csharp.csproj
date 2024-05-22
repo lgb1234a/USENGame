@@ -103,7 +103,6 @@
     <Compile Include="Assets/Spine/Runtime/spine-csharp/ConstraintData.cs" />
     <Compile Include="Assets/Spine/Runtime/spine-csharp/Attachments/VertexAttachment.cs" />
     <Compile Include="Assets/Spine/Runtime/spine-csharp/Bone.cs" />
-    <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Spine/Runtime/spine-csharp/spine-csharp.asmdef" />

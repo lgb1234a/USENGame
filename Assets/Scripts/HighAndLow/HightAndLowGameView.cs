@@ -294,7 +294,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         (leftPokerGO.transform as RectTransform).DOLocalRotate(new Vector3(0,0,angle), 1).SetLink(leftPokerGO);
 
 
-        var rightPokerGO = m_pokerShowTransform2.GetChild(0).gameObject;
+        var rightPokerGO = m_pokerShowTransform2.GetChild(2).gameObject;
         rightPokerGO.transform.SetParent(m_pokerShowTransform1);
         (rightPokerGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(rightPokerGO);
 
@@ -347,7 +347,6 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     void ShowResult() {
         HideTimer();
-        m_resultIsShowing = true;
         ShowResultButtons();
 
         var leftPoker = m_lastPoker;
@@ -385,6 +384,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
                 AudioManager.Instance.PlayLowEffect();
                 m_resultLow.SetActive(true);
             }
+            m_resultIsShowing = true;
         });
     }
 
