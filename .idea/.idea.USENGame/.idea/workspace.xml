@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-csharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-examples-editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-examples-editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-examples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-examples.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/6f/180225a2/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -32,6 +34,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "luna-dev",
@@ -77,10 +80,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="44292">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="44292" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -96,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716788153506</updated>
-      <workItem from="1716788155698" duration="1134000" />
+      <workItem from="1716788155698" duration="15986000" />
     </task>
     <servers />
   </component>
@@ -118,5 +121,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs</url>
+          <line>348</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\HighAndLow\HightAndLowGameView.cs" initialLine="333" containingFunctionPresentation="Method 'UpdateTimeLabel'">
+            <startOffsets>
+              <option value="13112" />
+            </startOffsets>
+            <endOffsets>
+              <option value="13131" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs</url>
+          <line>351</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\HighAndLow\HightAndLowGameView.cs" initialLine="336" containingFunctionPresentation="Method 'UpdateTimeLabel'">
+            <startOffsets>
+              <option value="13201" />
+            </startOffsets>
+            <endOffsets>
+              <option value="13241" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
