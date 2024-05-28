@@ -92,7 +92,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_startTimerBtn = m_mainViewGameObject.transform.Find("BottomPanel/StartTimerBtn").GetComponent<Button>();
         m_startTimerBtn.onClick.AddListener(OnClickedStartTimerBtn);
 
-        m_pokerTemplate = m_mainViewGameObject.transform.Find("PokerTemplate").gameObject;
+        m_pokerTemplate = m_mainViewGameObject.transform.Find("Poker2D").gameObject;
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
         m_resultHigh = m_mainViewGameObject.transform.Find("ResultHigh").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
@@ -177,11 +177,17 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
         if (m_waitTrigger) {
             if (Input.GetKeyDown(KeyCode.UpArrow)) {
-
                 m_waitTrigger = false;
             }else if (Input.GetKeyDown(KeyCode.DownArrow)) {
-
                 m_waitTrigger = false;
+            }
+        }
+        
+        if (m_isShowTimer) {
+            if (Input.GetKeyDown(KeyCode.UpArrow)) {
+                m_isShowTimer = false;
+            }else if (Input.GetKeyDown(KeyCode.DownArrow)) {
+                m_isShowTimer = false;
             }
         }
 
@@ -276,10 +282,10 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         (pokerGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(pokerGO);
 
         var backFaceGO = CreatePoker(EPokers.BackFace);
-        (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
+        (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 180f, 60f);
         backFaceGO.transform.SetParent(m_pokerShowTransform2);
         (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetDelay(2).SetLink(backFaceGO);
-        var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetDelay(2).SetLink(backFaceGO);
+        var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(new Vector3(0f, 180f, 0f), 1).SetDelay(2).SetLink(backFaceGO);
         tween.onComplete += WaitTimer;
     }
 
@@ -299,10 +305,10 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         (rightPokerGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(rightPokerGO);
 
         var backFaceGO = CreatePoker(EPokers.BackFace);
-        (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
+        (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 180f, 60f);
         backFaceGO.transform.SetParent(m_pokerShowTransform2);
         (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
-        var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
+        var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(new Vector3(0f, 180f, 0f), 1).SetLink(backFaceGO);
         tween.onComplete += WaitTimer;
     }
 
@@ -314,13 +320,14 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         AudioManager.Instance.PlayTimerStartEffect();
         m_timer.SetActive(true);
         m_waitTrigger = true;
+        m_isShowTimer = true;
 
         ViewManager.Instance.StartCoroutine(UpdateTimeLabel());
     }
 
     IEnumerator<WaitForSeconds> UpdateTimeLabel() {
         var timer = AppConfig.Instance.CurrentHighAndLowTimer + 1;
-        m_isShowTimer = true;
+        // m_isShowTimer = true;
         
         if (AppConfig.Instance.CurrentHighAndLowTimer == 10) {
             AudioManager.Instance.Play10SecondTimerEffect();
@@ -350,21 +357,23 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         ShowResultButtons();
 
         var leftPoker = m_lastPoker;
-        var poker = GetRandomPokerFromPool();
-        var pokerSprite = GetSpriteWithPoker(poker);
+        var pokerType = GetRandomPokerFromPool();
+        var pokerSprite = GetSpriteWithPoker(pokerType);
+        
         var backFaceGO = m_pokerShowTransform2.GetChild(2).gameObject;
+        
+        // Set front side of poker
+        var poker = backFaceGO.GetComponent<Poker2D>();
+        if (pokerType != EPokers.BackFace)
+            poker.front = GetSpriteWithPoker(pokerType);
 
         backFaceGO.transform.DOScale(1.4f, 2).SetLink(backFaceGO).OnComplete(()=> {
         });
-
-        backFaceGO.transform.DORotate(new Vector3(0, 109.7f, 0), 1).SetDelay(2).SetLink(backFaceGO).OnComplete(()=> {
-            backFaceGO.GetComponent<Image>().overrideSprite = pokerSprite;
-            backFaceGO.GetComponent<Image>().SetNativeSize();
-            backFaceGO.transform.DORotate(new Vector3(0, 0, 0), 1).SetLink(backFaceGO).OnComplete(()=> {
-                m_pokerShowParticleEffect.SetActive(true);
-            });
+        
+        backFaceGO.transform.DORotate(Vector3.zero, 2).SetDelay(2).SetLink(backFaceGO).OnComplete(()=> {
+            m_pokerShowParticleEffect.SetActive(true);
         });
-
+        
         backFaceGO.transform.DOScale(1, 2).SetDelay(4).SetLink(backFaceGO).OnComplete(()=> {
             m_pokerShowParticleEffect.SetActive(false);
             m_pokerShowSmokeEffect.SetActive(true);
@@ -373,13 +382,13 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         backFaceGO.transform.DOScale(1, 0).SetDelay(6.5f).SetLink(backFaceGO).OnComplete(()=> {
             m_pokerShowSmokeEffect.SetActive(false);
             // 判断输赢
-            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(poker))
+            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(pokerType))
             {
                 AudioManager.Instance.PlayHighEffect();
                 m_resultHigh.SetActive(true);
             }
 
-            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(poker))
+            if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(pokerType))
             {
                 AudioManager.Instance.PlayLowEffect();
                 m_resultLow.SetActive(true);
@@ -461,14 +470,17 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         return Load<Sprite>(path);
     }
 
-    GameObject CreatePoker(EPokers poker) {
+    GameObject CreatePoker(EPokers pokerType) {
         var pokerGO = GameObject.Instantiate(m_pokerTemplate, m_pokerStartTransform, false);
+        var poker = pokerGO.GetComponent<Poker2D>();
         pokerGO.SetActive(true);
-        if (poker == EPokers.BackFace) {
-            pokerGO.GetComponent<Image>().overrideSprite = Load<Sprite>("HighAndLow/Pokers/backface");
-        }else {
-            pokerGO.GetComponent<Image>().overrideSprite = GetSpriteWithPoker(poker);
-        }
+        // if (pokerType == EPokers.BackFace) {
+        //     pokerGO.GetComponent<Image>().overrideSprite = Load<Sprite>("HighAndLow/Pokers/backface");
+        // }else {
+        //     pokerGO.GetComponent<Image>().overrideSprite = GetSpriteWithPoker(poker);
+        // }
+        if (pokerType != EPokers.BackFace)
+            poker.front = GetSpriteWithPoker(pokerType);
         pokerGO.GetComponent<Image>().SetNativeSize();
         return pokerGO;
     }
