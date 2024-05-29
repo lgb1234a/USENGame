@@ -43,19 +43,26 @@
   <ItemGroup>
      <Compile Include="Assets\Spine\Runtime\spine-csharp\TextureRegion.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Animation.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\BoneData.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\Sequence.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationState.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraintData.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AtlasAttachmentLoader.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Event.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonData.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\ExposedList.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraint.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\EventData.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\TransformConstraintData.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\RegionAttachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AttachmentLoader.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraint.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\MathUtils.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Skeleton.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\BoundingBoxAttachment.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Slot.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonJson.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\VertexAttachment.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\BoneData.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationState.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraintData.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\AtlasAttachmentLoader.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\Event.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\ExposedList.cs" />
+     <Compile Include="Assets\Spine\Runtime\spine-csharp\IkConstraint.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\IUpdatable.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Json.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\PathAttachment.cs" />
@@ -66,25 +73,18 @@
      <Compile Include="Assets\Spine\Runtime\spine-csharp\BlendMode.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\MeshAttachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\TransformConstraint.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraint.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\Attachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\PathConstraintData.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\MathUtils.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Skin.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\IHasTextureRegion.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Skeleton.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Triangulator.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonClipping.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\BoundingBoxAttachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBinary.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Slot.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\AnimationStateData.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonJson.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\PointAttachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Atlas.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\SkeletonBounds.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\ConstraintData.cs" />
-     <Compile Include="Assets\Spine\Runtime\spine-csharp\Attachments\VertexAttachment.cs" />
      <Compile Include="Assets\Spine\Runtime\spine-csharp\Bone.cs" />
      <None Include="Assets\Spine\Runtime\spine-csharp\spine-csharp.asmdef" />
      <None Include="Assets\Spine\Runtime\spine-csharp\package.json" />
@@ -345,29 +345,20 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Sirenix.Reflection.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     <Reference Include="Sirenix.OdinValidator.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.Reflection.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -375,20 +366,29 @@
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinValidator.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

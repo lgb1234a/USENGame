@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bfe5abdb3ed2d4b5a8a2e0a3aeb724d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83aee71ef86c940bc8613b8d4dedd541, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   front: {fileID: 21300000, guid: 83aee71ef86c940bc8613b8d4dedd541, type: 3}
   back: {fileID: 21300000, guid: 7de0aef560b8de94bb03b01482b386df, type: 3}
+  perspective: 1
 --- !u!114 &1577134853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,13 +115,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7664625207537207562}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52c162dc854d2f24fa639ba0623de5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 49.78
-  spread: 0.504
+  size: 0
+  spread: 0.5
   useGlobalAngle: 0
   offsetAngle: 90
   offsetDistance: 0

@@ -299,29 +299,20 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Sirenix.Reflection.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     <Reference Include="Sirenix.OdinValidator.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.Reflection.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -329,20 +320,29 @@
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinValidator.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

@@ -41,22 +41,22 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\HotDogCard.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Inspiration\Scripts\DirectionalKnob.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\SwipeView\LeftRightSwipeView.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\FpsCounter.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\GradientSlider.cs" />
      <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\HotDogSwipeView.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Symbols\OpenUrl.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\HotDogCard.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\SwipeView\SwipeView.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\AdsrEnvelop.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\SwipeView\LeftRightSwipeView.cs" />
      <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\BarGraphBar.cs" />
      <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\SwipeView\Swipable.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\BarGraph.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Symbols\SymbolsManager.cs" />
      <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\AdsrBarGraphSource.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Inspiration\Scripts\ToggleSwitchAnimation.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\AdsrEnvelop.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\GradientSlider.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Inspiration\Scripts\DirectionalKnob.cs" />
      <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\HotDogSprite.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Symbols\OpenUrl.cs" />
-     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\SwipeView\SwipeView.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Symbols\SymbolsManager.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Swipe\Scripts\FpsCounter.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Neumorphism\Scripts\BarGraph.cs" />
+     <Compile Include="Assets\Samples\UI Shadow\1.5.0\Examples\Inspiration\Scripts\ToggleSwitchAnimation.cs" />
      <Folder Include="Assets\Samples\UI Shadow\1.5.0\Examples\Inspiration\Scripts" />
      <None Include="Assets\Samples\UI Shadow\1.5.0\Examples\LeTai.TrueShadow.Demo.asmdef" />
      <Folder Include="Assets\Samples\UI Shadow\1.5.0\Examples\Full Colors\Sprites" />
@@ -333,29 +333,20 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Sirenix.Reflection.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     <Reference Include="Sirenix.OdinValidator.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.Reflection.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -363,20 +354,29 @@
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinValidator.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

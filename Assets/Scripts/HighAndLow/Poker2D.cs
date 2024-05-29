@@ -1,5 +1,9 @@
 // Created by LunarEclipse on 2024-5-28 3:23.
 
+using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
+using LeTai.TrueShadow;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
@@ -14,6 +18,7 @@ public class Poker2D : MonoBehaviour
     
     private Image _image;
     private UIFlippable _flippable;
+    private TrueShadow _shadow;
     
     private Camera _mainCamera;
     
@@ -21,6 +26,7 @@ public class Poker2D : MonoBehaviour
     {
         _image = GetComponent<Image>();
         _flippable = GetComponent<UIFlippable>();
+        _shadow = GetComponent<TrueShadow>();
     }
     
     private void Start()
@@ -43,14 +49,27 @@ public class Poker2D : MonoBehaviour
             _flippable.horizontal = false;
         }
 
-        // if (Input.anyKey)
-        // {
-        //     transform.DORotate(new Vector3(0, transform.rotation.eulerAngles.y - 180f, 0), 2).OnUpdate(()=> {
-        //         
-        //     }).OnComplete(()=> {
-        //         
-        //     });
-        // }
+        if (Input.anyKey)
+        {
+            // transform.DORotate(new Vector3(0, transform.rotation.eulerAngles.y - 180f, 0), 2).OnUpdate(()=> {
+            //     
+            // }).OnComplete(()=> {
+            //     
+            // });
+        }
+    }
+    
+    public TweenerCore<float, float, FloatOptions> PlayShineAnimation(float tensity = 100f, float duration = 1f)
+    {
+        if (!_shadow.enabled)
+            _shadow.enabled = true;
+        
+        return DOTween.To(() => _shadow.Size, x => _shadow.Size = x, tensity, duration)
+            .SetEase(Ease.InSine)
+            .OnComplete(()=> {
+                _shadow.enabled = false;
+                _shadow.Size = 0;
+            });
     }
     
     private bool IsFacingCamera()

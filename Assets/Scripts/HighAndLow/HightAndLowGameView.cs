@@ -367,19 +367,28 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         if (pokerType != EPokers.BackFace)
             poker.front = GetSpriteWithPoker(pokerType);
 
-        backFaceGO.transform.DOScale(1.4f, 2).SetLink(backFaceGO).OnComplete(()=> {
-        });
+        var scale1 = backFaceGO.transform.DOScale(1.4f, 1).SetLink(backFaceGO).OnComplete(()=> {});
         
-        backFaceGO.transform.DORotate(Vector3.zero, 2).SetDelay(2).SetLink(backFaceGO).OnComplete(()=> {
+        var rotate1 = backFaceGO.transform.DORotate(Vector3.zero, 1).SetDelay(0).SetLink(backFaceGO).OnComplete(()=> {
             m_pokerShowParticleEffect.SetActive(true);
         });
         
-        backFaceGO.transform.DOScale(1, 2).SetDelay(4).SetLink(backFaceGO).OnComplete(()=> {
+        var a3 = poker.PlayShineAnimation().OnComplete(()=> {});
+        var a4 = poker.PlayShineAnimation(0f, 0.5f).SetDelay(1f).OnComplete(()=> {});
+        
+        var punchScale = backFaceGO.transform.DOScale(1.6f, 0.2f).SetDelay(0).SetEase(Ease.InSine).SetLink(backFaceGO).OnComplete(()=> {});
+        
+        var scale2 = backFaceGO.transform
+            .DOScale(1, 0.4f)
+            .SetDelay(0)
+            .SetEase(Ease.OutSine)
+            .SetLink(backFaceGO)
+            .OnComplete(()=> {
             m_pokerShowParticleEffect.SetActive(false);
             m_pokerShowSmokeEffect.SetActive(true);
         });
-
-        backFaceGO.transform.DOScale(1, 0).SetDelay(6.5f).SetLink(backFaceGO).OnComplete(()=> {
+        
+        var scale3 =backFaceGO.transform.DOScale(1, 0).SetDelay(0).SetLink(backFaceGO).OnComplete(()=> {
             m_pokerShowSmokeEffect.SetActive(false);
             // 判断输赢
             if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(pokerType))
@@ -395,6 +404,15 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
             m_resultIsShowing = true;
         });
+        
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(scale1);
+        sequence.Append(rotate1);
+        sequence.Append(a3);
+        sequence.Append(a4);
+        sequence.Append(punchScale);
+        sequence.Append(scale2);
+        sequence.Append(scale3);
     }
 
     void HideTimer() {

@@ -42,72 +42,43 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-     <Compile Include="Assets\Scripts\USENSceneManager.cs" />
-     <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\ResManager\IThemeRes.cs" />
-     <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameView.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoSettingsView.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-     <Compile Include="Assets\Scripts\GameSettingsView.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\ToastView.cs" />
-     <Compile Include="Assets\Scripts\Roulette\RouletteGameQuitView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-     <Compile Include="Assets\Scripts\ResManager\EThemeTypes.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Scripts\ViewManager.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteContentEditView.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteOriginView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HightAndLowGameView.cs" />
      <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
      <Compile Include="Assets\Scripts\Tools\FPS.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Scripts\Bingo\BingoGameView.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\ResourceLoader.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteHomeView.cs" />
-     <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
-     <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
      <Compile Include="Assets\Scripts\Tools\Loading.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoAboutView.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-     <Compile Include="Assets\Scripts\Roulette\RouletteChooseView.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-     <Compile Include="Assets\Scripts\Roulette\RouletteEditView.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\GameEntry.cs" />
      <Compile Include="Assets\Scripts\Tools\KeyBoardSelector.cs" />
      <Compile Include="Assets\Scripts\Bingo\CellHandler.cs" />
      <Compile Include="Assets\Scripts\Bingo\AwardNumObj.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-     <Compile Include="Assets\Scripts\TerminalView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
      <Compile Include="Assets\Scripts\SplashManager.cs" />
@@ -115,26 +86,55 @@
      <Compile Include="Assets\Scripts\AbstractView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\GameSelector.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowRouletteView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Scripts\HighAndLow\Poker2D.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHistoryView.cs" />
      <Compile Include="Assets\Scripts\Tools\AppConfig.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowTerminalView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\Scripts\USENSceneManager.cs" />
+     <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\Scripts\GameSettingsView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
+     <Compile Include="Assets\Scripts\Roulette\RouletteGameQuitView.cs" />
+     <Compile Include="Assets\Scripts\ResManager\EThemeTypes.cs" />
+     <Compile Include="Assets\Scripts\ViewManager.cs" />
+     <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Scripts\Bingo\BingoGameView.cs" />
+     <Compile Include="Assets\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
+     <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\Scripts\Roulette\RouletteChooseView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+     <Compile Include="Assets\Scripts\Roulette\RouletteEditView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+     <Compile Include="Assets\Scripts\TerminalView.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\Tools\ScrollContentTacker.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoHomeView.cs" />
-     <Compile Include="Assets\Scripts\HighAndLow\Poker2D.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Spine" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -490,14 +490,11 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
      <Reference Include="Sirenix.Reflection.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.OdinValidator.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -511,14 +508,17 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinValidator.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -886,8 +886,14 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Postprocessing.Runtime">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     <Reference Include="LeTai.TrueShadow.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
+     <Reference Include="LeTai.TrueShadow">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -895,8 +901,11 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <Reference Include="Unity.Addressables">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Localization">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -907,6 +916,9 @@
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="UniTask.DOTween">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
@@ -916,53 +928,17 @@
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="SingularityGroup.HotReload.Runtime.Public">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\SingularityGroup.HotReload.Runtime.Public.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Addressables">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ResourceManager">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Addressables.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Localization.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Localization">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UniTask.Addressables">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
-     </Reference>
-     <Reference Include="UniTask.DOTween">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
-     </Reference>
-     <Reference Include="UniTask">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.dll</HintPath>
      </Reference>
      <Reference Include="UniTask.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
@@ -970,14 +946,38 @@
      <Reference Include="UniTask.Linq">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
      </Reference>
-     <Reference Include="LeTai.TrueShadow.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="LeTai.TrueShadow">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.dll</HintPath>
+     <Reference Include="Unity.Localization.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityUIExtensions">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Postprocessing.Runtime">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.dll</HintPath>
+     </Reference>
+     <Reference Include="SingularityGroup.HotReload.Runtime.Public">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\SingularityGroup.HotReload.Runtime.Public.dll</HintPath>
+     </Reference>
+     <Reference Include="UniTask.Addressables">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
@@ -1000,6 +1000,18 @@
       <Project>{b90dbe17-8293-5278-fc25-dd0c72c9a84c}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
+      <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
+      <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
+      <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
       <Project>{a7ba3dff-f7b6-8576-f89a-002f3b824808}</Project>
       <Name>spine-unity-editor</Name>
@@ -1007,18 +1019,6 @@
     <ProjectReference Include="spine-csharp.csproj">
       <Project>{6a410821-b19b-85aa-1662-730e9dfd28b5}</Project>
       <Name>spine-csharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
-      <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
-      <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
-      <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TrueShadow.Demo.csproj">
       <Project>{6287707f-6416-e663-48dd-bee15615596e}</Project>

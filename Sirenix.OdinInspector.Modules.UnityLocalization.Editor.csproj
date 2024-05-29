@@ -41,28 +41,28 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\LocalizationSupport.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Windows\OdinLocalizationEditorWindow.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinGUITable.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinStringTableCollectionEditor.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationGUITextures.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationReflectionValidator.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Configs\OdinLocalizationConfig.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinGUITableCollection.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationEvents.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinTableCollectionEditor.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationAssetCache.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationSyntaxHighlighter.cs" />
      <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationReflectionValues.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationEditorSettings.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinSharedEntryCollection.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\OdinLocalizationConstants.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinTemplateMetadata.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\Toggle.cs" />
-     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationGUI.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinGUITable.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinTableCollectionEditor.cs" />
      <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinAssetTableCollectionEditor.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationGUI.cs" />
      <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\LocalizationMetadata.cs" />
      <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationMetadataRegistry.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Windows\OdinLocalizationEditorWindow.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationAssetCache.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\LocalizationSupport.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinGUITableCollection.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationSyntaxHighlighter.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationGUITextures.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinTemplateMetadata.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinSharedEntryCollection.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationReflectionValidator.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationEvents.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\OdinStringTableCollectionEditor.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Configs\OdinLocalizationConfig.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\OdinLocalizationConstants.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Internal\OdinLocalizationEditorSettings.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\GUI\Toggle.cs" />
      <Folder Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Windows" />
      <Folder Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Configs" />
      <None Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Localization\Editor\Sirenix.OdinInspector.Modules.UnityLocalization.Editor.asmdef" />
@@ -327,29 +327,20 @@
      <Reference Include="UnityEditor.WindowsStandalone.Extensions">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="Sirenix.Reflection.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="unityplastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="log4netPlastic">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     <Reference Include="Sirenix.OdinValidator.Editor">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.Reflection.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+     <Reference Include="Unity.Plastic.Antlr3.Runtime">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
@@ -357,20 +348,29 @@
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
      </Reference>
+     <Reference Include="unityplastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="log4netPlastic">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.collab-proxy@2.0.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinValidator.Editor">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinValidator.Editor.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
