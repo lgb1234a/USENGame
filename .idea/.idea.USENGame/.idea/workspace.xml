@@ -6,22 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Pokers/Poker2D.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Pokers/Poker2D.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TrueShadow.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TrueShadow.Demo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-csharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-csharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-examples-editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-examples-editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity-examples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity-examples.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spine-unity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/spine-unity.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +22,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/48/a5e6270c/Tween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/6f/180225a2/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/95/2ad5a32b/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b2d7d59817e4af1a45d9ca0b0f44c327e00/1f/6f171761/VideoPlayer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3c66fd2767c44a085aa0b03bbe98b2c7400/f6/5b276bf7/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/58/b235978f/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/65/de8bbfb6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
@@ -48,6 +36,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2h2NKvuRbCzjAHaMiyTutCAi0Cd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -122,7 +113,12 @@
       <workItem from="1716788155698" duration="31340000" />
       <workItem from="1716930869723" duration="78000" />
       <workItem from="1716930981128" duration="1592000" />
-      <workItem from="1716963973432" duration="5370000" />
+      <workItem from="1716963973432" duration="6095000" />
+      <workItem from="1717006342215" duration="423000" />
+      <workItem from="1717006783247" duration="34000" />
+      <workItem from="1717006838178" duration="43000" />
+      <workItem from="1717007064499" duration="7063000" />
+      <workItem from="1717062264495" duration="5701000" />
     </task>
     <servers />
   </component>
@@ -144,24 +140,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs</url>
-          <line>486</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\HighAndLow\HightAndLowGameView.cs" initialLine="485" containingFunctionPresentation="Method 'GetSpriteWithPoker'">
-            <startOffsets>
-              <option value="18100" />
-            </startOffsets>
-            <endOffsets>
-              <option value="18179" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

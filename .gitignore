@@ -8,4 +8,5 @@ Packages/packages-lock.json
 UserSettings
 obj/
 .vs
+.idea
 Assets/Samples

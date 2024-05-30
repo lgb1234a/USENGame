@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -5,7 +6,10 @@ using Spine.Unity;
 using System.Collections.Generic;
 using UnityEngine.SocialPlatforms;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using UnityEngine.Playables;
+using Random = UnityEngine.Random;
 
 public class HighAndLowGameView : AbstractView, IViewOperater
 {
@@ -46,6 +50,9 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     bool m_isWaitTimer;
     bool m_isShowTimer;
     int m_lastPoker = -1;
+    
+    private PlayableDirector _finishDirector;
+    
     public void Build()
     {
         m_isGameFinished = false;
@@ -96,6 +103,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
         m_resultHigh = m_mainViewGameObject.transform.Find("ResultHigh").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
+        
+        _finishDirector = m_mainViewGameObject.transform.Find("Finish Animation/Finish Timeline").GetComponent<PlayableDirector>();
 
         if (cachedPokerValues.Count() > 0) {
             for (int i = 0; i < cachedPokerValues.Count(); i++)
@@ -150,7 +159,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
         if (keyName == "yellow")
         {
-            OnClickedWinnerBtn();
+            // OnClickedWinnerBtn();
+            _finishDirector.Play();
         }
 
         if (keyName == "green")
@@ -171,6 +181,11 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     public void Update()
     {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            _finishDirector.Play();
+        }
+        
         if (Input.GetButtonDown("Cancel")) {
             OnClickedTerminalBtn();
         }
@@ -403,6 +418,17 @@ public class HighAndLowGameView : AbstractView, IViewOperater
                 m_resultLow.SetActive(true);
             }
             m_resultIsShowing = true;
+            
+            if (m_isGameFinished)
+            {
+                // AudioManager.Instance.PlayFinishEffect();
+                UniTask.Delay(TimeSpan.FromSeconds(5)).ContinueWith(() =>
+                {
+                    m_resultHigh.SetActive(false);
+                    m_resultLow.SetActive(false);
+                    _finishDirector.Play();
+                });
+            }
         });
         
         Sequence sequence = DOTween.Sequence();
@@ -508,13 +534,20 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         var index = EPokersHelper.GetIndexOfPoker((EPokers)poker);
         m_checkedItemList.ElementAt(index).SetActive(true);
         m_pokerPool.Remove((int)poker);
+
+        // if (m_pokerPool.Count > 2)
+        // {
+        //     m_pokerPool = new List<int>() { 1, 2 };
+        // }
+        
         m_checkRestCountLabel.text = m_pokerPool.Count.ToString();
         m_isGameFinished = m_pokerPool.Count == 0;
         m_pokersTile.SetActive(m_pokerPool.Count > 0);
-        if (m_isGameFinished)
-        {
-            AudioManager.Instance.PlayFinishEffect();
-        }
+        // if (m_isGameFinished)
+        // {
+        //     // AudioManager.Instance.PlayFinishEffect();
+        //     _finishDirector.Play();
+        // }
         // save
         if (isNeedCache) {
             var checkedPokerValues = m_checkedPokers.ConvertAll<int>((v)=>(int)v);
