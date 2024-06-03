@@ -188,3 +188,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timelineAsset1: {fileID: 11400000, guid: 93fd2d9ce0859e1418208e26aa1f18d0, type: 2}
   timelineAsset2: {fileID: 11400000, guid: 0880b2c1d3a723d479e5cc158e8e802c, type: 2}
+--- !u!1 &7192764912049049953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7446604226540979202, guid: 6aff403cfc7054d4abf2db38fcb3f6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 326073930105623907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4181608711209931568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192764912049049953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf05b40bf7343f3a58e33f1fb7f3f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderTextures: []
