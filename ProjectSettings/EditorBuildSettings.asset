@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Mini-games/Roulette/Roulette Test.unity
+    guid: 4fe2442351faba04c980b548ce234968
+  - enabled: 1
     path: Assets/Scenes/Splash.unity
     guid: 5deeeddeb1373b045b3cbb8471525b6b
   - enabled: 1
