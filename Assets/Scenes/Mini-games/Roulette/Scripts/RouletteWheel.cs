@@ -80,7 +80,7 @@ namespace USEN.MiniGames.Roulette
 
             // Randomly determine the target sector
             int targetSectorIndex = Random.Range(0, Sectors.Count);
-            float targetAngle = (clockwise ? - totalAngle * targetSectorIndex : 360f - targetSectorIndex * totalAngle) + angleOffset;
+            float targetAngle = (clockwise ? totalAngle * targetSectorIndex : 360f - targetSectorIndex * totalAngle) + angleOffset;
 
             startAngle = transform.eulerAngles.z;
             float endAngle = 360f * 5 + targetAngle; // Spin multiple times plus target angle
@@ -106,7 +106,7 @@ namespace USEN.MiniGames.Roulette
         
         public string GetResult(int index)
         {
-            return clockwise ? Sectors[^index].content : Sectors[index].content;
+            return Sectors[index].content;
         }
 
         void DrawRouletteWheel()
