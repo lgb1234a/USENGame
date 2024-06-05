@@ -55,11 +55,19 @@ public class GameEntry : MonoBehaviour
 
     void OnGameEntryClicked()
     {
-        if (m_index == 2 || m_index == 1 || m_index == 3) 
+        AudioManager.Instance.PlayEntrySelectedEffect();
+        
+        switch (m_index)
         {
-            AudioManager.Instance.PlayEntrySelectedEffect();
-            StartCoroutine(WaitLoadScene());
-        } 
+            case 1:
+            case 2:
+            case 3:
+                StartCoroutine(WaitLoadScene());
+                break;
+            case 4:
+                SceneManager.LoadScene("Roulette Test");
+                break;
+        }
     }
 
     IEnumerator<WaitForSeconds> WaitLoadScene() {

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace USEN.MiniGames.Roulette
@@ -27,6 +28,10 @@ namespace USEN.MiniGames.Roulette
                 
         void Update()
         {
+            if (Input.GetButtonDown("Cancel")) {
+                SceneManager.LoadScene("GameEntries");
+            }
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rouletteWheel.SpinWheel();
