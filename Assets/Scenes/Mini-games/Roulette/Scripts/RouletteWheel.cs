@@ -225,7 +225,8 @@ namespace USEN.MiniGames.Roulette
 
             // Set the size of the text area
             RectTransform rectTransform = textGO.GetComponent<RectTransform>();
-            rectTransform.sizeDelta = new Vector2(textWidth, textHeight);
+            rectTransform.pivot = new Vector2(1f, 0.5f);
+            rectTransform.sizeDelta = new Vector2((radius - textDistanceFromCenter) * 0.95f, textHeight);
         }
         
         private IEnumerator AdjustTextSize(TextMeshPro text, float maxWidth)

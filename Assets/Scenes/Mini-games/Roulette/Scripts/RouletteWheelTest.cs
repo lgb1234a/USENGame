@@ -32,7 +32,7 @@ namespace USEN.MiniGames.Roulette
                 SceneManager.LoadScene("GameEntries");
             }
             
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 rouletteWheel.SpinWheel();
             }
@@ -72,12 +72,13 @@ namespace USEN.MiniGames.Roulette
 
             if (keyName == "yellow")
             {
-                
+                Debug.Log("Yellow key pressed");
+                rouletteWheel.SpinWheel();
             }
 
             if (keyName == "green")
             {
-                rouletteWheel.SpinWheel();
+                Debug.Log("Green key pressed");
             }
         }
 

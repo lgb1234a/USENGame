@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +162,7 @@
       <workItem from="1717184638863" duration="2613000" />
       <workItem from="1717450464345" duration="2752000" />
       <workItem from="1717456579125" duration="877000" />
-      <workItem from="1717461687324" duration="44642000" />
+      <workItem from="1717461687324" duration="49355000" />
     </task>
     <servers />
   </component>
@@ -182,76 +184,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>32</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="32" containingFunctionPresentation="Method 'OnSceneUnloaded'">
-            <startOffsets>
-              <option value="847" />
-            </startOffsets>
-            <endOffsets>
-              <option value="884" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>26</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="26" containingFunctionPresentation="Method 'OnSceneLoaded'">
-            <startOffsets>
-              <option value="677" />
-            </startOffsets>
-            <endOffsets>
-              <option value="746" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>21</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="21" containingFunctionPresentation="Method 'UnloadScene'">
-            <startOffsets>
-              <option value="559" />
-            </startOffsets>
-            <endOffsets>
-              <option value="600" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>16</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="16" containingFunctionPresentation="Method 'LoadScene'">
-            <startOffsets>
-              <option value="442" />
-            </startOffsets>
-            <endOffsets>
-              <option value="498" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>39</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="39" containingFunctionPresentation="Method 'OnDisable'">
-            <startOffsets>
-              <option value="982" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1024" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
