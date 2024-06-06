@@ -8,7 +8,6 @@ using UnityEngine.SocialPlatforms;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using HightAndLowGame;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 
@@ -37,6 +36,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     Button m_confirmBtn;
     Button m_startTimerBtn;
     GameObject m_pokerTemplate;
+    GameObject m_resultLow;
+    GameObject m_resultHigh;
     bool m_resultIsShowing;
     bool m_isGameFinished;
     GameObject m_pokersTile;
@@ -51,7 +52,6 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     int m_lastPoker = -1;
     
     private PlayableDirector _finishDirector;
-    private ResultPlayerDirector _resultDirector;
     
     public void Build()
     {
@@ -100,10 +100,11 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_startTimerBtn.onClick.AddListener(OnClickedStartTimerBtn);
 
         m_pokerTemplate = m_mainViewGameObject.transform.Find("Poker2D").gameObject;
+        m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
+        m_resultHigh = m_mainViewGameObject.transform.Find("ResultHigh").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
         
         _finishDirector = m_mainViewGameObject.transform.Find("Finish Animation/Timeline").GetComponent<PlayableDirector>();
-        _resultDirector = m_mainViewGameObject.transform.Find("Result Player/Timeline").GetComponent<ResultPlayerDirector>();
 
         if (cachedPokerValues.Count() > 0) {
             for (int i = 0; i < cachedPokerValues.Count(); i++)
@@ -305,6 +306,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     void PlayLoop() {
         AudioManager.Instance.PlaySendPokerEffect();
+        m_resultLow.SetActive(false);
+        m_resultHigh.SetActive(false);
         var leftPokerGO = m_pokerShowTransform1.GetChild(0).gameObject;
         leftPokerGO.transform.SetParent(m_pokerTrashTransform);
         var angle = Random.Range(20, 70);
@@ -400,22 +403,23 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             m_pokerShowSmokeEffect.SetActive(true);
         });
         
-        var scale3 =backFaceGO.transform.DOScale(1, 0).SetDelay(0).SetLink(backFaceGO).OnComplete(()=>
-        {
+        var scale3 =backFaceGO.transform.DOScale(1, 0).SetDelay(0).SetLink(backFaceGO).OnComplete(()=> {
             UniTask.Delay(TimeSpan.FromSeconds(2)).ContinueWith(() =>
             {
                 m_pokerShowSmokeEffect.SetActive(false);
             });
-            
+
             // 判断输赢
             if (EPokersHelper.GetPokerValue((EPokers)leftPoker) < EPokersHelper.GetPokerValue(pokerType))
             {
-                _resultDirector.PlayHighResult();
+                AudioManager.Instance.PlayHighEffect();
+                m_resultHigh.SetActive(true);
             }
 
             if (EPokersHelper.GetPokerValue((EPokers)leftPoker) > EPokersHelper.GetPokerValue(pokerType))
             {
-                _resultDirector.PlayLowResult();
+                AudioManager.Instance.PlayLowEffect();
+                m_resultLow.SetActive(true);
             }
             m_resultIsShowing = true;
             
@@ -424,6 +428,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
                 // AudioManager.Instance.PlayFinishEffect();
                 UniTask.Delay(TimeSpan.FromSeconds(5)).ContinueWith(() =>
                 {
+                    m_resultHigh.SetActive(false);
+                    m_resultLow.SetActive(false);
                     _finishDirector.Play();
                 });
             }
