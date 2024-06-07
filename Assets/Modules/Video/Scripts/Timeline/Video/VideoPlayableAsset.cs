@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 using UnityEngine.Timeline;
 using UnityEngine.Video;
 
-namespace Luna
+namespace USEN
 {
     // Editor representation of a Clip to play video in Timeline.
     [Serializable]

@@ -723,9 +723,6 @@
      <Reference Include="LeTai.TrueShadow.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
@@ -737,9 +734,6 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unilities">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
@@ -869,6 +863,12 @@
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unilities.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unilities">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

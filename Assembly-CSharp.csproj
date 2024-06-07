@@ -64,7 +64,6 @@
      <Compile Include="Assets\Scripts\Bingo\AwardNumObj.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableAsset.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteSectors.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\GameSelector.cs" />
@@ -77,7 +76,6 @@
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoTrack.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
@@ -121,7 +119,6 @@
      <Compile Include="Assets\Scripts\Tools\KeyBoardSelector.cs" />
      <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoSchedulerPlayableBehaviour.cs" />
      <Compile Include="Assets\Scripts\SplashManager.cs" />
      <Compile Include="Assets\Scripts\Tools\RootViewType.cs" />
      <Compile Include="Assets\Scripts\AbstractView.cs" />
@@ -134,7 +131,6 @@
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableBehaviour.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\RenderTextureInitializer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -147,6 +143,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoTrack.cs" />
+     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableAsset.cs" />
+     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableBehaviour.cs" />
+     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoSchedulerPlayableBehaviour.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Spine" />
@@ -199,6 +199,7 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\DOTween\Modules" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
+     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_low" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Result" />
      <Folder Include="Assets\Resources\Textures\loading" />
      <Folder Include="Assets\Resources\ChristmasThemes" />
@@ -226,6 +227,7 @@
      <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish\Sprites" />
      <Folder Include="Assets\Scripts\Roulette" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources\Sprite Assets" />
      <Folder Include="Assets\Scenes\Mini-games\Roulette" />
@@ -258,6 +260,7 @@
      <Folder Include="Assets\Resources\Textures\Icons" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo" />
      <Folder Include="Assets\Resources\DefaultTheme\CellBg" />
+     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_high" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Textures" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Rotate\00_BINGO.atlas.txt" />
@@ -931,9 +934,6 @@
      <Reference Include="LeTai.TrueShadow.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
@@ -945,9 +945,6 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unilities">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
@@ -1077,6 +1074,12 @@
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unilities.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unilities">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
