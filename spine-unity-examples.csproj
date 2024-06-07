@@ -887,14 +887,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="spine-unity.csproj">
-      <Project>{6c6af580-f9ab-1952-f22b-e6a1cb3009ac}</Project>
-      <Name>spine-unity</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-csharp.csproj">
-      <Project>{6a410821-b19b-85aa-1662-730e9dfd28b5}</Project>
-      <Name>spine-csharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

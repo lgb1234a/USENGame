@@ -41,11 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Editor\EditorTool.cs" />
+    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll" />
+    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll" />
+  </ItemGroup>
+  <ItemGroup>
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor\VideoAssetClipEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EditorTool.cs" />
      <Folder Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor" />
-     <Folder Include="Assets\DOTween\Editor\Imgs" />
-     <Folder Include="Assets\DOTween\Editor" />
      <Folder Include="Assets\Scripts\Editor" />
      <Folder Include="Assets\Editor" />
      <Reference Include="UnityEngine">
@@ -357,14 +359,14 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
-     <Reference Include="DOTween">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\DOTween.dll</HintPath>
-     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="DOTweenEditor">
-     <HintPath>Z:\Workspace\USENGame\Assets\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -759,6 +761,9 @@
      <Reference Include="LeTai.TrueShadow.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unilities.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
@@ -770,6 +775,9 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unilities">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
@@ -810,6 +818,9 @@
      <Reference Include="Unity.Addressables.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="spine-csharp">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-csharp.dll</HintPath>
+     </Reference>
      <Reference Include="SingularityGroup.HotReload.Runtime.Public">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\SingularityGroup.HotReload.Runtime.Public.dll</HintPath>
      </Reference>
@@ -830,6 +841,9 @@
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="spine-unity">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -888,6 +902,9 @@
      <Reference Include="Unity.ScriptableBuildPipeline">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
      </Reference>
+     <Reference Include="spine-unity-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
@@ -900,11 +917,11 @@
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
+     <Reference Include="spine-unity-examples">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
+     <Reference Include="spine-unity-examples-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -919,10 +936,6 @@
     <ProjectReference Include="Timeline.Samples.Tween.Editor.csproj">
       <Project>{600a43c6-4927-0d2b-ee9f-564571fdfbbe}</Project>
       <Name>Timeline.Samples.Tween.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{b90dbe17-8293-5278-fc25-dd0c72c9a84c}</Project>
-      <Name>spine-unity-examples</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
@@ -940,21 +953,13 @@
       <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
       <Name>Timeline.Samples.TimeDilation</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-csharp.csproj">
-      <Project>{6a410821-b19b-85aa-1662-730e9dfd28b5}</Project>
-      <Name>spine-csharp</Name>
-    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.csproj">
       <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
       <Name>Timeline.Samples.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{dc719b37-3053-326b-ea7f-dfb35557ee22}</Project>
-      <Name>spine-unity-examples-editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity.csproj">
-      <Project>{6c6af580-f9ab-1952-f22b-e6a1cb3009ac}</Project>
-      <Name>spine-unity</Name>
+    <ProjectReference Include="UnityUIExtensions.examples.csproj">
+      <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
+      <Name>UnityUIExtensions.examples</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
       <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
@@ -975,10 +980,6 @@
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{a7ba3dff-f7b6-8576-f89a-002f3b824808}</Project>
-      <Name>spine-unity-editor</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
