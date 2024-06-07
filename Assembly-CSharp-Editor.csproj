@@ -41,10 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll" />
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor\VideoAssetClipEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EditorTool.cs" />
      <Folder Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor" />
@@ -359,11 +355,11 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Serialization">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-     </Reference>
      <Reference Include="DOTween">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Serialization">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll</HintPath>
@@ -779,6 +775,9 @@
      <Reference Include="Unilities">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
+     <Reference Include="spine-unity-examples">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
@@ -826,6 +825,9 @@
      </Reference>
      <Reference Include="UniTask.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="spine-unity-examples-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -917,12 +919,6 @@
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
      </Reference>
-     <Reference Include="spine-unity-examples">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-unity-examples-editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
@@ -957,6 +953,10 @@
       <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
       <Name>Timeline.Samples.Utilities</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-timeline.csproj">
+      <Project>{ddd21cdf-ba46-8c9d-de43-3faccbf8be7f}</Project>
+      <Name>spine-timeline</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityUIExtensions.examples.csproj">
       <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
       <Name>UnityUIExtensions.examples</Name>
@@ -980,6 +980,10 @@
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-timeline-editor.csproj">
+      <Project>{323421e2-ec61-7d0d-32aa-fdba60b12afc}</Project>
+      <Name>spine-timeline-editor</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>

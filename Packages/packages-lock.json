@@ -42,6 +42,15 @@
       },
       "hash": "8e28a32cf64cdd214853e33ba4bbcee4c3027702"
     },
+    "com.esotericsoftware.spine.timeline": {
+      "version": "file:com.esotericsoftware.spine.timeline-4.1",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.timeline": "1.2.10",
+        "com.esotericsoftware.spine.spine-unity": "4.1.13"
+      }
+    },
     "com.singularitygroup.hotreload": {
       "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.9",
       "depth": 0,
