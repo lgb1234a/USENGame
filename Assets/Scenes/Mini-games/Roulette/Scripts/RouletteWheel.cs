@@ -143,6 +143,7 @@ namespace USEN.MiniGames.Roulette
             // Create GameObject for the sector
             GameObject sectorGO = new GameObject("Sector_" + index);
             sectorGO.transform.SetParent(transform);
+            sectorGO.transform.localPosition = Vector3.zero;
 
             // Create and set up the Mesh
             MeshFilter meshFilter = sectorGO.AddComponent<MeshFilter>();
