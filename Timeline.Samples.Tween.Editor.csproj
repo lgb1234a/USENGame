@@ -770,6 +770,10 @@
       <Project>{cf8e7a54-0b1b-c27b-2669-1ac59b99519d}</Project>
       <Name>Timeline.Samples.Tween</Name>
     </ProjectReference>
+    <ProjectReference Include="Timeline.Samples.Utilities.csproj">
+      <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
+      <Name>Timeline.Samples.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

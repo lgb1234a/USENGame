@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: smoke_Atlas
+  m_EditorClassIdentifier: 
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 43271e83eba6c9b4f8321bf739466aed, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 7906285b02bf77a44aaa8ad1c2b9e294, type: 2}
+  - {fileID: 2100000, guid: d52eda828538d714ab4e4de9b867708a, type: 2}
+  - {fileID: 2100000, guid: 5f128755298b87f47ad62f1eb93c7f82, type: 2}
+  - {fileID: 2100000, guid: 1590c22597ea67746b060a379b3facbe, type: 2}
+  - {fileID: 2100000, guid: a974cfe34420f7c449e001602cffb3b9, type: 2}
