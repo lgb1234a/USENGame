@@ -146,7 +146,6 @@
      <Folder Include="Assets\Resources\ChristmasThemes\Effects" />
      <None Include="Assets\Resources\HighAndLow\Spine\Finish\Finish Spine\Finish.json" />
      <None Include="Assets\Samples\New Folder\output\Spine_King.atlas.txt" />
-     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\particle" />
      <Folder Include="Assets\Modules\Video" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Bingo" />
      <Folder Include="Assets\Scenes\Mini-games" />
@@ -189,6 +188,7 @@
      <Folder Include="Assets\Resources\DefaultTheme\Numbers" />
      <Folder Include="Assets\Resources\HighAndLow\Spine\Result\4in1" />
      <Folder Include="Packages\com.esotericsoftware.spine.timeline-4.1" />
+     <Folder Include="Assets\Resources\HighAndLow\Particles" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />

@@ -83,8 +83,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
 
-        m_timer = m_mainViewGameObject.transform.Find("Timer").gameObject;
-        m_timeLabel = m_mainViewGameObject.transform.Find("Timer/TimeLabel").GetComponent<Text>();
+        m_timer = m_mainViewGameObject.transform.Find("Foreground/Timer").gameObject;
+        m_timeLabel = m_mainViewGameObject.transform.Find("Foreground/Timer/TimeLabel").GetComponent<Text>();
 
         m_historyBtn = m_mainViewGameObject.transform.Find("BottomPanel/HistoryBtn").GetComponent<Button>();
         m_historyBtn.onClick.AddListener(OnClickedHistoryButton);
@@ -102,8 +102,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_pokerTemplate = m_mainViewGameObject.transform.Find("Poker2D").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
         
-        _finishDirector = m_mainViewGameObject.transform.Find("Finish Animation/Timeline").GetComponent<PlayableDirector>();
-        _resultDirector = m_mainViewGameObject.transform.Find("Result Player/Timeline").GetComponent<ResultPlayerDirector>();
+        _finishDirector = m_mainViewGameObject.transform.Find("Foreground/Finish Animation/Timeline").GetComponent<PlayableDirector>();
+        _resultDirector = m_mainViewGameObject.transform.Find("Foreground/Result Player/Timeline").GetComponent<ResultPlayerDirector>();
 
         if (cachedPokerValues.Count() > 0) {
             for (int i = 0; i < cachedPokerValues.Count(); i++)
