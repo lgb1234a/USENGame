@@ -162,8 +162,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
         if (keyName == "yellow")
         {
-            // OnClickedWinnerBtn();
-            _finishDirector.Play();
+            OnClickedWinnerBtn();
         }
 
         if (keyName == "green")
@@ -244,6 +243,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     void OnClickedWinnerBtn() {
         AudioManager.Instance.PlayKeyStartEffect();
+        _finishDirector.Play();
     }
 
     void OnClickedConfirmBtn() {

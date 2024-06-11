@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Video;
 
-namespace USEN
+namespace Luna
 {
     // The runtime instance of a video clip player in Timeline.
     public sealed class VideoPlayableBehaviour : PlayableBehaviour

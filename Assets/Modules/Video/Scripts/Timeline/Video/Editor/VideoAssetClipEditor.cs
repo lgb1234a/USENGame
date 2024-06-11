@@ -3,7 +3,7 @@ using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-namespace USEN
+namespace Luna
 {
     // Editor used by the TimelineEditor to customize the view of a VideoPlayableAsset
     [CustomTimelineEditor(typeof(VideoPlayableAsset))]
