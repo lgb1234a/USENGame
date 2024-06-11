@@ -8,6 +8,7 @@ using UnityEngine.SocialPlatforms;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using HightAndLowGame;
 using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 
@@ -52,6 +53,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     int m_lastPoker = -1;
     
     private PlayableDirector _finishDirector;
+    // private ResultPlayerDirector _resultDirector;
     
     public void Build()
     {
@@ -83,8 +85,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
 
-        m_timer = m_mainViewGameObject.transform.Find("Timer").gameObject;
-        m_timeLabel = m_mainViewGameObject.transform.Find("Timer/TimeLabel").GetComponent<Text>();
+        m_timer = m_mainViewGameObject.transform.Find("Foreground/Timer").gameObject;
+        m_timeLabel = m_mainViewGameObject.transform.Find("Foreground/Timer/TimeLabel").GetComponent<Text>();
 
         m_historyBtn = m_mainViewGameObject.transform.Find("BottomPanel/HistoryBtn").GetComponent<Button>();
         m_historyBtn.onClick.AddListener(OnClickedHistoryButton);
@@ -100,11 +102,12 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_startTimerBtn.onClick.AddListener(OnClickedStartTimerBtn);
 
         m_pokerTemplate = m_mainViewGameObject.transform.Find("Poker2D").gameObject;
-        m_resultLow = m_mainViewGameObject.transform.Find("ResultLow").gameObject;
-        m_resultHigh = m_mainViewGameObject.transform.Find("ResultHigh").gameObject;
+        m_resultLow = m_mainViewGameObject.transform.Find("Foreground/ResultLow").gameObject;
+        m_resultHigh = m_mainViewGameObject.transform.Find("Foreground/ResultHigh").gameObject;
         m_pokersTile = m_mainViewGameObject.transform.Find("Bg/PokerTile").gameObject;
         
-        _finishDirector = m_mainViewGameObject.transform.Find("Finish Animation/Timeline").GetComponent<PlayableDirector>();
+        _finishDirector = m_mainViewGameObject.transform.Find("Foreground/Finish Animation/Timeline").GetComponent<PlayableDirector>();
+        // _resultDirector = m_mainViewGameObject.transform.Find("Foreground/Result Player/Timeline").GetComponent<ResultPlayerDirector>();
 
         if (cachedPokerValues.Count() > 0) {
             for (int i = 0; i < cachedPokerValues.Count(); i++)

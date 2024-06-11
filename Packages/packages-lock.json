@@ -42,6 +42,16 @@
       },
       "hash": "8e28a32cf64cdd214853e33ba4bbcee4c3027702"
     },
+    "com.esotericsoftware.spine.timeline": {
+      "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Modules/com.esotericsoftware.spine.timeline#4.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.timeline": "1.2.10",
+        "com.esotericsoftware.spine.spine-unity": "4.1.13"
+      },
+      "hash": "8e28a32cf64cdd214853e33ba4bbcee4c3027702"
+    },
     "com.singularitygroup.hotreload": {
       "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.9",
       "depth": 0,
@@ -227,7 +237,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.6.4",
+      "version": "1.8.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {

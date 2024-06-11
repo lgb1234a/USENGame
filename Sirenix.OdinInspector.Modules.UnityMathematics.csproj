@@ -41,10 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll" />
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics\MathematicsDrawers.cs" />
      <Folder Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics" />
      <None Include="Assets\Plugins\Sirenix\Odin Inspector\Modules\Unity.Mathematics\manifest.txt" />
@@ -358,11 +354,11 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Serialization">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-     </Reference>
      <Reference Include="DOTween">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Serialization">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll</HintPath>

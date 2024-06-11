@@ -41,10 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\Editor\DOTweenEditor.dll" />
-    <Analyzer Include="Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll" />
-  </ItemGroup>
-  <ItemGroup>
      <Compile Include="Assets\Plugins\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -436,11 +432,11 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Serialization">
-     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-     </Reference>
      <Reference Include="DOTween">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Serialization">
+     <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -835,6 +831,9 @@
      <Reference Include="Unilities">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
+     <Reference Include="spine-unity-examples">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
@@ -882,6 +881,9 @@
      </Reference>
      <Reference Include="UniTask.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="spine-unity-examples-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -973,11 +975,11 @@
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
      </Reference>
-     <Reference Include="spine-unity-examples">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
+     <Reference Include="spine-timeline">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
      </Reference>
-     <Reference Include="spine-unity-examples-editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
+     <Reference Include="spine-timeline-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline-editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
