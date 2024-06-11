@@ -7,13 +7,12 @@
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowGamePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowGamePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result High Spine Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result High Spine Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result Low Spine Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result Low Spine Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/Result Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/ResultPlayerDirector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/Spine/Result/ResultPlayerDirector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

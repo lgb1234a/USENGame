@@ -1001,10 +1001,6 @@
       <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
       <Name>Timeline.Samples.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-timeline.csproj">
-      <Project>{ddd21cdf-ba46-8c9d-de43-3faccbf8be7f}</Project>
-      <Name>spine-timeline</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityUIExtensions.examples.csproj">
       <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
       <Name>UnityUIExtensions.examples</Name>
@@ -1029,13 +1025,17 @@
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-timeline-editor.csproj">
-      <Project>{323421e2-ec61-7d0d-32aa-fdba60b12afc}</Project>
-      <Name>spine-timeline-editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-timeline.csproj">
+      <Project>{ddd21cdf-ba46-8c9d-de43-3faccbf8be7f}</Project>
+      <Name>spine-timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-timeline-editor.csproj">
+      <Project>{323421e2-ec61-7d0d-32aa-fdba60b12afc}</Project>
+      <Name>spine-timeline-editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

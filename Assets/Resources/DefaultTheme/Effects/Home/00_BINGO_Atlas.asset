@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: 00_BINGO_Atlas
   m_EditorClassIdentifier: 
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
   atlasFile: {fileID: 4900000, guid: 2148a4a5d8fa34d4d824753678afab1c, type: 3}
   materials:
   - {fileID: 2100000, guid: 1044fb4eee8d2354192fb0f854620e95, type: 2}
