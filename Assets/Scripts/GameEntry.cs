@@ -8,27 +8,17 @@ using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameEntry : MonoBehaviour
+public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
-    [SerializeField]
-    private Button m_entryButton;
-    private Action<GameEntry> m_gameEntryDelegate;
+    [SerializeField] private Button m_entryButton;
     public CanvasGroup m_selectedBg;
-    bool m_isWillQuitApplication;
     public int m_index;
+    
+    private Action<GameEntry> m_gameEntryDelegate;
+    bool m_isWillQuitApplication;
+    
     void Start()
     {
-        var eventTrigger = m_entryButton.gameObject.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.Select;
-        entry.callback.AddListener(OnGameEntrySelected);
-        eventTrigger.triggers.Add(entry);
-
-        EventTrigger.Entry entry1 = new EventTrigger.Entry();
-        entry1.eventID = EventTriggerType.Deselect;
-        entry1.callback.AddListener(OnGameEntryDeselected);
-        eventTrigger.triggers.Add(entry1);
-
         m_entryButton.onClick.AddListener(OnGameEntryClicked);
     }
 
@@ -106,5 +96,20 @@ public class GameEntry : MonoBehaviour
 
     public void SetSiblingIndex(int index) {
         transform.SetSiblingIndex(index);
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        m_selectedBg.DOFade(1f, 0.2f).SetEase(Ease.InOutSine).SetLink(m_selectedBg.gameObject);
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        m_selectedBg.DOFade(0f, 0.2f).SetEase(Ease.InOutSine).SetLink(m_selectedBg.gameObject);
+    }
+
+    public void OnSubmit(BaseEventData eventData)
+    {
+        // OnGameEntryClicked();
     }
 }

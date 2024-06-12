@@ -826,6 +826,9 @@
      <Reference Include="UniTask.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
+     <Reference Include="spine-timeline">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
+     </Reference>
      <Reference Include="spine-unity-examples-editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
      </Reference>
@@ -907,6 +910,9 @@
      <Reference Include="spine-unity-editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-editor.dll</HintPath>
      </Reference>
+     <Reference Include="spine-timeline-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline-editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
@@ -918,12 +924,6 @@
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-timeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-timeline-editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline-editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

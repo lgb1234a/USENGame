@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FaceToCamera.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameView.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoSettingsView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\VideoPlayerRenderTexture.cs" />
@@ -58,7 +59,6 @@
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableAsset.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteSectors.cs" />
-     <Compile Include="Assets\Scripts\GameSelector.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowRouletteView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHistoryView.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteSector.cs" />
      <Compile Include="Assets\Scripts\ResManager\IThemeRes.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteWheelTest.cs" />
+     <Compile Include="Assets\Scripts\FaceTo.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteWheel.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteContentEditView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HightAndLowGameView.cs" />
@@ -102,6 +103,7 @@
      <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\RenderTextureInitializer.cs" />
      <Compile Include="Assets\Scripts\ResManager\EThemeTypes.cs" />
+     <Compile Include="Assets\Scripts\GameSelector.cs" />
      <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
@@ -111,7 +113,7 @@
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
      <Folder Include="Assets\Samples\New Folder\output" />
      <Folder Include="Assets\Resources\DefaultTheme\Audio" />
-     <Folder Include="Assets\Scenes\Mini-games\Roulette\Fonts" />
+     <Folder Include="Assets\Fonts" />
      <Folder Include="Assets\Scenes\Mini-games\Roulette\Scripts" />
      <Folder Include="Assets\Resources\Video" />
      <Folder Include="Assets\Resources\DefaultTheme" />
@@ -158,7 +160,6 @@
      <Folder Include="Assets\Modules\Video\Timeline" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Bingo" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
-     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish\Sprites" />
      <Folder Include="Assets\Scripts\Roulette" />
      <Folder Include="Assets\Scenes\Mini-games\Roulette" />
      <Folder Include="Assets\Resources\Bingo" />
@@ -915,6 +916,9 @@
      <Reference Include="UniTask.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
+     <Reference Include="spine-timeline">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
+     </Reference>
      <Reference Include="spine-unity-examples-editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples-editor.dll</HintPath>
      </Reference>
@@ -996,6 +1000,9 @@
      <Reference Include="spine-unity-editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-editor.dll</HintPath>
      </Reference>
+     <Reference Include="spine-timeline-editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline-editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
@@ -1007,12 +1014,6 @@
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-timeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-timeline-editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline-editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

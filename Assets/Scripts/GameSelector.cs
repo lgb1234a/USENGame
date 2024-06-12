@@ -2,114 +2,200 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class GameSelector : MonoBehaviour
+public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
 {
-    public GameEntry[] m_gameEntries;
-    public Button GameSettingsBtn;
-    public int m_selectIndex = 2;
-    public GameObject m_gameSettingsGO;
-    int m_betweenSelectedSpace = 700;
-    int m_otherSpace = 200;
-    float m_keyDownTimeInterval = 0.5f;
-    float m_timeInterval = 0;
+    public GameEntry[] gameEntries;
+    public Button gameSettingsBtn;
+    public GameObject gameSettingsGO;
+    public float spacing = 300;
+    public float dragSpeed = 0.5f;
+    
     GameObject gameSettingsViewGO;
 
+    private float dragOffset = 0;
+
+    
+    [FormerlySerializedAs("selectedIndex")] [SerializeField]
+    private int _selectedIndex = 2;
+
+    public int SelectedIndex
+    {
+        get { return _selectedIndex; }
+        set
+        {
+            _selectedIndex = value;
+            UpdateSelectedIndex(_selectedIndex);
+        }
+    }
+    
     void Start()
     {
-        for (int i = 0; i < m_gameEntries.Length; i++)
-            m_gameEntries[i].m_index = i;
-        m_selectIndex = AppConfig.Instance.SelectedGameIndex;
-        m_gameEntries[m_selectIndex].SetEventSystemSelected();
-        UpdateSelectedIndex(m_selectIndex);
-        m_gameEntries[m_selectIndex].m_selectedBg.alpha = 1;
-
-        GameSettingsBtn.onClick.AddListener(ShowGameSettingsView);
+        for (int i = 0; i < gameEntries.Length; i++)
+            gameEntries[i].m_index = i;
+        _selectedIndex = AppConfig.Instance.SelectedGameIndex;
+        gameEntries[_selectedIndex].SetEventSystemSelected();
+        JumpToIndex(_selectedIndex);
+        gameEntries[_selectedIndex].m_selectedBg.alpha = 1;
     }
 
     void Update()
     {
-        m_timeInterval += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && m_timeInterval > m_keyDownTimeInterval) {
-            m_timeInterval = 0;
-            if (m_selectIndex > 0) 
-                UpdateSelectedIndex(--m_selectIndex);
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (_selectedIndex > 0)
+                AnimatedToIndex(_selectedIndex - 1, 0.3f);
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && m_timeInterval > m_keyDownTimeInterval) {
-            m_timeInterval = 0;
-            if (m_selectIndex < 4)
-                UpdateSelectedIndex(++m_selectIndex);
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (_selectedIndex < 4)
+                AnimatedToIndex(_selectedIndex + 1, 0.3f);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
             // selected game settings btn
-            EventSystem.current.SetSelectedGameObject(GameSettingsBtn.gameObject);
+            EventSystem.current.SetSelectedGameObject(gameSettingsBtn.gameObject);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) 
-        && EventSystem.current.currentSelectedGameObject == GameSettingsBtn.gameObject) {
-            UpdateSelectedIndex(m_selectIndex);
+        if (Input.GetKeyDown(KeyCode.DownArrow) && 
+            EventSystem.current.currentSelectedGameObject == gameSettingsBtn.gameObject)
+        {
+            UpdateSelectedIndex(_selectedIndex);
         }
 
-        if (Input.GetButtonDown("Cancel")) {
+        if (Input.GetButtonDown("Cancel"))
+        {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
             Application.Quit();
 #endif
         }
+        
+        UpdateEntryPosition();
     }
 
-    void UpdateSelectedIndex(int index) {
-        m_selectIndex = index;
-        var selectedPositionX = 0;
-        for (int i = 0; i < m_gameEntries.Length; i++) {
-            m_gameEntries[i].SetPositionX((i-2)*300);
-            if (i == m_selectIndex) {
-                m_gameEntries[i].ResetRotate();
-                m_gameEntries[i].SetPositionX(selectedPositionX);
-                m_gameEntries[i].SetEventSystemSelected();
-            }else
+    public void SelectNextGame()
+    {
+        if (_selectedIndex < gameEntries.Length - 1)
+            AnimatedToIndex(_selectedIndex + 1, 0.3f);
+    }
+    
+    public void SelectPreviousGame()
+    {
+        if (_selectedIndex > 0)
+            AnimatedToIndex(_selectedIndex - 1, 0.3f);
+    }
+    
+    void UpdateSelectedIndex(int index)
+    {
+        _selectedIndex = index;
+
+        for (int i = 0; i < gameEntries.Length; i++)
+        {
+            if (i == _selectedIndex)
+                gameEntries[i].SetEventSystemSelected();
+            else
             {
-                if (i-m_selectIndex < 0) {
-                    m_gameEntries[i].SetPivot(new Vector2(0, 0.5f));
-                }else
-                {
-                    m_gameEntries[i].SetPivot(new Vector2(1, 0.5f));
-                }
-                if (i < m_selectIndex)
-                {
-                    m_gameEntries[i].SetRotate(-40);
-                }else {
-                    m_gameEntries[i].SetRotate(40);
-                }
-                if (i < m_selectIndex) {
-                    m_gameEntries[i].SetPositionX(selectedPositionX-m_betweenSelectedSpace-(m_selectIndex-i-1)*m_otherSpace);
-                    m_gameEntries[i].SetSiblingIndex(i);
-                }else {
-                    m_gameEntries[i].SetPositionX(selectedPositionX+m_betweenSelectedSpace+(i-m_selectIndex-1)*m_otherSpace);
-                    m_gameEntries[i].SetSiblingIndex(m_gameEntries.Length - i);
-                }
+                if (i < _selectedIndex)
+                    gameEntries[i].SetSiblingIndex(i);
+                else gameEntries[i].SetSiblingIndex(gameEntries.Length - i);
             }
         }
     }
-
-    public void Show() {
-        gameObject.SetActive(true);
-        UpdateSelectedIndex(m_selectIndex);
+    
+    void JumpToIndex(int index)
+    {
+        UpdateSelectedIndex(index);
+        dragOffset = -(index - Mathf.Floor(gameEntries.Length / 2f)) * spacing;
+        UpdateEntryPosition();
+    }
+    
+    void AnimatedToIndex(int index, float duration = 1f)
+    {
+        UpdateSelectedIndex(index);
+        float targetOffset = -(index - Mathf.Floor(gameEntries.Length / 2f)) * spacing;
+        StartCoroutine(AnimateOffset(targetOffset, duration));
     }
 
-    void Hide() {
+    IEnumerator AnimateOffset(float targetOffset, float duration)
+    {
+        float elapsedTime = 0;
+        float startOffset = dragOffset;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            dragOffset = Mathf.Lerp(startOffset, targetOffset, elapsedTime / duration);
+            yield return null;
+        }
+
+        dragOffset = targetOffset;
+    }
+    
+    public void Show() 
+    {
+        gameObject.SetActive(true);
+        UpdateSelectedIndex(_selectedIndex);
+    }
+
+    void Hide()
+    {
         gameObject.SetActive(false);
     }
 
-    void ShowGameSettingsView() {
+     public void OnSettingsButtonClick()
+    {
         Hide();
-        if (gameSettingsViewGO == null) {
-            gameSettingsViewGO = Instantiate(m_gameSettingsGO);
+        if (gameSettingsViewGO == null)
+        {
+            gameSettingsViewGO = Instantiate(gameSettingsGO);
             gameSettingsViewGO.transform.SetParent(transform.parent, false);
         }
         gameSettingsViewGO.SetActive(true);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        dragOffset += eventData.delta.x * dragSpeed;
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        AnimatedToIndex(_selectedIndex, 0.3f);
+    }
+    
+    private void UpdateEntryPosition()
+    {
+        var limit = spacing * Mathf.Floor(gameEntries.Length / 2f);
+
+        dragOffset = Mathf.Clamp(dragOffset, -limit, limit);
+
+        int closestIndex = _selectedIndex;
+        float closestDistance = float.MaxValue;
+
+        for (int i = 0; i < gameEntries.Length; i++)
+        {
+            float newPositionX = (i - 2) * spacing + dragOffset;
+            newPositionX = Mathf.Pow(Mathf.Abs(newPositionX), 0.6f) * Mathf.Sign(newPositionX) * 15;
+            gameEntries[i].SetPositionX(newPositionX);
+
+            float distanceFromCenter = Mathf.Abs(newPositionX);
+
+            if (distanceFromCenter < closestDistance)
+            {
+                closestDistance = distanceFromCenter;
+                closestIndex = i;
+            }
+        }
+
+        if (closestIndex != _selectedIndex)
+        {
+            _selectedIndex = closestIndex;
+            UpdateSelectedIndex(_selectedIndex);
+        }
     }
 }
