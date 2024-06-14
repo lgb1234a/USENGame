@@ -257,10 +257,10 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             // 重连继续上一局
             AudioManager.Instance.PlaySendPokerEffect();
             var backFaceGO = CreatePoker(EPokers.BackFace);
-            (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 0f, 60f);
+            (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 180f, 60f);
             backFaceGO.transform.SetParent(m_pokerShowTransform2);
             (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
-            var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(Vector3.zero, 1).SetLink(backFaceGO);
+            var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(new Vector3(0f, 180f, 0f), 1).SetLink(backFaceGO);
             tween.onComplete += WaitTimer;
             m_isWaitContinue = false;
         }
@@ -525,13 +525,9 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         var pokerGO = GameObject.Instantiate(m_pokerTemplate, m_pokerStartTransform, false);
         var poker = pokerGO.GetComponent<Poker2D>();
         pokerGO.SetActive(true);
-        // if (pokerType == EPokers.BackFace) {
-        //     pokerGO.GetComponent<Image>().overrideSprite = Load<Sprite>("HighAndLow/Pokers/backface");
-        // }else {
-        //     pokerGO.GetComponent<Image>().overrideSprite = GetSpriteWithPoker(poker);
-        // }
         if (pokerType != EPokers.BackFace)
             poker.front = GetSpriteWithPoker(pokerType);
+        else poker.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
         pokerGO.GetComponent<Image>().SetNativeSize();
         return pokerGO;
     }

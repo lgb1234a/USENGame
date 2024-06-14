@@ -33,21 +33,13 @@ public class Poker2D : MonoBehaviour
     {
         _image.sprite = front;
         _mainCamera = Camera.main;
+
+        UpdateSprite();
     }
     
     private void Update()
     {
-        var isBack = perspective ? !IsFacingCamera() : transform.rotation.eulerAngles.y is > 90 and < 270;
-        if (isBack)
-        {
-            _image.sprite = back;
-            _flippable.horizontal = true;
-        }
-        else
-        {
-            _image.sprite = front;
-            _flippable.horizontal = false;
-        }
+        UpdateSprite();
 
         if (Input.anyKey)
         {
@@ -72,6 +64,21 @@ public class Poker2D : MonoBehaviour
             });
     }
     
+    private void UpdateSprite()
+    {
+        var isBack = perspective ? !IsFacingCamera() : transform.rotation.eulerAngles.y is > 90 and < 270;
+        if (isBack)
+        {
+            _image.sprite = back;
+            _flippable.horizontal = true;
+        }
+        else
+        {
+            _image.sprite = front;
+            _flippable.horizontal = false;
+        }
+    }
+
     private bool IsFacingCamera()
     {
         Vector3 toCamera = (_mainCamera.transform.position - transform.position).normalized;
