@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioResManager.cs" />
      <Compile Include="Assets\Scripts\Tools\Loading.cs" />
+     <Compile Include="Assets\Scenes\Mini-games\Roulette\RouletteSelectionListCell.cs" />
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\GameEntry.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\Tools\ScrollContentTacker.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoHomeView.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteSector.cs" />
+     <Compile Include="Assets\Scenes\Mini-games\Roulette\RouletteSelectionView.cs" />
      <Compile Include="Assets\Scripts\ResManager\IThemeRes.cs" />
      <Compile Include="Assets\Scenes\Mini-games\Roulette\Scripts\RouletteWheelTest.cs" />
      <Compile Include="Assets\Scripts\FaceTo.cs" />
@@ -108,6 +110,7 @@
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Scenes\Mini-games\Roulette\RouletteSelectionList.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -133,6 +136,7 @@
      <None Include="Assets\Resources\ChristmasThemes\Effects\Rotate\00_BINGO_Ch4.atlas.txt" />
      <Folder Include="Assets\Resources\Audio" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Rotate" />
+     <Folder Include="Assets\Scenes\Mini-games\Roulette\UIs" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Resources\Textures\game_entries" />
      <Folder Include="Assets\Resources\Material" />
@@ -164,6 +168,7 @@
      <Folder Include="Assets\Scenes\Mini-games\Roulette" />
      <Folder Include="Assets\Resources\Bingo" />
      <Folder Include="Assets\Scripts\HighAndLow" />
+     <Folder Include="Assets\Scenes\Mini-games\Roulette\Fonts" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Timelines" />
      <Folder Include="Assets\Resources\HighAndLow\Pokers" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Rotate" />
