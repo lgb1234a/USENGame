@@ -49,21 +49,22 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
         
         switch (m_index)
         {
-            case 1:
-            case 2:
-            case 3:
-                StartCoroutine(WaitLoadScene());
+            case 0:
+                LoadGame(RootViewType.HighAndLow);
                 break;
-            case 4:
+            case 1:
+                LoadGame(RootViewType.Bingo);
+                break;
+            case 2:
                 SceneManager.LoadScene("Roulette Test");
                 break;
         }
     }
-
-    IEnumerator<WaitForSeconds> WaitLoadScene() {
-        yield return new WaitForSeconds(0.5f);
-        AppConfig.Instance.SelectedGameIndex = m_index;
-        AppConfig.Instance.HomeSceneRootViewType = (RootViewType)m_index;
+    
+    private void LoadGame(RootViewType viewType)
+    {
+        AppConfig.Instance.SelectedGameIndex = (int)viewType;
+        AppConfig.Instance.HomeSceneRootViewType = viewType;
         USENSceneManager.Instance.LoadScene("Home");
     }
 

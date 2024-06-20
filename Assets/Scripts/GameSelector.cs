@@ -35,7 +35,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
     {
         for (int i = 0; i < gameEntries.Length; i++)
             gameEntries[i].m_index = i;
-        _selectedIndex = AppConfig.Instance.SelectedGameIndex;
+        _selectedIndex = Mathf.Clamp(AppConfig.Instance.SelectedGameIndex, 0, gameEntries.Length - 1);
         gameEntries[_selectedIndex].SetEventSystemSelected();
         JumpToIndex(_selectedIndex);
         gameEntries[_selectedIndex].m_selectedBg.alpha = 1;
@@ -147,7 +147,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
         gameObject.SetActive(false);
     }
 
-     public void OnSettingsButtonClick()
+    public void OnSettingsButtonClick()
     {
         Hide();
         if (gameSettingsViewGO == null)
@@ -179,7 +179,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
 
         for (int i = 0; i < gameEntries.Length; i++)
         {
-            float newPositionX = (i - 2) * spacing + dragOffset;
+            float newPositionX = (i - Mathf.Floor(gameEntries.Length / 2f)) * spacing + dragOffset;
             newPositionX = Mathf.Pow(Mathf.Abs(newPositionX), 0.6f) * Mathf.Sign(newPositionX) * 15;
             gameEntries[i].SetPositionX(newPositionX);
 
