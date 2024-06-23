@@ -193,17 +193,17 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         }
 
         if (m_waitTrigger) {
-            if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                m_waitTrigger = false;
-            }else if (Input.GetKeyDown(KeyCode.DownArrow)) {
+            if (Input.GetKeyDown(KeyCode.UpArrow) ||
+                Input.GetKeyDown(KeyCode.DownArrow) ||
+                Input.GetKeyDown(KeyCode.Return)) {
                 m_waitTrigger = false;
             }
         }
         
         if (m_isShowTimer) {
-            if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                m_isShowTimer = false;
-            }else if (Input.GetKeyDown(KeyCode.DownArrow)) {
+            if (Input.GetKeyDown(KeyCode.UpArrow) ||
+                Input.GetKeyDown(KeyCode.DownArrow) ||
+                Input.GetKeyDown(KeyCode.Return)) {
                 m_isShowTimer = false;
             }
         }
