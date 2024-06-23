@@ -19,7 +19,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
 
     
     [FormerlySerializedAs("selectedIndex")] [SerializeField]
-    private int _selectedIndex = 2;
+    private int _selectedIndex = 1;
 
     public int SelectedIndex
     {

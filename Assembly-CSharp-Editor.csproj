@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor\VideoAssetClipEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\EditorTool.cs" />
+     <Compile Include="Assets\Editor\SelectOddNumberedFiles.cs" />
      <Folder Include="Assets\Modules\Video\Scripts\Timeline\Video\Editor" />
      <Folder Include="Assets\Scripts\Editor" />
      <Folder Include="Assets\Editor" />

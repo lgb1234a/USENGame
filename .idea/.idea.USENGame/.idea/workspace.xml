@@ -5,30 +5,252 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold SDF.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold SDF.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold.otf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium.otf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットタイトル.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットタイトル.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/UIs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowGamePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowGamePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00003.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00005.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00007.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00009.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00011.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00013.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00015.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00017.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00019.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00021.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00023.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00025.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00027.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00029.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00031.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00033.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00035.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00035.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00037.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00039.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00041.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00043.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00045.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00047.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00049.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00049.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00051.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00053.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00055.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00057.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00059.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00061.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00063.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00065.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00065.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00067.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00069.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00069.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00071.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00073.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00073.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00075.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00077.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00077.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00079.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00079.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00081.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00081.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00083.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00085.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00085.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00087.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00087.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00089.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00089.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00091.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00093.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00095.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00095.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00097.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00099.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00101.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00103.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00105.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00107.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00109.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00111.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00113.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00115.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00117.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_high/HIgh_00119.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00003.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00005.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00007.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00009.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00011.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00013.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00015.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00017.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00019.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00021.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00023.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00025.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00027.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00029.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00031.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00033.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00035.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00035.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00037.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00039.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00041.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00043.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00045.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00047.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00049.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00049.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00051.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00053.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00055.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00057.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00059.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00061.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00063.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00065.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00065.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00067.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00069.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00069.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00071.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00073.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00073.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00075.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00077.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00077.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00079.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00079.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00081.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00081.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00083.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00085.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00085.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00087.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00087.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00089.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00089.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00091.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00093.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00095.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00095.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00097.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00099.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00101.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00103.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00105.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00107.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00109.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00111.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00113.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00115.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00117.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/result_low/Low_00119.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,5 +435,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#GameSelector.UpdateSelectedIndex" memberName="this" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

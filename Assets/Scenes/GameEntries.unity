@@ -2110,7 +2110,7 @@ MonoBehaviour:
     type: 3}
   spacing: 300
   dragSpeed: 0.5
-  _selectedIndex: 2
+  _selectedIndex: 1
 --- !u!224 &1756878946 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5862899220204269307, guid: b61d6fdda49a145caa47a386ff40a154,
