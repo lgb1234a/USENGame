@@ -195,7 +195,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         if (m_waitTrigger) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
-                Input.GetKeyDown(KeyCode.Return)) {
+                Input.GetKeyDown(KeyCode.Return) || 
+                Input.GetButtonDown("Submit")) {
                 m_waitTrigger = false;
             }
         }
@@ -203,7 +204,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         if (m_isShowTimer) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
-                Input.GetKeyDown(KeyCode.Return)) {
+                Input.GetKeyDown(KeyCode.Return) ||
+                Input.GetButtonDown("Submit")) {
                 m_isShowTimer = false;
             }
         }
