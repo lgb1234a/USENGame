@@ -142,7 +142,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_pokerPool.Clear();
         m_checkedPokers.Clear();
     }
-
+    
     public void Hide()
     {
         m_mainViewGameObject.SetActive(false);
@@ -179,6 +179,21 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     public void Show()
     {
         m_mainViewGameObject.SetActive(true);
+        
+        if (m_pokerShowTransform1.childCount == 0) {
+            PlayFirst();
+        }
+        else if (m_isWaitContinue) {
+            // 重连继续上一局
+            AudioManager.Instance.PlaySendPokerEffect();
+            var backFaceGO = CreatePoker(EPokers.BackFace);
+            (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 180f, 60f);
+            backFaceGO.transform.SetParent(m_pokerShowTransform2);
+            (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
+            var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(new Vector3(0f, 180f, 0f), 1).SetLink(backFaceGO);
+            tween.onComplete += WaitTimer;
+            m_isWaitContinue = false;
+        }
     }
 
     public void Update()
@@ -252,21 +267,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         if (m_isGameFinished) {
             return;
         }
-        if (m_pokerShowTransform1.childCount == 0) {
-            PlayFirst();
-        }
-        else if (m_isWaitContinue) {
-            // 重连继续上一局
-            AudioManager.Instance.PlaySendPokerEffect();
-            var backFaceGO = CreatePoker(EPokers.BackFace);
-            (backFaceGO.transform as RectTransform).rotation = Quaternion.Euler(0f, 180f, 60f);
-            backFaceGO.transform.SetParent(m_pokerShowTransform2);
-            (backFaceGO.transform as RectTransform).DOAnchorPosX(0, 1).SetLink(backFaceGO);
-            var tween = (backFaceGO.transform as RectTransform).DOLocalRotate(new Vector3(0f, 180f, 0f), 1).SetLink(backFaceGO);
-            tween.onComplete += WaitTimer;
-            m_isWaitContinue = false;
-        }
-        else if (m_resultIsShowing){
+        if (m_resultIsShowing){
             // 将牌丢弃
             PlayLoop();
             HideResultButtons();
