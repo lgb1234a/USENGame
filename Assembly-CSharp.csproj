@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\FaceToCamera.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameView.cs" />
+     <Compile Include="Assets\Scenes\Mini-games\Roulette\RouletteSelectionList.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoSettingsView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\VideoPlayerRenderTexture.cs" />
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
@@ -110,7 +111,6 @@
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Scenes\Mini-games\Roulette\RouletteSelectionList.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
