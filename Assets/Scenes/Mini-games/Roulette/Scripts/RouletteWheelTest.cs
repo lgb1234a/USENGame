@@ -28,7 +28,8 @@ namespace USEN.MiniGames.Roulette
                 
         void Update()
         {
-            if (Input.GetButtonDown("Cancel")) {
+            if (Input.GetKeyDown(KeyCode.Escape) ||
+                Input.GetButtonDown("Cancel")) {
                 SceneManager.LoadScene("GameEntries");
             }
             

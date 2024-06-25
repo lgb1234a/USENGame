@@ -9,6 +9,7 @@ public class BingoHomeView : AbstractView, IViewOperater
     private Button m_startButton;
     private Button m_reopenButton;
     private Button m_settingsButton;
+    private Button _exitButton;
 
     Transform m_resetPanel;
     Button m_resetBtn;
@@ -51,6 +52,11 @@ public class BingoHomeView : AbstractView, IViewOperater
         m_resetCancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
         m_resetCancelBtnText = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn/Text").GetComponent<Text>();
         m_resetCancelBtn.onClick.AddListener(OnClickedResetCancelBtn);
+        
+        // _exitButton = m_mainViewGameObject.transform.Find("BottomPanel/ExitButton").GetComponent<Button>();
+        // _exitButton.onClick.AddListener(() => {
+        //     USENSceneManager.Instance.LoadScene("GameEntries");
+        // });
 
         AudioManager.Instance.PlayDefaultBgm();
     }

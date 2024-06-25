@@ -9,6 +9,7 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
     string m_prefabPath = "HighAndLow/HighAndLowHomePanel";
     Button m_startBtn;
     Button m_settingsBtn;
+    Button _exitButton;
     HighAndLowGameView m_gameView;
     HighAndLowSettingsView m_settingsView;
 
@@ -31,6 +32,11 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
         m_resetBtn.onClick.AddListener(OnClickResetButton);
         m_cancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
         m_cancelBtn.onClick.AddListener(OnClickCancelButton);
+        
+        _exitButton = m_mainViewGameObject.transform.Find("BottomPanel/ExitButton").GetComponent<Button>();
+        _exitButton.onClick.AddListener(() => {
+            USENSceneManager.Instance.LoadScene("GameEntries");
+        });
     }
 
     public void Hide()
