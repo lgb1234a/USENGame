@@ -39,7 +39,7 @@ public class AppConfig
         }
     }
 
-    private int _bgmVolume = 0;
+    private int _bgmVolume = 5;
 
     public int BGMVolume {
         set
@@ -49,7 +49,7 @@ public class AppConfig
         }
         get
         {
-            _bgmVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 0);
+            _bgmVolume = PreferencesStorage.ReadInt("__BGM_VOLUME__", 5);
             return _bgmVolume;
         }
     }
@@ -63,7 +63,7 @@ public class AppConfig
         }
         get
         {
-            _effectVolume = PreferencesStorage.ReadInt("__EFFECT_VOLUME__", 0);
+            _effectVolume = PreferencesStorage.ReadInt("__EFFECT_VOLUME__", 5);
             return _effectVolume;
         }
     }
@@ -78,7 +78,7 @@ public class AppConfig
         }
         get
         {
-            _themeSelectedIdx = PreferencesStorage.ReadInt("__THEME_SELECTED__", 0);
+            _themeSelectedIdx = PreferencesStorage.ReadInt("__THEME_SELECTED__", 5);
             return _themeSelectedIdx;
         }
     }
@@ -92,7 +92,7 @@ public class AppConfig
         }
         get
         {
-            _bgmSelectedIdx = PreferencesStorage.ReadInt("__BGM_SELECTED__", 0);
+            _bgmSelectedIdx = PreferencesStorage.ReadInt("__BGM_SELECTED__", 5);
             return _bgmSelectedIdx;
         }
     }
@@ -106,7 +106,7 @@ public class AppConfig
         }
         get
         {
-            _winnerSelectedIdx = PreferencesStorage.ReadInt("__WINNER_SELECTED__", 0);
+            _winnerSelectedIdx = PreferencesStorage.ReadInt("__WINNER_SELECTED__", 5);
             return _winnerSelectedIdx;
         }
     }

@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "309af56c",
         "name": "com.usen.ubingo",
-        "processId": 30818,
+        "processId": 12820,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -294,6 +294,12 @@
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
             "processId": 30818,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 12820,
             "exited": false
         },
         {
