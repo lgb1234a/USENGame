@@ -49,13 +49,13 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
         
         switch (m_index)
         {
-            case 0:
+            case 1:
                 LoadGame(RootViewType.HighAndLow);
                 break;
-            case 1:
+            case 2:
                 LoadGame(RootViewType.Bingo);
                 break;
-            case 2:
+            case 4:
                 SceneManager.LoadScene("Roulette Test");
                 break;
         }
