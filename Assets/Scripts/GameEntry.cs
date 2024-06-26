@@ -20,6 +20,8 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
     void Start()
     {
         m_entryButton.onClick.AddListener(OnGameEntryClicked);
+        PreferencesStorage.SaveInt("__BGM_VOLUME__", 5);
+        PreferencesStorage.SaveInt("__EFFECT_VOLUME__", 2);
     }
 
     void Update()

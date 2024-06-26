@@ -54,7 +54,7 @@ public class AppConfig
         }
     }
 
-    private int _effectVolume = 0;
+    private int _effectVolume = 5;
     public int EffectVolume {
         set
         {
