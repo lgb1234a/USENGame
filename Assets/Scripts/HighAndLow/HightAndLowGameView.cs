@@ -272,6 +272,9 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             PlayLoop();
             HideResultButtons();
             m_resultIsShowing = false;
+        } else if (m_isWaitTimer )
+        {
+            ShowResult();
         }
     }
 
