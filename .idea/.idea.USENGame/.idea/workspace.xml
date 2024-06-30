@@ -5,103 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget+Database.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget+Database.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Route.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Route.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Circular Progress Indicator UI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Circular Progress Indicator UI.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/ExtraMath.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/ExtraMath.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/PopScaler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/PopScaler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UICounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UICounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIProgressIndicator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIProgressIndicator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIWorldSpace.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIWorldSpace.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/CircleFull@256px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/CircleFull@256px.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/SquareFull@256px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/SquareFull@256px.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Square Indicator UI.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Square Indicator UI.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetTest.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetTest.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild Variant.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild Variant.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteContentEditView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteContentEditView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteGameSelectionView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteGameSelectionView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStart.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStart.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteThemeSelectionList.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF (Sprite).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF (Sprite).asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowHomePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowHomePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/confirm_btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Icons/confirm_btn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/confirm_btn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Icons/confirm_btn.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/line.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/line.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/line.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/line.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/confirm_btn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/confirm_btn.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowRoulette/line.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Icons/icons.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Icons/icons.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/BottomPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/BottomPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold SDF.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold.otf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Bold.otf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF (Sprite).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF (Sprite).asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium SDF.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium.otf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Fonts/SourceHanSansSC-Medium.otf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteThemeSelectionView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection View.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteThemeSelectionView.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteThemeSelectionList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionList.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionListCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionListCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bingo/BingoHomeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bingo/BingoHomeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Game.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection List.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection List.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection View.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Selection View.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Unlit.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette Unlit.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Roulette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteStartView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteSector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteSector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteSectors.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteSectors.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Scripts/RouletteWheelTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットの選択.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットの選択.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットタイトル.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットタイトル.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットフォーカス.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットフォーカス.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットベース.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレットベース.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレット背景.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/ルーレット背景.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/矩形 4255.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/Sprites/矩形 4255.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/UIs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
@@ -124,11 +101,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b2d7d59817e4af1a45d9ca0b0f44c327e00/f1/9777b630/VideoRenderMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/539c950127d24dd9b0d63efcbeb5d9a7fe00/28/e782e477/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/54/0365a14f/Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/05/62a65cec/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/45/20ee7cd3/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8d67bbf3b14542519c4d452573e0d67924600/ab/55fb5729/ITimelineClipAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b89159fb2954d1cad3afaf5ff7e6f7d6c000/f8/e4b282e7/TextAlignmentOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a2ff8349e6ff4da88cd7ad7d1dd412194000/1c/f11e0374/PlayableDirector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3c66fd2767c44a085aa0b03bbe98b2c7400/f6/5b276bf7/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/0b/3881f74a/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/1a/e799fc1c/ExposedReference`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/35/37f69b9a/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/58/b235978f/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/65/de8bbfb6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -140,7 +120,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SelectOddNumberedFiles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoTrack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Mini-games/Roulette/RouletteSelectionListCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Samples/Assets/KawaseBlur/KawaseBlur.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Samples/GaussianBlur/BlurVolumeComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FaceTo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -160,6 +141,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/Shaders/2D/Sprite-Unlit-Default.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Drawing/Inspector/PropertyDrawers/Vector4PropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Generation/Targets/BuiltIn/Editor/ShaderPreprocessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/TestLaunchers/EditModeLauncher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Editor/TMP_BitmapShaderGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Editor/TMP_SettingsEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
@@ -168,6 +150,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/TouchInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIElements/PanelEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
@@ -253,10 +237,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34556">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="34556" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -288,7 +272,8 @@
       <workItem from="1717461687324" duration="49355000" />
       <workItem from="1718701068407" duration="403000" />
       <workItem from="1718705757110" duration="13156000" />
-      <workItem from="1719309643855" duration="1460000" />
+      <workItem from="1719309643855" duration="32287000" />
+      <workItem from="1719741887677" duration="4606000" />
     </task>
     <servers />
   </component>
@@ -326,19 +311,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/USENSceneManager.cs</url>
-          <line>16</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\USENSceneManager.cs" initialLine="16" containingFunctionPresentation="Method 'LoadScene'">
-            <startOffsets>
-              <option value="442" />
-            </startOffsets>
-            <endOffsets>
-              <option value="498" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

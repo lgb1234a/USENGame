@@ -77,6 +77,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3eb80059aadd6ba40b27100493ae4751, type: 3}
   - {fileID: 21300000, guid: a41e33597a7e70941aed9ef50e2180f8, type: 3}
   - {fileID: 21300000, guid: 8208411a080d84748aadef944737794b, type: 3}
+  - {fileID: 21300000, guid: 657c7b4a20aff48e68537833051c2b83, type: 3}
   - {fileID: 21300000, guid: 7523dd8ad3a9c5c458ccab545ce5b573, type: 3}
   - {fileID: 21300000, guid: c6fa69aa9bd150e4b8b9981a2ee815be, type: 3}
   - {fileID: 21300000, guid: cee854ba1bbe68245bb52efba6fb19c4, type: 3}
@@ -119,6 +120,7 @@ SpriteAtlas:
   - textbox_active
   - bt1_normal
   - setting_back
+  - confirm_btn
   - icon_arrow
   - tab_line
   - textbox_normal

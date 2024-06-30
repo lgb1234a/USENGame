@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Mini-games/Roulette/Roulette Test.unity
-    guid: 4fe2442351faba04c980b548ce234968
+    path: Assets/Games/Roulette/RouletteStart.unity
+    guid: 7e937916f57afb846babbb900e59a321
   m_configObjects: {}

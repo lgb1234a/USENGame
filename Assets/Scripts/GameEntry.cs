@@ -47,7 +47,7 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
 
     void OnGameEntryClicked()
     {
-        AudioManager.Instance.PlayEntrySelectedEffect();
+        // AudioManager.Instance.PlayEntrySelectedEffect();
         
         switch (m_index)
         {
@@ -58,7 +58,7 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
                 LoadGame(RootViewType.Bingo);
                 break;
             case 4:
-                SceneManager.LoadScene("Roulette Test");
+                SceneManager.LoadScene("RouletteStart");
                 break;
         }
     }
