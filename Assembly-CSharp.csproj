@@ -76,6 +76,7 @@
      <Compile Include="Assets\Modules\UI\Navigation\Navigator.cs" />
      <Compile Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHistoryView.cs" />
+     <Compile Include="Assets\Games\Roulette\RouletteGameView.cs" />
      <Compile Include="Assets\Samples\GaussianBlur\BlurRenderFeature.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
@@ -137,7 +138,7 @@
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionView.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Games\Roulette\RouletteGameView.cs" />
+     <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -193,12 +194,13 @@
      <Folder Include="Assets\Resources\DefaultTheme\Effects" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects" />
      <None Include="Assets\Samples\Spine\King\Spine_King.atlas.txt" />
+     <Folder Include="Assets\Resources\Super Ellipses" />
+     <Folder Include="Assets\Resources\Super Ellipses\Shadow" />
      <Folder Include="Assets\Modules\Video" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Bingo" />
      <Folder Include="Assets\Modules\UI\Progress Indicator" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\VolumeProfiles" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\LensFlarePresets" />
-     <Folder Include="Assets\Scenes\Mini-games" />
      <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures" />
      <Folder Include="Assets\Samples\Timeline" />
@@ -286,6 +288,7 @@
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo" />
      <Folder Include="Assets\Resources\DefaultTheme\CellBg" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_high" />
+     <Folder Include="Assets\Resources\Super Ellipses\Solid" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Rotate\00_BINGO.atlas.txt" />
      <Folder Include="Assets\Samples\Timeline\1.6.4" />
      <None Include="Assets\Resources\Material\default_font.shader" />

@@ -2130,7 +2130,7 @@ MonoBehaviour:
   - {fileID: 1599613009}
   - {fileID: 1686641321}
   gameSettingsBtn: {fileID: 23417}
-  gameSettingsGO: {fileID: 3378848170432716418, guid: a4b501b77cba64c4ead1b5c420d9c305,
+  gameSettingsGO: {fileID: 2950716858887959514, guid: ee9152b3accf3b84b857fee0e72d7d57,
     type: 3}
   spacing: 300
   dragSpeed: 0.5
