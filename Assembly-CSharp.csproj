@@ -137,8 +137,8 @@
      <Compile Include="Assets\Games\Roulette\RouletteThemeSelectionList.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionView.cs" />
-     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
+     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -226,6 +226,7 @@
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Animation" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Home" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Resources\1x1" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow\Animation" />
      <None Include="Assets\Resources\Material\default.shader" />
      <Folder Include="Assets\Samples\Assets\Demo" />
