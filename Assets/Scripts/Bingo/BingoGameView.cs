@@ -107,6 +107,7 @@ public class BingoGameView : AbstractView, IViewOperater
         m_numberCellHandler.UpdateTheme();
 
         m_bottomBackButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button1").gameObject;
+        m_bottomBackButton.GetComponent<Button>().onClick.AddListener(OnClickStopButton);
 
         m_rotateTestButton = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button5").GetComponent<Button>();
         m_rotateTestButtonText = m_mainViewGameObject.transform.Find("PlayPanel/BottomPanel/Button5/Text").GetComponent<Text>();

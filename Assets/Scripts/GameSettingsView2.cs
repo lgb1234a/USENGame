@@ -43,8 +43,9 @@ public class GameSettingsView2 : Widget
     bool isInited;
     
     int nextCellCountChange;
-
-
+    
+    private GameObject lastSelectedObject;
+    
     public void Start() 
     {
         gameSelector = transform.parent.Find("Home").GetComponent<GameSelector>();
@@ -70,9 +71,6 @@ public class GameSettingsView2 : Widget
         EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
         isInited = true;
     }
-    
-    private GameObject lastSelectedObject;
-    
     
     public void Update() {
         if (Input.GetButtonDown("Cancel")) {
@@ -124,9 +122,9 @@ public class GameSettingsView2 : Widget
         }
         
         GameObject currentSelectedObject = EventSystem.current.currentSelectedGameObject;
-        if (currentSelectedObject != lastSelectedObject)
+        if (currentSelectedObject != null && currentSelectedObject != lastSelectedObject)
         {
-            if (lastSelectedObject != null) 
+            if (lastSelectedObject != null)
                 OnSelectedObjectChanged(lastSelectedObject, currentSelectedObject);
             lastSelectedObject = currentSelectedObject;
         }
@@ -216,7 +214,8 @@ public class GameSettingsView2 : Widget
     }
 
     void OnClickBackButton() {
-        EventSystem.current.SetSelectedGameObject(null);
+        // EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
         AudioManager.Instance.PlayKeyBackEffect();
         Hide();
     }

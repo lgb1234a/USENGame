@@ -22,6 +22,8 @@ public class BingoSettingsView : AbstractView, IViewOperater
     Text m_cancelSettingCellCountText;
     int m_nextCellCountChange;
     BingoHomeView m_homeView;
+    
+    Button m_backButton;
 
     public void Build() {
         // var obj = Resources.Load<GameObject>(m_prefabPath);
@@ -46,6 +48,9 @@ public class BingoSettingsView : AbstractView, IViewOperater
         m_cancelSettingCellCountBtn = m_confirmPanel.transform.Find("CancelBtn").GetComponent<Button>();
         m_cancelSettingCellCountText = m_confirmPanel.transform.Find("CancelBtn/Text").GetComponent<Text>();
         m_cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
+        
+        m_backButton = m_mainViewGameObject.transform.Find("Panel/BottomPanel/BackButton").GetComponent<Button>();
+        m_backButton.onClick.AddListener(OnClickBackHomeButton);
 
         HandleSelectedEventTriggers();
         EventSystem.current.SetSelectedGameObject(m_maxCellSettingButton.gameObject);
