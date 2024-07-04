@@ -162,7 +162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -127.999695, y: -57.99991}
+  m_AnchoredPosition: {x: -127.99963, y: -57.99994}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23417
@@ -466,7 +466,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216412435}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f5ff3977014d54d089986409a4e7bee3, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 016430bb38e6a4d4f8f747461ef0d81e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1478983329}
@@ -479,14 +479,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -936,7 +934,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3c3ea070698354d4c8d829e956dae701,
+      objectReference: {fileID: 21300000, guid: bc9a5ca7624554f51b5cd06f3751f067,
         type: 3}
     - target: {fileID: 5578584032830080694, guid: b61d6fdda49a145caa47a386ff40a154,
         type: 3}
