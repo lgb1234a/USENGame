@@ -1,4 +1,4 @@
-﻿# This .gitignore file should be placed at the root of your Unity project directory
+# This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
@@ -62,4 +62,4 @@ crashlytics-build.properties
 
 # Misc
 /Assets/Samples/
-Assets/Resources/.DS_Store
+.DS_Store
