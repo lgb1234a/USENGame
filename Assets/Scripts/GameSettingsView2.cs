@@ -4,7 +4,9 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using DG.Tweening;
+using Games.Common;
 using Luna.UI;
+using Luna.UI.Navigation;
 using Sirenix.Utilities;
 using UnityEngine.Serialization;
 
@@ -35,6 +37,8 @@ public class GameSettingsView2 : Widget
     public Button highAndLowTimerBtn;
     public Text highAndLowTimerText;
 
+    public Button appInfoButton;
+    
     public Button backButton;
     
     GameSelector gameSelector;
@@ -90,6 +94,8 @@ public class GameSettingsView2 : Widget
         confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
         cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
         highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
+        
+        appInfoButton.onClick.AddListener(OnClickAppInfoButton);
         backButton.onClick.AddListener(OnClickBackButton);
 
         EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
@@ -97,8 +103,10 @@ public class GameSettingsView2 : Widget
     }
     
     public void Update() {
-        if (Input.GetButtonDown("Cancel")) {
-            OnClickBackButton();
+        if (Input.GetButtonDown("Cancel")) 
+        {
+            if (backButton.gameObject.activeInHierarchy)
+                OnClickBackButton();
         }
 
         if (Input.GetButtonUp("Horizontal")) {
@@ -246,7 +254,12 @@ public class GameSettingsView2 : Widget
         AppConfig.Instance.CurrentHighAndLowTimer += value;
         highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
     }
-
+    
+    void OnClickAppInfoButton() {
+        AudioManager.Instance.PlayKeyBackEffect();
+        Navigator.Push<AppInfoView>();
+    }
+    
     void OnClickBackButton() {
         // EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);

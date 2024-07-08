@@ -147,6 +147,7 @@
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
      <Compile Include="Assets\Modules\UI\Base\Widget+Event.cs" />
+     <Compile Include="Assets\Games\Common\AppInfoView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -209,6 +210,7 @@
      <Folder Include="Assets\Modules\UI\Progress Indicator" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\VolumeProfiles" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\LensFlarePresets" />
+     <Folder Include="Assets\Games\Common" />
      <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures" />
      <Folder Include="Assets\Samples\Timeline" />
