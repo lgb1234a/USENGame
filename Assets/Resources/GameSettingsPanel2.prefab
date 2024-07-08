@@ -6829,7 +6829,7 @@ GameObject:
   - component: {fileID: 3810565851468374537}
   - component: {fileID: 6928025777977635812}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: BGM Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

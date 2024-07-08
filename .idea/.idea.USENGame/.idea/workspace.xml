@@ -5,64 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UsenBottomPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UsenBottomPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/FocusManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/FocusManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Database.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Event.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Event.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Widgets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Widgets/ListView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Widgets/ListView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF (Sprite).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF (Sprite).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/BottomPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/BottomPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Selection List.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Selection List.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionListCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionListCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionList.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteThemeSelectionView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteWheel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteWheel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteWheelTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteWheelTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget+Database.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget+Database.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Database.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityLocalization.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Annotation.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Annotation.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Annotation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Annotation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Text.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Text.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Text.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Text.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.TimeDilation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.TimeDilation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Tween.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Tween.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Tween.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Tween.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Utilities.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Utilities.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Utilities.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Utilities.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +16,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/c1d00767aeff4110a7a9a0efdb90c4ff.SourceCodeCombined.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/73ae68d62ab841b9b1aa90cf5baf23ad5b200/f4/ed9e58de/0200004Cpdb84.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b7ddbc666124f97acc357fa84bab350185c00/69/63f61e5e/Key.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/2c/9745391e/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ViewManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/cc.lunareclipse.unilities@25128a358e/Core/Pool/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.handzlikchris.fastscriptreload@053261fa33/Scripts/Editor/Compilation/DynamicAssemblyCompiler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditor/SpriteEditorHandles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteEditorData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteFrameModule/SpriteFrameModuleBase.cs" root0="SKIP_HIGHLIGHTING" />
@@ -163,6 +106,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ToggleGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/EventSystem/InterceptedEventsPreviewTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/NestedCanvasMaintainsCorrectSize.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/RawImageTest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -287,7 +231,7 @@
       <workItem from="1718705757110" duration="13156000" />
       <workItem from="1719309643855" duration="32287000" />
       <workItem from="1719741887677" duration="39005000" />
-      <workItem from="1720170390265" duration="46611000" />
+      <workItem from="1720170390265" duration="52991000" />
     </task>
     <servers />
   </component>
