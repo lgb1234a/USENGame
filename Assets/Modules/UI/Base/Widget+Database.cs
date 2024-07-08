@@ -8,6 +8,9 @@ namespace Luna.UI
 {
     public partial class Widget
     {
+        // Widget database file name
+        public const string WIDGETS_DB_FILE_NAME = "Widgets.g";
+        
         public static List<GameObject> All { get; private set; } = new ();
         public static Dictionary<Type, GameObject> Dictionary { get; private set; } = new ();
         
@@ -16,7 +19,7 @@ namespace Luna.UI
         private static void Initialize()
         {
             // Load stateful widgets scriptable object
-            var widgets = Resources.Load<Widgets>(StatefulWidgetPrefabProcessor.WIDGETS_ASSET_FILE_NAME);
+            var widgets = Resources.Load<Widgets>(WIDGETS_DB_FILE_NAME);
             if (widgets != null)
             {
                 All = widgets.Prefabs;

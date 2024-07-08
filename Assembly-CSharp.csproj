@@ -92,6 +92,7 @@
      <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoGameView.cs" />
      <Compile Include="Assets\Modules\UI\Test\StatefulWidgetChild.cs" />
+     <Compile Include="Assets\Games\Common\AppInfoView.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteChooseView.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteEditView.cs" />
      <Compile Include="Assets\Scripts\TerminalView.cs" />
@@ -140,14 +141,13 @@
      <Compile Include="Assets\Modules\UI\Base\StatefulWidgetPrefabProcessor.cs" />
      <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
+     <Compile Include="Assets\Modules\UI\Base\Widget+Event.cs" />
      <Compile Include="Assets\Modules\UI\Base\FocusManager.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionView.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Modules\UI\Base\Widget+Event.cs" />
-     <Compile Include="Assets\Games\Common\AppInfoView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
