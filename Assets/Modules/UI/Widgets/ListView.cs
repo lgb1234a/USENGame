@@ -38,7 +38,6 @@ namespace Modules.UI.Widgets
             _scrollRect.onValueChanged.AddListener(OnScrollValueChanged);
             Initialize();
         }
-        
 
         public void Initialize()
         {
@@ -63,6 +62,7 @@ namespace Modules.UI.Widgets
             {
                 var newCell = Instantiate(cell, content);
                 _cells.Add(newCell);
+                newCell.gameObject.SetActive(true);
                 newCell.Index = i;
                 newCell.Data = Data[i];
                 newCell.OnCellSelected += OnCellSelected;
@@ -75,7 +75,6 @@ namespace Modules.UI.Widgets
                         SnapTo(listViewCell.transform as RectTransform);
                     };
                 }
-                newCell.gameObject.SetActive(true);
             }
         }
 
@@ -92,8 +91,8 @@ namespace Modules.UI.Widgets
         
         public void SnapTo(RectTransform target)
         {
-            var y = -target.anchoredPosition.y - ((RectTransform)_scrollRect.transform).sizeDelta.y;
-            y = Mathf.Clamp(y, 0, _scrollRect.content.sizeDelta.y);
+            var y = -target.anchoredPosition.y - ((RectTransform)_scrollRect.transform).rect.height;
+            y = Mathf.Clamp(y, 0, _scrollRect.content.rect.height);
             var pos = new Vector2(_scrollRect.content.anchoredPosition.x, y);
             DOTween.To(() => _scrollRect.content.anchoredPosition, v => _scrollRect.content.anchoredPosition = v, pos, 0.5f);
         }
@@ -141,7 +140,7 @@ namespace Modules.UI.Widgets
 }
 
 
-public class ListViewCell<T> : Widget, ISelectHandler, IDeselectHandler, ISubmitHandler
+public abstract class ListViewCell<T> : Widget, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     virtual public T Data { get; set; }
     

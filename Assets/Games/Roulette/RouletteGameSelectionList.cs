@@ -57,8 +57,8 @@ namespace USEN.MiniGames.Roulette
         }
         public void SnapTo(RectTransform target)
         {
-            var y = -target.anchoredPosition.y - ((RectTransform)listView.transform).sizeDelta.y;
-            y = Mathf.Clamp(y, 0, listView.content.sizeDelta.y);
+            var y = -target.anchoredPosition.y - ((RectTransform)listView.transform).rect.height;
+            y = Mathf.Clamp(y, 0, listView.content.rect.height);
             var pos = new Vector2(listView.content.anchoredPosition.x, y);
             DOTween.To(() => listView.content.anchoredPosition, v => listView.content.anchoredPosition = v, pos, 0.5f);
         }

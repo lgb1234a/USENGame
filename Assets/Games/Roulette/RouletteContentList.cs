@@ -1,5 +1,6 @@
 // Created by LunarEclipse on 2024-7-6 21:4.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,8 +12,13 @@ using UnityEngine.EventSystems;
 
 namespace USEN.MiniGames.Roulette
 {
-    public class RouletteContentList : ListView<RouletteContentListCell, string>
+    public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
     {
+        private void Start()
+        {
+            Debug.Log("RouletteContentList Start");
+        }
+
         async Task OnEnable()
         {
             // Select first cell
@@ -24,17 +30,17 @@ namespace USEN.MiniGames.Roulette
             }
         }
         
-        protected override void OnCellSubmitted(int index, ListViewCell<string> listViewCell)
+        protected override void OnCellSubmitted(int index, ListViewCell<RouletteSector> listViewCell)
         {
             Debug.Log($"Cell {index} submitted.");
         }
 
-        protected override void OnCellDeselected(int index, ListViewCell<string> listViewCell)
+        protected override void OnCellDeselected(int index, ListViewCell<RouletteSector> listViewCell)
         {
             Debug.Log($"Cell {index} deselected.");
         }
 
-        protected override void OnCellSelected(int index, ListViewCell<string> listViewCell)
+        protected override void OnCellSelected(int index, ListViewCell<RouletteSector> listViewCell)
         {
             Debug.Log($"Cell {index} selected.");
         }

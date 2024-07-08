@@ -47,7 +47,7 @@ public class RouletteGameSelectionListCell : MonoBehaviour, ISelectHandler, IDes
             target.rouletteContentList.gameObject.SetActive(true);
             
             // Change roulette content list data
-            target.rouletteContentList.Data = rouletteData.objects.Select(x => x.content).ToList();
+            target.rouletteContentList.Data = rouletteData.objects;
             target.rouletteContentList.FocusOnCell(0);
         });
     }

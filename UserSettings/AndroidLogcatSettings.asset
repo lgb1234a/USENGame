@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "309af56c",
         "name": "com.usen.ubingo",
-        "processId": 26005,
-        "exited": true
+        "processId": 30476,
+        "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -306,6 +306,12 @@
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
             "processId": 26005,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 30476,
             "exited": false
         },
         {

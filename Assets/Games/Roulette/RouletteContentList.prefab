@@ -459,8 +459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6105c665a942c5bd61bddc5f07e7cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: []
   cell: {fileID: 8489434640864021694}
-  <Data>k__BackingField: []
+  snapToCellWhenSelected: 1
 --- !u!1 &6607035895371050087
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +478,7 @@ GameObject:
   - component: {fileID: 5494832547728599568}
   - component: {fileID: 8334255410276910522}
   - component: {fileID: 8489434640864021694}
+  - component: {fileID: 7012414329157812453}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -534,7 +536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54fa1c2ccc14fbd41bbfb4f1b773b1d7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -565,7 +567,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.35283017, b: 0.35283017, a: 0.49803922}
+    m_NormalColor: {r: 0.627451, g: 1, b: 0.88372874, a: 0.49803922}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -635,14 +637,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6607035895371050087}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 150
+  m_MinHeight: 120
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
@@ -661,6 +663,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1243476798775401671}
+--- !u!114 &7012414329157812453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6607035895371050087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb30198aa32dd140b5750692dd48104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 10
+  image: {fileID: 405397115595608752}
 --- !u!1 &8547340981570655004
 GameObject:
   m_ObjectHideFlags: 0

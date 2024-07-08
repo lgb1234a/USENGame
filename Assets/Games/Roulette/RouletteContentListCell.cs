@@ -1,3 +1,4 @@
+using LeTai;
 using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
@@ -6,32 +7,39 @@ using UnityEngine.UI;
 
 namespace USEN.MiniGames.Roulette
 {
-    public class RouletteContentListCell : ListViewCell<string>
+    public class RouletteContentListCell : ListViewCell<RouletteSector>
     {
         public TextMeshProUGUI text;
         private Button _button;
     
-        public override string Data
+        private RouletteSector _data;
+        public override RouletteSector Data
         {
-            get => text.text;
-            set => text.text = value;
+            get => _data;
+            set
+            {
+                _data = value;
+                if (_button != null)
+                    _button.colors = new ColorBlock
+                    {
+                        normalColor = value.color,
+                        highlightedColor =  _button.colors.highlightedColor,
+                        pressedColor =  _button.colors.pressedColor,
+                        selectedColor = value.color.WithA(0.5f),
+                        disabledColor = _button.colors.disabledColor,
+                        colorMultiplier = _button.colors.colorMultiplier,
+                        fadeDuration = _button.colors.fadeDuration
+                    };
+                if (text != null)
+                    text.text = value.content;
+            }
         }
-        
+
         void Awake()
         {
             _button = GetComponent<Button>();
-            _button.colors = new ColorBlock
-            {
-                normalColor = Color.white,
-                highlightedColor = Color.white,
-                pressedColor = Color.white,
-                selectedColor = Color.white,
-                disabledColor = Color.white,
-                colorMultiplier = 1,
-                fadeDuration = 0.1f
-            };
         }
-    
+        
         public override void OnSelect(BaseEventData eventData)
         {
             base.OnSelect(eventData);
@@ -45,7 +53,7 @@ namespace USEN.MiniGames.Roulette
             });
         }
 
-        public void OnDeselect(BaseEventData eventData)
+        public override void OnDeselect(BaseEventData eventData)
         {
             base.OnDeselect(eventData);
             
