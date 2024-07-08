@@ -15,11 +15,10 @@ namespace Luna.UI.Navigation
         public Canvas canvas; // Reference to the Canvas
         public GameObject rootWidget; // The root widget of the game
         
-        public List<GameObject> widgets = new(); // List of all widgets in the game
-        
         public bool escToPop = true; // Pop the top widget when the escape key is pressed
         
-        private readonly Dictionary<Type, GameObject> _widgetDictionary = new();
+        // public List<GameObject> widgets = new(); // List of all widgets in the game
+        // private readonly Dictionary<Type, GameObject> _widgetDictionary = new();
         private readonly Stack<GameObject> _widgetStack = new();
         
         private bool isDontDestroyOnLoad = false;
@@ -61,20 +60,20 @@ namespace Luna.UI.Navigation
             }
             
             // Preload all widgets in the game
-            if (widgets.Count == 0)
-            {
-                // Load stateful widgets scriptable object
-                Widgets widgets = Resources.Load<Widgets>("Widgets.g");
-                if (widgets != null)
-                {
-                    this.widgets = widgets.Prefabs;
-                    foreach (var widget in this.widgets)
-                    {
-                        Debug.Log($"[Navigator] Found widget: {widget.name}");
-                        _widgetDictionary.TryAdd(widget.GetComponent<Widget>().GetType(), widget);
-                    }
-                }
-            }
+            // if (widgets.Count == 0)
+            // {
+            //     // Load stateful widgets scriptable object
+            //     Widgets widgets = Resources.Load<Widgets>("Widgets.g");
+            //     if (widgets != null)
+            //     {
+            //         this.widgets = widgets.Prefabs;
+            //         foreach (var widget in this.widgets)
+            //         {
+            //             Debug.Log($"[Navigator] Found widget: {widget.name}");
+            //             _widgetDictionary.TryAdd(widget.GetComponent<Widget>().GetType(), widget);
+            //         }
+            //     }
+            // }
             
             // Load the rootWidget
             if (rootWidget != null)
@@ -127,7 +126,7 @@ namespace Luna.UI.Navigation
         
         protected void _Push<T>() where T : Widget
         {
-            if (_widgetDictionary.TryGetValue(typeof(T), out GameObject widgetPrefab))
+            if (Widget.Dictionary.TryGetValue(typeof(T), out GameObject widgetPrefab))
             {
                 Push(widgetPrefab);
             }

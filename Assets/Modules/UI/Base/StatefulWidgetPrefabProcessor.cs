@@ -8,9 +8,13 @@ using UnityEditor;
 
 public class StatefulWidgetPrefabProcessor : AssetPostprocessor
 {
+    // Asset file name
+    public const string WIDGETS_ASSET_FILE_NAME = "Widgets.g";
+    
     // Find all prefabs with StatefulWidget component and save them to a scriptable object.
     static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
     {
+        RemoveAllMissingPrefabs();
         foreach (var asset in importedAssets)
         {
             if (asset.EndsWith(".prefab"))
@@ -26,6 +30,7 @@ public class StatefulWidgetPrefabProcessor : AssetPostprocessor
     [InitializeOnLoadMethod]
     private static void Initialize()
     {
+        RemoveAllMissingPrefabs();
         string[] guids = AssetDatabase.FindAssets("t:Prefab");
         foreach (var guid in guids)
         {
@@ -43,7 +48,7 @@ public class StatefulWidgetPrefabProcessor : AssetPostprocessor
         if (prefab.GetComponent<Widget>() != null)
         {
             // Create the scriptable object if it doesn't exist.
-            Widgets widgets = Resources.Load<Widgets>("Widgets.g");
+            Widgets widgets = Resources.Load<Widgets>(WIDGETS_ASSET_FILE_NAME);
             if (widgets == null)
             {
                 // Create directory if it doesn't exist.
@@ -51,13 +56,38 @@ public class StatefulWidgetPrefabProcessor : AssetPostprocessor
                     AssetDatabase.CreateFolder("Assets", "Resources");
                 
                 widgets = ScriptableObject.CreateInstance<Widgets>();
-                AssetDatabase.CreateAsset(widgets, "Assets/Resources/Widgets.g.asset");
+                AssetDatabase.CreateAsset(widgets, $"Assets/Resources/{WIDGETS_ASSET_FILE_NAME}.asset");
             }
 
             widgets.Add(prefab);
             EditorUtility.SetDirty(widgets);
         }
     }
+
+    private static void RemoveAllMissingPrefabs()
+    {
+        Widgets widgets = Resources.Load<Widgets>(WIDGETS_ASSET_FILE_NAME);
+        if (widgets != null)
+        {
+            bool removed = false;
+            for (int i = widgets.Prefabs.Count - 1; i >= 0; i--)
+            {
+                if (widgets.Prefabs[i] == null)
+                {
+                    Debug.Log("Removed missing prefab from Widgets.g");
+                    widgets.Prefabs.RemoveAt(i);
+                    removed = true;
+                }
+            }
+
+            if (removed)
+            {
+                EditorUtility.SetDirty(widgets);
+            }
+        }
+    }
+
+
     
     // Find all prefabs with StatefulWidget component and save them to a JSON file.
     // static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)

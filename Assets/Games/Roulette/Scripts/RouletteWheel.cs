@@ -51,14 +51,14 @@ namespace USEN.MiniGames.Roulette
             }
         }
 
-        private void Start()
+        private void Awake()
         {
             Sectors = rouletteData.objects;
         }
 
         private void OnValidate()
         {
-            Debug.Log("OnValidate");
+            
         }
 
         public void SpinWheel()

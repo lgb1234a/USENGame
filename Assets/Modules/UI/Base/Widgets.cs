@@ -21,5 +21,4 @@ namespace Luna.UI
             Debug.Log("Added prefab: " + prefab.name);
         }
     }
-
 }

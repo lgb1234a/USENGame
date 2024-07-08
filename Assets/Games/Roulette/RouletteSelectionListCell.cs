@@ -2,6 +2,7 @@ using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using USEN.MiniGames.Roulette;
 
 public class RouletteSelectionListCell : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
@@ -12,7 +13,7 @@ public class RouletteSelectionListCell : MonoBehaviour, ISelectHandler, IDeselec
         text.color = Color.black;
         
         // Emit event
-        ExecuteEvents.ExecuteHierarchy<RouletteThemeSelectionList>(gameObject, null, (target, data) =>
+        ExecuteEvents.ExecuteHierarchy<RouletteSelectionList>(gameObject, null, (target, data) =>
         {
             target.SnapTo(transform as RectTransform);
         });
@@ -25,7 +26,17 @@ public class RouletteSelectionListCell : MonoBehaviour, ISelectHandler, IDeselec
 
     public void OnSubmit(BaseEventData eventData)
     {
-        Navigator.Push<USEN.MiniGames.Roulette.RouletteGameView>();
+        // Navigator.Push<RouletteGameSelectionView>();
+    }
+    
+    public void OnClick()
+    {
+        Navigator.Push<RouletteGameSelectionView>();
+    }
+    
+    public void Test()
+    {
+        Debug.Log("Test");
     }
 }
 

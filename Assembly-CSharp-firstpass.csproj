@@ -417,6 +417,9 @@
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="System.Runtime.CompilerServices.Unsafe">
+     <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.handzlikchris.fastscriptreload@053261fa33\Plugins\Roslyn\2021+\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
      </Reference>
@@ -837,11 +840,11 @@
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.InputSystem">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
@@ -876,9 +879,6 @@
      <Reference Include="spine-csharp">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-csharp.dll</HintPath>
      </Reference>
-     <Reference Include="SingularityGroup.HotReload.Runtime.Public">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\SingularityGroup.HotReload.Runtime.Public.dll</HintPath>
-     </Reference>
      <Reference Include="UniTask.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
      </Reference>
@@ -903,9 +903,6 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="spine-unity">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
@@ -914,6 +911,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="spine-unity">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
@@ -929,6 +929,9 @@
      </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Nobi.UiRoundedCorners.Editor">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Nobi.UiRoundedCorners.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -980,6 +983,9 @@
      </Reference>
      <Reference Include="UnityUIExtensions.editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Nobi.UiRoundedCorners">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Nobi.UiRoundedCorners.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
