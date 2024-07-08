@@ -239,17 +239,17 @@ public class GameSettingsView2 : Widget
     }
 
     public void OnMaxCellSettingSliderValueChanged(int value) {
-        if (value < 0 && AppConfig.Instance.MaxCellCount == 8) return;
-        if (value > 0 && AppConfig.Instance.MaxCellCount == 75) return;
+        if (value < 0 && AppConfig.Instance.MaxCellCount <= 10) return;
+        if (value > 0 && AppConfig.Instance.MaxCellCount >= 75) return;
 
         AppConfig.Instance.MaxCellCount += value;
         maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
         AppConfig.Instance.ClearGameData();
     }
 
-    void OnHighAndLowTimerValueChanged(int value) {
-        if (value < 0 && AppConfig.Instance.CurrentHighAndLowTimer == 10) return;
-        if (value > 0 && AppConfig.Instance.CurrentHighAndLowTimer == 30) return;
+    public void OnHighAndLowTimerValueChanged(int value) {
+        if (value < 0 && AppConfig.Instance.CurrentHighAndLowTimer <= 10) return;
+        if (value > 0 && AppConfig.Instance.CurrentHighAndLowTimer >= 30) return;
 
         AppConfig.Instance.CurrentHighAndLowTimer += value;
         highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
