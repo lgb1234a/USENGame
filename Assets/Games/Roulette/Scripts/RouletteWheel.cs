@@ -3,9 +3,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Modules.UI.Misc;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace USEN.MiniGames.Roulette
@@ -25,6 +27,7 @@ namespace USEN.MiniGames.Roulette
         
         [Header("Text Settings")]
         public TMP_FontAsset font;
+        public float fontSize = 2.5f;
         public float textDistanceFromCenter = 2f;
         
         [Header("Spin Settings")]
@@ -33,6 +36,8 @@ namespace USEN.MiniGames.Roulette
         
         public event Action OnSpinStart;
         public event Action<string> OnSpinComplete;
+
+        private Canvas _canvas;
 
         private bool isSpinning = false;
         private float totalAngle;
@@ -53,7 +58,12 @@ namespace USEN.MiniGames.Roulette
 
         private void Awake()
         {
+            _canvas = GetComponentInParent<Canvas>().rootCanvas;
             Sectors = rouletteData.objects;
+        }
+
+        private void Start()
+        {
         }
 
         private void OnValidate()
@@ -142,8 +152,13 @@ namespace USEN.MiniGames.Roulette
 
             // Create GameObject for the sector
             GameObject sectorGO = new GameObject("Sector_" + index);
-            sectorGO.transform.SetParent(transform);
+            sectorGO.transform.SetParent(transform, false);
             sectorGO.transform.localPosition = Vector3.zero;
+            if (_canvas != null)
+            {
+                var scaleFactor = _canvas.GetScaleFactor();
+                sectorGO.transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, 1f);
+            }
 
             // Create and set up the Mesh
             MeshFilter meshFilter = sectorGO.AddComponent<MeshFilter>();
@@ -193,13 +208,13 @@ namespace USEN.MiniGames.Roulette
 
             // Add text
             GameObject textGO = new GameObject("Text_" + index);
-            textGO.transform.SetParent(sectorGO.transform);
+            textGO.transform.SetParent(sectorGO.transform, false);
 
             TextMeshPro text = textGO.AddComponent<TextMeshPro>();
             text.text = Sectors[index].content;
             text.horizontalAlignment = HorizontalAlignmentOptions.Left;
             text.verticalAlignment = VerticalAlignmentOptions.Middle;
-            text.fontSize = 2.5f;
+            text.fontSize = fontSize;
             text.color = Color.white;
             text.outlineColor = Color.black;
             text.outlineWidth = 1f;

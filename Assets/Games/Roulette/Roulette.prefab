@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 558227681656097051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.266667, y: 0.266667, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8834609412421270647}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 30.000002}
+  m_DrawMode: 1
+  m_Size: {x: 800, y: 800}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -112,7 +112,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8834609412421270647}
   m_RootOrder: 0
@@ -138,13 +138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rouletteData: {fileID: 11400000, guid: 21e20334632657741acaad9857c0fb5c, type: 2}
-  radius: 3.2
+  radius: 3.75
   segmentsPerSector: 10
   sectorInterval: 0.05
   angleOffset: 180
   clockwise: 1
-  textDistanceFromCenter: 2
   font: {fileID: 11400000, guid: ecfc58b86b66bc84ea7fb98fddeb4be5, type: 2}
+  fontSize: 3
+  textDistanceFromCenter: 1
   spinDuration: 4
   spinCurve:
     serializedVersion: 2
@@ -196,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 8834609411485472606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.266667, y: 0.266667, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8834609412421270647}
@@ -247,8 +248,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 800, y: 800}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -280,7 +281,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8834609411310160833}
   - {fileID: 5048659896690908787}
