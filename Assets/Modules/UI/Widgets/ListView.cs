@@ -2,6 +2,9 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.UI;
 using UnityEngine;
@@ -22,21 +25,55 @@ namespace Modules.UI.Widgets
             set
             {
                 data = value;
-                Initialize();
+                isDirty = true;
             }
         }
         
         public T cell;
         public bool snapToCellWhenSelected = true;
+        public bool selectFirstCellOnEnable = true;
+        
+        public delegate void CellCallback(int index, T listViewCell);
+        
+        public event CellCallback onCellSelected;
+        public event CellCallback onCellDeselected;
+        public event CellCallback onCellSubmitted;
         
         protected ScrollRect _scrollRect;
         protected readonly List<T> _cells = new();
+        
+        public int SelectedIndex { get; private set; }
+        public U SelectedData => Data[SelectedIndex];
 
-        private void Awake()
+        // You should call base.Awake() in the derived class
+        // or override this method to customize the initialization of the list view
+        protected virtual void Awake()
         {
             _scrollRect = GetComponent<ScrollRect>();
             _scrollRect.onValueChanged.AddListener(OnScrollValueChanged);
             Initialize();
+        }
+        
+        protected override async void OnEnable()
+        {
+            base.OnEnable();
+
+            if (isDirty)
+            {
+                Initialize();
+                isDirty = false;
+            }
+            
+            if (selectFirstCellOnEnable)
+            {
+                // Select first cell
+                var firstCell = _cells.First().gameObject;
+                if (firstCell != null)
+                {
+                    await UniTask.NextFrame();
+                    EventSystem.current.SetSelectedGameObject(firstCell);
+                }
+            }
         }
 
         public void Initialize()
@@ -44,9 +81,9 @@ namespace Modules.UI.Widgets
             // Clear existing cells
             foreach (var cell in _cells)
             {
-                cell.OnCellSelected -= OnCellSelected;
-                cell.OnCellDeselected -= OnCellDeselected;
-                cell.OnCellSubmitted -= OnCellSubmitted;
+                cell.OnCellSelected -= _OnCellSelected;
+                cell.OnCellDeselected -= _OnCellDeselected;
+                cell.OnCellSubmitted -= _OnCellSubmitted;
                 Destroy(cell.gameObject);
             }
             _cells.Clear();
@@ -65,9 +102,10 @@ namespace Modules.UI.Widgets
                 newCell.gameObject.SetActive(true);
                 newCell.Index = i;
                 newCell.Data = Data[i];
-                newCell.OnCellSelected += OnCellSelected;
-                newCell.OnCellDeselected += OnCellDeselected;
-                newCell.OnCellSubmitted += OnCellSubmitted;
+                newCell.OnCellSelected += _OnCellSelected;
+                newCell.OnCellSelected += (index, listViewCell) => SelectedIndex = index;
+                newCell.OnCellDeselected += _OnCellDeselected;
+                newCell.OnCellSubmitted += _OnCellSubmitted;
                 if (snapToCellWhenSelected)
                 {
                     newCell.OnCellSelected += (index, listViewCell) =>
@@ -78,13 +116,31 @@ namespace Modules.UI.Widgets
             }
         }
 
-        protected abstract void OnCellSubmitted(int index, ListViewCell<U> listViewCell);
+        protected abstract void OnCellSubmitted(int index, T listViewCell);
 
-        protected abstract void OnCellDeselected(int index, ListViewCell<U> listViewCell);
+        protected abstract void OnCellDeselected(int index, T listViewCell);
 
-        protected abstract void OnCellSelected(int index, ListViewCell<U> listViewCell);
+        protected abstract void OnCellSelected(int index, T listViewCell);
 
-        private void OnScrollValueChanged(Vector2 normalizedPosition)
+        private void _OnCellSubmitted(int index, ListViewCell<U> listViewCell)
+        {
+            OnCellSubmitted(index, listViewCell as T);
+            onCellSubmitted?.Invoke(index, listViewCell as T);
+        }
+
+        private void _OnCellDeselected(int index, ListViewCell<U> listViewCell)
+        {
+            OnCellDeselected(index, listViewCell as T);
+            onCellDeselected?.Invoke(index, listViewCell as T);
+        }
+
+        private void _OnCellSelected(int index, ListViewCell<U> listViewCell)
+        {
+            OnCellSelected(index, listViewCell as T);
+            onCellSelected?.Invoke(index, listViewCell as T);
+        }
+        
+        void OnScrollValueChanged(Vector2 normalizedPosition)
         {
             // UpdateVisibleItems();
         }

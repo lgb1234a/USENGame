@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.Core.Pool;
 using Luna.UI;
+using Modules.UI.Widgets;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,68 +13,41 @@ using UnityEngine.UI;
 namespace USEN.MiniGames.Roulette
 {
     
-    public class RouletteGameSelectionList : StatefulWidget<RouletteGameSelectionList.State>, IEventSystemHandler
+    public class RouletteGameSelectionList : ListView<RouletteGameSelectionListCell, RouletteSectors>, IEventSystemHandler
     {
-        public List<RouletteSectors> rouletteData;
-        public GameObject cellPrefab;
-        
-        protected ScrollRect listView;
-        
-        void Awake()
-        {
-            listView = GetComponent<ScrollRect>();
-            CreateCells();
-        }
-            
-        async Task OnEnable()
-        {
-            // Select first cell
-            var firstCell = listView.content.GetChild(0).gameObject;
-            if (firstCell != null)
-            {
-                await UniTask.NextFrame();
-                EventSystem.current.SetSelectedGameObject(firstCell);
-            }
-        }
-        
-        void Start()
+        protected override void OnCellSubmitted(int index, RouletteGameSelectionListCell listViewCell)
         {
             
-        }
-        
-        void Update()
-        {
-            
-        }
-        
-        void CreateCells()
-        {
-            foreach (var data in rouletteData)
-            {
-                GameObject cell = ObjectPool.Get(cellPrefab);
-                cell.SetActive(true);
-                cell.transform.SetParent(listView.content, false);
-                cell.GetComponent<RouletteGameSelectionListCell>().rouletteData = data;
-            }
-        }
-        public void SnapTo(RectTransform target)
-        {
-            var y = -target.anchoredPosition.y - ((RectTransform)listView.transform).rect.height;
-            y = Mathf.Clamp(y, 0, listView.content.rect.height);
-            var pos = new Vector2(listView.content.anchoredPosition.x, y);
-            DOTween.To(() => listView.content.anchoredPosition, v => listView.content.anchoredPosition = v, pos, 0.5f);
-        }
-        
-        public class State : Luna.UI.State
-        {
-            public override void InitState()
-            {
-                base.InitState();
-                
-                
-            }
         }
 
+        protected override void OnCellDeselected(int index, RouletteGameSelectionListCell listViewCell)
+        {
+            listViewCell.text.color = Color.white;
+        }
+
+        protected override void OnCellSelected(int index, RouletteGameSelectionListCell listViewCell)
+        {
+            listViewCell.text.color = Color.black;
+            
+            // Emit event
+            ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionView>(gameObject, null, (target, data) =>
+            {
+                this.SnapTo(transform as RectTransform);
+                if (target.rouletteWheel != null)
+                {
+                    // Change roulette wheel data
+                    target.rouletteWheel.Sectors = listViewCell.Data.objects;
+                }
+            });
+        }
+
+        public void SnapTo(RectTransform target)
+        {
+            var y = -target.anchoredPosition.y - ((RectTransform)_scrollRect.transform).rect.height;
+            y = Mathf.Clamp(y, 0, _scrollRect.content.rect.height);
+            var pos = new Vector2(_scrollRect.content.anchoredPosition.x, y);
+            DOTween.To(() => _scrollRect.content.anchoredPosition, v => _scrollRect.content.anchoredPosition = v, pos, 0.5f);
+        }
     }
 
 }

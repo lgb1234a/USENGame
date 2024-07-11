@@ -14,12 +14,10 @@ namespace USEN.MiniGames.Roulette
         public RouletteContentList rouletteContentList;
         public RouletteWheel rouletteWheel;
         public UsenBottomPanel bottomPanel;
-        
+
         void Awake()
         {
-            // rouletteGameSelectionList.OnCellSelected += OnCellSelected;
-            // rouletteGameSelectionList.OnCellDeselected += OnCellDeselected;
-            // rouletteGameSelectionList.OnCellSubmitted += OnCellSubmitted;
+            rouletteGameSelectionList.onCellSubmitted += (index, cell) => ShowContentView();
         }
         
         private void OnEnable()
@@ -34,21 +32,58 @@ namespace USEN.MiniGames.Roulette
         
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape) ||
+                Input.GetButtonDown("Cancel")) {
+                OnExitButtonClicked();
+            }
+        }
+        
+        
+        public void OnConfirmButtonClicked()
+        {
             if (rouletteGameSelectionList.gameObject.activeSelf)
             {
-                if (Input.GetKeyDown(KeyCode.Escape) ||
-                    Input.GetButtonDown("Cancel")) {
-                    Navigator.Pop();
-                }
+                ShowContentView();
             }
             else if (rouletteContentList.gameObject.activeSelf)
             {
-                if (Input.GetKeyDown(KeyCode.Escape) ||
-                    Input.GetButtonDown("Cancel")) {
-                    rouletteContentList.gameObject.SetActive(false);
-                    rouletteGameSelectionList.gameObject.SetActive(true);
-                }
+                Navigator.Push<RouletteGameView>();
             }
+        }
+
+        public void OnExitButtonClicked()
+        {
+            if (rouletteGameSelectionList.gameObject.activeSelf)
+            {
+                Navigator.Pop();
+            }
+            else if (rouletteContentList.gameObject.activeSelf)
+            {
+                HideContentView();
+            }
+        }
+
+        public void OnBlueButtonClicked()
+        {
+            
+        }
+
+        public void OnRedButtonClicked()
+        {
+            
+        }
+        
+        private void ShowContentView()
+        {
+            rouletteGameSelectionList.gameObject.SetActive(false);
+            rouletteContentList.Data = rouletteGameSelectionList.SelectedData.objects;
+            rouletteContentList.gameObject.SetActive(true);
+        }
+        
+        private void HideContentView()
+        {
+            rouletteContentList.gameObject.SetActive(false);
+            rouletteGameSelectionList.gameObject.SetActive(true);
         }
     }
 }

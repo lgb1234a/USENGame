@@ -103,7 +103,7 @@ namespace Luna.UI.Navigation
             Instance._Push(widgetPrefab);
         }
         
-        public static void Push<T>() where T : Widget
+        public static void Push<T>(Action<T> callback = null) where T : Widget
         {
             Instance._Push<T>();
         }
@@ -124,10 +124,13 @@ namespace Luna.UI.Navigation
             _widgetStack.Push(newWidget);
         }
         
-        protected void _Push<T>() where T : Widget
+        protected void _Push<T>(Action<T> callback = null) where T : Widget
         {
             if (Widget.Dictionary.TryGetValue(typeof(T), out GameObject widgetPrefab))
             {
+                if (callback is not null)
+                    callback.Invoke(widgetPrefab.GetComponent<T>());
+                
                 Push(widgetPrefab);
             }
             else

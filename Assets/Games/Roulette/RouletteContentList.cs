@@ -14,11 +14,6 @@ namespace USEN.MiniGames.Roulette
 {
     public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
     {
-        private void Start()
-        {
-            Debug.Log("RouletteContentList Start");
-        }
-
         async Task OnEnable()
         {
             // Select first cell
@@ -30,19 +25,23 @@ namespace USEN.MiniGames.Roulette
             }
         }
         
-        protected override void OnCellSubmitted(int index, ListViewCell<RouletteSector> listViewCell)
+        protected override void OnCellSubmitted(int index, RouletteContentListCell listViewCell)
         {
             Debug.Log($"Cell {index} submitted.");
         }
 
-        protected override void OnCellDeselected(int index, ListViewCell<RouletteSector> listViewCell)
+        protected override void OnCellDeselected(int index, RouletteContentListCell listViewCell)
         {
             Debug.Log($"Cell {index} deselected.");
         }
 
-        protected override void OnCellSelected(int index, ListViewCell<RouletteSector> listViewCell)
+        protected override void OnCellSelected(int index, RouletteContentListCell listViewCell)
         {
             Debug.Log($"Cell {index} selected.");
+            if (Input.GetButtonDown("Vertical"))
+            {
+                SnapTo(listViewCell.transform as RectTransform);
+            }
         }
         
         public void FocusOnCell(int index)

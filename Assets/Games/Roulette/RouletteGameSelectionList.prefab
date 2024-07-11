@@ -466,6 +466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05e13bbc18406f4f81b43fd2e2d54cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: []
+  cell: {fileID: 8165101139527528292}
+  snapToCellWhenSelected: 1
   rouletteData: []
   cellPrefab: {fileID: 4801086757439714427}
 --- !u!1 &4801086757439714427
@@ -669,7 +672,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rouletteWheel: {fileID: 0}
   text: {fileID: 599468431433827547}
-  rouletteData: {fileID: 0}
 --- !u!1 &8038445421996428032
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ namespace Luna.UI
 {
     public abstract partial class Widget : MonoBehaviour
     {
+        protected bool isDirty = false;
+        
         protected Widget() {}
         
         public static T Create<T>(Transform parent = null) where T : Widget
@@ -26,12 +28,12 @@ namespace Luna.UI
             return newWidget;
         }
         
-        protected void OnEnable()
+        protected virtual void OnEnable()
         {
             UnityEngine.InputSystem.InputSystem.onEvent += OnInputEvent;
         }
 
-        protected void OnDisable()
+        protected virtual void OnDisable()
         {
             UnityEngine.InputSystem.InputSystem.onEvent -= OnInputEvent;
         }

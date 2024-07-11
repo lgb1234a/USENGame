@@ -45,12 +45,6 @@ namespace USEN.MiniGames.Roulette
             base.OnSelect(eventData);
             
             text.color = Color.black;
-        
-            // Emit event
-            ExecuteEvents.ExecuteHierarchy<RouletteSelectionList>(gameObject, null, (target, data) =>
-            {
-                target.SnapTo(transform as RectTransform);
-            });
         }
 
         public override void OnDeselect(BaseEventData eventData)

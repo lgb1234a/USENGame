@@ -461,7 +461,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: []
   cell: {fileID: 8489434640864021694}
-  snapToCellWhenSelected: 1
+  snapToCellWhenSelected: 0
+  selectFirstCellOnEnable: 1
 --- !u!1 &6607035895371050087
 GameObject:
   m_ObjectHideFlags: 0

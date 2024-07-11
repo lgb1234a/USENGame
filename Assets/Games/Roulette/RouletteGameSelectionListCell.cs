@@ -5,51 +5,52 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using USEN.MiniGames.Roulette;
 
-public class RouletteGameSelectionListCell : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler
+public class RouletteGameSelectionListCell : ListViewCell<RouletteSectors>, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     public RouletteWheel rouletteWheel;
     public TextMeshProUGUI text;
     
-    [HideInInspector] public RouletteSectors rouletteData;
-    
-    public void OnSelect(BaseEventData eventData)
+    private RouletteSectors _rouletteData;
+    public override RouletteSectors Data
     {
-        text.color = Color.black;
-        
-        // Emit event
-        ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionList>(gameObject, null, (target, data) =>
+        get => _rouletteData;
+        set
         {
-            target.SnapTo(transform as RectTransform);
-            if (rouletteWheel != null)
-            {
-                // Change roulette wheel data
-                rouletteWheel.Sectors = rouletteData.objects;
-            }
-        });
+            _rouletteData = value;
+            text.text = value.name;
+        }
+    }
+    
+    public override void OnSelect(BaseEventData eventData)
+    {
+        base.OnSelect(eventData);
+        text.color = Color.black;
     }
 
-    public void OnDeselect(BaseEventData eventData)
+    public override void OnDeselect(BaseEventData eventData)
     {
+        base.OnDeselect(eventData);
         text.color = Color.white;
     }
 
-    public void OnSubmit(BaseEventData eventData)
+    public override void OnSubmit(BaseEventData eventData)
     {
+        base.OnSubmit(eventData);
         // Navigator.Push<RouletteGameSelectionView>();
     }
     
     public void OnClick()
     {
         // Emit event
-        ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionView>(gameObject, null, (target, data) =>
-        {
-            target.rouletteGameSelectionList.gameObject.SetActive(false);
-            target.rouletteContentList.gameObject.SetActive(true);
-            
-            // Change roulette content list data
-            target.rouletteContentList.Data = rouletteData.objects;
-            target.rouletteContentList.FocusOnCell(0);
-        });
+        // ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionView>(gameObject, null, (target, data) =>
+        // {
+        //     // target.rouletteGameSelectionList.gameObject.SetActive(false);
+        //     // target.rouletteContentList.gameObject.SetActive(true);
+        //     
+        //     // Change roulette content list data
+        //     target.rouletteContentList.Data = _rouletteData.objects;
+        //     // target.rouletteContentList.FocusOnCell(0);
+        // });
     }
     
     public void Test()

@@ -131,6 +131,7 @@
      <Compile Include="Assets\Modules\UI\Widgets\ListView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
+     <Compile Include="Assets\Modules\UI\Misc\SyncSpriteSizeWithRectTransform.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableBehaviour.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\RenderTextureInitializer.cs" />
@@ -147,7 +148,9 @@
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionView.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
+     <Compile Include="Assets\Games\Roulette\ApplyScaleToChildren.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Modules\UI\Misc\CanvasExtensions.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -163,6 +166,7 @@
      <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Home\00_BINGO.atlas.txt" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Models" />
+     <Folder Include="Assets\Modules\UI\Misc" />
      <Folder Include="Assets\Samples\Assets" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10" />
      <Folder Include="Assets\Scripts\Tools" />
