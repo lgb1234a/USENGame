@@ -4,11 +4,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using DG.Tweening;
-using Games.Common;
 using Luna.UI;
 using Luna.UI.Navigation;
 using Sirenix.Utilities;
 using UnityEngine.Serialization;
+using USEN.Games.Common;
 
 public class GameSettingsView2 : Widget
 {

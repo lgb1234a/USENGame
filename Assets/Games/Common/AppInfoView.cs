@@ -3,7 +3,7 @@
 using Luna.UI;
 using UnityEngine;
 
-namespace Games.Common
+namespace USEN.Games.Common
 {
     public class AppInfoView : Widget
     {

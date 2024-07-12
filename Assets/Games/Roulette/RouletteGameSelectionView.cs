@@ -5,6 +5,7 @@ using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using USEN.Games.Common;
 
 namespace USEN.MiniGames.Roulette
 {
@@ -13,7 +14,7 @@ namespace USEN.MiniGames.Roulette
         public RouletteGameSelectionList rouletteGameSelectionList;
         public RouletteContentList rouletteContentList;
         public RouletteWheel rouletteWheel;
-        public UsenBottomPanel bottomPanel;
+        public BottomPanel bottomPanel;
 
         void Awake()
         {
@@ -65,7 +66,10 @@ namespace USEN.MiniGames.Roulette
 
         public void OnBlueButtonClicked()
         {
-            
+            Navigator.Push<RouletteEditView>((view) =>
+            {
+                view.Data = rouletteGameSelectionList.SelectedData;
+            });
         }
 
         public void OnRedButtonClicked()

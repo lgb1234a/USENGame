@@ -17,7 +17,7 @@ namespace USEN.MiniGames.Roulette
         async Task OnEnable()
         {
             // Select first cell
-            var firstCell = _cells.First().gameObject;
+            var firstCell = cells.First().gameObject;
             if (firstCell != null)
             {
                 await UniTask.NextFrame();
@@ -46,9 +46,9 @@ namespace USEN.MiniGames.Roulette
         
         public void FocusOnCell(int index)
         {
-            if (_cells.Count == 0) return;
+            if (cells.Count == 0) return;
             
-            var cell = _cells[index.Mod(_cells.Count)];
+            var cell = cells[index.Mod(cells.Count)];
             cell.OnSelect(null);
             EventSystem.current.SetSelectedGameObject(cell.gameObject);
         }

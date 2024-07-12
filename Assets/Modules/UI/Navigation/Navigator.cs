@@ -105,7 +105,7 @@ namespace Luna.UI.Navigation
         
         public static void Push<T>(Action<T> callback = null) where T : Widget
         {
-            Instance._Push<T>();
+            Instance._Push<T>(callback);
         }
         
         public static void Pop()

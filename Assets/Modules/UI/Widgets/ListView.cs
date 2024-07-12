@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.UI;
+using Modules.UI.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -39,8 +40,9 @@ namespace Modules.UI.Widgets
         public event CellCallback onCellDeselected;
         public event CellCallback onCellSubmitted;
         
+        public readonly List<T> cells = new();
+        
         protected ScrollRect _scrollRect;
-        protected readonly List<T> _cells = new();
         
         public int SelectedIndex { get; private set; }
         public U SelectedData => Data[SelectedIndex];
@@ -64,10 +66,10 @@ namespace Modules.UI.Widgets
                 isDirty = false;
             }
             
-            if (selectFirstCellOnEnable)
+            if (selectFirstCellOnEnable && cells.Count > 0)
             {
                 // Select first cell
-                var firstCell = _cells.First().gameObject;
+                var firstCell = cells.First().gameObject;
                 if (firstCell != null)
                 {
                     await UniTask.NextFrame();
@@ -79,14 +81,14 @@ namespace Modules.UI.Widgets
         public void Initialize()
         {
             // Clear existing cells
-            foreach (var cell in _cells)
+            foreach (var cell in cells)
             {
                 cell.OnCellSelected -= _OnCellSelected;
                 cell.OnCellDeselected -= _OnCellDeselected;
                 cell.OnCellSubmitted -= _OnCellSubmitted;
                 Destroy(cell.gameObject);
             }
-            _cells.Clear();
+            cells.Clear();
             
             // Create new cells
             CreateCells();
@@ -98,7 +100,7 @@ namespace Modules.UI.Widgets
             for (int i = 0; i < Data.Count; i++)
             {
                 var newCell = Instantiate(cell, content);
-                _cells.Add(newCell);
+                cells.Add(newCell);
                 newCell.gameObject.SetActive(true);
                 newCell.Index = i;
                 newCell.Data = Data[i];
@@ -116,11 +118,11 @@ namespace Modules.UI.Widgets
             }
         }
 
-        protected abstract void OnCellSubmitted(int index, T listViewCell);
+        protected virtual void OnCellSubmitted(int index, T listViewCell) {}
 
-        protected abstract void OnCellDeselected(int index, T listViewCell);
+        protected virtual void OnCellDeselected(int index, T listViewCell) {}
 
-        protected abstract void OnCellSelected(int index, T listViewCell);
+        protected virtual void OnCellSelected(int index, T listViewCell) {}
 
         private void _OnCellSubmitted(int index, ListViewCell<U> listViewCell)
         {
@@ -147,7 +149,7 @@ namespace Modules.UI.Widgets
         
         public void SnapTo(RectTransform target)
         {
-            var y = -target.anchoredPosition.y - ((RectTransform)_scrollRect.transform).rect.height;
+            var y = -target.offsetMin.y - ((RectTransform)_scrollRect.transform).rect.height;
             y = Mathf.Clamp(y, 0, _scrollRect.content.rect.height);
             var pos = new Vector2(_scrollRect.content.anchoredPosition.x, y);
             DOTween.To(() => _scrollRect.content.anchoredPosition, v => _scrollRect.content.anchoredPosition = v, pos, 0.5f);
@@ -196,7 +198,8 @@ namespace Modules.UI.Widgets
 }
 
 
-public abstract class ListViewCell<T> : Widget, ISelectHandler, IDeselectHandler, ISubmitHandler
+
+public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     virtual public T Data { get; set; }
     
@@ -206,13 +209,28 @@ public abstract class ListViewCell<T> : Widget, ISelectHandler, IDeselectHandler
     public event Action<int, ListViewCell<T>> OnCellDeselected;
     public event Action<int, ListViewCell<T>> OnCellSubmitted;
 
+    private Image _image;
+
+    protected override void Awake()
+    {
+        _image = GetComponent<Image>();
+        if (_image == null)
+        {
+            _image = gameObject.AddComponent<Image>();
+            this.targetGraphic = _image;
+            this.colors = new ColorBlock().ClearColor();
+        }
+    }
+
     public virtual void OnSelect(BaseEventData eventData)
     {
+        base.OnSelect(eventData);
         OnCellSelected?.Invoke(Index, this);
     }
 
     public virtual void OnDeselect(BaseEventData eventData)
     {
+        base.OnDeselect(eventData);
         OnCellDeselected?.Invoke(Index, this);
     }
 
