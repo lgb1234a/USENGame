@@ -45,6 +45,9 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Not exclude Nuget.csproj files
+!Nuget.csproj
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta

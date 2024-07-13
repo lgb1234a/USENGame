@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timeline.Samples.Utilities.Editor", "Timeline.Samples.Utilities.Editor.csproj", "{c35eb0e7-471b-b8df-6e06-ed9a406b095d}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuget", "Nuget.csproj", "{40adf809-5d5d-bf3e-d6cd-8e0cfebe2251}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{8c5e7865-9aeb-e215-a62a-53897d1d1b7e}"
 EndProject
 Global
@@ -72,6 +74,8 @@ Global
 		{e396c8fc-922d-bc72-23b8-678b445668ec}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c35eb0e7-471b-b8df-6e06-ed9a406b095d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c35eb0e7-471b-b8df-6e06-ed9a406b095d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40adf809-5d5d-bf3e-d6cd-8e0cfebe2251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40adf809-5d5d-bf3e-d6cd-8e0cfebe2251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8c5e7865-9aeb-e215-a62a-53897d1d1b7e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8c5e7865-9aeb-e215-a62a-53897d1d1b7e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
