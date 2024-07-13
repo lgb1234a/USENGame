@@ -16,7 +16,7 @@ namespace USEN.Games.Roulette
     
     public class RouletteCategoryList : ListView<RouletteCategoryListCell, RouletteCategory>, IEventSystemHandler
     {
-        public void OnCellClicked()
+        protected override void OnCellClicked(int index, RouletteCategoryListCell listViewCell)
         {
             Navigator.Push<RouletteGameSelectionView>((view) =>
             {
@@ -24,6 +24,14 @@ namespace USEN.Games.Roulette
             });
         }
         
+        protected override void OnCellSubmitted(int index, RouletteCategoryListCell listViewCell)
+        {
+            Navigator.Push<RouletteGameSelectionView>((view) =>
+            {
+                view.Category = SelectedData;
+            });
+        }
+
         protected override void OnCellDeselected(int index, RouletteCategoryListCell listViewCell)
         {
             listViewCell.text.color = Color.white;

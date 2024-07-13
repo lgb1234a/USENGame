@@ -121,10 +121,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameSettingsView2, Assembly-CSharp
-        m_MethodName: OnMaxCellSettingSliderValueChanged
-        m_Mode: 3
+      - m_Target: {fileID: 3639503637701855853}
+        m_TargetAssemblyTypeName: USEN.Games.Roulette.RouletteEditView, Assembly-CSharp
+        m_MethodName: RemoveSector
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -683,10 +683,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameSettingsView2, Assembly-CSharp
-        m_MethodName: OnMaxCellSettingSliderValueChanged
-        m_Mode: 3
+      - m_Target: {fileID: 3639503637701855853}
+        m_TargetAssemblyTypeName: USEN.Games.Roulette.RouletteEditView, Assembly-CSharp
+        m_MethodName: AddSector
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 684188345452378126}
   indexText: {fileID: 3639503638144536474}
-  InputField: {fileID: 3639503638786216274}
+  inputField: {fileID: 3639503638786216274}
 --- !u!1 &3639503638173015514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,8 +1285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 20, y: 34}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 32, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3639503638397829762
 CanvasRenderer:
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 03d587a020a204c459e1b9ca47b56255, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49e486f0209806c4285ef292ab857f08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2054,7 +2054,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 256.19, y: 140}
+  m_SizeDelta: {x: 200, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3639503638806044160
 CanvasRenderer:
@@ -2804,8 +2804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 0}
-  m_SizeDelta: {x: 20, y: 34}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 32, y: 60}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &3639503639473043220
 CanvasRenderer:
@@ -2835,7 +2835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 197a8146508f51d498e36ea4d3288525, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb3a712b9a430624b92380648beebde9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2885,7 +2885,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -56, y: -30}
+  m_SizeDelta: {x: -56, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3639503639550442852
 CanvasRenderer:

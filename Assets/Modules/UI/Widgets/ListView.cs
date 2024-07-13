@@ -37,6 +37,7 @@ namespace Modules.UI.Widgets
         
         public delegate void CellCallback(int index, T listViewCell);
         
+        public event CellCallback onCellCreated;
         public event CellCallback onCellSelected;
         public event CellCallback onCellDeselected;
         public event CellCallback onCellSubmitted;
@@ -55,6 +56,7 @@ namespace Modules.UI.Widgets
         {
             _scrollRect = GetComponent<ScrollRect>();
             _scrollRect.onValueChanged.AddListener(OnScrollValueChanged);
+            onCellCreated += OnCellCreated;
         }
         
         protected virtual async void OnEnable()
@@ -74,11 +76,6 @@ namespace Modules.UI.Widgets
                     EventSystem.current.SetSelectedGameObject(firstCell);
                 }
             }
-        }
-
-        protected void OnBecameVisible()
-        {
-            Debug.Log("ListView became visible.");
         }
 
         protected void Update()
@@ -127,9 +124,11 @@ namespace Modules.UI.Widgets
                         SnapTo(listViewCell.transform as RectTransform);
                     };
                 }
+                onCellCreated?.Invoke(i, newCell);
             }
         }
 
+        protected virtual void OnCellCreated(int index, T listViewCell) {}
         protected virtual void OnCellSubmitted(int index, T listViewCell) {}
         protected virtual void OnCellDeselected(int index, T listViewCell) {}
         protected virtual void OnCellSelected(int index, T listViewCell) {}
@@ -226,7 +225,7 @@ namespace Modules.UI.Widgets
 
 
 
-public abstract class ListViewCell<T> : Button, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler
+public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler
 {
     virtual public T Data { get; set; }
     
@@ -264,13 +263,13 @@ public abstract class ListViewCell<T> : Button, ISelectHandler, IDeselectHandler
 
     public virtual void OnSubmit(BaseEventData eventData)
     {
-        base.OnSubmit(eventData);
+        // base.OnSubmit(eventData);
         OnCellSubmitted?.Invoke(Index, this);
     }
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        base.OnPointerClick(eventData);
+        // base.OnPointerClick(eventData);
         OnCellClicked?.Invoke(Index, this);
     }
 }

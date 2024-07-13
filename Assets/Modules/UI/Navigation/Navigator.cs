@@ -164,6 +164,7 @@ namespace Luna.UI.Navigation
                 // Setting widget active.
                 // Widget will execute OnEnable and Start methods.
                 newWidget.SetActive(true);
+                widgetPrefab.SetActive(true);
             }
             else Debug.LogError($"[Navigator] Widget of type {typeof(T)} not found.");
         }

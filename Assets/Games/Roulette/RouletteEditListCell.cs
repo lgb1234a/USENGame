@@ -1,5 +1,6 @@
 // Created by LunarEclipse on 2024-7-12 22:2.
 
+using System;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using TMPro;
@@ -13,10 +14,13 @@ namespace USEN.Games.Roulette
     public class RouletteEditListCell : ListViewCell<RouletteSector>
     {
         public TextMeshProUGUI indexText;
-        [FormerlySerializedAs("InputField")] public TMP_InputField inputField;
+        public TMP_InputField inputField;
         
+        public event Action<int, RouletteEditListCell> onSubmitted;
+        public event Action<int, RouletteEditListCell, string> onInputValueChanged;
         
         private RouletteSector _data;
+        
         public override RouletteSector Data
         {
             get => _data;
@@ -30,19 +34,26 @@ namespace USEN.Games.Roulette
         void Start()
         {
             indexText.text = Index.ToString();
+
+            inputField.onValueChanged.AddListener(OnInputValueChanged);
             
-            this.colors = new ColorBlock
-            {
-                normalColor = Color.clear,
-                highlightedColor = new Color(0.8f, 0.8f, 0.8f, 0.3f),
-                pressedColor = new Color(0.6f, 0.6f, 0.6f, 0.3f),
-                selectedColor = new Color(0.8f, 0.8f, 0.8f, 0.3f),
-                disabledColor = new Color(0f, 0f, 0f, 0.3f),
-                colorMultiplier = 1,
-                fadeDuration = 0.1f
-            };
+            // this.colors = new ColorBlock
+            // {
+            //     normalColor = Color.clear,
+            //     highlightedColor = new Color(0.8f, 0.8f, 0.8f, 0.3f),
+            //     pressedColor = new Color(0.6f, 0.6f, 0.6f, 0.3f),
+            //     selectedColor = new Color(0.8f, 0.8f, 0.8f, 0.3f),
+            //     disabledColor = new Color(0f, 0f, 0f, 0.3f),
+            //     colorMultiplier = 1,
+            //     fadeDuration = 0.1f
+            // };
         }
-        
+
+        private void OnInputValueChanged(string newValue)
+        {
+            onInputValueChanged?.Invoke(Index, this, newValue);
+        }
+
         public override async void OnSelect(BaseEventData eventData)
         {
             base.OnSelect(eventData);

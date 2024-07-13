@@ -31,7 +31,12 @@ namespace USEN.Games.Roulette
         {
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => ShowContentView();
         }
-        
+
+        private void OnEnable()
+        {
+            Category = _category;
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
