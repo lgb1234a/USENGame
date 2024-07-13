@@ -7,19 +7,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteWheelTest : MonoBehaviour
     {
         public RouletteWheel rouletteWheel;
-        public RouletteSectors rouletteData;
+        public RouletteData rouletteData;
         public TextMeshProUGUI resultText;
         
         private List<RouletteSector> sectors;
 
         private void Start()
         {
-            sectors = new List<RouletteSector>(rouletteData.objects);
+            sectors = new List<RouletteSector>(rouletteData.sectors);
             rouletteWheel.OnSpinComplete += result =>
             {
                 resultText.text = result;

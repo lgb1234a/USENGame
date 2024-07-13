@@ -2,7 +2,7 @@ using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using USEN.MiniGames.Roulette;
+using USEN.Games.Roulette;
 
 public class RouletteSelectionListCell : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler
 {

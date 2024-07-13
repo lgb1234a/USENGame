@@ -10,7 +10,7 @@ using Modules.UI.Widgets;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
     {
@@ -42,15 +42,6 @@ namespace USEN.MiniGames.Roulette
             {
                 SnapTo(listViewCell.transform as RectTransform);
             }
-        }
-        
-        public void FocusOnCell(int index)
-        {
-            if (cells.Count == 0) return;
-            
-            var cell = cells[index.Mod(cells.Count)];
-            cell.OnSelect(null);
-            EventSystem.current.SetSelectedGameObject(cell.gameObject);
         }
     }
 }

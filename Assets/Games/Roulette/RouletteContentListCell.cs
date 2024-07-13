@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteContentListCell : ListViewCell<RouletteSector>
     {

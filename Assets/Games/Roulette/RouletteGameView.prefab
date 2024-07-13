@@ -273,7 +273,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3710891072274180753}
   - component: {fileID: 3710891072274180754}
-  - component: {fileID: 3710891071131631546}
   m_Layer: 5
   m_Name: RouletteGameView
   m_TagString: Untagged
@@ -321,26 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rouletteWheel: {fileID: 3725162734924712925}
   startButton: {fileID: 7383198668330630975}
-  confirmButton: {fileID: 6594110219066027943}
-  exitButton: {fileID: 2598956885715574838}
-  blueButton: {fileID: 4294598731576553667}
-  redButton: {fileID: 7265452972076643373}
-  yellowButton: {fileID: 0}
---- !u!114 &3710891071131631546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3710891072274180752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c140395513a7404c893cb50934bddbc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rouletteWheel: {fileID: 3725162734924712925}
-  rouletteData: {fileID: 11400000, guid: 21e20334632657741acaad9857c0fb5c, type: 2}
-  resultText: {fileID: 0}
+  bottomPanel: {fileID: 813345272954349311}
 --- !u!1 &4808328051194502261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,28 +1578,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c380f4697fab384e97d3c38dbb7f523, type: 3}
---- !u!114 &2598956885715574838 stripped
+--- !u!114 &813345272954349311 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1290498866667093803, guid: 0c380f4697fab384e97d3c38dbb7f523,
+  m_CorrespondingSourceObject: {fileID: 4517120674836412898, guid: 0c380f4697fab384e97d3c38dbb7f523,
     type: 3}
   m_PrefabInstance: {fileID: 3889311711976333085}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8162931896219724763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4294598731576553667 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1036081556498362334, guid: 0c380f4697fab384e97d3c38dbb7f523,
-    type: 3}
-  m_PrefabInstance: {fileID: 3889311711976333085}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: fc137a70684a486f8558e10729dd25cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &5758755604271595356 stripped
@@ -1628,30 +1596,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3889311711976333085}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6594110219066027943 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7961062507935281338, guid: 0c380f4697fab384e97d3c38dbb7f523,
-    type: 3}
-  m_PrefabInstance: {fileID: 3889311711976333085}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7265452972076643373 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5849488303131372336, guid: 0c380f4697fab384e97d3c38dbb7f523,
-    type: 3}
-  m_PrefabInstance: {fileID: 3889311711976333085}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8162931896219724763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4949758537556063430, guid: 0c380f4697fab384e97d3c38dbb7f523,
@@ -1675,7 +1619,7 @@ Canvas:
   m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0

@@ -4,7 +4,7 @@ using Luna.UI;
 using UnityEngine;
 using USEN.Games.Common;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteContentEditView : Widget
     {

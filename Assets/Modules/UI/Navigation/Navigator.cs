@@ -103,6 +103,21 @@ namespace Luna.UI.Navigation
             Instance._Push(widgetPrefab);
         }
         
+        /// <summary>
+        /// Push a widget to the top of the stack.
+        /// The widget will be instantiated and added to the canvas.
+        /// </summary>
+        /// <param name="callback">
+        /// A callback to be executed after the widget is instantiated.
+        /// You can use this callback to pass data to the widget.
+        /// Note: The callback will be executed before the widget is enabled.
+        /// Therefore, you should initialize the widget in Awake method.
+        /// </param>
+        /// <typeparam name="T">
+        /// The type of the widget to be pushed.
+        /// Prefab with Widget component will be registered in the Widgets prefab database automatically.
+        /// Note: A widget type should only have one prefab that corresponds to it.
+        /// </typeparam>
         public static void Push<T>(Action<T> callback = null) where T : Widget
         {
             Instance._Push<T>(callback);
@@ -112,31 +127,45 @@ namespace Luna.UI.Navigation
         {
             Instance._Pop();
         }
+        
+        public static void PopToRoot()
+        {
+            Instance._PopToRoot();
+        }
 
-        protected void _Push(GameObject widgetPrefab)
+        protected GameObject _Push(GameObject widgetPrefab)
         {
             if (_widgetStack.Count > 0)
-            {
                 _widgetStack.Peek().SetActive(false);
-            }
 
             GameObject newWidget = Instantiate(widgetPrefab, canvas.transform);
             _widgetStack.Push(newWidget);
+            return newWidget;
         }
         
         protected void _Push<T>(Action<T> callback = null) where T : Widget
         {
+            if (_widgetStack.Count > 0)
+                _widgetStack.Peek().SetActive(false);
+            
             if (Widget.Dictionary.TryGetValue(typeof(T), out GameObject widgetPrefab))
             {
-                if (callback is not null)
-                    callback.Invoke(widgetPrefab.GetComponent<T>());
+                widgetPrefab.SetActive(false);
                 
-                Push(widgetPrefab);
+                // Instantiating the widget.
+                // Widget will execute Awake method.
+                var newWidget = Instantiate(widgetPrefab, canvas.transform);
+                _widgetStack.Push(newWidget);
+                
+                // Executing the callback.
+                if (callback is not null)
+                    callback.Invoke(newWidget.GetComponent<T>());
+                
+                // Setting widget active.
+                // Widget will execute OnEnable and Start methods.
+                newWidget.SetActive(true);
             }
-            else
-            {
-                Debug.LogError($"[Navigator] Widget of type {typeof(T)} not found.");
-            }
+            else Debug.LogError($"[Navigator] Widget of type {typeof(T)} not found.");
         }
 
         protected void _Pop()
@@ -153,7 +182,7 @@ namespace Luna.UI.Navigation
             }
         }
 
-        public void PopToRoot()
+        protected void _PopToRoot()
         {
             while (_widgetStack.Count > 1)
             {

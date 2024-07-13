@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteEditListCell : ListViewCell<RouletteSector>
     {

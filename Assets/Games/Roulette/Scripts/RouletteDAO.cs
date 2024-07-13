@@ -1,0 +1,82 @@
+// Created by LunarEclipse on 2024-7-13 19:34.
+
+using System.IO;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using UnityEngine;
+
+namespace USEN.Games.Roulette
+{
+    public class RouletteDAO
+    {
+        public const string FILE_NAME = "Roulette.data";
+        public const string DEFAULT_DATA_PATH = "DefaultRouletteDataset";
+
+        // Singleton
+        public static RouletteDAO Instance = new();
+        
+        private RouletteDataset _data;
+        public Task<RouletteDataset> Data { get; private set; }
+        
+        
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        private static void Initialize() {}
+        
+        private RouletteDAO()
+        {
+            TaskCompletionSource<RouletteDataset> tcs = new();
+            Data = tcs.Task;
+            
+            var uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+            var defaultData = Resources.Load<RouletteDataset>(DEFAULT_DATA_PATH);
+            LoadFromFile().ContinueWith(task =>
+            {
+                Debug.Log($"[RouletteDAO] Load roulette data from file status: {task.Status}");
+                if (task.Result != null) 
+                    _data = task.Result;
+                else
+                {
+                    // Print error message of the task.
+                    if (task.Exception != null)
+                        Debug.LogError($"[RouletteDAO] Load roulette data from file error: {task.Exception.Message}");
+                    
+                    _data = defaultData != null ? defaultData : ScriptableObject.CreateInstance<RouletteDataset>();
+                    SaveToFile();
+                }
+                tcs.SetResult(_data);
+            }, TaskScheduler.FromCurrentSynchronizationContext());
+        }
+        
+        public Task SaveToFile()
+        {
+            string json = JsonConvert.SerializeObject(_data);
+            var path = Path.Combine(Application.persistentDataPath, FILE_NAME);
+            return File.WriteAllTextAsync(path, json).ContinueWith(task =>
+            {
+                Debug.Log($"[RouletteDAO] Save roulette data to file: {path}");
+            }); 
+        }
+
+        public async Task<RouletteDataset> LoadFromFile()
+        {
+            var path = Path.Combine(Application.persistentDataPath, FILE_NAME);
+            Debug.Log($"[RouletteDAO] Loading roulette data from file: {path}");
+            if (File.Exists(path))
+            {
+                string json = await File.ReadAllTextAsync(path);
+                Debug.Log($"[RouletteDAO] Json loaded: {json}");
+                try
+                {
+                    var obj = JsonConvert.DeserializeObject<RouletteDataset>(json);
+                    Debug.Log($"[RouletteDAO] Data loaded: {obj.categories.Count} categories.");
+                    return obj;
+                }
+                catch (JsonException e)
+                {
+                    Debug.LogError($"[RouletteDAO] Deserialize roulette data error: {e.Message}");
+                }
+            }
+            return null;
+        }
+    }
+}

@@ -10,10 +10,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     
-    public class RouletteGameSelectionList : ListView<RouletteGameSelectionListCell, RouletteSectors>, IEventSystemHandler
+    public class RouletteGameSelectionList : ListView<RouletteGameSelectionListCell, RouletteData>, IEventSystemHandler
     {
         protected override void OnCellSubmitted(int index, RouletteGameSelectionListCell listViewCell)
         {
@@ -36,7 +36,7 @@ namespace USEN.MiniGames.Roulette
                 if (target.rouletteWheel != null)
                 {
                     // Change roulette wheel data
-                    target.rouletteWheel.Sectors = listViewCell.Data.objects;
+                    target.rouletteWheel.RouletteData = SelectedData;
                 }
             });
         }

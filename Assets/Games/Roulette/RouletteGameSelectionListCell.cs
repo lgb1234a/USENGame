@@ -3,21 +3,21 @@ using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using USEN.MiniGames.Roulette;
+using USEN.Games.Roulette;
 
-public class RouletteGameSelectionListCell : ListViewCell<RouletteSectors>, ISelectHandler, IDeselectHandler, ISubmitHandler
+public class RouletteGameSelectionListCell : ListViewCell<RouletteData>, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     public RouletteWheel rouletteWheel;
     public TextMeshProUGUI text;
     
-    private RouletteSectors _rouletteData;
-    public override RouletteSectors Data
+    private RouletteData _rouletteData;
+    public override RouletteData Data
     {
         get => _rouletteData;
         set
         {
             _rouletteData = value;
-            text.text = value.name;
+            text.text = value.title;
         }
     }
     
@@ -31,26 +31,6 @@ public class RouletteGameSelectionListCell : ListViewCell<RouletteSectors>, ISel
     {
         base.OnDeselect(eventData);
         text.color = Color.white;
-    }
-
-    public override void OnSubmit(BaseEventData eventData)
-    {
-        base.OnSubmit(eventData);
-        // Navigator.Push<RouletteGameSelectionView>();
-    }
-    
-    public void OnClick()
-    {
-        // Emit event
-        // ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionView>(gameObject, null, (target, data) =>
-        // {
-        //     // target.rouletteGameSelectionList.gameObject.SetActive(false);
-        //     // target.rouletteContentList.gameObject.SetActive(true);
-        //     
-        //     // Change roulette content list data
-        //     target.rouletteContentList.Data = _rouletteData.objects;
-        //     // target.rouletteContentList.FocusOnCell(0);
-        // });
     }
     
     public void Test()

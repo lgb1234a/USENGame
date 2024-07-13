@@ -1,5 +1,6 @@
 // Created by LunarEclipse on 2024-6-30 18:50.
 
+using System;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -7,27 +8,41 @@ using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
 using UnityEngine.UI;
+using USEN.Games.Common;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteGameView : Widget
     {
         public RouletteWheel rouletteWheel;
         public Button startButton;
-        public Button confirmButton;
-        public Button exitButton;
-        public Button blueButton;
-        public Button redButton;
-        public Button yellowButton;
+        public BottomPanel bottomPanel;
         
-        public void Start()
+        public RouletteData RouletteData { 
+            get => rouletteWheel.RouletteData;
+            set => rouletteWheel.RouletteData = value;
+        }
+        
+        void OnEnable()
         {
             startButton.onClick.AddListener(OnStartButtonClicked);
-            confirmButton.onClick.AddListener(OnConfirmButtonClicked);
-            exitButton.onClick.AddListener(OnExitButtonClicked);
-            blueButton.onClick.AddListener(OnBlueButtonClicked);
-            redButton.onClick.AddListener(OnRedButtonClicked);
-            yellowButton.onClick.AddListener(OnYellowButtonClicked);
+            bottomPanel.onExitButtonClicked += OnExitButtonClicked;
+            bottomPanel.onSelectButtonClicked += OnStartButtonClicked;
+            bottomPanel.onConfirmButtonClicked += OnConfirmButtonClicked;
+            bottomPanel.onRedButtonClicked += OnRedButtonClicked;
+            bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
+            bottomPanel.onYellowButtonClicked += OnYellowButtonClicked;
+        }
+        
+        void OnDisable()
+        {
+            startButton.onClick.RemoveListener(OnStartButtonClicked);
+            bottomPanel.onExitButtonClicked -= OnExitButtonClicked;
+            bottomPanel.onSelectButtonClicked -= OnStartButtonClicked;
+            bottomPanel.onConfirmButtonClicked -= OnConfirmButtonClicked;
+            bottomPanel.onRedButtonClicked -= OnRedButtonClicked;
+            bottomPanel.onBlueButtonClicked -= OnBlueButtonClicked;
+            bottomPanel.onYellowButtonClicked -= OnYellowButtonClicked;
         }
 
         private void OnStartButtonClicked()

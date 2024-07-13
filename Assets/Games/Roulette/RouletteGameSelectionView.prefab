@@ -469,14 +469,12 @@ PrefabInstance:
         type: 3}
       propertyPath: data.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 21e20334632657741acaad9857c0fb5c,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6000763715045426500, guid: 98b9f96af753ec348ad19380f4bcfa41,
         type: 3}
       propertyPath: data.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: bb0f85a6f0f687647a2355b9be45807a,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6000763715045426500, guid: 98b9f96af753ec348ad19380f4bcfa41,
         type: 3}
       propertyPath: rouletteData.Array.size

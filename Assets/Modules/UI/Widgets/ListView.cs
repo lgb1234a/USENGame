@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Luna.Extensions;
 using Luna.UI;
 using Modules.UI.Misc;
 using UnityEngine;
@@ -39,6 +40,7 @@ namespace Modules.UI.Widgets
         public event CellCallback onCellSelected;
         public event CellCallback onCellDeselected;
         public event CellCallback onCellSubmitted;
+        public event CellCallback onCellClicked;
         
         public readonly List<T> cells = new();
         
@@ -53,18 +55,14 @@ namespace Modules.UI.Widgets
         {
             _scrollRect = GetComponent<ScrollRect>();
             _scrollRect.onValueChanged.AddListener(OnScrollValueChanged);
-            Initialize();
         }
         
-        protected override async void OnEnable()
+        protected virtual async void OnEnable()
         {
-            base.OnEnable();
-
-            if (isDirty)
-            {
-                Initialize();
-                isDirty = false;
-            }
+            Debug.Log("ListView enabled.");
+            
+            Initialize();
+            isDirty = false;
             
             if (selectFirstCellOnEnable && cells.Count > 0)
             {
@@ -75,6 +73,20 @@ namespace Modules.UI.Widgets
                     await UniTask.NextFrame();
                     EventSystem.current.SetSelectedGameObject(firstCell);
                 }
+            }
+        }
+
+        protected void OnBecameVisible()
+        {
+            Debug.Log("ListView became visible.");
+        }
+
+        protected void Update()
+        {
+            if (isDirty)
+            {
+                Initialize();
+                isDirty = false;
             }
         }
 
@@ -105,9 +117,9 @@ namespace Modules.UI.Widgets
                 newCell.Index = i;
                 newCell.Data = Data[i];
                 newCell.OnCellSelected += _OnCellSelected;
-                newCell.OnCellSelected += (index, listViewCell) => SelectedIndex = index;
                 newCell.OnCellDeselected += _OnCellDeselected;
                 newCell.OnCellSubmitted += _OnCellSubmitted;
+                newCell.OnCellClicked += _OnCellClicked;
                 if (snapToCellWhenSelected)
                 {
                     newCell.OnCellSelected += (index, listViewCell) =>
@@ -119,10 +131,9 @@ namespace Modules.UI.Widgets
         }
 
         protected virtual void OnCellSubmitted(int index, T listViewCell) {}
-
         protected virtual void OnCellDeselected(int index, T listViewCell) {}
-
         protected virtual void OnCellSelected(int index, T listViewCell) {}
+        protected virtual void OnCellClicked(int index, T listViewCell) {}
 
         private void _OnCellSubmitted(int index, ListViewCell<U> listViewCell)
         {
@@ -138,8 +149,15 @@ namespace Modules.UI.Widgets
 
         private void _OnCellSelected(int index, ListViewCell<U> listViewCell)
         {
+            SelectedIndex = index;
             OnCellSelected(index, listViewCell as T);
             onCellSelected?.Invoke(index, listViewCell as T);
+        }
+        
+        private void _OnCellClicked(int index, ListViewCell<U> listViewCell)
+        {
+            OnCellClicked(index, listViewCell as T);
+            onCellClicked?.Invoke(index, listViewCell as T);
         }
         
         void OnScrollValueChanged(Vector2 normalizedPosition)
@@ -153,6 +171,15 @@ namespace Modules.UI.Widgets
             y = Mathf.Clamp(y, 0, _scrollRect.content.rect.height);
             var pos = new Vector2(_scrollRect.content.anchoredPosition.x, y);
             DOTween.To(() => _scrollRect.content.anchoredPosition, v => _scrollRect.content.anchoredPosition = v, pos, 0.5f);
+        }
+        
+        public void FocusOnCell(int index)
+        {
+            if (cells.Count == 0) return;
+            
+            var cell = cells[index.Mod(cells.Count)];
+            cell.OnSelect(null);
+            EventSystem.current.SetSelectedGameObject(cell.gameObject);
         }
         
         // public void SnapTo(RectTransform target)
@@ -199,7 +226,7 @@ namespace Modules.UI.Widgets
 
 
 
-public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHandler, ISubmitHandler
+public abstract class ListViewCell<T> : Button, ISelectHandler, IDeselectHandler, ISubmitHandler, IPointerClickHandler
 {
     virtual public T Data { get; set; }
     
@@ -208,6 +235,7 @@ public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHan
     public event Action<int, ListViewCell<T>> OnCellSelected;
     public event Action<int, ListViewCell<T>> OnCellDeselected;
     public event Action<int, ListViewCell<T>> OnCellSubmitted;
+    public event Action<int, ListViewCell<T>> OnCellClicked; 
 
     private Image _image;
 
@@ -236,6 +264,13 @@ public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHan
 
     public virtual void OnSubmit(BaseEventData eventData)
     {
+        base.OnSubmit(eventData);
         OnCellSubmitted?.Invoke(Index, this);
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        base.OnPointerClick(eventData);
+        OnCellClicked?.Invoke(Index, this);
     }
 }

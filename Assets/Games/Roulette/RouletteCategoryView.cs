@@ -1,21 +1,38 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
-using UnityEngine.UI;
+using USEN.Games.Common;
+using USEN.Games.Roulette;
 
-public class RouletteThemeSelectionView : Widget
+public class RouletteCategoryView : Widget
 {
-    public ScrollRect listView;
+    public RouletteCategoryList listView;
+    public BottomPanel bottomPanel;
+    
+    public RouletteDataset dataset;
+    
+    void OnEnable()
+    {
+        listView.FocusOnCell(0);
+    }
     
     void Start()
     {
         Debug.Log("RouletteThemeSelectionView started.");
+        
+        // var json = JsonConvert.SerializeObject(dataset);
+        // Debug.Log($"[RouletteThemeSelectionView] Dataset JSON: {json}");
+        
+        RouletteDAO.Instance.Data.ContinueWith(async task =>
+        {
+            var data = task.Result;
+            Debug.Log($"[RouletteThemeSelectionView] Data loaded: {data.categories.Count} categories.");
+            listView.Data = data.categories;
+            await UniTask.DelayFrame(2);
+            listView.FocusOnCell(0);
+        });
     }
 
     private void Update()
@@ -26,7 +43,7 @@ public class RouletteThemeSelectionView : Widget
         }
     }
 
-    protected override KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
+    protected KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
     {
         Debug.Log($"[RouletteThemeSelectionView] Key pressed: {key.keyCode} with event: {keyEvent}");
         switch (key.keyCode)

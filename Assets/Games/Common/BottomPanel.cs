@@ -39,6 +39,16 @@ namespace USEN.Games.Common
             yellowButton.onClick.AddListener(() => OnYellowButtonClicked());
         }
 
+        private void OnEnable()
+        {
+            Debug.Log("BottomPanel enabled");
+        }
+        
+        private void OnDisable()
+        {
+            Debug.Log("BottomPanel disabled");
+        }
+
         private void OnExitButtonClicked()
         {
             if (clickExitToPop)

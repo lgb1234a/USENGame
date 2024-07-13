@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using USEN.Games.Common;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteGameSelectionView : Widget, IEventSystemHandler
     {
@@ -15,20 +15,21 @@ namespace USEN.MiniGames.Roulette
         public RouletteContentList rouletteContentList;
         public RouletteWheel rouletteWheel;
         public BottomPanel bottomPanel;
+        
+        private RouletteCategory _category;
+        public RouletteCategory Category
+        {
+            get => _category;
+            set
+            {
+                _category = value;
+                rouletteGameSelectionList.Data = value.roulettes;
+            }
+        }
 
         void Awake()
         {
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => ShowContentView();
-        }
-        
-        private void OnEnable()
-        {
-            EventSystem.current.SetSelectedGameObject(null);
-        }
-        
-        void Start()
-        {
-            
         }
         
         private void Update()
@@ -39,7 +40,6 @@ namespace USEN.MiniGames.Roulette
             }
         }
         
-        
         public void OnConfirmButtonClicked()
         {
             if (rouletteGameSelectionList.gameObject.activeSelf)
@@ -48,7 +48,10 @@ namespace USEN.MiniGames.Roulette
             }
             else if (rouletteContentList.gameObject.activeSelf)
             {
-                Navigator.Push<RouletteGameView>();
+                Navigator.Push<RouletteGameView>((view) =>
+                {
+                    view.RouletteData = rouletteGameSelectionList.SelectedData;
+                });
             }
         }
 
@@ -80,7 +83,7 @@ namespace USEN.MiniGames.Roulette
         private void ShowContentView()
         {
             rouletteGameSelectionList.gameObject.SetActive(false);
-            rouletteContentList.Data = rouletteGameSelectionList.SelectedData.objects;
+            rouletteContentList.Data = rouletteGameSelectionList.SelectedData.sectors;
             rouletteContentList.gameObject.SetActive(true);
         }
         

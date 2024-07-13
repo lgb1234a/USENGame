@@ -3,7 +3,7 @@
 using Modules.UI.Widgets;
 using UnityEngine;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteEditList : ListView<RouletteEditListCell, RouletteSector>
     {

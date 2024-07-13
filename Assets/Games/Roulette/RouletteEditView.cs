@@ -1,17 +1,14 @@
 // Created by LunarEclipse on 2024-7-11 23:55.
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Luna.UI;
-using Modules.UI.Widgets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using USEN.Games.Common;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteEditView : Widget
     {
@@ -22,22 +19,22 @@ namespace USEN.MiniGames.Roulette
         public RouletteEditList listView;
         public BottomPanel bottomPanel;
         
-        private RouletteSectors _data;
+        private RouletteData _data;
         
-        public RouletteSectors Data
+        public RouletteData Data
         {
             get => _data;
             set
             {
                 if (title.text == "")
                 {
-                    if (value.objects.Count > 0)
+                    if (value.sectors.Count > 0)
                         title.text = "編集";
                     else title.text = "新規作成";
                 }
-                gameTitle.text = value.name;
-                listView.Data = new List<RouletteSector>(value.objects);
-                sectorCounter.text = $"{value.objects.Count}";
+                gameTitle.text = value.title;
+                listView.Data = new List<RouletteSector>(value.sectors);
+                sectorCounter.text = $"{value.sectors.Count}";
             }
         }
         

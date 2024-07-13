@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class ApplyScaleToChildren : MonoBehaviour
     {

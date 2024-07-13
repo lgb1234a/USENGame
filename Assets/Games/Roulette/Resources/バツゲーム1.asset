@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1acc169096b4b28b52a6426598ce9b5, type: 3}
   m_Name: "\u30D0\u30C4\u30B2\u30FC\u30E01"
   m_EditorClassIdentifier: 
-  objects:
+  title: "\u30D0\u30C4\u30B2\u30FC\u30E01"
+  sectors:
   - id: 0
     content: "\u4EBA\u751F\u3067\u4E00\u756A\u5F8C\u6094\u3057\u305F\u8A71"
     weight: 1

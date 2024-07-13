@@ -11,7 +11,7 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteStartView : Widget
     {
@@ -24,8 +24,6 @@ namespace USEN.MiniGames.Roulette
 
         private void OnEnable()
         {
-            base.OnEnable();
-            
             if (_startButton != null)
             {
                 EventSystem.current.SetSelectedGameObject(_startButton.gameObject);
@@ -60,7 +58,7 @@ namespace USEN.MiniGames.Roulette
         public void OnStartButtonClicked()
         {
             Debug.Log("Start button clicked.");
-            Navigator.Push<RouletteThemeSelectionView>();
+            Navigator.Push<RouletteCategoryView>();
         }
         
         public void OnSettingsButtonClicked()

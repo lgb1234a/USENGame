@@ -10,12 +10,22 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-namespace USEN.MiniGames.Roulette
+namespace USEN.Games.Roulette
 {
     public class RouletteWheel : MonoBehaviour
     {
         [SerializeField]
-        private RouletteSectors rouletteData;
+        private RouletteData rouletteData;
+        
+        public RouletteData RouletteData
+        {
+            get => rouletteData;
+            set
+            {
+                rouletteData = value;
+                Sectors = value.sectors;
+            }
+        }
         
         [Header("Wheel Settings")]
         public float radius = 3.2f;
@@ -59,7 +69,7 @@ namespace USEN.MiniGames.Roulette
         private void Awake()
         {
             _canvas = GetComponentInParent<Canvas>().rootCanvas;
-            Sectors = rouletteData.objects;
+            Sectors = rouletteData.sectors;
         }
 
         private void Start()
