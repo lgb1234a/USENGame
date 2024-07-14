@@ -2302,6 +2302,7 @@ MonoBehaviour:
   cell: {fileID: 5103345519594862845}
   snapToCellWhenSelected: 1
   selectFirstCellOnEnable: 0
+  selectFirstCellOnReload: 0
 --- !u!1 &3639503639013063421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,9 +3074,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u7DE8\u96C6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a0521207a5ddc9c4aadfafba1261b6d4, type: 2}
-  m_sharedMaterial: {fileID: -2638630325519655132, guid: a0521207a5ddc9c4aadfafba1261b6d4,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2439c77de267d35468211a352d77d9e4, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: fef273c312903284b92cb63ebfd4a229, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -65,6 +65,27 @@ namespace USEN.Games.Common
             UsenEvents.OnRemoconYellowButtonClicked -= _yellowButtonEventHandler;
         }
 
+        private void Update()
+        {
+#if DEBUG
+            if (Input.GetKeyDown(KeyCode.Keypad0))
+                OnExitButtonClicked();
+            else if (Input.GetKeyDown(KeyCode.KeypadPeriod))
+                OnSelectButtonClicked();
+            else if (Input.GetKeyDown(KeyCode.KeypadEnter))
+                OnConfirmButtonClicked();
+            
+            if (Input.GetKeyDown(KeyCode.Keypad1))
+                OnBlueButtonClicked();
+            else if (Input.GetKeyDown(KeyCode.Keypad2))
+                OnRedButtonClicked();
+            else if (Input.GetKeyDown(KeyCode.Keypad3))
+                OnGreenButtonClicked();
+            else if (Input.GetKeyDown(KeyCode.Keypad4))
+                OnYellowButtonClicked();
+#endif
+        }
+
         private void OnExitButtonClicked()
         {
             if (clickExitToPop)

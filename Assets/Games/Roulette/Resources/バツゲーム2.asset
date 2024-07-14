@@ -43,7 +43,7 @@ MonoBehaviour:
     weight: 1
     color: {r: 0.5, g: 0.5, b: 1, a: 1}
   - id: 7
-    content: "\u671F\u9593\u9650\u5B9A\u3067\u30A2\u30AB\u30A6\u30F3\u30C8\u540D\u3084\u30A2\u30A4\u30B3\u30F3\u5909\u66F4"
+    content: "\u671F\u9593\u9650\u5B9A\u3067\u30A2\u30AB\u30A6\u30F3\u30C8\u540D\u5909\u66F4"
     weight: 1
     color: {r: 0.8333335, g: 0.5, b: 1, a: 1}
   - id: 8

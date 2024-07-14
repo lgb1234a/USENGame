@@ -32,11 +32,6 @@ public class RouletteGameSelectionListCell : ListViewCell<RouletteData>, ISelect
         base.OnDeselect(eventData);
         text.color = Color.white;
     }
-    
-    public void Test()
-    {
-        Debug.Log("Test");
-    }
 }
 
 

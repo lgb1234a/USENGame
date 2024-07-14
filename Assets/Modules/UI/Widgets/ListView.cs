@@ -34,6 +34,7 @@ namespace Modules.UI.Widgets
         public T cell;
         public bool snapToCellWhenSelected = true;
         public bool selectFirstCellOnEnable = true;
+        public bool selectFirstCellOnReload = true;
         
         public delegate void CellCallback(int index, T listViewCell);
         
@@ -125,6 +126,9 @@ namespace Modules.UI.Widgets
                     };
                 }
                 onCellCreated?.Invoke(i, newCell);
+                
+                if (selectFirstCellOnReload && i == 0)
+                    EventSystem.current.SetSelectedGameObject(newCell.gameObject);
             }
         }
 

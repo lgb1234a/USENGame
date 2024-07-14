@@ -14,23 +14,5 @@ namespace USEN.Games.Roulette
 {
     public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
     {
-        protected override void OnCellSubmitted(int index, RouletteContentListCell listViewCell)
-        {
-            Debug.Log($"Cell {index} submitted.");
-        }
-
-        protected override void OnCellDeselected(int index, RouletteContentListCell listViewCell)
-        {
-            Debug.Log($"Cell {index} deselected.");
-        }
-
-        protected override void OnCellSelected(int index, RouletteContentListCell listViewCell)
-        {
-            Debug.Log($"Cell {index} selected.");
-            if (Input.GetButtonDown("Vertical"))
-            {
-                SnapTo(listViewCell.transform as RectTransform);
-            }
-        }
     }
 }

@@ -30,13 +30,16 @@ namespace USEN.Games.Roulette
 
         void Awake()
         {
-            rouletteGameSelectionList.onCellSubmitted += (index, cell) => ShowContentView();
+            rouletteGameSelectionList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
+            rouletteContentList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
+            
             bottomPanel.onRedButtonClicked += OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
         }
 
         private void OnEnable()
         {
+            HideContentView();
             Category = _category;
         }
 

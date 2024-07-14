@@ -53,22 +53,5 @@ namespace USEN.Games.Roulette
             
             text.color = Color.white;
         }
-
-        public void OnSubmit(BaseEventData eventData)
-        {
-            base.OnSubmit(eventData);
-            
-            // Navigator.Push<RouletteGameSelectionView>();
-        }
-    
-        public void OnClick()
-        {
-            Navigator.Push<RouletteGameSelectionView>();
-        }
-    
-        public void Test()
-        {
-            Debug.Log("Test");
-        }
     }
 }

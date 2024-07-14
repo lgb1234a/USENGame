@@ -7,6 +7,9 @@ using DG.Tweening;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.UI;
 using USEN.Games.Common;
 
@@ -25,6 +28,7 @@ namespace USEN.Games.Roulette
         
         void OnEnable()
         {
+            base.OnKey += OnKey;
             startButton.onClick.AddListener(OnStartButtonClicked);
             bottomPanel.onExitButtonClicked += OnExitButtonClicked;
             bottomPanel.onSelectButtonClicked += OnStartButtonClicked;
@@ -33,9 +37,10 @@ namespace USEN.Games.Roulette
             bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
             bottomPanel.onYellowButtonClicked += OnYellowButtonClicked;
         }
-        
+
         void OnDisable()
         {
+            base.OnKey -= OnKey;
             startButton.onClick.RemoveListener(OnStartButtonClicked);
             bottomPanel.onExitButtonClicked -= OnExitButtonClicked;
             bottomPanel.onSelectButtonClicked -= OnStartButtonClicked;
@@ -43,6 +48,34 @@ namespace USEN.Games.Roulette
             bottomPanel.onRedButtonClicked -= OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked -= OnBlueButtonClicked;
             bottomPanel.onYellowButtonClicked -= OnYellowButtonClicked;
+        }
+
+        private void Start()
+        {
+            EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) ||
+                Input.GetButtonDown("Cancel")) {
+                Navigator.Pop();
+            }
+        }
+        
+        private KeyEventResult OnKey(KeyControl key, KeyEvent @event)
+        {
+            if (@event == KeyEvent.Down)
+            {
+                switch(key.keyCode)
+                {
+                    case Key.Enter:
+                    case Key.Space:
+                        OnStartButtonClicked();
+                        break;
+                }
+            }
+            return KeyEventResult.Unhandled;
         }
 
         private void OnStartButtonClicked()

@@ -24,7 +24,7 @@ namespace USEN.Games.Roulette
         {
             listViewCell.text.color = Color.white;
         }
-
+        
         protected override void OnCellSelected(int index, RouletteGameSelectionListCell listViewCell)
         {
             listViewCell.text.color = Color.black;
@@ -39,14 +39,6 @@ namespace USEN.Games.Roulette
                     target.rouletteWheel.RouletteData = SelectedData;
                 }
             });
-        }
-
-        public void SnapTo(RectTransform target)
-        {
-            var y = -target.anchoredPosition.y - ((RectTransform)_scrollRect.transform).rect.height;
-            y = Mathf.Clamp(y, 0, _scrollRect.content.rect.height);
-            var pos = new Vector2(_scrollRect.content.anchoredPosition.x, y);
-            DOTween.To(() => _scrollRect.content.anchoredPosition, v => _scrollRect.content.anchoredPosition = v, pos, 0.5f);
         }
     }
 
