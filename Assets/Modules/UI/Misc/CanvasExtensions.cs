@@ -25,9 +25,9 @@ namespace Modules.UI.Misc
             }
 
             var referenceResolution = canvasScaler.referenceResolution;
-            var currentResolution = new Vector2(Screen.width, Screen.height);
+            var currentResolution = Screen.currentResolution;
 
-            return new Vector2(currentResolution.x / referenceResolution.x, currentResolution.y / referenceResolution.y);
+            return new Vector2(currentResolution.width / referenceResolution.x, currentResolution.height / referenceResolution.y);
         }
         
         public static Vector2 GetScreenScaleFactor(this CanvasScaler canvasScaler)

@@ -6,8 +6,6 @@ using System.Collections.Generic;
 using Modules.UI.Misc;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace USEN.Games.Roulette
@@ -15,7 +13,7 @@ namespace USEN.Games.Roulette
     public class RouletteWheel : MonoBehaviour
     {
         [SerializeField]
-        private RouletteData rouletteData;
+        private RouletteData rouletteData; // Default data
         
         public RouletteData RouletteData
         {
@@ -23,7 +21,8 @@ namespace USEN.Games.Roulette
             set
             {
                 rouletteData = value;
-                Sectors = value.sectors;
+                if (value.sectors.Count > 0)
+                    DrawRouletteWheel();
             }
         }
         
@@ -50,41 +49,26 @@ namespace USEN.Games.Roulette
 
         private Canvas _canvas;
 
-        private bool isSpinning = false;
-        private float totalAngle;
-        private float startAngle;
-        
-        private List<RouletteSector> _sectors;
-        
-        public List<RouletteSector> Sectors
-        {
-            get => _sectors;
-            set
-            {
-                _sectors = new List<RouletteSector>(value);
-                if (value.Count > 0)
-                    DrawRouletteWheel();
-            }
-        }
+        private bool _isSpinning = false;
+        private float _totalAngle;
+        private float _startAngle;
+
+        public List<RouletteSector> Sectors => RouletteData.sectors;
 
         private void Awake()
         {
-            _canvas = GetComponentInParent<Canvas>().rootCanvas;
-            Sectors = rouletteData.sectors;
+            _canvas = GetComponentInParent<Canvas>()?.rootCanvas;
         }
 
         private void Start()
         {
-        }
-
-        private void OnValidate()
-        {
-            
+            if (Sectors.Count > 0)
+                DrawRouletteWheel();
         }
 
         public void SpinWheel()
         {
-            if (!isSpinning)
+            if (!_isSpinning)
             {
                 StartCoroutine(Spin());
             }
@@ -92,7 +76,7 @@ namespace USEN.Games.Roulette
 
         private IEnumerator Spin()
         {
-            isSpinning = true;
+            _isSpinning = true;
             
             OnSpinStart?.Invoke();
             
@@ -101,16 +85,16 @@ namespace USEN.Games.Roulette
 
             // Randomly determine the target sector
             int targetSectorIndex = Random.Range(0, Sectors.Count);
-            float targetAngle = (clockwise ? totalAngle * targetSectorIndex : 360f - targetSectorIndex * totalAngle) + angleOffset;
+            float targetAngle = (clockwise ? _totalAngle * targetSectorIndex : 360f - targetSectorIndex * _totalAngle) + angleOffset;
 
-            startAngle = transform.eulerAngles.z;
+            _startAngle = transform.eulerAngles.z;
             float endAngle = 360f * 5 + targetAngle; // Spin multiple times plus target angle
 
             while (elapsedTime < spinDuration)
             {
                 elapsedTime += Time.deltaTime;
                 float t = elapsedTime / spinDuration;
-                angle = Mathf.Lerp(startAngle, endAngle, spinCurve.Evaluate(t)) % 360;
+                angle = Mathf.Lerp(_startAngle, endAngle, spinCurve.Evaluate(t)) % 360;
                 transform.eulerAngles = new Vector3(0, 0, angle);
 
                 yield return null;
@@ -118,7 +102,7 @@ namespace USEN.Games.Roulette
 
             // Ensure the wheel stops at the exact target sector
             transform.eulerAngles = new Vector3(0, 0, endAngle % 360);
-            isSpinning = false;
+            _isSpinning = false;
 
             // Announce the prize
             Debug.Log("Won prize: " + Sectors[targetSectorIndex].content);
@@ -133,7 +117,7 @@ namespace USEN.Games.Roulette
         void DrawRouletteWheel()
         {
             transform.localRotation = Quaternion.identity;
-            totalAngle = 360f / Sectors.Count;
+            _totalAngle = 360f / Sectors.Count;
             
             // Clear existing sectors
             foreach (Transform child in transform)
@@ -143,17 +127,17 @@ namespace USEN.Games.Roulette
 
             for (int i = 0; i < Sectors.Count; i++)
             {
-                CreateSector(i, totalAngle);
+                CreateSector(i, _totalAngle);
             }
             
             // Rotate the wheel to align with the first sector
             transform.localRotation = Quaternion.Euler(0, 0, angleOffset);
         }
 
-        void CreateSector(int index, float totalAngle)
+        void CreateSector(int index, float sectorAngle)
         { 
-            float startAngle = (index - 0.5f) * totalAngle;
-            float endAngle = startAngle + totalAngle;
+            float startAngle = (index - 0.5f) * sectorAngle;
+            float endAngle = startAngle + sectorAngle;
 
             if (clockwise)
             {
@@ -167,7 +151,7 @@ namespace USEN.Games.Roulette
             sectorGO.transform.localPosition = Vector3.zero;
             if (_canvas != null)
             {
-                var scaleFactor = _canvas.GetScaleFactor();
+                var scaleFactor = _canvas.GetScaleFactor(true);
                 sectorGO.transform.localScale = new Vector3(scaleFactor.x, scaleFactor.y, 1f);
             }
 
@@ -247,9 +231,9 @@ namespace USEN.Games.Roulette
             // StartCoroutine(AdjustTextSize(text, radius));
             
             // Calculate the size of the text area to fit within the sector
-            float sectorAngle = Mathf.Deg2Rad * totalAngle / 2; // Half the angle of the sector in radians
-            float textWidth = 2 * radius * Mathf.Tan(sectorAngle); // Width of the text box based on the arc length
-            float textHeight = radius * Mathf.Sin(sectorAngle); // Height of the text box
+            float sectorRadian = Mathf.Deg2Rad * sectorAngle / 2; // Half the angle of the sector in radians
+            float textWidth = 2 * radius * Mathf.Tan(sectorRadian); // Width of the text box based on the arc length
+            float textHeight = radius * Mathf.Sin(sectorRadian); // Height of the text box
 
             // Set the size of the text area
             RectTransform rectTransform = textGO.GetComponent<RectTransform>();

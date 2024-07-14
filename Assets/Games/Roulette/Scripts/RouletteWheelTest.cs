@@ -43,14 +43,14 @@ namespace USEN.Games.Roulette
                 // Duplicate random sector
                 var randomIndex = Random.Range(0, sectors.Count);
                 sectors.Add(new RouletteSector(sectors[randomIndex]));
-                rouletteWheel.Sectors = sectors;
+                // rouletteWheel.Sectors = sectors;
             }
             
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 // Remove last sector
                 sectors.RemoveAt(sectors.Count - 1);
-                rouletteWheel.Sectors = sectors;
+                // rouletteWheel.Sectors = sectors;
             }
         }
 
@@ -61,14 +61,14 @@ namespace USEN.Games.Roulette
                 // Duplicate random sector
                 var randomIndex = Random.Range(0, sectors.Count);
                 sectors.Add(new RouletteSector(sectors[randomIndex]));
-                rouletteWheel.Sectors = sectors;
+                // rouletteWheel.Sectors = sectors;
             }
 
             if (keyName == "red")
             {
                 // Remove last sector
                 sectors.RemoveAt(sectors.Count - 1);
-                rouletteWheel.Sectors = sectors;
+                // rouletteWheel.Sectors = sectors;
             }
 
             if (keyName == "yellow")
