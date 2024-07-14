@@ -75,6 +75,7 @@
      <Compile Include="Assets\Games\Roulette\Scripts\RouletteData.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
      <Compile Include="Assets\Modules\UI\Misc\ColorBlockExtension.cs" />
+     <Compile Include="Assets\Modules\UI\Audio\SFXManager.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowRouletteView.cs" />
      <Compile Include="Assets\Modules\UI\Navigation\Navigator.cs" />
      <Compile Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.cs" />
@@ -84,6 +85,7 @@
      <Compile Include="Assets\Samples\GaussianBlur\BlurRenderFeature.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
+     <Compile Include="Assets\Modules\UI\Misc\ColorExtensions.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoTrack.cs" />
      <Compile Include="Assets\Modules\UI\Misc\CanvasExtensions.cs" />
@@ -95,6 +97,7 @@
      <Compile Include="Assets\Scripts\ViewManager.cs" />
      <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoGameView.cs" />
+     <Compile Include="Assets\Modules\UI\Audio\AudioPostprocessor.cs" />
      <Compile Include="Assets\Modules\UI\Test\StatefulWidgetChild.cs" />
      <Compile Include="Assets\Games\Common\AppInfoView.cs" />
      <Compile Include="Assets\Games\Roulette\Scripts\RouletteDataset.cs" />
@@ -160,7 +163,7 @@
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Games\Roulette\ApplyScaleToChildren.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Modules\UI\Misc\ColorExtensions.cs" />
+     <Compile Include="Assets\Modules\UI\Audio\Audios.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -275,12 +278,14 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect" />
      <None Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\SunFlare" />
+     <Folder Include="Assets\Modules\UI\Audio" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\PaintSplat" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Shaders" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Timelines" />
      <Folder Include="Assets\Resources\HighAndLow\Pokers" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Rotate" />
+     <Folder Include="Assets\Games\Roulette\Audios" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples" />
      <Folder Include="Assets\Modules\Video\Timeline\Signals" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Materials" />
