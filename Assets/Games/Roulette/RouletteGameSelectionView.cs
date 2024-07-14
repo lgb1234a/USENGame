@@ -1,6 +1,7 @@
 // Created by LunarEclipse on 2024-6-21 1:45.
 
 using System;
+using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
@@ -55,8 +56,9 @@ namespace USEN.Games.Roulette
             }
             else if (rouletteContentList.gameObject.activeSelf)
             {
-                Navigator.Push<RouletteGameView>((view) =>
+                Navigator.Push<RouletteGameView>(async (view) =>
                 {
+                    await UniTask.NextFrame();
                     view.RouletteData = rouletteGameSelectionList.SelectedData;
                 });
             }

@@ -67,7 +67,11 @@ namespace USEN.Games.Roulette
             {
                 Navigator.Pop();
                 await UniTask.NextFrame();
-                Navigator.Push<RouletteGameSelectionView>();
+                Navigator.Push<RouletteGameView>(async (view) =>
+                {
+                    await UniTask.NextFrame();
+                    view.RouletteData = Data;
+                });
             };
             
             bottomPanel.onRedButtonClicked += () =>
