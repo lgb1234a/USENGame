@@ -85,6 +85,7 @@
      <Compile Include="Assets\Samples\GaussianBlur\BlurRenderFeature.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
+     <Compile Include="Assets\Games\Common\UsenRemoteControlHandler.cs" />
      <Compile Include="Assets\Modules\UI\Misc\ColorExtensions.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoTrack.cs" />
@@ -116,6 +117,7 @@
      <Compile Include="Assets\Games\Roulette\RouletteEditListCell.cs" />
      <Compile Include="Assets\Games\Roulette\Scripts\RouletteWheelTest.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteStartView.cs" />
+     <Compile Include="Assets\Games\Common\UsenEvents.cs" />
      <Compile Include="Assets\Scripts\FaceTo.cs" />
      <Compile Include="Assets\Games\Roulette\Scripts\RouletteWheel.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteContentEditView.cs" />
@@ -159,13 +161,11 @@
      <Compile Include="Assets\Modules\UI\Base\FocusManager.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionView.cs" />
+     <Compile Include="Assets\Modules\UI\Audio\Audios.cs" />
      <Compile Include="Assets\Games\Roulette\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Games\Roulette\ApplyScaleToChildren.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Modules\UI\Audio\Audios.cs" />
-     <Compile Include="Assets\Games\Common\UsenEvents.cs" />
-     <Compile Include="Assets\Games\Common\UsenRemoteControlHandler.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
