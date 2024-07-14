@@ -38,6 +38,7 @@ namespace USEN.Games.Roulette
         [Header("Text Settings")]
         public TMP_FontAsset font;
         public float fontSize = 2.5f;
+        public float outlineWidth = 0.3f;
         public float textDistanceFromCenter = 2f;
         
         [Header("Spin Settings")]
@@ -224,12 +225,13 @@ namespace USEN.Games.Roulette
             text.text = Sectors[index].content;
             text.horizontalAlignment = HorizontalAlignmentOptions.Left;
             text.verticalAlignment = VerticalAlignmentOptions.Middle;
+            text.sortingOrder = 2;
+            text.font = font ? font : Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+            // text.material = fontMaterial ? fontMaterial : text.font.material;
             text.fontSize = fontSize;
             text.color = Color.white;
             text.outlineColor = Color.black;
-            text.outlineWidth = 1f;
-            text.sortingOrder = 2;
-            text.font = font ? font : Resources.Load<TMP_FontAsset>("Fonts & Materials/LiberationSans SDF");
+            text.outlineWidth = outlineWidth;
 
             float midAngle = (startAngle + endAngle) / 2f;
             Vector3 textPos = new Vector3(
