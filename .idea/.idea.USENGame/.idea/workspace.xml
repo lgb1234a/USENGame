@@ -5,33 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/RouletteAudioMixer.mixer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/RouletteAudioMixer.mixer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/Roulette_BGM_Loop.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/Roulette_BGM_Loop.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット回転音.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット回転音.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_戻る.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_戻る.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_決定.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_決定.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_選択.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Audios/ルーレット操作音_選択.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/AudioPostprocessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/AudioPostprocessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/Audios.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/Audios.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/SFXManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Audio/SFXManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/UsenEvents.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/UsenEvents.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/UsenRemoteControlHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/UsenRemoteControlHandler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b2d7d59817e4af1a45d9ca0b0f44c327e00/f1/9777b630/VideoRenderMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/539c950127d24dd9b0d63efcbeb5d9a7fe00/28/e782e477/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/539c950127d24dd9b0d63efcbeb5d9a7fe00/74/ddf3e193/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/98/24e03aa2/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/34/401261bf/AssetPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/54/0365a14f/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70037d4e95584e918c2439cf7b1b808c45400/76/ff07b01d/ISelectHandler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,8 +91,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HighAndLowHomeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/R.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ViewManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/cc.lunareclipse.unilities@25128a358e/Core/Event/Event.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/cc.lunareclipse.unilities@25128a358e/Core/Event/Events.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/cc.lunareclipse.unilities@25128a358e/Core/Pool/ObjectPool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTask.Delay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
@@ -308,7 +296,7 @@
       <workItem from="1720531563774" duration="11974000" />
       <workItem from="1720629035782" duration="855000" />
       <workItem from="1720629908939" duration="48674000" />
-      <workItem from="1720820225381" duration="48564000" />
+      <workItem from="1720820225381" duration="51859000" />
     </task>
     <servers />
   </component>

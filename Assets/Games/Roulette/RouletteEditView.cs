@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
 using TMPro;
@@ -61,6 +62,19 @@ namespace USEN.Games.Roulette
                     Data.sectors[i].content = value;
                 };
             };
+            
+            bottomPanel.onBlueButtonClicked += async () =>
+            {
+                Navigator.Pop();
+                await UniTask.NextFrame();
+                Navigator.Push<RouletteGameSelectionView>();
+            };
+            
+            bottomPanel.onRedButtonClicked += () =>
+            {
+                RouletteDAO.Instance.SaveToFile();
+                Navigator.Pop();
+            };
         }
 
         private void OnEnable()
@@ -88,11 +102,6 @@ namespace USEN.Games.Roulette
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                     RemoveSector();
             }
-        }
-
-        private void OnDestroy()
-        {
-            RouletteDAO.Instance.SaveToFile();
         }
 
         // private KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)

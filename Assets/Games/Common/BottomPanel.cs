@@ -28,25 +28,41 @@ namespace USEN.Games.Common
         public event Action onGreenButtonClicked;
         public event Action onYellowButtonClicked;
         
+        private EventHandler<EventArgs> _redButtonEventHandler;
+        private EventHandler<EventArgs> _blueButtonEventHandler;
+        private EventHandler<EventArgs> _greenButtonEventHandler;
+        private EventHandler<EventArgs> _yellowButtonEventHandler;
+        
         void Awake()
         {
-            exitButton.onClick.AddListener(() => OnExitButtonClicked());
-            selectButton.onClick.AddListener(() => OnSelectButtonClicked());
-            confirmButton.onClick.AddListener(() => OnConfirmButtonClicked());
-            redButton.onClick.AddListener(() => OnRedButtonClicked());
-            blueButton.onClick.AddListener(() => OnBlueButtonClicked());
-            greenButton.onClick.AddListener(() => OnGreenButtonClicked());
-            yellowButton.onClick.AddListener(() => OnYellowButtonClicked());
+            exitButton.onClick.AddListener(OnExitButtonClicked);
+            selectButton.onClick.AddListener(OnSelectButtonClicked);
+            confirmButton.onClick.AddListener(OnConfirmButtonClicked);
+            redButton.onClick.AddListener(OnRedButtonClicked);
+            blueButton.onClick.AddListener(OnBlueButtonClicked);
+            greenButton.onClick.AddListener(OnGreenButtonClicked);
+            yellowButton.onClick.AddListener(OnYellowButtonClicked);
+            
+            _redButtonEventHandler = (sender, args) => OnRedButtonClicked();
+            _blueButtonEventHandler = (sender, args) => OnBlueButtonClicked();
+            _greenButtonEventHandler = (sender, args) => OnGreenButtonClicked();
+            _yellowButtonEventHandler = (sender, args) => OnYellowButtonClicked();
         }
 
         private void OnEnable()
         {
-            Debug.Log("BottomPanel enabled");
+            UsenEvents.OnRemoconRedButtonClicked += _redButtonEventHandler;
+            UsenEvents.OnRemoconBlueButtonClicked += _blueButtonEventHandler;
+            UsenEvents.OnRemoconGreenButtonClicked += _greenButtonEventHandler;
+            UsenEvents.OnRemoconYellowButtonClicked += _yellowButtonEventHandler;
         }
         
         private void OnDisable()
         {
-            Debug.Log("BottomPanel disabled");
+            UsenEvents.OnRemoconRedButtonClicked -= _redButtonEventHandler;
+            UsenEvents.OnRemoconBlueButtonClicked -= _blueButtonEventHandler;
+            UsenEvents.OnRemoconGreenButtonClicked -= _greenButtonEventHandler;
+            UsenEvents.OnRemoconYellowButtonClicked -= _yellowButtonEventHandler;
         }
 
         private void OnExitButtonClicked()

@@ -14,17 +14,6 @@ namespace USEN.Games.Roulette
 {
     public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
     {
-        async Task OnEnable()
-        {
-            // Select first cell
-            var firstCell = cells.First().gameObject;
-            if (firstCell != null)
-            {
-                await UniTask.NextFrame();
-                EventSystem.current.SetSelectedGameObject(firstCell);
-            }
-        }
-        
         protected override void OnCellSubmitted(int index, RouletteContentListCell listViewCell)
         {
             Debug.Log($"Cell {index} submitted.");
