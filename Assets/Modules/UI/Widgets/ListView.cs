@@ -276,4 +276,9 @@ public abstract class ListViewCell<T> : Selectable, ISelectHandler, IDeselectHan
         // base.OnPointerClick(eventData);
         OnCellClicked?.Invoke(Index, this);
     }
+    
+    public void Focus()
+    {
+        EventSystem.current.SetSelectedGameObject(gameObject);
+    }
 }

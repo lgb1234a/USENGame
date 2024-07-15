@@ -26,6 +26,9 @@ namespace USEN.Games.Roulette
         public BottomPanel bottomPanel;
         
         private RouletteData _data;
+
+        private bool _isEditing = false;
+        private bool IsEditing => EventSystem.current.currentSelectedGameObject?.GetComponent<TMP_InputField>()?.isFocused ?? false;
         
         public RouletteData Data
         {
@@ -48,8 +51,6 @@ namespace USEN.Games.Roulette
 
         protected void Awake()
         {
-            // base.OnKey += OnKey;
-            
             gameTitle.onValueChanged.AddListener((value) =>
             {
                 Data.title = value;
@@ -61,6 +62,12 @@ namespace USEN.Games.Roulette
                 {
                     Data.sectors[i].content = value;
                 };
+            };
+            
+            listView.onCellSubmitted += async (index, cell) =>
+            {
+                await UniTask.NextFrame();
+                cell.inputField.Select();
             };
             
             bottomPanel.onBlueButtonClicked += async () =>
@@ -85,8 +92,15 @@ namespace USEN.Games.Roulette
         {
             Debug.Log("[RouletteEditView] OnEnable");
             EventSystem.current.SetSelectedGameObject(gameTitle.gameObject);
+            base.OnKey += OnKey;
         }
-        
+
+        private void OnDisable()
+        {
+            Debug.Log("[RouletteEditView] OnDisable");
+            base.OnKey -= OnKey;
+        }
+
         private void Start()
         {
             SetNavigation();
@@ -94,9 +108,11 @@ namespace USEN.Games.Roulette
         
         private void Update()
         {
+            Debug.Log($"[RouletteEditView] Update: {IsEditing}");
+            
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
-                Navigator.Pop();
+                if (!_isEditing) Navigator.Pop();
             }
 
             if (EventSystem.current.currentSelectedGameObject == sectorCounterButton.gameObject)
@@ -108,33 +124,41 @@ namespace USEN.Games.Roulette
             }
         }
 
-        // private KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
-        // {
-        //     Debug.Log($"[RouletteEditView] Key pressed: {key.keyCode} with event: {keyEvent}");
-        //     Debug.Log($"[RouletteEditView] Current selected: {EventSystem.current.currentSelectedGameObject}");
-        //     
-        //     if (keyEvent == KeyEvent.KeyDown &&
-        //         EventSystem.current.currentSelectedGameObject == sectorCounterButton.gameObject)
-        //     {
-        //         switch (key.keyCode)
-        //         {
-        //             case Key.RightArrow:
-        //                 AddSector();
-        //                 break;
-        //             case Key.LeftArrow:
-        //                 RemoveSector();
-        //                 break;
-        //         }
-        //     }
-        //     
-        //     return KeyEventResult.Unhandled;
-        // }
+        private KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
+        {
+            // Debug.Log($"[RouletteEditView] Key pressed: {key.keyCode} with event: {keyEvent}");
+            // Debug.Log($"[RouletteEditView] Current selected: {EventSystem.current.currentSelectedGameObject}");
+            
+            // if (keyEvent == KeyEvent.KeyDown &&
+            //     EventSystem.current.currentSelectedGameObject == sectorCounterButton.gameObject)
+            // {
+            //     switch (key.keyCode)
+            //     {
+            //         case Key.RightArrow:
+            //             AddSector();
+            //             break;
+            //         case Key.LeftArrow:
+            //             RemoveSector();
+            //             break;
+            //     }
+            // }
+            // if (!IsEditing) Navigator.Pop();
+            
+            
+            Debug.Log($"[RouletteEditView] Key pressed: {IsEditing} with event: {keyEvent}");
+            if (keyEvent == KeyEvent.Down)
+            {
+                _isEditing = EventSystem.current.currentSelectedGameObject.GetComponent<TMP_InputField>()?.isFocused ?? false;
+            }
+            
+            return KeyEventResult.Unhandled;
+        }
 
         public void AddSector()
         {
             var newSector = new RouletteSector();
             newSector.color = RandomColor(0.5f);
-            Data.sectors.Add(newSector);
+            Data.sectors.Insert(0, newSector);
             listView.Data = Data.sectors;
             sectorCounter.text = $"{Data.sectors.Count}";
         }
@@ -142,7 +166,7 @@ namespace USEN.Games.Roulette
         public void RemoveSector()
         {
             if (Data.sectors.Count == 0) return;
-            Data.sectors.RemoveAt(Data.sectors.Count - 1);
+            Data.sectors.RemoveAt(0);
             listView.Data = Data.sectors;
             sectorCounter.text = $"{Data.sectors.Count}";
         }

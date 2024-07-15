@@ -5,9 +5,9 @@ namespace Luna.UI
     public enum KeyEvent
     {
         /// The key was pressed.
-        KeyDown,
+        Down,
         /// The key was released.
-        KeyUp,
+        Up,
         /// The key was held down.
         // KeyHold,
     }

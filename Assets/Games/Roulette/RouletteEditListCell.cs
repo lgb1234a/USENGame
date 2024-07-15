@@ -18,6 +18,7 @@ namespace USEN.Games.Roulette
         
         public event Action<int, RouletteEditListCell> onSubmitted;
         public event Action<int, RouletteEditListCell, string> onInputValueChanged;
+        public event Action<int, RouletteEditListCell, string> onInputEnd;
         
         private RouletteSector _data;
         
@@ -36,6 +37,7 @@ namespace USEN.Games.Roulette
             indexText.text = Index.ToString();
 
             inputField.onValueChanged.AddListener(OnInputValueChanged);
+            inputField.onEndEdit.AddListener(OnInputEnd);
             
             // this.colors = new ColorBlock
             // {
@@ -49,6 +51,12 @@ namespace USEN.Games.Roulette
             // };
         }
 
+        private void OnInputEnd(string value)
+        {
+            this.Focus();
+            onInputEnd?.Invoke(Index, this, value);
+        }
+
         private void OnInputValueChanged(string newValue)
         {
             onInputValueChanged?.Invoke(Index, this, newValue);
@@ -58,8 +66,7 @@ namespace USEN.Games.Roulette
         {
             base.OnSelect(eventData);
             Debug.Log($"[RouletteEditListCell] OnSelect: {Index}");
-            await UniTask.NextFrame();
-            inputField.Select();
+            inputField.DeactivateInputField();
         }
     }
 }

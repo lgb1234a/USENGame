@@ -42,7 +42,7 @@ namespace Luna.UI
                 
                 if (control is KeyControl keyControl)
                 {
-                    var result = _OnKey?.Invoke(keyControl, control.IsPressed() ? KeyEvent.KeyUp : KeyEvent.KeyDown);
+                    var result = _OnKey?.Invoke(keyControl, control.IsPressed() ? KeyEvent.Up : KeyEvent.Down);
                     if (result == KeyEventResult.Handled)
                     {
                         eventPtr.handled = true;
