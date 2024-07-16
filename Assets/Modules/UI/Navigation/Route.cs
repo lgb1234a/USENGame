@@ -1,12 +1,18 @@
 ﻿// Created by LunarEclipse on 2024-6-19 6:25.
 
+using System;
 using System.Threading.Tasks;
 
 namespace Luna.UI.Navigation
 {
-    public class Route<T>
+    public class Route
     {
-        public Task<T> Task => _tcs.Task;
-        private TaskCompletionSource<T> _tcs = new();
+        public Action<Widget> onPushed;
+        public Action<Widget> onPopped;
+
+        // public dynamic pendingResult;
+        
+        internal Task<dynamic> Popped => popCompleter.Task;
+        internal readonly TaskCompletionSource<dynamic> popCompleter = new();
     }
 }

@@ -72,7 +72,7 @@ namespace USEN.Games.Roulette
             
             bottomPanel.onBlueButtonClicked += async () =>
             {
-                Navigator.Pop();
+                Navigator.Pop(Data);
                 await UniTask.NextFrame();
                 Navigator.Push<RouletteGameView>(async (view) =>
                 {
@@ -83,8 +83,8 @@ namespace USEN.Games.Roulette
             
             bottomPanel.onRedButtonClicked += () =>
             {
+                Navigator.Pop(Data);
                 RouletteDAO.Instance.SaveToFile();
-                Navigator.Pop();
             };
         }
 
@@ -112,7 +112,7 @@ namespace USEN.Games.Roulette
             
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
-                if (!_isEditing) Navigator.Pop();
+                if (!_isEditing) Navigator.Pop(Data);
             }
 
             if (EventSystem.current.currentSelectedGameObject == sectorCounterButton.gameObject)

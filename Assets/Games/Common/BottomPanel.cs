@@ -90,36 +90,44 @@ namespace USEN.Games.Common
         {
             if (clickExitToPop)
                 Navigator.Pop();
+            
+            if (!exitButton.isActiveAndEnabled) return;
             onExitButtonClicked?.Invoke();
         }
 
         private void OnSelectButtonClicked()
         {
+            if (!selectButton.isActiveAndEnabled) return;
             onSelectButtonClicked?.Invoke();
         }
 
         private void OnConfirmButtonClicked()
         {
+            if (!confirmButton.isActiveAndEnabled) return;
             onConfirmButtonClicked?.Invoke();
         }
 
         private void OnRedButtonClicked()
         {
+            if (!redButton.isActiveAndEnabled) return;
             onRedButtonClicked?.Invoke();
         }
 
         private void OnBlueButtonClicked()
         {
+            if (!blueButton.isActiveAndEnabled) return;
             onBlueButtonClicked?.Invoke();
         }
 
         private void OnGreenButtonClicked()
         {
+            if (!greenButton.isActiveAndEnabled) return;
             onGreenButtonClicked?.Invoke();
         }
 
         private void OnYellowButtonClicked()
         {
+            if (!yellowButton.isActiveAndEnabled) return;
             onYellowButtonClicked?.Invoke();
         }
     }

@@ -1,8 +1,10 @@
 // Created by LunarEclipse on 2024-7-13 19:34.
 
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using UnityEngine;
 
 namespace USEN.Games.Roulette
@@ -11,29 +13,40 @@ namespace USEN.Games.Roulette
     {
         public const string FILE_NAME = "Roulette.data";
         public const string DEFAULT_DATA_PATH = "DefaultRouletteDataset";
-
+        public static Version Version = new(1, 0, 1);
+ 
         // Singleton
         public static RouletteDAO Instance = new();
         
-        private RouletteDataset _data;
-        public Task<RouletteDataset> Data { get; private set; }
+        public Task<RouletteDataset> Data => tcs.Task;
+        private TaskCompletionSource<RouletteDataset> tcs = new();
         
+        private RouletteDataset _data;
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Initialize() {}
         
         private RouletteDAO()
         {
-            TaskCompletionSource<RouletteDataset> tcs = new();
-            Data = tcs.Task;
-            
-            var uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
+            // Load default data from resources.
             var defaultData = Resources.Load<RouletteDataset>(DEFAULT_DATA_PATH);
+            
+            // Load data from file.
             LoadFromFile().ContinueWith(task =>
             {
                 Debug.Log($"[RouletteDAO] Load roulette data from file status: {task.Status}");
-                if (task.Result != null) 
-                    _data = task.Result;
+                if (task.Result != null)
+                {
+                    var data = task.Result;
+                    
+                    // Overwrite the default data if version is different.
+                    if (data.version == null || Version > data.version)
+                    {
+                        _data = defaultData;
+                        SaveToFile();
+                    }
+                    else _data = data;
+                }
                 else
                 {
                     // Print error message of the task.
@@ -49,7 +62,11 @@ namespace USEN.Games.Roulette
         
         public Task SaveToFile()
         {
-            string json = JsonConvert.SerializeObject(_data);
+#if DEBUG
+            string json = JsonConvert.SerializeObject(_data, Formatting.Indented, new VersionConverter());
+#else
+            string json = JsonConvert.SerializeObject(_data, new VersionConverter());
+#endif
             var path = Path.Combine(Application.persistentDataPath, FILE_NAME);
             return File.WriteAllTextAsync(path, json).ContinueWith(task =>
             {
@@ -67,7 +84,7 @@ namespace USEN.Games.Roulette
                 Debug.Log($"[RouletteDAO] Json loaded: {json}");
                 try
                 {
-                    var obj = JsonConvert.DeserializeObject<RouletteDataset>(json);
+                    var obj = JsonConvert.DeserializeObject<RouletteDataset>(json, new VersionConverter());
                     Debug.Log($"[RouletteDAO] Data loaded: {obj.categories.Count} categories.");
                     return obj;
                 }

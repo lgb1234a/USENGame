@@ -12,6 +12,7 @@ namespace USEN.Games.Roulette
     [CreateAssetMenu(fileName = "RouletteDatabase", menuName = "Scriptable Objects/Roulette/Roulette Database")]
     public class RouletteDataset : ScriptableObject
     {
+        public Version version;
         public List<RouletteCategory> categories = new();
     }
 }

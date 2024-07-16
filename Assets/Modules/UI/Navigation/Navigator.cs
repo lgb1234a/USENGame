@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,9 +18,9 @@ namespace Luna.UI.Navigation
         
         public bool escToPop = true; // Pop the top widget when the escape key is pressed
         
-        // public List<GameObject> widgets = new(); // List of all widgets in the game
-        // private readonly Dictionary<Type, GameObject> _widgetDictionary = new();
         private readonly Stack<GameObject> _widgetStack = new();
+        // private readonly Stack<GameObject> _widgetHistory = new();
+        private readonly Stack<Route> _routeStack = new();
         
         private bool isDontDestroyOnLoad = false;
         
@@ -94,7 +95,7 @@ namespace Luna.UI.Navigation
         {
             if (escToPop && Input.GetKeyDown(KeyCode.Escape))
             {
-                _Pop();
+                Pop();
             }
         }
         
@@ -118,14 +119,19 @@ namespace Luna.UI.Navigation
         /// Prefab with Widget component will be registered in the Widgets prefab database automatically.
         /// Note: A widget type should only have one prefab that corresponds to it.
         /// </typeparam>
-        public static void Push<T>(Action<T> callback = null) where T : Widget
+        public static Task<dynamic> Push<T>(Action<T> callback = null) where T : Widget
         {
-            Instance._Push<T>(callback);
+            return Instance._Push(callback);
         }
         
         public static void Pop()
         {
-            Instance._Pop();
+            Instance._Pop(0);
+        }
+        
+        public static void Pop<T>(T result = default)
+        {
+            Instance._Pop(result);
         }
         
         public static void PopToRoot()
@@ -143,8 +149,10 @@ namespace Luna.UI.Navigation
             return newWidget;
         }
         
-        protected void _Push<T>(Action<T> callback = null) where T : Widget
+        protected Task<dynamic> _Push<T>(Action<T> callback = null) where T : Widget
         {
+            var route = new Route();
+            
             if (_widgetStack.Count > 0)
                 _widgetStack.Peek().SetActive(false);
             
@@ -156,6 +164,7 @@ namespace Luna.UI.Navigation
                 // Widget will execute Awake method.
                 var newWidget = Instantiate(widgetPrefab, canvas.transform);
                 _widgetStack.Push(newWidget);
+                _routeStack.Push(route);
                 
                 // Executing the callback.
                 if (callback is not null)
@@ -167,19 +176,26 @@ namespace Luna.UI.Navigation
                 widgetPrefab.SetActive(true);
             }
             else Debug.LogError($"[Navigator] Widget of type {typeof(T)} not found.");
+            
+            return route.Popped;
         }
 
-        protected void _Pop()
+        protected void _Pop<T>(T result = default)
         {
             if (_widgetStack.Count > 1)
             {
+                // Pop & destroy the top widget
                 GameObject topWidget = _widgetStack.Pop();
                 Destroy(topWidget);
-
+                
+                // Pass the result to the previous widget
+                var route = _routeStack.Pop();
+                if (route != null)
+                    route.popCompleter.SetResult(result);
+                
+                // Show the previous widget
                 if (_widgetStack.Count > 0)
-                {
                     _widgetStack.Peek().SetActive(true);
-                }
             }
         }
 

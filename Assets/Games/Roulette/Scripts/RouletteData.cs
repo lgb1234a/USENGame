@@ -19,19 +19,21 @@ namespace USEN.Games.Roulette
         [FormerlySerializedAs("objects")] 
         [TableList(ShowIndexLabels = true, AlwaysExpanded = true, DrawScrollView = false)]
         public List<RouletteSector> sectors = new();
+        
+        [ReadOnly]
+        public string id;
 
         public void OnValidate()
         {
+            if (string.IsNullOrEmpty(id))
+                id = Guid.NewGuid().ToString();
+            
             if (string.IsNullOrEmpty(name))
                 title = base.name;
             
             for (int i = 0; i < sectors.Count; i++)
             {
                 var sector = sectors[i];
-                
-                // Debug.Log(sector.content);
-                // Debug.Log(sector.color);
-                
                 sector.id = sectors.IndexOf(sector);
                 sector.color = Color.HSVToRGB(1.0f / sectors.Count * i, 0.5f, 1f);
             }
