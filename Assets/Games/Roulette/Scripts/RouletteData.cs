@@ -14,14 +14,14 @@ namespace USEN.Games.Roulette
     [CreateAssetMenu(fileName = "Roulette", menuName = "Scriptable Objects/Roulette/Roulette")]
     public class RouletteData : ScriptableObject
     {
+        [ReadOnly]
+        public string id;
         public string title;
         
         [FormerlySerializedAs("objects")] 
         [TableList(ShowIndexLabels = true, AlwaysExpanded = true, DrawScrollView = false)]
         public List<RouletteSector> sectors = new();
         
-        [ReadOnly]
-        public string id;
 
         public void OnValidate()
         {
