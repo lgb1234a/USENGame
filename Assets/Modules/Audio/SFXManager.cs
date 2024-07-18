@@ -29,12 +29,17 @@ namespace Luna.UI.Audio
                 Debug.LogWarning($"SFXManager: Sound '{clipName}' already exists!");
             }
         }
+        
+        public static void Play(AudioClip clip)
+        {
+            audioSource.PlayOneShot(clip);
+        }
 
-        public static void PlaySound(string clipName)
+        public static void Play(string clipName)
         {
             if (soundEffects.ContainsKey(clipName))
             {
-                audioSource.PlayOneShot(soundEffects[clipName]);
+                Play(soundEffects[clipName]);
             }
             else
             {

@@ -15,52 +15,54 @@ namespace Luna.UI.Audio
         const string DB_FILE_PATH = "Audios.g";
         const string CS_FILE_PATH = "Assets/Scripts/R.cs";
         
-        // Find all audio files.
-        // static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets,
-        //     string[] movedFromAssetPaths, bool didDomainReload)
-        // {
-        //     RemoveAllMissingAudios();
-        //     foreach (var asset in importedAssets)
-        //     {
-        //         if (asset.EndsWith(".wav") || asset.EndsWith(".mp3") || asset.EndsWith(".ogg"))
-        //         {
-        //             Debug.Log("AudioPostprocessor: Found audio clip: " + asset);
-        //             var audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(asset);
-        //             if (audioClip != null)
-        //             {
-        //                 ProcessAudioClip(audioClip);
-        //             }
-        //         }
-        //     }
-        // }
+        const float MAX_SFX_LENGTH = 20f; 
         
-        // Find all audio clips.
-        // [InitializeOnLoadMethod]
-        // private static void Initialize()
-        // {
-        //     RemoveAllMissingAudios();
-        //     
-        //     var audioClips = new Dictionary<string, AudioClip>();
-        //     
-        //     string[] guids = AssetDatabase.FindAssets("t:AudioClip");
-        //     foreach (var guid in guids)
-        //     {
-        //         string path = AssetDatabase.GUIDToAssetPath(guid);
-        //         var audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
-        //         if (audioClip != null)
-        //         {
-        //             Debug.Log("AudioPostprocessor: Found audio clip: " + audioClip.name);
-        //             ProcessAudioClip(audioClip);
-        //             // var filename = ProcessName(Path.GetFileName(audioClip.name));
-        //             // if (audioClips.ContainsKey(filename))
-        //             //     filename = filename + "_" + guid;
-        //             // audioClips.Add(filename, audioClip);
-        //         }
-        //     }
-        //     
-        //     // DeleteGeneratedCode();
-        //     // GenerateCode(audioClips);
-        // }
+        // Find all audio files.
+        static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets,
+            string[] movedFromAssetPaths, bool didDomainReload)
+        {
+            RemoveAllMissingAudios();
+            foreach (var asset in importedAssets)
+            {
+                if (asset.EndsWith(".wav") || asset.EndsWith(".mp3") || asset.EndsWith(".ogg"))
+                {
+                    Debug.Log("AudioPostprocessor: Found audio clip: " + asset);
+                    var audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(asset);
+                    if (audioClip != null)
+                    {
+                        ProcessAudioClip(audioClip);
+                    }
+                }
+            }
+        }
+        
+        // Find all audio clips when the editor starts or recompiles.
+        [InitializeOnLoadMethod]
+        private static void Initialize()
+        {
+            RemoveAllMissingAudios();
+            
+            var audioClips = new Dictionary<string, AudioClip>();
+            
+            string[] guids = AssetDatabase.FindAssets("t:AudioClip");
+            foreach (var guid in guids)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guid);
+                var audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+                if (audioClip != null)
+                {
+                    Debug.Log("AudioPostprocessor: Found audio clip: " + audioClip.name);
+                    ProcessAudioClip(audioClip);
+                    // var filename = ProcessName(Path.GetFileName(audioClip.name));
+                    // if (audioClips.ContainsKey(filename))
+                    //     filename = filename + "_" + guid;
+                    // audioClips.Add(filename, audioClip);
+                }
+            }
+            
+            // DeleteGeneratedCode();
+            // GenerateCode(audioClips);
+        }
         
         private static void ProcessAudioClip(AudioClip audioClip)
         {
@@ -78,8 +80,11 @@ namespace Luna.UI.Audio
                     AssetDatabase.CreateAsset(audios, $"Assets/Resources/{DB_FILE_PATH}.asset");
                 }
 
-                audios.Add(audioClip);
-                EditorUtility.SetDirty(audios);
+                if (audioClip.length < MAX_SFX_LENGTH)
+                {
+                    audios.Add(audioClip);
+                    EditorUtility.SetDirty(audios);
+                }
             }
         }
 

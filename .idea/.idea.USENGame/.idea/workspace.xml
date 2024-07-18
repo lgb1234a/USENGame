@@ -5,7 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Scripts/RouletteDAO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/Audio Test.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/Audio Test.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/Audios.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/Audios.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudiosTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudiosTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/SFXManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/SFXManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Misc/EnumerableExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Misc/EnumerableExtensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/ApplyScaleToChildren.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/ApplyScaleToChildren.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryList.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryList.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentEditView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentEditView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentList.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteContentListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteEditView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionList.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionList.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionList.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionList.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionListCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteSelectionListCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStartView.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/AudioPostprocessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/AudioPostprocessor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/Audios.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/Audios.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/SFXManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Audio/SFXManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/SyncSpriteSizeWithRectTransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/SyncSpriteSizeWithRectTransform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +158,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Games/Roulette/RouletteCategoryListCell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Roulette/RouletteGameSelectionListCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Modules/Audio/AudiosTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoTrack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Assets/KawaseBlur/KawaseBlur.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/GaussianBlur/BlurVolumeComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -250,10 +333,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="861404">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="721648">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="861404" />
+      <option name="pid" value="721648" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -292,7 +375,7 @@
       <workItem from="1720531563774" duration="11974000" />
       <workItem from="1720629035782" duration="855000" />
       <workItem from="1720629908939" duration="48674000" />
-      <workItem from="1720820225381" duration="91385000" />
+      <workItem from="1720820225381" duration="97989000" />
     </task>
     <servers />
   </component>
@@ -331,19 +414,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/ApplyScaleToChildren.cs</url>
-          <line>11</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\ApplyScaleToChildren.cs" initialLine="11" containingFunctionPresentation="Method 'Start'">
-            <startOffsets>
-              <option value="229" />
-            </startOffsets>
-            <endOffsets>
-              <option value="264" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
