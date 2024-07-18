@@ -5,19 +5,137 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00000.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00002.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00004.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00006.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00008.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00010.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00012.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00014.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00016.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00018.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00020.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00022.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00024.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00026.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00028.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00030.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00032.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00034.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00036.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00038.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00040.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00042.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00044.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00046.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00048.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00050.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00050.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00052.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00054.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00054.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00056.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00056.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00058.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00060.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00060.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00062.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00062.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00064.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00064.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00066.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00066.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00068.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00068.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00070.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00070.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00072.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00074.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00076.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00076.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00078.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00078.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00080.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00080.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00082.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00082.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00084.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00084.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00086.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00086.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00088.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00088.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00090.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00090.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00092.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00092.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00094.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00094.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00096.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00098.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00098.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00100.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00102.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00102.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00104.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00104.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00106.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00108.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00110.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00112.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00114.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00116.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Finish_00118.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Image.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish2/Image.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/AppInfoView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/AppInfoView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Audios.g.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish Animation Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish Animation Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HightAndLowGame/Finish/Finish Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/high_and_low_game.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +421,7 @@
       <workItem from="1720531563774" duration="11974000" />
       <workItem from="1720629035782" duration="855000" />
       <workItem from="1720629908939" duration="48674000" />
-      <workItem from="1720820225381" duration="101883000" />
+      <workItem from="1720820225381" duration="102943000" />
     </task>
     <servers />
   </component>
@@ -342,19 +460,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs</url>
-          <line>97</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Modules\UI\Navigation\Navigator.cs" initialLine="97" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="3312" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3318" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="164" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
