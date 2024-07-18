@@ -9,13 +9,15 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace USEN.Games.Roulette
 {
     public class RouletteStartView : Widget
     {
-        public Button _startButton;
+        public Button startButton;
+        public Button settingsButton;
         
         private void Start()
         {
@@ -24,9 +26,9 @@ namespace USEN.Games.Roulette
 
         private void OnEnable()
         {
-            if (_startButton != null)
+            if (startButton != null)
             {
-                EventSystem.current.SetSelectedGameObject(_startButton.gameObject);
+                EventSystem.current.SetSelectedGameObject(startButton.gameObject);
             }
         }
 
@@ -64,6 +66,7 @@ namespace USEN.Games.Roulette
         public void OnSettingsButtonClicked()
         {
             Debug.Log("Settings button clicked.");
+            Navigator.Push<RouletteSettingsView>();
         }
     }
 }

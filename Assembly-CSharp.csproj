@@ -50,6 +50,7 @@
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoSettingsView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\VideoPlayerRenderTexture.cs" />
+     <Compile Include="Assets\Games\Roulette\UIs\RouletteSettingsView.cs" />
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\ToastView.cs" />
      <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\PopScaler.cs" />
