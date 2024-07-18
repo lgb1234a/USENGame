@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Modules/Audio/Audio Test.unity
-    guid: bc2b9765cecf36346a8ffcc2a421b944
-  - enabled: 1
     path: Assets/Scenes/Splash.unity
     guid: 5deeeddeb1373b045b3cbb8471525b6b
   - enabled: 1
