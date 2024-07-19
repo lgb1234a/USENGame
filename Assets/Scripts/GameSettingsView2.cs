@@ -27,6 +27,10 @@ public class GameSettingsView2 : Widget
     public ToggleGroup backgroundToggleGroup;
     public List<Toggle> backgroundToggles = new List<Toggle>();
     
+    public Slider commendationToggleSlider;
+    public ToggleGroup commendationToggleGroup;
+    public List<Toggle> commendationToggles = new List<Toggle>();
+    
     public Button maxCellSettingButton;
     public Text maxCellSettingText; 
     
@@ -90,6 +94,18 @@ public class GameSettingsView2 : Widget
             });
         }
         
+        commendationToggleSlider.onValueChanged.AddListener(OnCommendationSliderChanged);
+        commendationToggleSlider.value = AppConfig.Instance.CommendationVideoOption;
+        // for(int i = 0; i < commendationToggles.Count; i++)
+        // {
+        //     var index = i;
+        //     commendationToggles[i].onValueChanged.AddListener(isOn => {
+        //         if (isOn) {
+        //             AppConfig.Instance.CommendationVideoOption = index;
+        //         }
+        //     });
+        // }
+        
         maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
         confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
         cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
@@ -98,7 +114,7 @@ public class GameSettingsView2 : Widget
         appInfoButton.onClick.AddListener(OnClickAppInfoButton);
         backButton.onClick.AddListener(OnClickBackButton);
 
-        EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
+        EventSystem.current.SetSelectedGameObject(bgmVolumeSlider.gameObject);
         isInited = true;
     }
     
@@ -113,25 +129,29 @@ public class GameSettingsView2 : Widget
             deltaTime = 0;
         }
 
-        if (Input.GetButtonDown("Horizontal") && EventSystem.current.currentSelectedGameObject == maxCellSettingButton.gameObject) {
-            if (Input.GetKey(KeyCode.LeftArrow)) {
-                if (AppConfig.Instance.HasHistoryGameData()) {
-                    confirmPanel.SetActive(true);
-                    EventSystem.current.SetSelectedGameObject(confirmSettingCellCountBtn.gameObject);
-                    nextCellCountChange = -1;
-                } else{
-                    OnMaxCellSettingSliderValueChanged(-1);
+        if (Input.GetButtonDown("Horizontal")) {
+            if (EventSystem.current.currentSelectedGameObject == maxCellSettingButton.gameObject)
+            {
+                if (Input.GetKey(KeyCode.LeftArrow)) {
+                    if (AppConfig.Instance.HasHistoryGameData()) {
+                        confirmPanel.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(confirmSettingCellCountBtn.gameObject);
+                        nextCellCountChange = -1;
+                    } else{
+                        OnMaxCellSettingSliderValueChanged(-1);
+                    }
+                }
+                if (Input.GetKey(KeyCode.RightArrow)) {
+                    if (AppConfig.Instance.HasHistoryGameData()) {
+                        confirmPanel.SetActive(true);
+                        EventSystem.current.SetSelectedGameObject(confirmSettingCellCountBtn.gameObject);
+                        nextCellCountChange = +1;
+                    }else{
+                        OnMaxCellSettingSliderValueChanged(+1);
+                    }
                 }
             }
-            if (Input.GetKey(KeyCode.RightArrow)) {
-                if (AppConfig.Instance.HasHistoryGameData()) {
-                    confirmPanel.SetActive(true);
-                    EventSystem.current.SetSelectedGameObject(confirmSettingCellCountBtn.gameObject);
-                    nextCellCountChange = +1;
-                }else{
-                    OnMaxCellSettingSliderValueChanged(+1);
-                }
-            }
+            
         }
 
         if (Input.GetButtonDown("Horizontal") && EventSystem.current.currentSelectedGameObject == highAndLowTimerBtn.gameObject) {
@@ -202,6 +222,12 @@ public class GameSettingsView2 : Widget
         var intValue = Mathf.FloorToInt(value);
         AppConfig.Instance.ThemeSelectedIdx = intValue;
         backgroundToggles[AppConfig.Instance.ThemeSelectedIdx].isOn = true;
+    }
+    
+    private void OnCommendationSliderChanged(float value) {
+        var intValue = Mathf.FloorToInt(value);
+        AppConfig.Instance.CommendationVideoOption = intValue;
+        commendationToggles[AppConfig.Instance.CommendationVideoOption].isOn = true;
     }
 
     private void OnBgmSliderChanged(float value) {

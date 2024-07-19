@@ -82,6 +82,21 @@ public class AppConfig
             return _themeSelectedIdx;
         }
     }
+    
+    private int _commendationVideoOption = 0;
+    public int CommendationVideoOption {
+        set
+        {
+            _commendationVideoOption = value;
+            ThemeResManager.Instance.SetThemeType((EThemeTypes)value);
+            PreferencesStorage.SaveInt("settings.video.commendation", value);
+        }
+        get
+        {
+            _commendationVideoOption = PreferencesStorage.ReadInt("settings.video.commendation", 5);
+            return _commendationVideoOption;
+        }
+    }
 
     private int _bgmSelectedIdx = 0;
     public int BgmSelectedIdx {
