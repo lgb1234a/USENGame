@@ -60,19 +60,18 @@ public class GameSettingsView2 : Widget
     {
         gameSelector = transform.parent.Find("Home").GetComponent<GameSelector>();
         
-        bgmSegmentedButton.onValueChanged.AddListener(OnBgmSliderChanged);
-        bgmSegmentedButton.value = AppConfig.Instance.BgmSelectedIdx;
-        
-        bgmToggleGroup.NotifyToggleOn(bgmToggles[AppConfig.Instance.BgmSelectedIdx]);
-        for (int i = 0; i < bgmToggles.Count; i++)
-        {
-            var index = i;
-            bgmToggles[i].onValueChanged.AddListener(isOn => {
-                if (isOn) {
-                    AppConfig.Instance.BgmSelectedIdx = index;
-                }
-            });
-        }
+        // bgmSegmentedButton.onValueChanged.AddListener(OnBgmSliderChanged);
+        // bgmSegmentedButton.value = AppConfig.Instance.BgmSelectedIdx;
+        // bgmToggleGroup.NotifyToggleOn(bgmToggles[AppConfig.Instance.BgmSelectedIdx]);
+        // for (int i = 0; i < bgmToggles.Count; i++)
+        // {
+        //     var index = i;
+        //     bgmToggles[i].onValueChanged.AddListener(isOn => {
+        //         if (isOn) {
+        //             AppConfig.Instance.BgmSelectedIdx = index;
+        //         }
+        //     });
+        // }
         
         bgmVolumeSlider.onValueChanged.AddListener(OnBgmVolumeSliderValueChanged);
         bgmVolumeSlider.value = AppConfig.Instance.BGMVolume;
@@ -82,17 +81,17 @@ public class GameSettingsView2 : Widget
         effectVolumeSlider.value = AppConfig.Instance.EffectVolume;
         isPresettingEffectVolume = false;
         
-        backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
-        backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
-        for(int i = 0; i < backgroundToggles.Count; i++)
-        {
-            var index = i;
-            backgroundToggles[i].onValueChanged.AddListener(isOn => {
-                if (isOn) {
-                    AppConfig.Instance.ThemeSelectedIdx = index;
-                }
-            });
-        }
+        // backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
+        // backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
+        // for(int i = 0; i < backgroundToggles.Count; i++)
+        // {
+        //     var index = i;
+        //     backgroundToggles[i].onValueChanged.AddListener(isOn => {
+        //         if (isOn) {
+        //             AppConfig.Instance.ThemeSelectedIdx = index;
+        //         }
+        //     });
+        // }
         
         commendationToggleSlider.onValueChanged.AddListener(OnCommendationSliderChanged);
         commendationToggleSlider.value = AppConfig.Instance.CommendationVideoOption;
@@ -106,10 +105,10 @@ public class GameSettingsView2 : Widget
         //     });
         // }
         
-        maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
-        confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
-        cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
-        highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
+        // maxCellSettingText.text = AppConfig.Instance.MaxCellCount.ToString();
+        // confirmSettingCellCountBtn.onClick.AddListener(OnClickConfirmSettingCellCountBtn);
+        // cancelSettingCellCountBtn.onClick.AddListener(OnClickCancelSettingCellCountBtn);
+        // highAndLowTimerText.text = AppConfig.Instance.CurrentHighAndLowTimer.ToString();
         
         appInfoButton.onClick.AddListener(OnClickAppInfoButton);
         backButton.onClick.AddListener(OnClickBackButton);
@@ -193,8 +192,10 @@ public class GameSettingsView2 : Widget
     }
 
     void OnEnable() {
+        Debug.Log("[GameSettingsView2] OnEnable");
         if (isInited) {
-            EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
+            EventSystem.current.SetSelectedGameObject(bgmVolumeSlider.gameObject);
+            bgmVolumeSlider.GetComponent<KeyBoardSelector>().SetSelected();
         }
     }
     
@@ -210,7 +211,7 @@ public class GameSettingsView2 : Widget
 
     private void OnSelectedObjectChanged(GameObject oldObject, GameObject newObject)
     {
-        SnapTo(newObject.GetComponent<RectTransform>());
+        // SnapTo(newObject.GetComponent<RectTransform>());
     }
 
     public void Hide() {

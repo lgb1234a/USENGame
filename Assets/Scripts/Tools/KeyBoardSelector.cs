@@ -44,7 +44,7 @@ public class KeyBoardSelector : MonoBehaviour
 
     void OnSelected(BaseEventData data)
     {
-        if (m_selectedGO != null)
+         if (m_selectedGO != null)
             m_selectedGO.gameObject.SetActive(true);
 
         if (m_text != null)

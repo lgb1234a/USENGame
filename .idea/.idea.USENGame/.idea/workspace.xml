@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/1-栄光をたたえて.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/1-栄光をたたえて.mp4.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/2-見よ、勇者は帰る.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/2-見よ、勇者は帰る.mp4.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/3-威風堂々.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/3-威風堂々.mp4.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/4-ハレルヤ.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/4-ハレルヤ.mp4.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/AppInfoView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/AppInfoView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/GameSettingsPanel2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameSettingsPanel2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/KeyBoardSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/KeyBoardSelector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +299,7 @@
       <workItem from="1720531563774" duration="11974000" />
       <workItem from="1720629035782" duration="855000" />
       <workItem from="1720629908939" duration="48674000" />
-      <workItem from="1720820225381" duration="113484000" />
+      <workItem from="1720820225381" duration="115919000" />
     </task>
     <servers />
   </component>
@@ -353,19 +338,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs</url>
-          <line>196</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\GameSettingsView2.cs" initialLine="197" containingFunctionPresentation="Method 'OnEnable'">
-            <startOffsets>
-              <option value="7342" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7412" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

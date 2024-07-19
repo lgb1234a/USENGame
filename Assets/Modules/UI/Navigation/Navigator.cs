@@ -16,7 +16,7 @@ namespace Luna.UI.Navigation
         public Canvas canvas; // Reference to the Canvas
         public GameObject rootWidget; // The root widget of the game
         
-        public bool escToPop = true; // Pop the top widget when the escape key is pressed
+        public bool escToPop = false; // Pop the top widget when the escape key is pressed
         
         private readonly Stack<GameObject> _widgetStack = new();
         // private readonly Stack<GameObject> _widgetHistory = new();
