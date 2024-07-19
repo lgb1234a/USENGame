@@ -12,6 +12,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.UI;
 using USEN.Games.Common;
+using USEN.Games.Common.Commend;
 
 namespace USEN.Games.Roulette
 {
@@ -95,17 +96,18 @@ namespace USEN.Games.Roulette
 
         private void OnBlueButtonClicked()
         {
-            
+            Navigator.Pop();
         }
 
         private void OnRedButtonClicked()
         {
-            
+            Navigator.Pop();
+            Navigator.Pop();
         }
         
         private void OnYellowButtonClicked()
         {
-            
+            Navigator.Push<CommendView>();
         }
         
         private async Task SpinWheel()
@@ -122,6 +124,10 @@ namespace USEN.Games.Roulette
             // Dotween move & scale
             rouletteWheel.transform.parent.DOLocalMoveX(960, 1f).SetEase(Ease.InOutSine);
             rouletteWheel.transform.parent.DOScale(3f, 1f).SetEase(Ease.InOutSine);
+            
+            // Show buttons
+            await UniTask.Delay(2 * 1000);
+            bottomPanel.yellowButton.gameObject.SetActive(true);
         }
     }
 }

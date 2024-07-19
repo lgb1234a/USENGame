@@ -169,6 +169,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -179,6 +180,7 @@
      <Folder Include="Assets\Fonts" />
      <Folder Include="Assets\Games\Roulette\Data" />
      <Folder Include="Assets\Resources\Video" />
+     <Folder Include="Assets\Games\Common\Commend" />
      <Folder Include="Assets\Resources\DefaultTheme" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Textures" />
      <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
@@ -242,6 +244,7 @@
      <Folder Include="Assets\Samples\Timeline" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Textures" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Fonts" />
+     <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish\Sprites" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_low" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Animation" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts" />
@@ -334,12 +337,14 @@
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_high" />
      <Folder Include="Assets\Resources\Super Ellipses\Solid" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Rotate\00_BINGO.atlas.txt" />
+     <Folder Include="Assets\Games\Common\Commend\Videos" />
      <Folder Include="Assets\Samples\Timeline\1.6.4" />
      <None Include="Assets\Resources\Material\default_font.shader" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders" />
      <Folder Include="Assets\Games" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow" />
+     <Folder Include="Assets\Samples\Finish 1" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Prefabs" />
      <Folder Include="Assets\Samples" />
