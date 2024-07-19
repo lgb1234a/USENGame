@@ -31,6 +31,14 @@ namespace USEN.Games.Common.Commend
             videoPlayer.prepareCompleted += OnVideoPrepared;
             videoPlayer.loopPointReached += OnVideoEnd;
         }
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) ||
+                Input.GetButtonDown("Cancel")) {
+                Navigator.Pop();
+            }
+        }
 
         private void OnVideoPrepared(VideoPlayer source)
         {

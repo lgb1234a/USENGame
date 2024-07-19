@@ -93,7 +93,7 @@ public class AppConfig
         }
         get
         {
-            _commendationVideoOption = PreferencesStorage.ReadInt("settings.video.commendation", 5);
+            _commendationVideoOption = PreferencesStorage.ReadInt("settings.video.commendation", 0);
             return _commendationVideoOption;
         }
     }

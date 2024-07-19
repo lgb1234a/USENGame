@@ -112,6 +112,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteCategoryListCell.cs" />
      <Compile Include="Assets\Scripts\TerminalView.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteCategory.cs" />
+     <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentEditView.cs" />
      <Compile Include="Assets\Resources\HighAndLow\HightAndLowGame\Result\ResultPlayerDirector.cs" />
      <Compile Include="Assets\Scripts\Tools\ScrollContentTacker.cs" />
@@ -169,7 +170,6 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />

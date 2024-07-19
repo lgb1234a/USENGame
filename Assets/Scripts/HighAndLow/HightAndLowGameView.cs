@@ -9,7 +9,9 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using HightAndLowGame;
+using Luna.UI.Navigation;
 using UnityEngine.Playables;
+using USEN.Games.Common.Commend;
 using Random = UnityEngine.Random;
 
 public class HighAndLowGameView : AbstractView, IViewOperater
@@ -59,6 +61,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     {
         m_isGameFinished = false;
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
+        
+        Navigator.Create(m_mainViewGameObject);
 
         m_pokerStartTransform = m_mainViewGameObject.transform.Find("PokerStart");
         m_pokerShowTransform1 = m_mainViewGameObject.transform.Find("PokerShow1");
@@ -260,7 +264,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     void OnClickedWinnerBtn() {
         AudioManager.Instance.PlayKeyStartEffect();
-        _finishDirector.Play();
+        Navigator.Push<CommendView>();
     }
 
     void OnClickedConfirmBtn() {

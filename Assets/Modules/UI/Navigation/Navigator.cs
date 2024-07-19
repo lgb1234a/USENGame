@@ -1,6 +1,7 @@
 ﻿// Created by LunarEclipse on 2024-6-18 22:17.
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -13,6 +14,9 @@ namespace Luna.UI.Navigation
         // Singleton instance for easy access
         public static Navigator Instance;
         
+        private static readonly Stack<Navigator> _navigatorStack = new();
+        
+        
         public Canvas canvas; // Reference to the Canvas
         public GameObject rootWidget; // The root widget of the game
         
@@ -24,9 +28,10 @@ namespace Luna.UI.Navigation
         
         private bool isDontDestroyOnLoad = false;
         
+        
         // Load the Navigator instance on startup if it doesn't exist
         [RuntimeInitializeOnLoadMethod]
-        private static void Initialize()
+        private static void InitializeRootNavigator()
         {
             if (Instance == null)
             {
@@ -37,9 +42,22 @@ namespace Luna.UI.Navigation
             }
         }
 
+        public static Navigator Create(GameObject rootWidget)
+        {
+            GameObject navigator = new GameObject("UI Navigator");
+            Navigator instance = navigator.AddComponent<Navigator>();
+            instance.rootWidget = rootWidget;
+            return instance;
+        }
+
         private void Awake()
         {
+            foreach (var navigator in _navigatorStack)
+                navigator.gameObject.SetActive(false);
+            
             Instance = this;
+            _navigatorStack.Push(this);
+            
             // if (Instance == null)
             //     Instance = this;
             // else Destroy(gameObject); 
@@ -50,7 +68,7 @@ namespace Luna.UI.Navigation
             if (canvas == null)
             {
                 // Create a new canvas if none is found
-                if (!(canvas = FindObjectOfType<Canvas>()))
+                if (!(canvas = FindObjectOfType<Canvas>().rootCanvas))
                 {
                     GameObject canvasObject = new GameObject("Canvas");
                     canvas = canvasObject.AddComponent<Canvas>();
@@ -98,7 +116,19 @@ namespace Luna.UI.Navigation
                 Pop();
             }
         }
-        
+
+        private void OnDestroy()
+        {
+            _navigatorStack.Pop();
+            if (_navigatorStack.Count > 0)
+            {
+                var navigator = _navigatorStack.Peek();
+                navigator.gameObject.SetActive(true);
+                Instance = navigator;
+            }
+                
+        }
+
         public static void Push(GameObject widgetPrefab)
         {
             Instance._Push(widgetPrefab);
