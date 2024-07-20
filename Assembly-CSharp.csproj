@@ -53,6 +53,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSettingsView.cs" />
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\ToastView.cs" />
+     <Compile Include="Assets\Games\High&amp;Low\UIs\HighLowSettingsView.cs" />
      <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\PopScaler.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteEditList.cs" />
@@ -220,6 +221,7 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\TrailEffect" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Rotate" />
      <Folder Include="Assets\Games\Roulette\UIs" />
+     <Folder Include="Assets\Games\High&amp;Low" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Samples\Spine\Queen" />
      <Folder Include="Assets\Resources\Textures\game_entries" />
@@ -347,6 +349,7 @@
      <Folder Include="Assets\Samples\Finish 1" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Prefabs" />
+     <Folder Include="Assets\Games\High&amp;Low\UIs" />
      <Folder Include="Assets\Samples" />
      <Folder Include="Assets\Samples\Blur~" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares" />

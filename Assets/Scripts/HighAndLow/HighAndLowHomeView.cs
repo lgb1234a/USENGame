@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Spine.Unity;
 using System.Collections.Generic;
+using Luna.UI.Navigation;
+using USEN.Games.HighLow;
 
 public class HighAndLowHomeView : AbstractView, IViewOperater
 {
@@ -19,6 +21,8 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
     public void Build()
     {
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
+        
+        Navigator.Create(m_mainViewGameObject);
 
         m_startBtn = m_mainViewGameObject.transform.Find("StartBtn").GetComponent<Button>();
         m_startBtn.onClick.AddListener(OnClickStartButton);
@@ -62,8 +66,10 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
 
     public void Update()
     {
-        if (Input.GetButtonDown("Cancel")) {
-            USENSceneManager.Instance.LoadScene("GameEntries");
+        if (Input.GetButtonDown("Cancel")) 
+        {
+            if (m_mainViewGameObject.activeInHierarchy)
+                USENSceneManager.Instance.LoadScene("GameEntries");
         }
     }
 
@@ -81,13 +87,10 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
         ViewManager.Instance.Push(m_gameView);
     }
 
-    public void OnClickSettingsButton()
+    public async void OnClickSettingsButton()
     {
-        if (m_settingsView == null)
-        {
-            m_settingsView = new HighAndLowSettingsView();
-        }
-        ViewManager.Instance.Push(m_settingsView);
+        await Navigator.Push<HighLowSettingsView>();
+        EventSystem.current.SetSelectedGameObject(m_settingsBtn.gameObject);
     }
 
     void ShowResetAlertView() {
