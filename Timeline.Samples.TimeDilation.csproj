@@ -728,9 +728,6 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
@@ -739,6 +736,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.csproj">
       <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
       <Name>Timeline.Samples.Utilities</Name>

@@ -816,9 +816,6 @@
      <Reference Include="LeTai.TrueShadow.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
@@ -830,9 +827,6 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unilities">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
      <Reference Include="spine-unity-examples">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
@@ -860,9 +854,6 @@
      </Reference>
      <Reference Include="UniTask.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Localization.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
@@ -902,9 +893,6 @@
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
@@ -1005,6 +993,10 @@
       <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{dc168978-5cb3-44e9-b77d-80343d1a8604}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.TimeDilation.csproj">
       <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
       <Name>Timeline.Samples.TimeDilation</Name>
@@ -1016,6 +1008,10 @@
     <ProjectReference Include="UnityUIExtensions.examples.csproj">
       <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
       <Name>UnityUIExtensions.examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
+      <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
       <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
@@ -1040,6 +1036,14 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.Editor.csproj">
+      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
+      <Name>Luna.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.csproj">
+      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
+      <Name>Luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

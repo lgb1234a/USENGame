@@ -28,12 +28,12 @@ namespace USEN.Games.Roulette
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
-                Input.GetButtonDown("Cancel")) {
+                Input.GetButtonDown("Cancel")) 
                 Navigator.Pop();
-            }
         }
         
-        void OnClickAppInfoButton() {
+        void OnClickAppInfoButton() 
+        {
             Navigator.Push<AppInfoView>();
         }
     }

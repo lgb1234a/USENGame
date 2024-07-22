@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cc.lunareclipse.unilities": "https://github.com/949886/Unilities.git",
+    "cc.lunareclipse.lunarfamework": "files:./LunarFramework",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.esotericsoftware.spine.spine-csharp": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-csharp/src#4.1",
     "com.esotericsoftware.spine.spine-unity": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Assets/Spine#4.1",

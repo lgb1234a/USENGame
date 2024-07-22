@@ -1,14 +1,14 @@
 {
   "dependencies": {
-    "cc.lunareclipse.unilities": {
-      "version": "https://github.com/949886/Unilities.git",
+    "cc.lunareclipse.lunarfamework": {
+      "version": "file:LunarFramework",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.inputsystem": "1.7.0",
+        "com.unity.textmeshpro": "3.0.6",
         "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=/src/UniTask/Assets/Plugins/UniTask"
-      },
-      "hash": "25128a358e781601b82f5a73043f92f3ba1e1446"
+      }
     },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",

@@ -42,8 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
-     <Compile Include="Assets\Modules\UI\Base\StatefulWidget.cs" />
-     <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\UIWorldSpace.cs" />
      <Compile Include="Assets\Scripts\FaceToCamera.cs" />
      <Compile Include="Assets\Modules\Audio\AudiosTest.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameView.cs" />
@@ -54,7 +52,6 @@
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\ToastView.cs" />
      <Compile Include="Assets\Games\High&amp;Low\UIs\HighLowSettingsView.cs" />
-     <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\PopScaler.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteEditList.cs" />
      <Compile Include="Assets\Samples\GaussianBlur\BlurVolumeComponent.cs" />
@@ -62,26 +59,19 @@
      <Compile Include="Assets\Scripts\Roulette\RouletteOriginView.cs" />
      <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioResManager.cs" />
-     <Compile Include="Assets\Modules\UI\Base\Widget.cs" />
-     <Compile Include="Assets\Modules\UI\Base\Widget+Database.cs" />
      <Compile Include="Assets\Scripts\Tools\Loading.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionListCell.cs" />
-     <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\UICounter.cs" />
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\GameEntry.cs" />
      <Compile Include="Assets\Scripts\Bingo\CellHandler.cs" />
      <Compile Include="Assets\Scripts\Bingo\AwardNumObj.cs" />
-     <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\ExtraMath.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableAsset.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteData.cs" />
      <Compile Include="Assets\Samples\Addressables\1.19.19\Prefab Spawner\PrefabSpawnerSample.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
-     <Compile Include="Assets\Modules\UI\Misc\ColorBlockExtension.cs" />
      <Compile Include="Assets\Modules\Audio\SFXManager.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowRouletteView.cs" />
-     <Compile Include="Assets\Modules\UI\Navigation\Navigator.cs" />
      <Compile Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHistoryView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameView.cs" />
@@ -90,22 +80,16 @@
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
      <Compile Include="Assets\Games\Common\UsenRemoteControlHandler.cs" />
-     <Compile Include="Assets\Modules\UI\Misc\ColorExtensions.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
      <Compile Include="Assets\Samples\Addressables\1.19.19\Addressables Utility\AddressablesUtility.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoTrack.cs" />
-     <Compile Include="Assets\Modules\UI\Misc\CanvasExtensions.cs" />
-     <Compile Include="Assets\Modules\UI\Base\State.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
-     <Compile Include="Assets\Modules\UI\Misc\EnumerableExtensions.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameQuitView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\TestPlayerDirector.cs" />
      <Compile Include="Assets\Scripts\ViewManager.cs" />
      <Compile Include="Assets\Scripts\Tools\PreferencesStorage.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoGameView.cs" />
      <Compile Include="Assets\Modules\Audio\AudioPostprocessor.cs" />
-     <Compile Include="Assets\Modules\UI\Test\StatefulWidgetChild.cs" />
      <Compile Include="Assets\Games\Common\AppInfoView.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteDataset.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteChooseView.cs" />
@@ -133,38 +117,28 @@
      <Compile Include="Assets\Scripts\ResManager\ResourceLoader.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteHomeView.cs" />
-     <Compile Include="Assets\Modules\UI\Progress Indicator\Scripts\UIProgressIndicator.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoAboutView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentListCell.cs" />
      <Compile Include="Assets\Scripts\Tools\KeyBoardSelector.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoSchedulerPlayableBehaviour.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteCategoryList.cs" />
      <Compile Include="Assets\Scripts\SplashManager.cs" />
      <Compile Include="Assets\Scripts\Tools\RootViewType.cs" />
      <Compile Include="Assets\Scripts\AbstractView.cs" />
-     <Compile Include="Assets\Modules\UI\Base\Widgets.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\Poker2D.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteDAO.cs" />
      <Compile Include="Assets\Scripts\Tools\AppConfig.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionList.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowTerminalView.cs" />
-     <Compile Include="Assets\Modules\UI\Navigation\Route.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionListCell.cs" />
-     <Compile Include="Assets\Modules\UI\Widgets\ListView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
-     <Compile Include="Assets\Modules\Video\Scripts\Timeline\Video\VideoPlayableBehaviour.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\RenderTextureInitializer.cs" />
      <Compile Include="Assets\Games\Common\BottomPanel.cs" />
-     <Compile Include="Assets\Modules\UI\Test\WidgetChild.cs" />
      <Compile Include="Assets\Scripts\ResManager\EThemeTypes.cs" />
      <Compile Include="Assets\Scripts\GameSelector.cs" />
-     <Compile Include="Assets\Modules\UI\Base\StatefulWidgetPrefabProcessor.cs" />
      <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
-     <Compile Include="Assets\Modules\UI\Base\Widget+Event.cs" />
-     <Compile Include="Assets\Modules\UI\Base\FocusManager.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionView.cs" />
      <Compile Include="Assets\Modules\Audio\Audios.cs" />
@@ -187,7 +161,6 @@
      <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Home\00_BINGO.atlas.txt" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Models" />
-     <Folder Include="Assets\Modules\UI\Misc" />
      <Folder Include="Assets\Samples\Assets" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10" />
      <Folder Include="Assets\Scripts\Tools" />
@@ -195,7 +168,6 @@
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\smoke" />
      <Folder Include="Assets\Samples\GaussianBlur" />
      <Folder Include="Assets\Scripts\Bingo" />
-     <Folder Include="Assets\Modules\Video\Scripts\Timeline\Video" />
      <Folder Include="Assets\Samples\Addressables\1.19.19" />
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Animation" />
@@ -225,7 +197,6 @@
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Samples\Spine\Queen" />
      <Folder Include="Assets\Resources\Textures\game_entries" />
-     <Folder Include="Assets\Modules\UI\Navigation" />
      <Folder Include="Assets\Resources\Material" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Settings" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets" />
@@ -236,12 +207,10 @@
      <Folder Include="Assets\Resources\Super Ellipses\Shadow" />
      <Folder Include="Assets\Modules\Video" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Bingo" />
-     <Folder Include="Assets\Modules\UI\Progress Indicator" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\VolumeProfiles" />
      <Folder Include="Assets\Samples\Addressables\1.19.19\Prefab Spawner" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\LensFlarePresets" />
      <Folder Include="Assets\Games\Common" />
-     <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures" />
      <Folder Include="Assets\Samples\Timeline" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Textures" />
@@ -260,7 +229,6 @@
      <Folder Include="Assets\Samples\Spine" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\MixedFOV" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\GlitchEffect" />
-     <Folder Include="Assets\Modules\UI\Widgets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowHome" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\PaintSplat\PaintSplat" />
      <Folder Include="Assets\Settings\URP" />
@@ -268,8 +236,6 @@
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Animation" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Home" />
      <Folder Include="Assets\Scenes" />
-     <Folder Include="Assets\Modules\UI\Sprites\1x1" />
-     <Folder Include="Assets\Modules\UI\Sprites" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow\Animation" />
      <None Include="Assets\Resources\Material\default.shader" />
      <Folder Include="Assets\Samples\Assets\Demo" />
@@ -280,7 +246,6 @@
      <Folder Include="Assets\Modules\Video\Timeline" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Bingo" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
-     <Folder Include="Assets\Modules\UI\Progress Indicator\Scripts" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Materials" />
      <Folder Include="Assets\Samples\Universal RP" />
      <Folder Include="Assets\Games\Roulette\Resources\トークテーマ" />
@@ -315,19 +280,16 @@
      <Folder Include="Assets\Resources\HighAndLow\Particles" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />
-     <Folder Include="Assets\Modules\UI\Base" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking" />
      <Folder Include="Assets\Samples\Addressables" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\Animation" />
      <Folder Include="Assets\Games\Roulette\Resources\バツゲーム" />
-     <Folder Include="Assets\Modules\UI\Progress Indicator\Sprites" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow\BlobShadow" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\MixedFOV\MixedFOV" />
      <Folder Include="Assets\Resources\ChristmasThemes\Audio" />
      <Folder Include="Assets\Games\Roulette\Sprites" />
-     <Folder Include="Assets\Modules\UI\Test" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Materials" />
@@ -355,8 +317,8 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Materials" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowRoulette" />
-     <Folder Include="Assets\Modules\Video\Scripts\Timeline" />
      <Folder Include="Assets\Scripts\ResManager" />
+     <Folder Include="Assets\Games\Roulette\Tests" />
      <None Include="Assets\Games\Roulette\UIs\Roulette Unlit.shader" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts" />
      <Reference Include="UnityEngine">
@@ -1016,9 +978,6 @@
      <Reference Include="LeTai.TrueShadow.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\LeTai.TrueShadow.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unilities.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
@@ -1030,9 +989,6 @@
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unilities">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unilities.dll</HintPath>
      </Reference>
      <Reference Include="spine-unity-examples">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity-examples.dll</HintPath>
@@ -1060,9 +1016,6 @@
      </Reference>
      <Reference Include="UniTask.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Localization.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
@@ -1102,9 +1055,6 @@
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
@@ -1209,6 +1159,10 @@
       <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{dc168978-5cb3-44e9-b77d-80343d1a8604}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.TimeDilation.csproj">
       <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
       <Name>Timeline.Samples.TimeDilation</Name>
@@ -1220,6 +1174,10 @@
     <ProjectReference Include="UnityUIExtensions.examples.csproj">
       <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
       <Name>UnityUIExtensions.examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
+      <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
       <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
@@ -1244,6 +1202,14 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.Editor.csproj">
+      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
+      <Name>Luna.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.csproj">
+      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
+      <Name>Luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
