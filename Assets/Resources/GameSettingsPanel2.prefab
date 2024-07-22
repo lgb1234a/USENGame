@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1285006114122729531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -455,12 +455,12 @@ RectTransform:
   - {fileID: 7131463615859642257}
   - {fileID: 6848290182499337305}
   m_Father: {fileID: 438847917196605078}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -345}
-  m_SizeDelta: {x: 1705, y: 140}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7806323390968415467
 CanvasRenderer:
@@ -1359,9 +1359,9 @@ RectTransform:
   - {fileID: 6034092639424951064}
   - {fileID: 6215075258542077820}
   - {fileID: 3016393202990139513}
+  - {fileID: 1285006114122729531}
   - {fileID: 2544866888194769227}
   - {fileID: 1954794901584875277}
-  - {fileID: 1285006114122729531}
   - {fileID: 2310791235945640497}
   - {fileID: 6080997529003296915}
   - {fileID: 6180172990401610207}
@@ -3817,7 +3817,7 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4491,7 +4491,7 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5689,7 +5689,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3405442730073798731}
+    m_SelectOnUp: {fileID: 7211787093732685911}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -7084,7 +7084,7 @@ RectTransform:
   m_Children:
   - {fileID: 438847918735272374}
   m_Father: {fileID: 438847917196605078}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7380,7 +7380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1954794901584875277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7398,12 +7398,12 @@ RectTransform:
   - {fileID: 9181872000123340135}
   - {fileID: 438847919225917304}
   m_Father: {fileID: 438847917196605078}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -445}
-  m_SizeDelta: {x: 1705, y: 140}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 140}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &6283074889085475713
 CanvasRenderer:
@@ -7671,8 +7671,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 7211787093732685911}
-    m_SelectOnDown: {fileID: 4717658479267091684}
+    m_SelectOnUp: {fileID: 3405442730073798731}
+    m_SelectOnDown: {fileID: 7211787093732685911}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
@@ -9397,8 +9397,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3405442730073798731}
-    m_SelectOnDown: {fileID: 2779893535441538302}
+    m_SelectOnUp: {fileID: 2779893535441538302}
+    m_SelectOnDown: {fileID: 8937257626683506717}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
@@ -11416,10 +11416,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 2
+    m_Mode: 4
     m_WrapAround: 1
     m_SelectOnUp: {fileID: 926898436800156304}
-    m_SelectOnDown: {fileID: 7211787093732685911}
+    m_SelectOnDown: {fileID: 2779893535441538302}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1

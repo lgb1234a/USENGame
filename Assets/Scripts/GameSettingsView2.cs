@@ -81,17 +81,17 @@ public class GameSettingsView2 : Widget
         effectVolumeSlider.value = AppConfig.Instance.EffectVolume;
         isPresettingEffectVolume = false;
         
-        // backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
-        // backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
-        // for(int i = 0; i < backgroundToggles.Count; i++)
-        // {
-        //     var index = i;
-        //     backgroundToggles[i].onValueChanged.AddListener(isOn => {
-        //         if (isOn) {
-        //             AppConfig.Instance.ThemeSelectedIdx = index;
-        //         }
-        //     });
-        // }
+        backgroundToggleSlider.onValueChanged.AddListener(OnBackgroundSliderChanged);
+        backgroundToggleSlider.value = AppConfig.Instance.ThemeSelectedIdx;
+        for(int i = 0; i < backgroundToggles.Count; i++)
+        {
+            var index = i;
+            backgroundToggles[i].onValueChanged.AddListener(isOn => {
+                if (isOn) {
+                    AppConfig.Instance.ThemeSelectedIdx = index;
+                }
+            });
+        }
         
         commendationToggleSlider.onValueChanged.AddListener(OnCommendationSliderChanged);
         commendationToggleSlider.value = AppConfig.Instance.CommendationVideoOption;
