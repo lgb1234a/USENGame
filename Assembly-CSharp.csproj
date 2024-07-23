@@ -1147,6 +1147,14 @@
       <Project>{600a43c6-4927-0d2b-ee9f-564571fdfbbe}</Project>
       <Name>Timeline.Samples.Tween.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Luna.Editor.csproj">
+      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
+      <Name>Luna.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.csproj">
+      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
+      <Name>Luna</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
@@ -1202,14 +1210,6 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Luna.Editor.csproj">
-      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
-      <Name>Luna.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Luna.csproj">
-      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
-      <Name>Luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

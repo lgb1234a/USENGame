@@ -3,8 +3,11 @@
 using System;
 using Luna.UI;
 using Luna.UI.Navigation;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using UnityEngine.UI;
 using USEN.Games.Common;
 
@@ -14,6 +17,9 @@ namespace USEN.Games.Roulette
     {
         public Button appInfoButton;
         public BottomPanel bottomPanel;
+        
+        public TextMeshProUGUI keyText;
+        public TextMeshProUGUI inputText;
 
         private void Start()
         {
@@ -22,19 +28,40 @@ namespace USEN.Games.Roulette
 
         private void OnEnable()
         {
+            base.OnKey += OnKey;
+            base.OnInput += OnInput;
             EventSystem.current.SetSelectedGameObject(appInfoButton.gameObject);
         }
-        
+
+        private void OnDisable()
+        {
+            base.OnKey -= OnKey;
+            base.OnInput -= OnInput;
+        }
+
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) ||
-                Input.GetButtonDown("Cancel")) 
+            if (Input.GetKeyDown(KeyCode.Alpha1)) 
                 Navigator.Pop();
         }
         
         void OnClickAppInfoButton() 
         {
-            Navigator.Push<AppInfoView>();
+            
+        }
+        
+        private KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
+        {
+            Debug.Log($"[KeyTest] Key pressed: {key.keyCode}(0x{(int)key.keyCode:X8}) with event: {keyEvent}");
+            keyText.text = $"Key: {key.keyCode} (0x{(int)key.keyCode:X8}) with event: {keyEvent}";
+            return KeyEventResult.Unhandled;
+        }
+        
+        private void OnInput(InputControl input, InputEvent @event)
+        {
+            Debug.Log($"[InputTest] Input: {input}({input.GetType()}) with event: {@event}");
+            inputText.text = $"Input: {input} with event: {@event}";
+            // text.text = $"Key: {input.keyCode} ({(int)input}) with event: {@event}";
         }
     }
 }
