@@ -145,6 +145,18 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Games\Yamanote\Data\YamanoteData.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteHomeView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteSettingsView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentListCell.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentList.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryListCell.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentGameView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteGameView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryList.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryView.cs" />
+     <Compile Include="Assets\Games\Yamanote\Data\YamanoteCategory.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -164,6 +176,7 @@
      <Folder Include="Assets\Samples\Assets" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10" />
      <Folder Include="Assets\Scripts\Tools" />
+     <Folder Include="Assets\Games\Yamanote\Data" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion\AmbientOcclusion" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\smoke" />
      <Folder Include="Assets\Samples\GaussianBlur" />
@@ -190,6 +203,7 @@
      <Folder Include="Assets\Resources\Audio" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Prefabs" />
+     <Folder Include="Assets\Games\Yamanote\Sprites" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\TrailEffect" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Rotate" />
      <Folder Include="Assets\Games\Roulette\UIs" />
@@ -206,6 +220,7 @@
      <Folder Include="Assets\Resources\Super Ellipses" />
      <Folder Include="Assets\Resources\Super Ellipses\Shadow" />
      <Folder Include="Assets\Modules\Video" />
+     <Folder Include="Assets\Games\Yamanote\UIs" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Bingo" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\VolumeProfiles" />
      <Folder Include="Assets\Samples\Addressables\1.19.19\Prefab Spawner" />
@@ -314,6 +329,7 @@
      <Folder Include="Assets\Games\High&amp;Low\UIs" />
      <Folder Include="Assets\Samples" />
      <Folder Include="Assets\Samples\Blur~" />
+     <Folder Include="Assets\Games\Yamanote" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Materials" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowRoulette" />
@@ -1147,6 +1163,14 @@
       <Project>{600a43c6-4927-0d2b-ee9f-564571fdfbbe}</Project>
       <Name>Timeline.Samples.Tween.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Luna.Editor.csproj">
+      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
+      <Name>Luna.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Luna.csproj">
+      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
+      <Name>Luna</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
@@ -1202,14 +1226,6 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Luna.Editor.csproj">
-      <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
-      <Name>Luna.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Luna.csproj">
-      <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
-      <Name>Luna</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

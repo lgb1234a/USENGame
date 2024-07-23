@@ -5,121 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Game.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Game.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Test.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette Test.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/RouletteStart.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/FocusManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/FocusManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/State.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidget.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/StatefulWidgetPrefabProcessor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Database.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Database.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Event.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget+Event.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widget.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Base/Widgets.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/CanvasExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/CanvasExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/ColorBlockExtension.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/ColorBlockExtension.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/ColorExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/ColorExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/EnumerableExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Misc/EnumerableExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Navigator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Route.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Navigation/Route.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Circular Progress Indicator UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Circular Progress Indicator UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/ExtraMath.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/ExtraMath.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/PopScaler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/PopScaler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UICounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UICounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIProgressIndicator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIProgressIndicator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIWorldSpace.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Scripts/UIWorldSpace.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/CircleFull@256px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/CircleFull@256px.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/SquareFull@256px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Sprites/SquareFull@256px.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Square Indicator UI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Progress Indicator/Square Indicator UI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Sprites/1x1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Sprites/1x1/1x1-transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Sprites/1x1/1x1-transparent.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetChild.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetTest.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/StatefulWidgetTest.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Test/WidgetChild.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Widgets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Widgets/ListView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/UI/Widgets/ListView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/Editor/VideoAssetClipEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/Editor/VideoAssetClipEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoPlayableAsset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoPlayableAsset.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoPlayableBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoPlayableBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoSchedulerPlayableBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoSchedulerPlayableBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoTrack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Video/Scripts/Timeline/Video/VideoTrack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Widgets.g.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Annotation.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Annotation.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Annotation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Annotation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Text.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Text.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Text.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Text.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.TimeDilation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.TimeDilation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Tween.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Tween.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timeline.Samples.Tween.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Timeline.Samples.Tween.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +21,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/73ae68d62ab841b9b1aa90cf5baf23ad5b200/f4/ed9e58de/0200004Cpdb84.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b7ddbc666124f97acc357fa84bab350185c00/69/63f61e5e/Key.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fed12eace764578a01a50262fe1edc71f800/17/9c5b43e2/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/2c/9745391e/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/33/e9515e71/Ease.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/48/a5e6270c/Tween.cs" root0="SKIP_HIGHLIGHTING" />
@@ -163,10 +52,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/c6/557c8a44/IObservable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/ea/f756bebf/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8d67bbf3b14542519c4d452573e0d67924600/ab/55fb5729/ITimelineClipAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/941a4719b50f41b29409612f3478c8db1a000/11/ffa1b8f4/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b89159fb2954d1cad3afaf5ff7e6f7d6c000/f8/e4b282e7/TextAlignmentOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a2ff8349e6ff4da88cd7ad7d1dd412194000/1c/f11e0374/PlayableDirector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c332d0297b01448983967bca183d6bbf6e00/29/f9f6f546/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3c66fd2767c44a085aa0b03bbe98b2c7400/f6/5b276bf7/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/08/4fd602cd/Ray.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/0b/3881f74a/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/1a/e799fc1c/ExposedReference`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/35/37f69b9a/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -176,6 +67,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/65/de8bbfb6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/7a/06d05ac3/PlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/89/df50989b/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/af/948dc4b8/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/b0/2a680ea0/ScriptPlayable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/cd/64fb6665/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/da/34e58dfa/PlayableBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -189,6 +81,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SelectOddNumberedFiles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/High&amp;Low/UIs/HighLowSettingsView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentGameView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentListCell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modules/Audio/AudiosTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/Assets/KawaseBlur/KawaseBlur.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Samples/GaussianBlur/BlurVolumeComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -211,6 +107,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.2/Editor/BurstDisassembler.Core.Wasm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/ProjectGeneration/FileIOProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Controls/ButtonControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Controls/InputControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Controls/InputControlExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Controls/KeyControl.cs" root0="SKIP_HIGHLIGHTING" />
@@ -249,6 +146,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.8.7/Editor/Window/TimelineWindow_PlaybackControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/LayoutPropertiesPreview.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/PrefabLayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
@@ -263,6 +161,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/CanvasScaler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/GridLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Mask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ToggleGroup.cs" root0="SKIP_HIGHLIGHTING" />
@@ -273,6 +172,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/PhysicsRaycasterTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/RawImageTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/ImageHook.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/PrivateFieldSetter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Controls/ComboBox/DropDownList.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Controls/UI_Knob.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Effects/UIFlippable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -288,9 +188,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Utilities/UI_MagneticInfiniteScroll.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Utilities/UI_ScrollRectOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/Utilities/ExtensionMethods.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/Unilities/UI/Misc/ColorExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://Z:/Workspace/USENGame/Packages/Unilities/UI/Progress Indicator/Scripts.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Z:/Workspace/USENGame/Packages/Unilities/UI/Progress Indicator/Scripts/ExtraMath.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -366,10 +264,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="241472">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="241472" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
