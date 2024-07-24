@@ -7,6 +7,7 @@ namespace USEN.Games.Common
 {
     public class UsenEvents
     {
+        public static Event<string> OnRemoconButtonClicked = new();
         public static Event<EventArgs> OnRemoconBlueButtonClicked = new();
         public static Event<EventArgs> OnRemoconGreenButtonClicked = new();
         public static Event<EventArgs> OnRemoconRedButtonClicked = new();

@@ -1,13 +1,18 @@
 // Created by LunarEclipse on 2024-7-14 10:6.
 
 using System;
+using TMPro;
 using UnityEngine;
 
 namespace USEN.Games.Common
 {
     public class UsenRemoteControlHandler : MonoBehaviour
     {
-        public void OnAndroidKeyDown(string keyName) {
+        public void OnAndroidKeyDown(string keyName) 
+        {
+            Debug.Log($"[KeyTest] Key pressed: {keyName}");
+            UsenEvents.OnRemoconButtonClicked.Invoke(this, keyName);
+            
             switch (keyName)
             {
                 case "red":

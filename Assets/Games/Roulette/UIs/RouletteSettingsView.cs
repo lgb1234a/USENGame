@@ -20,6 +20,7 @@ namespace USEN.Games.Roulette
         
         public TextMeshProUGUI keyText;
         public TextMeshProUGUI inputText;
+        public TextMeshProUGUI androidKeyText;
 
         private void Start()
         {
@@ -31,12 +32,14 @@ namespace USEN.Games.Roulette
             base.OnKey += OnKey;
             base.OnInput += OnInput;
             EventSystem.current.SetSelectedGameObject(appInfoButton.gameObject);
+            UsenEvents.OnRemoconButtonClicked += OnRemoconButtonClicked;
         }
 
         private void OnDisable()
         {
             base.OnKey -= OnKey;
             base.OnInput -= OnInput;
+            UsenEvents.OnRemoconButtonClicked -= OnRemoconButtonClicked;
         }
 
         private void Update()
@@ -49,6 +52,13 @@ namespace USEN.Games.Roulette
         {
             
         }
+        
+        private void OnRemoconButtonClicked(object sender, string e)
+        {
+            // Debug.Log($"[KeyTest] Key pressed: {e}");
+            androidKeyText.text = $"Android Key: {e}";
+        }
+
         
         private KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
         {
