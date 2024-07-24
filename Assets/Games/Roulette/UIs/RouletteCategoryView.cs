@@ -13,18 +13,9 @@ public class RouletteCategoryView : Widget
     
     public RouletteDataset dataset;
     
-    void OnEnable()
-    {
-        listView.FocusOnCell(0);
-    }
-    
     void Start()
     {
-        Debug.Log("RouletteThemeSelectionView started.");
-        
-        // var json = JsonConvert.SerializeObject(dataset);
-        // Debug.Log($"[RouletteThemeSelectionView] Dataset JSON: {json}");
-        
+        // Load the roulette data
         RouletteDAO.Instance.Data.ContinueWith(async task =>
         {
             var data = task.Result;
@@ -42,35 +33,4 @@ public class RouletteCategoryView : Widget
             Navigator.Pop();
         }
     }
-
-    protected KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
-    {
-        Debug.Log($"[RouletteThemeSelectionView] Key pressed: {key.keyCode} with event: {keyEvent}");
-        switch (key.keyCode)
-        {
-            // case Key.UpArrow:
-            //     listView.verticalNormalizedPosition += 0.1f;
-            //     return KeyEventResult.Handled;
-            // case Key.DownArrow:
-            //     listView.verticalNormalizedPosition -= 0.1f;
-            //     return KeyEventResult.Handled;
-            // case Key.LeftArrow:
-            //     listView.horizontalNormalizedPosition -= 0.1f;
-            //     return KeyEventResult.Handled;
-            // case Key.RightArrow:
-            //     listView.horizontalNormalizedPosition += 0.1f;
-            //     return KeyEventResult.Handled;
-            // case Key.Enter:
-            //     var selected = EventSystem.current.currentSelectedGameObject;
-            //     if (selected != null)
-            //     {
-            //         selected.GetComponent<Button>().onClick.Invoke();
-            //         return KeyEventResult.Handled;
-            //     }
-            //     break;
-        }
-        
-        return KeyEventResult.Unhandled;
-    }
-    
 }

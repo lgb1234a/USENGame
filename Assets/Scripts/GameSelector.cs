@@ -20,6 +20,8 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
     
     [FormerlySerializedAs("selectedIndex")] [SerializeField]
     private int _selectedIndex = 2;
+    
+    private GameObject _selectedGameObject;
 
     public int SelectedIndex
     {
@@ -59,6 +61,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
         {
             // selected game settings btn
             EventSystem.current.SetSelectedGameObject(gameSettingsBtn.gameObject);
+            _selectedGameObject = gameSettingsBtn.gameObject;
         }
         if (Input.GetKeyDown(KeyCode.DownArrow) && 
             EventSystem.current.currentSelectedGameObject == gameSettingsBtn.gameObject)
@@ -97,7 +100,10 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
         for (int i = 0; i < gameEntries.Length; i++)
         {
             if (i == _selectedIndex)
+            {
                 gameEntries[i].SetEventSystemSelected();
+                _selectedGameObject = gameEntries[i].gameObject;
+            }
             else
             {
                 if (i < _selectedIndex)
@@ -139,7 +145,8 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
     public void Show() 
     {
         gameObject.SetActive(true);
-        UpdateSelectedIndex(_selectedIndex);
+        // UpdateSelectedIndex(_selectedIndex);
+        EventSystem.current.SetSelectedGameObject(_selectedGameObject);
     }
 
     void Hide()

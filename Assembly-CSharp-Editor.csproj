@@ -837,14 +837,14 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="spine-unity">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-unity">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
@@ -928,10 +928,6 @@
       <Project>{b81f0b3c-81b2-1286-52d3-f10031525fb0}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Tween.Editor.csproj">
-      <Project>{600a43c6-4927-0d2b-ee9f-564571fdfbbe}</Project>
-      <Name>Timeline.Samples.Tween.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Luna.Editor.csproj">
       <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
       <Name>Luna.Editor</Name>
@@ -944,10 +940,6 @@
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Tween.csproj">
-      <Project>{cf8e7a54-0b1b-c27b-2669-1ac59b99519d}</Project>
-      <Name>Timeline.Samples.Tween</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
@@ -956,45 +948,13 @@
       <Project>{dc168978-5cb3-44e9-b77d-80343d1a8604}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.TimeDilation.csproj">
-      <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
-      <Name>Timeline.Samples.TimeDilation</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Utilities.csproj">
-      <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
-      <Name>Timeline.Samples.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityUIExtensions.examples.csproj">
-      <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
-      <Name>UnityUIExtensions.examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
-      <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
-      <Name>Timeline.Samples.Utilities.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Text.csproj">
-      <Project>{9bfdb3eb-5176-fff2-39a0-311b64f59a48}</Project>
-      <Name>Timeline.Samples.Text</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Text.Editor.csproj">
-      <Project>{71d4bc3d-aafa-043d-5a1d-3e6338518144}</Project>
-      <Name>Timeline.Samples.Text.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Annotation.csproj">
-      <Project>{f3bce3ac-d593-c3c7-5249-0645d4d99f69}</Project>
-      <Name>Timeline.Samples.Annotation</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
-      <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
-      <Name>Timeline.Samples.Annotation.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

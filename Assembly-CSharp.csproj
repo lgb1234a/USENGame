@@ -41,24 +41,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts\SkyboxCamera.cs" />
      <Compile Include="Assets\Scripts\FaceToCamera.cs" />
      <Compile Include="Assets\Modules\Audio\AudiosTest.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameView.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoSettingsView.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\VideoPlayerRenderTexture.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSettingsView.cs" />
      <Compile Include="Assets\Scripts\ResManager\ChristmasThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\ToastView.cs" />
      <Compile Include="Assets\Games\High&amp;Low\UIs\HighLowSettingsView.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts\AutoLoadPipelineAsset.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteEditList.cs" />
-     <Compile Include="Assets\Samples\GaussianBlur\BlurVolumeComponent.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentList.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteOriginView.cs" />
      <Compile Include="Assets\Scripts\Tools\TextAssetRWAblity.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioResManager.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryList.cs" />
      <Compile Include="Assets\Scripts\Tools\Loading.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionListCell.cs" />
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
@@ -68,20 +65,17 @@
      <Compile Include="Assets\Scripts\Bingo\AwardNumObj.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteData.cs" />
-     <Compile Include="Assets\Samples\Addressables\1.19.19\Prefab Spawner\PrefabSpawnerSample.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
      <Compile Include="Assets\Modules\Audio\SFXManager.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowRouletteView.cs" />
-     <Compile Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHistoryView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteEditView.cs" />
-     <Compile Include="Assets\Samples\GaussianBlur\BlurRenderFeature.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteGameView.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteQuitView.cs" />
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentList.cs" />
      <Compile Include="Assets\Games\Common\UsenRemoteControlHandler.cs" />
-     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
-     <Compile Include="Assets\Samples\Addressables\1.19.19\Addressables Utility\AddressablesUtility.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryView.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteGameQuitView.cs" />
@@ -99,6 +93,7 @@
      <Compile Include="Assets\Games\Roulette\Data\RouletteCategory.cs" />
      <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentEditView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteSettingsView.cs" />
      <Compile Include="Assets\Resources\HighAndLow\HightAndLowGame\Result\ResultPlayerDirector.cs" />
      <Compile Include="Assets\Scripts\Tools\ScrollContentTacker.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoHomeView.cs" />
@@ -111,12 +106,14 @@
      <Compile Include="Assets\Games\Common\UsenEvents.cs" />
      <Compile Include="Assets\Scripts\FaceTo.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteWheel.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentListCell.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteContentEditView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HightAndLowGameView.cs" />
      <Compile Include="Assets\Scripts\Tools\FPS.cs" />
      <Compile Include="Assets\Scripts\ResManager\ResourceLoader.cs" />
      <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Roulette\RouletteHomeView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionView.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoAboutView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentListCell.cs" />
      <Compile Include="Assets\Scripts\Tools\KeyBoardSelector.cs" />
@@ -130,213 +127,116 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionList.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowTerminalView.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionListCell.cs" />
+     <Compile Include="Assets\Games\Yamanote\Data\YamanoteCategory.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
      <Compile Include="Assets\Scripts\Tools\JsonSerializablity.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\EPokers.cs" />
+     <Compile Include="Assets\Games\Yamanote\Data\YamanoteData.cs" />
      <Compile Include="Assets\Modules\Video\Scripts\RenderTextureInitializer.cs" />
      <Compile Include="Assets\Games\Common\BottomPanel.cs" />
      <Compile Include="Assets\Scripts\ResManager\EThemeTypes.cs" />
      <Compile Include="Assets\Scripts\GameSelector.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryListCell.cs" />
      <Compile Include="Assets\Scripts\Bingo\CheckAnimator.cs" />
      <Compile Include="Assets\Scripts\Bingo\GameDataHandler.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentGameView.cs" />
      <Compile Include="Assets\Scripts\Tools\SequenceSprite.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionView.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteHomeView.cs" />
      <Compile Include="Assets\Modules\Audio\Audios.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Games\Yamanote\Data\YamanoteData.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteHomeView.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteSettingsView.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentListCell.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentList.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryListCell.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentGameView.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteGameView.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryList.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryView.cs" />
-     <Compile Include="Assets\Games\Yamanote\Data\YamanoteCategory.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionView.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
-     <Folder Include="Assets\Samples\Spine\King" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Shaders" />
-     <None Include="Assets\Samples\GaussianBlur\GaussianBlur.shader" />
      <Folder Include="Assets\Resources\DefaultTheme\Audio" />
      <Folder Include="Assets\Fonts" />
      <Folder Include="Assets\Games\Roulette\Data" />
      <Folder Include="Assets\Resources\Video" />
      <Folder Include="Assets\Games\Common\Commend" />
      <Folder Include="Assets\Resources\DefaultTheme" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Textures" />
-     <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Home\00_BINGO.atlas.txt" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Models" />
-     <Folder Include="Assets\Samples\Assets" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10" />
      <Folder Include="Assets\Scripts\Tools" />
      <Folder Include="Assets\Games\Yamanote\Data" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion\AmbientOcclusion" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\smoke" />
-     <Folder Include="Assets\Samples\GaussianBlur" />
      <Folder Include="Assets\Scripts\Bingo" />
-     <Folder Include="Assets\Samples\Addressables\1.19.19" />
      <Folder Include="Assets\Resources" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Animation" />
      <Folder Include="Assets\Scripts" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Videos" />
-     <Folder Include="Assets\Samples\Unity UI Extensions\2.3.2" />
-     <Folder Include="Assets\Samples\Addressables\1.19.19\Addressables Utility" />
-     <None Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.shader" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Lit" />
      <Folder Include="Assets\Resources\HighAndLow" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Textures" />
-     <Folder Include="Assets\Samples\Assets\Demo\Demo" />
      <Folder Include="Assets\Games\Roulette\Resources" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion\Animation" />
      <Folder Include="Assets\Resources\Textures" />
      <Folder Include="Assets\Resources\Roulette" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Prefabs" />
      <Folder Include="Assets\Modules" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Rotate\00_BINGO_Ch4.atlas.txt" />
      <Folder Include="Assets\Resources\Audio" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Scripts" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Prefabs" />
      <Folder Include="Assets\Games\Yamanote\Sprites" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\TrailEffect" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Rotate" />
      <Folder Include="Assets\Games\Roulette\UIs" />
      <Folder Include="Assets\Games\High&amp;Low" />
      <Folder Include="Assets\Settings" />
-     <Folder Include="Assets\Samples\Spine\Queen" />
      <Folder Include="Assets\Resources\Textures\game_entries" />
      <Folder Include="Assets\Resources\Material" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Settings" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects" />
-     <None Include="Assets\Samples\Spine\King\Spine_King.atlas.txt" />
      <Folder Include="Assets\Resources\Super Ellipses" />
      <Folder Include="Assets\Resources\Super Ellipses\Shadow" />
      <Folder Include="Assets\Modules\Video" />
      <Folder Include="Assets\Games\Yamanote\UIs" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Bingo" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\VolumeProfiles" />
-     <Folder Include="Assets\Samples\Addressables\1.19.19\Prefab Spawner" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\LensFlarePresets" />
      <Folder Include="Assets\Games\Common" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures" />
-     <Folder Include="Assets\Samples\Timeline" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Textures" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Fonts" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish\Sprites" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_low" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Animation" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Scripts" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Result" />
      <Folder Include="Assets\Resources\Textures\loading" />
      <Folder Include="Assets\Resources\ChristmasThemes" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\GlitchEffect\GlitchEffect" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\MixedFOV\Prefabs" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\3DSkybox" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders" />
-     <Folder Include="Assets\Samples\Spine" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\MixedFOV" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\GlitchEffect" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowHome" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\PaintSplat\PaintSplat" />
      <Folder Include="Assets\Settings\URP" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\Animation" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Animation" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Home" />
      <Folder Include="Assets\Scenes" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow\Animation" />
      <None Include="Assets\Resources\Material\default.shader" />
-     <Folder Include="Assets\Samples\Assets\Demo" />
      <Folder Include="Assets\Resources\ChristmasThemes\Numbers" />
-     <Folder Include="Assets\Samples\Assets\KawaseBlur" />
      <Folder Include="Assets\Resources\GameEntries" />
-     <Folder Include="Assets\Samples\Unity UI Extensions" />
      <Folder Include="Assets\Modules\Video\Timeline" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Bingo" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Materials" />
-     <Folder Include="Assets\Samples\Universal RP" />
      <Folder Include="Assets\Games\Roulette\Resources\トークテーマ" />
      <Folder Include="Assets\Scripts\Roulette" />
      <Folder Include="Assets\Games\Roulette" />
      <Folder Include="Assets\Resources\Bingo" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\SplitScreen\SplitScreen" />
      <Folder Include="Assets\Scripts\HighAndLow" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect" />
-     <None Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\SunFlare" />
      <Folder Include="Assets\Modules\Audio" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\PaintSplat" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Shaders" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Timelines" />
      <Folder Include="Assets\Resources\HighAndLow\Pokers" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect" />
      <Folder Include="Assets\Resources\ChristmasThemes\Effects\Rotate" />
      <Folder Include="Assets\Games\Roulette\Audios" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples" />
      <Folder Include="Assets\Modules\Video\Timeline\Signals" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Materials" />
      <Folder Include="Assets\Material" />
      <Folder Include="Assets\Modules\Video\Scripts" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Home\00_BINGO_Ch4.atlas.txt" />
      <Folder Include="Assets\Resources\DefaultTheme\Numbers" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\SplitScreen" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Shaders" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\OcclusionEffect" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples" />
      <Folder Include="Assets\Resources\HighAndLow\Particles" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking" />
-     <Folder Include="Assets\Samples\Addressables" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\Animation" />
      <Folder Include="Assets\Games\Roulette\Resources\バツゲーム" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow\BlobShadow" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\MixedFOV\MixedFOV" />
      <Folder Include="Assets\Resources\ChristmasThemes\Audio" />
      <Folder Include="Assets\Games\Roulette\Sprites" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Materials" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals" />
      <Folder Include="Assets\Resources\ChristmasThemes\CellBg" />
      <Folder Include="Assets\Resources\Textures\Icons" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo" />
      <Folder Include="Assets\Resources\DefaultTheme\CellBg" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\result_high" />
      <Folder Include="Assets\Resources\Super Ellipses\Solid" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Rotate\00_BINGO.atlas.txt" />
      <Folder Include="Assets\Games\Common\Commend\Videos" />
-     <Folder Include="Assets\Samples\Timeline\1.6.4" />
      <None Include="Assets\Resources\Material\default_font.shader" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders" />
      <Folder Include="Assets\Games" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow" />
-     <Folder Include="Assets\Samples\Finish 1" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Prefabs" />
      <Folder Include="Assets\Games\High&amp;Low\UIs" />
      <Folder Include="Assets\Samples" />
-     <Folder Include="Assets\Samples\Blur~" />
      <Folder Include="Assets\Games\Yamanote" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Materials" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowRoulette" />
      <Folder Include="Assets\Scripts\ResManager" />
      <Folder Include="Assets\Games\Roulette\Tests" />
      <None Include="Assets\Games\Roulette\UIs\Roulette Unlit.shader" />
-     <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Scripts" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -1072,14 +972,14 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="spine-unity">
+     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="spine-unity">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-unity.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
@@ -1159,10 +1059,6 @@
       <Project>{0cf3ab0b-3090-a4c5-9122-674b9cf7da6c}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Tween.Editor.csproj">
-      <Project>{600a43c6-4927-0d2b-ee9f-564571fdfbbe}</Project>
-      <Name>Timeline.Samples.Tween.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Luna.Editor.csproj">
       <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
       <Name>Luna.Editor</Name>
@@ -1175,10 +1071,6 @@
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Tween.csproj">
-      <Project>{cf8e7a54-0b1b-c27b-2669-1ac59b99519d}</Project>
-      <Name>Timeline.Samples.Tween</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
@@ -1187,45 +1079,13 @@
       <Project>{dc168978-5cb3-44e9-b77d-80343d1a8604}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.TimeDilation.csproj">
-      <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
-      <Name>Timeline.Samples.TimeDilation</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Utilities.csproj">
-      <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
-      <Name>Timeline.Samples.Utilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityUIExtensions.examples.csproj">
-      <Project>{73291b38-bb22-d747-35b2-0e5e38d7b985}</Project>
-      <Name>UnityUIExtensions.examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
-      <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
-      <Name>Timeline.Samples.Utilities.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Text.csproj">
-      <Project>{9bfdb3eb-5176-fff2-39a0-311b64f59a48}</Project>
-      <Name>Timeline.Samples.Text</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Text.Editor.csproj">
-      <Project>{71d4bc3d-aafa-043d-5a1d-3e6338518144}</Project>
-      <Name>Timeline.Samples.Text.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Annotation.csproj">
-      <Project>{f3bce3ac-d593-c3c7-5249-0645d4d99f69}</Project>
-      <Name>Timeline.Samples.Annotation</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
-      <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
-      <Name>Timeline.Samples.Annotation.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

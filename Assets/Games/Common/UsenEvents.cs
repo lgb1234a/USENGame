@@ -1,7 +1,7 @@
 // Created by LunarEclipse on 2024-7-14 10:1.
 
 using System;
-using Luna.Core.Event;
+using Luna;
 
 namespace USEN.Games.Common
 {

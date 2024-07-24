@@ -22,14 +22,7 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             Debug.Log("RouletteStartView started.");
-        }
-
-        private void OnEnable()
-        {
-            if (startButton != null)
-            {
-                EventSystem.current.SetSelectedGameObject(startButton.gameObject);
-            }
+            EventSystem.current.SetSelectedGameObject(startButton.gameObject);
         }
 
         private void Update()
@@ -40,23 +33,6 @@ namespace USEN.Games.Roulette
             }
         }
         
-        protected  KeyEventResult OnKey(KeyControl key, KeyEvent keyEvent)
-        {
-            Debug.Log($"[RouletteStartView] Key pressed: {key.keyCode} with event: {keyEvent}");
-            // switch (key.keyCode)
-            // {
-            //     case Key.Enter:
-            //         var selected = EventSystem.current.currentSelectedGameObject;
-            //         if (selected != null)
-            //         {
-            //             selected.GetComponent<Button>().onClick.Invoke();
-            //             return KeyEventResult.Handled;
-            //         }
-            //         break;
-            // }
-            return KeyEventResult.Unhandled;
-        }
-
         public void OnStartButtonClicked()
         {
             Debug.Log("Start button clicked.");

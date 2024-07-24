@@ -288,7 +288,6 @@ public class GameSettingsView2 : Widget
     }
     
     void OnClickBackButton() {
-        // EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(bgmSegmentedButton.gameObject);
         AudioManager.Instance.PlayKeyBackEffect();
         Hide();

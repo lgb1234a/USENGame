@@ -56,6 +56,7 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
                 LoadGame(RootViewType.Bingo);
                 break;
             case 4:
+                AppConfig.Instance.SelectedGameIndex = (int)RootViewType.Roulette;
                 SceneManager.LoadScene("Roulette");
                 break;
         }

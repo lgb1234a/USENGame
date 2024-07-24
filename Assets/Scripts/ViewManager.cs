@@ -31,6 +31,8 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
     public Image m_bgDecorate;
     public Loading m_Loading;
     private IViewOperater m_lastView;
+    
+    public GameObject PreviousSelectedGO => m_currentEventGO;
 
     public IViewOperater GetCurrentView() 
     {
