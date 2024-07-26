@@ -147,6 +147,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Modules\Input\InputActions.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -197,6 +198,7 @@
      <None Include="Assets\Resources\Material\default.shader" />
      <Folder Include="Assets\Resources\ChristmasThemes\Numbers" />
      <Folder Include="Assets\Resources\GameEntries" />
+     <Folder Include="Assets\Modules\Input" />
      <Folder Include="Assets\Modules\Video\Timeline" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Bingo" />
      <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
