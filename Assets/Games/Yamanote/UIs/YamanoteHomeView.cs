@@ -1,15 +1,10 @@
 // Created by LunarEclipse on 2024-6-21 1:53.
 
-using System;
 using Luna.UI;
 using Luna.UI.Navigation;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote

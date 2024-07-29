@@ -1,44 +1,75 @@
 using Cysharp.Threading.Tasks;
 using Luna.Extensions.Unity;
+using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using USEN.Games.Yamanote;
 
-public class YamanoteCategoryListCell : ListViewCell<YamanoteCategory>
+namespace USEN.Games.Yamanote
 {
-    public TextMeshProUGUI text;
-    public Image background;
-    public CircleCollider2D ringCollider; 
-    
-    private YamanoteCategory _rouletteCategory;
-    
-    public override YamanoteCategory Data
+    public class YamanoteCategoryListCell : ListViewCell<YamanoteCategory>
     {
-        get => _rouletteCategory;
-        set
+        public TextMeshProUGUI text;
+        public Image background;
+        public CircleCollider2D ringCollider; 
+    
+        private YamanoteCategory _rouletteCategory;
+    
+        public override YamanoteCategory Data
         {
-            _rouletteCategory = value;
-            text.text = value.title;
-        }
-    }
-
-    protected async void OnValidate()
-    {
-        await UniTask.DelayFrame(5);
-        
-        if (ringCollider != null)
-        {
-            // Cast a horizontal ray to ring collider to get collision point
-            var ray = new Ray( new Vector3(ringCollider.transform.position.x + 1000f, background.transform.position.y, 0), Vector3.left);
-            var hit = Physics2D.Raycast(ray.origin, ray.direction, 1000f, LayerMask.GetMask("Editor"));
-            Debug.Log(hit.point);
-            
-            if (hit.collider != null)
+            get => _rouletteCategory;
+            set
             {
-                background.transform.SetX(hit.point.x);
+                _rouletteCategory = value;
+                // text.text = value.title;
             }
         }
+
+        protected override void Start()
+        {
+            OnCellClicked += OnClicked;
+            OnCellSubmitted += OnClicked;
+            OnCellSelected += OnSelected;
+            OnCellDeselected += OnDeselected;
+        }
+
+        private void OnClicked(int arg1, ListViewCell<YamanoteCategory> arg2)
+        {
+            Navigator.Push<YamanoteQuestionsView>((view) =>
+            {
+                view.Category = Data;
+            });
+        }
+    
+        private void OnSelected(int arg1, ListViewCell<YamanoteCategory> arg2)
+        {
+            text.color = Color.HSVToRGB(148f / 360, 0.9f, 0.6f);
+        }
+    
+        private void OnDeselected(int arg1, ListViewCell<YamanoteCategory> arg2)
+        {
+            text.color = Color.black;
+        }
+
+        protected async void OnValidate()
+        {
+            await UniTask.DelayFrame(5);
+        
+            if (ringCollider != null)
+            {
+                // Cast a horizontal ray to ring collider to get collision point
+                var ray = new Ray( new Vector3(ringCollider.transform.position.x + 1000f, background.transform.position.y, 0), Vector3.left);
+                var hit = Physics2D.Raycast(ray.origin, ray.direction, 1000f, LayerMask.GetMask("Editor"));
+                Debug.Log(hit.point);
+            
+                if (hit.collider != null)
+                {
+                    background.transform.SetX(hit.point.x);
+                }
+            }
+        }
+    
+    
     }
 }
 

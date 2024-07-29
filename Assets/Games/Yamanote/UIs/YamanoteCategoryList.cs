@@ -1,16 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
-using DG.Tweening;
-using Luna.Core.Pool;
-using Luna.UI;
-using Luna.UI.Navigation;
 using Modules.UI.Widgets;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote
 {
@@ -22,6 +13,48 @@ namespace USEN.Games.Yamanote
             var content = _scrollRect.content;
             var firstCell = content.GetChild(0).GetComponent<YamanoteCategoryListCell>();
             firstCell.Focus();
+
+            for (int i = 0; i < content.childCount; i++)
+            {
+                var cell = content.GetChild(i).GetComponent<YamanoteCategoryListCell>();
+                cell.Data = new YamanoteCategory
+                {
+                    title = $"Category {i + 1}",
+                    themes = new List<YamanoteTheme>
+                    {
+                        new YamanoteTheme
+                        {
+                            title = "Theme 1",
+                            questions = new List<string>
+                            {
+                                "Question 1",
+                                "Question 2",
+                                "Question 3",
+                            }
+                        },
+                        new YamanoteTheme
+                        {
+                            title = "Theme 2",
+                            questions = new List<string>
+                            {
+                                "Question 1",
+                                "Question 2",
+                                "Question 3",
+                            }
+                        },
+                        new YamanoteTheme
+                        {
+                            title = "Theme 3",
+                            questions = new List<string>
+                            {
+                                "Question 1",
+                                "Question 2",
+                                "Question 3",
+                            }
+                        }
+                    },
+                }; 
+            }
         }
 
         // protected override void OnCellClicked(int index, YamanoteCategoryListCell listViewCell)

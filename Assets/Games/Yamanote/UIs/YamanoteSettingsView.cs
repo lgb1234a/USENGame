@@ -1,6 +1,5 @@
 // Created by LunarEclipse on 2024-7-18 9:26.
 
-using System;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;

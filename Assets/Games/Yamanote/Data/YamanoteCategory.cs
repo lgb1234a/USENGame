@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace USEN.Games.Yamanote
 {
@@ -11,6 +12,6 @@ namespace USEN.Games.Yamanote
     public class YamanoteCategory : ScriptableObject
     {
         public string title;
-        public List<YamanoteData> roulettes;
+        public List<YamanoteTheme> themes;
     }
 }

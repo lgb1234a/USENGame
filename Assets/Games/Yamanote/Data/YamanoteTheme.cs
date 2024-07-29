@@ -12,15 +12,14 @@ namespace USEN.Games.Yamanote
     // It contains a list of sectors, each with a content and a weight.
     [Serializable]
     [CreateAssetMenu(fileName = "Yamanote", menuName = "Scriptable Objects/Yamanote/Yamanote")]
-    public class YamanoteData : ScriptableObject
+    public class YamanoteTheme : ScriptableObject
     {
         [ReadOnly]
         public string id;
         public string title;
         
-        [FormerlySerializedAs("objects")] 
         [TableList(ShowIndexLabels = true, AlwaysExpanded = true, DrawScrollView = false)]
-        public List<string> sectors = new();
+        public List<string> questions = new();
         
 
         public void OnValidate()
@@ -31,9 +30,9 @@ namespace USEN.Games.Yamanote
             if (string.IsNullOrEmpty(name))
                 title = base.name;
             
-            for (int i = 0; i < sectors.Count; i++)
+            for (int i = 0; i < questions.Count; i++)
             {
-                var sector = sectors[i];
+                var sector = questions[i];
                 // sector.id = sectors.IndexOf(sector);
                 // sector.color = Color.HSVToRGB(1.0f / sectors.Count * i, 0.5f, 1f);
             }
