@@ -1,6 +1,6 @@
 // Created by LunarEclipse on 2024-7-12 21:50.
 
-using Modules.UI.Widgets;
+using Luna.UI;
 using UnityEngine;
 
 namespace USEN.Games.Roulette

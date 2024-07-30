@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Luna.Extensions;
-using Modules.UI.Widgets;
+using Luna.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

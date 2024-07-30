@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.Core.Pool;
 using Luna.UI;
-using Modules.UI.Widgets;
+using Luna.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;

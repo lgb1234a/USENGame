@@ -12,13 +12,12 @@ namespace USEN.Games.Yamanote
         public Image background;
         public CircleCollider2D ringCollider;
 
-        private YamanoteTheme _data;
         public override YamanoteTheme Data
         {
-            get => _data;
+            get => data;
             set
             {
-                _data = value;
+                data = value;
                 text.text = value.title;
             }
         }

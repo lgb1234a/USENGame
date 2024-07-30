@@ -6,7 +6,7 @@ using DG.Tweening;
 using Luna.Core.Pool;
 using Luna.UI;
 using Luna.UI.Navigation;
-using Modules.UI.Widgets;
+using Luna.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;

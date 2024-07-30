@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
      <Compile Include="Assets\Scripts\GameEntry.cs" />
+     <Compile Include="Assets\Games\Yamanote\Materials\ImageShaderController.cs" />
      <Compile Include="Assets\Scripts\Bingo\CellHandler.cs" />
      <Compile Include="Assets\Scripts\Bingo\AwardNumObj.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowHomeView.cs" />
@@ -106,9 +107,11 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteContentEditView.cs" />
      <Compile Include="Assets\Games\Yamanote\UIs\YamanoteSettingsView.cs" />
      <Compile Include="Assets\Resources\HighAndLow\HightAndLowGame\Result\ResultPlayerDirector.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsListCell.cs" />
      <Compile Include="Assets\Scripts\Tools\ScrollContentTacker.cs" />
      <Compile Include="Assets\Scripts\Bingo\BingoHomeView.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteSector.cs" />
+     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsList.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteCategoryView.cs" />
      <Compile Include="Assets\Modules\UI\OuterGlowButton.cs" />
      <Compile Include="Assets\Scripts\ResManager\IThemeRes.cs" />
@@ -160,9 +163,6 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Games\Yamanote\Materials\ImageShaderController.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsList.cs" />
-     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsListCell.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
