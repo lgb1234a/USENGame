@@ -57,6 +57,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     private PlayableDirector _finishDirector;
     // private ResultPlayerDirector _resultDirector;
     
+    private bool _isPopupViewShowed;
+    
     public void Build()
     {
         m_isGameFinished = false;
@@ -208,10 +210,11 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         }
         
         if (Input.GetButtonDown("Cancel")) {
-            OnClickedTerminalBtn();
+            if (m_mainViewGameObject.activeInHierarchy)
+                OnClickedTerminalBtn();
         }
-
-        if (m_waitTrigger) {
+        
+        if (m_waitTrigger && !_isPopupViewShowed) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
                 Input.GetKeyDown(KeyCode.Return) || 
@@ -220,7 +223,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
         
-        if (m_isShowTimer) {
+        if (m_isShowTimer && !_isPopupViewShowed) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
                 Input.GetKeyDown(KeyCode.Return) ||
@@ -229,11 +232,13 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
 
-        if (!m_isGameFinished) {
+        if (!m_isGameFinished && !_isPopupViewShowed) {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Submit")) {
                 OnClickedConfirmBtn();
             }
         }
+
+        _isPopupViewShowed = m_terminalView?.GameObject.activeInHierarchy == true;
     }
 
     void OnClickedHistoryButton() {

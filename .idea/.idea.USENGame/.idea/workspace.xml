@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/InfiniteListView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/InfiniteListView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteContentList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteContentList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsListCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsListCell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Attributes/OnChangedAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Attributes/OnChangedAttribute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Core/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Input/InputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/ListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/ListView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstractView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstractView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +248,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "XThreadsFramesViewSplitterKey": "0.4229651",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "luna",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -310,10 +300,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="29352">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="49188">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="29352" />
+      <option name="pid" value="49188" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -409,6 +399,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs</url>
+          <line>221</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\HighAndLow\HightAndLowGameView.cs" initialLine="223" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="8633" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8655" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs</url>
+          <line>230</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Scripts\HighAndLow\HightAndLowGameView.cs" initialLine="232" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="8966" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8988" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

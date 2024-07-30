@@ -52,6 +52,8 @@ public class AbstractView
     protected List<GameObject> m_viewGameObjects;
     private List<IResource> m_resources = new();
     private List<GameObject> m_gameObjects = new();
+    
+    public GameObject GameObject => m_mainViewGameObject;
 
     protected GameObject LoadViewGameObject(string assetPath, Transform parent)
     {
