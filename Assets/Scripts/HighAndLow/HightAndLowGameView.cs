@@ -267,9 +267,11 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         ViewManager.Instance.Push(m_rouletteView);
     }
 
-    void OnClickedWinnerBtn() {
+    async void OnClickedWinnerBtn() {
         AudioManager.Instance.PlayKeyStartEffect();
-        Navigator.Push<CommendView>();
+        AudioManager.Instance.PauseBgm();
+        await Navigator.Push<CommendView>();
+        AudioManager.Instance.UnPauseBgm();
     }
 
     void OnClickedConfirmBtn() {

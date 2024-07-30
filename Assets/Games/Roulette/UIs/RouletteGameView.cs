@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.UI;
+using Luna.UI.Audio;
 using Luna.UI.Navigation;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -105,9 +106,11 @@ namespace USEN.Games.Roulette
             Navigator.Pop();
         }
         
-        private void OnYellowButtonClicked()
+        private async void OnYellowButtonClicked()
         {
-            Navigator.Push<CommendView>();
+            BgmManager.Pause();
+            await Navigator.Push<CommendView>();
+            BgmManager.Resume();
         }
         
         private async Task SpinWheel()

@@ -163,6 +163,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Modules\Audio\BgmManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -170,9 +171,11 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Shaders" />
      <None Include="Assets\Samples\GaussianBlur\GaussianBlur.shader" />
      <Folder Include="Assets\Resources\DefaultTheme\Audio" />
+     <Folder Include="Assets\Settings\Addressables\DataBuilders" />
      <Folder Include="Assets\Fonts" />
      <Folder Include="Assets\Games\Roulette\Data" />
      <Folder Include="Assets\Resources\Video" />
+     <Folder Include="Assets\Settings\Addressables\AssetGroups" />
      <Folder Include="Assets\Games\Common\Commend" />
      <Folder Include="Assets\Resources\DefaultTheme" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Textures" />
@@ -193,11 +196,13 @@
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Videos" />
      <Folder Include="Assets\Samples\Unity UI Extensions\2.3.2" />
+     <None Include="Assets\Settings\Addressables\link.xml" />
      <Folder Include="Assets\Samples\Addressables\1.19.19\Addressables Utility" />
      <None Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.shader" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Lit" />
      <Folder Include="Assets\Resources\HighAndLow" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Textures" />
+     <Folder Include="Assets\Games\Common\Commend\Audios" />
      <Folder Include="Assets\Samples\Assets\Demo\Demo" />
      <Folder Include="Assets\Games\Roulette\Resources" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion\Animation" />
@@ -217,6 +222,7 @@
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Samples\Spine\Queen" />
      <Folder Include="Assets\Resources\Textures\game_entries" />
+     <Folder Include="Assets\Settings\Addressables\AssetGroups\Schemas" />
      <Folder Include="Assets\Resources\Material" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Settings" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets" />
@@ -282,6 +288,7 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares\SunFlare" />
      <Folder Include="Assets\Modules\Audio" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\PaintSplat" />
+     <Folder Include="Assets\Settings\Addressables" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Shaders" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Timelines" />
      <Folder Include="Assets\Resources\HighAndLow\Pokers" />
@@ -306,6 +313,7 @@
      <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking" />
      <Folder Include="Assets\Samples\Addressables" />
+     <Folder Include="Assets\Settings\Addressables\AssetGroupTemplates" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\Animation" />
      <Folder Include="Assets\Games\Roulette\Resources\バツゲーム" />
@@ -333,6 +341,7 @@
      <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow" />
      <Folder Include="Assets\Samples\Finish 1" />
+     <Folder Include="Assets\Settings\Addressables\Android" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Prefabs" />
      <Folder Include="Assets\Games\High&amp;Low\UIs" />

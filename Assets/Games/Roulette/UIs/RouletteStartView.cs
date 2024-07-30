@@ -2,6 +2,7 @@
 
 using System;
 using Luna.UI;
+using Luna.UI.Audio;
 using Luna.UI.Navigation;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -19,10 +20,13 @@ namespace USEN.Games.Roulette
         public Button startButton;
         public Button settingsButton;
         
+        public AudioClip bgmClip;
+        
         private void Start()
         {
             Debug.Log("RouletteStartView started.");
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            BgmManager.Play(bgmClip);
         }
 
         private void Update()
@@ -31,8 +35,18 @@ namespace USEN.Games.Roulette
                 Input.GetButtonDown("Cancel")) {
                 SceneManager.LoadScene("GameEntries");
             }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                BgmManager.Play(bgmClip);
+            }
         }
-        
+
+        private void OnDestroy()
+        {
+            BgmManager.Stop();
+        }
+
         public void OnStartButtonClicked()
         {
             Debug.Log("Start button clicked.");

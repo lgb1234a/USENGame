@@ -13,7 +13,7 @@ namespace Luna.UI.Audio
         [RuntimeInitializeOnLoadMethod]
         static void Initialize()
         {
-            GameObject soundManagerObject = new GameObject("SFXManager");
+            GameObject soundManagerObject = new GameObject("SFX Manager");
             audioSource = soundManagerObject.AddComponent<AudioSource>();
             Object.DontDestroyOnLoad(soundManagerObject);
         }

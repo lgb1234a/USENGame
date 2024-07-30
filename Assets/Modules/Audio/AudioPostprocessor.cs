@@ -1,12 +1,14 @@
 // Created by LunarEclipse on 2024-7-14 8:18.
 
+#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using System.IO;
 using Luna.UI.Audio.Luna.UI;
-using UnityEditor;
 using UnityEngine;
-
-#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.AddressableAssets;
+using UnityEditor.AddressableAssets.Settings;
 
 namespace Luna.UI.Audio
 {
@@ -18,8 +20,7 @@ namespace Luna.UI.Audio
         const float MAX_SFX_LENGTH = 20f; 
         
         // Find all audio files.
-        static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets,
-            string[] movedFromAssetPaths, bool didDomainReload)
+        static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
         {
             RemoveAllMissingAudios();
             foreach (var asset in importedAssets)
@@ -42,6 +43,9 @@ namespace Luna.UI.Audio
         {
             RemoveAllMissingAudios();
             
+            // Get the default addressable settings
+            AddressableAssetSettings settings = AddressableAssetSettingsDefaultObject.Settings;
+            
             var audioClips = new Dictionary<string, AudioClip>();
             
             string[] guids = AssetDatabase.FindAssets("t:AudioClip");
@@ -57,6 +61,9 @@ namespace Luna.UI.Audio
                     // if (audioClips.ContainsKey(filename))
                     //     filename = filename + "_" + guid;
                     // audioClips.Add(filename, audioClip);
+                    
+                    // AddressableAssetEntry entry = settings.CreateOrMoveEntry(AssetDatabase.AssetPathToGUID(path), audioGroup);
+                    // entry.address = Path.GetFileNameWithoutExtension(path);
                 }
             }
             

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Video;
 
 namespace USEN.Games.Common.Commend
@@ -12,12 +13,16 @@ namespace USEN.Games.Common.Commend
     public class CommendView : Widget
     {
         public VideoPlayer videoPlayer;
+        public AudioSource audioSource;
+        
         public List<VideoClip> videoClips;
+        public List<AssetReferenceT<AudioClip>> audioClips;
 
         // public int index;
 
         private void Start()
         {
+            // Play video
             var index = AppConfig.Instance.CommendationVideoOption;
             
             videoPlayer.targetCamera = Camera.main;
@@ -30,6 +35,16 @@ namespace USEN.Games.Common.Commend
             
             videoPlayer.prepareCompleted += OnVideoPrepared;
             videoPlayer.loopPointReached += OnVideoEnd;
+            
+            // Play audio
+            if (index < audioClips.Count)
+            {
+                audioClips[index].LoadAssetAsync().Completed += handle =>
+                {
+                    audioSource.clip = handle.Result;
+                    audioSource.Play();
+                };
+            }
         }
         
         private void Update()
@@ -37,6 +52,15 @@ namespace USEN.Games.Common.Commend
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
                 Navigator.Pop();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            // Release assets
+            foreach (var audioClip in audioClips)
+            {
+                audioClip.ReleaseAsset();
             }
         }
 
