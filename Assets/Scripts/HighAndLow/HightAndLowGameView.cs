@@ -1,17 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using Spine.Unity;
 using System.Collections.Generic;
-using UnityEngine.SocialPlatforms;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using HightAndLowGame;
 using Luna.UI.Navigation;
 using UnityEngine.Playables;
-using USEN.Games.Common.Commend;
+using USEN.Games.Common;
 using Random = UnityEngine.Random;
 
 public class HighAndLowGameView : AbstractView, IViewOperater

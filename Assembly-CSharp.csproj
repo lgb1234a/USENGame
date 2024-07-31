@@ -142,6 +142,7 @@
      <Compile Include="Assets\Scripts\Tools\AppConfig.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionList.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowTerminalView.cs" />
+     <Compile Include="Assets\Modules\Audio\BgmManager.cs" />
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionListCell.cs" />
      <Compile Include="Assets\Games\Yamanote\Data\YamanoteCategory.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\HighAndLowSettingsView.cs" />
@@ -163,7 +164,6 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Modules\Audio\BgmManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -196,7 +196,6 @@
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Videos" />
      <Folder Include="Assets\Samples\Unity UI Extensions\2.3.2" />
-     <None Include="Assets\Settings\Addressables\link.xml" />
      <Folder Include="Assets\Samples\Addressables\1.19.19\Addressables Utility" />
      <None Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.shader" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit\Lit" />
@@ -307,6 +306,7 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Shaders" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\OcclusionEffect" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples" />
+     <None Include="Assets\Settings\Addressables\link.xml" />
      <Folder Include="Assets\Resources\HighAndLow\Particles" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />

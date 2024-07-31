@@ -43,6 +43,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 8dd0d0b1d2f89644d8d24a831f16cecd, type: 2}
   - {fileID: 11400000, guid: 46bbc308b968d2c4090880376d897e4b, type: 2}
+  - {fileID: 11400000, guid: c6725c7fe31e993429b4d940d887ecce, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -85,6 +86,12 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Audio
+    - UI
+    - USEN.Games.Common
+    - USEN.Games.HighLow
+    - USEN.Games.Roulette
+    - global
+    - USEN.Games.Yamanote
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 982f4cd1317353747944dd733750de87, type: 2}

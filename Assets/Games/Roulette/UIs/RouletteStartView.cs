@@ -1,16 +1,13 @@
 // Created by LunarEclipse on 2024-6-21 1:53.
 
-using System;
+using Cysharp.Threading.Tasks;
+using Luna;
 using Luna.UI;
 using Luna.UI.Audio;
 using Luna.UI.Navigation;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace USEN.Games.Roulette
@@ -27,6 +24,9 @@ namespace USEN.Games.Roulette
             Debug.Log("RouletteStartView started.");
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
             BgmManager.Play(bgmClip);
+            
+            // Preload all roulette widgets
+            Widget.Load(GetType().Namespace);
         }
 
         private void Update()
@@ -45,6 +45,9 @@ namespace USEN.Games.Roulette
         private void OnDestroy()
         {
             BgmManager.Stop();
+            
+            // Unload all roulette widgets
+            Widget.Unload(GetType().Namespace);
         }
 
         public void OnStartButtonClicked()

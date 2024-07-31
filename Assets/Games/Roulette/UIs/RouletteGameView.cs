@@ -13,7 +13,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.UI;
 using USEN.Games.Common;
-using USEN.Games.Common.Commend;
 
 namespace USEN.Games.Roulette
 {

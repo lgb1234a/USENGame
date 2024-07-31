@@ -55,7 +55,7 @@ namespace Luna.UI.Audio
                 var audioClip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
                 if (audioClip != null)
                 {
-                    Debug.Log("AudioPostprocessor: Found audio clip: " + audioClip.name);
+                    // Debug.Log("AudioPostprocessor: Found audio clip: " + audioClip.name);
                     ProcessAudioClip(audioClip);
                     // var filename = ProcessName(Path.GetFileName(audioClip.name));
                     // if (audioClips.ContainsKey(filename))

@@ -1,31 +1,13 @@
 {
     "m_SelectedDeviceId": "309af56c",
     "m_SelectedPackage": {
-        "deviceId": "309af56c",
-        "name": "com.usen.ubingo",
-        "processId": 5776,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 8722,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 10212,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 2963,
-            "exited": true
-        },
         {
             "deviceId": "309af56c",
             "name": "com.miui.home",
@@ -35,26 +17,26 @@
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 31110,
+            "processId": 14874,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 4054,
-            "exited": false
+            "processId": 18212,
+            "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 17363,
-            "exited": false
+            "processId": 19297,
+            "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 5776,
-            "exited": false
+            "processId": 24758,
+            "exited": true
         },
         {
             "deviceId": "b2dbe042",

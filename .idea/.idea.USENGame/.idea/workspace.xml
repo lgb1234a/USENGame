@@ -5,69 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/CommonAudioMixer.mixer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/CommonAudioMixer.mixer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/タンホイザーとアイーダメドレー.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/タンホイザーとアイーダメドレー.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/ハレルヤ.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/ハレルヤ.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/威風堂々.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/威風堂々.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/見よ、勇者は帰る.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Audios/見よ、勇者は帰る.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroupTemplates.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroupTemplates/Packed Assets.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroupTemplates/Packed Assets.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Built In Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Built In Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Built In Data_PlayerDataGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptFastMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptFastMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptPackedMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptPackedMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptPackedPlayMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptPackedPlayMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptVirtualMode.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DataBuilders/BuildScriptVirtualMode.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DefaultObject.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/DefaultObject.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets/Editor/AddressableAssetsMonitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets/Editor/AddressableAssetsMonitor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Audio/SFXManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/Audio/SFXManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Luna.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Editor/Luna.Editor.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Luna.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Luna.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +53,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/34/401261bf/AssetPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/39/269c91e0/GameObjectUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/54/0365a14f/Editor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/7e/c82370cf/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70037d4e95584e918c2439cf7b1b808c45400/76/ff07b01d/ISelectHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880832f2c4e2458090401bbb74a86b24a8a00/62/485a7bc3/Formatting.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880832f2c4e2458090401bbb74a86b24a8a00/6e/d577ae98/VersionConverter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -106,6 +63,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/02/fffddca1/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/05/62a65cec/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/0c/bb84034f/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/22/511185e3/SynchronizationContextTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/30/edd3a2ed/Version.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/45/20ee7cd3/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/74/612c8d45/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
@@ -134,6 +92,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/65/de8bbfb6/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/7a/06d05ac3/PlayableAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/89/df50989b/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/aa/946cafd9/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/af/948dc4b8/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/b0/2a680ea0/ScriptPlayable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/c9/8c0a3731/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -177,8 +136,14 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Diagnostics/GUI/EventViewerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Diagnostics/ResourceProfilerWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/GUI/ProfileDataSourceDropdownWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetEntry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/ResourceLocations/IResourceLocation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.2/Editor/BurstDisassembler.Core.Wasm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Views/Changesets/ChangesetsTab.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Views/Diff/DiffTreeViewMenu.cs" root0="SKIP_HIGHLIGHTING" />
@@ -266,6 +231,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/TrueShadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/Utilities/ExtensionMethods.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets/Editor/AddressableAssetsMonitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Base/Editor/WidgetPrefabProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -345,10 +311,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="49188">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="242812">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="49188" />
+      <option name="pid" value="242812" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

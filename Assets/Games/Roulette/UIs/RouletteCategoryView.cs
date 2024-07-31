@@ -2,35 +2,36 @@ using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
-using UnityEngine.InputSystem.Controls;
 using USEN.Games.Common;
-using USEN.Games.Roulette;
 
-public class RouletteCategoryView : Widget
+namespace USEN.Games.Roulette
 {
-    public RouletteCategoryList listView;
-    public BottomPanel bottomPanel;
-    
-    public RouletteDataset dataset;
-    
-    void Start()
+    public class RouletteCategoryView : Widget
     {
-        // Load the roulette data
-        RouletteDAO.Instance.Data.ContinueWith(async task =>
+        public RouletteCategoryList listView;
+        public BottomPanel bottomPanel;
+    
+        public RouletteDataset dataset;
+    
+        void Start()
         {
-            var data = task.Result;
-            Debug.Log($"[RouletteThemeSelectionView] Data loaded: {data.categories.Count} categories.");
-            listView.Data = data.categories;
-            await UniTask.DelayFrame(2);
-            listView.FocusOnCell(0);
-        });
-    }
+            // Load the roulette data
+            RouletteDAO.Instance.Data.ContinueWith(async task =>
+            {
+                var data = task.Result;
+                Debug.Log($"[RouletteThemeSelectionView] Data loaded: {data.categories.Count} categories.");
+                listView.Data = data.categories;
+                await UniTask.DelayFrame(2);
+                listView.FocusOnCell(0);
+            });
+        }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) ||
-            Input.GetButtonDown("Cancel")) {
-            Navigator.Pop();
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) ||
+                Input.GetButtonDown("Cancel")) {
+                Navigator.Pop();
+            }
         }
     }
 }

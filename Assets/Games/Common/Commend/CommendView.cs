@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Video;
 
-namespace USEN.Games.Common.Commend
+namespace USEN.Games.Common
 {
     public class CommendView : Widget
     {
@@ -24,7 +24,7 @@ namespace USEN.Games.Common.Commend
         {
             // Play video
             var index = AppConfig.Instance.CommendationVideoOption;
-            
+             
             videoPlayer.targetCamera = Camera.main;
             
             if (index < videoClips.Count)
