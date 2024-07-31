@@ -306,7 +306,6 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Shaders" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\OcclusionEffect" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples" />
-     <None Include="Assets\Settings\Addressables\link.xml" />
      <Folder Include="Assets\Resources\HighAndLow\Particles" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />

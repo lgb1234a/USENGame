@@ -6,6 +6,7 @@ using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.Video;
 
 namespace USEN.Games.Common
@@ -59,9 +60,7 @@ namespace USEN.Games.Common
         {
             // Release assets
             foreach (var audioClip in audioClips)
-            {
                 audioClip.ReleaseAsset();
-            }
         }
 
         private void OnVideoPrepared(VideoPlayer source)
@@ -72,6 +71,14 @@ namespace USEN.Games.Common
         private void OnVideoEnd(VideoPlayer source)
         {
             // Navigator.Pop();
+        }
+        
+        public AsyncOperationHandle<AudioClip>? PreloadAudio()
+        {
+            var index = AppConfig.Instance.CommendationVideoOption;
+            if (index < audioClips.Count)
+                return audioClips[index].LoadAssetAsync();
+            return null;
         }
     }
 }

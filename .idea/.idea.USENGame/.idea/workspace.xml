@@ -8,22 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/Audio/AudioPostprocessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Modules/Audio/BgmManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +24,7 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/eb9a427b4519406da09c2c25258f4b19.SourceCodeCombined.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/73ae68d62ab841b9b1aa90cf5baf23ad5b200/f4/ed9e58de/0200004Cpdb84.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b7ddbc666124f97acc357fa84bab350185c00/69/63f61e5e/Key.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fed12eace764578a01a50262fe1edc71f800/17/9c5b43e2/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -141,6 +131,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/AsyncOperations/AsyncOperationHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/ResourceLocations/IResourceLocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
@@ -230,7 +221,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Utilities/UI_ScrollRectOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/TrueShadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/Utilities/ExtensionMethods.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/Editor/Assets/Editor/AddressableAssetsMonitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Base/Editor/WidgetPrefabProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>

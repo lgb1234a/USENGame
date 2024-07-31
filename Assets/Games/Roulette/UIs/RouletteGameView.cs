@@ -8,9 +8,11 @@ using Luna.UI;
 using Luna.UI.Audio;
 using Luna.UI.Navigation;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 using USEN.Games.Common;
 
@@ -21,6 +23,8 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public Button startButton;
         public BottomPanel bottomPanel;
+        
+        private AsyncOperationHandle<AudioClip>? _audioClipHandle;
         
         public RouletteData RouletteData { 
             get => rouletteWheel.RouletteData;
@@ -54,6 +58,12 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            LoadAsync<CommendView>().ContinueWith(task => {
+                var go = task.Result;
+                var commendView = go.GetComponent<CommendView>();
+                if (commendView != null) 
+                    _audioClipHandle = commendView.PreloadAudio();
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         private void Update()
@@ -63,7 +73,14 @@ namespace USEN.Games.Roulette
                 Navigator.Pop();
             }
         }
-        
+
+        private void OnDestroy()
+        {
+            Unload<CommendView>();
+            if (_audioClipHandle != null)
+                Addressables.Release(_audioClipHandle.Value);
+        }
+
         private KeyEventResult OnKey(KeyControl key, KeyEvent @event)
         {
             if (@event == KeyEvent.Down)
