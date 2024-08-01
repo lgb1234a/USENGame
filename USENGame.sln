@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timeline.Samples.Utilities"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.Modules.UnityLocalization", "Sirenix.OdinInspector.Modules.UnityLocalization.csproj", "{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.Modules.Unity.Addressables", "Sirenix.OdinInspector.Modules.Unity.Addressables.csproj", "{2acaea72-7170-45d7-6c76-46883a8bde01}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ShaderGraph.Editor", "Unity.ShaderGraph.Editor.csproj", "{dc168978-5cb3-44e9-b77d-80343d1a8604}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{e396c8fc-922d-bc72-23b8-678b445668ec}"
@@ -72,6 +74,8 @@ Global
 		{5ddbf61b-3894-7d0e-67c6-ce943187612a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2acaea72-7170-45d7-6c76-46883a8bde01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2acaea72-7170-45d7-6c76-46883a8bde01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{dc168978-5cb3-44e9-b77d-80343d1a8604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{dc168978-5cb3-44e9-b77d-80343d1a8604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e396c8fc-922d-bc72-23b8-678b445668ec}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

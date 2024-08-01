@@ -764,9 +764,6 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
@@ -997,6 +994,10 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.Unity.Addressables.csproj">
+      <Project>{2acaea72-7170-45d7-6c76-46883a8bde01}</Project>
+      <Name>Sirenix.OdinInspector.Modules.Unity.Addressables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,7 +16,7 @@ namespace USEN.Games.Common
         public VideoPlayer videoPlayer;
         public AudioSource audioSource;
         
-        public List<VideoClip> videoClips;
+        public List<AssetReferenceT<VideoClip>> videoClips;
         public List<AssetReferenceT<AudioClip>> audioClips;
 
         // public int index;
@@ -30,8 +30,11 @@ namespace USEN.Games.Common
             
             if (index < videoClips.Count)
             {
-                videoPlayer.clip = videoClips[index];
-                videoPlayer.Prepare();
+                videoClips[index].LoadAssetAsync().Completed += handle =>
+                {
+                    videoPlayer.clip = handle.Result;
+                    videoPlayer.Prepare();
+                };
             }
             
             videoPlayer.prepareCompleted += OnVideoPrepared;
@@ -59,6 +62,8 @@ namespace USEN.Games.Common
         private void OnDestroy()
         {
             // Release assets
+            foreach (var videoClip in videoClips)
+                videoClip.ReleaseAsset();
             foreach (var audioClip in audioClips)
                 audioClip.ReleaseAsset();
         }

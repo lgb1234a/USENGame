@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: 7519760295410f64d90d74248c993e0b
-  m_CachedHash:
+  m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
@@ -32,18 +32,22 @@ MonoBehaviour:
   m_ShaderBundleNaming: 0
   m_ShaderBundleCustomNaming: 
   m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: 
   m_RemoteCatalogLoadPath:
     m_Id: 
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
+  m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
   m_GroupAssets:
-  - {fileID: 11400000, guid: 8dd0d0b1d2f89644d8d24a831f16cecd, type: 2}
   - {fileID: 11400000, guid: 46bbc308b968d2c4090880376d897e4b, type: 2}
   - {fileID: 11400000, guid: c6725c7fe31e993429b4d940d887ecce, type: 2}
+  - {fileID: 11400000, guid: 6c5665bdf154fb54eb877fecd3713cc1, type: 2}
+  - {fileID: 11400000, guid: 8dd0d0b1d2f89644d8d24a831f16cecd, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -55,31 +59,31 @@ MonoBehaviour:
       m_Id: b0480d71578bdc443a0a40ddb0a4df3a
       m_ProfileName: Default
       m_Values:
-      - m_Id: f225c37329d250448b6b1635d50863ac
-        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: 0a5f54b615e9a9846acef07f83461534
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
-      - m_Id: a39c5b2c651e7924f968f76356361eca
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
-      - m_Id: 9d0e8c023b380424ba55f49734ee3fea
-        m_Value: ServerData/[BuildTarget]
       - m_Id: 993aeb720e6fbf24bbb9ee1a3f4b1777
         m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+      - m_Id: 9d0e8c023b380424ba55f49734ee3fea
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: a39c5b2c651e7924f968f76356361eca
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: f225c37329d250448b6b1635d50863ac
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
     m_ProfileEntryNames:
-    - m_Id: f225c37329d250448b6b1635d50863ac
-      m_Name: BuildTarget
-      m_InlineUsage: 0
     - m_Id: 0a5f54b615e9a9846acef07f83461534
       m_Name: Local.BuildPath
       m_InlineUsage: 0
-    - m_Id: a39c5b2c651e7924f968f76356361eca
-      m_Name: Local.LoadPath
+    - m_Id: 993aeb720e6fbf24bbb9ee1a3f4b1777
+      m_Name: Remote.LoadPath
       m_InlineUsage: 0
     - m_Id: 9d0e8c023b380424ba55f49734ee3fea
       m_Name: Remote.BuildPath
       m_InlineUsage: 0
-    - m_Id: 993aeb720e6fbf24bbb9ee1a3f4b1777
-      m_Name: Remote.LoadPath
+    - m_Id: a39c5b2c651e7924f968f76356361eca
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: f225c37329d250448b6b1635d50863ac
+      m_Name: BuildTarget
       m_InlineUsage: 0
     m_ProfileVersion: 1
   m_LabelTable:
@@ -92,6 +96,7 @@ MonoBehaviour:
     - USEN.Games.Roulette
     - global
     - USEN.Games.Yamanote
+    - Video
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 982f4cd1317353747944dd733750de87, type: 2}
@@ -111,3 +116,4 @@ MonoBehaviour:
     m_Settings: {fileID: 11400000}
     m_NextInstanceId: 0
     m_RegisteredServiceTypeRefs: []
+    m_PingTimeoutInMilliseconds: 5000

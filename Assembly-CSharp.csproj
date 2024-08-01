@@ -164,6 +164,7 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+     <Compile Include="Assets\Games\App.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -207,6 +208,7 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\AmbientOcclusion\Animation" />
      <Folder Include="Assets\Resources\Textures" />
      <Folder Include="Assets\Resources\Roulette" />
+     <Folder Include="Assets\AddressableAssetsData\Android" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\CameraStacking\3D Skybox\Prefabs" />
      <Folder Include="Assets\Modules" />
      <None Include="Assets\Resources\ChristmasThemes\Effects\Rotate\00_BINGO_Ch4.atlas.txt" />
@@ -348,6 +350,7 @@
      <Folder Include="Assets\Samples" />
      <Folder Include="Assets\Samples\Blur~" />
      <Folder Include="Assets\Games\Yamanote" />
+     <Folder Include="Assets\AddressableAssetsData" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\LensFlares" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\ProxyLighting\Materials" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowRoulette" />
@@ -1015,9 +1018,6 @@
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.CacheServer">
-     <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Addressables">
      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
@@ -1244,6 +1244,10 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.Unity.Addressables.csproj">
+      <Project>{2acaea72-7170-45d7-6c76-46883a8bde01}</Project>
+      <Name>Sirenix.OdinInspector.Modules.Unity.Addressables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
