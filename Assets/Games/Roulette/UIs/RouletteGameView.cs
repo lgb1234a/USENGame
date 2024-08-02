@@ -14,6 +14,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
+using USEN.Assets;
 using USEN.Games.Common;
 
 namespace USEN.Games.Roulette
@@ -58,7 +59,7 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
-            LoadAsync<CommendView>().ContinueWith(task => {
+            AssetUtils.LoadAsync<CommendView>().ContinueWith(task => {
                 var go = task.Result;
                 var commendView = go.GetComponent<CommendView>();
                 if (commendView != null) 
@@ -76,7 +77,7 @@ namespace USEN.Games.Roulette
 
         private void OnDestroy()
         {
-            Unload<CommendView>();
+            AssetUtils.Unload<CommendView>();
             if (_audioClipHandle != null)
                 Addressables.Release(_audioClipHandle.Value);
         }

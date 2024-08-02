@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "7a238ffc",
+    "m_SelectedDeviceId": "309af56c",
     "m_SelectedPackage": {
-        "deviceId": "7a238ffc",
+        "deviceId": "309af56c",
         "name": "com.usen.ubingo",
-        "processId": 14521,
+        "processId": 5529,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -13,30 +13,6 @@
             "name": "com.miui.home",
             "processId": 4659,
             "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 14874,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 18212,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 19297,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 24758,
-            "exited": true
         },
         {
             "deviceId": "309af56c",
@@ -65,18 +41,6 @@
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 13690,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 5530,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
             "processId": 21428,
             "exited": false
         },
@@ -85,12 +49,6 @@
             "name": "com.usen.ubingo",
             "processId": 22921,
             "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 26501,
-            "exited": true
         },
         {
             "deviceId": "309af56c",
@@ -126,6 +84,24 @@
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
             "processId": 29996,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 2519,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 3498,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 5529,
             "exited": false
         },
         {
@@ -204,6 +180,18 @@
             "deviceId": "7a238ffc",
             "name": "com.usen.ubingo",
             "processId": 14521,
+            "exited": false
+        },
+        {
+            "deviceId": "7a238ffc",
+            "name": "com.usen.ubingo",
+            "processId": 15414,
+            "exited": false
+        },
+        {
+            "deviceId": "7a238ffc",
+            "name": "com.usen.ubingo",
+            "processId": 16627,
             "exited": false
         }
     ],

@@ -5,58 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/App.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Games/App.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/AddressablesInspectors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/AddressablesInspectors.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Sirenix.OdinInspector.Modules.Unity.Addressables.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Sirenix.OdinInspector.Modules.Unity.Addressables.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/AssetLabelReferenceValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/AssetLabelReferenceValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/AssetReferenceValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/AssetReferenceValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/CheckDuplicateBundleDependenciesValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/CheckDuplicateBundleDependenciesValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/CheckResourcesToAddressableDuplicateDependenciesValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/CheckResourcesToAddressableDuplicateDependenciesValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/DisallowAddressableSubAssetFieldAttributeValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/DisallowAddressableSubAssetFieldAttributeValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/MissingAddressableGroupReferenceValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/Validators/MissingAddressableGroupReferenceValidator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/manifest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables/manifest.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Videos_BundledAssetGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Videos_BundledAssetGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Videos_ContentUpdateGroupSchema.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Schemas/Videos_ContentUpdateGroupSchema.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Videos.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Videos.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Widgets.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/AssetGroups/Widgets.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Core/Event/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Event/Events.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +31,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/LunarFramework" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/eb9a427b4519406da09c2c25258f4b19.SourceCodeCombined.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/73ae68d62ab841b9b1aa90cf5baf23ad5b200/f4/ed9e58de/0200004Cpdb84.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b7ddbc666124f97acc357fa84bab350185c00/69/63f61e5e/Key.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fed12eace764578a01a50262fe1edc71f800/17/9c5b43e2/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,6 +109,25 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffe351aa6232372f4a3b8c3ff36a636f33de226f60e607acbfe569289d7289d/System.IO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/SelectOddNumberedFiles.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Assets/Games/Common/Commend/CommendView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/High&amp;Low/UIs/HighLowSettingsView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentGameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,6 +160,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.0.1/Editor/PlasticSCM/Views/PendingChanges/Dialogs/FilterRulesConfirmationDialog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.18/Rider/Editor/ProjectGeneration/FileIOProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/DocCodeSamples.Tests/MetadataSamples.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Editor/UI/Localized Reference/LocalizedStringPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Settings/Startup Selectors/SystemLocaleSelector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Tests/Editor/Pseudo/CharacterSubstitutorTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.android-logcat@1.3.2/Editor/Tasks/AndroidLogcatDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
@@ -227,6 +214,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ToggleGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/AssertionFailureOnOutputVertexCount.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/EventSystem/InterceptedEventsPreviewTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/InputField/ContentValidation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Text/FontCreatedByScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CanvasGroupInheritedAlpha.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CanvasScalerWithChildTextObjectDoesNotCrash.cs" root0="SKIP_HIGHLIGHTING" />
@@ -234,6 +222,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/GraphicRaycasterWorldSpaceCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/EventSystem/PhysicsRaycasterTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Graphic/RawImageTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/TextEditor/TextEditorTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/ImageHook.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Util/PrivateFieldSetter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Controls/ColorPicker/ColorPickerControl.cs" root0="SKIP_HIGHLIGHTING" />
@@ -254,7 +243,19 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/TrueShadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/Utilities/ExtensionMethods.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Base/Editor/WidgetPrefabProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -333,10 +334,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="242812">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="242812" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

@@ -939,6 +939,10 @@
       <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
       <Name>Luna</Name>
     </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.Unity.Addressables.csproj">
+      <Project>{2acaea72-7170-45d7-6c76-46883a8bde01}</Project>
+      <Name>Sirenix.OdinInspector.Modules.Unity.Addressables</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.csproj">
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
@@ -994,10 +998,6 @@
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
       <Name>Timeline.Samples.Annotation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.Unity.Addressables.csproj">
-      <Project>{2acaea72-7170-45d7-6c76-46883a8bde01}</Project>
-      <Name>Sirenix.OdinInspector.Modules.Unity.Addressables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

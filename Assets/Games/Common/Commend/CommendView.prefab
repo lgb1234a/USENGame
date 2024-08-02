@@ -288,22 +288,10 @@ MonoBehaviour:
   videoPlayer: {fileID: 4283495057450623425}
   audioSource: {fileID: 7643995041477312345}
   videoClips:
-  - m_AssetGUID: 4d9c1cc1b73271f499782ac8d0547b9a
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: d6b1d12c773dd1a4e9f6b91bbbed07f9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 21f747bc3409eff47859d88f30983d79
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: fe587863fc6693540809c9e0deb62690
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  - {fileID: 32900000, guid: 4d9c1cc1b73271f499782ac8d0547b9a, type: 3}
+  - {fileID: 32900000, guid: d6b1d12c773dd1a4e9f6b91bbbed07f9, type: 3}
+  - {fileID: 32900000, guid: 21f747bc3409eff47859d88f30983d79, type: 3}
+  - {fileID: 32900000, guid: fe587863fc6693540809c9e0deb62690, type: 3}
   audioClips:
   - m_AssetGUID: 4832fe1ee69b84c44a81aa599ae836f4
     m_SubObjectName: 

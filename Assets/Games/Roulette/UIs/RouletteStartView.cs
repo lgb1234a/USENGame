@@ -26,7 +26,7 @@ namespace USEN.Games.Roulette
             BgmManager.Play(bgmClip);
             
             // Preload all roulette widgets
-            Widget.Load(GetType().Namespace);
+            // Widget.Load(GetType().Namespace);
         }
 
         private void Update()
@@ -47,7 +47,7 @@ namespace USEN.Games.Roulette
             BgmManager.Stop();
             
             // Unload all roulette widgets
-            Widget.Unload(GetType().Namespace);
+            // Widget.Unload(GetType().Namespace);
         }
 
         public void OnStartButtonClicked()
