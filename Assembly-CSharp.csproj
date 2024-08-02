@@ -340,7 +340,6 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders" />
      <Folder Include="Assets\Games" />
-     <None Include="Assets\AddressableAssetsData\link.xml" />
      <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow" />
      <Folder Include="Assets\Samples\Finish 1" />
