@@ -18,6 +18,7 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             appInfoButton.onClick.AddListener(OnClickAppInfoButton);
+            bottomPanel.exitButton.onClick.AddListener(() => Navigator.Pop());
         }
 
         private void OnEnable()

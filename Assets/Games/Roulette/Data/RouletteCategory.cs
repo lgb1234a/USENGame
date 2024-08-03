@@ -2,15 +2,16 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace USEN.Games.Roulette
 {
-    [Serializable]
+    [JsonObject(MemberSerialization.OptIn)]
     [CreateAssetMenu(fileName = "RouletteCategory", menuName = "Scriptable Objects/Roulette/Roulette Category")]
     public class RouletteCategory : ScriptableObject
     {
-        public string title;
-        public List<RouletteData> roulettes;
+        [JsonProperty] public string title;
+        [JsonProperty] public List<RouletteData> roulettes;
     }
 }

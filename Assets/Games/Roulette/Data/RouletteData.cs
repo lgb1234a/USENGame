@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,18 +11,21 @@ namespace USEN.Games.Roulette
 {
     // A roulette data object represents a single roulette wheel.
     // It contains a list of sectors, each with a content and a weight.
-    [Serializable]
+    [JsonObject(MemberSerialization.OptIn)]
     [CreateAssetMenu(fileName = "Roulette", menuName = "Scriptable Objects/Roulette/Roulette")]
     public class RouletteData : ScriptableObject
     {
-        [ReadOnly]
-        public string id;
-        public string title;
+        [ReadOnly] [JsonProperty] public string id;
+        [JsonProperty] public string title;
         
-        [FormerlySerializedAs("objects")] 
+        [JsonProperty] 
         [TableList(ShowIndexLabels = true, AlwaysExpanded = true, DrawScrollView = false)]
         public List<RouletteSector> sectors = new();
-        
+
+        public RouletteData()
+        {
+            id = Guid.NewGuid().ToString();
+        }
 
         public void OnValidate()
         {

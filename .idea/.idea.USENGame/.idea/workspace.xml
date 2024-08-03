@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Assets/Editor/AssetEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Assets/Editor/AssetEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/ProfileDataSourceSettings.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/CommendView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Addressables/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDataset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDataset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/USENGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/USENGame.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/LunarFramework" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -50,6 +45,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/539c950127d24dd9b0d63efcbeb5d9a7fe00/28/e782e477/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/539c950127d24dd9b0d63efcbeb5d9a7fe00/74/ddf3e193/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/98/24e03aa2/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/1e/49ed7bfa/DefaultAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/34/401261bf/AssetPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/39/269c91e0/GameObjectUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6e08e61cfda04255b3972ba7f0515fae81e000/54/0365a14f/Editor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -62,6 +58,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/880832f2c4e2458090401bbb74a86b24a8a00/fd/3c9d3a96/ReferenceLoopHandling.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/02/fffddca1/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/05/62a65cec/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/08/1ffdf106/ContinuationTaskFromResultTask`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/0c/bb84034f/EventHandler`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/22/511185e3/SynchronizationContextTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/30/edd3a2ed/Version.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,6 +67,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/7e/4cfa635c/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/8d/d6a27fd0/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/a5/90869d48/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/aa/2c329d34/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/b8/da6b3656/TaskCompletionSource`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/c6/557c8a44/IObservable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/c7/c229fcbf/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
@@ -334,10 +332,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="75096">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="75096" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -433,6 +431,45 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
+          <line>76</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="76" containingFunctionPresentation="Method 'SaveToFile'">
+            <startOffsets>
+              <option value="2827" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2903" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
+          <line>67</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="67" containingFunctionPresentation="Method 'SaveToFile'">
+            <startOffsets>
+              <option value="2533" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2591" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
+          <line>36</line>
+          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="36" containingFunctionPresentation="Lambda expression inside Constructor 'RouletteDAO'">
+            <startOffsets>
+              <option value="1135" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1214" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -35,6 +35,7 @@ namespace USEN.Games.Roulette
             LoadFromFile().ContinueWith(task =>
             {
                 Debug.Log($"[RouletteDAO] Load roulette data from file status: {task.Status}");
+                // if (task.Status == TaskStatus.RanToCompletion && task.Result != null)
                 if (task.Result != null)
                 {
                     var data = task.Result;
@@ -43,6 +44,7 @@ namespace USEN.Games.Roulette
                     if (data.version == null || Version > data.version)
                     {
                         _data = defaultData;
+                        _data.version = Version;
                         SaveToFile();
                     }
                     else _data = data;
@@ -56,21 +58,32 @@ namespace USEN.Games.Roulette
                     _data = defaultData != null ? defaultData : ScriptableObject.CreateInstance<RouletteDataset>();
                     SaveToFile();
                 }
+                Debug.Log($"[RouletteDAO] Data loaded: {_data.categories.Count} categories.");
                 tcs.SetResult(_data);
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
         
         public Task SaveToFile()
         {
+            Debug.Log($"[RouletteDAO] Saving roulette data to file.");
 #if DEBUG
-            string json = JsonConvert.SerializeObject(_data, Formatting.Indented, new VersionConverter());
+            string json = null;
+            try
+            {
+                json = JsonConvert.SerializeObject(_data, new VersionConverter());
+            }
+            catch (JsonException e)
+            {
+                Debug.LogError($"[RouletteDAO] Serialize roulette data error: {e.Message}");
+                return null;
+            }
 #else
             string json = JsonConvert.SerializeObject(_data, new VersionConverter());
 #endif
             var path = Path.Combine(Application.persistentDataPath, FILE_NAME);
             return File.WriteAllTextAsync(path, json).ContinueWith(task =>
             {
-                Debug.Log($"[RouletteDAO] Save roulette data to file: {path}");
+                Debug.Log($"[RouletteDAO] Roulette data saved to file: {path}");
             }); 
         }
 

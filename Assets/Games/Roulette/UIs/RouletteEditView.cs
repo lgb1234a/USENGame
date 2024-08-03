@@ -108,7 +108,7 @@ namespace USEN.Games.Roulette
         
         private void Update()
         {
-            Debug.Log($"[RouletteEditView] Update: {IsEditing}");
+            // Debug.Log($"[RouletteEditView] Update: {IsEditing}");
             
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
@@ -154,21 +154,28 @@ namespace USEN.Games.Roulette
             return KeyEventResult.Unhandled;
         }
 
-        public void AddSector()
+        public async void AddSector()
         {
+            if (Data.sectors.Count >= 10) return;
+            
             var newSector = new RouletteSector();
             newSector.color = RandomColor(0.5f);
             Data.sectors.Insert(0, newSector);
             listView.Data = Data.sectors;
             sectorCounter.text = $"{Data.sectors.Count}";
+            await UniTask.DelayFrame(1);
+            SetNavigation();
         }
         
-        public void RemoveSector()
+        public async void RemoveSector()
         {
-            if (Data.sectors.Count == 0) return;
+            if (Data.sectors.Count <= 2) return;
+            
             Data.sectors.RemoveAt(0);
             listView.Data = Data.sectors;
             sectorCounter.text = $"{Data.sectors.Count}";
+            await UniTask.DelayFrame(1);
+            SetNavigation();
         }
         
         private void SetNavigation()

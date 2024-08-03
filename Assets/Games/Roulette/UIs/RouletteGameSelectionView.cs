@@ -121,8 +121,9 @@ namespace USEN.Games.Roulette
                 view.Data = roulette;
             }) as RouletteData;
             
-            // Add to category
+            // Add to category and save
             Category.roulettes.Insert(0, result);
+            RouletteDAO.Instance.SaveToFile();
         }
         
         private void ShowContentView()
