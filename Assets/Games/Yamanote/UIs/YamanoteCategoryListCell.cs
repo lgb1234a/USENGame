@@ -60,7 +60,7 @@ namespace USEN.Games.Yamanote
                 // Cast a horizontal ray to ring collider to get collision point
                 var ray = new Ray( new Vector3(ringCollider.transform.position.x + 1000f, background.transform.position.y, 0), Vector3.left);
                 var hit = Physics2D.Raycast(ray.origin, ray.direction, 1000f, LayerMask.GetMask("Editor"));
-                Debug.Log(hit.point);
+                // Debug.Log(hit.point);
             
                 if (hit.collider != null)
                 {

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
@@ -23,7 +24,7 @@ namespace USEN.Games.Roulette
                 listView.Data = data.categories;
                 await UniTask.DelayFrame(2);
                 listView.FocusOnCell(0);
-            });
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         private void Update()

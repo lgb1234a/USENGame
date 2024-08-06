@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Assets/Editor/AssetEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Packages/LunarFramework/Core/Assets/Editor/AssetEditor.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDataset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDataset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteStartView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +21,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/73ae68d62ab841b9b1aa90cf5baf23ad5b200/f4/ed9e58de/0200004Cpdb84.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b7ddbc666124f97acc357fa84bab350185c00/69/63f61e5e/Key.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2880c19c3b344d8cb20d5ad03e3efbe529400/91/4e247b51/Event.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2fed12eace764578a01a50262fe1edc71f800/17/9c5b43e2/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/2c/9745391e/DOTween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/33/e9515e71/Ease.cs" root0="SKIP_HIGHLIGHTING" />
@@ -39,6 +29,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/6f/180225a2/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3eafbe1d22cf4565a6a1df7de10101d627a00/95/2ad5a32b/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45283eaf31924c8ebe9076ac2cc2df3945400/db/e561747b/ICancelHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4815faab82ff489f9c71ca645a3c35aa86a00/28/c9829b61/PlayerLoopTiming.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4afa7aba4e754829b9f32c254e65e7c812bc00/64/43adb8b4/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b2d7d59817e4af1a45d9ca0b0f44c327e00/1f/6f171761/VideoPlayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4b2d7d59817e4af1a45d9ca0b0f44c327e00/f1/9777b630/VideoRenderMode.cs" root0="SKIP_HIGHLIGHTING" />
@@ -64,14 +55,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/30/edd3a2ed/Version.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/45/20ee7cd3/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/74/612c8d45/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/7b/8944889d/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/7e/4cfa635c/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/8d/d6a27fd0/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/94/9c09e630/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/a5/90869d48/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/aa/2c329d34/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/b8/da6b3656/TaskCompletionSource`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/c6/557c8a44/IObservable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/c7/c229fcbf/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/de/3b3f7aec/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/ea/f756bebf/File.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/f4/2dacb9c2/QueueUserWorkItemCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8d67bbf3b14542519c4d452573e0d67924600/ab/55fb5729/ITimelineClipAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/941a4719b50f41b29409612f3478c8db1a000/11/ffa1b8f4/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b89159fb2954d1cad3afaf5ff7e6f7d6c000/f8/e4b282e7/TextAlignmentOptions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -243,7 +238,21 @@
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Base/Editor/WidgetPrefabProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -332,10 +341,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="75096">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="920060">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="75096" />
+      <option name="pid" value="920060" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -431,45 +440,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
-          <line>76</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="76" containingFunctionPresentation="Method 'SaveToFile'">
-            <startOffsets>
-              <option value="2827" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2903" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
-          <line>67</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="67" containingFunctionPresentation="Method 'SaveToFile'">
-            <startOffsets>
-              <option value="2533" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2591" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs</url>
-          <line>36</line>
-          <properties documentPath="Z:\Workspace\USENGame\Assets\Games\Roulette\Data\RouletteDAO.cs" initialLine="36" containingFunctionPresentation="Lambda expression inside Constructor 'RouletteDAO'">
-            <startOffsets>
-              <option value="1135" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1214" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="106" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

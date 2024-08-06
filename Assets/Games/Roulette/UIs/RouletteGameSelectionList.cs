@@ -28,17 +28,6 @@ namespace USEN.Games.Roulette
         protected override void OnCellSelected(int index, RouletteGameSelectionListCell listViewCell)
         {
             listViewCell.text.color = Color.black;
-            
-            // Emit event
-            ExecuteEvents.ExecuteHierarchy<RouletteGameSelectionView>(gameObject, null, (target, data) =>
-            {
-                this.SnapTo(transform as RectTransform);
-                if (target.rouletteWheel != null)
-                {
-                    // Change roulette wheel data
-                    target.rouletteWheel.RouletteData = SelectedData;
-                }
-            });
         }
     }
 

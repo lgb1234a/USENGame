@@ -1,4 +1,5 @@
 using LeTai;
+using Luna.Extensions.Unity;
 using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,6 @@ namespace USEN.Games.Roulette
     public class RouletteContentListCell : ListViewCell<RouletteSector>
     {
         public TextMeshProUGUI text;
-        private Button _button;
     
         private RouletteSector _data;
         public override RouletteSector Data
@@ -19,25 +19,24 @@ namespace USEN.Games.Roulette
             set
             {
                 _data = value;
-                if (_button != null)
-                    _button.colors = new ColorBlock
-                    {
-                        normalColor = value.color,
-                        highlightedColor =  _button.colors.highlightedColor,
-                        pressedColor =  _button.colors.pressedColor,
-                        selectedColor = value.color.WithA(0.5f),
-                        disabledColor = _button.colors.disabledColor,
-                        colorMultiplier = _button.colors.colorMultiplier,
-                        fadeDuration = _button.colors.fadeDuration
-                    };
                 if (text != null)
                     text.text = value.content;
+                
+                colors = new ColorBlock
+                {
+                    normalColor = value.color.With(0.7f, 0.7f).WithAlpha(0.8f),
+                    highlightedColor =  value.color.With(1f),
+                    pressedColor =  value.color.With(1f).WithAlpha(0.8f),
+                    selectedColor = value.color.With(1f),
+                    disabledColor = colors.disabledColor,
+                    colorMultiplier = colors.colorMultiplier,
+                    fadeDuration = colors.fadeDuration
+                };
             }
         }
 
         void Awake()
         {
-            _button = GetComponent<Button>();
         }
         
         public override void OnSelect(BaseEventData eventData)

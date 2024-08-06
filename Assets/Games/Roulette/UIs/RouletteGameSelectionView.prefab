@@ -688,6 +688,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4151734346331066589, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275198353537029436, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
+        type: 3}
+      propertyPath: rect2props.w
+      value: -38.890877
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275198353537029436, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
+        type: 3}
+      propertyPath: rect2props.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275198353537029436, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
+        type: 3}
+      propertyPath: rect2props.y
+      value: -4.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275198353537029436, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
+        type: 3}
+      propertyPath: rect2props.z
+      value: -38.890877
+      objectReference: {fileID: 0}
     - target: {fileID: 7589620353480255291, guid: 96b874bb70f59b04ba2d70862ad0bf4b,
         type: 3}
       propertyPath: m_Pivot.x

@@ -21,7 +21,6 @@ namespace USEN.Games.Roulette
         
         private void Start()
         {
-            Debug.Log("RouletteStartView started.");
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
             BgmManager.Play(bgmClip);
             
@@ -33,7 +32,7 @@ namespace USEN.Games.Roulette
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
-                SceneManager.LoadScene("GameEntries");
+                OnExitButtonClicked();
             }
 
             if (Input.GetKeyDown(KeyCode.A))
@@ -52,14 +51,17 @@ namespace USEN.Games.Roulette
 
         public void OnStartButtonClicked()
         {
-            Debug.Log("Start button clicked.");
             Navigator.Push<RouletteCategoryView>();
         }
         
         public void OnSettingsButtonClicked()
         {
-            Debug.Log("Settings button clicked.");
             Navigator.Push<RouletteSettingsView>();
+        }
+        
+        public void OnExitButtonClicked()
+        {
+            SceneManager.LoadScene("GameEntries");
         }
     }
 }

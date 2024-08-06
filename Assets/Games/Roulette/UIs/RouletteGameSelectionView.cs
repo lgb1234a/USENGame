@@ -35,6 +35,7 @@ namespace USEN.Games.Roulette
 
         void Awake()
         {
+            rouletteGameSelectionList.onCellSelected += (index, cell) => rouletteWheel.RouletteData = cell.Data;
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
             rouletteContentList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
         }

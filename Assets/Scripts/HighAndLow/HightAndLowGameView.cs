@@ -3,10 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Luna.UI.Navigation;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Playables;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using USEN.Assets;
 using USEN.Games.Common;
 using Random = UnityEngine.Random;
 
@@ -54,6 +58,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     // private ResultPlayerDirector _resultDirector;
     
     private bool _isPopupViewShowed;
+    
+    private AsyncOperationHandle<AudioClip>? _audioClipHandle;
     
     public void Build()
     {
@@ -133,6 +139,13 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
             m_isWaitContinue = true;
         }
+        
+        AssetUtils.LoadAsync<CommendView>().ContinueWith(task => {
+            var go = task.Result;
+            var commendView = go.GetComponent<CommendView>();
+            if (commendView != null) 
+                _audioClipHandle = commendView.PreloadAudio();
+        }, TaskScheduler.FromCurrentSynchronizationContext());
     }
 
     public override void OnDestroy() {
@@ -143,6 +156,10 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_checkedItemList.Clear();
         m_pokerPool.Clear();
         m_checkedPokers.Clear();
+        
+        AssetUtils.Unload<CommendView>();
+        if (_audioClipHandle != null)
+            Addressables.Release(_audioClipHandle.Value);
     }
     
     public void Hide()

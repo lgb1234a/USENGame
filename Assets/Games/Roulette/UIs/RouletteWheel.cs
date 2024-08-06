@@ -3,7 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Modules.UI.Misc;
+using Luna.Extensions.Unity;
 using UnityEngine;
 using TMPro;
 using Random = UnityEngine.Random;
