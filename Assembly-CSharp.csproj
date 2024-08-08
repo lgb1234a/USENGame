@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
      <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
      <Compile Include="Assets\Games\App.cs" />
+     <Compile Include="Assets\Samples\Parent.cs" />
      <Compile Include="Assets\Scripts\GameEntry.cs" />
      <Compile Include="Assets\Games\Yamanote\Materials\ImageShaderController.cs" />
      <Compile Include="Assets\Scripts\Bingo\CellHandler.cs" />
@@ -86,6 +87,7 @@
      <Compile Include="Assets\Scripts\USENSceneManager.cs" />
      <Compile Include="Assets\Games\Yamanote\UIs\YamanotePunishmentList.cs" />
      <Compile Include="Assets\Games\Common\UsenRemoteControlHandler.cs" />
+     <Compile Include="Assets\Samples\Child.cs" />
      <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryView.cs" />
      <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
      <Compile Include="Assets\Samples\Addressables\1.19.19\Addressables Utility\AddressablesUtility.cs" />
@@ -139,6 +141,7 @@
      <Compile Include="Assets\Scripts\SplashManager.cs" />
      <Compile Include="Assets\Scripts\Tools\RootViewType.cs" />
      <Compile Include="Assets\Scripts\AbstractView.cs" />
+     <Compile Include="Assets\Games\Common\PopupOptionsView.cs" />
      <Compile Include="Assets\Scripts\HighAndLow\Poker2D.cs" />
      <Compile Include="Assets\Games\Roulette\Data\RouletteDAO.cs" />
      <Compile Include="Assets\Scripts\Tools\AppConfig.cs" />
@@ -166,8 +169,6 @@
      <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
      <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
      <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-     <Compile Include="Assets\Samples\Child.cs" />
-     <Compile Include="Assets\Samples\Parent.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Resources\HighAndLow\HightAndLowGame\Finish" />
      <Folder Include="Assets\Resources\HighAndLow\HighAndLowTerminal" />
@@ -311,7 +312,6 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\TrailEffect\Shaders" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\OcclusionEffect\OcclusionEffect" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples" />
-     <None Include="Assets\AddressableAssetsData\link.xml" />
      <Folder Include="Assets\Resources\HighAndLow\Particles" />
      <Folder Include="Assets\Samples\Timeline\1.6.4\Customization Samples\Demo\Scenes" />
      <Folder Include="Assets\Resources\DefaultTheme\Effects\Home" />
@@ -343,6 +343,7 @@
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Shaders\Lit" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders" />
      <Folder Include="Assets\Games" />
+     <None Include="Assets\AddressableAssetsData\link.xml" />
      <Folder Include="Assets\Modules\UI" />
      <Folder Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\Decals\BlobShadow" />
      <Folder Include="Assets\Samples\Finish 1" />

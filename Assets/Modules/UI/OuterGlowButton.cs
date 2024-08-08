@@ -4,6 +4,7 @@ using DG.Tweening;
 using LeTai;
 using LeTai.TrueShadow;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(TrueShadow))]
@@ -16,6 +17,8 @@ public class OuterGlowButton : Button
     public bool outglowOnPressed = true;
     public bool outglowOnSelected = true;
     public bool outglowOnDisabled = false;
+    
+    public bool focusOnEnable = false;
 
     private bool _isGlowing = false;
     
@@ -27,6 +30,14 @@ public class OuterGlowButton : Button
             outerGlow = GetComponent<TrueShadow>();
 
         outerGlow.Color = outerGlow.Color.WithA(0);
+    }
+    
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        
+        if (focusOnEnable) 
+            EventSystem.current.SetSelectedGameObject(gameObject);
     }
 
 

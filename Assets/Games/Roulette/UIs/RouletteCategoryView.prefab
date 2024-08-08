@@ -902,6 +902,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4959032122547271962}
   - component: {fileID: 5748799722493824624}
+  - component: {fileID: 6443870632218136943}
+  - component: {fileID: 6258090674796987294}
   m_Layer: 5
   m_Name: RouletteCategoryView
   m_TagString: Untagged
@@ -949,6 +951,26 @@ MonoBehaviour:
   listView: {fileID: 4986309769921455581}
   bottomPanel: {fileID: 0}
   dataset: {fileID: 11400000, guid: c058586decbc0b148bcae011e8cf1745, type: 2}
+--- !u!225 &6443870632218136943
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959032122547271965}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!222 &6258090674796987294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959032122547271965}
+  m_CullTransparentMesh: 1
 --- !u!1001 &3625790259182084322
 PrefabInstance:
   m_ObjectHideFlags: 0

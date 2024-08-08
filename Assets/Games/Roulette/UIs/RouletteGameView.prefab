@@ -273,6 +273,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3710891072274180753}
   - component: {fileID: 3710891072274180754}
+  - component: {fileID: 8006167157273511046}
+  - component: {fileID: 6383954240507536603}
   m_Layer: 5
   m_Name: RouletteGameView
   m_TagString: Untagged
@@ -321,6 +323,26 @@ MonoBehaviour:
   rouletteWheel: {fileID: 3725162734924712925}
   startButton: {fileID: 7383198668330630975}
   bottomPanel: {fileID: 813345272954349311}
+--- !u!225 &8006167157273511046
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710891072274180752}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!222 &6383954240507536603
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710891072274180752}
+  m_CullTransparentMesh: 1
 --- !u!1 &4808328051194502261
 GameObject:
   m_ObjectHideFlags: 0

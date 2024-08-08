@@ -13,6 +13,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using USEN.Assets;
 using USEN.Games.Common;
@@ -24,14 +25,15 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public Button startButton;
         public BottomPanel bottomPanel;
-        
+
         private AsyncOperationHandle<AudioClip>? _audioClipHandle;
-        
-        public RouletteData RouletteData { 
+
+        public RouletteData RouletteData
+        {
             get => rouletteWheel.RouletteData;
             set => rouletteWheel.RouletteData = value;
         }
-        
+
         void OnEnable()
         {
             base.OnKey += OnKey;
@@ -59,10 +61,11 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
-            AssetUtils.LoadAsync<CommendView>().ContinueWith(task => {
+            AssetUtils.LoadAsync<CommendView>().ContinueWith(task =>
+            {
                 var go = task.Result;
                 var commendView = go.GetComponent<CommendView>();
-                if (commendView != null) 
+                if (commendView != null)
                     _audioClipHandle = commendView.PreloadAudio();
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
@@ -70,8 +73,9 @@ namespace USEN.Games.Roulette
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
-                Input.GetButtonDown("Cancel")) {
-                Navigator.Pop();
+                Input.GetButtonDown("Cancel"))
+            {
+                OnExitButtonClicked();
             }
         }
 
@@ -86,7 +90,7 @@ namespace USEN.Games.Roulette
         {
             if (@event == KeyEvent.Down)
             {
-                switch(key.keyCode)
+                switch (key.keyCode)
                 {
                     case Key.Enter:
                     case Key.Space:
@@ -94,11 +98,12 @@ namespace USEN.Games.Roulette
                         break;
                 }
             }
+
             return KeyEventResult.Unhandled;
         }
 
         private void OnStartButtonClicked()
-        { 
+        {
             SpinWheel();
         }
 
@@ -109,7 +114,7 @@ namespace USEN.Games.Roulette
 
         private void OnExitButtonClicked()
         {
-            Navigator.Pop();
+            PopupConfirmView();
         }
 
         private void OnBlueButtonClicked()
@@ -122,32 +127,43 @@ namespace USEN.Games.Roulette
             Navigator.Pop();
             Navigator.Pop();
         }
-        
+
         private async void OnYellowButtonClicked()
         {
             BgmManager.Pause();
             await Navigator.Push<CommendView>();
             BgmManager.Resume();
         }
-        
+
         private async Task SpinWheel()
         {
             Debug.Log("Start button clicked.");
-            
+
             // Hide buttons
             startButton.gameObject.SetActive(false);
-            
+
             // Spin the wheel
             rouletteWheel.SpinWheel();
             await UniTask.Delay((int)((rouletteWheel.spinDuration - 2) * 1000));
-            
+
             // Dotween move & scale
             rouletteWheel.transform.parent.DOLocalMoveX(960, 1f).SetEase(Ease.InOutSine);
             rouletteWheel.transform.parent.DOScale(3f, 1f).SetEase(Ease.InOutSine);
-            
+
             // Show buttons
             await UniTask.Delay(2 * 1000);
             bottomPanel.yellowButton.gameObject.SetActive(true);
+        }
+
+        private void PopupConfirmView()
+        {
+            Navigator.ShowModal<PopupOptionsView>(
+                builder: (popup) =>
+                {
+                    popup.onOption1 = () => Navigator.Pop();
+                    popup.onOption2 = () => Navigator.PopUntil<RouletteStartView>();
+                    popup.onOption3 = () => SceneManager.LoadScene("GameEntries");
+                });
         }
     }
 }

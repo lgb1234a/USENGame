@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 8953900516535339838}
   - component: {fileID: 8361144848840944189}
   - component: {fileID: 7154722526764376429}
+  - component: {fileID: 6709467032642127388}
   m_Layer: 5
   m_Name: AppInfoView
   m_TagString: Untagged
@@ -193,6 +194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05fb1dc2de9747449e016fa129d00e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &6709467032642127388
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378848170432716418}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4940466120155396454
 GameObject:
   m_ObjectHideFlags: 0

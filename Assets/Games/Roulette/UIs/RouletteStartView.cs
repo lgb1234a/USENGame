@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using USEN.Games.Common;
 
 namespace USEN.Games.Roulette
 {
