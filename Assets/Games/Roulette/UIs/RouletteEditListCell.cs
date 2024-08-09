@@ -34,7 +34,7 @@ namespace USEN.Games.Roulette
 
         void Start()
         {
-            indexText.text = Index.ToString();
+            indexText.text = (Index + 1).ToString();
 
             inputField.onValueChanged.AddListener(OnInputValueChanged);
             inputField.onEndEdit.AddListener(OnInputEnd);
