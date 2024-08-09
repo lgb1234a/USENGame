@@ -1,5 +1,7 @@
 // Created by LunarEclipse on 2024-6-21 1:53.
 
+using System.Linq;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Luna;
 using Luna.UI;
@@ -20,13 +22,25 @@ namespace USEN.Games.Roulette
         
         public AudioClip bgmClip;
         
+        private RouletteDataset _dataset;
+        
         private void Start()
         {
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
             BgmManager.Play(bgmClip);
             
+            startButton.interactable = false;
+            
             // Preload all roulette widgets
             // Widget.Load(GetType().Namespace);
+            
+            // Load the roulette data
+            RouletteDAO.Instance.Data.ContinueWith(async task => {
+                var data = task.Result;
+                _dataset = data;
+                startButton.interactable = true;
+                EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         private void Update()
@@ -52,9 +66,29 @@ namespace USEN.Games.Roulette
 
         public void OnStartButtonClicked()
         {
-            Navigator.Push<RouletteCategoryView>();
+            switch (RoulettePreferences.DisplayMode)
+            {
+                case DisplayMode.Normal:
+                    Navigator.Push<RouletteCategoryView>((view) => {
+                        view.Categories = _dataset.categories;
+                    });
+                    break;
+                case DisplayMode.Random:
+                    PlayRandomGame();
+                    break;
+            }
+           
         }
-        
+
+        private void PlayRandomGame()
+        {
+            var category = _dataset.categories.First(); //[Random.Range(0, _dataset.categories.Count)];
+            var rouletteData = category.roulettes[Random.Range(0, category.roulettes.Count)];
+            Navigator.Push<RouletteGameView>((view) => {
+                view.RouletteData = rouletteData;
+            });
+        }
+
         public void OnSettingsButtonClicked()
         {
             Navigator.Push<RouletteSettingsView>();

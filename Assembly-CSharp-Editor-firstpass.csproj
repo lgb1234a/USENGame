@@ -41,23 +41,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Folder Include="Assets\Plugins\Sirenix\Odin Validator\Editor\Config" />
-     <Folder Include="Assets\Plugins\Sirenix\Odin Validator\Editor" />
-     <Folder Include="Assets\Plugins\DOTween\Editor\Imgs" />
-     <Folder Include="Assets\Plugins\Sirenix\Odin Inspector\Assets\Editor" />
-     <Folder Include="Assets\Plugins\Sirenix\Odin Validator\Editor\Profiles" />
-     <Folder Include="Assets\Plugins\Sirenix\Odin Inspector\Config\Editor" />
-     <Folder Include="Assets\Plugins\DOTween\Editor" />
-     <None Include="Assets\Plugins\Sirenix\Odin Inspector\Assets\Editor\Bootstrap License.txt" />
-     <Reference Include="UnityEngine">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.CoreModule">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
-     </Reference>
+    <None Include="Assets\Plugins\Sirenix\Odin Inspector\Assets\Editor\Bootstrap License.txt" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Software\Unity\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Software\Unity\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Software\Unity\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

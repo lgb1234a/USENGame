@@ -4586,6 +4586,7 @@ GameObject:
   - component: {fileID: 8815159444235986534}
   - component: {fileID: 8223530227546670949}
   - component: {fileID: 5787771337318595523}
+  - component: {fileID: 4263000514162189140}
   m_Layer: 5
   m_Name: GameSettingsPanel2
   m_TagString: Untagged
@@ -4668,6 +4669,18 @@ MonoBehaviour:
   highAndLowTimerText: {fileID: 1319515529772323878}
   appInfoButton: {fileID: 8937257626683506717}
   backButton: {fileID: 4872517661275845256}
+--- !u!225 &4263000514162189140
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2950716858887959514}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3153134941392743175
 GameObject:
   m_ObjectHideFlags: 0
@@ -8617,6 +8630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   rootWidget: {fileID: 4793824627655562302}
+  focusAutomatically: 1
   escToPop: 0
 --- !u!1 &6238380600437992408
 GameObject:

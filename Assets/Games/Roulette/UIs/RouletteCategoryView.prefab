@@ -950,7 +950,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listView: {fileID: 4986309769921455581}
   bottomPanel: {fileID: 0}
-  dataset: {fileID: 11400000, guid: c058586decbc0b148bcae011e8cf1745, type: 2}
 --- !u!225 &6443870632218136943
 CanvasGroup:
   m_ObjectHideFlags: 0

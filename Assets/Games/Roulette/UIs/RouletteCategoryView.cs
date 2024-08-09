@@ -1,5 +1,5 @@
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
+using System;
+using System.Collections.Generic;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
@@ -11,20 +11,16 @@ namespace USEN.Games.Roulette
     {
         public RouletteCategoryList listView;
         public BottomPanel bottomPanel;
-    
-        public RouletteDataset dataset;
-    
+
+        public List<RouletteCategory> Categories
+        {
+            get => listView.Data;
+            set => listView.Data = value;
+        }
+
         void Start()
         {
-            // Load the roulette data
-            RouletteDAO.Instance.Data.ContinueWith(async task =>
-            {
-                var data = task.Result;
-                Debug.Log($"[RouletteThemeSelectionView] Data loaded: {data.categories.Count} categories.");
-                listView.Data = data.categories;
-                await UniTask.DelayFrame(2);
-                listView.FocusOnCell(0);
-            }, TaskScheduler.FromCurrentSynchronizationContext());
+            listView.FocusOnCell(0);
         }
 
         private void Update()

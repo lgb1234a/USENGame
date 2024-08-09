@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 2202384574959126553}
   - component: {fileID: 5937247813062468518}
   - component: {fileID: 2343208549086404350}
+  - component: {fileID: 951830863657339188}
   m_Layer: 5
   m_Name: RouletteCategoryList
   m_TagString: Untagged
@@ -470,6 +471,19 @@ MonoBehaviour:
   cell: {fileID: 8852818959337777196}
   snapToCellWhenSelected: 1
   selectFirstCellOnEnable: 1
+  selectFirstCellOnReload: 1
+--- !u!225 &951830863657339188
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248433112587204535}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4801086757439714427
 GameObject:
   m_ObjectHideFlags: 0
