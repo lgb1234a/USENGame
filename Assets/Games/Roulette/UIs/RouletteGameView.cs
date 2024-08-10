@@ -7,6 +7,7 @@ using DG.Tweening;
 using Luna.UI;
 using Luna.UI.Audio;
 using Luna.UI.Navigation;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
@@ -25,6 +26,7 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public Button startButton;
         public BottomPanel bottomPanel;
+        public TextMeshProUGUI confirmText;
 
         private AsyncOperationHandle<AudioClip>? _audioClipHandle;
 
@@ -36,8 +38,12 @@ namespace USEN.Games.Roulette
 
         void OnEnable()
         {
-            base.OnKey += OnKey;
+            base.OnKey += OnKeyEvent;
             startButton.onClick.AddListener(OnStartButtonClicked);
+            
+            rouletteWheel.OnSpinStart += OnSpinStart;
+            rouletteWheel.OnSpinEnd += OnSpinEnd;
+            
             bottomPanel.onExitButtonClicked += OnExitButtonClicked;
             bottomPanel.onSelectButtonClicked += OnStartButtonClicked;
             bottomPanel.onConfirmButtonClicked += OnConfirmButtonClicked;
@@ -48,8 +54,12 @@ namespace USEN.Games.Roulette
 
         void OnDisable()
         {
-            base.OnKey -= OnKey;
+            base.OnKey -= OnKeyEvent;
             startButton.onClick.RemoveListener(OnStartButtonClicked);
+            
+            rouletteWheel.OnSpinStart -= OnSpinStart;
+            rouletteWheel.OnSpinEnd -= OnSpinEnd;
+            
             bottomPanel.onExitButtonClicked -= OnExitButtonClicked;
             bottomPanel.onSelectButtonClicked -= OnStartButtonClicked;
             bottomPanel.onConfirmButtonClicked -= OnConfirmButtonClicked;
@@ -86,7 +96,7 @@ namespace USEN.Games.Roulette
                 Addressables.Release(_audioClipHandle.Value);
         }
 
-        private KeyEventResult OnKey(KeyControl key, KeyEvent @event)
+        private KeyEventResult OnKeyEvent(KeyControl key, KeyEvent @event)
         {
             if (@event == KeyEvent.Down)
             {
@@ -104,12 +114,16 @@ namespace USEN.Games.Roulette
 
         private void OnStartButtonClicked()
         {
-            SpinWheel();
+            if (rouletteWheel.IsSpinning)
+                rouletteWheel.StopSpin();
+            else SpinWheel();
         }
 
         private void OnConfirmButtonClicked()
         {
-            SpinWheel();
+            if (rouletteWheel.IsSpinning)
+                rouletteWheel.StopSpin();
+            else SpinWheel();
         }
 
         private void OnExitButtonClicked()
@@ -134,6 +148,22 @@ namespace USEN.Games.Roulette
             await Navigator.Push<CommendView>();
             BgmManager.Resume();
         }
+        
+        private void OnSpinStart()
+        {
+            confirmText.text = "停止";
+            
+            // Hide yellow button
+            bottomPanel.yellowButton.gameObject.SetActive(false);
+        }
+        
+        private void OnSpinEnd(string obj)
+        {
+            confirmText.text = "もう一度ルーレットを回す";
+            
+            // Show yellow button
+            bottomPanel.yellowButton.gameObject.SetActive(true);
+        }
 
         private async Task SpinWheel()
         {
@@ -143,16 +173,13 @@ namespace USEN.Games.Roulette
             startButton.gameObject.SetActive(false);
 
             // Spin the wheel
-            rouletteWheel.SpinWheel();
+            // rouletteWheel.SpinWheel();
+            rouletteWheel.StartSpin();
             await UniTask.Delay((int)((rouletteWheel.spinDuration - 2) * 1000));
 
             // Dotween move & scale
             rouletteWheel.transform.parent.DOLocalMoveX(960, 1f).SetEase(Ease.InOutSine);
             rouletteWheel.transform.parent.DOScale(3f, 1f).SetEase(Ease.InOutSine);
-
-            // Show buttons
-            await UniTask.Delay(2 * 1000);
-            bottomPanel.yellowButton.gameObject.SetActive(true);
         }
 
         private void PopupConfirmView()

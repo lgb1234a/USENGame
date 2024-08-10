@@ -41,19 +41,26 @@ namespace USEN.Games.Roulette
         public float textDistanceFromCenter = 2f;
         
         [Header("Spin Settings")]
+        public float spinSpeed = 360f; // Spin speed in degrees per second
         public float spinDuration = 4f; // Duration of the spin in seconds
-        public AnimationCurve spinCurve; // Animation curve to control the spin speed
+        
+        /// Animation curve to control the spin speed, which only works for `Spin(duration)` method.
+        public AnimationCurve spinCurve; 
         
         public event Action OnSpinStart;
-        public event Action<string> OnSpinComplete;
+        public event Action<string> OnSpinEnd;
 
         private Canvas _canvas;
 
         private bool _isSpinning = false;
         private float _totalAngle;
         private float _startAngle;
+        
+        private bool _stopSpin = false;
 
         public List<RouletteSector> Sectors => RouletteData.sectors;
+        
+        public bool IsSpinning => _isSpinning;
 
         private void Awake()
         {
@@ -65,16 +72,33 @@ namespace USEN.Games.Roulette
             if (Sectors.Count > 0)
                 DrawRouletteWheel();
         }
-
-        public void SpinWheel()
+        
+        /// Spin the wheel for a certain duration.
+        public void Spin(float duration = 0f)
         {
             if (!_isSpinning)
             {
-                StartCoroutine(Spin());
+                StartCoroutine(Spining(duration > 0 ? duration : spinDuration));
             }
         }
-
-        private IEnumerator Spin()
+        
+        /// Start spinning and wait for stop signal.
+        public void StartSpin()
+        {
+            if (!_isSpinning)
+            {
+                StartCoroutine(Spining());
+            }
+        }
+        
+        /// Stop spinning the wheel after calling `StartSpin()`.
+        public void StopSpin()
+        {
+            _stopSpin = true;
+        }
+        
+        /// Coroutine to spin the wheel for a certain duration.
+        private IEnumerator Spining(float duration)
         {
             _isSpinning = true;
             
@@ -87,14 +111,15 @@ namespace USEN.Games.Roulette
             int targetSectorIndex = Random.Range(0, Sectors.Count);
             float targetAngle = (clockwise ? _totalAngle * targetSectorIndex : 360f - targetSectorIndex * _totalAngle) + angleOffset;
 
-            _startAngle = transform.eulerAngles.z;
-            float endAngle = 360f * 5 + targetAngle; // Spin multiple times plus target angle
+            var startAngle = transform.eulerAngles.z;
+            float endAngle = spinSpeed * duration + targetAngle; // Spin multiple times plus target angle
 
-            while (elapsedTime < spinDuration)
+            // Spin the wheel
+            while (elapsedTime < duration)
             {
                 elapsedTime += Time.deltaTime;
-                float t = elapsedTime / spinDuration;
-                angle = Mathf.Lerp(_startAngle, endAngle, spinCurve.Evaluate(t)) % 360;
+                float t = elapsedTime / duration;
+                angle = Mathf.Lerp(startAngle, endAngle, spinCurve.Evaluate(t)) % 360;
                 transform.eulerAngles = new Vector3(0, 0, angle);
 
                 yield return null;
@@ -105,8 +130,67 @@ namespace USEN.Games.Roulette
             _isSpinning = false;
 
             // Announce the prize
-            Debug.Log("Won prize: " + Sectors[targetSectorIndex].content);
-            OnSpinComplete?.Invoke(GetResult(targetSectorIndex));
+            // Debug.Log("Result: " + Sectors[targetSectorIndex].content);
+            OnSpinEnd?.Invoke(GetResult(targetSectorIndex));
+        }
+        
+        /// Coroutine to spin the wheel until stop signal.
+        private IEnumerator Spining()
+        {
+            _isSpinning = true;
+            
+            OnSpinStart?.Invoke();
+            
+            /* Constant speed phase */
+            
+            float elapsedTime = 0f;
+            float speed = 0f;
+
+            // Spin the wheel until stop signal
+            while (!_stopSpin)
+            {
+                elapsedTime += Time.deltaTime;
+                
+                // Accelerate the wheel
+                speed = Mathf.Lerp(speed, spinSpeed, Mathf.Sin(elapsedTime / spinDuration * Mathf.PI / 2));
+                
+                transform.Rotate(0, 0, speed * Time.deltaTime);
+                yield return null;
+            }
+            
+            /* Deceleration phase */
+            
+            elapsedTime = 0f;
+
+            // Randomly determine the target sector
+            int targetSectorIndex = Random.Range(0, Sectors.Count);
+            float targetAngle = (clockwise ? _totalAngle * targetSectorIndex : 360f - targetSectorIndex * _totalAngle) + angleOffset;
+            
+            // Calculate the target angle and duration
+            var startAngle = transform.eulerAngles.z;
+            var endAngle = startAngle - startAngle % 360 + targetAngle + 720f;
+            var endDuration = (endAngle - startAngle) / spinSpeed;
+            var endTime = elapsedTime + endDuration * Mathf.PI / 2f;
+
+            // Spin to the target sector while slowing down
+            while (elapsedTime < endTime)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / endTime;
+                var angle = Mathf.Lerp(startAngle, endAngle, Mathf.Sin(t * Mathf.PI / 2)) % 360;
+                transform.eulerAngles = new Vector3(0, 0, angle);
+                yield return null;
+            }
+
+            // Ensure the wheel stops at the exact target sector
+            transform.eulerAngles = new Vector3(0, 0, endAngle % 360);
+            _isSpinning = false;
+
+            // Announce the prize
+            Debug.Log("Result: " + Sectors[targetSectorIndex].content);
+            OnSpinEnd?.Invoke(GetResult(targetSectorIndex));
+            
+            _stopSpin = false;
         }
         
         public string GetResult(int index)
@@ -114,7 +198,7 @@ namespace USEN.Games.Roulette
             return Sectors[index].content;
         }
 
-        void DrawRouletteWheel()
+        private void DrawRouletteWheel()
         {
             transform.localRotation = Quaternion.identity;
             _totalAngle = 360f / Sectors.Count;
@@ -134,7 +218,7 @@ namespace USEN.Games.Roulette
             transform.localRotation = Quaternion.Euler(0, 0, angleOffset);
         }
 
-        void CreateSector(int index, float sectorAngle)
+        private void CreateSector(int index, float sectorAngle)
         { 
             float startAngle = (index - 0.5f) * sectorAngle;
             float endAngle = startAngle + sectorAngle;

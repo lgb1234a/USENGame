@@ -20,7 +20,7 @@ namespace USEN.Games.Roulette
         private void Start()
         {
             sectors = new List<RouletteSector>(rouletteData.sectors);
-            rouletteWheel.OnSpinComplete += result =>
+            rouletteWheel.OnSpinEnd += result =>
             {
                 resultText.text = result;
             };
@@ -35,7 +35,7 @@ namespace USEN.Games.Roulette
             
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                rouletteWheel.SpinWheel();
+                rouletteWheel.Spin();
             }
             
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -74,7 +74,7 @@ namespace USEN.Games.Roulette
             if (keyName == "yellow")
             {
                 Debug.Log("Yellow key pressed");
-                rouletteWheel.SpinWheel();
+                rouletteWheel.Spin();
             }
 
             if (keyName == "green")
