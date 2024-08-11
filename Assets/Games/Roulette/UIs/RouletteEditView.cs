@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
@@ -35,7 +36,7 @@ namespace USEN.Games.Roulette
             get => _data;
             set
             {
-                _data = value;
+                _data = new RouletteData(value);
                 
                 if (title.text == "")
                 {
@@ -44,7 +45,7 @@ namespace USEN.Games.Roulette
                     else title.text = "新規作成";
                 }
                 gameTitle.text = value.title;
-                listView.Data = value.sectors; // reference type, modify this will modify the data in database
+                listView.Data = _data.sectors;
                 sectorCounter.text = $"{value.sectors.Count}";
             }
         }
@@ -101,9 +102,12 @@ namespace USEN.Games.Roulette
             base.OnKey -= OnKey;
         }
 
-        private void Start()
+        private async void Start()
         {
             SetNavigation();
+            
+            await UniTask.DelayFrame(1);
+            gameTitle.DeactivateInputField();
         }
         
         private void Update()
@@ -112,7 +116,7 @@ namespace USEN.Games.Roulette
             
             if (Input.GetKeyDown(KeyCode.Escape) ||
                 Input.GetButtonDown("Cancel")) {
-                if (!_isEditing) Navigator.Pop(Data);
+                if (!_isEditing) Navigator.Pop();
             }
 
             if (EventSystem.current.currentSelectedGameObject == sectorCounterButton.gameObject)
@@ -160,9 +164,9 @@ namespace USEN.Games.Roulette
             
             var newSector = new RouletteSector();
             newSector.color = RandomColor(0.5f);
-            Data.sectors.Insert(0, newSector);
-            listView.Data = Data.sectors;
-            sectorCounter.text = $"{Data.sectors.Count}";
+            listView.Add(newSector, 0);
+            sectorCounter.text = $"{listView.Count}";
+            
             await UniTask.DelayFrame(1);
             SetNavigation();
         }
@@ -170,10 +174,10 @@ namespace USEN.Games.Roulette
         public async void RemoveSector()
         {
             if (Data.sectors.Count <= 2) return;
+
+            listView.Remove(0);
+            sectorCounter.text = $"{listView.Count}";
             
-            Data.sectors.RemoveAt(0);
-            listView.Data = Data.sectors;
-            sectorCounter.text = $"{Data.sectors.Count}";
             await UniTask.DelayFrame(1);
             SetNavigation();
         }

@@ -42,9 +42,6 @@ namespace USEN.Games.Roulette
 
         private void OnEnable()
         {
-            HideContentView();
-            Category = _category;
-            
             bottomPanel.onRedButtonClicked += OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
         }
@@ -91,13 +88,20 @@ namespace USEN.Games.Roulette
             }
         }
 
-        public void OnBlueButtonClicked()
+        public async void OnBlueButtonClicked()
         {
             // Edit roulette
-            Navigator.Push<RouletteEditView>((view) =>
-            {
+            var result = await Navigator.Push<RouletteEditView>((view) => {
                 view.Data = rouletteGameSelectionList.SelectedData;
-            });
+            }) as RouletteData;
+            
+            // Add to category and save
+            if (result != null)
+            {
+                Category.roulettes[rouletteGameSelectionList.SelectedIndex] = result;
+                rouletteWheel.RouletteData = result;
+                RouletteDAO.Instance.SaveToFile();
+            }
         }
 
         public async void OnRedButtonClicked()
@@ -117,14 +121,17 @@ namespace USEN.Games.Roulette
             }
             
             // Open edit view
-            var result = await Navigator.Push<RouletteEditView>((view) =>
-            {
+            var result = await Navigator.Push<RouletteEditView>((view) => {
                 view.Data = roulette;
             }) as RouletteData;
             
             // Add to category and save
-            Category.roulettes.Insert(0, result);
-            RouletteDAO.Instance.SaveToFile();
+            if (result != null)
+            {
+                Category.roulettes.Add(result);
+                RouletteDAO.Instance.SaveToFile();
+                Category = Category;
+            }
         }
         
         private void ShowContentView()
@@ -138,6 +145,7 @@ namespace USEN.Games.Roulette
         {
             rouletteContentList.gameObject.SetActive(false);
             rouletteGameSelectionList.gameObject.SetActive(true);
+            rouletteGameSelectionList.Select(rouletteGameSelectionList.SelectedIndex);
         }
     }
 }

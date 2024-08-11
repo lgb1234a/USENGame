@@ -171,6 +171,7 @@
     <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
     <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
+    <Compile Include="Assets\Modules\UI\TextField.cs" />
     <None Include="Assets\Samples\GaussianBlur\GaussianBlur.shader" />
     <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
     <None Include="Assets\Resources\DefaultTheme\Effects\Home\00_BINGO.atlas.txt" />

@@ -26,6 +26,14 @@ namespace USEN.Games.Roulette
         {
             id = Guid.NewGuid().ToString();
         }
+        
+        // Copy constructor.
+        public RouletteData(RouletteData other)
+        {
+            id = other.id;
+            title = other.title;
+            sectors = new List<RouletteSector>(other.sectors);
+        }
 
         public void OnValidate()
         {

@@ -4,7 +4,7 @@
         "deviceId": "309af56c",
         "name": "com.usen.ubingo",
         "processId": 32162,
-        "exited": false
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [

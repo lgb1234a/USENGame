@@ -13,7 +13,7 @@ namespace USEN.Games.Roulette
     {
         public const string FILE_NAME = "Roulette.data";
         public const string DEFAULT_DATA_PATH = "DefaultRouletteDataset";
-        public static Version Version = new(1, 0, 0);
+        public static Version Version = new(1, 0, 1);
  
         // Singleton
         public static RouletteDAO Instance = new();
