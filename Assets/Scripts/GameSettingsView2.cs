@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Luna.UI;
 using Luna.UI.Navigation;
+using Modules.Shader;
 using Sirenix.Utilities;
 using UnityEngine.Serialization;
 using USEN.Games.Common;

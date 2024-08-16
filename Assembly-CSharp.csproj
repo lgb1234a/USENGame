@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Tools\AudioResManager.cs" />
     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryList.cs" />
     <Compile Include="Assets\Scripts\Tools\Loading.cs" />
+    <Compile Include="Assets\Modules\UI\TextField.cs" />
     <Compile Include="Assets\Games\Roulette\UIs\RouletteSelectionListCell.cs" />
     <Compile Include="Assets\Scripts\ResManager\ThemeResManager.cs" />
     <Compile Include="Assets\Scripts\ResManager\DefaultThemeResConfig.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\Scripts\Roulette\RouletteEditView.cs" />
     <Compile Include="Assets\Games\Roulette\UIs\RouletteCategoryListCell.cs" />
     <Compile Include="Assets\Scripts\TerminalView.cs" />
+    <Compile Include="Assets\Modules\Shader\ImageTransitionShader.cs" />
     <Compile Include="Assets\Modules\Assets\AssetUtils.cs" />
     <Compile Include="Assets\Games\Roulette\Data\RouletteCategory.cs" />
     <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
@@ -171,13 +173,13 @@
     <Compile Include="Assets\Games\Roulette\UIs\RouletteGameSelectionList.cs" />
     <Compile Include="Assets\Scripts\GameSettingsView2.cs" />
     <Compile Include="Assets\Scripts\Tools\SkipSplash.cs" />
-    <Compile Include="Assets\Modules\UI\TextField.cs" />
     <None Include="Assets\Samples\GaussianBlur\GaussianBlur.shader" />
     <None Include="Assets\Samples\Spine\Queen\Spine_queen.atlas.txt" />
     <None Include="Assets\Resources\DefaultTheme\Effects\Home\00_BINGO.atlas.txt" />
     <None Include="Assets\Samples\Assets\KawaseBlur\KawaseBlur.shader" />
     <None Include="Assets\Resources\ChristmasThemes\Effects\Rotate\00_BINGO_Ch4.atlas.txt" />
     <None Include="Assets\Samples\Spine\King\Spine_King.atlas.txt" />
+    <None Include="Assets\Modules\Shader\ImageTransition.shader" />
     <None Include="Assets\Resources\Material\default.shader" />
     <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
     <None Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders\3DText.shader" />

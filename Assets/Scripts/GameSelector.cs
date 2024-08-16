@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Modules.Shader;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -10,6 +11,7 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
     public GameEntry[] gameEntries;
     public Button gameSettingsBtn;
     public GameObject gameSettingsGO;
+    public ImageTransitionShader background;
     public float spacing = 300;
     public float dragSpeed = 0.5f;
     
@@ -96,6 +98,9 @@ public class GameSelector : MonoBehaviour, IDragHandler, IDropHandler
     void UpdateSelectedIndex(int index)
     {
         _selectedIndex = index;
+        
+        if (background != null)
+            background.Select(index);
 
         for (int i = 0; i < gameEntries.Length; i++)
         {

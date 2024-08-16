@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Modules\UI\Editor\OuterGlowButtonEditor.cs" />
+    <Compile Include="Assets\Modules\UI\Editor\TextFieldEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\EditorTool.cs" />
     <Compile Include="Assets\Editor\SelectOddNumberedFiles.cs" />
-    <Compile Include="Assets\Modules\UI\Editor\TextFieldEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Software\Unity\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

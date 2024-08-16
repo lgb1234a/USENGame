@@ -5,26 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Editor/TextFieldEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/Editor/TextFieldEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/TextField.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modules/UI/TextField.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransition.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransition.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransition.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransition.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransitionShader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modules/Shader/ImageTransitionShader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_bingo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_bingo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_hi&amp;lo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_hi&amp;lo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_king.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_king.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_roulette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_roulette.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_yamanote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/backimage/backimage_yamanote.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/Higt&amp;Low.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/Higt&amp;Low.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/Higt&amp;Low_説明文有り.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/Higt&amp;Low_説明文有り.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ビンゴ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ビンゴ.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ビンゴ_説明文有り.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ビンゴ_説明文有り.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ルーレット.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ルーレット.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ルーレット_説明文有り.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/ルーレット_説明文有り.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/山手線ゲーム.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/山手線ゲーム.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/山手線ゲーム_説明文有り.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/山手線ゲーム_説明文有り.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/王様じゃんけん.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/王様じゃんけん.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/王様じゃんけん_説明文有り.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/GameEntries/entries/王様じゃんけん_説明文有り.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Data/RouletteData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/ListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/ListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameEntries.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameEntries.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSettingsView2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -87,9 +116,14 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Tests/Editor/Pseudo/CharacterSubstitutorTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.android-logcat@1.3.2/Editor/Tasks/AndroidLogcatDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/Utils/PropertySheetFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.10/Editor/LookDev/Compositor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.10/Runtime/RenderGraph/RenderGraphResourceRegistry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.10/ShaderLibrary/API/D3D11.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.10/ShaderLibrary/Macros.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.10/ShaderLibrary/SpaceTransforms.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/Editor/AssetPostProcessors/FBXMaterialDescriptionPreprocessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/ShaderLibrary/Core.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/ShaderLibrary/UnityInput.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/Shaders/2D/Shadow2D-Shadow-Sprite.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/Shaders/2D/Sprite-Lit-Default.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.10/Shaders/2D/Sprite-Unlit-Default.shader" root0="SKIP_HIGHLIGHTING" />
@@ -195,30 +229,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.42481753",
-    "git-widget-placeholder": "luna",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.42481753&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;luna&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\94988\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\94988\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:/Builds/UsenGame\ubingo.exe" />
@@ -254,10 +288,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1004">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1004" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -310,6 +344,8 @@
       <workItem from="1723246875842" duration="6445000" />
       <workItem from="1723269597376" duration="593000" />
       <workItem from="1723286318582" duration="15522000" />
+      <workItem from="1723746708603" duration="15750000" />
+      <workItem from="1723802508103" duration="1173000" />
     </task>
     <servers />
   </component>
