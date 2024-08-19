@@ -115,14 +115,14 @@ namespace USEN.Games.Roulette
         private void OnStartButtonClicked()
         {
             if (rouletteWheel.IsSpinning)
-                rouletteWheel.StopSpin();
+                StopWheel();
             else SpinWheel();
         }
 
         private void OnConfirmButtonClicked()
         {
             if (rouletteWheel.IsSpinning)
-                rouletteWheel.StopSpin();
+                StopWheel();
             else SpinWheel();
         }
 
@@ -175,9 +175,22 @@ namespace USEN.Games.Roulette
             // Spin the wheel
             // rouletteWheel.SpinWheel();
             rouletteWheel.StartSpin();
-            await UniTask.Delay((int)((rouletteWheel.spinDuration - 2) * 1000));
 
             // Dotween move & scale
+            // await UniTask.Delay((int)((rouletteWheel.spinDuration - 2) * 1000));
+            // rouletteWheel.transform.parent.DOLocalMoveX(960, 1f).SetEase(Ease.InOutSine);
+            // rouletteWheel.transform.parent.DOScale(3f, 1f).SetEase(Ease.InOutSine);
+        }
+        
+        private async Task StopWheel()
+        {
+            Debug.Log("Stop button clicked.");
+
+            // Stop the wheel
+            rouletteWheel.StopSpin();
+
+            // Dotween move & scale
+            // await UniTask.Delay(1000);
             rouletteWheel.transform.parent.DOLocalMoveX(960, 1f).SetEase(Ease.InOutSine);
             rouletteWheel.transform.parent.DOScale(3f, 1f).SetEase(Ease.InOutSine);
         }
