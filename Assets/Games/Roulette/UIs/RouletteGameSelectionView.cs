@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using USEN.Games.Common;
@@ -13,6 +14,7 @@ namespace USEN.Games.Roulette
 {
     public class RouletteGameSelectionView : Widget, IEventSystemHandler
     {
+        public TextMeshProUGUI titleText;
         public RouletteGameSelectionList rouletteGameSelectionList;
         public RouletteContentList rouletteContentList;
         public RouletteWheel rouletteWheel;
@@ -30,6 +32,8 @@ namespace USEN.Games.Roulette
                 if (value.title == "オリジナル")
                     bottomPanel.redButton.gameObject.SetActive(true);
                 else bottomPanel.redButton.gameObject.SetActive(false);
+                
+                titleText.text = value.title;
             }
         }
 
@@ -42,6 +46,7 @@ namespace USEN.Games.Roulette
 
         private void OnEnable()
         {
+            HideContentView();
             bottomPanel.onRedButtonClicked += OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
         }
