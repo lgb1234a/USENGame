@@ -21,6 +21,7 @@ namespace USEN.Games.Roulette
     {
         public TextMeshProUGUI title;
         public TMP_InputField gameTitle;
+        public RouletteEditListCell titleCell;
         public Button sectorCounterButton;
         public TextMeshProUGUI sectorCounter;
         public RouletteEditList listView;
@@ -65,11 +66,11 @@ namespace USEN.Games.Roulette
                 };
             };
             
-            listView.onCellSubmitted += async (index, cell) =>
-            {
-                await UniTask.NextFrame();
-                cell.inputField.Select();
-            };
+            // listView.onCellSubmitted += async (index, cell) =>
+            // {
+            //     await UniTask.NextFrame();
+            //     cell.inputField.Select();
+            // };
             
             bottomPanel.onBlueButtonClicked += async () =>
             {
@@ -189,7 +190,7 @@ namespace USEN.Games.Roulette
             Navigation navigation1 = new Navigation
             {
                 mode = Navigation.Mode.Explicit,
-                selectOnUp = gameTitle,
+                selectOnUp = titleCell,
                 selectOnDown = listView.cells[0],
             };
             sectorCounterButton.navigation = navigation1;

@@ -16,7 +16,6 @@ namespace USEN.Games.Roulette
         public TextMeshProUGUI indexText;
         public TMP_InputField inputField;
         
-        public event Action<int, RouletteEditListCell> onSubmitted;
         public event Action<int, RouletteEditListCell, string> onInputValueChanged;
         public event Action<int, RouletteEditListCell, string> onInputEnd;
         
@@ -34,7 +33,8 @@ namespace USEN.Games.Roulette
 
         void Start()
         {
-            indexText.text = (Index + 1).ToString();
+            if (indexText != null)
+                indexText.text = (Index + 1).ToString();
 
             inputField.onValueChanged.AddListener(OnInputValueChanged);
             inputField.onEndEdit.AddListener(OnInputEnd);
@@ -62,11 +62,20 @@ namespace USEN.Games.Roulette
             onInputValueChanged?.Invoke(Index, this, newValue);
         }
 
-        public override async void OnSelect(BaseEventData eventData)
+        public override void OnSelect(BaseEventData eventData)
         {
             base.OnSelect(eventData);
             Debug.Log($"[RouletteEditListCell] OnSelect: {Index}");
             inputField.DeactivateInputField();
+        }
+        
+        public override async void OnSubmit(BaseEventData eventData)
+        {
+            base.OnSubmit(eventData);
+            Debug.Log($"[RouletteEditListCell] OnSubmit: {Index}");
+            
+            await UniTask.NextFrame();
+            inputField.Select();
         }
     }
 }

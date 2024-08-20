@@ -105,6 +105,7 @@ namespace USEN.Games.Roulette
             {
                 Category.roulettes[rouletteGameSelectionList.SelectedIndex] = result;
                 rouletteWheel.RouletteData = result;
+                rouletteGameSelectionList.Reload();
                 RouletteDAO.Instance.SaveToFile();
             }
         }
