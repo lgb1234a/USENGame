@@ -134,12 +134,25 @@ namespace USEN.Games.Roulette
         private void OnBlueButtonClicked()
         {
             Navigator.Pop();
+            
+            if (Navigator.Instance.TopWidget is not RouletteGameSelectionView)
+            {
+                Navigator.Push<RouletteCategoryView>(async view => {
+                    await UniTask.NextFrame();
+                    view.GotoRandomCategory();
+                });
+            }
         }
 
         private void OnRedButtonClicked()
         {
             Navigator.Pop();
             Navigator.Pop();
+            
+            if (Navigator.Instance.TopWidget is not RouletteGameSelectionView)
+            {
+                Navigator.Push<RouletteCategoryView>();
+            }
         }
 
         private async void OnYellowButtonClicked()

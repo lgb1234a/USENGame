@@ -78,10 +78,9 @@ namespace USEN.Games.Roulette
                     PlayRandomGame();
                     break;
             }
-           
         }
 
-        private void PlayRandomGame()
+        public void PlayRandomGame()
         {
             var category = _dataset.categories.First(); //[Random.Range(0, _dataset.categories.Count)];
             var rouletteData = category.roulettes[Random.Range(0, category.roulettes.Count)];
