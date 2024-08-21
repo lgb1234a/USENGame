@@ -187,7 +187,7 @@
     <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />
     <None Include="Assets\Resources\DefaultTheme\Effects\Rotate\00_BINGO.atlas.txt" />
     <None Include="Assets\Resources\Material\default_font.shader" />
-    <None Include="Assets\Games\Roulette\UIs\Roulette Unlit.shader" />
+    <None Include="Assets\Games\Roulette\Materials\Roulette Unlit.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Software\Unity\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

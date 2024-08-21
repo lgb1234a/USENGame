@@ -143,9 +143,9 @@ MonoBehaviour:
   sectorInterval: 0.05
   angleOffset: 180
   clockwise: 1
-  font: {fileID: 11400000, guid: 2439c77de267d35468211a352d77d9e4, type: 2}
+  font: {fileID: 11400000, guid: 93fec4915002970439709b7a72da1638, type: 2}
   fontSize: 3
-  outlineWidth: 0.3
+  outlineWidth: 0.4
   textDistanceFromCenter: 1
   spinSpeed: 360
   spinDuration: 4
@@ -169,39 +169,6 @@ MonoBehaviour:
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spinCurve2:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.50091064
-      value: 0.50091064
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
