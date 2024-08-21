@@ -32,7 +32,9 @@ namespace USEN.Games.Roulette
         {
             id = other.id;
             title = other.title;
-            sectors = new List<RouletteSector>(other.sectors);
+            sectors = new();
+            for (int i = 0; i < other.sectors.Count; i++)
+                sectors.Add(new RouletteSector(other.sectors[i]));
         }
 
         public void OnValidate()

@@ -9,7 +9,7 @@ using Sirenix.OdinInspector;
 namespace USEN.Games.Roulette
 {
     [Serializable]
-    public partial class RouletteSector
+    public class RouletteSector
     {
         [TableColumnWidth(150, Resizable = true)]
         [HideInInspector] public int id;

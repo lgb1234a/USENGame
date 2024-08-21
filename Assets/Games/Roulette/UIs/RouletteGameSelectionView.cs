@@ -2,6 +2,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Luna.UI;
 using Luna.UI.Navigation;
@@ -20,6 +22,7 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public BottomPanel bottomPanel;
         
+        private RouletteDAO _dao;
         private RouletteCategory _category;
         public RouletteCategory Category
         {
@@ -36,12 +39,16 @@ namespace USEN.Games.Roulette
                 titleText.text = value.title;
             }
         }
+        
+        private bool IsOriginal => Category.title == "オリジナル";
 
-        void Awake()
+        async void Awake()
         {
             rouletteGameSelectionList.onCellSelected += (index, cell) => rouletteWheel.RouletteData = cell.Data;
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
             rouletteContentList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
+            
+            _dao = await RouletteDAO.Instance;
         }
 
         private void OnEnable()
@@ -103,10 +110,18 @@ namespace USEN.Games.Roulette
             // Add to category and save
             if (result != null)
             {
-                Category.roulettes[rouletteGameSelectionList.SelectedIndex] = result;
-                rouletteWheel.RouletteData = result;
-                rouletteGameSelectionList.Reload();
-                RouletteDAO.Instance.SaveToFile();
+                if (IsOriginal)
+                {
+                    Category.roulettes[rouletteGameSelectionList.SelectedIndex] = result;
+                    rouletteWheel.RouletteData = result;
+                    rouletteGameSelectionList.Reload();
+                }
+                else
+                {
+                    _dao?.Data?.categories?.Last()?.roulettes?.Add(result);
+                }
+                
+                _dao?.SaveToFile();
             }
         }
 
@@ -134,9 +149,18 @@ namespace USEN.Games.Roulette
             // Add to category and save
             if (result != null)
             {
-                Category.roulettes.Add(result);
-                RouletteDAO.Instance.SaveToFile();
-                Category = Category;
+                if (IsOriginal)
+                {
+                    Category.roulettes.Add(result);
+                    // Category = Category;
+                    rouletteGameSelectionList.Reload();
+                }
+                else
+                {
+                    _dao?.Data?.categories?.Last()?.roulettes?.Add(result);
+                }
+                
+                _dao?.SaveToFile();
             }
         }
         

@@ -86,7 +86,9 @@ namespace USEN.Games.Roulette
             bottomPanel.onRedButtonClicked += () =>
             {
                 Navigator.Pop(Data);
-                RouletteDAO.Instance.SaveToFile();
+                RouletteDAO.Instance.ContinueWith(async task => {
+                    task.Result?.SaveToFile();
+                }, TaskScheduler.FromCurrentSynchronizationContext());
             };
         }
 

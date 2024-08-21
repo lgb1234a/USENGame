@@ -16,15 +16,26 @@ namespace USEN.Games.Roulette
         public static Version Version = new(1, 0, 1);
  
         // Singleton
-        public static RouletteDAO Instance = new();
+        public static Task<RouletteDAO> Instance;
         
-        public Task<RouletteDataset> Data => tcs.Task;
         private TaskCompletionSource<RouletteDataset> tcs = new();
         
         private RouletteDataset _data;
         
+        public RouletteDataset Data => _data;
+        
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void Initialize() {}
+        private static void Initialize()
+        {
+            Instance = Create();
+        }
+        
+        public static Task<RouletteDAO> Create()
+        {
+            var dao = new RouletteDAO();
+            return dao.tcs.Task.ContinueWith(task => dao);
+        }
         
         private RouletteDAO()
         {

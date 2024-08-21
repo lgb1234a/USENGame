@@ -22,6 +22,7 @@ namespace USEN.Games.Roulette
         
         public AudioClip bgmClip;
         
+        private RouletteDAO _dao;
         private RouletteDataset _dataset;
         
         private void Start()
@@ -35,9 +36,9 @@ namespace USEN.Games.Roulette
             // Widget.Load(GetType().Namespace);
             
             // Load the roulette data
-            RouletteDAO.Instance.Data.ContinueWith(async task => {
-                var data = task.Result;
-                _dataset = data;
+            RouletteDAO.Instance.ContinueWith(async task => {
+                _dao = task.Result;
+                _dataset = _dao.Data;
                 startButton.interactable = true;
                 EventSystem.current.SetSelectedGameObject(startButton.gameObject);
             }, TaskScheduler.FromCurrentSynchronizationContext());
