@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37089851, g: 0.3783701, b: 0.3572253, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708625, g: 0.37838694, b: 0.35726872, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1451,8 +1451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: 43d0353646054bb44b756a8b652579c0, type: 3}
-  - {fileID: 21300000, guid: 827171a12d6f1c543abc501ee205e0cc, type: 3}
   - {fileID: 21300000, guid: 89a96a09be6641e41818280ad5884196, type: 3}
+  - {fileID: 21300000, guid: 827171a12d6f1c543abc501ee205e0cc, type: 3}
   - {fileID: 21300000, guid: 363f9abad2d8dac44812c5407fd4ce77, type: 3}
   - {fileID: 21300000, guid: f3b6bdf1e6a3b3943b30b6a540ac1631, type: 3}
   duration: 0.3
