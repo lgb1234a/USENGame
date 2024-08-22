@@ -15,6 +15,8 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
     HighAndLowGameView m_gameView;
     HighAndLowSettingsView m_settingsView;
 
+    GameObject _backgrond;
+    
     GameObject m_resetPanel;
     Button m_resetBtn;
     Button m_cancelBtn;
@@ -36,6 +38,8 @@ public class HighAndLowHomeView : AbstractView, IViewOperater
         m_resetBtn.onClick.AddListener(OnClickResetButton);
         m_cancelBtn = m_mainViewGameObject.transform.Find("ResetPanel/CancelBtn").GetComponent<Button>();
         m_cancelBtn.onClick.AddListener(OnClickCancelButton);
+        
+        _backgrond = m_mainViewGameObject.transform.Find("Bg").gameObject;
         
         _exitButton = m_mainViewGameObject.transform.Find("BottomPanel/ExitButton").GetComponent<Button>();
         _exitButton.onClick.AddListener(() => {

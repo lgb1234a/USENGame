@@ -50,7 +50,9 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
         switch (m_index)
         {
             case 1:
-                LoadGame(RootViewType.HighAndLow);
+                AppConfig.Instance.SelectedGameIndex = (int)RootViewType.HighAndLow;
+                AppConfig.Instance.HomeSceneRootViewType = RootViewType.HighAndLow;
+                USENSceneManager.Instance.LoadScene("High&Low");
                 break;
             case 2:
                 LoadGame(RootViewType.Bingo);

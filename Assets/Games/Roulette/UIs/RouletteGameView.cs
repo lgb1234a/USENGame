@@ -214,7 +214,7 @@ namespace USEN.Games.Roulette
                 builder: (popup) =>
                 {
                     popup.onOption1 = () => Navigator.Pop();
-                    popup.onOption2 = () => Navigator.PopUntil<RouletteStartView>();
+                    popup.onOption2 = () => Navigator.PopToRoot(); //Navigator.PopUntil<RouletteStartView>();
                     popup.onOption3 = () => SceneManager.LoadScene("GameEntries");
                 });
         }

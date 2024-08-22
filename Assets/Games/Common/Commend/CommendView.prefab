@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 4283495057150400664}
   - component: {fileID: 3361706288454499758}
   - component: {fileID: 7807749989887376661}
+  - component: {fileID: 2959945090983743794}
   m_Layer: 5
   m_Name: CommendView
   m_TagString: Untagged
@@ -322,6 +323,14 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!222 &2959945090983743794
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283495057150400663}
+  m_CullTransparentMesh: 1
 --- !u!1 &4283495057450623455
 GameObject:
   m_ObjectHideFlags: 0

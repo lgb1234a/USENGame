@@ -27,6 +27,8 @@ namespace USEN.Games.Roulette
         }
         
         [Header("Wheel Settings")]
+        /// Radius of the wheel in meters.
+        /// If the wheel is too small, you should set render mode of the canvas to "Screen Space - Camera" and adjust the scale factor to 9.353078.
         public float radius = 3.2f;
         public int segmentsPerSector = 10;
         public float sectorInterval = 0.05f;

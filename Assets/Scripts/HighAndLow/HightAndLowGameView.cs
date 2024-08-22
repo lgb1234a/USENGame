@@ -12,6 +12,7 @@ using UnityEngine.Playables;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using USEN.Assets;
 using USEN.Games.Common;
+using USEN.Games.Roulette;
 using Random = UnityEngine.Random;
 
 public class HighAndLowGameView : AbstractView, IViewOperater
@@ -58,6 +59,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     // private ResultPlayerDirector _resultDirector;
     
     private bool _isPopupViewShowed;
+    private bool _isRouletteShowing;
     
     private AsyncOperationHandle<AudioClip>? _audioClipHandle;
     
@@ -217,6 +219,9 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     public void Update()
     {
+        if (!m_mainViewGameObject.activeInHierarchy)
+            return;
+        
         if (Input.GetKey(KeyCode.Alpha1))
         {
             _finishDirector.Play();
@@ -227,7 +232,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
                 OnClickedTerminalBtn();
         }
         
-        if (m_waitTrigger && !_isPopupViewShowed) {
+        if (m_waitTrigger && !_isPopupViewShowed && !_isRouletteShowing) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
                 Input.GetKeyDown(KeyCode.Return) || 
@@ -236,7 +241,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
         
-        if (m_isShowTimer && !_isPopupViewShowed) {
+        if (m_isShowTimer && !_isPopupViewShowed && !_isRouletteShowing) {
             if (Input.GetKeyDown(KeyCode.UpArrow) ||
                 Input.GetKeyDown(KeyCode.DownArrow) ||
                 Input.GetKeyDown(KeyCode.Return) ||
@@ -245,13 +250,13 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             }
         }
 
-        if (!m_isGameFinished && !_isPopupViewShowed) {
+        if (!m_isGameFinished && !_isPopupViewShowed && !_isRouletteShowing) {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Submit")) {
                 OnClickedConfirmBtn();
             }
         }
 
-        _isPopupViewShowed = m_terminalView?.GameObject.activeInHierarchy == true;
+        _isPopupViewShowed = m_terminalView?.MainGameObject.activeInHierarchy == true;
     }
 
     void OnClickedHistoryButton() {
@@ -272,12 +277,15 @@ public class HighAndLowGameView : AbstractView, IViewOperater
         m_terminalView.Show();
     }
 
-    void OnClickedRouletteBtn() {
+    async void OnClickedRouletteBtn() {
         AudioManager.Instance.PlayKeyBackEffect();
-        if (m_rouletteView == null) {
-            m_rouletteView = new HighAndLowRouletteView();
-        }
-        ViewManager.Instance.Push(m_rouletteView);
+        await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
+            var dao = await RouletteDAO.Instance;
+            view.RouletteData = dao.GetRandomRoulette();
+            _isRouletteShowing = true;
+        });
+        await UniTask.NextFrame();
+        _isRouletteShowing = false;
     }
 
     async void OnClickedWinnerBtn() {

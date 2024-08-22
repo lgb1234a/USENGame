@@ -77,7 +77,7 @@ namespace USEN.Games.Common
         {
             var index = AppConfig.Instance.CommendationVideoOption;
             if (index < audioClips.Count)
-                return audioClips[index].LoadAssetAsync();
+                return Addressables.LoadAssetAsync<AudioClip>(audioClips[index]);
             return null;
         }
     }
