@@ -171,6 +171,9 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     public void OnAndroidKeyDown(string keyName)
     {
+        if (_isPopupViewShowed || _isRouletteShowing)
+            return;
+        
         if (keyName == "blue")
         {
             OnClickedHistoryButton();
