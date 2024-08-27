@@ -20,7 +20,7 @@ namespace USEN.Games.Yamanote
             {
                 _category = value;
                 titleText.text = value.title;
-                listView.Data = value.themes;
+                listView.Data = value.questions;
             }
         }
     

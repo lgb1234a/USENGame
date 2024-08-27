@@ -92,6 +92,7 @@
     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteCategoryView.cs" />
     <Compile Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\RendererFeatures\KeepFrame\KeepFrameFeature.cs" />
     <Compile Include="Assets\Samples\Addressables\1.19.19\Addressables Utility\AddressablesUtility.cs" />
+    <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsPicker.cs" />
     <Compile Include="Assets\Scripts\GameSettingsView.cs" />
     <Compile Include="Assets\Scripts\Tools\MonoBehaviourSingletonTemplate.cs" />
     <Compile Include="Assets\Scripts\Roulette\RouletteGameQuitView.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Games\Roulette\Data\RouletteCategory.cs" />
     <Compile Include="Assets\Games\Common\Commend\CommendView.cs" />
     <Compile Include="Assets\Games\Roulette\UIs\RouletteContentEditView.cs" />
+    <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsPickerCell.cs" />
     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteSettingsView.cs" />
     <Compile Include="Assets\Resources\HighAndLow\HightAndLowGame\Result\ResultPlayerDirector.cs" />
     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsListCell.cs" />
@@ -119,6 +121,7 @@
     <Compile Include="Assets\Games\Roulette\Data\RouletteSector.cs" />
     <Compile Include="Assets\Games\Yamanote\UIs\YamanoteQuestionsList.cs" />
     <Compile Include="Assets\Games\Roulette\UIs\RouletteCategoryView.cs" />
+    <Compile Include="Assets\Games\Yamanote\UIs\YamanoteGameOverView.cs" />
     <Compile Include="Assets\Modules\UI\OuterGlowButton.cs" />
     <Compile Include="Assets\Scripts\ResManager\IThemeRes.cs" />
     <Compile Include="Assets\Games\Roulette\UIs\RouletteEditListCell.cs" />

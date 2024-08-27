@@ -49,6 +49,10 @@ public class GameEntry : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmi
         
         switch (m_index)
         {
+            case 0:
+                AppConfig.Instance.SelectedGameIndex = (int)RootViewType.Yamanotesen;
+                SceneManager.LoadScene("Yamanotesen");
+                break;
             case 1:
                 AppConfig.Instance.SelectedGameIndex = (int)RootViewType.HighAndLow;
                 AppConfig.Instance.HomeSceneRootViewType = RootViewType.HighAndLow;

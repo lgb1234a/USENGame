@@ -6,20 +6,13 @@ using UnityEngine.EventSystems;
 namespace USEN.Games.Yamanote
 {
     
-    public class YamanoteQuestionsList : ListView<YamanoteQuestionsListCell, YamanoteTheme>, IEventSystemHandler
+    public class YamanoteQuestionsList : ListView<YamanoteQuestionsListCell, string>, IEventSystemHandler
     {
-        protected void Start()
-        {
-            var content = _scrollRect.content;
-            var firstCell = content.GetChild(0).GetComponent<YamanoteQuestionsListCell>();
-            firstCell.Focus();
-        }
-
         protected override void OnCellClicked(int index, YamanoteQuestionsListCell listViewCell)
         {
             Navigator.Push<YamanoteGameView>((view) =>
             {
-                
+                view.Questions = Data;
             });
         }
         
@@ -27,7 +20,7 @@ namespace USEN.Games.Yamanote
         {
             Navigator.Push<YamanoteGameView>((view) =>
             {
-                
+                view.Questions = Data;
             });
         }
 

@@ -20,38 +20,17 @@ namespace USEN.Games.Yamanote
                 cell.Data = new YamanoteCategory
                 {
                     title = $"Category {i + 1}",
-                    themes = new List<YamanoteTheme>
+                    questions = new List<string>
                     {
-                        new YamanoteTheme
-                        {
-                            title = "Theme 1",
-                            questions = new List<string>
-                            {
-                                "Question 1",
-                                "Question 2",
-                                "Question 3",
-                            }
-                        },
-                        new YamanoteTheme
-                        {
-                            title = "Theme 2",
-                            questions = new List<string>
-                            {
-                                "Question 1",
-                                "Question 2",
-                                "Question 3",
-                            }
-                        },
-                        new YamanoteTheme
-                        {
-                            title = "Theme 3",
-                            questions = new List<string>
-                            {
-                                "Question 1",
-                                "Question 2",
-                                "Question 3",
-                            }
-                        }
+                        "芸人（トリオ）の名前",
+                        "日本の球団の名前",
+                        "アニメの主題歌",
+                        "演歌歌手の名",
+                        "前力士の名",
+                        "都道府県23区",
+                        "山手線駅名",
+                        "中央線駅名",
+                        "日本の車メーカー",
                     },
                 }; 
             }

@@ -53,7 +53,6 @@ namespace Games.Yamanote
         {
             if (speed != Vector2.zero)
             {
-                Debug.Log("Update");
                 _offset += speed * Time.deltaTime;
                 OnOffsetChange();
             }

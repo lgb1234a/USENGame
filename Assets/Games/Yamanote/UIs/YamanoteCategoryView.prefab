@@ -3708,6 +3708,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4959032122547271962}
   - component: {fileID: 5484288851794860425}
+  - component: {fileID: 6258090674796987294}
+  - component: {fileID: 6443870632218136943}
   m_Layer: 5
   m_Name: YamanoteCategoryView
   m_TagString: Untagged
@@ -3755,6 +3757,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listView: {fileID: 2549945775581775386}
   bottomPanel: {fileID: 928142114362808576}
+--- !u!222 &6258090674796987294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959032122547271965}
+  m_CullTransparentMesh: 1
+--- !u!225 &6443870632218136943
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4959032122547271965}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &3286092980467021235
 PrefabInstance:
   m_ObjectHideFlags: 0

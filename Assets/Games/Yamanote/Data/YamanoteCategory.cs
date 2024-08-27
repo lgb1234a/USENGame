@@ -12,6 +12,6 @@ namespace USEN.Games.Yamanote
     public class YamanoteCategory : ScriptableObject
     {
         public string title;
-        public List<YamanoteTheme> themes;
+        public List<string> questions;
     }
 }

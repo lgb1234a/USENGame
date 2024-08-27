@@ -1,7 +1,7 @@
 
 public enum RootViewType
 {
-    Shinkansen = 0,
+    Yamanotesen = 0,
     HighAndLow = 1,
     Bingo = 2,
     RockPaperScissors = 3,

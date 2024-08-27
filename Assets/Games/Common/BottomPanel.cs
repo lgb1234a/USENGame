@@ -75,13 +75,13 @@ namespace USEN.Games.Common
             else if (Input.GetKeyDown(KeyCode.KeypadEnter))
                 OnConfirmButtonClicked();
             
-            if (Input.GetKeyDown(KeyCode.Keypad1))
+            if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
                 OnBlueButtonClicked();
-            else if (Input.GetKeyDown(KeyCode.Keypad2))
+            else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
                 OnRedButtonClicked();
-            else if (Input.GetKeyDown(KeyCode.Keypad3))
+            else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
                 OnGreenButtonClicked();
-            else if (Input.GetKeyDown(KeyCode.Keypad4))
+            else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
                 OnYellowButtonClicked();
 #endif
         }
