@@ -1404,8 +1404,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30A2\u30D7\u30EA\u60C5\u5831"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2439c77de267d35468211a352d77d9e4, type: 2}
-  m_sharedMaterial: {fileID: -3018244264691352348, guid: 2439c77de267d35468211a352d77d9e4,
+  m_fontAsset: {fileID: 11400000, guid: aeafe3b2832e99740b7f7efb3f866985, type: 2}
+  m_sharedMaterial: {fileID: -3018244264691352348, guid: aeafe3b2832e99740b7f7efb3f866985,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

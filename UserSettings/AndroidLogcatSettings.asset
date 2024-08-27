@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "309af56c",
         "name": "com.usen.ubingo",
-        "processId": 21635,
+        "processId": 7847,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -66,6 +66,48 @@
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
             "processId": 21635,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 18130,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 22335,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 30576,
+            "exited": false
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 29678,
+            "exited": true
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 31011,
+            "exited": true
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 1067,
+            "exited": true
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.ubingo",
+            "processId": 7847,
             "exited": false
         },
         {

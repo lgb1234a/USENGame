@@ -270,7 +270,7 @@ PrefabInstance:
         type: 3}
       propertyPath: font
       value: 
-      objectReference: {fileID: 11400000, guid: 93fec4915002970439709b7a72da1638,
+      objectReference: {fileID: 11400000, guid: 683d44990f0c96c4bb013fe731ee35b9,
         type: 2}
     - target: {fileID: 8834609412421270644, guid: 8a23a45f3ae9f924e8c3d2693096170b,
         type: 3}

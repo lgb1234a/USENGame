@@ -182,6 +182,7 @@
     <None Include="Assets\Modules\Shader\ImageTransition.shader" />
     <None Include="Assets\Resources\Material\default.shader" />
     <None Include="Assets\Resources\DefaultTheme\Effects\Bingo\00_BINGO.atlas.txt" />
+    <None Include="Assets\AddressableAssetsData\link.xml" />
     <None Include="Assets\Samples\Universal RP\12.1.10\URP Package Samples\SharedAssets\Shaders\3DText.shader" />
     <None Include="Assets\Resources\ChristmasThemes\Effects\Home\00_BINGO_Ch4.atlas.txt" />
     <None Include="Assets\Resources\ChristmasThemes\Effects\Bingo\00_BINGO_Ch4.atlas.txt" />

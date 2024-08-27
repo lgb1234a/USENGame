@@ -5,7 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF 1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF 1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF Outline.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF Outline.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Regular SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Regular SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Regular.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/1-栄光をたたえて.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/1-栄光をたたえて.mp4.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/2-見よ、勇者は帰る.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/2-見よ、勇者は帰る.mp4.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/3-威風堂々.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/3-威風堂々.mp4.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/4-ハレルヤ.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos~/4-ハレルヤ.mp4.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF JP Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF JP Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF JP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/NotoSansJP-Bold SDF JP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF JP Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF JP Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF JP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF JP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold SDF White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Bold.otf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF JP.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium SDF JP.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/SourceHanSansSC-Medium.otf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/BottomPanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/1-栄光をたたえて.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/1-栄光をたたえて.mp4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/2-見よ、勇者は帰る.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/2-見よ、勇者は帰る.mp4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/3-威風堂々.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/3-威風堂々.mp4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/4-ハレルヤ.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/Commend/Videos/4-ハレルヤ.mp4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Common/PopupOptionsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Common/PopupOptionsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/High&amp;Low/High&amp;Low.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/High&amp;Low/High&amp;Low.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/High&amp;Low/UIs/HighLowSettingsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/High&amp;Low/UIs/HighLowSettingsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Roulette.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/Tests/Roulette Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/Tests/Roulette Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/Roulette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/Roulette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteCategoryList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteContentList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteContentList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteEditView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteGameSelectionView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Roulette/UIs/RouletteSettingsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteCategoryView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentGameView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentGameView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanotePunishmentList.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionEditView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionEditView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteSettingsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteSettingsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameSettingsPanel2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameSettingsPanel2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowHomePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/HighAndLow/HighAndLowHomePanel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +92,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4549630e5814497d8cca07f7458a224c18a000/48/96305efb/Key.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/67/215d15ff/ICloneable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8dfec14130748829d59a9bf0543ebb086a00/3a/6c406bf6/PlayerLoopTiming.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/58/b235978f/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/68/d19e6698/AnimationCurve.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/86/61ad4f80/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/db/41d5afb6/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -186,31 +258,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.42481753",
-    "git-widget-placeholder": "luna",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.42481753&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;luna&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\94988\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\94988\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\94988\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:/Builds/UsenGame\ubingo.exe" />
@@ -246,10 +318,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26208">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26208" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -308,6 +380,10 @@
       <workItem from="1724247529271" duration="4308000" />
       <workItem from="1724254271314" duration="457000" />
       <workItem from="1724255694252" duration="13624000" />
+      <workItem from="1724297015909" duration="691000" />
+      <workItem from="1724399376970" duration="1201000" />
+      <workItem from="1724651393386" duration="5501000" />
+      <workItem from="1724732583633" duration="1565000" />
     </task>
     <servers />
   </component>

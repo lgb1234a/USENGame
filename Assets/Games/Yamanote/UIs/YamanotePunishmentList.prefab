@@ -147,7 +147,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30AA\u30EA\u30B8\u30CA\u30EB\u30B2\u30FC\u30E01\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7dc9691fde90e7f418ebbd17cfe30420, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cce7696552409b747a108f5e2a2e356f, type: 2}
   m_sharedMaterial: {fileID: 7496854189285748973, guid: cc5b672e206ca15459dc9f749afb59b2,
     type: 2}
   m_fontSharedMaterials: []

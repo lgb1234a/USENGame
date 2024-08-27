@@ -143,9 +143,9 @@ MonoBehaviour:
   sectorInterval: 0.05
   angleOffset: 180
   clockwise: 1
-  font: {fileID: 11400000, guid: 93fec4915002970439709b7a72da1638, type: 2}
+  font: {fileID: 11400000, guid: aeafe3b2832e99740b7f7efb3f866985, type: 2}
   fontSize: 3
-  outlineWidth: 0.4
+  outlineWidth: 0.2
   textDistanceFromCenter: 1
   spinSpeed: 360
   spinDuration: 4
