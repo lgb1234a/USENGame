@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Resources;
+using USEN.Games.Common;
 
 public interface IViewOperater
 {
@@ -152,6 +153,25 @@ public class ViewManager : MonoBehaviourSingletonTemplate<ViewManager>
         {
             m_currentEventGO = EventSystem.current.currentSelectedGameObject;
             Push(TerminalView.Instance);
+        }
+        
+        switch (keyName)
+        {
+            case "red":
+                UsenEvents.OnRemoconRedButtonClicked.Invoke(this, EventArgs.Empty);
+                break;
+            case "blue":
+                UsenEvents.OnRemoconBlueButtonClicked.Invoke(this, EventArgs.Empty);
+                break;
+            case "green":
+                UsenEvents.OnRemoconGreenButtonClicked.Invoke(this, EventArgs.Empty);
+                break;
+            case "yellow":
+                UsenEvents.OnRemoconYellowButtonClicked.Invoke(this, EventArgs.Empty);
+                break;
+            case "terminal":
+                UsenEvents.OnRemoconTerminalButtonClicked.Invoke(this, EventArgs.Empty);
+                break;
         }
     }
 
