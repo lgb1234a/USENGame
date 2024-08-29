@@ -23,9 +23,11 @@ namespace USEN.Games.Yamanote
         public ImageShaderController cloudController;
         public ImageShaderController buildingsController;
         public Button startButton;
-        public BottomPanel bottomPanel;
         public GameObject questionsView;
         public YamanoteQuestionsPicker questionsPicker;
+        public BottomPanel bottomPanel;
+        
+        public Sprite rouletteBackground;
         
         private List<string> _questions;
         public List<string> Questions
@@ -116,6 +118,7 @@ namespace USEN.Games.Yamanote
             await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
                 var dao = await RouletteDAO.Instance;
                 view.RouletteData = dao.GetRandomRoulette();
+                view.backgroundImage.sprite = rouletteBackground;
             });
             await UniTask.NextFrame();
         }

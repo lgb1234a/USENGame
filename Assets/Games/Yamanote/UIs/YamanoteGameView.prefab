@@ -1331,9 +1331,10 @@ MonoBehaviour:
   cloudController: {fileID: 7419963587549962076}
   buildingsController: {fileID: 467075844}
   startButton: {fileID: 3315655828931448743}
-  bottomPanel: {fileID: 1090152134967780602}
   questionsView: {fileID: 7713197202269701288}
   questionsPicker: {fileID: 7648551558010374171}
+  bottomPanel: {fileID: 1090152134967780602}
+  rouletteBackground: {fileID: 21300000, guid: 43d0353646054bb44b756a8b652579c0, type: 3}
 --- !u!225 &4539586023757126878
 CanvasGroup:
   m_ObjectHideFlags: 0

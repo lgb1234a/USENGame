@@ -25,6 +25,7 @@ namespace USEN.Games.Roulette
     {
         public RouletteWheel rouletteWheel;
         public Button startButton;
+        public Image backgroundImage;
         public BottomPanel bottomPanel;
         public TextMeshProUGUI confirmText;
 
