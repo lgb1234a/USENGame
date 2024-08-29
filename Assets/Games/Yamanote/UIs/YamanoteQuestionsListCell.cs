@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanoteQuestionsListCell : ListViewCell<string>
+    public class YamanoteQuestionsListCell : FixedListViewCell<string>
     {
         public TextMeshProUGUI text;
         public Image background;

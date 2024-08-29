@@ -14,7 +14,7 @@ using UnityEngine.UI;
 namespace USEN.Games.Roulette
 {
     
-    public class RouletteGameSelectionList : ListView<RouletteGameSelectionListCell, RouletteData>, IEventSystemHandler
+    public class RouletteGameSelectionList : FixedListView<RouletteGameSelectionListCell, RouletteData>, IEventSystemHandler
     {
         protected override void OnCellSubmitted(int index, RouletteGameSelectionListCell listViewCell)
         {

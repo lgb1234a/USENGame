@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 namespace USEN.Games.Yamanote
 {
     
-    public class YamanoteCategoryList : ListView<YamanoteCategoryListCell, YamanoteCategory>, IEventSystemHandler
+    public class YamanoteCategoryList : FixedListView<YamanoteCategoryListCell, YamanoteCategory>, IEventSystemHandler
     {
         protected void Start()
         {

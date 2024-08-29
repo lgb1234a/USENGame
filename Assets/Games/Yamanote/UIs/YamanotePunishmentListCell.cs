@@ -5,7 +5,7 @@ using USEN.Games.Roulette;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanotePunishmentListCell : ListViewCell<RouletteData>, ISelectHandler, IDeselectHandler, ISubmitHandler
+    public class YamanotePunishmentListCell : FixedListViewCell<RouletteData>, ISelectHandler, IDeselectHandler, ISubmitHandler
     {
         public RouletteWheel rouletteWheel;
         public TextMeshProUGUI text;

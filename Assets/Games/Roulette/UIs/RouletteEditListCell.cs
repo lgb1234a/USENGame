@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Roulette
 {
-    public class RouletteEditListCell : ListViewCell<RouletteSector>
+    public class RouletteEditListCell : FixedListViewCell<RouletteSector>
     {
         public TextMeshProUGUI indexText;
         public TMP_InputField inputField;

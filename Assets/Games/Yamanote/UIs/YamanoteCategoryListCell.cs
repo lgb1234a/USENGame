@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanoteCategoryListCell : ListViewCell<YamanoteCategory>
+    public class YamanoteCategoryListCell : FixedListViewCell<YamanoteCategory>
     {
         public TextMeshProUGUI text;
         public Image background;
@@ -33,7 +33,7 @@ namespace USEN.Games.Yamanote
             OnCellDeselected += OnDeselected;
         }
 
-        private void OnClicked(int arg1, ListViewCell<YamanoteCategory> arg2)
+        private void OnClicked(int arg1, FixedListViewCell<YamanoteCategory> arg2)
         {
             Navigator.Push<YamanoteQuestionsView>((view) =>
             {
@@ -41,12 +41,12 @@ namespace USEN.Games.Yamanote
             });
         }
     
-        private void OnSelected(int arg1, ListViewCell<YamanoteCategory> arg2)
+        private void OnSelected(int arg1, FixedListViewCell<YamanoteCategory> arg2)
         {
             text.color = Color.HSVToRGB(148f / 360, 0.9f, 0.6f);
         }
     
-        private void OnDeselected(int arg1, ListViewCell<YamanoteCategory> arg2)
+        private void OnDeselected(int arg1, FixedListViewCell<YamanoteCategory> arg2)
         {
             text.color = Color.black;
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanoteQuestionsPickerCell: InfiniteListViewCell<string>
+    public class YamanoteQuestionsPickerCell: ListViewCell<string>
     {
         public TextMeshProUGUI text;
         

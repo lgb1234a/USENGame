@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanoteQuestionsPicker: InfiniteListView<YamanoteQuestionsPickerCell, string>
+    public class YamanoteQuestionsPicker: ListView<YamanoteQuestionsPickerCell, string>
     {
         protected override void OnCellScrolling(int index, YamanoteQuestionsPickerCell cell, float delta)
         {

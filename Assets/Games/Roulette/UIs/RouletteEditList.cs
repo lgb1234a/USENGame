@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace USEN.Games.Roulette
 {
-    public class RouletteEditList : ListView<RouletteEditListCell, RouletteSector>
+    public class RouletteEditList : FixedListView<RouletteEditListCell, RouletteSector>
     {
         protected override void OnCellSubmitted(int index, RouletteEditListCell listViewCell)
         {

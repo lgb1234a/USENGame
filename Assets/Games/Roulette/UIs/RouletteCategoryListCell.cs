@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using USEN.Games.Roulette;
 
-public class RouletteCategoryListCell : ListViewCell<RouletteCategory>, ISelectHandler, IDeselectHandler, ISubmitHandler
+public class RouletteCategoryListCell : FixedListViewCell<RouletteCategory>, ISelectHandler, IDeselectHandler, ISubmitHandler
 {
     public TextMeshProUGUI text;
     

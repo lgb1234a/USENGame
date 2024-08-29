@@ -36,14 +36,13 @@ namespace USEN.Games.Yamanote
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
-                Input.GetButtonDown("Cancel")) {
+                Input.GetButtonDown("Cancel")) 
                 OnExitButtonClicked();
-            }
         }
 
         private void OnExitButtonClicked()
         {
-            Navigator.Pop();
+            Navigator.PopToRoot();
         }
 
         public void OnStartButtonClicked()

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 namespace USEN.Games.Yamanote
 {
     
-    public class YamanoteQuestionsList : ListView<YamanoteQuestionsListCell, string>, IEventSystemHandler
+    public class YamanoteQuestionsList : FixedListView<YamanoteQuestionsListCell, string>, IEventSystemHandler
     {
         protected override void OnCellClicked(int index, YamanoteQuestionsListCell listViewCell)
         {

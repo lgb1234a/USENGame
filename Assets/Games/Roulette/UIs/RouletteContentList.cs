@@ -12,7 +12,7 @@ using UnityEngine.EventSystems;
 
 namespace USEN.Games.Roulette
 {
-    public class RouletteContentList : ListView<RouletteContentListCell, RouletteSector>
+    public class RouletteContentList : FixedListView<RouletteContentListCell, RouletteSector>
     {
     }
 }

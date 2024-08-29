@@ -5,7 +5,7 @@ using USEN.Games.Roulette;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanotePunishmentList : ListView<YamanotePunishmentListCell, RouletteData>, IEventSystemHandler
+    public class YamanotePunishmentList : FixedListView<YamanotePunishmentListCell, RouletteData>, IEventSystemHandler
     {
         protected override void OnCellSubmitted(int index, YamanotePunishmentListCell listViewCell)
         {

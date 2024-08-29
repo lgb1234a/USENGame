@@ -20,7 +20,6 @@ namespace USEN.Games.Yamanote
         
         private void Start()
         {
-            Debug.Log("YamanoteHomeView started.");
             startButton.onClick.AddListener(OnStartButtonClicked);
             settingsButton.onClick.AddListener(OnSettingsButtonClicked);
             bottomPanel.exitButton.onClick.AddListener(OnExitButtonClicked);

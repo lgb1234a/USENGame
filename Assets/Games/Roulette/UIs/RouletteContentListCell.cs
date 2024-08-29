@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Roulette
 {
-    public class RouletteContentListCell : ListViewCell<RouletteSector>
+    public class RouletteContentListCell : FixedListViewCell<RouletteSector>
     {
         public TextMeshProUGUI text;
     

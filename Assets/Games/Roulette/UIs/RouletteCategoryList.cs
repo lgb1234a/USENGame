@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 namespace USEN.Games.Roulette
 {
     
-    public class RouletteCategoryList : ListView<RouletteCategoryListCell, RouletteCategory>, IEventSystemHandler
+    public class RouletteCategoryList : FixedListView<RouletteCategoryListCell, RouletteCategory>, IEventSystemHandler
     {
         protected override void OnCellClicked(int index, RouletteCategoryListCell listViewCell)
         {
