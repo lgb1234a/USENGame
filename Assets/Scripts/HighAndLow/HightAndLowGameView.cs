@@ -282,11 +282,22 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     async void OnClickedRouletteBtn() {
         AudioManager.Instance.PlayKeyBackEffect();
-        await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
-            var dao = await RouletteDAO.Instance;
-            view.RouletteData = dao.GetRandomRoulette();
-            _isRouletteShowing = true;
-        });
+
+        if (RoulettePreferences.DisplayMode == DisplayMode.Random)
+        {
+            await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
+                var dao = await RouletteDAO.Instance;
+                view.RouletteData = dao.GetRandomRoulette();
+                _isRouletteShowing = true;
+            });
+        }
+        else
+        {
+            await Navigator.Push<RouletteCategoryView>((view) => {
+                _isRouletteShowing = true;
+            });
+        }
+        
         await UniTask.NextFrame();
         _isRouletteShowing = false;
     }
