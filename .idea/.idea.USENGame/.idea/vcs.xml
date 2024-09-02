@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Packages/LunarFramework" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Packages/LunarFramework/Plugins/DoTween" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Packages/LunarFramework/Plugins/UniTask" vcs="Git" />
   </component>
 </project>

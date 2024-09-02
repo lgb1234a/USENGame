@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f28fdd1-b671-40ae-b24e-3a660dd2bda1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.USENGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Games/Yamanote/UIs/YamanoteQuestionsView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/Extensions/Unity/RectTransformExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/Extensions/Unity/RectTransformExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/FixedListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/LunarFramework/UI/Widgets/FixedListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Packages/LunarFramework" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -49,10 +58,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/HightAndLowGameView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighAndLow/Poker2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ViewManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTask.Delay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTask.Run.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UnityAsyncExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.esotericsoftware.spine.spine-unity@8e28a32cf6/Editor/spine-unity/Editor/Asset Types/AnimationReferenceAssetEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.esotericsoftware.spine.spine-unity@8e28a32cf6/Editor/spine-unity/Editor/Asset Types/SkeletonDataAssetInspector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.handzlikchris.fastscriptreload@053261fa33/Scripts/Editor/Compilation/DotnetExeCompilator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -172,8 +177,25 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.uiextensions@e54be66d21/Runtime/Scripts/Utilities/UI_ScrollRectOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/TrueShadow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/uishadow@a6427bded9/TrueShadow/Scripts/Utilities/ExtensionMethods.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Core/Reflection/Reflection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Core/Reflection/Reflection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Core/Reflection/Reflection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/Core/Reflection/ReflectionUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Extensions/Unity/AnimatorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Extensions/Unity/AnimatorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Extensions/Unity/AnimatorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Base/Editor/WidgetPrefabProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Editor/UIMenuOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/LunarFramework/UI/Navigation/Navigator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/Workspace/USENGame/Packages/LunarFramework/Utils/Nuget/NugetPackageInitializer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -200,7 +222,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "XThreadsFramesViewSplitterKey": "0.42481753",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "luna",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -253,10 +275,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="32436">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="56480">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="32436" />
+      <option name="pid" value="56480" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -323,6 +345,7 @@
       <workItem from="1724762151401" duration="618000" />
       <workItem from="1724762789236" duration="470000" />
       <workItem from="1724763295593" duration="13064000" />
+      <workItem from="1725088543473" duration="14850000" />
     </task>
     <servers />
   </component>

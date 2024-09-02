@@ -443,11 +443,20 @@
     <Reference Include="Sirenix.Serialization.Config">
       <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Z:\Workspace\USENGame\Packages\LunarFramework\Plugins\DoTween\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Z:\Workspace\USENGame\Packages\LunarFramework\Plugins\DoTween\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+    </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
       <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Z:\Workspace\USENGame\Packages\LunarFramework\Plugins\DoTween\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>Z:\Workspace\USENGame\Library\PackageCache\com.handzlikchris.fastscriptreload@053261fa33\Plugins\Roslyn\2021+\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -466,9 +475,6 @@
     </Reference>
     <Reference Include="Sirenix.Utilities">
       <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Z:\Workspace\USENGame\Assets\Plugins\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
       <HintPath>Z:\Workspace\USENGame\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
@@ -866,9 +872,6 @@
     <Reference Include="Unity.InputSystem">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
@@ -880,9 +883,6 @@
     </Reference>
     <Reference Include="UnityUIExtensions">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UnityUIExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="UniTask.TextMeshPro">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Localization.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
@@ -898,9 +898,6 @@
     </Reference>
     <Reference Include="spine-csharp">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-csharp.dll</HintPath>
-    </Reference>
-    <Reference Include="UniTask.Addressables">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Addressables.dll</HintPath>
     </Reference>
     <Reference Include="spine-timeline">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\spine-timeline.dll</HintPath>
@@ -941,9 +938,6 @@
     <Reference Include="Unity.ResourceManager">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
     </Reference>
-    <Reference Include="UniTask.DOTween">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.DOTween.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
@@ -952,9 +946,6 @@
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UniTask.Linq">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -992,9 +983,6 @@
     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UniTask">
-      <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\UniTask.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Z:\Workspace\USENGame\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
@@ -1018,6 +1006,10 @@
       <Project>{5ad268e6-2cd3-a69b-a559-1ff0f4d10cef}</Project>
       <Name>Luna.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{82154cbb-ffa1-2657-b9c3-07aee76d86d9}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
     <ProjectReference Include="Luna.csproj">
       <Project>{bce8cba8-a677-801b-d053-68a7672f8864}</Project>
       <Name>Luna</Name>
@@ -1030,6 +1022,10 @@
       <Project>{ed20bcd1-b25f-c316-ed6f-de599ac6f2e3}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{c8ad1e09-1680-2def-6187-dd28cf28a4fc}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Tween.csproj">
       <Project>{cf8e7a54-0b1b-c27b-2669-1ac59b99519d}</Project>
       <Name>Timeline.Samples.Tween</Name>
@@ -1038,13 +1034,25 @@
       <Project>{a71aafae-00ff-7a43-dcc2-e7f65eadc5b8}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="UniTask.TextMeshPro.csproj">
+      <Project>{80ae927e-6268-7126-b049-f8fb65094042}</Project>
+      <Name>UniTask.TextMeshPro</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{dc168978-5cb3-44e9-b77d-80343d1a8604}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="DOTweenPro.Scripts.csproj">
+      <Project>{a0050d0f-b4fd-6b20-7f3b-31b3a4e04d32}</Project>
+      <Name>DOTweenPro.Scripts</Name>
+    </ProjectReference>
     <ProjectReference Include="Timeline.Samples.TimeDilation.csproj">
       <Project>{28f4f50c-891b-c4ba-df5f-4b5e0e69263e}</Project>
       <Name>Timeline.Samples.TimeDilation</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Addressables.csproj">
+      <Project>{d79fa20c-2925-fad9-2701-dc4486400ba1}</Project>
+      <Name>UniTask.Addressables</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.csproj">
       <Project>{5ddbf61b-3894-7d0e-67c6-ce943187612a}</Project>
@@ -1057,6 +1065,14 @@
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{86fc4896-4d8e-d003-9f3d-8769dad42fdf}</Project>
       <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.DOTween.csproj">
+      <Project>{36c728fc-b513-27ad-754c-ceb09e2d6a00}</Project>
+      <Name>UniTask.DOTween</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{e92bd869-3a72-786e-90de-2e51d5acb285}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Utilities.Editor.csproj">
       <Project>{c35eb0e7-471b-b8df-6e06-ed9a406b095d}</Project>
@@ -1077,6 +1093,10 @@
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityLocalization.Editor.csproj">
       <Project>{e25ebde2-14b2-4c05-a3ae-cb25cd637f17}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityLocalization.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.csproj">
+      <Project>{3bcef680-3a3b-bcd7-2a89-c65c7a9afad0}</Project>
+      <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="Timeline.Samples.Annotation.Editor.csproj">
       <Project>{658553d6-fc29-7af8-fc9a-fa911db9c611}</Project>
