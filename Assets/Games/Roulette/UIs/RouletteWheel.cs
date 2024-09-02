@@ -200,7 +200,7 @@ namespace USEN.Games.Roulette
             return Sectors[index].content;
         }
 
-        private void DrawRouletteWheel()
+        public void DrawRouletteWheel()
         {
             transform.localRotation = Quaternion.identity;
             _totalAngle = 360f / Sectors.Count;

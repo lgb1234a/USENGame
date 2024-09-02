@@ -33,9 +33,16 @@ namespace USEN.Games.Roulette
                 rouletteGameSelectionList.Data = value.roulettes;
 
                 if (value.title == "オリジナル")
+                {
                     bottomPanel.redButton.gameObject.SetActive(true);
-                else bottomPanel.redButton.gameObject.SetActive(false);
-                
+                    bottomPanel.yellowButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    bottomPanel.redButton.gameObject.SetActive(false);
+                    bottomPanel.yellowButton.gameObject.SetActive(false);
+                }
+
                 titleText.text = value.title;
             }
         }
@@ -47,6 +54,20 @@ namespace USEN.Games.Roulette
             rouletteGameSelectionList.onCellSelected += (index, cell) => rouletteWheel.RouletteData = cell.Data;
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
             rouletteContentList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
+            
+            bottomPanel.onYellowButtonClicked += () =>
+            {
+                if (rouletteGameSelectionList.gameObject.activeSelf && 
+                    rouletteGameSelectionList.Data.Count > 1)
+                    rouletteGameSelectionList.Remove(rouletteGameSelectionList.SelectedIndex);
+                
+                if (rouletteContentList.gameObject.activeSelf && 
+                    rouletteContentList.Data.Count > 2)
+                    rouletteContentList.Remove(rouletteContentList.SelectedIndex);
+                
+                rouletteWheel.DrawRouletteWheel();
+                _dao?.SaveToFile();
+            };
             
             _dao = await RouletteDAO.Instance;
         }
