@@ -58,7 +58,7 @@ namespace USEN.Games.Roulette
             bottomPanel.onYellowButtonClicked += () =>
             {
                 if (rouletteGameSelectionList.gameObject.activeSelf && 
-                    rouletteGameSelectionList.Data.Count > 1)
+                    rouletteGameSelectionList.Data.Count > 0)
                     rouletteGameSelectionList.Remove(rouletteGameSelectionList.SelectedIndex);
                 
                 if (rouletteContentList.gameObject.activeSelf && 
