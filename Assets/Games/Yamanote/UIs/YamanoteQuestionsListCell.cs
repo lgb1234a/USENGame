@@ -6,16 +6,20 @@ using UnityEngine.UI;
 
 namespace USEN.Games.Yamanote
 {
-    public class YamanoteQuestionsListCell : FixedListViewCell<string>
+    public class YamanoteQuestionsListCell : FixedListViewCell<YamanoteQuestion>
     {
         public TextMeshProUGUI text;
         public Image background;
         public CircleCollider2D ringCollider;
 
-        public override string Data
+        public override YamanoteQuestion Data
         {
-            get => text.text;
-            set => text.text = value;
+            get => data;
+            set
+            {
+                data = value;
+                text.text = value.Content;
+            }
         }
     }
 }

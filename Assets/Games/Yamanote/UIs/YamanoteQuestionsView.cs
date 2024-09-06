@@ -19,8 +19,8 @@ namespace USEN.Games.Yamanote
             set
             {
                 _category = value;
-                titleText.text = value.title;
-                listView.Data = value.questions;
+                titleText.text = value.Name;
+                listView.Data = value.Questions;
             }
         }
     

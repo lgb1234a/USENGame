@@ -29,8 +29,8 @@ namespace USEN.Games.Yamanote
         
         public Sprite rouletteBackground;
         
-        private List<string> _questions;
-        public List<string> Questions
+        private List<YamanoteQuestion> _questions;
+        public List<YamanoteQuestion> Questions
         {
             get => _questions;
             set
@@ -39,7 +39,7 @@ namespace USEN.Games.Yamanote
                 questionsPicker.itemCount = Int32.MaxValue;
                 questionsPicker.ItemBuilder = (index) =>
                 {
-                    return _questions[index.Mod(_questions.Count)];
+                    return _questions[index.Mod(_questions.Count)].Content;
                 };
             }
         }
@@ -134,7 +134,8 @@ namespace USEN.Games.Yamanote
         {
             var questionsCount = _questions.Count;
             var randomIndex = UnityEngine.Random.Range(0, questionsCount);
-            await questionsPicker.ScrollTo(questionsPicker.FirstVisibleIndex + questionsCount + randomIndex, 2);
+            randomIndex += questionsCount < 10 ? questionsCount : 0;
+            await questionsPicker.ScrollTo(questionsPicker.FirstVisibleIndex + randomIndex, 2);
         }
         
         private void ShowControlButtons()

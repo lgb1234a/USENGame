@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using Luna.UI;
+using Luna.UI.Navigation;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,29 +21,32 @@ namespace USEN.Games.Yamanote
         protected void Start()
         {
             var content = _scrollRect.content;
-            var firstCell = content.GetChild(0).GetComponent<YamanoteCategoryListCell>();
-            firstCell.Focus();
+            var children = content.GetComponentsInChildren<YamanoteCategoryListCell>();
 
-            for (int i = 0; i < content.childCount; i++)
+            if (children.Length > 0)
             {
-                var cell = content.GetChild(i).GetComponent<YamanoteCategoryListCell>();
-                cell.Data = new YamanoteCategory
+                var firstCell = children[0];
+                firstCell.Focus();
+                
+                foreach (var cell in children)
                 {
-                    title = $"Category {i + 1}",
-                    questions = new List<string>
-                    {
-                        "芸人（トリオ）の名前",
-                        "日本の球団の名前",
-                        "アニメの主題歌",
-                        "演歌歌手の名",
-                        "前力士の名",
-                        "都道府県23区",
-                        "山手線駅名",
-                        "中央線駅名",
-                        "日本の車メーカー",
-                    },
-                }; 
+                    cell.OnCellClicked += OnCellClickOrSubmit;
+                    cell.OnCellSubmitted += OnCellClickOrSubmit;
+                }
             }
+        }
+
+
+        private void OnCellClickOrSubmit(int index, FixedListViewCell<YamanoteCategory> cell)
+        {
+            var categoryCell = (YamanoteCategoryListCell)cell;
+            
+            Navigator.Push<YamanoteQuestionsView>((view) =>
+            {
+                var category = Data.Find(c => c.Name == categoryCell.text.text);
+                if (category != null)   
+                    view.Category = category;
+            });
         }
         
         private void Update()
@@ -63,22 +68,6 @@ namespace USEN.Games.Yamanote
                 cellTransform.anchoredPosition = position;
             }
         }
-
-        // protected override void OnCellClicked(int index, YamanoteCategoryListCell listViewCell)
-        // {
-        //     Navigator.Push<YamanoteGameSelectionView>((view) =>
-        //     {
-        //         view.Category = SelectedData;
-        //     });
-        // }
-        //
-        // protected override void OnCellSubmitted(int index, YamanoteCategoryListCell listViewCell)
-        // {
-        //     Navigator.Push<YamanoteGameSelectionView>((view) =>
-        //     {
-        //         view.Category = SelectedData;
-        //     });
-        // }
 
         protected override void OnCellDeselected(int index, YamanoteCategoryListCell listViewCell)
         {

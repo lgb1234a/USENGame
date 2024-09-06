@@ -11,36 +11,16 @@ namespace USEN.Games.Yamanote
     {
         public TextMeshProUGUI text;
         public Image background;
-        public CircleCollider2D ringCollider; 
-    
-        private YamanoteCategory _rouletteCategory;
-    
-        public override YamanoteCategory Data
-        {
-            get => _rouletteCategory;
-            set
-            {
-                _rouletteCategory = value;
-                // text.text = value.title;
-            }
-        }
+        public CircleCollider2D ringCollider;
+
+        public override YamanoteCategory Data { get; set; }
 
         protected override void Start()
         {
-            OnCellClicked += OnClicked;
-            OnCellSubmitted += OnClicked;
             OnCellSelected += OnSelected;
             OnCellDeselected += OnDeselected;
         }
-
-        private void OnClicked(int arg1, FixedListViewCell<YamanoteCategory> arg2)
-        {
-            Navigator.Push<YamanoteQuestionsView>((view) =>
-            {
-                view.Category = Data;
-            });
-        }
-    
+        
         private void OnSelected(int arg1, FixedListViewCell<YamanoteCategory> arg2)
         {
             text.color = Color.HSVToRGB(148f / 360, 0.9f, 0.6f);

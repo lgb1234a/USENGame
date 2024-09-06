@@ -3,135 +3,93 @@
     "m_SelectedPackage": {
         "deviceId": "309af56c",
         "name": "com.usen.ubingo",
-        "processId": 30536,
+        "processId": 27683,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "309af56c",
-            "name": "com.miui.home",
-            "processId": 4659,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 14025,
+            "processId": 28277,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 5092,
+            "processId": 28732,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 28074,
+            "processId": 29356,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 23083,
+            "processId": 29885,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 15259,
+            "processId": 32012,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 24651,
+            "processId": 16725,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 29548,
+            "processId": 21027,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 32162,
+            "processId": 21594,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 21635,
+            "processId": 27955,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 18130,
+            "processId": 687,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 22335,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 30576,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 29678,
+            "processId": 2413,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 31011,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 1067,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 7847,
+            "processId": 3638,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 9490,
+            "processId": 15755,
             "exited": false
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 29744,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 31709,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 30536,
+            "processId": 27683,
             "exited": false
         },
         {
@@ -233,7 +191,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -249,7 +207,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
@@ -278,7 +236,7 @@
     "m_FilterOptions": {
         "m_Filter": "",
         "m_UseRegularExpressions": false,
-        "m_MatchCase": false
+        "m_MatchCase": true
     },
     "m_SymbolPaths": [],
     "m_CaptureVideoSettings": {

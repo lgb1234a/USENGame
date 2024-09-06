@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 20
+  controlID: 74
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 101
+  controlID: 75
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,8 +165,8 @@ MonoBehaviour:
     y: 0
     width: 1166.6666
     height: 592.6667
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 21
+  controlID: 54
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -294,16 +294,16 @@ MonoBehaviour:
     y: 0
     width: 756
     height: 1299.3334
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.218357, y: 2.0234568, z: -0.27021512}
+    m_Target: {x: 11.529721, y: 4.074359, z: -1.6874919}
     speed: 2
-    m_Value: {x: -9.218357, y: 2.0234568, z: -0.27021512}
+    m_Value: {x: 11.5131855, y: 4.0306187, z: -1.6860374}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -617,9 +617,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.6716065
+    m_Target: 3.3775465
     speed: 2
-    m_Value: 6.6716065
+    m_Value: 3.232102
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -771,23 +771,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: ae79fcffd07afcff8e7bfcff1083fcff1c83fcffdc84fcffee84fcffa486fcff069efeff48cefeff28f8feff921effffea23ffff0424ffffee28ffffca2fffff7c4effff964effff726fffff8a73ffffdc74ffff2675ffff4075ffff4e78ffff9278ffffac78ffff8a7dffffbcb3ffff56bbffffa0bbffffbabbffffe4c0ffff2ec1ffff48c1ffffd6c2ffffe4c2ffff0ac3ffff18c3ffffbcc3ffff00c4ffff1ac4ffff76d4ffff52f6ffffc8faffff60f3000052210100c02d01000e300100
+      m_SelectedIDs: b255feff
+      m_LastClickedID: -109134
+      m_ExpandedIDs: 427cfeff567cfeff647cfeff527efeff867efeff9c7efeffb67efeff7c3dffff903dffff9e3dffffe83dfffffc3dffff0a3effffac3fffffc23fffff0c40ffff2640ffffc6faffffaca90000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: TitleImage
-        m_OriginalName: TitleImage
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -56334
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -840,22 +840,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Games/Roulette/UIs
+    - Assets/Games/Yamanote/UIs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Games/Roulette/UIs
+  - Assets/Games/Yamanote/UIs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: Z:\Workspace\USENGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d6b10000
-    m_LastClickedID: 45526
-    m_ExpandedIDs: 0000000090b0000098b00000f2b00000c2b10000c4b10000d00b0100000c0100aa11010000ca9a3b
+    m_SelectedIDs: 98f30000
+    m_LastClickedID: 62360
+    m_ExpandedIDs: 000000000eb1000010b1000012b1000014b1000016b1000032b1000044b100005cb1000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -883,7 +883,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000000eb1000010b1000012b1000014b1000016b10000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -914,15 +914,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: e0ac000074b000008ab0000080b0000092b000007cb00000c8b100009a9c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: UIs
-      m_OriginalName: UIs
+      m_Name: YamanoteCategoryView
+      m_OriginalName: YamanoteCategoryView
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 45536
+      m_UserData: 29612
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

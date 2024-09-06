@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 namespace USEN.Games.Yamanote
 {
     
-    public class YamanoteQuestionsList : FixedListView<YamanoteQuestionsListCell, string>, IEventSystemHandler
+    public class YamanoteQuestionsList : FixedListView<YamanoteQuestionsListCell, YamanoteQuestion>, IEventSystemHandler
     {
         public RectTransform ring;
 

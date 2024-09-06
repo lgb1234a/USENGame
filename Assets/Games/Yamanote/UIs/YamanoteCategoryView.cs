@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Luna.UI;
 using Luna.UI.Navigation;
 using UnityEngine;
@@ -10,36 +12,30 @@ namespace USEN.Games.Yamanote
     {
         public YamanoteCategoryList listView;
         public BottomPanel bottomPanel;
-    
-        // public YamanoteDataset dataset;
+        public TextAsset categoriesJson;
 
+        private YamanoteDAO _dao;
+        private List<YamanoteCategory> _categories;
 
         void Start()
         {
-            Debug.Log("YamanoteThemeSelectionView started.");
-
+            _dao = new();
+            if (_dao.IsEmpty())
+                _dao.InsertFromJsonList(categoriesJson.text);
+            _categories = _dao.GetCategories();
+            listView.Data = _categories;
+            
             listView.FocusOnCell(0);
-
-            // var json = JsonConvert.SerializeObject(dataset);
-            // Debug.Log($"[YamanoteThemeSelectionView] Dataset JSON: {json}");
-
-            // YamanoteDAO.Instance.Data.ContinueWith(async task =>
-            // {
-            //     var data = task.Result;
-            //     Debug.Log($"[YamanoteThemeSelectionView] Data loaded: {data.categories.Count} categories.");
-            //     listView.Data = data.categories;
-            //     await UniTask.DelayFrame(2);
-            //     listView.FocusOnCell(0);
-            // });
+            
+            
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape) ||
-                Input.GetButtonDown("Cancel")) {
+                Input.GetButtonDown("Cancel")) 
                 Navigator.Pop();
-            }
         }
-    
+
     }
 }
