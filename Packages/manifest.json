@@ -5,6 +5,7 @@
     "com.esotericsoftware.spine.spine-unity": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Assets/Spine#4.1",
     "com.esotericsoftware.spine.spine-unity-examples": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Assets/Spine Examples#4.1",
     "com.esotericsoftware.spine.timeline": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Modules/com.esotericsoftware.spine.timeline#4.1",
+    "com.gilzoide.sqlite-net": "https://github.com/gilzoide/unity-sqlite-net.git#1.0.1",
     "com.handzlikchris.fastscriptreload": "https://github.com/handzlikchris/FastScriptReload.git?path=Assets",
     "com.nobi.roundedcorners": "https://github.com/kirevdokimov/Unity-UI-Rounded-Corners.git",
     "com.unity.2d.sprite": "1.0.0",
