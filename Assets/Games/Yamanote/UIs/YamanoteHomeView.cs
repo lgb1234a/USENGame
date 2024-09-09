@@ -1,9 +1,12 @@
 // Created by LunarEclipse on 2024-6-21 1:53.
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Luna.UI;
 using Luna.UI.Navigation;
+using Modules.UI.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -19,11 +22,21 @@ namespace USEN.Games.Yamanote
         public Image trainImage;
         public BottomPanel bottomPanel;
         
+        public TextAsset categoriesJson;
+        
+        private YamanoteDAO _dao;
+        private List<YamanoteCategory> _categories;
+        
         private void Start()
         {
             startButton.onClick.AddListener(OnStartButtonClicked);
             settingsButton.onClick.AddListener(OnSettingsButtonClicked);
             bottomPanel.exitButton.onClick.AddListener(OnExitButtonClicked);
+            
+            _dao = new();
+            if (_dao.IsEmpty())
+                _dao.InsertFromJsonList(categoriesJson.text);
+            _categories = _dao.GetCategories();
             
             EventSystem.current.SetSelectedGameObject(startButton.gameObject);
         }
@@ -43,7 +56,15 @@ namespace USEN.Games.Yamanote
 
         public void OnStartButtonClicked()
         {
-            Navigator.Push<YamanoteCategoryView>();
+            var displayMode = YamanotePreferences.DisplayMode;
+            if (displayMode == DisplayMode.Random)
+                PlayRandomGame();
+            else Navigator.Push<YamanoteCategoryView>((view) => view.Categories = _categories);
+        }
+        
+        public void OnSettingsButtonClicked()
+        {
+            Navigator.Push<YamanoteSettingsView>();
         }
         
         private void OnExitButtonClicked()
@@ -51,9 +72,10 @@ namespace USEN.Games.Yamanote
             SceneManager.LoadScene("GameEntries");
         }
         
-        public void OnSettingsButtonClicked()
+        public void PlayRandomGame()
         {
-            Navigator.Push<YamanoteSettingsView>();
+            var questions = _dao.GetQuestions().Shuffle().ToList();
+            Navigator.Push<YamanoteGameView>((view) => view.Questions = questions);
         }
     }
 }

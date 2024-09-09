@@ -12,22 +12,16 @@ namespace USEN.Games.Yamanote
     {
         public YamanoteCategoryList listView;
         public BottomPanel bottomPanel;
-        public TextAsset categoriesJson;
 
-        private YamanoteDAO _dao;
-        private List<YamanoteCategory> _categories;
+        public List<YamanoteCategory> Categories
+        {
+            get => listView.Data;
+            set => listView.Data = value;
+        }
 
         void Start()
         {
-            _dao = new();
-            if (_dao.IsEmpty())
-                _dao.InsertFromJsonList(categoriesJson.text);
-            _categories = _dao.GetCategories();
-            listView.Data = _categories;
-            
             listView.FocusOnCell(0);
-            
-            
         }
 
         private void Update()

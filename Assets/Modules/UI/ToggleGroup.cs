@@ -26,5 +26,23 @@ namespace Modules.UI
             if (index < 0 || index >= Toggles.Count) return;
             Toggles[index].isOn = true;
         }
+        
+        public void Bind(Slider slider)
+        {
+            slider.maxValue = Toggles.Count - 1;
+            slider.onValueChanged.AddListener((value) => {
+                var index = Mathf.RoundToInt(value);
+                ToggleOn(index);
+            });
+            
+            foreach (var toggle in Toggles)
+                toggle.onValueChanged.AddListener((isOn) => {
+                    if (isOn)
+                    {   // Clicking on the toggle will change the slider value
+                        var index = Toggles.IndexOf(toggle);
+                        slider.value = index;
+                    }
+                });
+        }
     }
 }

@@ -557,6 +557,7 @@ MonoBehaviour:
   settingsButton: {fileID: 4750067799388164558}
   trainImage: {fileID: 888319042}
   bottomPanel: {fileID: 7994328427593190427}
+  categoriesJson: {fileID: 4900000, guid: 664dcc3c71fb3eb4a9e4dd291dfeb7f6, type: 3}
 --- !u!225 &5449331590822972920
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1110,7 +1111,7 @@ PrefabInstance:
     - target: {fileID: 3467195953606923170, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1505
       objectReference: {fileID: 0}
     - target: {fileID: 3467195953606923170, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
@@ -1180,7 +1181,7 @@ PrefabInstance:
     - target: {fileID: 6657245270200980943, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1655
       objectReference: {fileID: 0}
     - target: {fileID: 6657245270200980943, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
@@ -1252,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 7992953217732209196, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1805
       objectReference: {fileID: 0}
     - target: {fileID: 7992953217732209196, guid: 0c380f4697fab384e97d3c38dbb7f523,
         type: 3}
