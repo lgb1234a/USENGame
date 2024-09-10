@@ -6,14 +6,14 @@ namespace USEN.Games.Yamanote
 {
     public static class YamanotePreferences
     {
-        public static DisplayMode DisplayMode
+        public static YamanoteDisplayMode DisplayMode
         {
-            get => (DisplayMode) PlayerPrefs.GetInt("Yamanote.DisplayMode", 0);
+            get => (YamanoteDisplayMode) PlayerPrefs.GetInt("Yamanote.DisplayMode", 0);
             set => PlayerPrefs.SetInt("Yamanote.DisplayMode", (int) value);
         }
     }
     
-    public enum DisplayMode
+    public enum YamanoteDisplayMode
     {
         Normal,
         Random,

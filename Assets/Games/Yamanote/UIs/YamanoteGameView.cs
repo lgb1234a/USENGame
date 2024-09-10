@@ -115,11 +115,15 @@ namespace USEN.Games.Yamanote
         
         private async void OnGreenButtonClicked()
         {
-            await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
-                var dao = await RouletteDAO.Instance;
-                view.RouletteData = dao.GetRandomRoulette();
-                view.backgroundImage.sprite = rouletteBackground;
-            });
+            if (RoulettePreferences.DisplayMode == RouletteDisplayMode.Random)
+            {
+                await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
+                    var dao = await RouletteDAO.Instance;
+                    view.RouletteData = dao.GetRandomRoulette();
+                });
+            }
+            else await Navigator.Push<RouletteCategoryView>();
+            
             await UniTask.NextFrame();
         }
 

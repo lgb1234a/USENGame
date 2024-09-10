@@ -26,7 +26,7 @@ namespace USEN.Games.Yamanote
             questionDisplaySettingSlider.onValueChanged.AddListener((value) => {
                 var index = Mathf.RoundToInt(value);
                 questionDisplaySettingToggles.ToggleOn(index);
-                YamanotePreferences.DisplayMode = (DisplayMode) index;
+                YamanotePreferences.DisplayMode = (YamanoteDisplayMode) index;
             });
             
             appInfoButton.onClick.AddListener(OnClickAppInfoButton);

@@ -4,14 +4,14 @@ namespace USEN.Games.Roulette
 {
     public static class RoulettePreferences
     {
-        public static DisplayMode DisplayMode
+        public static RouletteDisplayMode DisplayMode
         {
-            get => (DisplayMode) PlayerPrefs.GetInt("Roulette.DisplayMode", 0);
+            get => (RouletteDisplayMode) PlayerPrefs.GetInt("Roulette.DisplayMode", 0);
             set => PlayerPrefs.SetInt("Roulette.DisplayMode", (int) value);
         }
     }
     
-    public enum DisplayMode
+    public enum RouletteDisplayMode
     {
         Normal,
         Random,

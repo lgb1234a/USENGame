@@ -63,12 +63,14 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     
     private AsyncOperationHandle<AudioClip>? _audioClipHandle;
     
+    private Navigator _navigator;
+    
     public void Build()
     {
         m_isGameFinished = false;
         m_mainViewGameObject = LoadViewGameObject(m_prefabPath, ViewManager.Instance.GetRootTransform());
         
-        Navigator.Create(m_mainViewGameObject);
+        _navigator ??= Navigator.Create(m_mainViewGameObject);
 
         m_pokerStartTransform = m_mainViewGameObject.transform.Find("PokerStart");
         m_pokerShowTransform1 = m_mainViewGameObject.transform.Find("PokerShow1");
@@ -283,7 +285,7 @@ public class HighAndLowGameView : AbstractView, IViewOperater
     async void OnClickedRouletteBtn() {
         AudioManager.Instance.PlayKeyBackEffect();
 
-        if (RoulettePreferences.DisplayMode == DisplayMode.Random)
+        if (RoulettePreferences.DisplayMode == RouletteDisplayMode.Random)
         {
             await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
                 var dao = await RouletteDAO.Instance;

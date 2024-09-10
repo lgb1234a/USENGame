@@ -34,7 +34,7 @@ namespace USEN.Games.Roulette
                     {   // Clicking on the toggle will change the slider value
                         var index = basicDisplaySettingsToggles.Toggles.IndexOf(toggle);
                         basicDisplayShowSettingsSlider.value = index;
-                        RoulettePreferences.DisplayMode = (DisplayMode) index;
+                        RoulettePreferences.DisplayMode = (RouletteDisplayMode) index;
                     }
                 });
             
@@ -46,7 +46,7 @@ namespace USEN.Games.Roulette
         {
             var index = Convert.ToInt32(arg0);
             basicDisplaySettingsToggles.ToggleOn(Convert.ToInt32(index));
-            RoulettePreferences.DisplayMode = (DisplayMode) index;
+            RoulettePreferences.DisplayMode = (RouletteDisplayMode) index;
         }
 
         private void OnEnable()

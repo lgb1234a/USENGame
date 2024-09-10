@@ -69,12 +69,12 @@ namespace USEN.Games.Roulette
         {
             switch (RoulettePreferences.DisplayMode)
             {
-                case DisplayMode.Normal:
+                case RouletteDisplayMode.Normal:
                     Navigator.Push<RouletteCategoryView>((view) => {
                         view.Categories = _dataset.categories;
                     });
                     break;
-                case DisplayMode.Random:
+                case RouletteDisplayMode.Random:
                     PlayRandomGame();
                     break;
             }

@@ -124,8 +124,8 @@ namespace USEN.Games.Roulette
         {
             if (_data.categories.Count == 0) return null;
             
-            var category = _data.categories[UnityEngine.Random.Range(0, _data.categories.Count)];
-            return category.roulettes[UnityEngine.Random.Range(0, category.roulettes.Count)];
+            var category = _data.categories[UnityEngine.Random.Range(0, _data.categories.Count - 1)];
+            return category.roulettes[UnityEngine.Random.Range(0, category.roulettes.Count - 1)];
         }
     }
 }

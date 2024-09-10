@@ -57,7 +57,7 @@ namespace USEN.Games.Yamanote
         public void OnStartButtonClicked()
         {
             var displayMode = YamanotePreferences.DisplayMode;
-            if (displayMode == DisplayMode.Random)
+            if (displayMode == YamanoteDisplayMode.Random)
                 PlayRandomGame();
             else Navigator.Push<YamanoteCategoryView>((view) => view.Categories = _categories);
         }
