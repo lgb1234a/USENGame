@@ -2,6 +2,7 @@
 
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -123,8 +124,8 @@ namespace USEN.Games.Roulette
         public RouletteData GetRandomRoulette()
         {
             if (_data.categories.Count == 0) return null;
-            
-            var category = _data.categories[UnityEngine.Random.Range(0, _data.categories.Count - 1)];
+
+            var category = _data.categories.First(); //[UnityEngine.Random.Range(0, _data.categories.Count - 1)];
             return category.roulettes[UnityEngine.Random.Range(0, category.roulettes.Count - 1)];
         }
     }
