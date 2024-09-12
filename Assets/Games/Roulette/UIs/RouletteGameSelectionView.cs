@@ -22,6 +22,8 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public BottomPanel bottomPanel;
         
+        private EditMode _editMode;
+        
         private RouletteDAO _dao;
         private RouletteCategory _category;
         public RouletteCategory Category
@@ -34,11 +36,13 @@ namespace USEN.Games.Roulette
 
                 if (value.title == "オリジナル")
                 {
+                    _editMode = EditMode.Editable;
                     bottomPanel.redButton.gameObject.SetActive(true);
                     bottomPanel.yellowButton.gameObject.SetActive(true);
                 }
                 else
                 {
+                    _editMode = EditMode.Readonly;
                     bottomPanel.redButton.gameObject.SetActive(false);
                     bottomPanel.yellowButton.gameObject.SetActive(false);
                 }
@@ -123,6 +127,13 @@ namespace USEN.Games.Roulette
 
         public async void OnBlueButtonClicked()
         {
+            // Jump back to original category if not in original category
+            if (_editMode == EditMode.Readonly)
+            {
+                var categoryView = Navigator.BackTo<RouletteCategoryView>();
+                categoryView?.GotoOriginalCategory();
+            }
+            
             // Edit roulette
             var result = await Navigator.Push<RouletteEditView>((view) => {
                 view.Data = rouletteGameSelectionList.SelectedData;
@@ -197,6 +208,12 @@ namespace USEN.Games.Roulette
             rouletteContentList.gameObject.SetActive(false);
             rouletteGameSelectionList.gameObject.SetActive(true);
             rouletteGameSelectionList.Select(rouletteGameSelectionList.SelectedIndex);
+        }
+        
+        private enum EditMode
+        {
+            Readonly,
+            Editable,
         }
     }
 }

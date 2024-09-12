@@ -46,5 +46,11 @@ namespace USEN.Games.Roulette
             var category = Categories[randomIndex];
             Navigator.Push<RouletteGameSelectionView>((view) => view.Category = category);
         }
+        
+        public void GotoOriginalCategory()
+        {
+            var category = Categories.Find(c => c.title == "オリジナル");
+            Navigator.Push<RouletteGameSelectionView>((view) => view.Category = category);
+        }
     }
 }
