@@ -22,6 +22,9 @@ namespace USEN.Games.Roulette
         public RouletteWheel rouletteWheel;
         public BottomPanel bottomPanel;
         
+        [HideInInspector] 
+        public bool selectLast = false; 
+        
         private EditMode _editMode;
         
         private RouletteDAO _dao;
@@ -59,21 +62,15 @@ namespace USEN.Games.Roulette
             rouletteGameSelectionList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
             rouletteContentList.onCellSubmitted += (index, cell) => OnConfirmButtonClicked();
             
-            bottomPanel.onYellowButtonClicked += () =>
-            {
-                if (rouletteGameSelectionList.gameObject.activeSelf && 
-                    rouletteGameSelectionList.Data.Count > 0)
-                    rouletteGameSelectionList.Remove(rouletteGameSelectionList.SelectedIndex);
-                
-                if (rouletteContentList.gameObject.activeSelf && 
-                    rouletteContentList.Data.Count > 2)
-                    rouletteContentList.Remove(rouletteContentList.SelectedIndex);
-                
-                rouletteWheel.DrawRouletteWheel();
-                _dao?.SaveToFile();
-            };
-            
             _dao = await RouletteDAO.Instance;
+        }
+
+        private void Start()
+        {
+            if (selectLast && rouletteGameSelectionList.Data.Count > 0)
+                UniTask.DelayFrame(2).ContinueWith(() => {
+                    rouletteGameSelectionList.Select(rouletteGameSelectionList.Data.Count - 1);
+                });
         }
 
         private void OnEnable()
@@ -81,12 +78,14 @@ namespace USEN.Games.Roulette
             HideContentView();
             bottomPanel.onRedButtonClicked += OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked += OnBlueButtonClicked;
+            bottomPanel.onYellowButtonClicked += OnYellowButtonClicked;
         }
 
         private void OnDisable()
         {
             bottomPanel.onRedButtonClicked -= OnRedButtonClicked;
             bottomPanel.onBlueButtonClicked -= OnBlueButtonClicked;
+            bottomPanel.onYellowButtonClicked -= OnYellowButtonClicked;
         }
 
         private void Update()
@@ -131,7 +130,9 @@ namespace USEN.Games.Roulette
             if (_editMode == EditMode.Readonly)
             {
                 var categoryView = Navigator.BackTo<RouletteCategoryView>();
-                categoryView?.GotoOriginalCategory();
+                categoryView?.GotoOriginalCategory(view => {
+                    view.selectLast = true;
+                });
             }
             
             // Edit roulette
@@ -186,6 +187,8 @@ namespace USEN.Games.Roulette
                     Category.roulettes.Add(result);
                     // Category = Category;
                     rouletteGameSelectionList.Reload();
+                    rouletteGameSelectionList.Select(Category.roulettes.Count - 1);
+                    rouletteWheel.RouletteData = result;
                 }
                 else
                 {
@@ -194,6 +197,23 @@ namespace USEN.Games.Roulette
                 
                 _dao?.SaveToFile();
             }
+        }
+        
+        public void OnYellowButtonClicked()
+        {
+            if (rouletteGameSelectionList.gameObject.activeSelf && 
+                rouletteGameSelectionList.Data.Count > 0)
+                rouletteGameSelectionList.Remove(rouletteGameSelectionList.SelectedIndex);
+                
+            if (rouletteContentList.gameObject.activeSelf && 
+                rouletteContentList.Data.Count > 2)
+                rouletteContentList.Remove(rouletteContentList.SelectedIndex);
+            
+            if (rouletteGameSelectionList.Data.Count > 0)
+                rouletteWheel.RouletteData = rouletteGameSelectionList.SelectedData;
+            else rouletteWheel.RouletteData = null;
+            
+            _dao?.SaveToFile();
         }
         
         private void ShowContentView()
@@ -205,9 +225,12 @@ namespace USEN.Games.Roulette
         
         private void HideContentView()
         {
-            rouletteContentList.gameObject.SetActive(false);
-            rouletteGameSelectionList.gameObject.SetActive(true);
-            rouletteGameSelectionList.Select(rouletteGameSelectionList.SelectedIndex);
+            if (rouletteContentList.gameObject.activeSelf)
+            {
+                rouletteContentList.gameObject.SetActive(false);
+                rouletteGameSelectionList.gameObject.SetActive(true);
+                rouletteGameSelectionList.Select(rouletteGameSelectionList.SelectedIndex);
+            }
         }
         
         private enum EditMode

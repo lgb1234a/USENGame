@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b9ec61aa1949a6ae5854cf87236dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteData: {fileID: 11400000, guid: 21e20334632657741acaad9857c0fb5c, type: 2}
+  rouletteData: {fileID: 0}
   radius: 3.75
   segmentsPerSector: 10
   sectorInterval: 0.05

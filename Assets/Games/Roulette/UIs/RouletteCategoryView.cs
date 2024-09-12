@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using Luna.UI;
 using Luna.UI.Navigation;
 using Sirenix.Utilities;
 using UnityEngine;
 using USEN.Games.Common;
+using Random = UnityEngine.Random;
 
 namespace USEN.Games.Roulette
 {
@@ -40,17 +42,23 @@ namespace USEN.Games.Roulette
             }
         }
 
-        public void GotoRandomCategory()
+        public void GotoRandomCategory(Action<RouletteGameSelectionView> callback = null)
         {
             var randomIndex = Random.Range(0, Categories.Count);
             var category = Categories[randomIndex];
-            Navigator.Push<RouletteGameSelectionView>((view) => view.Category = category);
+            Navigator.Push<RouletteGameSelectionView>((view) => {
+                view.Category = category;
+                callback?.Invoke(view);
+            });
         }
         
-        public void GotoOriginalCategory()
+        public void GotoOriginalCategory(Action<RouletteGameSelectionView> callback = null)
         {
             var category = Categories.Find(c => c.title == "オリジナル");
-            Navigator.Push<RouletteGameSelectionView>((view) => view.Category = category);
+            Navigator.Push<RouletteGameSelectionView>((view) => {
+                view.Category = category;
+                callback?.Invoke(view);
+            });
         }
     }
 }

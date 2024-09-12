@@ -21,8 +21,7 @@ namespace USEN.Games.Roulette
             set
             {
                 rouletteData = value;
-                if (value.sectors.Count > 0)
-                    DrawRouletteWheel();
+                DrawRouletteWheel();
             }
         }
         
@@ -60,7 +59,7 @@ namespace USEN.Games.Roulette
         
         private bool _stopSpin = false;
 
-        public List<RouletteSector> Sectors => RouletteData.sectors;
+        public List<RouletteSector> Sectors => RouletteData?.sectors;
         
         public bool IsSpinning => _isSpinning;
 
@@ -71,7 +70,7 @@ namespace USEN.Games.Roulette
 
         private void Start()
         {
-            if (Sectors.Count > 0)
+            if (Sectors != null && Sectors.Count > 0)
                 DrawRouletteWheel();
         }
         
@@ -202,14 +201,15 @@ namespace USEN.Games.Roulette
 
         public void DrawRouletteWheel()
         {
-            transform.localRotation = Quaternion.identity;
-            _totalAngle = 360f / Sectors.Count;
+            Clear();
             
             // Clear existing sectors
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
-            }
+            if (Sectors == null || Sectors.Count == 0)
+                return;
+            
+            // Reset the rotation of the wheel
+            transform.localRotation = Quaternion.identity;
+            _totalAngle = 360f / Sectors.Count;
 
             for (int i = 0; i < Sectors.Count; i++)
             {
@@ -218,6 +218,14 @@ namespace USEN.Games.Roulette
             
             // Rotate the wheel to align with the first sector
             transform.localRotation = Quaternion.Euler(0, 0, angleOffset);
+        }
+        
+        public void Clear()
+        {
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         private void CreateSector(int index, float sectorAngle)
