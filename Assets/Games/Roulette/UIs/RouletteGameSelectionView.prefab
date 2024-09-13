@@ -63,6 +63,7 @@ MonoBehaviour:
   rouletteContentList: {fileID: 4504948451098681044}
   rouletteWheel: {fileID: 3725162734924712925}
   bottomPanel: {fileID: 813345272954349311}
+  selectLast: 0
 --- !u!225 &8006167157273511046
 CanvasGroup:
   m_ObjectHideFlags: 0

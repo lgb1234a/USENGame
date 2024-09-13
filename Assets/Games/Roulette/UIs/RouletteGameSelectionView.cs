@@ -10,6 +10,7 @@ using Luna.UI.Navigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.PlayerLoop;
 using USEN.Games.Common;
 
 namespace USEN.Games.Roulette
@@ -51,8 +52,12 @@ namespace USEN.Games.Roulette
                 }
 
                 titleText.text = value.title;
+
+                CheckRouletteVisibility();
             }
         }
+        
+        private GameObject RouletteGameObject => rouletteWheel.transform.parent.gameObject;
         
         private bool IsOriginal => Category.title == "オリジナル";
 
@@ -94,6 +99,8 @@ namespace USEN.Games.Roulette
                 Input.GetButtonDown("Cancel")) {
                 OnExitButtonClicked();
             }
+            
+            CheckRouletteVisibility();
         }
         
         public void OnConfirmButtonClicked()
@@ -231,6 +238,11 @@ namespace USEN.Games.Roulette
                 rouletteGameSelectionList.gameObject.SetActive(true);
                 rouletteGameSelectionList.Select(rouletteGameSelectionList.SelectedIndex);
             }
+        }
+        
+        private void CheckRouletteVisibility()
+        {
+            RouletteGameObject.SetActive(rouletteGameSelectionList.Data.Count > 0);
         }
         
         private enum EditMode
