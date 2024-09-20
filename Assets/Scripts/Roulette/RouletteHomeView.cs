@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Spine.Unity;
 
 public class RouletteHomeView : AbstractView, IViewOperater
 {

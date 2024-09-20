@@ -224,6 +224,8 @@ public class HighAndLowGameView : AbstractView, IViewOperater
 
     public void Update()
     {
+        _isPopupViewShowed = Navigator.Instance.TopWidget.gameObject != m_mainViewGameObject;
+        
         if (!m_mainViewGameObject.activeInHierarchy)
             return;
         
@@ -290,18 +292,15 @@ public class HighAndLowGameView : AbstractView, IViewOperater
             await Navigator.Push<USEN.Games.Roulette.RouletteGameView>(async (view) => {
                 var dao = await RouletteDAO.Instance;
                 view.RouletteData = dao.GetRandomRoulette();
-                _isRouletteShowing = true;
             });
         }
         else
         {
             await Navigator.Push<RouletteCategoryView>((view) => {
-                _isRouletteShowing = true;
             });
         }
         
         await UniTask.NextFrame();
-        _isRouletteShowing = false;
     }
 
     async void OnClickedWinnerBtn() {

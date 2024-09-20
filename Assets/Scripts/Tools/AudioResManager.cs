@@ -1,7 +1,4 @@
 using UnityEngine;
-using Spine.Unity;
-using UnityEditor;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 public class AudioResManager

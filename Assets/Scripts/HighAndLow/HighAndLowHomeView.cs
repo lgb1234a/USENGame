@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Spine.Unity;
 using System.Collections.Generic;
 using Luna.UI.Navigation;
 using USEN.Games.HighLow;
