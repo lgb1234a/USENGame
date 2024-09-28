@@ -2,6 +2,8 @@
 
 using System;
 using System.Collections.Generic;
+using Luna.Extensions;
+using Luna.Extensions.Unity;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -17,6 +19,7 @@ namespace USEN.Games.Roulette
     {
         [ReadOnly] [JsonProperty] public string id;
         [JsonProperty] public string title;
+        [JsonProperty] public long timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
         
         [JsonProperty] 
         [TableList(ShowIndexLabels = true, AlwaysExpanded = true, DrawScrollView = false)]
@@ -49,7 +52,11 @@ namespace USEN.Games.Roulette
             {
                 var sector = sectors[i];
                 sector.id = sectors.IndexOf(sector);
-                sector.color = Color.HSVToRGB(1.0f / sectors.Count * i, 0.5f, 1f);
+                var color = Color.HSVToRGB(Mathf.Pow((1.0f / sectors.Count * i - 0.02f).Mod(1), 1.35f), 1f, 1f);
+                sector.color = color
+                    .WithSaturation(0.85f * (1f - sector.color.g * 0.2f))
+                    .WithBrightness(Mathf.Clamp(1.4f * (1f - sector.color.b * 0.5f) * (1f - sector.color.g * 0.3f), 0, 1))
+                    .WithAlpha(0.75f * (1f - sector.color.b * 0.1f));
             }
         }
     }

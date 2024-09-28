@@ -263,7 +263,9 @@ namespace USEN.Games.Roulette
 
             vertices.Add(Vector3.zero); // Center point
 
+            Color.RGBToHSV(Sectors[index].color, out float h, out float s, out float v);
             var centerColor = Sectors[index].color;
+            centerColor = centerColor.WithSaturation(s * 0.95f).WithAlpha(centerColor.a);
             colors.Add(centerColor); // Center color
 
             for (int j = 0; j <= segmentsPerSector; j++)
@@ -276,7 +278,6 @@ namespace USEN.Games.Roulette
                 vertices.Add(point);
                 
                 var color = Sectors[index].color;
-                color.a *= 0.5f;
                 colors.Add(color);
 
                 if (j > 0)

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1acc169096b4b28b52a6426598ce9b5, type: 3}
+  m_Name: "\u30D0\u30C4\u30B2\u30FC\u30E0 102"
+  m_EditorClassIdentifier: 
+  id: 83def3be-5d09-4288-8031-6eba185eb425
+  title: "\u30D0\u30C4\u30B2\u30FC\u30E01"
+  sectors:
+  - id: 0
+    content: "\u4EBA\u751F\u3067\u4E00\u756A\u5F8C\u6094\u3057\u305F\u8A71"
+    weight: 1
+    color: {r: 1, g: 0.18072873, b: 0.36436814, a: 0.72267073}
+  - id: 1
+    content: "\u5BB4\u4F1A\u306E\u4E00\u767A\u82B8"
+    weight: 1
+    color: {r: 1, g: 0.7430295, b: 0.25525194, a: 0.7319681}
+  - id: 2
+    content: "\u30B8\u30E3\u30F3\u30D7\u3057\u306A\u304C\u3089\u30B8\u30E7\u30C3\u30AD\u4E00\u676F"
+    weight: 1
+    color: {r: 0.47785679, g: 0.9606775, b: 0.3005668, a: 0.72732705}
+  - id: 3
+    content: "\u8155\u7ACB\u3066\u4F0F\u305B\u304430\u56DE"
+    weight: 1
+    color: {r: 0.26189178, g: 0.83532983, b: 0.8190617, a: 0.71081835}
+  - id: 4
+    content: "\u30D0\u30C3\u30C9\u306B\u984D\u3092\u3064\u3051\u306630\u5468"
+    weight: 1
+    color: {r: 0.38153365, g: 0.18757367, b: 0.77932185, a: 0.69347143}

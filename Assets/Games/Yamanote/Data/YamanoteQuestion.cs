@@ -14,6 +14,7 @@ namespace USEN.Games.Yamanote
 
         public string Theme { get; set; }
 
+        
         public string Difficulty { get; set; }
     }
 
