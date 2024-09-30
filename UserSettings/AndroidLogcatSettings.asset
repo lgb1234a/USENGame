@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "309af56c",
     "m_SelectedPackage": {
         "deviceId": "309af56c",
-        "name": "com.usen.ubingo",
-        "processId": 29889,
+        "name": "com.usen.uroulette",
+        "processId": 17218,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,91 +11,37 @@
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 28277,
+            "processId": 12575,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 28732,
+            "processId": 13843,
+            "exited": true
+        },
+        {
+            "deviceId": "309af56c",
+            "name": "com.usen.uyamanote",
+            "processId": 20006,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 29356,
+            "processId": 23917,
             "exited": true
         },
         {
             "deviceId": "309af56c",
             "name": "com.usen.ubingo",
-            "processId": 29885,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 32012,
+            "processId": 25287,
             "exited": false
         },
         {
             "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 16725,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 21027,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 21594,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 27955,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 687,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 2413,
-            "exited": true
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 3638,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 15755,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 27683,
-            "exited": false
-        },
-        {
-            "deviceId": "309af56c",
-            "name": "com.usen.ubingo",
-            "processId": 29889,
+            "name": "com.usen.uroulette",
+            "processId": 17218,
             "exited": false
         },
         {

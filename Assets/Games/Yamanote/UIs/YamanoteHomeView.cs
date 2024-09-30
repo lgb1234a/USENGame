@@ -33,6 +33,8 @@ namespace USEN.Games.Yamanote
             settingsButton.onClick.AddListener(OnSettingsButtonClicked);
             bottomPanel.exitButton.onClick.AddListener(OnExitButtonClicked);
             
+            Debug.Log($"Categories json: {categoriesJson.text}");
+            
             _dao = new();
             if (_dao.IsEmpty())
                 _dao.InsertFromJsonList(categoriesJson.text);

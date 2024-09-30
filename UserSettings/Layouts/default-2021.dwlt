@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 162
+  controlID: 131
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 163
+  controlID: 123
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 3
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 139
+  controlID: 20
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,7 +329,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 1162.3334
+    width: 1163
     height: 570.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -731,9 +731,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.619852, y: 0.15350193, z: -0.26905352}
+    m_Target: {x: -0.08690459, y: 2.1740453, z: -0.27869275}
     speed: 2
-    m_Value: {x: 4.619852, y: 0.15350193, z: -0.26905352}
+    m_Value: {x: -0.08690459, y: 2.1740453, z: -0.27869275}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -784,9 +784,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.422255
+    m_Target: 9.326963
     speed: 2
-    m_Value: 4.422255
+    m_Value: 9.326963
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -938,9 +938,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 02720000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e632ffffc8faffff
+      m_ExpandedIDs: 5c5efeffbe6dfeffe66efeffaa6ffeff9a77feffa677feff6879feff7a79feff327bfeff288ffeffc493feff20a6fefffab2feff62b7feff5cb8feff20b9feff60bdfeff70bdfeff34bffeff4abffeffccc0feff5cf3feffa803ffffb216ffffe040ffff8a75ffff9475fffff47cffffee8dfffff08dffffa8a4ffffb2a4ffff54acffff2abcfffff6defffff8deffff9efaffffea1001005a1801006c180100e01b0100d81f0100ea1f0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1007,22 +1007,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - "Assets/Games/Roulette/Resources/\u30D0\u30C4\u30B2\u30FC\u30E0"
+    - Assets/Games/Yamanote/UIs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - "Assets/Games/Roulette/Resources/\u30D0\u30C4\u30B2\u30FC\u30E0"
+  - Assets/Games/Yamanote/UIs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: Z:\Workspace\USEN\USENGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34d20000
-    m_LastClickedID: 53812
-    m_ExpandedIDs: 0000000070b2000072b2000074b2000076b2000078b200007ab200007cb200007eb2000080b2000082b2000084b200009cb20000b6b2000000ca9a3b
+    m_SelectedIDs: 3cc10000
+    m_LastClickedID: 49468
+    m_ExpandedIDs: 0000000038b200003ab200003cb200003eb2000040b2000042b2000044b2000046b2000048b200004ab200004cb2000068b2000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1050,7 +1050,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070b2000072b2000074b2000076b2000078b200007ab200007cb200007eb2000080b2000082b2000084b20000
+    m_ExpandedIDs: 0000000038b200003ab200003cb200003eb2000040b2000042b2000044b2000046b2000048b200004ab200004cb20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1081,15 +1081,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: e0ac000074b000008ab0000080b0000092b000007cb00000c8b100009a9c00004e8f0000169d0000189d00006e97000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: "\u30D0\u30C4\u30B2\u30FC\u30E0"
-      m_OriginalName: "\u30D0\u30C4\u30B2\u30FC\u30E0"
+      m_Name: YamanoteQuestionsView
+      m_OriginalName: YamanoteQuestionsView
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 53812
+      m_UserData: 29632
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -1142,7 +1142,7 @@ MonoBehaviour:
     m_CachedPref: 190
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 29186
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 1162.3334
+    width: 1163
     height: 570.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

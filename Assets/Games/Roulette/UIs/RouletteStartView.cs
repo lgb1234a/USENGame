@@ -67,17 +67,9 @@ namespace USEN.Games.Roulette
 
         public void OnStartButtonClicked()
         {
-            switch (RoulettePreferences.DisplayMode)
-            {
-                case RouletteDisplayMode.Normal:
-                    Navigator.Push<RouletteCategoryView>((view) => {
-                        view.Categories = _dataset.categories;
-                    });
-                    break;
-                case RouletteDisplayMode.Random:
-                    PlayRandomGame();
-                    break;
-            }
+            Navigator.Push<RouletteCategoryView>((view) => {
+                view.Categories = _dataset.categories;
+            });
         }
 
         public void PlayRandomGame()

@@ -14,7 +14,7 @@ namespace USEN.Games.Roulette
     {
         public const string FILE_NAME = "Roulette.data";
         public const string DEFAULT_DATA_PATH = "DefaultRouletteDataset";
-        public static Version Version = new(1, 0, 1);
+        public static Version Version = new(1, 0, 2);
  
         // Singleton
         public static Task<RouletteDAO> Instance;
